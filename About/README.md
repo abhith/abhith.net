@@ -1,5 +1,7 @@
 # [About](https://www.abhith.net/about/)
 ## Images
+### Hero Banner Image
+![Hero Banner Image](olesya-grichina-218176.jpg)
 ## Header Content
 ### Heading
 About Me
@@ -14,6 +16,7 @@ I’m an experienced software engineer, had built and maintained web application
 Working professionally in the software development field for the past 5 years, I have a diverse set of skills ranging from ASP.NET, C#, Linq, SQL, WEBAPI, SignalR, AngularJS, Ionic, Xamarin Forms, JavaScript, VueJS, VB.NET, HTML, CSS, TypeScript, SEO and more. I have got some tightly honed skills in .NET and constantly looking for ways to improve.
 
 ### Carousel Images
+![Carousel Image](IMG_20160928_191136_1475076247246.jpg)
 ### Story
 I started my career at Aabasoft where I was joined as an intern after my B-Tech. There I learned HTML, CSS and basic Javascript concepts, then moved onto C#, MSSQL. After my internship, they offered me a job and I took it.
 
