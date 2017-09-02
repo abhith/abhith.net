@@ -31,6 +31,9 @@ Hoping is a bad idea, trying is a good idea.
 
 Trying...
 
+Update 1: 
+I reported the problem to VisualStudio developer community and here is the [link](https://developercommunity.visualstudio.com/content/problem/106582/unable-to-sign-in-to-xamarin-account-unhandled-act.html)
+
 ## Image
 ### Post Image
 ![Post Image](account-login-error.png) 
