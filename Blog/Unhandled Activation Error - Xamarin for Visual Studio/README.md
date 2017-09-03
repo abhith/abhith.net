@@ -27,7 +27,7 @@ And am stuck.
 
 Hoping to find solutions for both.
 
-Hoping is a bad idea, trying is a good idea.
+Hoping is a bad idea.
 
 Trying...
 
