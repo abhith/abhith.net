@@ -31,8 +31,11 @@ Hoping is a bad idea, trying is a good idea.
 
 Trying...
 
-Update 1: 
+#### Update 1:
 I reported the problem to VisualStudio developer community and here is the [link](https://developercommunity.visualstudio.com/content/problem/106582/unable-to-sign-in-to-xamarin-account-unhandled-act.html)
+
+#### Update 2: 
+I was trying login in VS 2017 Preview 15.4.0 and it wasn't working. After adding the Xamarin related feature pack to my 15.3.3 stable VS 2017, I tried the login in it and it worked. Then checked the login status in VS preview and that was also in the same state as in the stable.
 
 ## Image
 ### Post Image
