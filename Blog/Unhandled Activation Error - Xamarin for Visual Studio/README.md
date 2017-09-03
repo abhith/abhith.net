@@ -21,7 +21,7 @@ So, stopped Xamarin.Android and cloned evolve app and did implement few of my ap
 But recently I switched my dev machine. And now facing two problems related to Xamarin development.
 
 - First one, the already working solution not building on the new machine,
-- Secondly, Couldn't able to sign into my Xamarin account from visual studio 17 preview.
+- ~~Secondly, Couldn't able to sign into my Xamarin account from visual studio 17 preview.~~
 
 And am stuck.
 
