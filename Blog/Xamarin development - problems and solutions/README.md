@@ -1,11 +1,11 @@
-# [Unhandled Activation Error - Xamarin for Visual Studio](https://www.abhith.net/post/unhandled-activation-error-xamarin-for-visual-studio/)
+# [Xamarin development - problems and solutions](https://www.abhith.net/post/xamarin-development-problems-and-solutions/)
 ## Post Attributes
 ### Tags
 Xamarin, Visual-Studio
 ### Categories
 Xamarin
 ### Excerpt
-Xamarin account login error on visual studio : Could not load machine data.
+Here I am listing the problems I faced during Xamarin development and the solutions that worked for me.
 ### Published Date
 
 ## Content
@@ -20,8 +20,8 @@ So, stopped Xamarin.Android and cloned evolve app and did implement few of my ap
 
 But recently I switched my dev machine. And now facing two problems related to Xamarin development.
 
-- First one, the already working solution not building on the new machine,
-- ~~Secondly, Couldn't able to sign into my Xamarin account from visual studio 17 preview.~~
+- #1: First one, the already working solution not building on the new machine,
+- #2:<strike>Secondly, Couldn't able to sign into my Xamarin account from visual studio 17 preview.</strike>
 
 And am stuck.
 
@@ -35,7 +35,7 @@ Trying...
 I reported the problem to VisualStudio developer community and here is the [link](https://developercommunity.visualstudio.com/content/problem/106582/unable-to-sign-in-to-xamarin-account-unhandled-act.html)
 
 #### Update 2: 
-I was trying login in VS 2017 Preview 15.4.0 and it wasn't working. After adding the Xamarin related feature pack to my 15.3.3 stable VS 2017, I tried the login in it and it worked. Then checked the login status in VS preview and that was also in the same state as in the stable.
+**Solution for #2**: I was trying login in VS 2017 Preview 15.4.0 and it wasn't working. After adding the Xamarin related feature pack to my 15.3.3 stable VS 2017, I tried the login in it and it worked. Then checked the login status in VS preview and that was also in the same state as in the stable.
 
 ## Image
 ### Post Image
@@ -45,4 +45,4 @@ I was trying login in VS 2017 Preview 15.4.0 and it wasn't working. After adding
 
 ## Meta Tags
 ### Social Description
-Xamarin account login error on visual studio : Could not load machine data.
+Here I am listing the problems I faced during Xamarin development and the solutions that worked for me.
