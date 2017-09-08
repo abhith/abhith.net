@@ -20,7 +20,7 @@ So, stopped Xamarin.Android and cloned evolve app and did implement few of my ap
 
 But recently I switched my dev machine. And now facing two problems related to Xamarin development.
 
-- #1: First one, the already working solution not building on the new machine,
+- #1: <strike>First one, the already working solution not building on the new machine, No resource found that matches the given name "Theme.AppCompat.Light" and similar 100+ errors during build.</strike>
 - #2:<strike>Secondly, Couldn't able to sign into my Xamarin account from visual studio 17 preview.</strike>
 
 And am stuck.
@@ -36,6 +36,9 @@ I reported the problem to VisualStudio developer community and here is the [link
 
 #### Update 2: 
 **Solution for #2**: I was trying login in VS 2017 Preview 15.4.0 and it wasn't working. After adding the Xamarin related feature pack to my 15.3.3 stable VS 2017, I tried the login in it and it worked. Then checked the login status in VS preview and that was also in the same state as in the stable.
+
+#### Update 3:
+**Solution for #1**: I read [this](https://forums.xamarin.com/discussion/59017/no-resource-found-that-matches-the-given-name-theme-appcompat-light) on Xamarin forms, and as AbdiRahman mentioned there, I deleted the Xamarin directory in this path C:\Users\username\AppData\Local\  and then opened the solution, rebuild and it worked.
 
 ## Image
 ### Post Image
