@@ -30,8 +30,7 @@ I was trying login in VS 2017 Preview 15.4.0 and it wasn't working. After adding
 I reported the problem #2 to VisualStudio developer community and here is the [link](https://developercommunity.visualstudio.com/content/problem/106582/unable-to-sign-in-to-xamarin-account-unhandled-act.html)
 
 #### Solution for #3: Packaging error - “jarsigner.exe” exited with code 1
-Working on it...
-
+Updated Xamarin.Forms from 2.3.4.247 to 2.3.4.270. Restarted visual studio. Changed configuration to Release. Tried to deploy and it worked. Switched back to Debug configuration and rerun. And it too worked.
 ## Image
 ### Post Image
 ![Post Image](account-login-error.png) 
