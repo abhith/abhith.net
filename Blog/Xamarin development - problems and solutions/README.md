@@ -14,7 +14,7 @@ Following are the list of problems I am addressing here.
 
 - #1: <strike>No resource found that matches the given name "Theme.AppCompat.Light" and similar 100+ errors during build.</strike>
 - #2: <strike>Couldn't able to sign into my Xamarin account from visual studio 2017 preview.</strike>
-- #3: Packaging error - “jarsigner.exe” exited with code 1
+- #3: <strike>Packaging error - “jarsigner.exe” exited with code 1</strike>
 
 The striked items indicates that I have found solutions for them.
 
