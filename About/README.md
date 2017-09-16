@@ -17,14 +17,6 @@ Working professionally in the software development field for the past 5 years, I
 
 ### Carousel Images
 ![Carousel Image](IMG_20160928_191136_1475076247246.jpg)
-### Story
-I started my career at Aabasoft where I was joined as an intern after my B-Tech. There I learned HTML, CSS and basic Javascript concepts, then moved onto C#, MSSQL. After my internship, they offered me a job and I took it.
-
-They assigned me to one of their biggest ERP project for a client having 3000+ branches. For that project, I have to self-learn VB.NET and I did. Then I lead the FOREX part in the job as well as some other area.
-
-One challenge they gave me was to generate a salary report for the HR part of the project, where they want to generate a salary for all the employees in their 3000+ branches in a single click. The next day, after setting my skype status to "Do Not Disturb", I wrote a stored procedure with 1.5k+ lines of query. It had so much math in it. And it worked well and I was very proud of it. Every time I saw that SQL query later, my inner mind told, "hmm, I could have made this query little bit short". I think this is normal for every developer when they saw their old work, they know they can make a better version of it now.
-
-This story will continue...
 
 ## SEO
 ### Title
