@@ -1,9 +1,9 @@
 # [Event tracking with Google Analytics](https://www.abhith.net/post/event-tracking-with-google-analytics/)
 ## Post Attributes
 ### Tags
-Google-Analytics
+Google-Analytics, JavaScript 
 ### Categories
-Analytics, Tutorial
+Analytics
 ### Excerpt
 When you want to get metrics related to user interactions on various parts of your website Google Analytics (ga)  event tracking can be helpful and is easy to integrate as well.
 ### Published Date
