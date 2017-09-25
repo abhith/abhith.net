@@ -56,7 +56,7 @@ Cover photo by Luca Bravo
 
 ## Image
 ### Post Image
-![Post Image]() 
+![Post Image](web-config.png) 
 ### Post Header Image
 ![Post Header Image](luca-bravo-217276.jpg)
 

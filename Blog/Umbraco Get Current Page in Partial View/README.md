@@ -31,7 +31,7 @@ And it works.
 
 ## Image
 ### Post Image
-![Post Image]() 
+![Post Image](umbraco.png) 
 ### Post Header Image
 ![Post Header Image]()
 

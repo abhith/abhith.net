@@ -33,7 +33,7 @@ If you know any better way to check if the string is Arabic in C#, let me know i
 
 ## Image
 ### Post Image
-![Post Image]() 
+![Post Image](is-rtl.png) 
 ### Post Header Image
 ![Post Header Image]()
 

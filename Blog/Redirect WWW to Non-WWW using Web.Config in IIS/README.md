@@ -29,7 +29,7 @@ Replace the "yourdomain" with your domain name and add it under the **system.web
 Some people prefer www domain and some non-www. I personally prefer www URLs. One important point to remember is never to allow both accessible at the same time. Read my article [REDIRECT NON-WWW URLS TO WWW URLS](https://www.abhith.net/post/redirect-non-www-urls-to-www-urls/) to know why. It will be better if you add the rule on the **Web.Release.config** with a slight modification. Read more about it on my article [INSERTING REWRITE RULE IN RELEASE CONFIG](https://www.abhith.net/post/inserting-rewrite-rule-in-release-config/).
 ## Image
 ### Post Image
-![Post Image]() 
+![Post Image](web-config.png) 
 ### Post Header Image
 ![Post Header Image]()
 

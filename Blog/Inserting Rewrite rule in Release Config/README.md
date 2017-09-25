@@ -131,7 +131,7 @@ Cover photo by Caspar Rubin
 
 ## Image
 ### Post Image
-![Post Image]() 
+![Post Image](web-config.png) 
 ### Post Header Image
 ![Post Header Image](caspar-rubin-224229.jpg)
 

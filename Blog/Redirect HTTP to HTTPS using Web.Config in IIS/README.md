@@ -25,7 +25,7 @@ Add the below rewrite rule in your **Web.Config** under  **system.webServer** se
 Replace the **yourdomain.com** with the actual domain name and you are good to go. If this isn't working, make sure that you installed the **URL Rewrite** module in the IIS.
 ## Image
 ### Post Image
-![Post Image]() 
+![Post Image](web-config.png) 
 ### Post Header Image
 ![Post Header Image]()
 
