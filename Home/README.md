@@ -43,6 +43,6 @@ Working professionally in the software development field for the past 5 years, I
 ### Title
 Abhith Rajan | Full Stack Developer
 ### Meta description
-Abhith Rajan is an aspiring software developer who always endures to learn and dig new ideas of the technological era.
+Abhith Rajan is an aspiring software developer who always ensures to learn and dig new ideas of the technological era.
 ### Meta keywords
 Software Developer, website, portfolio, blog,Full Stack Developer, .net guy, IT guy
