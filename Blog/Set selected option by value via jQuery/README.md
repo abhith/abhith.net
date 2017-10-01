@@ -3,7 +3,7 @@
 ### Tags
 Razor, MVC, jQuery
 ### Categories
-jQuery
+JavaScript
 ### Excerpt
 This article describes how to set the selected option in a select by its value via jQuery.
 ### Published Date
