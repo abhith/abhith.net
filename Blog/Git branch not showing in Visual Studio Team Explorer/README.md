@@ -20,7 +20,7 @@ Recently when I created a feature branch in the VSO online interface, I checked 
 Until visual studio provides a better solution, you can use the **SYNC** option in the **Team Explorer**, which will also fetch the new branch list.
 
 #### Useful
-If you want to know more about Git Flow, read this [post](http://nvie.com/posts/a-successful-git-branching-model/).
+If you want to know more about **Git Flow**, read this [post](http://nvie.com/posts/a-successful-git-branching-model/).
 ## Image
 ### Post Image
 ![Post Image](brandon-green-321795.jpg) 
