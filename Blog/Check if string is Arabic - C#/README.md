@@ -3,7 +3,7 @@
 ### Tags
 Localization, Arabic, C-Sharp, Regex
 ### Categories
-C-Sharp
+ASP.NET
 ### Excerpt
 In one simple line of code, we can check whether the given string is Arabic or not, in C#.
 ### Published Date

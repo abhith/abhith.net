@@ -1,9 +1,9 @@
 # [Redirect non-www urls to www urls](https://www.abhith.net/post/redirect-non-www-urls-to-www-urls/)
 ## Post Attributes
 ### Tags
-IIS, SEO, Umbraco, Web.Config
+IIS, SEO, Umbraco, Web.Config, Rewrite-Rule
 ### Categories
-IIS, Umbraco, My-Daily-Google
+My-Daily-Google, ASP.NET
 ### Excerpt
 When considering SEO, either you have to stick with www versioned url or non-www URLs. Having both accessible for a domain is a bad practice.
 ### Published Date

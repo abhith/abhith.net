@@ -1,9 +1,9 @@
 # [Inserting Rewrite rule in Release Config](https://www.abhith.net/post/inserting-rewrite-rule-in-release-config/)
 ## Post Attributes
 ### Tags
-IIS, Web.Config, Umbraco, SEO
+IIS, Web.Config, Umbraco, SEO, Rewrite-Rule
 ### Categories
-Umbraco, IIS, My-Daily-Google
+My-Daily-Google, ASP.NET
 ### Excerpt
 Adding rewrite rules in release config is handy so that it will not affect during Debug mode.
 ### Published Date
