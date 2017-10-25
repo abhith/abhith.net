@@ -18,9 +18,9 @@
 
 ## Images
 ### Hero Banner Image
-![Hero Banner Image](hannah-morgan-37675.jpg)
+![Hero Banner Image](PC_20130727_17125-copy.jpg)
 ### Profile Image
-![Profile Image](mhm_1140404193533.jpg)
+![Profile Image]()
 ### Fun Fact Background Image
 ![Fun Fact Background Image](markus-spiske-109588.jpg)
 ### Contact Background Image
