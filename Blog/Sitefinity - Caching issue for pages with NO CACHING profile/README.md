@@ -7,7 +7,7 @@ Sitefinity
 ### Excerpt
 If you experiencing cache issue for pages with No Caching profile in Sitefinity, check this post.
 ### Published Date
-
+2017-12-18 22:50:18
 ## Content
 ### Markdown
 ### ISSUE
