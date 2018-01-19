@@ -46,9 +46,9 @@ And the client side JavaScript function we call on **OnClientClick** will be lik
 That's it. Also, don't forget to notice the usage of the **ValidationGroup** all over the code above.
 ## Image
 ### Post Image
-![Post Image]() 
+![Post Image](glenn-carstens-peters-190592.jpg) 
 ### Post Header Image
-![Post Header Image]()
+![Post Header Image](j-kelly-brito-256889.jpg)
 
 ## Meta Tags
 ### Social Description
