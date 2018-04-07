@@ -10,12 +10,39 @@ Here I am listing some of the interview questions I have faced when applied for 
 2018-04-02 11:25:23
 ## Content
 ### Markdown
-In my 6 years of software engineer career, I attended 3 interviews (phone/direct). Following are the questions which I faced (don't remember all of them). And questions in each set is not in the exact order they asked.
+In my 6 years of software engineer career, I attended 3 interviews (phone/direct). Following are the questions which I faced (don't remember all of them). 
+
+- [Self-introduction (3)](#Self-introduction)
+- [Difference between WCF and Web API](#difference-between-wcf-and-web-api)
+
+Noticed the count beside some questions?
+It indicates that the question were asked on multiple occasions.
+
+### <a name="Self-introduction"></a> Self-introduction
+
+No matter what kind of interview you are going to attend, prepare for this question. 
+### <a name="difference-between-wcf-and-web-api"></a> Difference between WCF and Web API
+- WCF enables building services that support multiple transport protocols (HTTP, TCP, UDP, and custom transports) and allows switching between them.
+- Web API is HTTP only. First-class programming model for HTTP. More suitable for access from various browsers, mobile devices etc enabling wide reach.
+- WCF enables building services that support multiple encodings (Text, MTOM, and Binary) of the same message type and allows switching between them.
+- Web API support wide variety of media types including XML, JSON etc.
+- WCF supports building services with WS-* standards like Reliable Messaging, Transactions, Message Security.
+- Web API uses basic protocol and formats such as HTTP, WebSockets, SSL, JSON, and XML. There is no support for higher level protocols such as Reliable Messaging or Transactions.
+- WCF supports Request-Reply, One Way, and Duplex message exchange patterns.
+- HTTP is request/response but additional patterns can be supported through SignalR and WebSockets integration with Web API.
+- WCF SOAP services can be described in WSDL allowing automated tools to generate client proxies even for services with complex schemas.
+- There is a variety of ways to describe a Web API ranging from auto-generated HTML help page (eg. Swagger) describing snippets to structured metadata for OData integrated APIs.
+- WCF ships with the .NET framework.
+- Web API ships with .NET framework but is open-source and is also available out-of-band as independent download.
+
+#### Additional Resources
+- [WCF and ASP.NET Web API | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/framework/wcf/wcf-and-aspnet-web-api)
+
 
 ### 1. 
 Don't remember most of the questions asked in my first interview which was happened long ago.
 
-- [#1.1 Self introduction](#1.1)
+
 - [#1.2 ASP.NET Page Life Cycle?](#1.2)
 - [#1.3 How to find out whether it is a post back in the web form?](#1.3)
 - [#1.4 IIS version you are using?](#1.4)
@@ -44,7 +71,6 @@ Don't remember most of the questions asked in my first interview which was happe
 - [#2.19 How model is validated MVC]()
 - [#2.20 Some components annotations]() 
 - [#2.21 How to differentiate Web API controllers from MVC controllers if they have same name]()
-- [#2.22 Advantage of Web API over WCF]()
 - [#2.23 What can be done in wcf which cannot done in Web API]()
 - [#2.24 Oauth]()
 - [#2.25 Oath flow]()
@@ -74,6 +100,7 @@ Don't remember most of the questions asked in my first interview which was happe
 - [#2.49 Dependency injection]()
 - [#2.50 Cors]()
 - [#2.51 Advantages of Razor]()
+
 	
 ### 3.
 - [3.1 Stored procedures vs functions]() 
@@ -94,7 +121,6 @@ Don't remember most of the questions asked in my first interview which was happe
 - [3.16 Self Introduction]()
 
 As you can see, this a long list so will take time to format the questions as well as include answers. Consider this as a draft for now.
-
 ## Image
 ### Post Image
 ![Post Image]() 
