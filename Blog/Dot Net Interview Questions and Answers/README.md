@@ -100,6 +100,7 @@ Don't remember most of the questions asked in my first interview which was happe
 - [#2.49 Dependency injection]()
 - [#2.50 Cors]()
 - [#2.51 Advantages of Razor]()
+- How to retrieve data posted in MVC controller
 
 	
 ### 3.
@@ -119,6 +120,8 @@ Don't remember most of the questions asked in my first interview which was happe
 - [3.14  Crud in entity framework]()
 - [3.15 Delegates]()
 - [3.16 Self Introduction]()
+- Redis
+- Lazy loading in EF
 
 As you can see, this a long list so will take time to format the questions as well as include answers. Consider this as a draft for now.
 ## Image
