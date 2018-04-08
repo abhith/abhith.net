@@ -12,13 +12,14 @@ Here I am listing some of the interview questions I have faced when applied for 
 ### Markdown
 In my 6 years of software engineer career, I attended 3 interviews (phone/direct). Following are the questions which I faced (don't remember all of them). 
 
-- [Self-introduction (3)](#Self-introduction)
+- [Self-introduction (3)](#self-introduction)
 - [Difference between WCF and Web API](#difference-between-wcf-and-web-api)
+- [Delegates](#delegates )
 
 Noticed the count beside some questions?
 It indicates that the question were asked on multiple occasions.
 
-### <a name="Self-introduction"></a> Self-introduction
+### <a name="self-introduction"></a> Self-introduction
 
 No matter what kind of interview you are going to attend, prepare for this question. 
 ### <a name="difference-between-wcf-and-web-api"></a> Difference between WCF and Web API
@@ -38,6 +39,13 @@ No matter what kind of interview you are going to attend, prepare for this quest
 #### Additional Resources
 - [WCF and ASP.NET Web API | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/framework/wcf/wcf-and-aspnet-web-api)
 
+### <a name="delegates"></a> Delegates
+A delegate is a type that represents references to methods with a particular parameter list and return type.
+- Delegates allow methods to be passed as parameters.
+- Delegates can be used to define callback methods. 
+- Delegates can be chained together.
+#### Additional Resources
+- [Delegates (C# Programming Guide) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)
 
 ### 1. 
 Don't remember most of the questions asked in my first interview which was happened long ago.
@@ -118,7 +126,6 @@ Don't remember most of the questions asked in my first interview which was happe
 - [3.12  Iaas azure]()
 - [3.13  Difference between mvc 5 and 6]()
 - [3.14  Crud in entity framework]()
-- [3.15 Delegates]()
 - [3.16 Self Introduction]()
 - Redis
 - Lazy loading in EF
