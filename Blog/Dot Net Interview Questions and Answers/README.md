@@ -10,7 +10,7 @@ Here I am listing some of the interview questions I have faced when applied for 
 2018-04-02 11:25:23
 ## Content
 ### Markdown
-In my 6 years of software engineer career, I attended 3 interviews (phone/direct). Following are the questions which I faced (don't remember all of them). 
+In my 6 years of software engineer career, following are the questions which I faced (don't remember all of them). 
 
 - [Self-introduction (3)](#self-introduction)
 - [Difference between WCF and Web API](#difference-between-wcf-and-web-api)
