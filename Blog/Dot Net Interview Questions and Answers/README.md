@@ -12,11 +12,11 @@ Here I am listing some of the interview questions I have faced when applied for 
 ### Markdown
 In my 6 years of software engineer career, following are the questions which I faced (don't remember all of them). 
 
-- [Self-introduction (3)](#self-introduction)
+- [Self-introduction (*)](#self-introduction)
 - [Difference between WCF and Web API](#difference-between-wcf-and-web-api)
 - [Delegates](#delegates )
 
-Noticed the count beside some questions?
+Noticed the count/* beside some questions?
 It indicates that the question were asked on multiple occasions.
 
 ### <a name="self-introduction"></a> Self-introduction
@@ -41,6 +41,7 @@ No matter what kind of interview you are going to attend, prepare for this quest
 
 ### <a name="delegates"></a> Delegates
 A delegate is a type that represents references to methods with a particular parameter list and return type.
+
 - Delegates allow methods to be passed as parameters.
 - Delegates can be used to define callback methods. 
 - Delegates can be chained together.
