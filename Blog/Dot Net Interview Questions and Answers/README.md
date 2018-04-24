@@ -22,12 +22,28 @@ Here I am listing some of the interview questions I have faced when applied for 
 
 ### Markdown
 
-In my 6 years of software engineer career, following are the questions which I faced (don't remember all of them).
+Following are some of the questions which I faced during interviews (don't remember all of them).
+
+### General
 
 - [Self-introduction (*)](#self-introduction)
+
+### Knowledge
+
 - [Difference between WCF and Web API](#difference-between-wcf-and-web-api)
 - [Delegates](#delegates )
 - [ASP.NET Page Life Cycle (3)](#aspnet-page-life-cycle)
+- [Session-State Modes](#session-state-modes)
+- [How to find out whether it is a post back in the web form](#how-to-find-out-whether-it-is-a-post-back-in-the-web-form)
+
+### Other
+
+- IIS version you are using
+
+### Practical Level
+
+- [Query the second most salary from a table of salaries using SQL](#query-the-second-most-salary-from-a-table-of-salaries-using-sql)
+- Write a simple Angular 5 app which list data from a REST API. Include some action on the list like delete row.
 
 Noticed the count/* beside some questions?
 It indicates that the question was asked on multiple occasions.
@@ -64,6 +80,7 @@ A delegate is a type that represents references to methods with a particular par
 - Delegates can be chained together.
 
 #### Additional Resources
+
 - [Delegates (C# Programming Guide) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)
 
 ### <a name="aspnet-page-life-cycle"></a> ASP.NET Page Life Cycle
@@ -73,7 +90,6 @@ When an ASP.NET page runs, the page goes through a life cycle in which it perfor
 #### General Page Life-Cycle Stages
 
 In general terms, the page goes through the stages outlined in the following table.
-
 
 |Stage  |Description  |
 |---------|---------|
@@ -104,21 +120,37 @@ Within each stage of the life cycle of a page, the page raises events that you c
 |Render     | This is not an event; instead, at this stage of processing, the Page object calls this method on each control. All ASP.NET Web server controls have a Render method that writes out the control's markup to send to the browser. If you create a custom control, you typically override this method to output the control's markup. However, if your custom control incorporates only standard ASP.NET Web server controls and no custom markup, you do not need to override the Render method. For more information, see Developing Custom ASP.NET Server Controls. A user control (an .ascx file) automatically incorporates rendering, so you do not need to explicitly render the control in code.        |
 |Unload     |   Raised for each control and then for the page. In controls, use this event to do final cleanup for specific controls, such as closing control-specific database connections. For the page itself, use this event to do final cleanup work, such as closing open files and database connections, or finishing up logging or other request-specific tasks.      |
 
-
 #### Additional Resources
 
 - [ASP.NET Page Life Cycle Overview | MSDN](https://msdn.microsoft.com/en-us/library/ms178472.aspx)
 
-### SET 1
+### <a name="session-state-modes"></a> Session-State Modes
 
-Don't remember most of the questions asked in my first interview which was happened long ago.
+ASP.NET session state supports several different storage options for session data.
 
-- [#1.3 How to find out whether it is a post back in the web form?](#1.3)
-- [#1.4 IIS version you are using?](#1.4)
-- [#1.5 How to find the second most salary from a table of salaries in SQL](#1.5)
-- [#1.6 Session types](#1.6)
+|Mode  |Description  |
+|---------|---------|
+|InProc      |  which stores session state in memory on the Web server. This is the default.       |
+|StateServer      |        which stores session state in a separate process called the ASP.NET state service. This ensures that session state is preserved if the Web application is restarted and also makes session state available to multiple Web servers in a Web farm.  |
+|SQLServer      |     stores session state in a SQL Server database. This ensures that session state is preserved if the Web application is restarted and also makes session state available to multiple Web servers in a Web farm.    |
+|Custom      |      which enables you to specify a custom storage provider.   |
+|Off      |    which disables session state.     |
 
-### 2
+#### Additional Resources
+
+- [Session-State Modes | MSDN](https://msdn.microsoft.com/en-us/library/ms178586.aspx)
+
+### <a name="how-to-find-out-whether-it-is-a-post-back-in-the-web-form"></a> How to find out whether it is a post back in the web form
+
+By checking **Page.IsPostBack** Property, Gets a value that indicates whether the page is being rendered for the first time or is being loaded in response to a postback.
+
+#### Additional Resources
+
+- [Page.IsPostBack Property | MSDN](https://msdn.microsoft.com/en-us/library/system.web.ui.page.ispostback(v=vs.110).aspx)
+
+### <a name="query-the-second-most-salary-from-a-table-of-salaries-using-sql"></a> Query the second most salary from a table of salaries using SQL
+
+> SELECT TOP 1 * FROM TABLENAME WHERE SALARY < (SELECT MAX(SALARY) FROM TABLENAME) ORDER BY SALARY DESC
 
 - [#2.1 CLR](#2.1)
 - [#2.2 Rate your SQL skill out of 10]()
@@ -171,9 +203,6 @@ Don't remember most of the questions asked in my first interview which was happe
 - [#2.50 Cors]()
 - [#2.51 Advantages of Razor]()
 - How to retrieve data posted in MVC controller
-
-### 3
-
 - [3.1 Stored procedures vs functions]() 
 - [3.2 Dependency injection in angular]()
 - [3.3 Controllers in angular]()
