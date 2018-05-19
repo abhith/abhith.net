@@ -1,5 +1,7 @@
 # [Post Name](post url)
+
 ## Post Attributes
+
 ### Tags
 
 ### Categories
@@ -9,14 +11,19 @@
 ### Published Date
 
 ## Content
+
 ### Markdown
 
 ## Image
+
 ### Post Image
-![Post Image]() 
+
+![Post Image]()
+
 ### Post Header Image
+
 ![Post Header Image]()
 
 ## Meta Tags
-### Social Description
 
+### Social Description
