@@ -1,0 +1,11 @@
+---
+title: SITEFINITY DEVELOPMENT - PROBLEMS AND SOLUTIONS
+author: Abhith Rajan
+authorURL: http://twitter.com/abhithrajan
+# authorFBID: 661277173
+---
+
+DURING MY FIRST SITEFINITY PROJECT, I ENCOUNTERED FEW PROBLEMS, IN WHICH SOME OF THEM ARE EXPLAINED HERE.
+
+<!--truncate-->
+
