@@ -14,6 +14,7 @@ During my first Sitefinity project, I encountered few problems, in which some of
 * [#1: <strike>Child pages not showing in navigation menu</strike>](#1)
 * [#2: <strike>Caching issue for pages with NO CACHING profile</strike>](#2)
 * [#3: <strike>Localization not reflecting in when resource files are updated</strike>](#localization-not-reflecting-in-when-resource-files-are-updated)
+* [#4 <strike>Forgot password email not triggered</strike>](#forgot-password-email-not-triggered)
 
 The strikethrough indicates that I have found solutions for them.
 Solutions that worked for me explained below,
@@ -29,3 +30,17 @@ I wrote another article just for this. Check it out [here](https://www.abhith.ne
 #### <a name="localization-not-reflecting-in-when-resource-files-are-updated"></a> Localization not reflecting in when resource files are updated
 
 Restart the website or recycle the app pool associated with the website in the IIS in order to see the localization updates.
+
+#### <a name="forgot-password-email-not-triggered"></a> Forgot password email not triggered
+
+Go through the KB article with directions on what needs to be configured and an example screencast ( http://www.screencast.com/t/EF0N2LSiwV ) . Also, the KB describes how to configure smtp4dev so you can test the set-up. 
+
+https://knowledgebase.progress.com/articles/Article/How-to-use-smtp4dev-to-test-Sitefinity-emails
+
+Note that this is an example for forms notifications, so in your case, you do not need to follow 3. Enable Forms notifications.
+
+However, please make sure that Password Recovery is configured correctly. EnablePasswordReset needs to be set to true and enablePasswordRetrieval should be set to false. Please, check this documentation:
+
+https://docs.sitefinity.com/administration-configure-the-password-recovery-link
+
+Also, note that restart of the application is required.
