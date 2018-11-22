@@ -71,7 +71,7 @@ In the above query, we are using **CASE** to do the conditional sorting. And wit
 
 If you are using SQL Server 2012 or later, then you have other options to do paging like by using **OFFSET FETCH**.
 
-## Story in short
+### Story in short
 
 During this post is written, I was working on an **Angular 6 + ASP.NET Core 2.1** web app. The DB provided was a **SQL Server 2008**. Used **Dapper** to do the repository level coding.
 
