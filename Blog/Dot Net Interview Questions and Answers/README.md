@@ -152,6 +152,9 @@ By checking **Page.IsPostBack** Property, Gets a value that indicates whether th
 
 > SELECT TOP 1 * FROM TABLENAME WHERE SALARY < (SELECT MAX(SALARY) FROM TABLENAME) ORDER BY SALARY DESC
 
+Of course there is another better solution, which is using SQL OFFSET-FETCH clause, which is 
+> SELECT * FROM TABLENAME ORDER BY SALARY DESC OFFSET 1 ROWS FETCH NEXT 1 ROWS ONLY
+
 - [#2.1 CLR](#2.1)
 - [#2.2 Rate your SQL skill out of 10]()
 - [#2.3 Difference between procedure and function (SQL)]() 
@@ -218,6 +221,21 @@ By checking **Page.IsPostBack** Property, Gets a value that indicates whether th
 - [3.14  Crud in entity framework]()
 - Redis
 - Lazy loading in EF
+- IEnumerable vs List
+
+### Umbraco
+
+- Did your Umbraco sites backoffice is publically accessible?
+- Archetype 
+- What is the alternative for Archetype ?
+- Packages you have worked with
+- Custom Data Type
+- How to show custom error for media upload if file size exceeds the limit ?
+- Events 
+- Experience with Umbraco Forms
+- Difference between surface controller and a normal mvc controller?
+- API Controller
+- Built authorized pages?
 
 As you can see, this a long list so will take time to format the questions as well as include answers. Consider this as a draft for now.
 
