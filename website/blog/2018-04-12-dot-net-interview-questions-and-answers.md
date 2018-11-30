@@ -1,26 +1,12 @@
-# [.NET Interview Questions and Answers](https://www.abhith.net/post/dotnet-interview-questions-and-answers/)
-
-## Post Attributes
-
-### Tags
-
-interview
-
-### Categories
-
-Career-Tips
-
-### Excerpt
+---
+title: .NET Interview Questions and Answers
+author: Abhith Rajan
+authorURL: http://twitter.com/abhithrajan
+---
 
 Here I am listing some of the interview questions I have faced when applied for .NET developer/Software engineer roles.
 
-### Published Date
-
-2018-04-02 11:25:23
-
-## Content
-
-### Markdown
+<!--truncate-->
 
 Following are some of the questions which I faced during interviews (don't remember all of them).
 
@@ -238,19 +224,3 @@ Of course there is another better solution, which is using SQL OFFSET-FETCH clau
 - Built authorized pages?
 
 As you can see, this a long list so will take time to format the questions as well as include answers. Consider this as a draft for now.
-
-## Image
-
-### Post Image
-
-![Post Image]() 
-
-### Post Header Image
-
-![Post Header Image]()
-
-## Meta Tags
-
-### Social Description
-
-Here I am listing some of the interview questions I have faced when applied for .NET developer/Software engineer roles.
