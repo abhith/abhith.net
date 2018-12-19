@@ -79,4 +79,4 @@ During this post is written, I was working on an **Angular 6 + ASP.NET Core 2.1*
 
 - [CASE (Transact-SQL) | Microsoft Docs](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/case-transact-sql?view=sql-server-2017)
 - [LIKE (Transact-SQL) | Microsoft Docs](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/like-transact-sql?view=sql-server-2017)
-- [OFFSET FETCH Clause (SQL Server Compact)](https://technet.microsoft.com/en-us/library/gg699618(v=sql.110).aspx)
+- [OFFSET FETCH Clause (SQL Server Compact)](<https://technet.microsoft.com/en-us/library/gg699618(v=sql.110).aspx>)
