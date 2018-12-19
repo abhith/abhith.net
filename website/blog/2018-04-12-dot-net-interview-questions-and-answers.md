@@ -1,26 +1,12 @@
-# [.NET Interview Questions and Answers](https://www.abhith.net/post/dotnet-interview-questions-and-answers/)
-
-## Post Attributes
-
-### Tags
-
-interview
-
-### Categories
-
-Career-Tips
-
-### Excerpt
+---
+title: .NET Interview Questions and Answers
+author: Abhith Rajan
+authorURL: http://twitter.com/abhithrajan
+---
 
 Here I am listing some of the interview questions I have faced when applied for .NET developer/Software engineer roles.
 
-### Published Date
-
-2018-04-02 11:25:23
-
-## Content
-
-### Markdown
+<!--truncate-->
 
 Following are some of the questions which I faced during interviews (don't remember all of them).
 
@@ -152,87 +138,92 @@ By checking **Page.IsPostBack** Property, Gets a value that indicates whether th
 
 > SELECT TOP 1 * FROM TABLENAME WHERE SALARY < (SELECT MAX(SALARY) FROM TABLENAME) ORDER BY SALARY DESC
 
-- [#2.1 CLR](#2.1)
-- [#2.2 Rate your SQL skill out of 10]()
-- [#2.3 Difference between procedure and function (SQL)]() 
-- [#2.4 CTE]()
-- [#2.5 Server side paging via sql]()
-- [#2.6 Server side paging via entity framework]()
-- [#2.7 Entity framework approaches]() 
-- [#2.8 Entity framework Version you have experience in]()
-- [#2.9 Architecture of xamarin forms project]()
-- [#2.10 PCL]()
-- [#2.11 How PCL compiled]()
-- [#2.12 Difference between PCL and shared projects (Xamarin)]()
-- [#2.13 Why using Xamarin forms over native application]()
-- [#2.14 Angular modules]()
-- [#2.15 Angular controllers]()
-- [#2.16 SQL Constraints]()
-- [#2.17 What is MVC]()
-- [#2.18 Can we define multiple actions with same name in a MVC controller]()
-- [#2.19 How model is validated MVC]()
-- [#2.20 Some components annotations]() 
-- [#2.21 How to differentiate Web API controllers from MVC controllers if they have same name]()
-- [#2.23 What can be done in wcf which cannot done in Web API]()
-- [#2.24 Oauth]()
-- [#2.25 Oath flow]()
-- [#2.26 Odata]()
-- [#2.27 Can we return view from Web api?]()
-- [#2.28 Session in MVC]()
-- [#2.29 Difference between tempdata viewdata and viewbag]()
-- [#2.30 Bundling]()
-- [#2.31 What's inside app data folder]()
-- [#2.32 Mvc request life cycle]()
-- [#2.33 Cache advantages]()
-- [#2.34 How can we define Cache expiry]()
-- [#2.35 Self introduction]()
-- [#2.36 Rate your skill in angularjs out of 5]()
-- [#2.37 How an old SQL project can be moved to entity framework in less time]()
-- [#2.38 Mvc project structure]()
-- [#2.39 Areas in MVC]()
-- [#2.40 What's inside MVC areas folder]()
-- [#2.41 Type of results from mvc controller action]()
-- [#2.42 Routing in MVC]()
-- [#2.43 Attribute routing in MVC]()
-- [#2.44 Routing priority]()
-- [#2.45 Filters in mvc]()
-- [#2.46 Razor]()
-- [#2.47 Tag helpers in MVC]() 
-- [#2.48 Tag helpers or html helpers you use and why]()
-- [#2.49 Dependency injection]()
-- [#2.50 Cors]()
-- [#2.51 Advantages of Razor]()
+Of course there is another better solution, which is using SQL OFFSET-FETCH clause, which is 
+> SELECT * FROM TABLENAME ORDER BY SALARY DESC OFFSET 1 ROWS FETCH NEXT 1 ROWS ONLY
+
+### Questions with link to answers
+
+#### SQL
+- [Server side paging via sql](https://www.abhith.net/post/filtering-paging-and-sorting-in-sql-server-2008/)
+- [Difference between procedure and function (SQL)](https://www.dotnettricks.com/learn/sqlserver/difference-between-stored-procedure-and-function-in-sql-server) (2)
+- [CTE](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)
+- [SQL Constraints](https://www.w3schools.com/sql/sql_constraints.asp)
+
+#### MVC
+- [Types of action result in MVC](https://blog.eduonix.com/web-programming-tutorials/learn-different-types-of-action-results-in-mvc/) (2)
+- [Filters in MVC](http://www.tutorialsteacher.com/mvc/filters-in-asp.net-mvc) (2)
+- [Can we define multiple actions with same name in a MVC controller?](https://stackoverflow.com/questions/1045316/asp-net-mvc-ambiguous-action-methods)
+- [Areas in MVC](https://dzone.com/articles/areas-in-aspnet-mvc)
+- [Mvc request life cycle](https://www.codeproject.com/Articles/1028156/%2FArticles%2F1028156%2FA-Detailed-Walkthrough-of-ASP-NET-MVC-Request-Life)
+
+#### Other
+- [Difference between tempdata viewdata and viewbag](https://www.linkedin.com/pulse/difference-between-viewdata-viewbag-tempdata-sunmbal-siddiqui/) 
+- [CLR](https://docs.microsoft.com/en-us/dotnet/standard/clr)
+- [Generics](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/)
+
+### YES or NO
+- Can we return view from Web api? - NO
+
+### Drafts
+
+- Server side paging via entity framework
+- Entity framework approaches
+- Entity framework versions you have worked with?
+- Architecture of xamarin forms project
+- PCL
+- How PCL compiled
+- Difference between PCL and shared projects (Xamarin)
+- Why using Xamarin forms over native application?
+- Angular modules
+- Angular controllers
+- What is MVC- 
+- How model is validated MVC?
+- Some components annotations 
+- How to differentiate Web API controllers from MVC controllers if they have same name
+- What can be done in wcf which cannot done in Web API?
+- Oauth
+- Oath flow
+- Odata
+- Session in MVC
+- Bundling
+- What's inside app data folder
+- Cache advantages
+- How can we define Cache expiry
+- How an old SQL project can be moved to entity framework in less time
+- Mvc project architecture (2)
+- What's inside MVC areas folder
+- Routing in MVC (2)
+- Attribute routing in MVC (2)
+- Routing priority
+- Razor
+- Tag helpers in MVC 
+- Tag helpers or html helpers you use and why
+- Dependency injection
+- CORS
+- Advantages of Razor
 - How to retrieve data posted in MVC controller
-- [3.1 Stored procedures vs functions]() 
-- [3.2 Dependency injection in angular]()
-- [3.3 Controllers in angular]()
-- [3.4 Azure]()
-- [3.6 Generics]()
-- [3.7 Override method in a class]()
-- [3.8 Filters in mvc]()
-- [3.9 Routing in mvc]()
-- [3.10  Attribute routing]()
-- [3.11  Worker types in azure]()
-- [3.12  Iaas azure]()
-- [3.13  Difference between mvc 5 and 6]()
-- [3.14  Crud in entity framework]()
+- Azure
+- Override method in a class
+- Worker types in azure
+- Iaas Azure
+- Difference between MVC 5 and 6
+- CRUD in entity framework
 - Redis
 - Lazy loading in EF
+- IEnumerable vs List
+
+### Umbraco
+
+- Did your Umbraco sites backoffice is publically accessible?
+- Archetype 
+- What is the alternative for Archetype ?
+- Packages you have worked with
+- Custom Data Type
+- How to show custom error for media upload if file size exceeds the limit ?
+- Events 
+- Experience with Umbraco Forms
+- Difference between surface controller and a normal mvc controller?
+- API Controller
+- Built authorized pages?
 
 As you can see, this a long list so will take time to format the questions as well as include answers. Consider this as a draft for now.
-
-## Image
-
-### Post Image
-
-![Post Image]() 
-
-### Post Header Image
-
-![Post Header Image]()
-
-## Meta Tags
-
-### Social Description
-
-Here I am listing some of the interview questions I have faced when applied for .NET developer/Software engineer roles.
