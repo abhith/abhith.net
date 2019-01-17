@@ -254,4 +254,20 @@ Of course there is another better solution, which is using SQL OFFSET-FETCH clau
 - API Controller
 - Built authorized pages?
 
+### Angular
+
+- Why choosen Angular over React JS
+- What is Polyfills.js
+- Pure/Impure Pipes
+- ViewChild
+- Template driven forms
+- What does NgOnChanges,NgDirty
+- What is @Input/@Output
+- How to deploy Angular Project and what is dist folder
+- How Angular works in browser
+- What is AOT
+- How to wirte Custom Pipes and how will name 
+
+
+
 As you can see, this a long list so will take time to format the questions as well as include answers. Consider this as a draft for now.
