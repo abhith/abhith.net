@@ -256,18 +256,16 @@ Of course there is another better solution, which is using SQL OFFSET-FETCH clau
 
 ### Angular
 
-- Why choosen Angular over React JS
+- Why chosen Angular over ReactJS
 - What is Polyfills.js
 - Pure/Impure Pipes
 - ViewChild
 - Template driven forms
-- What does NgOnChanges,NgDirty
-- What is @Input/@Output
-- How to deploy Angular Project and what is dist folder
+- NgOnChanges, NgDirty
+- What is @Input and @Output
+- How to deploy Angular project and what is dist folder
 - How Angular works in browser
 - What is AOT
-- How to wirte Custom Pipes and how will name 
-
-
+- How to write Custom Pipes and how will name
 
 As you can see, this a long list so will take time to format the questions as well as include answers. Consider this as a draft for now.
