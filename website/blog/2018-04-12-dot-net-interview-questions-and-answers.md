@@ -189,12 +189,12 @@ Of course there is another better solution, which is using SQL OFFSET-FETCH clau
 
 ### .NET
 
-- by reference vs. by value
 - [Boxing and Unboxing](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing)
+- [Serialization & Deserialization](https://www.guru99.com/c-sharp-serialization.html)
+- by reference vs. by value
 - C# supports multi-inheritance?
 - How to stop inheritance?
 - For Ajax calls, what is the lifecycle of a WebForm
-- Serialization & Deserialization
 - Can we return view from Web api? - NO
 
 ### JavaScript
