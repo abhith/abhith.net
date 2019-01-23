@@ -18,7 +18,7 @@ Following are some of the questions which I faced during interviews (don't remem
 
 - [Difference between WCF and Web API](#difference-between-wcf-and-web-api)
 - [Delegates](#delegates)
-- [ASP.NET Page Life Cycle (4)](#aspnet-page-life-cycle)
+- [ASP.NET Page Life Cycle (5)](#aspnet-page-life-cycle)
 - [Session-State Modes](#session-state-modes)
 - [How to find out whether it is a post back in the web form](#how-to-find-out-whether-it-is-a-post-back-in-the-web-form)
 
@@ -151,37 +151,93 @@ Of course there is another better solution, which is using SQL OFFSET-FETCH clau
 - [CTE](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)
 - [SQL Constraints](https://www.w3schools.com/sql/sql_constraints.asp)
 
-#### MVC
+#### ASP.NET MVC
 
 - [Types of action result in MVC](https://blog.eduonix.com/web-programming-tutorials/learn-different-types-of-action-results-in-mvc/) (2)
-- [Filters in MVC](http://www.tutorialsteacher.com/mvc/filters-in-asp.net-mvc) (2)
+- [Filters in MVC](http://www.tutorialsteacher.com/mvc/filters-in-asp.net-mvc) (3)
 - [Can we define multiple actions with same name in a MVC controller?](https://stackoverflow.com/questions/1045316/asp-net-mvc-ambiguous-action-methods)
 - [Areas in MVC](https://dzone.com/articles/areas-in-aspnet-mvc)
 - [Mvc request life cycle](https://www.codeproject.com/Articles/1028156/%2FArticles%2F1028156%2FA-Detailed-Walkthrough-of-ASP-NET-MVC-Request-Life)
+- [Difference between tempdata viewdata and viewbag](https://www.linkedin.com/pulse/difference-between-viewdata-viewbag-tempdata-sunmbal-siddiqui/)
 
 #### Other
 
-- [Difference between tempdata viewdata and viewbag](https://www.linkedin.com/pulse/difference-between-viewdata-viewbag-tempdata-sunmbal-siddiqui/)
 - [CLR](https://docs.microsoft.com/en-us/dotnet/standard/clr)
 - [Generics](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/)
 
-### YES or NO
+### Non-Technical
 
+- Why leaving current organization (3)
+- Difficult people you have been in touch with during work (Manager, Stakeholder or Colleagues) and how you dealt with them
+- How you responded when a drastic change is requested by the client after all the work done
+- Which project you think that doesn't achieved its reach and why that happened
+- Explain entire lifecycle of a project that you handle (2)
+
+### Umbraco
+
+- Did your Umbraco sites backoffice is publicly accessible?
+- Archetype
+- What is the alternative for Archetype ?
+- Packages you have worked with
+- Custom Data Type
+- How to show custom error for media upload if file size exceeds the limit ?
+- Events
+- Experience with Umbraco Forms
+- Difference between surface controller and a normal mvc controller?
+- API Controller
+- Built authorized pages?
+
+### .NET
+
+- by reference vs. by value
+- [Boxing and Unboxing](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing)
+- C# supports multi-inheritance?
+- How to stop inheritance?
+- For Ajax calls, what is the lifecycle of a WebForm
+- Serialization & Deserialization
 - Can we return view from Web api? - NO
+
+### JavaScript
+
+- getElementsByName, getElementById
+- Cloning
+- by reference vs. by value
+- How can we access a WCF
+
+### AngularJS
+
+- Modules (2)
+- Controllers
+
+### Angular
+
+- Why chosen Angular over ReactJS
+- What is Polyfills.js
+- Pure/Impure Pipes
+- ViewChild
+- Template driven forms
+- NgOnChanges, NgDirty
+- What is @Input and @Output
+- How to deploy Angular project and what is dist folder
+- How Angular works in browser
+- What is AOT
+- How to write Custom Pipes and how will name
+
+### Xamarin
+
+- How to reduce apk size
+- Why using Xamarin forms over native application?
+- Architecture of xamarin forms project
 
 ### Drafts
 
 - Server side paging via entity framework
 - Entity framework approaches
 - Entity framework versions you have worked with?
-- Architecture of xamarin forms project
 - PCL
 - How PCL compiled
 - Difference between PCL and shared projects (Xamarin)
-- Why using Xamarin forms over native application?
-- Angular modules
-- Angular controllers
-- What is MVC-
+- What is MVC
 - How model is validated MVC?
 - Some components annotations
 - How to differentiate Web API controllers from MVC controllers if they have same name
@@ -222,7 +278,7 @@ Of course there is another better solution, which is using SQL OFFSET-FETCH clau
 - Reporting tools you have used
 - How to reuse a certain view section in multiple places
 - Why you choose Angular over KnockoutJs
-- Oracle DB Experience (2)
+- Oracle DB Experience (3)
 - What is the purpose of Global.Ascx
 - In Web forms, in which page lifecycle method we can toggle element visibility
 - REST vs SOAP
@@ -231,41 +287,10 @@ Of course there is another better solution, which is using SQL OFFSET-FETCH clau
 - Microservices
 - DML and DDL in SQL
 - Transactions in SQL
-
-### Non-Technical
-
-- Why leaving current organization
-- Difficult people you have been in touch with during work (Manager, Stakeholder or Colleagues) and how you dealt with them
-- How you responded when a drastic change is requested by the client after all the work done
-- Which project you think that doesn't achieved its reach and why that happened
-- Explain entire lifecycle of a project that you handle
-
-### Umbraco
-
-- Did your Umbraco sites backoffice is publicly accessible?
-- Archetype
-- What is the alternative for Archetype ?
-- Packages you have worked with
-- Custom Data Type
-- How to show custom error for media upload if file size exceeds the limit ?
-- Events
-- Experience with Umbraco Forms
-- Difference between surface controller and a normal mvc controller?
-- API Controller
-- Built authorized pages?
-
-### Angular
-
-- Why chosen Angular over ReactJS
-- What is Polyfills.js
-- Pure/Impure Pipes
-- ViewChild
-- Template driven forms
-- NgOnChanges, NgDirty
-- What is @Input and @Output
-- How to deploy Angular project and what is dist folder
-- How Angular works in browser
-- What is AOT
-- How to write Custom Pipes and how will name
+- Process vs Task
+- AppDomain
+- SOAP
+- What is SPA
+- How can we convert WCF to a REST service
 
 As you can see, this a long list so will take time to format the questions as well as include answers. Consider this as a draft for now.
