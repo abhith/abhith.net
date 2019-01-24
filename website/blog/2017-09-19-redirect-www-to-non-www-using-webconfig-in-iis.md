@@ -6,7 +6,7 @@ authorURL: http://twitter.com/abhithrajan
 
 Use IIS rewrite rule to redirect (301) all www requests to non-www.
 
-![Hello World](/img/2017-09-19-redirect-www-to-non-www-using-webconfig-in-iis.png)
+![Hello World](/img/web-config.png)
 
 <!--truncate-->
 
