@@ -1,15 +1,15 @@
-# [Redirect HTTPS requests to HTTP using IIS Rewrite rule in Web.Config](https://www.abhith.net/post/redirect-https-requests-to-http-using-iis-rewrite-rule-in-webconfig/)
-## Post Attributes
-### Tags
-IIS, Rewrite-Rule, Web.Config
-### Categories
-ASP.NET
-### Excerpt
+---
+title: Redirect HTTPS requests to HTTP using IIS Rewrite rule in Web.Config
+author: Abhith Rajan
+authorURL: http://twitter.com/abhithrajan
+---
+
 Use the provided rewrite rule to redirect HTTPS requests to HTTP.
-### Published Date
-2017-09-28 09:42:08
-## Content
-### Markdown
+
+![Redirect HTTPS requests to HTTP using IIS Rewrite rule in Web.Config](/img/web-config.png)
+
+<!--truncate-->
+
 The below-given rewrite rule which redirects all the HTTPS request to its HTTP URL. Redirecting HTTPS to HTTP isn't recommended considering many factors. If you don't have SSL purchased for your website, there are some cool options, like **Cloudflare**, it has a free package where it adds security to your site as well as provides free SSL, will write about it in a separate post.
 
 <pre style="font-family:Consolas;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="color:gray;">&lt;</span><span style="color:#569cd6;">rewrite</span><span style="color:gray;">&gt;</span>
@@ -23,12 +23,3 @@ The below-given rewrite rule which redirects all the HTTPS request to its HTTP U
 <span style="color:gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="color:#569cd6;">rule</span><span style="color:gray;">&gt;</span>
 <span style="color:gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="color:#569cd6;">rules</span><span style="color:gray;">&gt;</span>
 <span style="color:gray;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="color:#569cd6;">rewrite</span><span style="color:gray;">&gt;</span></pre>
-## Image
-### Post Image
-![Post Image](web-config.png) 
-### Post Header Image
-![Post Header Image]()
-
-## Meta Tags
-### Social Description
-Use the provided rewrite rule to redirect HTTPS requests to HTTP.
