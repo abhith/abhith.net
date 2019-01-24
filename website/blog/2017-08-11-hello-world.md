@@ -5,6 +5,7 @@ authorURL: http://twitter.com/abhithrajan
 ---
 
 Hi, this is my first blog post. Since am a dev, it should be hello world :)
+
 ![Hello World](/img/2017-08-11-hello-world.png)
 
 <!--truncate-->
