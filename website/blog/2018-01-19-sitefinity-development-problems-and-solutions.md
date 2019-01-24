@@ -2,19 +2,20 @@
 title: SITEFINITY DEVELOPMENT - PROBLEMS AND SOLUTIONS
 author: Abhith Rajan
 authorURL: http://twitter.com/abhithrajan
-# authorFBID: 661277173
 ---
 
 DURING MY FIRST SITEFINITY PROJECT, I ENCOUNTERED FEW PROBLEMS, IN WHICH SOME OF THEM ARE EXPLAINED HERE.
+
+![Hello World](/img/2018-01-19-sitefinity-development-problems-and-solutions.jpg)
 
 <!--truncate-->
 
 During my first Sitefinity project, I encountered few problems, in which some of them are,
 
-* [#1: <strike>Child pages not showing in navigation menu</strike>](#1)
-* [#2: <strike>Caching issue for pages with NO CACHING profile</strike>](#2)
-* [#3: <strike>Localization not reflecting in when resource files are updated</strike>](#localization-not-reflecting-in-when-resource-files-are-updated)
-* [#4 <strike>Forgot password email not triggered</strike>](#forgot-password-email-not-triggered)
+- [#1: <strike>Child pages not showing in navigation menu</strike>](#1)
+- [#2: <strike>Caching issue for pages with NO CACHING profile</strike>](#2)
+- [#3: <strike>Localization not reflecting in when resource files are updated</strike>](#localization-not-reflecting-in-when-resource-files-are-updated)
+- [#4 <strike>Forgot password email not triggered</strike>](#forgot-password-email-not-triggered)
 
 The strikethrough indicates that I have found solutions for them.
 Solutions that worked for me explained below,
@@ -33,7 +34,7 @@ Restart the website or recycle the app pool associated with the website in the I
 
 #### <a name="forgot-password-email-not-triggered"></a> Forgot password email not triggered
 
-Go through the KB article with directions on what needs to be configured and an example screencast ( http://www.screencast.com/t/EF0N2LSiwV ) . Also, the KB describes how to configure smtp4dev so you can test the set-up. 
+Go through the KB article with directions on what needs to be configured and an example screencast ( http://www.screencast.com/t/EF0N2LSiwV ) . Also, the KB describes how to configure smtp4dev so you can test the set-up.
 
 https://knowledgebase.progress.com/articles/Article/How-to-use-smtp4dev-to-test-Sitefinity-emails
 
