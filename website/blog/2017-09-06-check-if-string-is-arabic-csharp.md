@@ -1,15 +1,15 @@
-# [Check if string is Arabic - C#](https://www.abhith.net/post/check-if-string-is-arabic-c/)
-## Post Attributes
-### Tags
-Localization, Arabic, C-Sharp, Regex
-### Categories
-ASP.NET
-### Excerpt
+---
+title: Check if string is Arabic - C#
+author: Abhith Rajan
+authorURL: http://twitter.com/abhithrajan
+---
+
 In one simple line of code, we can check whether the given string is Arabic or not, in C#.
-### Published Date
-2017-09-06 11:50:41
-## Content
-### Markdown
+
+![Check if string is Arabic - C#](/img/2017-09-06-check-if-string-is-arabic-csharp)
+
+<!--truncate-->
+
 I have pretty good experience in bilingual web app development, especially in English & Arabic languages. The challenge with switching website page from English to Arabic is not just the content translation, the whole layout need to be changed and the text direction for all need to be RTL where as for English it need to be LTR.
 
 We developed this one app [socialboard](https://socialboard.io) which aggregates content from social medias and displays in a single place. Initially, we focused only on English content so everything in LTR even though some aggregated content was in Arabic. But then we got some clients whose primary language is Arabic. i.e most of the content of their social media was in Arabic.
@@ -17,6 +17,7 @@ We developed this one app [socialboard](https://socialboard.io) which aggregates
 So we had to do some changes, UX team prepared the RTL layout for displaying content. The development team had to classify content (i.e to flag them isRTL or not) during creation and use proper layout based on isRTL field value of the content.
 
 To classify, or to check whether the given content language is Arabic or not, we used the following extension method,
+
 <pre style="font-family:Consolas;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="color:#608b4e;">///</span><span style="color:#608b4e;">&nbsp;</span><span style="color:#608b4e;">&lt;</span><span style="color:#608b4e;">summary</span><span style="color:#608b4e;">&gt;</span>
 <span style="color:#608b4e;">///</span><span style="color:#608b4e;">&nbsp;To&nbsp;check&nbsp;whether&nbsp;the&nbsp;given&nbsp;string&nbsp;is&nbsp;Arabic.</span>
 <span style="color:#608b4e;">///</span><span style="color:#608b4e;">&nbsp;</span><span style="color:#608b4e;">&lt;/</span><span style="color:#608b4e;">summary</span><span style="color:#608b4e;">&gt;</span>
@@ -30,14 +31,3 @@ To classify, or to check whether the given content language is Arabic or not, we
 And it is now part of my [Code.Library](https://github.com/Abhith/Code.Library) package ValidationHelper module.
 
 If you know any better way to check if the string is Arabic in C#, let me know in the comments.
-
-## Image
-### Post Image
-![Post Image](is-rtl.png) 
-### Post Header Image
-![Post Header Image]()
-
-## Meta Tags
-### Social Description
-In one simple line of code, we can check whether the given string is Arabic or not, in C#.
-
