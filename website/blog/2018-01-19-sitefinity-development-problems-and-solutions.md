@@ -6,7 +6,7 @@ authorURL: http://twitter.com/abhithrajan
 
 DURING MY FIRST SITEFINITY PROJECT, I ENCOUNTERED FEW PROBLEMS, IN WHICH SOME OF THEM ARE EXPLAINED HERE.
 
-![Hello World](/img/2018-01-19-sitefinity-development-problems-and-solutions.jpg)
+![SITEFINITY DEVELOPMENT - PROBLEMS AND SOLUTIONS](/img/2018-01-19-sitefinity-development-problems-and-solutions.jpg)
 
 <!--truncate-->
 
