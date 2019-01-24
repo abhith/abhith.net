@@ -1,16 +1,17 @@
-# [Redirect HTTP to HTTPS using Web.Config in IIS](https://www.abhith.net/post/redirect-http-to-https-using-webconfig-in-iis/)
-## Post Attributes
-### Tags
-Web.Config, IIS, Umbraco, URL-Rewrite
-### Categories
-SEO
-### Excerpt
+---
+title: Redirect HTTP to HTTPS using Web.Config in IIS
+author: Abhith Rajan
+authorURL: http://twitter.com/abhithrajan
+---
+
 Use IIS Rewrite rule to redirect all HTTP request to HTTPS.
-### Published Date
-2017-09-25 10:42:31
-## Content
-### Markdown
-Add the below rewrite rule in your **Web.Config** under  **system.webServer** section,
+
+![Redirect HTTP to HTTPS using Web.Config in IIS](/img/web-config.png)
+
+<!--truncate-->
+
+Add the below rewrite rule in your **Web.Config** under **system.webServer** section,
+
 <pre style="font-family:Consolas;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="color:gray;">&lt;</span><span style="color:#569cd6;">rewrite</span><span style="color:gray;">&gt;</span>
 <span style="color:gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#569cd6;">rules</span><span style="color:gray;">&gt;</span>
 <span style="color:gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#569cd6;">rule</span><span style="color:gray;">&nbsp;</span><span style="color:#92caf4;">name</span><span style="color:gray;">=</span><span style="color:gray;">&quot;</span><span style="color:#c8c8c8;">httpsredirect</span><span style="color:gray;">&quot;</span><span style="color:gray;">&nbsp;</span><span style="color:#92caf4;">stopProcessing</span><span style="color:gray;">=</span><span style="color:gray;">&quot;</span><span style="color:#c8c8c8;">true</span><span style="color:gray;">&quot;</span><span style="color:gray;">&gt;</span>
@@ -22,13 +23,5 @@ Add the below rewrite rule in your **Web.Config** under  **system.webServer** se
 <span style="color:gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="color:#569cd6;">rule</span><span style="color:gray;">&gt;</span>
 <span style="color:gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="color:#569cd6;">rules</span><span style="color:gray;">&gt;</span>
 <span style="color:gray;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span style="color:#569cd6;">rewrite</span><span style="color:gray;">&gt;</span></pre>
-Replace the **yourdomain.com** with the actual domain name and you are good to go. If this isn't working, make sure that you installed the **URL Rewrite** module in the IIS.
-## Image
-### Post Image
-![Post Image](web-config.png) 
-### Post Header Image
-![Post Header Image]()
 
-## Meta Tags
-### Social Description
-Use IIS Rewrite rule to redirect all HTTP request to HTTPS.
+Replace the **yourdomain.com** with the actual domain name and you are good to go. If this isn't working, make sure that you installed the **URL Rewrite** module in the IIS.
