@@ -6,7 +6,7 @@ authorURL: http://twitter.com/abhithrajan
 
 This article describes how to set the selected option in a select by its value via jQuery.
 
-![Set selected option by value via jQuery](/img/2017-08-19-set-selected-option-by-value-via-jquery.jpg)
+![Set selected option by value via jQuery](/img/js-jquery-html-css.jpg)
 
 <!--truncate-->
 
