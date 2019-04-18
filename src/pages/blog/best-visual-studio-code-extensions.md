@@ -5,6 +5,7 @@ description: My favorite extensions for Visual Studio Code
 author: Abhith Rajan
 authorURL: 'http://twitter.com/abhithrajan'
 date: 2019-02-12T17:50:10.699Z
+image: /img/1200px-visual_studio_code_118.png
 tags:
   - visual-studio-code
   - ide
