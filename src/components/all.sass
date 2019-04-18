@@ -1,0 +1,115 @@
+@import "~bulma/sass/utilities/initial-variables"
+
+// Config vars
+// Kaldi logo brand color: #FD461E
+$kaldi-red: #D64000
+$kaldi-red-invert: #fff
+
+$primary: $kaldi-red
+$primary-invert: $kaldi-red-invert
+$body-color: #333
+$black: #2b2523
+
+.navbar .navbar-menu
+  box-shadow:none !important
+
+.content .taglist
+  list-style: none
+  margin-bottom: 0
+  margin-left: 0
+  margin-right: 1.5rem
+  margin-top: 1.5rem
+  display: flex
+  flex-wrap: wrap
+  justify-content: left
+  align-items: center
+  li
+    padding: 0 2rem 1rem 0
+    margin-bottom: 1.5rem
+    margin-top: 0
+
+// Helper Classes
+.full-width-image-container
+  width: 100vw
+  height: 400px
+  position: relative
+  left: 50%
+  right: 50%
+  margin: 2em -50vw
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
+
+.full-width-image
+    width: 100vw
+    height: 400px
+    background-size: cover
+    background-position: bottom
+    display: flex
+    justify-content: center
+    align-items: center
+
+.btn
+    display: inline-block
+    padding: 12px 16px 10px
+    font-size: 18px
+    font-size: 1rem
+    line-height: 1.25
+    background-color: #fff
+    border-radius: .25rem
+    text-decoration: none
+    font-weight: 700
+    color: #CC3700
+    text-align: center
+    -webkit-box-shadow: inset 0 0 0 2px #CC3700
+    box-shadow: inset 0 0 0 2px #f40
+    -webkit-transition: all .15s ease
+    transition: all .15s ease
+
+.margin-top-0
+  margin-top: 0 !important
+
+.navbar-item .icon
+  color: $primary
+// Override for use of svg's from https://simpleicons.org/
+.icon svg
+  width: 1.5rem
+  height: 1.5rem
+  fill: currentColor
+.navbar-brand .navbar-item.logo
+  padding: 0 1rem
+footer.footer
+  padding: 3rem 0rem 0rem
+  background-color: transparent
+
+//Menu overrides
+$menu-item-color: $white-ter
+$menu-item-hover-color: $black !important
+$menu-item-hover-background-color: $black
+$menu-item-active-color: $kaldi-red-invert
+$menu-item-active-background-color:	$kaldi-red-invert
+$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-label-color: $white-ter
+
+
+.menu-label
+  font-size: 1em !important
+  text-align: left
+.menu-list
+  list-style: none !important
+  text-align: left
+.social
+  padding: 2em
+.social a
+    padding: .5em .5em .3em .5em
+    border-radius: 1em
+    background-color: $white-ter
+    margin: .5em
+    width: 1em
+    height: 1em
+    vertical-align: middle
+    display: inline
+
+@import "~bulma"
