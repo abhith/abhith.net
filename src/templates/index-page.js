@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+// import Features from '../components/Features'
 import LatestPosts from "../components/home/LatestPosts";
 
 export const IndexPageTemplate = ({
@@ -18,7 +17,7 @@ export const IndexPageTemplate = ({
 }) => (
     <div>
       <LatestPosts></LatestPosts>
-      <div
+      {/* <div
         className="full-width-image margin-top-0"
         style={{
           backgroundImage: `url(${
@@ -112,7 +111,7 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 
