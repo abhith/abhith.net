@@ -16,13 +16,16 @@ function LatestPosts() {
               <div class="col-md-6">
                 {latestPost.map(({ node }) => {
                   const title = node.frontmatter.title
-
-
                   return (
                     <div class="card border-0 mb-4 box-shadow h-xl-300" >
                       <Link to={`${node.fields.slug}`}>
                         <Img fluid={node.frontmatter.image.childImageSharp.fluid}></Img>
-                        {/* <div style={{ backgroundImage: 'url(./assets/img/demo/1.jpg)', height: '200px', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}></div> */}
+                        {/* <div style={{
+                          backgroundImage: `url(${
+                            !!node.frontmatter.image.childImageSharp ? node.frontmatter.image.childImageSharp.fluid.src : node.frontmatter.image
+                            })`
+                          , height: '200px', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
+                        }}></div> */}
                       </Link>
                       <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
                         <h2 class="h4 font-weight-bold">
@@ -48,11 +51,11 @@ function LatestPosts() {
               <div class="col-md-6">
                 {recentPosts.map(({ node }) => {
                   const title = node.frontmatter.title
-
                   return (
                     <div class="mb-3 d-flex align-items-center">
                       <div class="col-md-4">
                         <Link to={`${node.fields.slug}`}>
+                          {/* <img class="w-100" src={!!node.frontmatter.image.childImageSharp ? node.frontmatter.image.childImageSharp.fluid.src : node.frontmatter.image} alt={title} /> */}
                           <Img class="w-100" fluid={node.frontmatter.image.childImageSharp.fluid}></Img>
                         </Link>
                       </div>
@@ -73,7 +76,6 @@ function LatestPosts() {
                     </small>
                       </div>
                     </div>
-
                   )
                 })}
               </div>
@@ -105,13 +107,12 @@ export const query = graphql`
             date(formatString: "MMM DD, YYYY")
             title
             image {
-               childImageSharp {
+              childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-
           }
         }
       }
@@ -132,7 +133,7 @@ export const query = graphql`
             date(formatString: "MMM DD, YYYY")
             title
             image {
-               childImageSharp {
+              childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
