@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2017-09-28T00:00:00.000Z"
 templateKey: blog-post
 image: /img/web-config.png
-description: Use the provided rewrite rule to redirect HTTPS requests to HTTP.
+description: >-
+    Use the provided rewrite rule to redirect HTTPS requests to HTTP.
 ---
 
 The below-given rewrite rule which redirects all the HTTPS request to its HTTP URL. Redirecting HTTPS to HTTP isn't recommended considering many factors. If you don't have SSL purchased for your website, there are some cool options, like **Cloudflare**, it has a free package where it adds security to your site as well as provides free SSL, will write about it in a separate post.

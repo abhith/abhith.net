@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2017-10-11T00:00:00.000Z"
 templateKey: blog-post
 image: /img/2017-10-11-git-branch-not-showing-in-visual-studio-team-explorer.jpg
-description: If you are having trouble to see the newly created (remote) git branches in the Visual Studio Team Explorer, try the workaround provided in this article.
+description: >-
+    If you are having trouble to see the newly created (remote) git branches in the Visual Studio Team Explorer, try the workaround provided in this article.
 ---
 
 In our company, all the projects source code is under source control, which is **Visual Studio Online** (VSO). And most of them are using **GIT** as the **version control** (VSO supports Git as well as TFS).

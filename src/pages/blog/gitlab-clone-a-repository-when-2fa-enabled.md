@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2018-12-19T00:00:00.000Z"
 templateKey: blog-post
 image: /img/gitlab-blog-cover.png
-description: You need to use a personal access token to clone your repository from GitLab when Two Factor authentication is enabled. Which explained here.
+description: >-
+    You need to use a personal access token to clone your repository from GitLab when Two Factor authentication is enabled. Which explained here.
 ---
 
 I love services which provide extra security. One way to provide such a level security is by using Two Factor Authentication (2FA). GitLab provides 2FA, and I enabled it. After that, cloning a repository will not work in the usual mode,

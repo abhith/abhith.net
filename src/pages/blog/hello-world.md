@@ -4,7 +4,8 @@ title: Hello World
 author: Abhith Rajan
 authorURL: http://twitter.com/abhithrajan
 date: "2017-08-11T00:00:00.000Z"
-description: Hi, this is my first blog post. Since am a dev, it should be hello world :)
+description: >-
+    Hi, this is my first blog post. Since am a dev, it should be hello world :)
 image: /img/2017-08-11-hello-world.png
 ---
 

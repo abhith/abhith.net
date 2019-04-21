@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2017-09-19T00:00:00.000Z"
 templateKey: blog-post
 image: /img/web-config.png
-description: Use IIS rewrite rule to redirect (301) all www requests to non-www.
+description: >-
+    Use IIS rewrite rule to redirect (301) all www requests to non-www.
 ---
 
 Code first, talks later.

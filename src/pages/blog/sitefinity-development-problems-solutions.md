@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2018-01-19T00:00:00.000Z"
 templateKey: blog-post
 image: /img/rob-schreckhise-40905-unsplash.jpg
-description: During my first Sitefinity project, I encountered few problems, in which some of them are explained here.
+description: >-
+    During my first Sitefinity project, I encountered few problems, in which some of them are explained here.
 ---
 
 * [#1: <strike>Child pages not showing in navigation menu</strike>](#1)

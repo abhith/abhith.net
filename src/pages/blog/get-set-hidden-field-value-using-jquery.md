@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2017-10-01T00:00:00.000Z"
 templateKey: blog-post
 image: /img/js-jquery-html-css.jpg
-description: This article explains how to set and get hidden field value using jQuery.
+description: >-
+    This article explains how to set and get hidden field value using jQuery.
 ---
 
 When we can achieve the same thing using many ways, with different frameworks, we tend to forget one or two such ways. Same thing happened to me. The task is simple, to set and get hidden field value in client side in a SharePoint project.

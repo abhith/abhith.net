@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2017-11-06T09:39:53.000Z"
 templateKey: blog-post
 image: /img/john-barkiple-539580-unsplash.jpg
-description: This is a short article on how to link within the document in a markdown (.md) file.
+description: >-
+    This is a short article on how to link within the document in a markdown (.md) file.
 ---
 
 I use markdown as the writing language for my blog posts on this website. It is clean and minimal so I prefer it over HTML.

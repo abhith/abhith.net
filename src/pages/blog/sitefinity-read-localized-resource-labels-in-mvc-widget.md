@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2017-12-07T00:52:55.000Z"
 templateKey: blog-post
 image: /img/create-label-sitefinity.png
-description: Explains how to get localized labels in Sitefinity MVC widgets.
+description: >-
+    Explains how to get localized labels in Sitefinity MVC widgets.
 ---
 
 In your Razor View,

@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2017-09-25T00:00:00.000Z"
 templateKey: blog-post
 image: /img/web-config.png
-description: Use IIS Rewrite rule to redirect all HTTP request to HTTPS.
+description: >-
+    Use IIS Rewrite rule to redirect all HTTP request to HTTPS.
 ---
 
 Add the below rewrite rule in your **Web.Config** under **system.webServer** section,

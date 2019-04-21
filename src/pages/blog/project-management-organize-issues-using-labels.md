@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2019-02-06T00:00:00.000Z"
 templateKey: blog-post
 image: /img/rawpixel-455996-unsplash.png
-description: Here I am listing the labels which I used to manage my projects in Gitlab and GitHub.
+description: >-
+    Here I am listing the labels which I used to manage my projects in Gitlab and GitHub.
 ---
 
 ### Area

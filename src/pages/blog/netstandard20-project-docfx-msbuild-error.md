@@ -5,7 +5,8 @@ authorURL: http://twitter.com/abhithrajan
 date: "2018-11-20T00:00:00.000Z"
 templateKey: blog-post
 image: /img/large.png
-description: If you are facing issues when trying to generate documentation for your .netstandard2.0 project. Try the solution mentioned in this post.
+description: >-
+    If you are facing issues when trying to generate documentation for your .netstandard2.0 project. Try the solution mentioned in this post.
 ---
 
 I tried to generate documentation for a [.netstandard2.0](https://github.com/Abhith/Code.Library) project using DocFX.
