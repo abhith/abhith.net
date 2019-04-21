@@ -1,11 +1,18 @@
 ---
-title: .NET Interview Questions and Answers
-author: Abhith Rajan
-authorURL: http://twitter.com/abhithrajan
-date: "2018-04-12T00:00:00.000Z"
 templateKey: blog-post
+title: .NET Interview Questions and Answers
+description: >-
+  Here I am listing some of the interview questions I have faced when applied
+  for .NET developer/Software engineer roles.
+author: Abhith Rajan
+authorURL: 'http://twitter.com/abhithrajan'
+date: '2018-04-12T00:00:00.000Z'
 image: /img/rawpixel-com-558596-unsplash.jpg
-description: Here I am listing some of the interview questions I have faced when applied for .NET developer/Software engineer roles.
+tags:
+  - interview
+  - dotnet
+  - aspdotnet
+  - wcf
 ---
 
 Following are some of the questions which I faced during interviews (don't remember all of them).
