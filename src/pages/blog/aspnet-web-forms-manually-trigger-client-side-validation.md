@@ -1,11 +1,17 @@
 ---
-title: ASP.NET Web Forms - Manually Trigger Client Side Validation
-author: Abhith Rajan
-authorURL: http://twitter.com/abhithrajan
-date: "2018-01-15T23:32:28.000Z"
 templateKey: blog-post
+title: ASP.NET Web Forms - Manually Trigger Client Side Validation
+description: >-
+  You can manually trigger client-side validation for ASP.NET Web Forms Server
+  side controls. One way of doing it explained here.
+author: Abhith Rajan
+authorURL: 'http://twitter.com/abhithrajan'
+date: '2018-01-15T23:32:28.000Z'
 image: /img/glenn-carstens-peters-190592.jpg
-description: You can manually trigger client-side validation for ASP.NET Web Forms Server side controls. One way of doing it explained here.
+tags:
+  - aspnet-web-forms
+  - sharepoint
+  - ''
 ---
 
 Lets say you have a web form with one more serverside controls like one below,
