@@ -9,6 +9,7 @@ image: /img/1200px-visual_studio_code_118.png
 tags:
   - visual-studio-code
   - ide
+  - best-series
 ---
 ## JavaScript
 
