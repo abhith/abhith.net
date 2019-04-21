@@ -11,7 +11,6 @@ image: /img/glenn-carstens-peters-190592.jpg
 tags:
   - aspnet-web-forms
   - sharepoint
-  - ''
 ---
 
 Lets say you have a web form with one more serverside controls like one below,
