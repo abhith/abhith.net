@@ -4,7 +4,7 @@ author: Abhith Rajan
 authorURL: http://twitter.com/abhithrajan
 date: "2017-10-23T10:16:21.000Z"
 templateKey: blog-post
-image: /img/greg-rakozy-129733.jpg
+image: /img/js-jquery-html-css.jpg
 description: >-
     This a short article about how can we remove a specific class from all elements that do have the class easily using jQuery.
 ---
