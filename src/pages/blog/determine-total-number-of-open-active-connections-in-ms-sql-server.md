@@ -1,11 +1,19 @@
 ---
-title: Determine Total Number of Open/Active Connections in MS SQL Server
-author: Abhith Rajan
-authorURL: http://twitter.com/abhithrajan
-date: "2017-09-16T00:00:00.000Z"
 templateKey: blog-post
+title: Determine Total Number of Open/Active Connections in MS SQL Server
+description: >-
+  This article contains a SQL query which can be used to determine the total
+  number of open/active connections in MS SQL Server. Also explains, how to
+  solve the error "Timeout expired. The timeout period elapsed prior to
+  obtaining a connection from the pool. This may have occurred because all
+  pooled connections were in use and max pool size was reached."
+author: Abhith Rajan
+authorURL: 'http://twitter.com/abhithrajan'
+date: '2017-09-16T00:00:00.000Z'
 image: /img/logo-microsoft-sql-server-595x3350.jpg
-description: My personal favorite list of packages I use when I build a Umbraco website.
+tags:
+  - entity-framework
+  - sql-server
 ---
 
 This article contains a SQL query which can be used to determine the total number of open/active connections in MS SQL Server.
