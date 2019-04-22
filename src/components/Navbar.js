@@ -34,49 +34,75 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
+      <nav
+        id="MagicMenu"
+        class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top"
+      >
+        <div class="container">
+          <Link to="/" className="navbar-brand">
+            <strong>Abhith</strong>
+          </Link>
 
-      <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
-            <div class="container">
-                <Link to='/' className="navbar-brand">
-                    <strong>Abhith</strong>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarColor02"
+            aria-controls="navbarColor02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" />
+          </button>
+          <div class="navbar-collapse collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <Link to="/blog" className="nav-link">
+                  Blog
                 </Link>
-
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse" id="navbarColor02">
-                    <ul class="navbar-nav mr-auto d-flex align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a target="_blank" class="nav-link" href="/">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a target="_blank" class="nav-link" href="/">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            {/* <OutboundLink
+              </li>
+              <li class="nav-item">
+                <a target="_blank" class="nav-link" href="/">
+                  Contact
+                </a>
+              </li>
+              <li class="nav-item">
+                {/* <OutboundLink
                                 className="nav-link"
                                 href="https://www.buymeacoffee.com/abhith"
                             >
                                 Buy me a coffee <i class="fa fa-coffee text-danger"></i>
                             </OutboundLink> */}
-
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ml-auto d-flex align-items-center">
-                        <form class="bd-search hidden-sm-down" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-                            <input type="text" class="form-control text-small" id="lunrsearch" name="q" value="" placeholder="Type keyword and enter..." />
-                        </form>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+              <form
+                class="bd-search hidden-sm-down"
+                onSubmit="return lunr_search(document.getElementById('lunrsearch').value);"
+              >
+                <input
+                  type="text"
+                  class="form-control text-small"
+                  id="lunrsearch"
+                  name="q"
+                  value=""
+                  placeholder="Type keyword and enter..."
+                />
+              </form>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
       // <nav
       //   className="navbar is-transparent"

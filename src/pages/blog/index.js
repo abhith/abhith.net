@@ -1,38 +1,55 @@
-import React from 'react'
+import React from "react";
 
-import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+import Layout from "../../components/Layout";
+import BlogRoll from "../../components/BlogRoll";
 
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
-          className="full-width-image-container margin-top-0"
-          style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
-            }}
-          >
-            Latest Stories
-          </h1>
-        </div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
+        <div class="container">
+          <div class="row mt-3">
+            <div class="col-md-8 main-loop">
+              <h4 class="font-weight-bold spanborder">
+                <span>All Stories</span>
+              </h4>
               <BlogRoll />
+              {/* <div class="mt-5">
+         <!-- Pagination links -->
+            {% if paginator.total_pages > 1 %}
+            <ul class="pagination"> 
+              {% if paginator.previous_page %}
+                <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
+              {% else %}
+                <li class="page-item disabled"><span class="prev page-link">&laquo;</span></li>
+              {% endif %}
+
+              {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                <li class="page-item disabled"><span class="webjeda page-link">{{ page }}</span></li>
+                {% elsif page == 1 %}
+                <li class="page-item"><a class="page-link" href="{{site.baseurl}}/">{{ page }}</a></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                {% endif %}
+              {% endfor %}
+
+              {% if paginator.next_page %}
+                <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+              {% else %}
+                <li class="page-item disabled"><span class="next page-link">&raquo;</span></li>
+              {% endif %}
+            </ul>
+            {% endif %}      
+        </div> */}
+            </div>
+
+            <div class="col-md-4">
+              {/* {% include sidebar-featured.html %}     */}
             </div>
           </div>
-        </section>
+        </div>
       </Layout>
-    )
+    );
   }
 }
