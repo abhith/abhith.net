@@ -31,15 +31,12 @@ export const BlogPostTemplate = ({
             <div className={image == null ? `row justify-content-center` : `row justify-content-between`}>
               <div className={image == null ? ` col-md-8 pr-0 pr-md-4 pt-4 pb-4 align-self-center` : `col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center`}>
                 <p class="text-uppercase font-weight-bold">                  
-                    {tags && tags.length ? (
-              
-                <span class="taglist">
-                  {tags.map(tag => (
-                  <><Link className="sscroll text-danger" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link> <span class="sep">, </span></>))}
-                </span>
-              
-            ) : null}
-                                      
+                  {tags && tags.length ? (              
+                  <span class="taglist">
+                    {tags.map(tag => (
+                    <><Link className="sscroll text-danger" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link> <span class="sep">, </span></>))}
+                  </span>              
+                ) : null}                                      
                 </p>
                 <h1 class="display-4 mb-4 article-headline">{title}</h1>
 
