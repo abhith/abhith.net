@@ -75,6 +75,16 @@ module.exports = {
         // purgeOnly: ['/main.css', '/theme.css'],
       },
     }, // must be after other CSS plugins
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-104139048-1",
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // Setting this parameter is also optional
+        respectDNT: true,        
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
   // for avoiding CORS while developing Netlify Functions locally
