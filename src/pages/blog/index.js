@@ -2,9 +2,12 @@ import React from "react";
 
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
+import { graphql } from "gatsby";
 
 export default class BlogIndexPage extends React.Component {
   render() {
+    const { data } = this.props;
+    const posts = data.allMarkdownRemark.edges;
     return (
       <Layout>
         <div class="container">
@@ -13,7 +16,7 @@ export default class BlogIndexPage extends React.Component {
               <h4 class="font-weight-bold spanborder">
                 <span>All Stories</span>
               </h4>
-              <BlogRoll />
+              <BlogRoll posts={posts} />
               {/* <div class="mt-5">
          <!-- Pagination links -->
             {% if paginator.total_pages > 1 %}
@@ -53,3 +56,35 @@ export default class BlogIndexPage extends React.Component {
     );
   }
 }
+
+export const pageQuery = graphql`
+  query BlogRollQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 186)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
+            tags
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
