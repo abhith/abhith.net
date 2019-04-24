@@ -1,12 +1,12 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import React from "react";
+import Helmet from "react-helmet";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
-import useSiteMetadata from './SiteMetadata'
+import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description } = useSiteMetadata();
   return (
     <div>
       <Helmet>
@@ -38,18 +38,28 @@ const TemplateWrapper = ({ children }) => {
           color="#ff4400"
         />
         <meta name="theme-color" content="#fff" />
-
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="144x144"
+          href="/img/android-chrome-144x144.png"
+        />
+        <meta
+          name="msapplication-TileImage"
+          content="/img/mstile-150x150.png"
+        />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
       <Navbar />
-      <main role="main" class="site-content">{children}
+      <main role="main" class="site-content">
+        {children}
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;
