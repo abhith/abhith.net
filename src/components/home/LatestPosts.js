@@ -138,6 +138,7 @@ export const query = graphql`
           frontmatter {
             date(formatString: "MMM DD, YYYY")
             title
+            tags
             image {
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
@@ -164,6 +165,7 @@ export const query = graphql`
           frontmatter {
             date(formatString: "MMM DD, YYYY")
             title
+            tags
             image {
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
