@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Best Visual Studio Code Extensions
 description: My favorite extensions for Visual Studio Code
 author: Abhith Rajan
-authorURL: 'http://twitter.com/abhithrajan'
+authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-02-12T17:50:10.699Z
 image: /img/1200px-visual_studio_code_118.png
 tags:
@@ -85,7 +85,7 @@ Supercharge the Git capabilities built into Visual Studio Code — Visualize cod
 
 ### [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) 
 Visual Studio Code plugin that autocompletes filenames  
-![Path Intellisense](http://i.giphy.com/iaHeUiDeTUZuo.gif)
+![Path Intellisense](https://i.giphy.com/iaHeUiDeTUZuo.gif)
 
 ### [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) 
 VS Code plugin for prettier/prettier
