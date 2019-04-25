@@ -4,7 +4,7 @@ title: 2017 Year In Review
 description: Abhith Rajan's  2017 year in review.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
-date: 2018-01-04T09:11:00.000Z
+date: 2018-01-01T09:26:00.000Z
 image: /img/brigitte-tohm-181096.jpg
 tags:
   - umbraco
@@ -14,7 +14,7 @@ tags:
   - vue
   - react-native
   - sitefinity
-  - general
+  - genaral
 ---
 Last year on my appraisal form, under objectives for next year (2017), I put the following,
 
