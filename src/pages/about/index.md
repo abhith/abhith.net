@@ -1,19 +1,17 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: About
+description: Here you can read little about myself.
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+My name is Abhith Rajan. I'm a [Senior Software Engineer](https://github.com/abhith). I work for the IT Team at [Unibeton Ready Mix](http://www.unibetonrm.com/en-gl/home). I blog about programming, code, technology and stuffs that I'm interested in.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+You can find me on [Twitter](https://twitter.com/abhithrajan), [Instagram](https://www.instagram.com/abhithrajan/) and [LinkedIn](https://www.linkedin.com/in/abhithrajan/). If you just want to email me, go ahead and send an email to [abhith@pm.me](mailto:abhith@pm.me).
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+#### BACKGROUND
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+I started my career at [Aabasoft](http://aabasoft.com) where I was joined as an intern after my B-Tech and worked there for over 3 years as a Software Engineer and then moved to [Sysberries](http://sysberries.com) and now to  [Unibeton Ready Mix](http://www.unibetonrm.com/en-gl/home) where I currently work.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+#### INFORMATION OVERFLOW
+
+I love racing, big fan of **Valentino Rossi**. The first thing I bought after I got my first job was my **Yamaha R15 V2** bike. And I got a cool number for that bike, KL 40J **201**. After I moved to UAE, the one thing that hurt me most is, I MISS MY BIKE SO MUCH.
