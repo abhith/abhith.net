@@ -56,7 +56,7 @@ const Navbar = class extends React.Component {
             aria-label="Toggle navigation"
             onClick={() => this.toggleHamburger()}
           >
-            <span class="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon" />
           </button>
           <div
             className={`navbar-collapse collapse ${
@@ -66,9 +66,9 @@ const Navbar = class extends React.Component {
           >
             <ul class="navbar-nav mr-auto d-flex align-items-center">
               <li class="nav-item">
-                <a class="nav-link" href="/">
+                <Link to="/" className="nav-link">
                   Home
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <Link to="/about" className="nav-link">
@@ -97,7 +97,7 @@ const Navbar = class extends React.Component {
             <ul class="navbar-nav ml-auto d-flex align-items-center">
               <form
                 class="bd-search hidden-sm-down"
-                onSubmit="return lunr_search(document.getElementById('lunrsearch').value);"
+                // onSubmit="return lunr_search(document.getElementById('lunrsearch').value);"
               >
                 <input
                   type="text"
