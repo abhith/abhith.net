@@ -1,7 +1,8 @@
 ---
 templateKey: index-page
 title: Full Stack Developer
-image: /img/coffee.png
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+image: /img/mindmap.png
+heading: Abhith Rajan
+subheading: >-
+    Abhith Rajan is an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products and services.
 ---

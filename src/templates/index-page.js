@@ -1,25 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
-import Layout from '../components/Layout'
+import Layout from "../components/Layout";
 // import Features from '../components/Features'
 import LatestPosts from "../components/home/LatestPosts";
+import Hero from "../components/home/Hero";
 
 export const IndexPageTemplate = ({
   // image,
-  title,
+  title
   // heading,
   // subheading,
   // mainpitch,
   // description,
   // intro,
 }) => (
-
-    <div>
-      {/* <h1>{title}</h1> */}
-      <LatestPosts></LatestPosts>
-      {/* <div
+  <div>
+    {/* <h1>{title}</h1> */}
+    <LatestPosts />
+    <Hero />
+    {/* <div
         className="full-width-image margin-top-0"
         style={{
           backgroundImage: `url(${
@@ -114,12 +115,12 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section> */}
-    </div>
-  )
+  </div>
+);
 
 IndexPageTemplate.propTypes = {
   // image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  // title: PropTypes.string,
+  title: PropTypes.string
   // heading: PropTypes.string,
   // subheading: PropTypes.string,
   // mainpitch: PropTypes.object,
@@ -127,70 +128,43 @@ IndexPageTemplate.propTypes = {
   // intro: PropTypes.shape({
   //   blurbs: PropTypes.array,
   // }),
-}
+};
 
 const IndexPage = ({ data }) => {
-  console.log(data)
-  const { frontmatter } = data.markdownRemark
+  console.log(data);
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <IndexPageTemplate
         // image={frontmatter.image}
         title={frontmatter.title}
-      // heading={frontmatter.heading}
-      // subheading={frontmatter.subheading}
-      // mainpitch={frontmatter.mainpitch}
-      // description={frontmatter.description}
-      // intro={frontmatter.intro}
+        // heading={frontmatter.heading}
+        // subheading={frontmatter.subheading}
+        // mainpitch={frontmatter.mainpitch}
+        // description={frontmatter.description}
+        // intro={frontmatter.intro}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+      frontmatter: PropTypes.object
+    })
+  })
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title                
+        title
       }
     }
   }
-`
-// image {
-//   childImageSharp {
-//     fluid(maxWidth: 2048, quality: 100) {
-//               ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
-// heading
-// subheading
-// mainpitch {
-//   title
-//   description
-// }
-// description
-// intro {
-//   blurbs {
-//     image {
-//       childImageSharp {
-//         fluid(maxWidth: 240, quality: 64) {
-//                   ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//     text
-//   }
-//   heading
-//   description
+`;
