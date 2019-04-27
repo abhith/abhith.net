@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 
 export default function Hero() {
   return (
