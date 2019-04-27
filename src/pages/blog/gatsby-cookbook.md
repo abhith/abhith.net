@@ -25,6 +25,8 @@ Import it on your style. i.e in your css file
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 ```
 
+There is also another way, which is by using [gatsby-plugin-prefetch-google-fonts](https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/). Not tried yet, will update once tried.
+
 #### Using icons like Font Awesome in Gatsby
 
 Using `react-icons`. Add it to your packages. 
