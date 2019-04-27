@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
+import { FaCoffee } from "react-icons/fa";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -84,12 +86,12 @@ const Navbar = class extends React.Component {
                 </a>
               </li> */}
               <li class="nav-item">
-                {/* <OutboundLink
-                                className="nav-link"
-                                href="https://www.buymeacoffee.com/abhith"
-                            >
-                                Buy me a coffee <i class="fa fa-coffee text-danger"></i>
-                            </OutboundLink> */}
+                <OutboundLink
+                  className="nav-link"
+                  href="https://www.buymeacoffee.com/abhith"
+                >
+                  Buy me a coffee <FaCoffee className="text-danger" />
+                </OutboundLink>
               </li>
             </ul>
             <ul class="navbar-nav ml-auto d-flex align-items-center">
