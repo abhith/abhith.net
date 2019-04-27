@@ -29,7 +29,9 @@ There is also another way, which is by using [gatsby-plugin-prefetch-google-font
 
 #### Using icons like Font Awesome in Gatsby
 
-Using `react-icons`. Add it to your packages. 
+Using [react-icons](https://github.com/react-icons/react-icons). 
+
+Add it to your packages. 
 
 ```bash
 npm install react-icons --save
@@ -46,4 +48,5 @@ class Question extends React.Component {
   }
 }
 ```
+
 
