@@ -70,77 +70,177 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
 
-    let redirectBatch = [
+    let redirectBatch1 = [
       { f: `hello-world/` },
-      { f: `inserting-rewrite-rule-in-release-config/` },
-      { f: `redirect-non-www-urls-to-www-urls/` },
-      { f: `event-tracking-with-google-analytics/` },
-      { f: `umbraco-get-current-page-in-partial-view/` },
-      { f: `set-selected-option-by-value-via-jquery/` },
-      { f: `best-umbraco-packages/` },
-      { f: `xamarin-development-problems-and-solutions/` },
-      { f: `check-if-string-is-arabic-c/` },
       {
-        f: `determine-total-number-of-openactive-connections-in-ms-sql-server/`
+        f: `inserting-rewrite-rule-in-release-config/`
       },
-      { f: `redirect-www-to-non-www-using-webconfig-in-iis/` },
-      { f: `redirect-http-to-https-using-webconfig-in-iis/` },
+      {
+        f: `redirect-non-www-urls-to-www-urls/`
+      },
+      {
+        f: `event-tracking-with-google-analytics/`
+      },
+      {
+        f: `umbraco-get-current-page-in-partial-view/`
+      },
+      {
+        f: `set-selected-option-by-value-via-jquery/`
+      },
+      { f: `best-umbraco-packages/` },
+      {
+        f: `xamarin-development-problems-and-solutions/`
+      },
+
+      {
+        f: `redirect-www-to-non-www-using-webconfig-in-iis/`
+      },
+      {
+        f: `redirect-http-to-https-using-webconfig-in-iis/`
+      },
       {
         f: `redirect-https-requests-to-http-using-iis-rewrite-rule-in-webconfig/`
       },
-      { f: `getset-hidden-field-value-using-jquery/` },
-      { f: `hunting-security-bugs-in-an-old-web-application/` },
-      { f: `git-branch-not-showing-in-visual-studio-team-explorer/` },
-      { f: `sitefinity-rookie-guide-get-users-in-a-custom-role/` },
-      { f: `remove-specific-class-from-all-elements-jquery/` },
-      { f: `javascript-determine-if-user-is-on-mobile-device/` },
-      { f: `markdown-link-within-document/` },
-      { f: `visual-studio-keeps-crashing-first-aid/` },
-      { f: `sitefinity-read-localized-resource-labels-in-mvc-widget/` },
-      { f: `sitefinity-caching-issue-for-pages-with-no-caching-profile/` },
-      { f: `sitefinity-development-problems-and-solutions/` },
+
+      {
+        f: `hunting-security-bugs-in-an-old-web-application/`
+      },
+      {
+        f: `git-branch-not-showing-in-visual-studio-team-explorer/`
+      },
+      {
+        f: `sitefinity-rookie-guide-get-users-in-a-custom-role/`
+      },
+      {
+        f: `remove-specific-class-from-all-elements-jquery/`
+      },
+      {
+        f: `javascript-determine-if-user-is-on-mobile-device/`
+      },
+      {
+        f: `markdown-link-within-document/`
+      },
+      {
+        f: `visual-studio-keeps-crashing-first-aid/`
+      },
+      {
+        f: `sitefinity-read-localized-resource-labels-in-mvc-widget/`
+      },
+      {
+        f: `sitefinity-caching-issue-for-pages-with-no-caching-profile/`
+      },
+
       { f: `2017-year-in-review/` },
+
       {
-        f: `ip-security-configure-ip-address-restrictions-in-webconfig-on-iis/`
+        f: `best-font-for-visual-studio/`
       },
-      { f: `best-font-for-visual-studio/` },
-      { f: `aspnet-web-forms-manually-trigger-client-side-validation/` },
-      { f: `vuejs-list-rendering-limit-items-in-v-for/` },
-      { f: `download-file-using-wcf-rest-service/` },
-      { f: `fetch-row-count-for-all-tables-in-a-sql-server/` },
-      { f: `dotnet-interview-questions-and-answers/` },
-      { f: `fix-web-deploy-could-not-verify-the-server-s-certificate/` },
-      { f: `enable-click-jacking-protection-umbraco/` },
+      {
+        f: `aspnet-web-forms-manually-trigger-client-side-validation/`
+      },
+
+      {
+        f: `download-file-using-wcf-rest-service/`
+      },
+      {
+        f: `fetch-row-count-for-all-tables-in-a-sql-server/`
+      },
+
+      {
+        f: `enable-click-jacking-protection-umbraco/`
+      },
       { f: `react-native-build-apk/` },
+
       {
-        f: `aspnet-core-starting-the-web-server-is-taking-longer-than-expected/`
+        f: `iis-options-requests-returns-404/`
       },
-      { f: `iis-options-requests-returns-404/` },
       { f: `flutter-cookbook/` },
-      { f: `the-best-extensions-for-visual-studio-2010/` },
+      {
+        f: `the-best-extensions-for-visual-studio-2010/`
+      },
       {
         f: `pad-a-number-with-leading-zeros-in-sql-to-make-uniform-char-length/`
       },
       { f: `docker-cookbook/` },
-      { f: `netstandard20-project-docfx-msbuild-error/` },
-      { f: `filtering-paging-and-sorting-in-sql-server-2008/` },
-      { f: `gitlab-clone-a-repository-when-2fa-enabled/` },
-      { f: `project-management-organize-issues-using-labels/` },
-      { f: `best-visual-studio-code-extensions/` }
+      {
+        f: `netstandard20-project-docfx-msbuild-error/`
+      },
+      {
+        f: `filtering-paging-and-sorting-in-sql-server-2008/`
+      },
+      {
+        f: `gitlab-clone-a-repository-when-2fa-enabled/`
+      },
+      {
+        f: `project-management-organize-issues-using-labels/`
+      },
+      {
+        f: `best-visual-studio-code-extensions/`
+      }
     ];
 
     // Then we can loop through the array of object literals to create
     // each redirect. A for loop would do the trick
-    for (var { f: f } of redirectBatch) {
+    for (var { f: f } of redirectBatch1) {
       createRedirect({
         fromPath: `/post/${f}`,
         isPermanent: true,
         redirectInBrowser: true,
         toPath: `/blog/${f}`
       });
-      // Uncomment next line to see loop in action during build
-      // console.log('\nRedirecting:\n' + f + '\nTo:\n' + t + '\n');
-      // or check .cache/redirects.json post-compile.
+
+      let redirectBatch2 = [
+        {
+          f: `check-if-string-is-arabic-c/`,
+          t: `check-if-string-is-arabic-csharp/`
+        },
+        {
+          f: `determine-total-number-of-openactive-connections-in-ms-sql-server/`,
+          t: `determine-total-number-of-open-active-connections-in-ms-sql-server/`
+        },
+
+        {
+          f: `getset-hidden-field-value-using-jquery/`,
+          t: `get-set-hidden-field-value-using-jquery/`
+        },
+        {
+          f: `sitefinity-development-problems-and-solutions/`,
+          t: `sitefinity-development-problems-solutions/`
+        },
+        {
+          f: `ip-security-configure-ip-address-restrictions-in-webconfig-on-iis/`,
+          t: `ip-security-configure-ip-address-restrictions-in-web-config-on-iis/`
+        },
+        {
+          f: `vuejs-list-rendering-limit-items-in-v-for/`,
+          t: `vue-js-list-rendering-limit-items-in-v-for/`
+        },
+
+        {
+          f: `dotnet-interview-questions-and-answers/`,
+          t: `dot-net-interview-questions-and-answers/`
+        },
+        {
+          f: `fix-web-deploy-could-not-verify-the-server-s-certificate/`,
+          t: `fix-web-deploy-could-not-verify-the-server’s-certificate/`
+        },
+        {
+          f: `aspnet-core-starting-the-web-server-is-taking-longer-than-expected/`,
+          t: `asp-net-core-starting-the-web-server-is-taking-longer-than-expected/`
+        }
+      ];
+
+      for (var { f: f, t: t } of redirectBatch2) {
+        createRedirect({
+          fromPath: `/post/${f}`,
+          isPermanent: true,
+          redirectInBrowser: true,
+          toPath: `/blog/${t}`
+        });
+        // Uncomment next line to see loop in action during build
+        // console.log('\nRedirecting:\n' + f + '\nTo:\n' + t + '\n');
+        // or check .cache/redirects.json post-compile.
+      }
     }
   });
 };
