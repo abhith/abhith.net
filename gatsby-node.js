@@ -1,10 +1,10 @@
-const _ = require('lodash')
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const _ = require("lodash");
+const path = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
+const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions;
 
   return graphql(`
     {
@@ -25,14 +25,14 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
+      result.errors.forEach(e => console.error(e.toString()));
+      return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(edge => {
-      const id = edge.node.id
+      const id = edge.node.id;
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -41,47 +41,120 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          id,
-        },
-      })
-    })
+          id
+        }
+      });
+    });
 
     // Tag pages:
-    let tags = []
+    let tags = [];
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
+        tags = tags.concat(edge.node.frontmatter.tags);
       }
-    })
+    });
     // Eliminate duplicate tags
-    tags = _.uniq(tags)
+    tags = _.uniq(tags);
 
     // Make tag pages
     tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
+      const tagPath = `/tags/${_.kebabCase(tag)}/`;
 
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),
         context: {
-          tag,
-        },
-      })
-    })
-  })
-}
+          tag
+        }
+      });
+    });
+
+    let redirectBatch = [
+      { f: `hello-world/` },
+      { f: `inserting-rewrite-rule-in-release-config/` },
+      { f: `redirect-non-www-urls-to-www-urls/` },
+      { f: `event-tracking-with-google-analytics/` },
+      { f: `umbraco-get-current-page-in-partial-view/` },
+      { f: `set-selected-option-by-value-via-jquery/` },
+      { f: `best-umbraco-packages/` },
+      { f: `xamarin-development-problems-and-solutions/` },
+      { f: `check-if-string-is-arabic-c/` },
+      {
+        f: `determine-total-number-of-openactive-connections-in-ms-sql-server/`
+      },
+      { f: `redirect-www-to-non-www-using-webconfig-in-iis/` },
+      { f: `redirect-http-to-https-using-webconfig-in-iis/` },
+      {
+        f: `redirect-https-requests-to-http-using-iis-rewrite-rule-in-webconfig/`
+      },
+      { f: `getset-hidden-field-value-using-jquery/` },
+      { f: `hunting-security-bugs-in-an-old-web-application/` },
+      { f: `git-branch-not-showing-in-visual-studio-team-explorer/` },
+      { f: `sitefinity-rookie-guide-get-users-in-a-custom-role/` },
+      { f: `remove-specific-class-from-all-elements-jquery/` },
+      { f: `javascript-determine-if-user-is-on-mobile-device/` },
+      { f: `markdown-link-within-document/` },
+      { f: `visual-studio-keeps-crashing-first-aid/` },
+      { f: `sitefinity-read-localized-resource-labels-in-mvc-widget/` },
+      { f: `sitefinity-caching-issue-for-pages-with-no-caching-profile/` },
+      { f: `sitefinity-development-problems-and-solutions/` },
+      { f: `2017-year-in-review/` },
+      {
+        f: `ip-security-configure-ip-address-restrictions-in-webconfig-on-iis/`
+      },
+      { f: `best-font-for-visual-studio/` },
+      { f: `aspnet-web-forms-manually-trigger-client-side-validation/` },
+      { f: `vuejs-list-rendering-limit-items-in-v-for/` },
+      { f: `download-file-using-wcf-rest-service/` },
+      { f: `fetch-row-count-for-all-tables-in-a-sql-server/` },
+      { f: `dotnet-interview-questions-and-answers/` },
+      { f: `fix-web-deploy-could-not-verify-the-server-s-certificate/` },
+      { f: `enable-click-jacking-protection-umbraco/` },
+      { f: `react-native-build-apk/` },
+      {
+        f: `aspnet-core-starting-the-web-server-is-taking-longer-than-expected/`
+      },
+      { f: `iis-options-requests-returns-404/` },
+      { f: `flutter-cookbook/` },
+      { f: `the-best-extensions-for-visual-studio-2010/` },
+      {
+        f: `pad-a-number-with-leading-zeros-in-sql-to-make-uniform-char-length/`
+      },
+      { f: `docker-cookbook/` },
+      { f: `netstandard20-project-docfx-msbuild-error/` },
+      { f: `filtering-paging-and-sorting-in-sql-server-2008/` },
+      { f: `gitlab-clone-a-repository-when-2fa-enabled/` },
+      { f: `project-management-organize-issues-using-labels/` },
+      { f: `best-visual-studio-code-extensions/` }
+    ];
+
+    // Then we can loop through the array of object literals to create
+    // each redirect. A for loop would do the trick
+    for (var { f: f } of redirectBatch) {
+      createRedirect({
+        fromPath: `/post/${f}`,
+        isPermanent: true,
+        redirectInBrowser: true,
+        toPath: `/blog/${f}`
+      });
+      // Uncomment next line to see loop in action during build
+      // console.log('\nRedirecting:\n' + f + '\nTo:\n' + t + '\n');
+      // or check .cache/redirects.json post-compile.
+    }
+  });
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-  fmImagesToRelative(node) // convert image paths for gatsby images
+  const { createNodeField } = actions;
+  fmImagesToRelative(node); // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
-      value,
-    })
+      value
+    });
   }
-}
+};
