@@ -10,7 +10,6 @@ function LatestPosts() {
       render={data => {
         const latestPost = data.latestPost.edges;
         const recentPosts = data.recentPosts.edges;
-        // console.log(recentPost)
         return (
           <div class="container">
             <div class="row remove-site-content-margin">
@@ -73,9 +72,8 @@ function LatestPosts() {
                     <div class="mb-3 d-flex align-items-center">
                       <div class="col-md-4">
                         <Link to={`${node.fields.slug}`}>
-                          {/* <img class="w-100" src={!!node.frontmatter.image.childImageSharp ? node.frontmatter.image.childImageSharp.fluid.src : node.frontmatter.image} alt={title} /> */}
                           <Img
-                            class="w-100"
+                            className="w-100"
                             fluid={node.frontmatter.image.childImageSharp.fluid}
                           />
                         </Link>
@@ -169,7 +167,7 @@ export const query = graphql`
             tags
             image {
               childImageSharp {
-                fluid(maxWidth: 138, maxHeight: 92) {
+                fluid(maxWidth: 138, maxHeight: 92, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
