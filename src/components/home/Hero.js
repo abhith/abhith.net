@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
-// import Img from "gatsby-image";
+import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 export default function Hero() {
   return (
@@ -21,20 +21,15 @@ export default function Hero() {
                       Read More
                     </Link>
                   </div>
-                  <div
-                    class="col-md-6 d-none d-md-block pr-0"
-                    style={{
-                      backgroundSize: "cover",
-                      backgroundImage: `url(${
-                        !!page.frontmatter.image.childImageSharp
-                          ? page.frontmatter.image.childImageSharp.fluid.src
-                          : page.frontmatter.image
-                      })`
-                    }}
-                  />
-                  {/* <div class="col-md-6 d-none d-md-block pr-0">
-                    <Img fluid={page.frontmatter.image.childImageSharp.fluid} />
-                  </div> */}
+
+                  <div class="col-md-6 d-none d-md-block pr-0">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: page.frontmatter.image,
+                        alt: `${page.frontmatter.heading}`
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -53,7 +48,7 @@ export const query = graphql`
         subheading
         image {
           childImageSharp {
-            fluid(maxHeight: 410) {
+            fluid(maxWidth: 510) {
               ...GatsbyImageSharpFluid
             }
           }
