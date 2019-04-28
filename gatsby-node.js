@@ -222,7 +222,7 @@ exports.createPages = ({ actions, graphql }) => {
         },
         {
           f: `fix-web-deploy-could-not-verify-the-server-s-certificate/`,
-          t: `fix-web-deploy-could-not-verify-the-server’s-certificate/`
+          t: `fix-web-deploy-could-not-verify-the-server-certificate/`
         },
         {
           f: `aspnet-core-starting-the-web-server-is-taking-longer-than-expected/`,
