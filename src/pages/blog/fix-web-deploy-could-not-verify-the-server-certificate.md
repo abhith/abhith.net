@@ -13,6 +13,7 @@ image: /img/daniel-hansen-258110-unsplash.jpg
 tags:
   - visual-studio
   - ide
+commentId: 'b087098d-436c-4fef-a4b3-9575202e682d'
 ---
 Today when I tried to deploy my new **ASP.NET CORE 2** app to [SmarterASP.NET][1], the deployment failed with a message
 

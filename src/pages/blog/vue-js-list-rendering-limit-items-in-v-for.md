@@ -9,6 +9,7 @@ image: /img/vuejs.png
 tags:
   - vue
   - javascript
+commentId: '9aec474d-215a-44a1-8d06-9ec21bebd5fe'
 ---
 Today I had to render 200+ items in a bootstrap table which didn't appear to be user-friendly. So I planned to show first 20 of them on load, and if the user wanted, show full items.
 

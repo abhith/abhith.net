@@ -189,7 +189,11 @@ const BlogPost = ({ data }) => {
         author={post.frontmatter.author}
         authorURL={post.frontmatter.authorURL}
         readingTime={post.fields.readingTime.text}
-        commentId={post.fields.slug}
+        commentId={
+          post.frontmatter.commentId === null
+            ? post.fields.slug
+            : post.frontmatter.commentId
+        }
       />
     </Layout>
   );
@@ -228,6 +232,7 @@ export const pageQuery = graphql`
         }
         author
         authorURL
+        commentId
       }
     }
   }
