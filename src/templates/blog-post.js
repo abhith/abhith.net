@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Img from "gatsby-image";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { DiscussionEmbed } from "disqus-react";
 
 export const BlogPostTemplate = ({
   content,
@@ -19,9 +20,14 @@ export const BlogPostTemplate = ({
   date,
   author,
   authorURL,
-  readingTime
+  readingTime,
+  commentId
 }) => {
   const PostContent = contentComponent || Content;
+  const disqusConfig = {
+    shortname: `abhith`,
+    config: { identifier: commentId, title }
+  };
   return (
     <div>
       {helmet || ""}
@@ -134,6 +140,9 @@ export const BlogPostTemplate = ({
                 {/* {{ author.bio }} */}
               </div>
             </div>
+            <div id="comments" class="mt-5">
+              <DiscussionEmbed {...disqusConfig} />
+            </div>
           </div>
         </div>
       </div>
@@ -151,7 +160,8 @@ BlogPostTemplate.propTypes = {
   date: PropTypes.string,
   author: PropTypes.string,
   authorURL: PropTypes.string,
-  readingTime: PropTypes.string
+  readingTime: PropTypes.string,
+  commentId: PropTypes.string
 };
 
 const BlogPost = ({ data }) => {
@@ -179,6 +189,7 @@ const BlogPost = ({ data }) => {
         author={post.frontmatter.author}
         authorURL={post.frontmatter.authorURL}
         readingTime={post.fields.readingTime.text}
+        commentId={post.fields.slug}
       />
     </Layout>
   );
@@ -198,6 +209,7 @@ export const pageQuery = graphql`
       id
       html
       fields {
+        slug
         readingTime {
           text
         }
