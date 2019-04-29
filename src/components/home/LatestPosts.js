@@ -57,7 +57,8 @@ function LatestPosts() {
                             </span>{" "}
                           </small>
                           <small class="text-muted">
-                            {node.frontmatter.date} &middot; 5 min read
+                            {node.frontmatter.date} &middot;{" "}
+                            {node.fields.readingTime.text}
                           </small>
                         </div>
                       </div>
@@ -104,7 +105,8 @@ function LatestPosts() {
                           </span>
                         </small>
                         <small class="text-muted">
-                          {node.frontmatter.date} &middot; 5 min read
+                          {node.frontmatter.date} &middot;{" "}
+                          {node.fields.readingTime.text}
                         </small>
                       </div>
                     </div>
@@ -133,6 +135,9 @@ export const query = graphql`
           excerpt
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
             date(formatString: "MMM DD, YYYY")
@@ -160,6 +165,9 @@ export const query = graphql`
           excerpt
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
             date(formatString: "MMM DD, YYYY")

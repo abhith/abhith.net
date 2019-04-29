@@ -41,8 +41,7 @@ const BlogRoll = props => {
                 </span>
               </small>
               <small class="text-muted">
-                {post.frontmatter.date} &middot;{" "}
-                {post.frontmatter.fields.readingTime.text}
+                {post.frontmatter.date} &middot; {post.fields.readingTime.text}
               </small>
             </div>
             <div class="col-md-3 pr-0 text-right">
