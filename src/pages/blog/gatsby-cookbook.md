@@ -12,14 +12,17 @@ tags:
   - gatsby
   - cookbook
 ---
-Following recipes included in this article,
+
+I <3 Gatsby. This article contains some recipes which will be useful if you are into Gatsby for your next static site. Recipes are,
 
 - [Using Google fonts in Gatsby](#using-google-fonts-in-gatsby)
 - [Using icons like Font Awesome in Gatsby](#using-icons-like-font-awesome-in-gatsby)
+- [Disqus integration in a Gatsby website](#disqus-integration-in-a-gatsby-website)
+- [Additional Resource](#additional-resource)
 
 #### Using Google fonts in Gatsby
 
-Import it on your style. i.e in your css file
+Import the font css on your site main css file.
 
 ```css
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
@@ -29,7 +32,7 @@ There is also another way, which is by using [gatsby-plugin-prefetch-google-font
 
 #### Using icons like Font Awesome in Gatsby
 
-Using [react-icons](https://github.com/react-icons/react-icons). 
+Using [react-icons](https://github.com/react-icons/react-icons).
 
 Add it to your packages. 
 
@@ -49,4 +52,39 @@ class Question extends React.Component {
 }
 ```
 
+#### Disqus integration in a Gatsby website
 
+Since **Gatsby** is built on top of **React**, we can use the React package for **Disqus**.
+
+```bash
+yarn add disqus-react
+```
+
+And in your post component
+
+```js
+import { DiscussionEmbed } from 'disqus-react'
+```
+
+Define the **Disqus** configuration like
+
+```js
+const disqusConfig = {
+ shortname: `yourDisqusShortName`,
+ config: { identifier: slug, title },
+}
+```
+
+Here `identifier` is the unique id for your post, it can be anything.
+
+And now you can render the Disqus section by adding
+
+```jsx
+<DiscussionEmbed {...disqusConfig} />
+```
+
+#### Additional Resource
+
+- [Gatsby Blog with Disqus comments | janosh.io](https://janosh.io/blog/disqus-comments/)
+
+More recipes will be added as I explore **Gatsby**.
