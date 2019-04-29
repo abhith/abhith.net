@@ -4,10 +4,12 @@ module.exports = {
   siteMetadata: {
     title: "Abhith Rajan",
     description:
-      "an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products."
+      "an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products.",
+    siteUrl: `https://www.abhith.net`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sitemap`,
     "gatsby-plugin-sass",
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -37,6 +39,7 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          `gatsby-remark-reading-time`,
           {
             resolve: "gatsby-remark-relative-images",
             options: {
@@ -68,14 +71,6 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
-    {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: []
-        // purgeOnly: ['/main.css', '/theme.css'],
-      }
-    }, // must be after other CSS plugins
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

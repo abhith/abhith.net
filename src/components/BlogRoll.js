@@ -40,7 +40,10 @@ const BlogRoll = props => {
                     : null}
                 </span>
               </small>
-              <small class="text-muted">{post.frontmatter.date}</small>
+              <small class="text-muted">
+                {post.frontmatter.date} &middot;{" "}
+                {post.frontmatter.fields.readingTime.text}
+              </small>
             </div>
             <div class="col-md-3 pr-0 text-right">
               <Link to={`${post.fields.slug}`}>
