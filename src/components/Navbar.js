@@ -89,6 +89,7 @@ const Navbar = class extends React.Component {
                 <OutboundLink
                   className="nav-link"
                   href="https://www.buymeacoffee.com/abhith"
+                  target="_blank"
                 >
                   Buy me a coffee <FaCoffee className="text-danger" />
                 </OutboundLink>
