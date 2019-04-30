@@ -16,6 +16,7 @@ tags:
 - [2. “read-only file system” error running Docker Toolbox in Windows 7](#2-read-only-file-system-error-running-docker-toolbox-in-windows-7)
 - [3. Docker for windows - Mapping docker to localhost](#3-docker-for-windows---mapping-docker-to-localhost)
 - [4. COPY failed: CreateFile](#4-copy-failed-createfile)
+- [5. Force Docker for a clean build (not using cache)](#5-force-docker-for-a-clean-build-not-using-cache)
 
 #### 1. docker: “build” requires 1 argument. See 'docker build --help'
 
@@ -82,3 +83,13 @@ mv Dockerfile ../Dockerfile
 ```
 
 Then `cd` into the root directory of the solution where now the Dockerfile is, and run the build command, and it worked.
+
+#### 5. Force Docker for a clean build (not using cache)
+
+Using `--no-cache` in your build command.
+
+eg
+
+```bash
+docker build --no-cache -t myimagename .
+```
