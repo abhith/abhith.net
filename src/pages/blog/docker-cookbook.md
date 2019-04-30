@@ -10,16 +10,20 @@ tags:
   - docker
 ---
 
-This article is dedicated for gotcha's I experienced during Docker development, plus some routine stuffs related to **Docker** development.
+This article is dedicated for gotcha's I experienced during Docker development, plus some routine stuffs related to **Docker** development and some helpful external resources.
 
 ##### Table of Contents <!-- omit in toc -->
 
-- [1. docker: “build” requires 1 argument. See 'docker build --help'](#1-docker-build-requires-1-argument-see-docker-build---help)
-- [2. “read-only file system” error running Docker Toolbox in Windows 7](#2-read-only-file-system-error-running-docker-toolbox-in-windows-7)
-- [3. Docker for windows - Mapping docker to localhost](#3-docker-for-windows---mapping-docker-to-localhost)
-- [4. COPY failed: CreateFile](#4-copy-failed-createfile)
-- [5. Force Docker for a clean build (not using cache)](#5-force-docker-for-a-clean-build-not-using-cache)
-- [6. Rename a Container](#6-rename-a-container)
+- [Problems](#problems)
+  - [1. docker: “build” requires 1 argument. See 'docker build --help'](#1-docker-build-requires-1-argument-see-docker-build---help)
+  - [2. “read-only file system” error running Docker Toolbox in Windows 7](#2-read-only-file-system-error-running-docker-toolbox-in-windows-7)
+  - [3. Docker for windows - Mapping docker to localhost](#3-docker-for-windows---mapping-docker-to-localhost)
+  - [4. COPY failed: CreateFile](#4-copy-failed-createfile)
+  - [5. Force Docker for a clean build (not using cache)](#5-force-docker-for-a-clean-build-not-using-cache)
+  - [6. Rename a Container](#6-rename-a-container)
+- [External Resources](#external-resources)
+
+### Problems
 
 #### 1. docker: “build” requires 1 argument. See 'docker build --help'
 
@@ -104,3 +108,7 @@ Using the docker `rename` command.
 ```bash
 docker rename CONTAINER_ID my_new_container_name
 ```
+
+### External Resources
+
+- [How to Connect to Your Local SQL Server From Inside Docker &mdash; Jack Vanlightly](https://jack-vanlightly.com/blog/2017/9/24/how-to-connect-to-your-local-sql-server-from-inside-docker)
