@@ -10,22 +10,24 @@ tags:
   - docker
 ---
 
-### Overview
+##### Table of Contents <!-- omit in toc -->
 
-- [#1: docker: “build” requires 1 argument. See 'docker build --help'](#1)
-- [#2: “read-only file system” error running Docker Toolbox in Windows 7](#2)
-- [#3: Docker for windows - Mapping docker to localhost](#3)
+- [1. docker: “build” requires 1 argument. See 'docker build --help'](#1-docker-build-requires-1-argument-see-docker-build---help)
+- [2. “read-only file system” error running Docker Toolbox in Windows 7](#2-read-only-file-system-error-running-docker-toolbox-in-windows-7)
+- [3. Docker for windows - Mapping docker to localhost](#3-docker-for-windows---mapping-docker-to-localhost)
+- [4. COPY failed: CreateFile](#4-copy-failed-createfile)
 
-#### <a name="1"></a> 1#:  docker: “build” requires 1 argument. See 'docker build --help'
-Most probably you missed a dot,  need to add it, example 
+#### 1. docker: “build” requires 1 argument. See 'docker build --help'
+
+Most probably you missed a dot,  need to add it, example
 
 ```bash
-docker build -t docusaurus-doc . 
+docker build -t docusaurus-doc .
 ```
 
 It means you use the Dockerfile in the local directory
 
-#### <a name="2"></a> #2: “read-only file system” error running Docker Toolbox in Windows 7
+#### 2. “read-only file system” error running Docker Toolbox in Windows 7
 
 Try restarting the docker machine by following below steps:
 
@@ -41,7 +43,7 @@ Then with your machine name, run the command
 docker-machine restart <name>
 ```
 
-#### <a name="3"></a> #3: Docker for windows - Mapping docker to localhost
+#### 3. Docker for windows - Mapping docker to localhost
 
 You can do it by configuring your Virtualbox. Follow below steps,
 
@@ -53,3 +55,30 @@ You can do it by configuring your Virtualbox. Follow below steps,
 - Ok/Save
 - Stop Box
 - Start the Box
+
+#### 4. COPY failed: CreateFile
+
+In my visual studio solution, containing a .NET Core Console app, I enabled Docker support using [Visual studio container tools on Windows](https://docs.microsoft.com/en-us/visualstudio/containers/overview?view=vs-2019).
+
+![ Visual studio container tools on Windows](/img/docker-cookbook-add-docker-support-menu.png)
+
+And it generated a **Dockerfile** inside the selected project but when i tried to build an image from inside the project directory using the docker command 
+
+```bash
+docker build -t myimagename .
+```
+
+It failed with following exception,
+
+> COPY ["ProjectDirectory/ProjectName.csproj", "ProjectDirectory/"]
+COPY failed: CreateFile \\?\C:\ProgramData\Docker\tmp\docker-builder366701720\ProjectDirectory\ProjectName.csproj: The system cannot find the path specified.
+
+This was because I tried to run this from inside the `ProjectDirectory`. Why I tried to run from there was because the while enabling docker support via **Visual Studio 2019** context menu, the Dockerfile generated inside that project directory, not in the root directory of solution.
+
+So inorder to fix this, I moved the same Dockerfile to the root directory of the solution. It can be done via Powershell command
+
+```bash
+mv Dockerfile ../Dockerfile
+```
+
+Then `cd` into the root directory of the solution where now the Dockerfile is, and run the build command, and it worked.
