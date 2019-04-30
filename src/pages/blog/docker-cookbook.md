@@ -21,6 +21,8 @@ This article is dedicated for gotcha's I experienced during Docker development, 
   - [4. COPY failed: CreateFile](#4-copy-failed-createfile)
   - [5. Force Docker for a clean build (not using cache)](#5-force-docker-for-a-clean-build-not-using-cache)
   - [6. Rename a Container](#6-rename-a-container)
+- [Questions](#questions)
+  - [1. Difference between docker `run` and `start`](#1-difference-between-docker-run-and-start)
 - [External Resources](#external-resources)
 
 ### Problems
@@ -108,6 +110,17 @@ Using the docker `rename` command.
 ```bash
 docker rename CONTAINER_ID my_new_container_name
 ```
+
+### Questions
+
+#### 1. Difference between docker `run` and `start`
+
+In short,
+
+- run : runs an image. i.e it will create a container from that image first and then starts the container. All in one command.
+- start : starts the specified container.
+
+So if you created a container from an image using the `create` command, then you can use `start` command to start that container. Or you can start a container from the image by using the `run` command.
 
 ### External Resources
 
