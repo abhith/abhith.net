@@ -21,7 +21,9 @@ export const BlogPostTemplate = ({
   author,
   authorURL,
   readingTime,
-  commentId
+  commentId,
+  lastModifiedTime,
+  lastModifiedTimeString
 }) => {
   const PostContent = contentComponent || Content;
   const disqusConfig = {
@@ -84,7 +86,10 @@ export const BlogPostTemplate = ({
                       </OutboundLink>
                     </span>
                     <span class="text-muted d-block mt-1">
-                      {date} &middot; {readingTime}
+                      {date} &middot; {readingTime} &middot; Last Updated:{" "}
+                      <time datetime={lastModifiedTime}>
+                        {lastModifiedTimeString}
+                      </time>
                     </span>
                   </small>
                 </div>
@@ -161,7 +166,9 @@ BlogPostTemplate.propTypes = {
   author: PropTypes.string,
   authorURL: PropTypes.string,
   readingTime: PropTypes.string,
-  commentId: PropTypes.string
+  commentId: PropTypes.string,
+  lastModifiedTime: PropTypes.string,
+  lastModifiedTimeString: PropTypes.string
 };
 
 const BlogPost = ({ data }) => {
@@ -194,6 +201,8 @@ const BlogPost = ({ data }) => {
             ? post.fields.slug
             : post.frontmatter.commentId
         }
+        lastModifiedTime={post.fields.lastModifiedTime}
+        lastModifiedTimeString={post.fields.lastModifiedTimeString}
       />
     </Layout>
   );
@@ -214,6 +223,8 @@ export const pageQuery = graphql`
       html
       fields {
         slug
+        lastModifiedTime
+        lastModifiedTimeString: lastModifiedTime(formatString: "MMMM DD, YYYY")
         readingTime {
           text
         }
