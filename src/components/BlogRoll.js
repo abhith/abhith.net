@@ -21,7 +21,7 @@ const BlogRoll = props => {
                   {post.frontmatter.title}
                 </Link>
               </h2>
-              <p class="excerpt">{post.excerpt}</p>
+              <p class="excerpt">{post.frontmatter.description}</p>
               <small class="d-block text-muted">
                 In{" "}
                 <span class="catlist">
