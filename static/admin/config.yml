@@ -15,12 +15,14 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Author URL", name: "authorURL", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish Date", hint: 'Created date', name: "date", widget: "datetime"}
       - {label: "Cover", name: "image", widget: "image"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Author", name: "author", widget: "string", default: 'Abhith Rajan'}
+      - {label: "Author URL", name: "authorURL", widget: "string", default: 'https://twitter.com/abhithrajan'}
+      - {label: "Disqus", hint: 'Optional', name: "commentId", widget: "string", required: false}
+      - {label: "Last Updated Date", hint: 'Optional', name: "lastModificationTime", widget: "datetime", required: false}
 
   - name: "pages"
     label: "Pages"
