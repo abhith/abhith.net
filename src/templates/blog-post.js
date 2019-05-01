@@ -192,7 +192,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         image={post.frontmatter.image}
-        date={post.frontmatter.date}
+        date={post.frontmatter.dateString}
         author={post.frontmatter.author}
         authorURL={post.frontmatter.authorURL}
         readingTime={post.fields.readingTime.text}
@@ -201,8 +201,16 @@ const BlogPost = ({ data }) => {
             ? post.fields.slug
             : post.frontmatter.commentId
         }
-        lastModifiedTime={post.fields.lastModifiedTime}
-        lastModifiedTimeString={post.fields.lastModifiedTimeString}
+        lastModifiedTime={
+          post.frontmatter.lastModificationTime === null
+            ? post.frontmatter.date
+            : post.frontmatter.lastModificationTime
+        }
+        lastModifiedTimeString={
+          post.frontmatter.lastModificationTime === null
+            ? post.frontmatter.dateString
+            : post.frontmatter.lastModificationTimeString
+        }
       />
     </Layout>
   );
@@ -223,17 +231,21 @@ export const pageQuery = graphql`
       html
       fields {
         slug
-        lastModifiedTime
-        lastModifiedTimeString: lastModifiedTime(formatString: "MMMM DD, YYYY")
+
         readingTime {
           text
         }
       }
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
+        dateString: date(formatString: "MMMM DD, YYYY")
         title
         description
         tags
+        lastModificationTime
+        lastModificationTimeString: lastModificationTime(
+          formatString: "MMMM DD, YYYY"
+        )
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
