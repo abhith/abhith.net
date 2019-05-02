@@ -5,6 +5,7 @@ description: One way to limit the iteration of items in Vue v-for directive.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-02-27T18:25:00.000Z
+lastModificationTime: 2018-09-06T18:25:00.000Z
 image: /img/vuejs.png
 tags:
   - vue
@@ -66,10 +67,11 @@ And my markup,
 <span style="color:gray;">&lt;/</span><span style="color:#569cd6;">button</span><span style="color:gray;">&gt;</span></pre>
 Here, Using **Array.slice()**, we get a new array with the limited number of items from the original array. And we show the new sliced array items or the original array full items based on the flag. And a button to toggle the flag. If you wonder why I used **@@**click in Vue, is because my markup is written in **Razor** (.cshtml).
 
-### Update 1
+### Update 1 - Sep 6, 2018
 
 As Andrew Butler pointed out in the comments, we can avoid the markup duplication by using a computed property. And the code becomes,
 
+```js
     var app = new Vue({
       el: "#app",
       data: {
@@ -107,9 +109,11 @@ As Andrew Butler pointed out in the comments, we can avoid the markup duplicatio
         this.getCountries();
       }
     });
+```
 
 And the markup,
 
+```html
     <table class="table" v-if="!isLoadingCountries">
         <thead>
             <tr>
@@ -127,6 +131,7 @@ And the markup,
     <button v-if="!isLoadingCountries" @@click="showLessCountries = !showLessCountries">
         {{showLessCountries===true? "Show All Countries" : "Show Less"}}
     </button>
+```
 
 If you know a better way to do the same, let me know.
 
