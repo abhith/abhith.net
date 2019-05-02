@@ -11,6 +11,7 @@ image: /img/logo-gatsby.jpeg
 tags:
   - gatsby
   - cookbook
+  - react
 ---
 
 I <3 Gatsby. This article contains some recipes which will be useful if you are into Gatsby for your next static site. Recipes are,
