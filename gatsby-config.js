@@ -103,6 +103,17 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lora`,
+            variants: [`400`, `400i`, `700`]
+          }
+        ]
+      }
+    },
+    {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`
