@@ -8,6 +8,10 @@ image: /img/js-jquery-html-css.jpg
 description: >-
     This article explains how to set and get hidden field value using jQuery.
 commentId: '1354e7e4-bbca-481c-ac69-2fab4ff2bbd8'
+tags:
+  - javascript
+  - jquery
+  - aspnet-web-forms
 ---
 
 When we can achieve the same thing using many ways, with different frameworks, we tend to forget one or two such ways. Same thing happened to me. The task is simple, to set and get hidden field value in client side in a SharePoint project.
