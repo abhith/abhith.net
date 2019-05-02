@@ -11,7 +11,7 @@ image: /img/2017-09-06-check-if-string-is-arabic-csharp.png
 tags:
   - aspnet
   - localization
-  - arabic
+  - csharp
 ---
 
 I have pretty good experience in bilingual web app development, especially in English & Arabic languages. The challenge with switching website page from English to Arabic is not just the content translation, the whole layout need to be changed and the text direction for all need to be RTL where as for English it need to be LTR.
@@ -34,4 +34,4 @@ To classify, or to check whether the given content language is Arabic or not, we
 
 And it is now part of my [Code.Library](https://github.com/Abhith/Code.Library) package ValidationHelper module.
 
-If you know any better way to check if the string is Arabic in C#, let me know in the comments.
+If you know any better way to check if the string is **Arabic in C#**, let me know in the comments.
