@@ -15,7 +15,7 @@ tags:
 
 Most of the solution implementations mentioned below can be found in my repo [https://github.com/Abhith/piggy-flutter](https://github.com/Abhith/piggy-flutter).
 
-### Table of Contents <!-- omit in toc -->
+#### Table of Contents <!-- omit in toc -->
 
 - [Navigation](#navigation)
   - [Move to a new screen without back](#move-to-a-new-screen-without-back)
