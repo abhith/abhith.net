@@ -5,7 +5,7 @@ description: Some of the gotcha's related to Docker
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-10-28T18:35:00.000Z
-lastModificationTime: 2019-04-30T18:35:00.000Z
+lastModificationTime: 2019-05-02T13:32:00.000Z
 image: /img/frank-mckenna-252014-unsplash.jpg
 tags:
   - docker
@@ -13,7 +13,7 @@ tags:
 
 This article is dedicated for gotcha's I experienced during Docker development, plus some routine stuffs related to **Docker** development and some helpful external resources.
 
-##### Table of Contents <!-- omit in toc -->
+#### Table of Contents <!-- omit in toc -->
 
 - [Problems](#problems)
   - [1. docker: “build” requires 1 argument. See 'docker build --help'](#1-docker-build-requires-1-argument-see-docker-build---help)
@@ -24,6 +24,12 @@ This article is dedicated for gotcha's I experienced during Docker development, 
   - [6. Rename a Container](#6-rename-a-container)
 - [Questions](#questions)
   - [1. Difference between docker `run` and `start`](#1-difference-between-docker-run-and-start)
+- [CLI](#cli)
+  - [docker-compose](#docker-compose)
+    - [Build the images, do not start the containers](#build-the-images-do-not-start-the-containers)
+    - [Build the images if the images do not exist and start the containers](#build-the-images-if-the-images-do-not-exist-and-start-the-containers)
+    - [Force to build the images even when not needed](#force-to-build-the-images-even-when-not-needed)
+    - [Skip the image build process](#skip-the-image-build-process)
 - [External Resources](#external-resources)
 
 ### Problems
@@ -122,6 +128,36 @@ In short,
 - start : starts the specified container.
 
 So if you created a container from an image using the `create` command, then you can use `start` command to start that container. Or you can start a container from the image by using the `run` command.
+
+### CLI
+
+#### docker-compose
+
+##### Build the images, do not start the containers
+
+```bash
+docker-compose build
+```
+
+##### Build the images if the images do not exist and start the containers
+
+```bash
+docker-compose up
+```
+
+##### Force to build the images even when not needed
+
+```bash
+docker-compose up --build
+```
+
+##### Skip the image build process
+
+```bash
+docker-compose up --build
+```
+
+If the images aren't built beforehand, this fails.
 
 ### External Resources
 
