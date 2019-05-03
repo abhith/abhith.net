@@ -7,6 +7,7 @@ description: >-
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-04-26T20:00:00.000Z
+lastModificationTime: 2019-05-03T15:00:00.000Z
 image: /img/logo-gatsby.jpeg
 tags:
   - gatsby
@@ -25,11 +26,35 @@ I <3 Gatsby. This article contains some recipes which will be useful if you are 
 
 Import the font css on your site main css file.
 
-```css
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+Using [gatsby-plugin-prefetch-google-fonts](https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/).
+
+- Install the plugin `gatsby-plugin-prefetch-google-fonts`
+
+```bash
+yarn add gatsby-plugin-prefetch-google-fonts
 ```
 
-There is also another way, which is by using [gatsby-plugin-prefetch-google-fonts](https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/). Not tried yet, will update once tried.
+- Modify `gatsby-config.js`.  Inside the plugins array, add
+
+```js
+{
+  resolve: `gatsby-plugin-prefetch-google-fonts`,
+  options: {
+    fonts: [
+      {
+        family: `Oswald`,
+        subsets: [`latin`],
+      },
+      {
+        family: `Open Sans`,
+        variants: [`400`, `700`]
+      },
+    ],
+  },
+}
+```
+
+You can change the font family and variants or number of fonts in the above configuration according to your website needs.
 
 #### Using icons like Font Awesome in Gatsby
 
