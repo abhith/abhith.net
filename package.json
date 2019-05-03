@@ -10,7 +10,7 @@
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-google-analytics": "^2.0.18",
     "gatsby-plugin-netlify": "^2.0.6",
-    "gatsby-plugin-netlify-cms": "^3.0.15",
+    "gatsby-plugin-netlify-cms": "^4.0.0",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sass": "^2.0.7",
