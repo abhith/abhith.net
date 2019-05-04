@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
 import { graphql } from "gatsby";
+import Helmet from "react-helmet";
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -11,6 +12,13 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <div class="container">
+          <Helmet titleTemplate="%s | Abhith Rajan">
+            <title>{`Blog`}</title>
+            <meta
+              name="description"
+              content={`Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More`}
+            />
+          </Helmet>
           <div class="row mt-3">
             <div class="col-md-8 main-loop">
               <h4 class="font-weight-bold spanborder">
