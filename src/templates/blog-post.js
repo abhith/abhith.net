@@ -70,9 +70,13 @@ export const BlogPostTemplate = ({
                 <h1 class="display-4 mb-4 article-headline">{title}</h1>
 
                 <div class="d-flex align-items-center">
-                  {/* {% if author.avatar %}
-                        <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="70"/>
-                        {% endif %} */}
+                  <img
+                    class="rounded-circle"
+                    src="/img/abhith-avatar.jpg"
+                    alt="Abhith Rajan"
+                    width="70"
+                  />
+
                   <small class="ml-3">
                     {" "}
                     {author}{" "}
@@ -125,9 +129,12 @@ export const BlogPostTemplate = ({
 
             <div class="row mt-5">
               <div class="col-md-2 align-self-center">
-                {/* {% if author.avatar %}
-                        <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="90" />
-                    {% endif %} */}
+                <img
+                  class="rounded-circle"
+                  src="/img/abhith-avatar.jpg"
+                  alt="Abhith Rajan"
+                  width="90"
+                />
               </div>
               <div class="col-md-10">
                 <h5 class="font-weight-bold">
@@ -142,7 +149,9 @@ export const BlogPostTemplate = ({
                     </OutboundLink>
                   </span>
                 </h5>
-                {/* {{ author.bio }} */}
+                Abhith Rajan is an aspiring software engineer with more than 6
+                years of experience and proven successful track record of
+                delivering technology-based products and services.
               </div>
             </div>
             <div id="comments" class="mt-5">
