@@ -11,10 +11,7 @@ const Footer = class extends React.Component {
               <span class="navbar-brand mr-2 mb-0">
                 <strong>Abhith</strong>
               </span>
-              <span>
-                Copyright ©{" "}
-                <script>document.write(new Date().getFullYear())</script>.
-              </span>
+              <span>Copyright © 2019.</span>
 
               <OutboundLink
                 className="text-dark ml-1"
