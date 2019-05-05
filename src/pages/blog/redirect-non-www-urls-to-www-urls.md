@@ -11,8 +11,7 @@ image: /img/web-config.png
 tags:
   - iis
   - seo
-  - umbraco
-  - webconfig
+  - web-config
   - rewrite-rule
   - aspnet
 ---

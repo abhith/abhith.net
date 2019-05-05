@@ -10,7 +10,7 @@ date: 2018-04-19T19:29:00.000Z
 image: /img/michael-mroczek-199379-unsplash.jpg
 tags:
   - iis
-  - asp.net
+  - aspnet
 ---
 The best way to figure out what is happening is to check the IIS logs. That should be the first thing to do in a similar situation. If you notice something like "Rejected-By-UrlScan", you need to check the URLScan configurations located in 
 

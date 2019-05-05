@@ -7,6 +7,10 @@ templateKey: blog-post
 image: /img/web-config.png
 description: >-
   Adding rewrite rule in release config is handy so that it will not affect during Debug mode.
+tags:
+  - debug
+  - web-config
+  - rewrite-rule
 ---
 
 My Web.config's system.webServer section initially looked like this,

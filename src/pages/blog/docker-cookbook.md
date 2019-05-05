@@ -9,6 +9,7 @@ lastModificationTime: 2019-05-02T13:32:00.000Z
 image: /img/frank-mckenna-252014-unsplash.jpg
 tags:
   - docker
+  - cookbook
 ---
 
 This article is dedicated for gotcha's I experienced during Docker development, plus some routine stuffs related to **Docker** development and some helpful external resources.

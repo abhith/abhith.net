@@ -7,6 +7,9 @@ templateKey: blog-post
 image: /img/js-jquery-html-css.jpg
 description: >-
     This a short article about how can we remove a specific class from all elements that do have the class easily using jQuery.
+tags:
+  - javascript
+  - jquery
 ---
 
 Code first, talks later

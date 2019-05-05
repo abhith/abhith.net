@@ -8,6 +8,9 @@ image: /img/js-jquery-html-css.jpg
 description: >-
     This article describes how to set the selected option in a select by its value via jQuery.
 commentId: '1737badb-b0ea-4079-a6b2-72d2299e65c2'
+tags:
+  - javascript
+  - jquery
 ---
 
 In one of my projects, there is a search page which has few filters including linked selects, i.e the options displayed in a child select is dependent upon the option selected in another (parent). (like when we choose a country (parent), we have to show the states under the selected country in the child.)

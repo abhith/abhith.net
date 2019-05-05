@@ -15,9 +15,9 @@ One of our recent projects is on ASP.NET Core, and we are using [aspnetboilerpla
 
 In order to test the social login, like facebook, we need to have https (even for localhost). So I updated the Host project settings to use https. After making the site https (localhost), when I debug, there comes the message window, saying
 
->  Starting the web server is taking longer than expected
+> Starting the web server is taking longer than expected
 
-I spend some time staring the screen but nothing happened, a little google for the same pointed that it was because of the new localhost SSL related. I did accepted the certificate while project settings updated but somehow this issue. To solve it, 
+I spend some time staring the screen but nothing happened, a little google for the same pointed that it was because of the new localhost SSL related. I did accepted the certificate while project settings updated but somehow this issue. To solve it,
 
 > Browse the https website from IISExpress in the taskbar icon tray.
 

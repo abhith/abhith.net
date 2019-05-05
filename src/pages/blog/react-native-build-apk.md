@@ -11,13 +11,17 @@ image: /img/steve-johnson-540038-unsplash.jpg
 tags:
   - react-native
 ---
+
 #### First
+
 > react-native bundle --dev false --platform android --entry-file index.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug
 
 #### Second
+
 > cd android
 
 #### Final
+
 > ./gradlew assembleDebug
 
 Once all three commands executed successfully. You can find the generated APK on 

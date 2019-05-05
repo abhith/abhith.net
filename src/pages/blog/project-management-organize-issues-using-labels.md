@@ -7,6 +7,10 @@ templateKey: blog-post
 image: /img/rawpixel-455996-unsplash.png
 description: >-
     Here I am listing the labels which I used to manage my projects in Gitlab and GitHub.
+tags:
+  - project-management
+  - github
+  - gitlab
 ---
 
 ### Area

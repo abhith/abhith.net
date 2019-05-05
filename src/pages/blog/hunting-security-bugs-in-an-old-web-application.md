@@ -8,6 +8,10 @@ image: /img/2017-10-09-hunting-security-bugs-in-an-old-web-application.jpg
 description: >-
     In this post, I am sharing one of my security bug hunting experience in an older ASP.NET web form project.
 commentId: '0f364148-7c40-4a1e-9ced-c8e4f54d1dae'
+tags:
+  - aspnet-web-forms
+  - security
+  - web-config
 ---
 
 Recently one of our old (~4 years or so) website faced a big security challenge. A similar situation we faced for the same website a long time ago when it initially deployed to the production server, that time the site was hosted in **[GoDaddy][1]**. Due to that incident, we moved the site to a custom VPS server with a third party company (where I worked during that time) and everything was fine after that.

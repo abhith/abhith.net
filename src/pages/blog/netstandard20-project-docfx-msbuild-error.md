@@ -7,6 +7,10 @@ templateKey: blog-post
 image: /img/large.png
 description: >-
     If you are facing issues when trying to generate documentation for your .netstandard2.0 project. Try the solution mentioned in this post.
+tags:
+  - dotnet-core
+  - docfx
+  - documentation
 ---
 
 I tried to generate documentation for a [.netstandard2.0](https://github.com/Abhith/Code.Library) project using DocFX.

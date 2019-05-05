@@ -7,6 +7,12 @@ templateKey: blog-post
 image: /img/web-config.png
 description: >-
     Use IIS rewrite rule to redirect (301) all www requests to non-www.
+tags:
+  - iis
+  - seo
+  - web-config
+  - rewrite-rule
+  - aspnet
 ---
 
 Code first, talks later.

@@ -7,6 +7,8 @@ templateKey: blog-post
 image: /img/js-jquery-html-css.jpg
 description: >-
     You can use navigator.userAgent value to determine if the user is on a mobile device.
+tags:
+  - javascript
 ---
 
 In the responsive design era, you may want to do some extra operations if the user is on mobile, like something I mentioned in my last [post][1] where my colleague wanted to remove some specific classes if the user is on mobile.

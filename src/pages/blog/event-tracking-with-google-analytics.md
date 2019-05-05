@@ -7,6 +7,9 @@ templateKey: blog-post
 image: /img/2017-08-17-event-tracking-with-google-analytics-hero.jpg
 description: >-
     When you want to get metrics related to user interactions on various parts of your website Google Analytics (ga)  event tracking can be helpful and is easy to integrate as well.
+tags:
+  - analytics
+  - seo
 ---
 
 I hope you have already added google analytics tracking script in your master page. If not see the page source of this page and check at the bottom of the page, there you can see some script which is provided by google analytics when we add a website (property) to our account in Google analytics which will track the page views etc for the whole website.

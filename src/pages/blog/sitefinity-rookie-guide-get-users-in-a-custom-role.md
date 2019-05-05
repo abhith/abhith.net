@@ -9,7 +9,6 @@ authorURL: 'https://twitter.com/abhithrajan'
 date: 2017-10-21T08:58:00.000Z
 image: /img/create-label-sitefinity.png
 tags:
-  - sitefinity-rookie-guide
   - sitefinity
   - cms
 ---

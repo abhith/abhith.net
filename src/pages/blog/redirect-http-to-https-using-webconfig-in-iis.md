@@ -7,6 +7,12 @@ templateKey: blog-post
 image: /img/web-config.png
 description: >-
     Use IIS Rewrite rule to redirect all HTTP request to HTTPS.
+tags:
+  - iis
+  - seo
+  - web-config
+  - rewrite-rule
+  - aspnet
 ---
 
 Add the below rewrite rule in your **Web.Config** under **system.webServer** section,

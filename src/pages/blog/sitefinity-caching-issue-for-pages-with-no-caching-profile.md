@@ -10,7 +10,6 @@ date: 2017-12-18T09:17:00.000Z
 image: /img/no-caching-settings.png
 tags:
   - cache
-  - sitefinity-rookie-guide
   - sitefinity
   - cms
 ---

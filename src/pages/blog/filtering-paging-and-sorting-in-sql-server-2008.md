@@ -8,7 +8,7 @@ image: /img/logo-microsoft-sql-server-595x3350.jpg
 description: >-
   This article provide one solution to achieve server side paging, sorting and filtering in SQL Server 2008.
 tags:
-- sql-server
+	- sql-server
 ---
 
 **Stored procedure** to achieve paging, sorting and filtering in SQL Server 2008 is given below.

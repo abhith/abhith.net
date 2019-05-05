@@ -7,6 +7,10 @@ templateKey: blog-post
 image: /img/jeff-sheldon-2558-unsplash.jpg
 description: >-
     Things you can try to solve the random crashes of Visual Studio.
+tags:
+  - visual-studio
+  - ide
+  - debug
 ---
 
 Yesterday when I was working on a Sitefinity project in my Visual Studio 2017 (VS) community edition,  the VS just hanged for few seconds and crashed. Ok, maybe because the file I tried to open was little big and CodeMaid may be tried to format it and so crashed, this was my initial thought. So I tried to open the Visual Studio from the Sitefinity Project Manager, and boom, it crashed during opening solution. Next, I tried to open Visual Studio directly without opening any solution and boom, it crashed again. i.e unable to open Visual Studio.

@@ -11,7 +11,7 @@ date: 2018-04-07T07:21:00.000Z
 image: /img/sandeep-swarnkar-235646-unsplash.jpg
 tags:
   - umbraco
-  - web.config
+  - web-config
   - website-security
   - asp.net
 ---
