@@ -5,7 +5,7 @@ description: Some of the gotcha's related to Docker
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-10-28T18:35:00.000Z
-lastModificationTime: 2019-05-02T13:32:00.000Z
+lastModificationTime: 2019-05-05T13:40:00.000Z
 image: /img/frank-mckenna-252014-unsplash.jpg
 tags:
   - docker
@@ -30,7 +30,7 @@ This article is dedicated for gotcha's I experienced during Docker development, 
     - [Build the images, do not start the containers](#build-the-images-do-not-start-the-containers)
     - [Build the images if the images do not exist and start the containers](#build-the-images-if-the-images-do-not-exist-and-start-the-containers)
     - [Force to build the images even when not needed](#force-to-build-the-images-even-when-not-needed)
-    - [Skip the image build process](#skip-the-image-build-process)
+    - [Run multiple containers of the same image](#run-multiple-containers-of-the-same-image)
 - [External Resources](#external-resources)
 
 ### Problems
@@ -152,13 +152,13 @@ docker-compose up
 docker-compose up --build
 ```
 
-##### Skip the image build process
+##### Run multiple containers of the same image
 
 ```bash
-docker-compose up --build
+docker-compose up --scale <SERVICE_NAME>=n
 ```
 
-If the images aren't built beforehand, this fails.
+Replace the `SERVICE_NAME` with the appropriate service listed in the **docker-compose.yml** and `n` with the number of containers you want, in order to create that number of containers of that service.
 
 ### External Resources
 
