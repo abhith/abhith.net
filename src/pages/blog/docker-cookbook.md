@@ -5,7 +5,7 @@ description: Some of the gotcha's related to Docker
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-10-28T18:35:00.000Z
-lastModificationTime: 2019-05-05T13:40:00.000Z
+lastModificationTime: 2019-05-06T14:00:00.000Z
 image: /img/frank-mckenna-252014-unsplash.jpg
 tags:
   - docker
@@ -29,6 +29,7 @@ This article is dedicated for gotcha's I experienced during Docker development, 
   - [docker-compose](#docker-compose)
     - [Build the images, do not start the containers](#build-the-images-do-not-start-the-containers)
     - [Build the images if the images do not exist and start the containers](#build-the-images-if-the-images-do-not-exist-and-start-the-containers)
+    - [Force `docker-compose` to build from scratch, no cache](#force-docker-compose-to-build-from-scratch-no-cache)
     - [Force to build the images even when not needed](#force-to-build-the-images-even-when-not-needed)
     - [Run multiple containers of the same image](#run-multiple-containers-of-the-same-image)
 - [External Resources](#external-resources)
@@ -144,6 +145,12 @@ docker-compose build
 
 ```bash
 docker-compose up
+```
+
+##### Force `docker-compose` to build from scratch, no cache
+
+```bash
+docker-compose build --no-cache
 ```
 
 ##### Force to build the images even when not needed
