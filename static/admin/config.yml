@@ -4,11 +4,12 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-
+publish_mode: editorial_workflow
 collections:
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
+    sort: "date:desc"
     create: true
     slug: "{{slug}}"
     fields:
@@ -23,7 +24,16 @@ collections:
       - {label: "Author URL", name: "authorURL", widget: "string", default: 'https://twitter.com/abhithrajan'}
       - {label: "Disqus", hint: 'Optional', name: "commentId", widget: "string", required: false}
       - {label: "Last Updated Date", hint: 'Optional', name: "lastModificationTime", widget: "datetime", required: false}
-
+  - name: "tag"
+    label: "Tags"
+    files:
+      - file: "src/data/tags.json"
+        name: "tag"
+        label: "Tags"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Cover", name: "image", widget: "image"}
   - name: "pages"
     label: "Pages"
     files:
