@@ -1,18 +1,19 @@
 ---
 templateKey: blog-post
 title: 'Docker: Cookbook'
-description: Some of the gotcha's related to Docker
+description: >- 
+  If you are new to docker then this post might be useful. It contains solutions to common problems, regular use case commands and some additional resources. 
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-10-28T18:35:00.000Z
-lastModificationTime: 2019-05-08T10:00:00.000Z
+lastModificationTime: 2019-05-08T14:42:00.000Z
 image: /img/frank-mckenna-252014-unsplash.jpg
 tags:
   - docker
   - cookbook
 ---
 
-This article is dedicated for gotcha's I experienced during Docker development, plus some routine stuffs related to **Docker** development and some helpful external resources.
+This article is dedicated for things I experienced during Docker development, plus some routine stuffs related to **Docker** development and some helpful external resources.
 
 #### Table of Contents <!-- omit in toc -->
 
@@ -24,6 +25,7 @@ This article is dedicated for gotcha's I experienced during Docker development, 
   - [5. Force Docker for a clean build (not using cache)](#5-force-docker-for-a-clean-build-not-using-cache)
   - [6. Rename a Container](#6-rename-a-container)
   - [7. $'\r': command not found](#7-r-command-not-found)
+  - [8. Copy docker image from one host another](#8-copy-docker-image-from-one-host-another)
 - [Questions](#questions)
   - [1. Difference between docker `run` and `start`](#1-difference-between-docker-run-and-start)
 - [CLI](#cli)
@@ -82,7 +84,7 @@ In my visual studio solution, containing a .NET Core Console app, I enabled Dock
 
 ![ Visual studio container tools on Windows](/img/docker-cookbook-add-docker-support-menu.png)
 
-And it generated a **Dockerfile** inside the selected project but when i tried to build an image from inside the project directory using the docker command 
+And it generated a **Dockerfile** inside the selected project but when i tried to build an image from inside the project directory using the docker command
 
 ```bash
 docker build -t myimagename .
@@ -130,6 +132,20 @@ If you wonder what is **End of line sequence**,
 > The End of Line (EOL) sequence ( 0x0D 0x0A , \r\n ) is actually two ASCII characters, a combination of the CR and LF characters. It moves the cursor both down to the next line and to the beginning of that line.
 
 If you are using **Vscode**, switching **EOL** is easy, on the bottom right corner, you can find the current EOL sequence of the editing file, by clicking on it, Vscode will present you a dropdown to choose from. Select the **LF** in this case, and save file.
+
+#### 8. Copy docker image from one host another
+
+By using `docker save` command, we can export docker image as a `.tar` file.
+
+```bash
+docker save -o /path/image_name.tar image_name
+```
+
+The above will create an image_name.tar file in the path specified. Copy it to the new host, then you can import the image to the new host by using `docker load` like below,
+
+```bash
+docker load -i <path to image tar file>
+```
 
 ### Questions
 
