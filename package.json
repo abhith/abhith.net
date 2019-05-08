@@ -1,10 +1,9 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "abhith",
+  "description": "Abhith Rajan is an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products and services.",
+  "version": "2.0.0",
+  "author": "Abhith Rajan",
   "dependencies": {
-    "bulma": "^0.7.0",
     "disqus-react": "^1.0.5",
     "gatsby": "^2.1.34",
     "gatsby-image": "^2.0.23",
