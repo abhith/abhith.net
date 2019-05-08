@@ -13,9 +13,10 @@ tags:
   - microsoft-orleans
   - dotnet-core
 ---
+
 My Silo Host project `Program.cs` **Main** method looks like below,
 
-```c#
+```cs
 private static async Task Main(string[] args)
 {
     int siloPort, gatewayPort;
@@ -45,7 +46,8 @@ private static async Task Main(string[] args)
                         options.Invariant = invariant;
                         options.ConnectionString = connectionString;
                     })
-                    .ConfigureEndpoints(siloPort: siloPort, gatewayPort: gatewayPort)                    
+                    .ConfigureEndpoints(siloPort: siloPort, gatewayPort: gatewayPort)
+                    
                     .ConfigureLogging(logging => logging.AddConsole());
 
     using (var host = siloBuilder.Build())
@@ -55,14 +57,17 @@ private static async Task Main(string[] args)
     }
 }
 ```
+
 To run multiple Silo, we need to specify different set of ports for each. Here we are achieving the same via parsing the args.
- 
+
 Now you can run a Silo by executing following command on the Silo project root directory
 
 ```bash
 dotnet run <siloPort> <gatewayPort>
 ```
-eg, 
+
+eg,
+
 ```bash
 dotnet run 11111 30000
 dotnet run 11112 30001
