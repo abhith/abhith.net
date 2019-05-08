@@ -14,6 +14,19 @@ tags:
 
 I have worked with **Microsoft SQL Server** for the past 7 years and still enjoying working with **SQL Server**. Now I got a chance to explore **Oracle Database** and here is my experience.
 
+#### Table of Contents <!-- omit in toc -->
+
+- [Some Points](#some-points)
+- [Docs](#docs)
+  - [Tablespaces](#tablespaces)
+  - [VARCHAR vs VARCHAR2](#varchar-vs-varchar2)
+- [Problems](#problems)
+  - [Show Line Numbers in Oracle SQL Developer](#show-line-numbers-in-oracle-sql-developer)
+  - [Create User](#create-user)
+  - [VARCHAR to BLOB](#varchar-to-blob)
+  - [Update BLOB via Query](#update-blob-via-query)
+- [Conclusion](#conclusion)
+
 ## Some Points
 
 - There is **NO DATABASE NAME**, instead there is this `user` or `schema` wise separation.
