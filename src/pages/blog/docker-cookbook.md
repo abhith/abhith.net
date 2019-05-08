@@ -5,7 +5,7 @@ description: Some of the gotcha's related to Docker
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-10-28T18:35:00.000Z
-lastModificationTime: 2019-05-06T14:00:00.000Z
+lastModificationTime: 2019-05-08T10:00:00.000Z
 image: /img/frank-mckenna-252014-unsplash.jpg
 tags:
   - docker
@@ -23,6 +23,7 @@ This article is dedicated for gotcha's I experienced during Docker development, 
   - [4. COPY failed: CreateFile](#4-copy-failed-createfile)
   - [5. Force Docker for a clean build (not using cache)](#5-force-docker-for-a-clean-build-not-using-cache)
   - [6. Rename a Container](#6-rename-a-container)
+  - [7. $'\r': command not found](#7-r-command-not-found)
 - [Questions](#questions)
   - [1. Difference between docker `run` and `start`](#1-difference-between-docker-run-and-start)
 - [CLI](#cli)
@@ -119,6 +120,16 @@ Using the docker `rename` command.
 ```bash
 docker rename CONTAINER_ID my_new_container_name
 ```
+
+#### 7. $'\r': command not found
+
+This is occurred when I tried to run some `sh` file in my linux container. That `sh` file was saved in **CRLF** end of line sequence, changing it to **LF** solved the problem.
+
+If you wonder what is **End of line sequence**,
+
+> The End of Line (EOL) sequence ( 0x0D 0x0A , \r\n ) is actually two ASCII characters, a combination of the CR and LF characters. It moves the cursor both down to the next line and to the beginning of that line.
+
+If you are using **Vscode**, switching **EOL** is easy, on the bottom right corner, you can find the current EOL sequence of the editing file, by clicking on it, Vscode will present you a dropdown to choose from. Select the **LF** in this case, and save file.
 
 ### Questions
 
