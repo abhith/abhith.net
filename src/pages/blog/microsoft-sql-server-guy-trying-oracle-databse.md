@@ -6,6 +6,7 @@ description: >-
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-05-08T15:11:27.975Z
+lastModificationTime: 2019-05-09T09:22:00.000Z
 image: /img/logo-oracle-database.png
 tags:
   - sql-server
@@ -16,7 +17,7 @@ I have worked with **Microsoft SQL Server** for the past 7 years and still enjoy
 
 #### Table of Contents <!-- omit in toc -->
 
-- [Some Points](#some-points)
+- [Noticed Differences](#noticed-differences)
 - [Docs](#docs)
   - [Tablespaces](#tablespaces)
   - [VARCHAR vs VARCHAR2](#varchar-vs-varchar2)
@@ -27,10 +28,12 @@ I have worked with **Microsoft SQL Server** for the past 7 years and still enjoy
   - [Update BLOB via Query](#update-blob-via-query)
 - [Conclusion](#conclusion)
 
-## Some Points
+## Noticed Differences
 
 - There is **NO DATABASE NAME**, instead there is this `user` or `schema` wise separation.
 - Preferred IDE is **Oracle SQL Developer**
+- After executing query, you need to **commit** in order to retain the changes.
+- `SELECT TOP N` is not that easy compared to SQL Server.
 
 ## Docs
 
