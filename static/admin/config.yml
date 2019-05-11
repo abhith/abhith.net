@@ -24,12 +24,13 @@ collections:
       - {label: "Author URL", name: "authorURL", widget: "string", default: 'https://twitter.com/abhithrajan'}
       - {label: "Disqus", hint: 'Optional', name: "commentId", widget: "string", required: false}
       - {label: "Last Updated Date", hint: 'Optional', name: "lastModificationTime", widget: "datetime", required: false}
-  - name: "tag"
+  - name: "tags"
     label: "Tags"
     files:
       - file: "src/data/tags.json"
-        name: "tag"
+        name: "tags"
         label: "Tags"
+        widget: list
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Slug", name: "slug", widget: "string"}
