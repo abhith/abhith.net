@@ -1,0 +1,14 @@
+{
+  "title": "Tags",
+  "description": "See all the areas am interested in.",
+  "body": "All the tags mentioned here will be linked to my blog posts (for now). And will contain external resources in the future.",
+  "image": "/img/2017-08-11-hello-world.png",
+  "tags": [
+    {
+      "title": "Analytics",
+      "slug": "analytics",
+      "description": "Google Analytics (GA) is the one which we used in almost all the public facing websites. ",
+      "image": "/img/analytics.png"
+    }
+  ]
+}
