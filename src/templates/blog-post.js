@@ -33,9 +33,9 @@ export const BlogPostTemplate = ({
   return (
     <div>
       {helmet || ""}
-      <div class="container">
-        <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
-          <div class="h-100 tofront">
+      <div className="container">
+        <div className="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+          <div className="h-100 tofront">
             <div
               className={
                 image == null
@@ -50,34 +50,34 @@ export const BlogPostTemplate = ({
                     : `col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center`
                 }
               >
-                <p class="text-uppercase font-weight-bold">
+                <p className="text-uppercase font-weight-bold">
                   {tags && tags.length ? (
-                    <span class="taglist">
+                    <span className="taglist">
                       {tags.map(tag => (
-                        <>
+                        <React.Fragment key={tag}>
                           <Link
                             className="sscroll text-danger"
                             to={`/tags/${kebabCase(tag)}/`}
                           >
                             {tag}
                           </Link>{" "}
-                          <span class="sep">, </span>
-                        </>
+                          <span className="sep">, </span>
+                        </React.Fragment>
                       ))}
                     </span>
                   ) : null}
                 </p>
-                <h1 class="display-4 mb-4 article-headline">{title}</h1>
+                <h1 className="display-4 mb-4 article-headline">{title}</h1>
 
-                <div class="d-flex align-items-center">
+                <div className="d-flex align-items-center">
                   <img
-                    class="rounded-circle"
+                    className="rounded-circle"
                     src="/img/abhith-avatar.jpg"
                     alt="Abhith Rajan"
                     width="70"
                   />
 
-                  <small class="ml-3">
+                  <small className="ml-3">
                     {" "}
                     {author}{" "}
                     <span>
@@ -89,7 +89,7 @@ export const BlogPostTemplate = ({
                         Follow
                       </OutboundLink>
                     </span>
-                    <span class="text-muted d-block mt-1">
+                    <span className="text-muted d-block mt-1">
                       {date} &middot; {readingTime} &middot; Last Updated:{" "}
                       <time dateTime={lastModifiedTime}>
                         {lastModifiedTimeString}
@@ -100,25 +100,29 @@ export const BlogPostTemplate = ({
               </div>
 
               {image && (
-                <div class="col-md-6 pr-0 align-self-center">
-                  <Img class="rounded" fluid={image.childImageSharp.fluid} />
+                <div className="col-md-6 pr-0 align-self-center">
+                  <Img
+                    className="rounded"
+                    fluid={image.childImageSharp.fluid}
+                  />
                 </div>
               )}
             </div>
           </div>
         </div>
       </div>
-      <div class="container-lg pt-4 pb-4">
-        <div class="row justify-content-center">
-          <div class="col-md-12 col-lg-8">
+      <div className="container-lg pt-4 pb-4">
+        <div className="row justify-content-center">
+          <div className="col-md-12 col-lg-8">
             <PostContent content={content} className={`article-post`} />
             {tags && tags.length ? (
-              <div class="mb-4">
-                <span class="taglist">
+              <div className="mb-4">
+                <span className="taglist">
                   {tags.map(tag => (
                     <Link
                       className="sscroll btn btn-light btn-sm font-weight-bold"
                       to={`/tags/${kebabCase(tag)}/`}
+                      key={tag}
                     >
                       {tag}
                     </Link>
@@ -127,17 +131,17 @@ export const BlogPostTemplate = ({
               </div>
             ) : null}
 
-            <div class="row mt-5">
-              <div class="col-md-2 align-self-center">
+            <div className="row mt-5">
+              <div className="col-md-2 align-self-center">
                 <img
-                  class="rounded-circle"
+                  className="rounded-circle"
                   src="/img/abhith-avatar.jpg"
                   alt="Abhith Rajan"
                   width="90"
                 />
               </div>
-              <div class="col-md-10">
-                <h5 class="font-weight-bold">
+              <div className="col-md-10">
+                <h5 className="font-weight-bold">
                   Written by {author}{" "}
                   <span>
                     <OutboundLink
@@ -154,7 +158,7 @@ export const BlogPostTemplate = ({
                 delivering technology-based products and services.
               </div>
             </div>
-            <div id="comments" class="mt-5">
+            <div id="comments" className="mt-5">
               <DiscussionEmbed {...disqusConfig} />
             </div>
           </div>

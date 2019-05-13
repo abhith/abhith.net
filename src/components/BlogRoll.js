@@ -12,39 +12,39 @@ const BlogRoll = props => {
       {posts &&
         posts.map(({ node: post }) => (
           <div
-            class="mb-5 d-flex justify-content-between main-loop-card"
+            className="mb-5 d-flex justify-content-between main-loop-card"
             key={post.id}
           >
-            <div class="pr-3">
-              <h2 class="mb-1 h4 font-weight-bold">
+            <div className="pr-3">
+              <h2 className="mb-1 h4 font-weight-bold">
                 <Link className="text-dark" to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>
               </h2>
-              <p class="excerpt">{post.frontmatter.description}</p>
-              <small class="d-block text-muted">
+              <p className="excerpt">{post.frontmatter.description}</p>
+              <small className="d-block text-muted">
                 In{" "}
-                <span class="catlist">
+                <span className="catlist">
                   {post.frontmatter.tags && post.frontmatter.tags.length
                     ? post.frontmatter.tags.map(tag => (
-                        <>
+                        <React.Fragment key={tag}>
                           <Link
                             className="text-capitalize text-muted smoothscroll"
                             to={`/tags/${kebabCase(tag)}/`}
                           >
                             {tag}
                           </Link>
-                          <span class="sep">, </span>
-                        </>
+                          <span className="sep">, </span>
+                        </React.Fragment>
                       ))
                     : null}
                 </span>
               </small>
-              <small class="text-muted">
+              <small className="text-muted">
                 {post.frontmatter.date} &middot; {post.fields.readingTime.text}
               </small>
             </div>
-            <div class="col-md-3 pr-0 text-right">
+            <div className="col-md-3 pr-0 text-right">
               <Link to={`${post.fields.slug}`}>
                 <Img
                   className="w-100"

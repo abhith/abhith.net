@@ -11,13 +11,16 @@ function LatestPosts() {
         const latestPost = data.latestPost.edges;
         const recentPosts = data.recentPosts.edges;
         return (
-          <div class="container">
-            <div class="row remove-site-content-margin">
-              <div class="col-md-6">
+          <div className="container">
+            <div className="row remove-site-content-margin">
+              <div className="col-md-6">
                 {latestPost.map(({ node }) => {
                   const title = node.frontmatter.title;
                   return (
-                    <div class="card border-0 mb-4 box-shadow h-xl-300">
+                    <div
+                      className="card border-0 mb-4 box-shadow h-xl-300"
+                      key={node.fields.slug}
+                    >
                       <Link to={`${node.fields.slug}`}>
                         <Img
                           fluid={node.frontmatter.image.childImageSharp.fluid}
@@ -29,34 +32,37 @@ function LatestPosts() {
                           , height: '200px', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
                         }}></div> */}
                       </Link>
-                      <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                        <h2 class="h4 font-weight-bold">
-                          <Link class="text-dark" to={`${node.fields.slug}`}>
+                      <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
+                        <h2 className="h4 font-weight-bold">
+                          <Link
+                            className="text-dark"
+                            to={`${node.fields.slug}`}
+                          >
                             {title}
                           </Link>
                         </h2>
-                        <p class="excerpt">{node.excerpt}</p>
+                        <p className="excerpt">{node.excerpt}</p>
                         <div>
-                          <small class="d-block text-muted">
+                          <small className="d-block text-muted">
                             In{" "}
-                            <span class="catlist">
+                            <span className="catlist">
                               {node.frontmatter.tags &&
                               node.frontmatter.tags.length
                                 ? node.frontmatter.tags.map(tag => (
-                                    <>
+                                    <React.Fragment key={tag}>
                                       <Link
                                         className="text-capitalize text-muted smoothscroll"
                                         to={`/tags/${kebabCase(tag)}/`}
                                       >
                                         {tag}
                                       </Link>
-                                      <span class="sep">, </span>
-                                    </>
+                                      <span className="sep">, </span>
+                                    </React.Fragment>
                                   ))
                                 : null}
                             </span>{" "}
                           </small>
-                          <small class="text-muted">
+                          <small className="text-muted">
                             {node.frontmatter.date} &middot;{" "}
                             {node.fields.readingTime.text}
                           </small>
@@ -66,12 +72,15 @@ function LatestPosts() {
                   );
                 })}
               </div>
-              <div class="col-md-6">
+              <div className="col-md-6">
                 {recentPosts.map(({ node }) => {
                   const title = node.frontmatter.title;
                   return (
-                    <div class="mb-3 d-flex align-items-center">
-                      <div class="col-md-4">
+                    <div
+                      className="mb-3 d-flex align-items-center"
+                      key={node.fields.slug}
+                    >
+                      <div className="col-md-4">
                         <Link to={`${node.fields.slug}`}>
                           <Img
                             className="w-100"
@@ -80,31 +89,34 @@ function LatestPosts() {
                         </Link>
                       </div>
                       <div>
-                        <h2 class="mb-2 h6 font-weight-bold">
-                          <Link class="text-dark" to={`${node.fields.slug}`}>
+                        <h2 className="mb-2 h6 font-weight-bold">
+                          <Link
+                            className="text-dark"
+                            to={`${node.fields.slug}`}
+                          >
                             {title}
                           </Link>
                         </h2>
-                        <small class="d-block text-muted">
+                        <small className="d-block text-muted">
                           In{" "}
-                          <span class="catlist">
+                          <span className="catlist">
                             {node.frontmatter.tags &&
                             node.frontmatter.tags.length
                               ? node.frontmatter.tags.map(tag => (
-                                  <>
+                                  <React.Fragment key={tag}>
                                     <Link
                                       className="text-capitalize text-muted smoothscroll"
                                       to={`/tags/${kebabCase(tag)}/`}
                                     >
                                       {tag}
                                     </Link>
-                                    <span class="sep">, </span>
-                                  </>
+                                    <span className="sep">, </span>
+                                  </React.Fragment>
                                 ))
                               : null}
                           </span>
                         </small>
-                        <small class="text-muted">
+                        <small className="text-muted">
                           {node.frontmatter.date} &middot;{" "}
                           {node.fields.readingTime.text}
                         </small>

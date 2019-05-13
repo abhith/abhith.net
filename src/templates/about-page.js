@@ -14,15 +14,15 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div class="container">
+    <div className="container">
       <Helmet titleTemplate="%s | Abhith Rajan">
         <title>{`${title}`}</title>
         <meta name="description" content={`${description}`} />
       </Helmet>
-      <h3 class="font-weight-bold spanborder">
+      <h3 className="font-weight-bold spanborder">
         <span> {title}</span>
       </h3>
-      <div class="page-content">
+      <div className="page-content">
         <PageContent className="content" content={content} />
       </div>
     </div>

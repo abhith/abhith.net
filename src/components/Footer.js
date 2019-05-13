@@ -5,11 +5,11 @@ import { FaStar } from "react-icons/fa";
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer class="bg-white border-top p-3 text-muted small">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
+      <footer className="bg-white border-top p-3 text-muted small">
+        <div className="container">
+          <div className="row align-items-center justify-content-between">
             <div>
-              <span class="navbar-brand mr-2 mb-0">
+              <span className="navbar-brand mr-2 mb-0">
                 <strong>Abhith</strong>
               </span>
               <span>Copyright © 2019.</span>
