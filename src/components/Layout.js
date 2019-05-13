@@ -8,7 +8,7 @@ import useSiteMetadata from "./SiteMetadata";
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div>
+    <>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -58,7 +58,7 @@ const TemplateWrapper = ({ children }) => {
         {children}
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

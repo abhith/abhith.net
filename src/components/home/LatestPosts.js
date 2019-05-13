@@ -11,92 +11,40 @@ function LatestPosts() {
         const latestPost = data.latestPost.edges;
         const recentPosts = data.recentPosts.edges;
         return (
-          <div className="container">
-            <div className="row remove-site-content-margin">
-              <div className="col-md-6">
-                {latestPost.map(({ node }) => {
-                  const title = node.frontmatter.title;
-                  return (
-                    <div
-                      className="card border-0 mb-4 box-shadow h-xl-300"
-                      key={node.fields.slug}
-                    >
-                      <Link to={`${node.fields.slug}`}>
-                        <Img
-                          fluid={node.frontmatter.image.childImageSharp.fluid}
-                        />
-                        {/* <div style={{
+          <div className="row remove-site-content-margin">
+            <div className="col-md-6">
+              {latestPost.map(({ node }) => {
+                const title = node.frontmatter.title;
+                return (
+                  <div
+                    className="card border-0 mb-4 box-shadow"
+                    key={node.fields.slug}
+                  >
+                    <Link to={`${node.fields.slug}`}>
+                      {/* <Img
+                        fluid={node.frontmatter.image.childImageSharp.fluid}
+                      /> */}
+                      <div
+                        style={{
                           backgroundImage: `url(${
-                            !!node.frontmatter.image.childImageSharp ? node.frontmatter.image.childImageSharp.fluid.src : node.frontmatter.image
-                            })`
-                          , height: '200px', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
-                        }}></div> */}
-                      </Link>
-                      <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                        <h2 className="h4 font-weight-bold">
-                          <Link
-                            className="text-dark"
-                            to={`${node.fields.slug}`}
-                          >
-                            {title}
-                          </Link>
-                        </h2>
-                        <p className="excerpt">{node.excerpt}</p>
-                        <div>
-                          <small className="d-block text-muted">
-                            In{" "}
-                            <span className="catlist">
-                              {node.frontmatter.tags &&
-                              node.frontmatter.tags.length
-                                ? node.frontmatter.tags.map(tag => (
-                                    <React.Fragment key={tag}>
-                                      <Link
-                                        className="text-capitalize text-muted smoothscroll"
-                                        to={`/tags/${kebabCase(tag)}/`}
-                                      >
-                                        {tag}
-                                      </Link>
-                                      <span className="sep">, </span>
-                                    </React.Fragment>
-                                  ))
-                                : null}
-                            </span>{" "}
-                          </small>
-                          <small className="text-muted">
-                            {node.frontmatter.date} &middot;{" "}
-                            {node.fields.readingTime.text}
-                          </small>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="col-md-6">
-                {recentPosts.map(({ node }) => {
-                  const title = node.frontmatter.title;
-                  return (
-                    <div
-                      className="mb-3 d-flex align-items-center"
-                      key={node.fields.slug}
-                    >
-                      <div className="col-md-4">
-                        <Link to={`${node.fields.slug}`}>
-                          <Img
-                            className="w-100"
-                            fluid={node.frontmatter.image.childImageSharp.fluid}
-                          />
+                            !!node.frontmatter.image.childImageSharp
+                              ? node.frontmatter.image.childImageSharp.fluid.src
+                              : node.frontmatter.image
+                          })`,
+                          height: "200px",
+                          backgroundSize: "cover",
+                          backgroundRepeat: "no-repeat"
+                        }}
+                      />
+                    </Link>
+                    <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
+                      <h2 className="h4 font-weight-bold">
+                        <Link className="text-dark" to={`${node.fields.slug}`}>
+                          {title}
                         </Link>
-                      </div>
+                      </h2>
+                      <p className="excerpt">{node.excerpt}</p>
                       <div>
-                        <h2 className="mb-2 h6 font-weight-bold">
-                          <Link
-                            className="text-dark"
-                            to={`${node.fields.slug}`}
-                          >
-                            {title}
-                          </Link>
-                        </h2>
                         <small className="d-block text-muted">
                           In{" "}
                           <span className="catlist">
@@ -114,7 +62,7 @@ function LatestPosts() {
                                   </React.Fragment>
                                 ))
                               : null}
-                          </span>
+                          </span>{" "}
                         </small>
                         <small className="text-muted">
                           {node.frontmatter.date} &middot;{" "}
@@ -122,9 +70,58 @@ function LatestPosts() {
                         </small>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="col-md-6">
+              {recentPosts.map(({ node }) => {
+                const title = node.frontmatter.title;
+                return (
+                  <div
+                    className="mb-3 d-flex align-items-center"
+                    key={node.fields.slug}
+                  >
+                    <div className="col-md-4">
+                      <Link to={`${node.fields.slug}`}>
+                        <Img
+                          className="w-100"
+                          fluid={node.frontmatter.image.childImageSharp.fluid}
+                        />
+                      </Link>
+                    </div>
+                    <div>
+                      <h2 className="mb-2 h6 font-weight-bold">
+                        <Link className="text-dark" to={`${node.fields.slug}`}>
+                          {title}
+                        </Link>
+                      </h2>
+                      <small className="d-block text-muted">
+                        In{" "}
+                        <span className="catlist">
+                          {node.frontmatter.tags && node.frontmatter.tags.length
+                            ? node.frontmatter.tags.map(tag => (
+                                <React.Fragment key={tag}>
+                                  <Link
+                                    className="text-capitalize text-muted smoothscroll"
+                                    to={`/tags/${kebabCase(tag)}/`}
+                                  >
+                                    {tag}
+                                  </Link>
+                                  <span className="sep">, </span>
+                                </React.Fragment>
+                              ))
+                            : null}
+                        </span>
+                      </small>
+                      <small className="text-muted">
+                        {node.frontmatter.date} &middot;{" "}
+                        {node.fields.readingTime.text}
+                      </small>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         );
@@ -157,7 +154,7 @@ export const query = graphql`
             tags
             image {
               childImageSharp {
-                fluid(maxWidth: 505, maxHeight: 200) {
+                fluid(maxWidth: 2048, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
