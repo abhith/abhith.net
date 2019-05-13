@@ -39,9 +39,9 @@ const Navbar = class extends React.Component {
     return (
       <nav
         id="MagicMenu"
-        class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top"
+        className="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top"
       >
-        <div class="container">
+        <div className="container">
           <Link to="/" className="navbar-brand">
             <strong>Abhith</strong>
           </Link>
@@ -64,18 +64,18 @@ const Navbar = class extends React.Component {
             }`}
             id="navbarColor02"
           >
-            <ul class="navbar-nav mr-auto d-flex align-items-center">
-              <li class="nav-item">
+            <ul className="navbar-nav mr-auto d-flex align-items-center">
+              <li className="nav-item">
                 <Link to="/" className="nav-link">
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link to="/about" className="nav-link">
                   About
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link to="/blog" className="nav-link">
                   Blog
                 </Link>
@@ -85,7 +85,7 @@ const Navbar = class extends React.Component {
                   Contact
                 </a>
               </li> */}
-              <li class="nav-item">
+              <li className="nav-item">
                 <OutboundLink
                   className="nav-link"
                   href="https://www.buymeacoffee.com/abhith"
@@ -95,21 +95,21 @@ const Navbar = class extends React.Component {
                 </OutboundLink>
               </li>
             </ul>
-            <ul class="navbar-nav ml-auto d-flex align-items-center">
+            {/* <ul className="navbar-nav ml-auto d-flex align-items-center">
               <form
-                class="bd-search hidden-sm-down"
+                className="bd-search hidden-sm-down"
                 // onSubmit="return lunr_search(document.getElementById('lunrsearch').value);"
               >
                 <input
                   type="text"
-                  class="form-control text-small"
+                  className="form-control text-small"
                   id="lunrsearch"
                   name="q"
                   value=""
                   placeholder="Type keyword and enter..."
                 />
               </form>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </nav>
