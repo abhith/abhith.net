@@ -91,7 +91,7 @@ export const BlogPostTemplate = ({
                     </span>
                     <span class="text-muted d-block mt-1">
                       {date} &middot; {readingTime} &middot; Last Updated:{" "}
-                      <time datetime={lastModifiedTime}>
+                      <time dateTime={lastModifiedTime}>
                         {lastModifiedTimeString}
                       </time>
                     </span>
