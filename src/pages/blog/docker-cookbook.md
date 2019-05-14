@@ -6,7 +6,7 @@ description: >-
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-10-28T18:35:00.000Z
-lastModificationTime: 2019-05-08T14:42:00.000Z
+lastModificationTime: 2019-05-14T14:42:00.000Z
 image: /img/frank-mckenna-252014-unsplash.jpg
 tags:
   - docker
@@ -35,6 +35,7 @@ This article is dedicated for things I experienced during Docker development, pl
     - [Force `docker-compose` to build from scratch, no cache](#force-docker-compose-to-build-from-scratch-no-cache)
     - [Force to build the images even when not needed](#force-to-build-the-images-even-when-not-needed)
     - [Run multiple containers of the same image](#run-multiple-containers-of-the-same-image)
+    - [Build single container using docker-compose](#build-single-container-using-docker-compose)
 - [External Resources](#external-resources)
 
 ### Problems
@@ -192,7 +193,15 @@ docker-compose up --build
 docker-compose up --scale <SERVICE_NAME>=n
 ```
 
-Replace the `SERVICE_NAME` with the appropriate service listed in the **docker-compose.yml** and `n` with the number of containers you want, in order to create that number of containers of that service.
+Replace the `<SERVICE_NAME>` with the appropriate service listed in the **docker-compose.yml** and `n` with the number of containers you want, in order to create that number of containers of that service.
+
+##### Build single container using docker-compose
+
+```bash
+docker-compose build <SERVICE_NAME>
+```
+
+Replace the `<SERVICE_NAME>` with the appropriate service listed in the **docker-compose.yml**.
 
 ### External Resources
 
