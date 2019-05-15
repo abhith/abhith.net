@@ -5660,13 +5660,14 @@ fuzzy@^0.1.1:
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
   integrity sha1-THbsL/CsGjap3M+aAN+GIweNTtg=
 
-gatsby-background-image@^0.5.9:
-  version "0.5.9"
-  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.5.9.tgz#47a438fb967786d0ed99b86a3656e80c7c53fea2"
-  integrity sha512-Q72kTuyEVM52vgsyfA/FKWR8lCaa9a58uVS3cswscIvaTinFQe8M1HuajVw6tIvg+Gk9lPR3geWASZGKMNbLVg==
+gatsby-background-image@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.6.0.tgz#6ceeeeafe5548034e797d4e9a60fc1925805f870"
+  integrity sha512-VfCV6iAGsGDyG4nGPLBwsvsdedYcrTKGx+p7FgfQyGf1cCEuZ9xe07gbuTGuuNlWm1NuQVBJQf9KnD1PZPSkMw==
   dependencies:
     "@babel/runtime" "^7.4.4"
     global "^4.3.2"
+    npm-run-all "^4.1.5"
     prop-types "^15.7.2"
 
 gatsby-cli@^2.5.13:
