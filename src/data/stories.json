@@ -3,5 +3,17 @@
   "description": "Stories which I find interesting.",
   "body": "I like to stay updated about the tech stacks. How I achieve that? READING, READING, READING...",
   "image": "/img/brett-jordan-1376647-unsplash.jpg",
-  "lastModificationTime": "2019-05-15T16:12:08.052Z"
+  "lastModificationTime": "2019-05-15T16:12:08.052Z",
+  "stories": [
+    {
+      "title": "Little great things about Visual Studio 2019 | The Visual Studio Blog",
+      "url": "https://devblogs.microsoft.com/visualstudio/little-great-things-about-visual-studio-2019/",
+      "description": "A few days ago, we announced the general availability of Visual Studio 2019. But I’ve been using Visual Studio 2019 exclusively since the first internal build – long before the release of Preview 1 in December of 2018. During this time,",
+      "image": "http://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2019/04/git-pull.png",
+      "date": "2019-05-15T18:30:28.263Z",
+      "tags": [
+        "visual-studio"
+      ]
+    }
+  ]
 }
