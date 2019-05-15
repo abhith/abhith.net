@@ -51,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og-image.jpg" />
+        <meta property="og:image" content="/img/abhith-avatar.jpg" />
       </Helmet>
       <Navbar />
       <main role="main" className="site-content">
