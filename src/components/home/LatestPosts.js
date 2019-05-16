@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 import { kebabCase } from "lodash";
+import BackgroundImage from "gatsby-background-image";
 
 function LatestPosts() {
   return (
@@ -21,20 +22,10 @@ function LatestPosts() {
                     key={node.fields.slug}
                   >
                     <Link to={`${node.fields.slug}`}>
-                      {/* <Img
+                      <BackgroundImage
+                        Tag="div"
+                        className={`img-bg`}
                         fluid={node.frontmatter.image.childImageSharp.fluid}
-                      /> */}
-                      <div
-                        style={{
-                          backgroundImage: `url(${
-                            !!node.frontmatter.image.childImageSharp
-                              ? node.frontmatter.image.childImageSharp.fluid.src
-                              : node.frontmatter.image
-                          })`,
-                          height: "200px",
-                          backgroundSize: "cover",
-                          backgroundRepeat: "no-repeat"
-                        }}
                       />
                     </Link>
                     <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
@@ -155,7 +146,7 @@ export const query = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -184,8 +175,8 @@ export const query = graphql`
             tags
             image {
               childImageSharp {
-                fluid(maxWidth: 138, maxHeight: 92, quality: 100) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
