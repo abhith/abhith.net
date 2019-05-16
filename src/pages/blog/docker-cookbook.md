@@ -6,14 +6,14 @@ description: >-
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-10-28T18:35:00.000Z
-lastModificationTime: 2019-05-14T14:42:00.000Z
+lastModificationTime: 2019-05-16T14:42:00.000Z
 image: /img/frank-mckenna-252014-unsplash.jpg
 tags:
   - docker
   - cookbook
 ---
 
-This article is dedicated for things I experienced during Docker development, plus some routine stuffs related to **Docker** development and some helpful external resources.
+This article is my own reference for Docker development, contains solutions for problems I have faced while working with **Docker** and some helpful external resources.
 
 #### Table of Contents <!-- omit in toc -->
 
@@ -26,6 +26,7 @@ This article is dedicated for things I experienced during Docker development, pl
   - [6. Rename a Container](#6-rename-a-container)
   - [7. $'\r': command not found](#7-r-command-not-found)
   - [8. Copy docker image from one host another](#8-copy-docker-image-from-one-host-another)
+  - [9. Dotnet core build error when building docker image - Missing Newtonsoft.Json](#9-dotnet-core-build-error-when-building-docker-image---missing-newtonsoftjson)
 - [Questions](#questions)
   - [1. Difference between docker `run` and `start`](#1-difference-between-docker-run-and-start)
 - [CLI](#cli)
@@ -147,6 +148,24 @@ The above will create an image_name.tar file in the path specified. Copy it to t
 ```bash
 docker load -i <path to image tar file>
 ```
+
+#### 9. Dotnet core build error when building docker image - Missing Newtonsoft.Json
+
+In my case, When used `JsonProperty` in a class,
+
+Visual Studio intellicode auto-filled,
+
+```cs
+using Newtonsoft.Json;
+```
+
+Then during `docker build`,
+
+> warning MSB3245: Could not resolve this reference. Could not locate the assembly "Newtonsoft.Json". Check to make sure the assembly exists on disk.
+
+When I checked, found out that the Visual Studio added an **Assembly Reference** to `Newtonsoft.Json` (you can find this by expanding **Dependencies** node in the solution explorer in Visual Studio). And I was using Linux images.
+
+So in order to solve this, I removed the **Assembly Reference**, and added nuget package `Newtonsoft.Json`, then the `docker build` was successful.
 
 ### Questions
 
