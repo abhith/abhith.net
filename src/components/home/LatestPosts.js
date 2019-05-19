@@ -24,7 +24,7 @@ function LatestPosts() {
                     <Link to={`${node.fields.slug}`}>
                       <BackgroundImage
                         Tag="div"
-                        className={`img-bg`}
+                        className={`img-bg topfirstimage`}
                         fluid={node.frontmatter.image.childImageSharp.fluid}
                       />
                     </Link>

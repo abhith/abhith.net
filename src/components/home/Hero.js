@@ -10,7 +10,7 @@ export default function Hero() {
         // console.log(data);
         const page = data.markdownRemark;
         return (
-          <div className="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mb-2rem bg-lightblue position-relative">
+          <div className="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
             <div className="pl-4 pr-0 h-100 tofront">
               <div className="row justify-content-between">
                 <div className="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
