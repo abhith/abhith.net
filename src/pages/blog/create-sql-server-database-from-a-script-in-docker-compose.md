@@ -5,8 +5,8 @@ description: >-
   Run a SQL Server container with database initialized from a script using docker-compose.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
-date: 2019-05-21T014:55:00.000Z
-image: /img/frank-mckenna-252014-unsplash.jpg
+date: 2019-05-21T14:55:00.000Z
+image: /img/chuttersnap-255210-unsplash.jpg
 tags:
   - docker
   - sql-server
