@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Analytics",
+    "slug": "analytics",
+    "description": "Google Analytics (GA) is the one which we used in almost all the public facing websites.",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
+    "title": "Asynchronous Programming",
+    "slug": "asynchronous-programming",
+    "description": "I tend to use Async - Await every where possible. Not just in C#, now a days in the JavaScript instead of the promises.",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
+    "title": "C#",
+    "slug": "c-sharp",
+    "description": "One of my favorite language.",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
+    "title": "Visual Studio",
+    "slug": "visual-studio",
+    "description": "I always loved to work with the latest and the greatest versions of Visual Studio. I started on VS 2008, now most of the time working with VS 2019.",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  }
+]
