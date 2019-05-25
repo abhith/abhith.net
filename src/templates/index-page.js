@@ -5,60 +5,41 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import LatestPosts from "../components/home/LatestPosts";
 import Hero from "../components/home/Hero";
+import StoriesRoll from "../components/StoriesRoll";
 
-export const IndexPageTemplate = ({
-  // image,
-  title
-  // heading,
-  // subheading,
-  // mainpitch,
-  // description,
-  // intro,
-}) => (
+export const IndexPageTemplate = ({ title, stories }) => (
   <div className="container">
     <LatestPosts />
     <Hero />
-    {/* <div
-        className="full-width-image margin-top-0"
-        style={{
-          backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
-          backgroundPosition: `top left`,
-          backgroundAttachment: `fixed`,
-        }}
-      >
-        
-         */}
+    <div className="row mt-3">
+      <div className="col-md-8 main-loop">
+        <h4 className="font-weight-bold spanborder">
+          <span>Recommended Stories</span>
+        </h4>
+        <StoriesRoll posts={stories} />
+        {/* <div className="mt-5" /> */}
+      </div>
+
+      <div className="col-md-4">
+        {/* {% include sidebar-featured.html %}     */}
+      </div>
+    </div>
   </div>
 );
 
 IndexPageTemplate.propTypes = {
-  // image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string
-  // heading: PropTypes.string,
-  // subheading: PropTypes.string,
-  // mainpitch: PropTypes.object,
-  // description: PropTypes.string,
-  // intro: PropTypes.shape({
-  //   blurbs: PropTypes.array,
-  // }),
+  title: PropTypes.string,
+  stories: PropTypes.array
 };
 
 const IndexPage = ({ data }) => {
-  // console.log(data);
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter } = data.homePage;
 
   return (
     <Layout>
       <IndexPageTemplate
-        // image={frontmatter.image}
         title={frontmatter.title}
-        // heading={frontmatter.heading}
-        // subheading={frontmatter.subheading}
-        // mainpitch={frontmatter.mainpitch}
-        // description={frontmatter.description}
-        // intro={frontmatter.intro}
+        stories={data.recommendedStories.edges}
       />
     </Layout>
   );
@@ -66,9 +47,10 @@ const IndexPage = ({ data }) => {
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
+    homePage: PropTypes.shape({
       frontmatter: PropTypes.object
-    })
+    }),
+    recommendedStories: PropTypes.object
   })
 };
 
@@ -76,9 +58,27 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    homePage: markdownRemark(
+      frontmatter: { templateKey: { eq: "index-page" } }
+    ) {
       frontmatter {
         title
+      }
+    }
+    recommendedStories: allStoriesJson(
+      limit: 5
+      sort: { fields: [date], order: DESC }
+    ) {
+      edges {
+        node {
+          title
+          date(formatString: "MMM DD, YYYY")
+          description
+          id
+          image
+          tags
+          url
+        }
       }
     }
   }
