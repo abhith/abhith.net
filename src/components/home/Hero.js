@@ -25,6 +25,7 @@ export default function Hero() {
                   <PreviewCompatibleImage
                     imageInfo={{
                       image: page.frontmatter.image,
+                      className: `center-image`,
                       alt: `${page.frontmatter.heading}`
                     }}
                   />
