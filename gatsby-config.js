@@ -33,6 +33,21 @@ module.exports = {
         name: "images"
       }
     },
+    "gatsby-transformer-json",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data/stories`,
+        name: "stories"
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data/tags`,
+        name: "tags"
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -84,7 +99,7 @@ module.exports = {
               // setting this to '{ sh: "bash" }' will let you use
               // the language "sh" which will highlight using the
               // bash highlighter.
-              aliases: {},
+              aliases: { sh: "bash", cs: "csharp" },
               // This toggles the display of line numbers globally alongside the code.
               // To use it, add the following line in src/layouts/index.js
               // right after importing the prism color scheme:
