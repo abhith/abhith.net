@@ -27,6 +27,7 @@ see the documentation here:https://our.umbraco.org/documentation/Reference/Routi
  ```
 
 And my Web.Release.config looked like this,
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
  
@@ -60,7 +61,9 @@ And my Web.Release.config looked like this,
   </system.web>
 </configuration>
 ```
+
 Now I have to add a rule which redirects all non-www requests to www route. I accomplished the same by modifying the Web.config to,
+
 ```xml
 <system.webServer>
 ....
@@ -71,7 +74,9 @@ see the documentation here:https://our.umbraco.org/documentation/Reference/Routi
     </rewrite>
 </system.webServer>
 ```
+
  And my Web.Release.Config to,
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
  
@@ -119,10 +124,13 @@ see the documentation here:https://our.umbraco.org/documentation/Reference/Routi
   </system.webServer>
 </configuration>
 ```
+
 Noticed the xdt:Transform="Insert" in the line,
-```
+
+```xml
 <rule name="Redirect Non WWW" stopProcessing="true" xdt:Transform="Insert">
 ```
+
 Which will add the rule to the Web.config automatically during publishing. 
 
 This article is part of my daily google series. And this is the very first post in this category.
