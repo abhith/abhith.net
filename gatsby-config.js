@@ -37,15 +37,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/data/stories`,
-        name: "stories"
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/data/tags`,
-        name: "tags"
+        path: `${__dirname}/src/data`,
+        name: "data"
       }
     },
     "gatsby-plugin-sharp",
