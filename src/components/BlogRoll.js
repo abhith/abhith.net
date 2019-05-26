@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { kebabCase } from "lodash";
 import Img from "gatsby-image";
+import Tags from "./Tags";
 
 const BlogRoll = props => {
   const { posts } = props;
@@ -23,22 +23,7 @@ const BlogRoll = props => {
               </h2>
               <p className="excerpt">{post.frontmatter.description}</p>
               <small className="d-block text-muted">
-                In{" "}
-                <span className="catlist">
-                  {post.frontmatter.tags && post.frontmatter.tags.length
-                    ? post.frontmatter.tags.map(tag => (
-                        <React.Fragment key={tag}>
-                          <Link
-                            className="text-capitalize text-muted smoothscroll"
-                            to={`/tags/${kebabCase(tag)}/`}
-                          >
-                            {tag}
-                          </Link>
-                          <span className="sep">, </span>
-                        </React.Fragment>
-                      ))
-                    : null}
-                </span>
+                In <Tags tags={post.frontmatter.tags} />
               </small>
               <small className="text-muted">
                 {post.frontmatter.date} &middot; {post.fields.readingTime.text}
