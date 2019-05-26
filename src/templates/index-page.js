@@ -6,8 +6,9 @@ import Layout from "../components/Layout";
 import LatestPosts from "../components/home/LatestPosts";
 import Hero from "../components/home/Hero";
 import StoriesRoll from "../components/StoriesRoll";
+import FeaturedSidebar from "../components/FeaturedSidebar";
 
-export const IndexPageTemplate = ({ title, stories }) => (
+export const IndexPageTemplate = ({ title, stories, featured }) => (
   <div className="container">
     <LatestPosts />
     <Hero />
@@ -21,7 +22,7 @@ export const IndexPageTemplate = ({ title, stories }) => (
       </div>
 
       <div className="col-md-4">
-        {/* {% include sidebar-featured.html %}     */}
+        <FeaturedSidebar items={featured} />
       </div>
     </div>
   </div>
@@ -29,7 +30,8 @@ export const IndexPageTemplate = ({ title, stories }) => (
 
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
-  stories: PropTypes.array
+  stories: PropTypes.array,
+  featured: PropTypes.array
 };
 
 const IndexPage = ({ data }) => {
@@ -40,6 +42,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         title={frontmatter.title}
         stories={data.recommendedStories.edges}
+        featured={data.featured.edges}
       />
     </Layout>
   );
@@ -50,7 +53,8 @@ IndexPage.propTypes = {
     homePage: PropTypes.shape({
       frontmatter: PropTypes.object
     }),
-    recommendedStories: PropTypes.object
+    recommendedStories: PropTypes.object,
+    featured: PropTypes.object
   })
 };
 
@@ -76,6 +80,16 @@ export const pageQuery = graphql`
           description
           id
           image
+          tags
+          url
+        }
+      }
+    }
+    featured: allServicesJson(limit: 5, sort: { fields: [date], order: DESC }) {
+      edges {
+        node {
+          title
+          id
           tags
           url
         }
