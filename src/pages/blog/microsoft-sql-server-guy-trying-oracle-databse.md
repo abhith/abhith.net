@@ -6,11 +6,12 @@ description: >-
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-05-08T15:11:27.975Z
-lastModificationTime: 2019-05-09T09:22:00.000Z
+lastModificationTime: 2019-05-26T14:38:00.000Z
 image: /img/logo-oracle-database.png
 tags:
   - sql-server
   - oracle-database
+  - cookbook
 ---
 
 I have worked with **Microsoft SQL Server** for the past 7 years and still enjoying working with **SQL Server**. Now I got a chance to explore **Oracle Database** and here is my experience.
@@ -26,6 +27,7 @@ I have worked with **Microsoft SQL Server** for the past 7 years and still enjoy
   - [Create User](#create-user)
   - [VARCHAR to BLOB](#varchar-to-blob)
   - [Update BLOB via Query](#update-blob-via-query)
+  - [Oracle localhost connection string for an ASP.NET CORE & Dapper project](#oracle-localhost-connection-string-for-an-aspnet-core--dapper-project)
 - [Conclusion](#conclusion)
 
 ## Noticed Differences
@@ -75,6 +77,19 @@ utl_raw.cast_to_raw('SOME_STRING')
 ```sql
 Update TABLE_NAME SET COL_NAME = utl_raw.cast_to_raw('SOME_STRING');
 ```
+
+### Oracle localhost connection string for an ASP.NET CORE & Dapper project
+
+```cs
+private readonly string ConnectionString = @"Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE))); user id = YOUR_USER_ID; Password= YOUR_USER_PASSWORD";
+
+using (var dbConn = new OracleConnection(ConnectionString))
+{
+  ...
+}
+```
+
+Replace **YOUR_USER_ID** and **YOUR_USER_PASSWORD** with appropriate values.
 
 ## Conclusion
 
