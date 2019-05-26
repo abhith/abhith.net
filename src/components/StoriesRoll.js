@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
-import { kebabCase } from "lodash";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import Tags from "./Tags";
 
 const StoriesRoll = props => {
   const { posts } = props;
@@ -14,7 +13,7 @@ const StoriesRoll = props => {
         posts.map(({ node: post }) => (
           <div
             className="mb-5 d-flex justify-content-between main-loop-card"
-            key={post.title}
+            key={post.id}
           >
             <div className="pr-3">
               <h2 className="mb-1 h4 font-weight-bold">
@@ -28,22 +27,7 @@ const StoriesRoll = props => {
               </h2>
               <p className="excerpt">{post.description}</p>
               <small className="d-block text-muted">
-                In{" "}
-                <span className="catlist">
-                  {post.tags && post.tags.length
-                    ? post.tags.map(tag => (
-                        <React.Fragment key={tag}>
-                          <Link
-                            className="text-capitalize text-muted smoothscroll"
-                            to={`/tags/${kebabCase(tag)}/`}
-                          >
-                            {tag}
-                          </Link>
-                          <span className="sep">, </span>
-                        </React.Fragment>
-                      ))
-                    : null}
-                </span>
+                In <Tags tags={post.tags} />
               </small>
               <small className="text-muted">{post.date}</small>
             </div>
