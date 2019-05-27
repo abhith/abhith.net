@@ -17,6 +17,10 @@ const Footer = class extends React.Component {
               <Link to="/privacy-policy" className="text-dark ml-1">
                 Privacy Policy
               </Link>
+              <span> |</span>
+              <Link to="/tags" className="text-dark ml-1">
+                Tags
+              </Link>
               <span> | </span>
               <OutboundLink
                 className="text-dark ml-1"
