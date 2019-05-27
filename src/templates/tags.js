@@ -7,7 +7,10 @@ import SEO from "../components/Seo";
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
-    const tag = this.props.pageContext.tag;
+    const tagDetails = this.props.data.tagDetails;
+
+    const tag =
+      tagDetails === null ? this.props.pageContext.tag : tagDetails.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? "" : "s"
@@ -15,18 +18,18 @@ class TagRoute extends React.Component {
     return (
       <Layout>
         <SEO title={tag} description={tagHeader} />
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8">
-              <h1 class="font-weight-bold title h6 text-uppercase mb-4">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <h1 className="font-weight-bold title h6 text-uppercase mb-4">
                 <span>Tags</span>
               </h1>
-              <h4 class="font-weight-bold spanborder text-capitalize">
+              <h4 className="font-weight-bold spanborder text-capitalize">
                 <span>{tag}</span>
               </h4>
               <BlogRoll posts={posts} />
             </div>
-            <div class="col-md-4">
+            <div className="col-md-4">
               {/* {% include sidebar-featured.html %}     */}
             </div>
           </div>
@@ -45,6 +48,13 @@ export const tagPageQuery = graphql`
         title
       }
     }
+    tagDetails: tagsJson(slug: { eq: $tag }) {
+      title
+      slug
+      description
+      id
+      image
+    }
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -54,6 +64,7 @@ export const tagPageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 186)
+          id
           fields {
             slug
             readingTime {
