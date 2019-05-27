@@ -5,7 +5,8 @@ module.exports = {
     title: "Abhith Rajan",
     description:
       "an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products.",
-    siteUrl: `https://www.abhith.net`
+    siteUrl: `https://www.abhith.net`,
+    author: `@AbhithRajan`
   },
   plugins: [
     "gatsby-plugin-react-helmet",

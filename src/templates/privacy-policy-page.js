@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 import Content, { HTMLContent } from "../components/Content";
-import Helmet from "react-helmet";
 
 export const PrivacyPolicyPageTemplate = ({
   title,
@@ -14,15 +14,13 @@ export const PrivacyPolicyPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div class="container">
-      <Helmet titleTemplate="%s | Abhith Rajan">
-        <title>{`${title}`}</title>
-        <meta name="description" content={`${description}`} />
-      </Helmet>
-      <h3 class="font-weight-bold spanborder">
+    <div className="container">
+      <SEO title={title} description={description} />
+
+      <h3 className="font-weight-bold spanborder">
         <span> {title}</span>
       </h3>
-      <div class="page-content">
+      <div className="page-content">
         <PageContent className="content" content={content} />
       </div>
     </div>

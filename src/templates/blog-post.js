@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
-import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import SEO from "../components/Seo";
 import Img from "gatsby-image";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { DiscussionEmbed } from "disqus-react";
@@ -16,7 +16,6 @@ export const BlogPostTemplate = ({
   image,
   tags,
   title,
-  helmet,
   date,
   author,
   authorURL,
@@ -32,7 +31,11 @@ export const BlogPostTemplate = ({
   };
   return (
     <div>
-      {helmet || ""}
+      <SEO
+        title={title}
+        description={description}
+        image={image.childImageSharp.fluid.src}
+      />
       <div className="container">
         <div className="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
           <div className="h-100 tofront">
@@ -173,7 +176,6 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
   image: PropTypes.object,
   date: PropTypes.string,
   author: PropTypes.string,
@@ -193,15 +195,6 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Abhith Rajan">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         image={post.frontmatter.image}

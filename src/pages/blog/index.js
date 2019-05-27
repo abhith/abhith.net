@@ -2,8 +2,8 @@ import React from "react";
 
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
+import SEO from "../../components/Seo";
 import { graphql } from "gatsby";
-import Helmet from "react-helmet";
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -12,13 +12,11 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <div className="container">
-          <Helmet titleTemplate="%s | Abhith Rajan">
-            <title>{`Blog`}</title>
-            <meta
-              name="description"
-              content={`Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More`}
-            />
-          </Helmet>
+          <SEO
+            title="Blog"
+            description="Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More"
+          />
+
           <div className="row mt-3">
             <div className="col-md-8 main-loop">
               <h4 className="font-weight-bold spanborder">

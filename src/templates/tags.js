@@ -1,21 +1,20 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
+import SEO from "../components/Seo";
 
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
     const tag = this.props.pageContext.tag;
-    const title = this.props.data.site.siteMetadata.title;
-    // const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    // const tagHeader = `${totalCount} post${
-    //   totalCount === 1 ? "" : "s"
-    // } tagged with “${tag}”`;
+    const totalCount = this.props.data.allMarkdownRemark.totalCount;
+    const tagHeader = `${totalCount} post${
+      totalCount === 1 ? "" : "s"
+    } tagged with “${tag}”`;
     return (
       <Layout>
-        <Helmet title={`${tag} | ${title}`} />
+        <SEO title={tag} description={tagHeader} />
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8">

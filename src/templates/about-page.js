@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import Helmet from "react-helmet";
+import SEO from "../components/Seo";
 
 export const AboutPageTemplate = ({
   title,
@@ -15,10 +15,7 @@ export const AboutPageTemplate = ({
 
   return (
     <div className="container">
-      <Helmet titleTemplate="%s | Abhith Rajan">
-        <title>{`${title}`}</title>
-        <meta name="description" content={`${description}`} />
-      </Helmet>
+      <SEO title={title} description={description} />
       <h3 className="font-weight-bold spanborder">
         <span> {title}</span>
       </h3>
