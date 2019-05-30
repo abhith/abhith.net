@@ -1,0 +1,182 @@
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+import SchemaOrg from "./SchemaOrg";
+
+// <link rel="canonical" href={url} />
+// <meta property="og:url" content={url} />
+// <meta property="fb:app_id" content={seo.social.fbAppID} />
+
+function SEO({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+  isBlogPost,
+  slug,
+  dateModified,
+  datePublished
+}) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author {
+              name
+            }
+            image
+            siteUrl
+            social {
+              twitter
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const metaDescription = description || site.siteMetadata.description;
+
+  const ogType = isBlogPost ? `article` : `website`;
+
+  const seoImage = image
+    ? `${site.siteMetadata.siteUrl}${image}`
+    : site.siteMetadata.image;
+
+  const url = slug
+    ? `${site.siteMetadata.siteUrl}${slug}`
+    : site.siteMetadata.siteUrl;
+
+  return (
+    <>
+      <Helmet
+        htmlAttributes={{
+          lang
+        }}
+        title={title}
+        titleTemplate={`%s | ${site.siteMetadata.title}`}
+        meta={[
+          {
+            name: `description`,
+            content: metaDescription
+          },
+          {
+            name: `image`,
+            content: seoImage
+          },
+          {
+            property: `og:title`,
+            content: title
+          },
+          {
+            property: `og:description`,
+            content: metaDescription
+          },
+          {
+            property: `og:type`,
+            content: ogType
+          },
+          {
+            property: `og:image`,
+            content: seoImage
+          },
+          {
+            name: `twitter:card`,
+            content: `summary_large_image`
+          },
+          {
+            name: `twitter:creator`,
+            content: site.siteMetadata.social.twitter
+          },
+          {
+            name: `twitter:title`,
+            content: title
+          },
+          {
+            name: `twitter:description`,
+            content: metaDescription
+          },
+          {
+            name: `twitter:image`,
+            content: seoImage
+          },
+          {
+            name: "msapplication-TileImage",
+            content: "/img/mstile-150x150.png"
+          }
+        ].concat(meta)}
+        link={[
+          {
+            rel: "icon",
+            type: "image/png",
+            href: "/img/favicon-16x16.png",
+            sizes: "16x16"
+          },
+          {
+            rel: "icon",
+            type: "image/png",
+            href: "/img/favicon-32x32.png",
+            sizes: "32x32"
+          },
+          {
+            rel: "icon",
+            type: "image/png",
+            sizes: "144x144",
+            href: "/img/android-chrome-144x144.png"
+          },
+          {
+            rel: "apple-touch-icon",
+            type: "image/png",
+            sizes: "180x180",
+            href: "/img/apple-touch-icon.png"
+          },
+          {
+            rel: "mask-icon",
+            href: "/img/safari-pinned-tab.svg",
+            color: "#ff4400"
+          }
+        ]}
+      />
+      <SchemaOrg
+        isBlogPost={isBlogPost}
+        url={url}
+        title={title}
+        image={seoImage}
+        description={metaDescription}
+        datePublished={datePublished}
+        dateModified={dateModified}
+        siteUrl={site.siteMetadata.siteUrl}
+        author={site.siteMetadata.author}
+        defaultTitle={site.siteMetadata.title}
+      />
+    </>
+  );
+}
+
+SEO.defaultProps = {
+  isBlogPost: false,
+  lang: `en`,
+  meta: [],
+  description: ``,
+  image: ``,
+  slug: ``,
+  date: ``
+};
+
+SEO.propTypes = {
+  isBlogPost: PropTypes.bool,
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  slug: PropTypes.string,
+  date: PropTypes.string
+};
+
+export default SEO;

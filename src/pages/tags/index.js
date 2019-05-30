@@ -2,7 +2,7 @@ import React from "react";
 import { kebabCase } from "lodash";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
-import SEO from "../../components/Seo";
+import SEO from "../../components/seo/SEO";
 
 const TagsPage = ({
   data: {
@@ -11,7 +11,11 @@ const TagsPage = ({
 }) => (
   <Layout>
     <section className="section">
-      <SEO title="Tags" description="Summary of all the tags on abhith.net" />
+      <SEO
+        title="Tags"
+        description="Summary of all the tags on abhith.net"
+        slug="/tags"
+      />
 
       <div className="container content">
         <div className="columns">

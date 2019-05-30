@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
-import SEO from "../../components/Seo";
+import SEO from "../../components/seo/SEO";
 import { graphql } from "gatsby";
 
 export default class BlogIndexPage extends React.Component {
@@ -15,6 +15,7 @@ export default class BlogIndexPage extends React.Component {
           <SEO
             title="Blog"
             description="Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More"
+            slug="\blog"
           />
 
           <div className="row mt-3">

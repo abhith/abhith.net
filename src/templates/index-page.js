@@ -7,9 +7,11 @@ import LatestPosts from "../components/home/LatestPosts";
 import Hero from "../components/home/Hero";
 import StoriesRoll from "../components/StoriesRoll";
 import FeaturedSidebar from "../components/FeaturedSidebar";
+import SEO from "../components/seo/SEO";
 
 export const IndexPageTemplate = ({ title, stories, featured }) => (
   <div className="container">
+    <SEO title="Full Stack Developer" />
     <LatestPosts />
     <Hero />
     <div className="row mt-3">

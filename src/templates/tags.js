@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
-import SEO from "../components/Seo";
+import SEO from "../components/seo/SEO";
 
 class TagRoute extends React.Component {
   render() {
@@ -17,7 +17,11 @@ class TagRoute extends React.Component {
     } tagged with “${tag}”`;
     return (
       <Layout>
-        <SEO title={tag} description={tagHeader} />
+        <SEO
+          title={tag}
+          description={tagHeader}
+          slug={`\\tags\\${this.props.pageContext.tag}`}
+        />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">

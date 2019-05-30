@@ -4,7 +4,7 @@ import { kebabCase } from "lodash";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import SEO from "../components/Seo";
+import SEO from "../components/seo/SEO";
 import Img from "gatsby-image";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { DiscussionEmbed } from "disqus-react";
@@ -18,11 +18,13 @@ export const BlogPostTemplate = ({
   title,
   date,
   author,
-  authorURL,
   readingTime,
   commentId,
   lastModifiedTime,
-  lastModifiedTimeString
+  lastModifiedTimeString,
+  dateModifiedSeoFormat,
+  datePublishedSeoFormat,
+  slug
 }) => {
   const PostContent = contentComponent || Content;
   const disqusConfig = {
@@ -35,6 +37,10 @@ export const BlogPostTemplate = ({
         title={title}
         description={description}
         image={image.childImageSharp.fluid.src}
+        isBlogPost={true}
+        slug={slug}
+        dateModified={dateModifiedSeoFormat}
+        datePublished={datePublishedSeoFormat}
       />
       <div className="container">
         <div className="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
@@ -75,19 +81,18 @@ export const BlogPostTemplate = ({
                 <div className="d-flex align-items-center">
                   <img
                     className="rounded-circle"
-                    src="/img/abhith-avatar.jpg"
-                    alt="Abhith Rajan"
+                    src={author.image}
+                    alt={author.name}
                     width="70"
                   />
-
                   <small className="ml-3">
                     {" "}
-                    {author}{" "}
+                    {author.name}{" "}
                     <span>
                       <OutboundLink
                         target="_blank"
                         className="btn btn-outline-success btn-sm btn-round ml-1"
-                        href={authorURL}
+                        href={author.url}
                       >
                         Follow
                       </OutboundLink>
@@ -138,27 +143,25 @@ export const BlogPostTemplate = ({
               <div className="col-md-2 align-self-center">
                 <img
                   className="rounded-circle"
-                  src="/img/abhith-avatar.jpg"
-                  alt="Abhith Rajan"
+                  src={author.image}
+                  alt={author.name}
                   width="90"
                 />
               </div>
               <div className="col-md-10">
                 <h5 className="font-weight-bold">
-                  Written by {author}{" "}
+                  Written by {author.name}{" "}
                   <span>
                     <OutboundLink
                       target="_blank"
                       className="btn btn-outline-success btn-sm btn-round ml-2"
-                      href={authorURL}
+                      href={author.url}
                     >
                       Follow
                     </OutboundLink>
                   </span>
                 </h5>
-                Abhith Rajan is an aspiring software engineer with more than 6
-                years of experience and proven successful track record of
-                delivering technology-based products and services.
+                {author.minibio}
               </div>
             </div>
             <div id="comments" className="mt-5">
@@ -176,14 +179,16 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  slug: PropTypes.string,
   image: PropTypes.object,
   date: PropTypes.string,
-  author: PropTypes.string,
-  authorURL: PropTypes.string,
+  author: PropTypes.object,
   readingTime: PropTypes.string,
   commentId: PropTypes.string,
   lastModifiedTime: PropTypes.string,
-  lastModifiedTimeString: PropTypes.string
+  lastModifiedTimeString: PropTypes.string,
+  dateModifiedSeoFormat: PropTypes.string,
+  datePublishedSeoFormat: PropTypes.string
 };
 
 const BlogPost = ({ data }) => {
@@ -193,14 +198,14 @@ const BlogPost = ({ data }) => {
     <Layout>
       <BlogPostTemplate
         content={post.html}
+        slug={post.fields.slug}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         image={post.frontmatter.image}
         date={post.frontmatter.dateString}
-        author={post.frontmatter.author}
-        authorURL={post.frontmatter.authorURL}
+        author={data.site.siteMetadata.author}
         readingTime={post.fields.readingTime.text}
         commentId={
           post.frontmatter.commentId === null
@@ -217,6 +222,8 @@ const BlogPost = ({ data }) => {
             ? post.frontmatter.dateString
             : post.frontmatter.lastModificationTimeString
         }
+        dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
+        datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
       />
     </Layout>
   );
@@ -237,7 +244,6 @@ export const pageQuery = graphql`
       html
       fields {
         slug
-
         readingTime {
           text
         }
@@ -245,6 +251,7 @@ export const pageQuery = graphql`
       frontmatter {
         date
         dateString: date(formatString: "MMMM DD, YYYY")
+        datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
         title
         description
         tags
@@ -252,6 +259,7 @@ export const pageQuery = graphql`
         lastModificationTimeString: lastModificationTime(
           formatString: "MMMM DD, YYYY"
         )
+        dateModifiedSeoFormat: lastModificationTime(formatString: "YYYY-MM-DD")
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -259,9 +267,17 @@ export const pageQuery = graphql`
             }
           }
         }
-        author
-        authorURL
         commentId
+      }
+    }
+    site {
+      siteMetadata {
+        author {
+          name
+          minibio
+          url
+          image
+        }
       }
     }
   }

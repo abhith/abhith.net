@@ -6,7 +6,19 @@ module.exports = {
     description:
       "an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products.",
     siteUrl: `https://www.abhith.net`,
-    author: `@AbhithRajan`
+    author: {
+      name: "Abhith Rajan",
+      minibio: `
+        Abhith Rajan is an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products and services.
+      `,
+      url: `https://twitter.com/abhithrajan`,
+      image: `https://www.abhith.net/img/abhith-avatar.jpg`
+    },
+    image: `https://www.abhith.net/img/abhith-avatar.jpg`,
+    social: {
+      twitter: "@AbhithRajan",
+      fbAppID: ""
+    }
   },
   plugins: [
     "gatsby-plugin-react-helmet",

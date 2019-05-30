@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import SEO from "../components/Seo";
+import SEO from "../components/seo/SEO";
 
 export const AboutPageTemplate = ({
   title,
@@ -15,7 +15,7 @@ export const AboutPageTemplate = ({
 
   return (
     <div className="container">
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} slug="/about" />
       <h3 className="font-weight-bold spanborder">
         <span> {title}</span>
       </h3>

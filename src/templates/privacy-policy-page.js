@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import SEO from "../components/seo/SEO";
 import Content, { HTMLContent } from "../components/Content";
 
 export const PrivacyPolicyPageTemplate = ({
@@ -15,7 +15,7 @@ export const PrivacyPolicyPageTemplate = ({
 
   return (
     <div className="container">
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} slug="/privacy-policy" />
 
       <h3 className="font-weight-bold spanborder">
         <span> {title}</span>
