@@ -9,9 +9,9 @@ authorURL: 'http://twitter.com/abhithrajan'
 date: '2018-04-12T00:00:00.000Z'
 image: /img/rawpixel-com-558596-unsplash.jpg
 tags:
-  - interview
+  - career
   - dotnet
-  - aspdotnet
+  - aspnet
   - wcf
 ---
 
