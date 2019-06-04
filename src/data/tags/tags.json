@@ -6,6 +6,42 @@
     "image": "/img/luke-chesser-1399685-unsplash.jpg"
   },
   {
+    "title": "ASP.NET",
+    "slug": "aspnet",
+    "description": "Open-source web framework for .NET",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
+    "title": "ASP.NET Core",
+    "slug": "aspnet-core",
+    "description": "ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-based, Internet-connected applications.",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
+    "title": "ASP.NET Web Forms",
+    "slug": "aspnet-web-forms",
+    "description": "ASP.NET Web Forms is a web application framework and one of several programming models supported by the Microsoft ASP.NET technology",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
+    "title": "Best Series",
+    "slug": "best-series",
+    "description": "Best in classess listed under this tag",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
+    "title": "Cache",
+    "slug": "cache",
+    "description": "One area to check for performance.",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
+    "title": "CMS",
+    "slug": "cms",
+    "description": "Best in classess listed under this tag",
+    "image": "/img/luke-chesser-1399685-unsplash.jpg"
+  },
+  {
     "title": "Asynchronous Programming",
     "slug": "asynchronous-programming",
     "description": "I tend to use Async - Await every where possible. Not just in C#, now a days in the JavaScript instead of the promises.",
