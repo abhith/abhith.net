@@ -11,7 +11,7 @@ import SEO from "../components/seo/SEO";
 
 export const IndexPageTemplate = ({ title, stories, featured }) => (
   <div className="container">
-    <SEO title="Full Stack Developer" />
+    <SEO />
     <LatestPosts />
     <Hero />
     <div className="row mt-3">

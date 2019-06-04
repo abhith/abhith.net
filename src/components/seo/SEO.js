@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import SchemaOrg from "./SchemaOrg";
 
 // <link rel="canonical" href={url} />
-// <meta property="og:url" content={url} />
 // <meta property="fb:app_id" content={seo.social.fbAppID} />
 
 function SEO({
@@ -52,6 +51,10 @@ function SEO({
     ? `${site.siteMetadata.siteUrl}${slug}`
     : site.siteMetadata.siteUrl;
 
+  const defaultTitle = `Abhith Rajan - Coder, Blogger, Biker, Full Stack Developer`;
+
+  title = title ? `${title} | ${site.siteMetadata.title}` : defaultTitle;
+
   return (
     <>
       <Helmet
@@ -59,7 +62,6 @@ function SEO({
           lang
         }}
         title={title}
-        titleTemplate={`%s | ${site.siteMetadata.title}`}
         meta={[
           {
             name: `description`,
@@ -80,6 +82,10 @@ function SEO({
           {
             property: `og:type`,
             content: ogType
+          },
+          {
+            property: `og:url`,
+            content: url
           },
           {
             property: `og:image`,
@@ -152,7 +158,6 @@ function SEO({
         dateModified={dateModified}
         siteUrl={site.siteMetadata.siteUrl}
         author={site.siteMetadata.author}
-        defaultTitle={site.siteMetadata.title}
       />
     </>
   );
@@ -173,7 +178,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   image: PropTypes.string,
   slug: PropTypes.string,
   date: PropTypes.string

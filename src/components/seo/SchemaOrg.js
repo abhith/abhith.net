@@ -7,7 +7,6 @@ export default React.memo(
     siteUrl,
     datePublished,
     dateModified,
-    defaultTitle,
     description,
     image,
     isBlogPost,
@@ -91,7 +90,6 @@ export default React.memo(
             "@type": "BlogPosting",
             url,
             name: title,
-            alternateName: `${title} | ${defaultTitle}`,
             headline: title,
             image: {
               "@type": "ImageObject",
