@@ -223,7 +223,7 @@ BlogPostTemplate.propTypes = {
 };
 
 const BlogPost = ({ data }) => {
-  console.log(`page data is`, data);
+  // console.log(`page data is`, data);
 
   const { markdownRemark: post } = data;
 
