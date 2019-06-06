@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
 import SEO from "../components/seo/SEO";
+import StoriesRoll from "../components/StoriesRoll";
 
 class TagRoute extends React.Component {
   render() {
@@ -15,6 +16,9 @@ class TagRoute extends React.Component {
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? "" : "s"
     } tagged with “${tag}”`;
+
+    const stories = this.props.data.recommendedStories.edges;
+
     return (
       <Layout>
         <SEO
@@ -32,6 +36,10 @@ class TagRoute extends React.Component {
                 <span>{tag}</span>
               </h4>
               <BlogRoll posts={posts} />
+              <h4 className="font-weight-bold spanborder">
+                <span>Recommended Stories</span>
+              </h4>
+              <StoriesRoll posts={stories} />
             </div>
             <div className="col-md-4">
               {/* {% include sidebar-featured.html %}     */}
@@ -58,6 +66,23 @@ export const tagPageQuery = graphql`
       description
       id
       image
+    }
+    recommendedStories: allStoriesJson(
+      sort: { fields: [date], order: DESC }
+      limit: 6
+      filter: { tags: { in: [$tag] } }
+    ) {
+      edges {
+        node {
+          title
+          date(formatString: "MMM DD, YYYY")
+          description
+          id
+          image
+          tags
+          url
+        }
+      }
     }
     allMarkdownRemark(
       limit: 1000
