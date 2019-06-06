@@ -67,7 +67,7 @@ function LatestPosts() {
             </div>
             <div className="col-md-6">
               {recentPosts.map(({ node }) => {
-                return <BlogRollItem post={node} key={node.id} />;
+                return <BlogRollItem post={node} key={node.fields.slug} />;
               })}
             </div>
           </div>
