@@ -22,6 +22,13 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allStoriesJson {
+        edges {
+          node {
+            tags
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -30,6 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges;
+    const stories = result.data.allStoriesJson.edges;
 
     posts.forEach(edge => {
       const id = edge.node.id;
@@ -57,6 +65,13 @@ exports.createPages = ({ actions, graphql }) => {
         tags = tags.concat(edge.node.frontmatter.tags);
       }
     });
+
+    stories.forEach(edge => {
+      if (_.get(edge, `node.tags`)) {
+        tags = tags.concat(edge.node.tags);
+      }
+    });
+
     // Eliminate duplicate tags
     tags = _.uniq(tags);
 
