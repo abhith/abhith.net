@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
-import Img from "gatsby-image";
 import { kebabCase } from "lodash";
 import BackgroundImage from "gatsby-background-image";
+import BlogRollItem from "../BlogRollItem";
 
 function LatestPosts() {
   return (
@@ -67,51 +67,7 @@ function LatestPosts() {
             </div>
             <div className="col-md-6">
               {recentPosts.map(({ node }) => {
-                const title = node.frontmatter.title;
-                return (
-                  <div
-                    className="mb-3 d-flex align-items-center"
-                    key={node.fields.slug}
-                  >
-                    <div className="col-md-4">
-                      <Link to={`${node.fields.slug}`}>
-                        <Img
-                          className="w-100"
-                          fluid={node.frontmatter.image.childImageSharp.fluid}
-                        />
-                      </Link>
-                    </div>
-                    <div>
-                      <h2 className="mb-2 h6 font-weight-bold">
-                        <Link className="text-dark" to={`${node.fields.slug}`}>
-                          {title}
-                        </Link>
-                      </h2>
-                      <small className="d-block text-muted">
-                        In{" "}
-                        <span className="catlist">
-                          {node.frontmatter.tags && node.frontmatter.tags.length
-                            ? node.frontmatter.tags.map(tag => (
-                                <React.Fragment key={tag}>
-                                  <Link
-                                    className="text-capitalize text-muted smoothscroll"
-                                    to={`/tags/${kebabCase(tag)}/`}
-                                  >
-                                    {tag}
-                                  </Link>
-                                  <span className="sep">, </span>
-                                </React.Fragment>
-                              ))
-                            : null}
-                        </span>
-                      </small>
-                      <small className="text-muted">
-                        {node.frontmatter.date} &middot;{" "}
-                        {node.fields.readingTime.text}
-                      </small>
-                    </div>
-                  </div>
-                );
+                return <BlogRollItem post={node} key={node.id} />;
               })}
             </div>
           </div>
