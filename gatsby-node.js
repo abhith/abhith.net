@@ -33,6 +33,8 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id;
+      const postTags = edge.node.frontmatter.tags;
+
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -41,7 +43,8 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          id
+          id,
+          tags: postTags
         }
       });
     });

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
+import { kebabCase, partition } from "lodash";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
@@ -8,6 +8,7 @@ import SEO from "../components/seo/SEO";
 import Img from "gatsby-image";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { DiscussionEmbed } from "disqus-react";
+import BlogRollItem from "../components/BlogRollItem";
 
 export const BlogPostTemplate = ({
   content,
@@ -24,13 +25,25 @@ export const BlogPostTemplate = ({
   lastModifiedTimeString,
   dateModifiedSeoFormat,
   datePublishedSeoFormat,
-  slug
+  slug,
+  relatedPosts
 }) => {
   const PostContent = contentComponent || Content;
   const disqusConfig = {
     shortname: `abhith`,
     config: { identifier: commentId, title }
   };
+
+  let relatedPostsFirstHalf = [];
+  let relatedPostsSecondHalf = [];
+
+  [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(
+    relatedPosts,
+    i => {
+      return relatedPosts.indexOf(i) % 2 === 0;
+    }
+  );
+
   return (
     <div>
       <SEO
@@ -167,6 +180,23 @@ export const BlogPostTemplate = ({
             <div id="comments" className="mt-5">
               <DiscussionEmbed {...disqusConfig} />
             </div>
+            <div className="row mt-5">
+              <div className="col-md-12">
+                <h4 className="font-weight-bold spanborder">
+                  <span>Related Posts</span>
+                </h4>
+              </div>
+              <div className="col-md-6">
+                {relatedPostsFirstHalf.map(({ node }) => {
+                  return <BlogRollItem post={node} key={node.id} />;
+                })}
+              </div>
+              <div className="col-md-6">
+                {relatedPostsSecondHalf.map(({ node }) => {
+                  return <BlogRollItem post={node} key={node.id} />;
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -188,10 +218,13 @@ BlogPostTemplate.propTypes = {
   lastModifiedTime: PropTypes.string,
   lastModifiedTimeString: PropTypes.string,
   dateModifiedSeoFormat: PropTypes.string,
-  datePublishedSeoFormat: PropTypes.string
+  datePublishedSeoFormat: PropTypes.string,
+  relatedPosts: PropTypes.array
 };
 
 const BlogPost = ({ data }) => {
+  console.log(`page data is`, data);
+
   const { markdownRemark: post } = data;
 
   return (
@@ -224,6 +257,7 @@ const BlogPost = ({ data }) => {
         }
         dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
         datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
+        relatedPosts={data.relatedPosts.edges}
       />
     </Layout>
   );
@@ -238,7 +272,7 @@ BlogPost.propTypes = {
 export default BlogPost;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query BlogPostByID($id: String!, $tags: [String!]) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -277,6 +311,39 @@ export const pageQuery = graphql`
           minibio
           url
           image
+        }
+      }
+    }
+    relatedPosts: allMarkdownRemark(
+      limit: 6
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: $tags } }, id: { ne: $id } }
+    ) {
+      totalCount
+      edges {
+        node {
+          excerpt(pruneLength: 186)
+          id
+          fields {
+            slug
+            readingTime {
+              text
+            }
+          }
+          frontmatter {
+            title
+            description
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
+            tags
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
         }
       }
     }
