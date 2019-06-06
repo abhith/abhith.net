@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import Tags from "./Tags";
+import { truncate } from "lodash";
 
 const StoriesRoll = props => {
   const { posts } = props;
@@ -29,7 +30,9 @@ const StoriesRoll = props => {
                   {post.title}
                 </OutboundLink>
               </h2>
-              <p className="excerpt">{post.description}</p>
+              <p className="excerpt">
+                {truncate(post.description, { length: 186 })}
+              </p>
               <small className="d-block text-muted">
                 In <Tags tags={post.tags} />
               </small>
