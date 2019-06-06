@@ -7,6 +7,10 @@ import Tags from "./Tags";
 const StoriesRoll = props => {
   const { posts } = props;
 
+  if (!posts || !posts.length) {
+    return <span>Nothing Found</span>;
+  }
+
   return (
     <>
       {posts &&
