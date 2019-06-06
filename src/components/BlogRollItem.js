@@ -6,7 +6,7 @@ import Tags from "./Tags";
 
 const BlogRollItem = ({ post: node }) => {
   return (
-    <div className="mb-3 d-flex align-items-center" key={node.fields.slug}>
+    <div className="mb-3 d-flex align-items-center">
       <div className="col-md-4">
         <Link to={`${node.fields.slug}`}>
           <Img
