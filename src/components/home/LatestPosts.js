@@ -34,7 +34,7 @@ function LatestPosts() {
                           {title}
                         </Link>
                       </h2>
-                      <p className="excerpt">{node.excerpt}</p>
+                      <p className="excerpt">{node.frontmatter.description}</p>
                       <div>
                         <small className="d-block text-muted">
                           In{" "}
@@ -88,7 +88,6 @@ export const query = graphql`
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
             readingTime {
@@ -99,6 +98,7 @@ export const query = graphql`
             date(formatString: "MMM DD, YYYY")
             title
             tags
+            description
             image {
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
