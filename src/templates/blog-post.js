@@ -10,6 +10,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { DiscussionEmbed } from "disqus-react";
 import BlogRollItem from "../components/BlogRollItem";
 import VideosRoll from "../components/VideosRoll";
+import StoriesRollItem from "../components/StoriesRollItem";
 
 export const BlogPostTemplate = ({
   content,
@@ -28,7 +29,8 @@ export const BlogPostTemplate = ({
   datePublishedSeoFormat,
   slug,
   relatedPosts,
-  relatedVideos
+  relatedVideos,
+  relatedStories
 }) => {
   const PostContent = contentComponent || Content;
   const disqusConfig = {
@@ -38,11 +40,20 @@ export const BlogPostTemplate = ({
 
   let relatedPostsFirstHalf = [];
   let relatedPostsSecondHalf = [];
+  let relatedStoriesFirstHalf = [];
+  let relatedStoriesSecondHalf = [];
 
   [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(
     relatedPosts,
     i => {
       return relatedPosts.indexOf(i) % 2 === 0;
+    }
+  );
+
+  [relatedStoriesFirstHalf, relatedStoriesSecondHalf] = partition(
+    relatedStories,
+    i => {
+      return relatedStories.indexOf(i) % 2 === 0;
     }
   );
 
@@ -214,13 +225,13 @@ export const BlogPostTemplate = ({
                 </h4>
               </div>
               <div className="col-md-6">
-                {relatedPostsFirstHalf.map(({ node }) => {
-                  return <BlogRollItem post={node} key={node.id} />;
+                {relatedStoriesFirstHalf.map(({ node }) => {
+                  return <StoriesRollItem post={node} key={node.id} />;
                 })}
               </div>
               <div className="col-md-6">
-                {relatedPostsSecondHalf.map(({ node }) => {
-                  return <BlogRollItem post={node} key={node.id} />;
+                {relatedStoriesSecondHalf.map(({ node }) => {
+                  return <StoriesRollItem post={node} key={node.id} />;
                 })}
               </div>
             </div>
@@ -247,7 +258,8 @@ BlogPostTemplate.propTypes = {
   dateModifiedSeoFormat: PropTypes.string,
   datePublishedSeoFormat: PropTypes.string,
   relatedPosts: PropTypes.array,
-  relatedVideos: PropTypes.array
+  relatedVideos: PropTypes.array,
+  relatedStories: PropTypes.array
 };
 
 const BlogPost = ({ data }) => {
@@ -287,6 +299,7 @@ const BlogPost = ({ data }) => {
         datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
         relatedPosts={data.relatedPosts.edges}
         relatedVideos={data.recommendedVideos.edges}
+        relatedStories={data.recommendedStories.edges}
       />
     </Layout>
   );
@@ -340,6 +353,23 @@ export const pageQuery = graphql`
           minibio
           url
           image
+        }
+      }
+    }
+    recommendedStories: allStoriesJson(
+      limit: 6
+      sort: { fields: [date], order: DESC }
+      filter: { tags: { in: $tags } }
+    ) {
+      edges {
+        node {
+          title
+          date(formatString: "MMM DD, YYYY")
+          description
+          id
+          image
+          tags
+          url
         }
       }
     }
