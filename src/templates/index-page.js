@@ -17,15 +17,14 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
     <div className="row mt-3">
       <div className="col-md-8 main-loop">
         <h4 className="font-weight-bold spanborder">
-          <span>Recommended Stories</span>
-        </h4>
-        <StoriesRoll posts={stories} />
-        <h4 className="font-weight-bold spanborder">
           <span>Recommended Videos</span>
         </h4>
         <VideosRoll videos={videos} />
+        <h4 className="font-weight-bold spanborder">
+          <span>Recommended Stories</span>
+        </h4>
+        <StoriesRoll posts={stories} />
       </div>
-
       <div className="col-md-4">
         <FeaturedSidebar items={featured} />
       </div>
