@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
 import SEO from "../components/seo/SEO";
 import StoriesRoll from "../components/StoriesRoll";
+import VideosRoll from "../components/VideosRoll";
 
 class TagRoute extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class TagRoute extends React.Component {
     } tagged with “${tag}”`;
 
     const stories = this.props.data.recommendedStories.edges;
+    const videos = this.props.data.recommendedVideos.edges;
 
     return (
       <Layout>
@@ -40,6 +42,10 @@ class TagRoute extends React.Component {
                 <span>Recommended Stories</span>
               </h4>
               <StoriesRoll posts={stories} />
+              <h4 className="font-weight-bold spanborder">
+                <span>Recommended Videos</span>
+              </h4>
+              <VideosRoll videos={videos} />
             </div>
             <div className="col-md-4">
               {/* {% include sidebar-featured.html %}     */}
@@ -69,7 +75,6 @@ export const tagPageQuery = graphql`
     }
     recommendedStories: allStoriesJson(
       sort: { fields: [date], order: DESC }
-      limit: 6
       filter: { tags: { in: [$tag] } }
     ) {
       edges {
@@ -81,6 +86,18 @@ export const tagPageQuery = graphql`
           image
           tags
           url
+        }
+      }
+    }
+    recommendedVideos: allVideosJson(
+      sort: { fields: [date], order: DESC }
+      filter: { tags: { in: [$tag] } }
+    ) {
+      edges {
+        node {
+          id
+          url
+          type
         }
       }
     }
