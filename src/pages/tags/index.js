@@ -58,7 +58,9 @@ const TagsPage = ({
       <section className="section">
         <SEO
           title="Tags"
-          description="Summary of all the tags on abhith.net"
+          description={`Summary of all the ${
+            tags.length
+          } tags used in abhith.net`}
           slug="/tags"
         />
         <div className="container">
