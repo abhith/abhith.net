@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "Abhith Rajan",
     description:
-      "an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products.",
+      "An aspiring software engineer with more than 7 years of experience.",
     siteUrl: `https://www.abhith.net`,
     author: {
       name: "Abhith Rajan",

@@ -18,7 +18,7 @@ function SEO({
   dateModified,
   datePublished
 }) {
-  const { site } = useStaticQuery(
+  const { site, posts, stories, videos } = useStaticQuery(
     graphql`
       query {
         site {
@@ -35,11 +35,27 @@ function SEO({
             }
           }
         }
+        videos: allVideosJson {
+          totalCount
+        }
+        stories: allStoriesJson {
+          totalCount
+        }
+        posts: allMarkdownRemark(
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          totalCount
+        }
       }
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const sharingText = `Sharing ${posts.totalCount} posts, ${
+    videos.totalCount
+  } videos and ${stories.totalCount} developer stories with the world.`;
+
+  const metaDescription =
+    description || `${site.siteMetadata.description} ${sharingText}`;
 
   const ogType = isBlogPost ? `article` : `website`;
 
