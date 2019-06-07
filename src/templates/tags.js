@@ -39,13 +39,13 @@ class TagRoute extends React.Component {
               </h4>
               <BlogRoll posts={posts} />
               <h4 className="font-weight-bold spanborder">
-                <span>Recommended Stories</span>
-              </h4>
-              <StoriesRoll posts={stories} />
-              <h4 className="font-weight-bold spanborder">
                 <span>Recommended Videos</span>
               </h4>
               <VideosRoll videos={videos} />
+              <h4 className="font-weight-bold spanborder">
+                <span>Recommended Stories</span>
+              </h4>
+              <StoriesRoll posts={stories} />
             </div>
             <div className="col-md-4">
               {/* {% include sidebar-featured.html %}     */}
