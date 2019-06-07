@@ -29,6 +29,13 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allVideosJson {
+        edges {
+          node {
+            tags
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -38,6 +45,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges;
     const stories = result.data.allStoriesJson.edges;
+    const videos = result.data.allVideosJson.edges;
 
     posts.forEach(edge => {
       const id = edge.node.id;
@@ -67,6 +75,12 @@ exports.createPages = ({ actions, graphql }) => {
     });
 
     stories.forEach(edge => {
+      if (_.get(edge, `node.tags`)) {
+        tags = tags.concat(edge.node.tags);
+      }
+    });
+
+    videos.forEach(edge => {
       if (_.get(edge, `node.tags`)) {
         tags = tags.concat(edge.node.tags);
       }
