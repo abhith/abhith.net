@@ -9,7 +9,7 @@ const StoriesRoll = props => {
   const { posts } = props;
 
   if (!posts || !posts.length) {
-    return <span>Nothing Found</span>;
+    return <span>Stories Coming Soon...</span>;
   }
 
   return (
