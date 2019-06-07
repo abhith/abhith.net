@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-
 import Layout from "../components/Layout";
 import LatestPosts from "../components/home/LatestPosts";
 import Hero from "../components/home/Hero";
 import StoriesRoll from "../components/StoriesRoll";
 import FeaturedSidebar from "../components/FeaturedSidebar";
 import SEO from "../components/seo/SEO";
+import VideosRoll from "../components/VideosRoll";
 
-export const IndexPageTemplate = ({ title, stories, featured }) => (
+export const IndexPageTemplate = ({ stories, featured, videos }) => (
   <div className="container">
     <SEO />
     <LatestPosts />
@@ -20,7 +20,10 @@ export const IndexPageTemplate = ({ title, stories, featured }) => (
           <span>Recommended Stories</span>
         </h4>
         <StoriesRoll posts={stories} />
-        {/* <div className="mt-5" /> */}
+        <h4 className="font-weight-bold spanborder">
+          <span>Recommended Videos</span>
+        </h4>
+        <VideosRoll videos={videos} />
       </div>
 
       <div className="col-md-4">
@@ -31,19 +34,17 @@ export const IndexPageTemplate = ({ title, stories, featured }) => (
 );
 
 IndexPageTemplate.propTypes = {
-  title: PropTypes.string,
   stories: PropTypes.array,
+  videos: PropTypes.array,
   featured: PropTypes.array
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.homePage;
-
   return (
     <Layout>
       <IndexPageTemplate
-        title={frontmatter.title}
         stories={data.recommendedStories.edges}
+        videos={data.recommendedVideos.edges}
         featured={data.featured.edges}
       />
     </Layout>
@@ -52,10 +53,8 @@ const IndexPage = ({ data }) => {
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    homePage: PropTypes.shape({
-      frontmatter: PropTypes.object
-    }),
     recommendedStories: PropTypes.object,
+    recommendedVideos: PropTypes.object,
     featured: PropTypes.object
   })
 };
@@ -64,13 +63,6 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    homePage: markdownRemark(
-      frontmatter: { templateKey: { eq: "index-page" } }
-    ) {
-      frontmatter {
-        title
-      }
-    }
     recommendedStories: allStoriesJson(
       limit: 5
       sort: { fields: [date], order: DESC }
@@ -84,6 +76,18 @@ export const pageQuery = graphql`
           image
           tags
           url
+        }
+      }
+    }
+    recommendedVideos: allVideosJson(
+      limit: 5
+      sort: { fields: [date], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          url
+          type
         }
       }
     }
