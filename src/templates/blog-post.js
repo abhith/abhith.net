@@ -9,6 +9,7 @@ import Img from "gatsby-image";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { DiscussionEmbed } from "disqus-react";
 import BlogRollItem from "../components/BlogRollItem";
+import VideosRoll from "../components/VideosRoll";
 
 export const BlogPostTemplate = ({
   content,
@@ -26,7 +27,8 @@ export const BlogPostTemplate = ({
   dateModifiedSeoFormat,
   datePublishedSeoFormat,
   slug,
-  relatedPosts
+  relatedPosts,
+  relatedVideos
 }) => {
   const PostContent = contentComponent || Content;
   const disqusConfig = {
@@ -197,6 +199,31 @@ export const BlogPostTemplate = ({
                 })}
               </div>
             </div>
+            <div className="row mt-5">
+              <div className="col-md-12">
+                <h4 className="font-weight-bold spanborder">
+                  <span>Related Videos</span>
+                </h4>
+                <VideosRoll videos={relatedVideos} />
+              </div>
+            </div>
+            <div className="row mt-5">
+              <div className="col-md-12">
+                <h4 className="font-weight-bold spanborder">
+                  <span>Related Stories</span>
+                </h4>
+              </div>
+              <div className="col-md-6">
+                {relatedPostsFirstHalf.map(({ node }) => {
+                  return <BlogRollItem post={node} key={node.id} />;
+                })}
+              </div>
+              <div className="col-md-6">
+                {relatedPostsSecondHalf.map(({ node }) => {
+                  return <BlogRollItem post={node} key={node.id} />;
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -219,7 +246,8 @@ BlogPostTemplate.propTypes = {
   lastModifiedTimeString: PropTypes.string,
   dateModifiedSeoFormat: PropTypes.string,
   datePublishedSeoFormat: PropTypes.string,
-  relatedPosts: PropTypes.array
+  relatedPosts: PropTypes.array,
+  relatedVideos: PropTypes.array
 };
 
 const BlogPost = ({ data }) => {
@@ -258,6 +286,7 @@ const BlogPost = ({ data }) => {
         dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
         datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
         relatedPosts={data.relatedPosts.edges}
+        relatedVideos={data.recommendedVideos.edges}
       />
     </Layout>
   );
@@ -311,6 +340,19 @@ export const pageQuery = graphql`
           minibio
           url
           image
+        }
+      }
+    }
+    recommendedVideos: allVideosJson(
+      limit: 3
+      sort: { fields: [date], order: DESC }
+      filter: { tags: { in: $tags } }
+    ) {
+      edges {
+        node {
+          id
+          url
+          type
         }
       }
     }
