@@ -33,7 +33,7 @@ const StoriesRollItem = ({ post }) => {
   );
 };
 StoriesRollItem.propTypes = {
-  post: PropTypes.array.isRequired
+  post: PropTypes.object.isRequired
 };
 
 export default StoriesRollItem;
