@@ -25,7 +25,9 @@ export default class RecommendedServicesIndexPage extends React.Component {
               <h4 className="font-weight-bold spanborder">
                 <span>Services</span>
               </h4>
-              <ServicesRoll services={services} />
+              <div className="row">
+                <ServicesRoll services={services} />
+              </div>
             </div>
 
             <div className="col-md-4">
