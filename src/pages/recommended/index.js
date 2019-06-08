@@ -23,9 +23,9 @@ export default class RecommendedIndexPage extends React.Component {
             description="Developer stories, videos, and services which Abhith recommends."
             slug="\recommended"
           />
-          <h3 className="font-weight-bold spanborder">
+          <h1 className="font-weight-bold title h6 text-uppercase mb-4">
             <span>Recommended</span>
-          </h3>
+          </h1>
           <div className="row">
             <div className="col-md-6">
               <div className="card border-0 mb-4 box-shadow">
