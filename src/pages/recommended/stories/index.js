@@ -1,8 +1,8 @@
 import React from "react";
-
 import Layout from "../../../components/Layout";
 import SEO from "../../../components/seo/SEO";
 import StoriesRoll from "../../../components/StoriesRoll";
+import { graphql } from "gatsby";
 
 export default class RecommendedStoriesIndexPage extends React.Component {
   render() {

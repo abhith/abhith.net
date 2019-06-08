@@ -1,8 +1,8 @@
 import React from "react";
-
 import Layout from "../../../components/Layout";
 import SEO from "../../../components/seo/SEO";
 import VideosRoll from "../../../components/VideosRoll";
+import { graphql } from "gatsby";
 
 export default class RecommendedVideosIndexPage extends React.Component {
   render() {
