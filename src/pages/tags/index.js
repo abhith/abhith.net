@@ -3,13 +3,14 @@ import { kebabCase, sortBy } from "lodash";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import SEO from "../../components/seo/SEO";
-import { FaFileAlt, FaVideo, FaBookOpen } from "react-icons/fa";
+import { FaFileAlt, FaVideo, FaBookOpen, FaGlobe } from "react-icons/fa";
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group: postsGroup },
     allStoriesJson: { group: storiesGroup },
-    allVideosJson: { group: videosGroup }
+    allVideosJson: { group: videosGroup },
+    allServicesJson: { group: servicesGroup }
   }
 }) => {
   let tags = [];
@@ -19,7 +20,8 @@ const TagsPage = ({
       slug: node.fieldValue,
       totalPosts: node.totalCount,
       totalVideos: 0,
-      totalStories: 0
+      totalStories: 0,
+      totalServices: 0
     });
   });
 
@@ -32,7 +34,8 @@ const TagsPage = ({
         slug: node.fieldValue,
         totalPosts: 0,
         totalVideos: 0,
-        totalStories: node.totalCount
+        totalStories: node.totalCount,
+        totalServices: 0
       });
     }
   });
@@ -46,7 +49,23 @@ const TagsPage = ({
         slug: node.fieldValue,
         totalPosts: 0,
         totalVideos: node.totalCount,
-        totalStories: 0
+        totalStories: 0,
+        totalServices: 0
+      });
+    }
+  });
+
+  servicesGroup.forEach(node => {
+    let tag = tags.find(tag => tag.slug === node.fieldValue);
+    if (tag) {
+      tag.totalServices = node.totalCount;
+    } else {
+      tags.push({
+        slug: node.fieldValue,
+        totalPosts: 0,
+        totalVideos: 0,
+        totalStories: 0,
+        totalServices: node.totalCount
       });
     }
   });
@@ -96,6 +115,12 @@ const TagsPage = ({
                     >
                       <FaBookOpen /> {tag.totalStories} STORIES
                     </Link>
+                    <Link
+                      className="sscroll btn btn-outline-info btn-sm"
+                      to={`/tags/${kebabCase(tag.slug)}/`}
+                    >
+                      <FaGlobe /> {tag.totalServices} SERVICES
+                    </Link>
                   </span>
                 </div>
               ))}
@@ -131,6 +156,12 @@ export const tagPageQuery = graphql`
       }
     }
     allVideosJson {
+      group(field: tags) {
+        fieldValue
+        totalCount
+      }
+    }
+    allServicesJson {
       group(field: tags) {
         fieldValue
         totalCount
