@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import LatestPosts from "../components/home/LatestPosts";
 import Hero from "../components/home/Hero";
@@ -20,10 +20,20 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
           <span>Recommended Videos</span>
         </h4>
         <VideosRoll videos={videos} />
+        <div className="row justify-content-center mb-3">
+          <Link to="/recommended/videos" className="btn btn-secondary">
+            View More Videos
+          </Link>
+        </div>
         <h4 className="font-weight-bold spanborder">
           <span>Recommended Stories</span>
         </h4>
         <StoriesRoll posts={stories} />
+        <div className="row justify-content-center mb-3">
+          <Link to="/recommended/stories" className="btn btn-secondary">
+            View More Developer Stories
+          </Link>
+        </div>
       </div>
       <div className="col-md-4">
         <FeaturedSidebar items={featured} />
