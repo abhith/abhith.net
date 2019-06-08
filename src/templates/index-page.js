@@ -79,7 +79,7 @@ export const pageQuery = graphql`
       }
     }
     recommendedVideos: allVideosJson(
-      limit: 5
+      limit: 3
       sort: { fields: [date], order: DESC }
     ) {
       edges {
