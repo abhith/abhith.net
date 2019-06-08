@@ -24,34 +24,6 @@ export default class BlogIndexPage extends React.Component {
                 <span>All Stories</span>
               </h4>
               <BlogRoll posts={posts} />
-              {/* <div className="mt-5">
-         <!-- Pagination links -->
-            {% if paginator.total_pages > 1 %}
-            <ul className="pagination"> 
-              {% if paginator.previous_page %}
-                <li className="page-item"><a className="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
-              {% else %}
-                <li className="page-item disabled"><span className="prev page-link">&laquo;</span></li>
-              {% endif %}
-
-              {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                <li className="page-item disabled"><span className="webjeda page-link">{{ page }}</span></li>
-                {% elsif page == 1 %}
-                <li className="page-item"><a className="page-link" href="{{site.baseurl}}/">{{ page }}</a></li>
-                {% else %}
-                <li className="page-item"><a className="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-                {% endif %}
-              {% endfor %}
-
-              {% if paginator.next_page %}
-                <li className="page-item"><a className="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
-              {% else %}
-                <li className="page-item disabled"><span className="next page-link">&raquo;</span></li>
-              {% endif %}
-            </ul>
-            {% endif %}      
-        </div> */}
             </div>
 
             <div className="col-md-4">
