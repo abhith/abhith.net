@@ -80,6 +80,11 @@ const Navbar = class extends React.Component {
                   Blog
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/recommended" className="nav-link">
+                  Recommended
+                </Link>
+              </li>
               {/* <li class="nav-item">
                 <a target="_blank" class="nav-link" href="/">
                   Contact
