@@ -37,6 +37,13 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
+    allServicesJson {
+      edges {
+          node {
+            tags
+          }
+        }
+    }
   `).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));
@@ -46,6 +53,7 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges;
     const stories = result.data.allStoriesJson.edges;
     const videos = result.data.allVideosJson.edges;
+    const services = result.data.allServicesJson.edges;
 
     posts.forEach(edge => {
       const id = edge.node.id;
@@ -81,6 +89,12 @@ exports.createPages = ({ actions, graphql }) => {
     });
 
     videos.forEach(edge => {
+      if (_.get(edge, `node.tags`)) {
+        tags = tags.concat(edge.node.tags);
+      }
+    });
+
+    services.forEach(edge => {
       if (_.get(edge, `node.tags`)) {
         tags = tags.concat(edge.node.tags);
       }
