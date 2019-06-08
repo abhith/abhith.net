@@ -5,7 +5,7 @@ import VideosRoll from "../../components/VideosRoll";
 import StoriesRollItem from "../../components/StoriesRollItem";
 import { graphql, Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
-import { FaSpaceShuttle, FaVideo, FaBookOpen } from "react-icons/fa";
+import { FaGlobe, FaVideo, FaBookOpen } from "react-icons/fa";
 
 export default class RecommendedIndexPage extends React.Component {
   render() {
@@ -127,7 +127,7 @@ export default class RecommendedIndexPage extends React.Component {
                       className="sscroll btn btn-light btn-sm"
                       to="/recommended/services"
                     >
-                      <FaSpaceShuttle /> {data.services.totalCount} SERVICES
+                      <FaGlobe /> {data.services.totalCount} SERVICES
                     </Link>
                   </div>
                 </div>
