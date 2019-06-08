@@ -15,25 +15,7 @@ tags:
 
 For the past month, I have been in the search for the best laptop, that will help me to do things faster. Best in the sense which worth every penny and yet strong in specs, not a high-end gaming machine.
 
-- [History](#history)
-- [Minimum Requirements](#minimum-requirements)
-- [Shortlisted Laptops](#shortlisted-laptops)
-  - [Acer Predator Triton 500](#acer-predator-triton-500)
-    - [Pros](#pros)
-    - [Cons](#cons)
-  - [Gigabyte AERO 15 2019](#gigabyte-aero-15-2019)
-    - [Pros](#pros-1)
-    - [Cons](#cons-1)
-  - [Thinkpad X1 Extreme](#thinkpad-x1-extreme)
-    - [Cons](#cons-2)
-  - [HP Omen 15 (Latest)](#hp-omen-15-latest)
-    - [Cons](#cons-3)
-- [Skipped Laptops](#skipped-laptops)
-  - [Lenovo Y740](#lenovo-y740)
-  - [Asus ROG Zephyrus s GX701](#asus-rog-zephyrus-s-gx701)
-- [Conclusion](#conclusion)
-
-## History
+### History
 
 Laptops I used earlier are,
 
@@ -44,7 +26,7 @@ Laptops I used earlier are,
 
 In the above list, none of them owned by myself, first 3 out of the 4 was given by my ex-company during the employment period and the other is rented out from my brother-in-law. Out of all Lenovo Y520 was my favorite just because of its specs and speed.
 
-## Minimum Requirements
+### Minimum Requirements
 
 Right now its time to own a machine, and the **minimum** features am looking for are,
 
@@ -54,65 +36,65 @@ Right now its time to own a machine, and the **minimum** features am looking for
 4. RTX 2060 Graphics card
 5. Fingerprint sensor
 
-## Shortlisted Laptops
+### Shortlisted Laptops
 
 After watching tons of reviews and all, my shortlisted items are,
 
-### Acer Predator Triton 500
+#### Acer Predator Triton 500
 
 Model Name: PT515-51-73EG
 [Website](https://www.acer.com/ac/en/US/content/predator-model/NH.Q50AA.003)
 
-#### Pros
+##### Pros
 
 - Matching my requirement 4/5.
 - Available in UAE via [newegg.com](https://www.newegg.com/global/ae-en/p/N82E16834316772?item=9SIA0ZX9AE2712&nm_mc=otc-hatch&cm_mmc=otc-hatch-_-notebooks-_-acer+america-_-9sia0zx9ae2712).
 
-#### Cons
+##### Cons
 
 - Upgradability because of its motherboard upside-down architecture.
 - Only zoned RGB keyboard.
 
-### Gigabyte AERO 15 2019
+#### Gigabyte AERO 15 2019
 
 The new model displayed in Computex 2019 looks good. Waiting for the reviews.
 
-#### Pros
+##### Pros
 
 - Matching my requirement 5/5.
 
-#### Cons
+##### Cons
 
 - Unavailable at the moment.
 - Web Camera position
 
-### Thinkpad X1 Extreme
+#### Thinkpad X1 Extreme
 
 Waiting for the new model to release with updated hardware including 9th generation Intel CPU's.
 
-#### Cons
+##### Cons
 
 - Unavailable at the moment.
 
-### HP Omen 15 (Latest)
+#### HP Omen 15 (Latest)
 
 - Check out the [review](https://www.youtube.com/watch?v=EloUckKqAKc) by Bob Of All Trades.
 - So far cheapest in my list.
 
-#### Cons
+##### Cons
 
 - More gaming look.
 
-## Skipped Laptops
+### Skipped Laptops
 
-### Lenovo Y740
+#### Lenovo Y740
 
 - Big Charger and small battery.
 
-### Asus ROG Zephyrus s GX701
+#### Asus ROG Zephyrus s GX701
 
 - Lack of thunderbolt support.
 
-## Conclusion
+### Conclusion
 
 This is not the end of this post. Consider it as a draft for now. I will update my thoughts on the non-available machines once they are released.
