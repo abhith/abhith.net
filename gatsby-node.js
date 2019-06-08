@@ -36,13 +36,13 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
-    }
-    allServicesJson {
-      edges {
+      allServicesJson {
+        edges {
           node {
             tags
           }
         }
+      }
     }
   `).then(result => {
     if (result.errors) {
