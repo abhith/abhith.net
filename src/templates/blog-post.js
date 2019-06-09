@@ -10,6 +10,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { DiscussionEmbed } from "disqus-react";
 import BlogRollItem from "../components/BlogRollItem";
 import VideosRoll from "../components/VideosRoll";
+import ServicesRoll from "../components/ServicesRoll";
 import StoriesRollItem from "../components/StoriesRollItem";
 
 export const BlogPostTemplate = ({
@@ -27,35 +28,13 @@ export const BlogPostTemplate = ({
   lastModifiedTimeString,
   dateModifiedSeoFormat,
   datePublishedSeoFormat,
-  slug,
-  relatedPosts,
-  relatedVideos,
-  relatedStories
+  slug
 }) => {
   const PostContent = contentComponent || Content;
   const disqusConfig = {
     shortname: `abhith`,
     config: { identifier: commentId, title }
   };
-
-  let relatedPostsFirstHalf = [];
-  let relatedPostsSecondHalf = [];
-  let relatedStoriesFirstHalf = [];
-  let relatedStoriesSecondHalf = [];
-
-  [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(
-    relatedPosts,
-    i => {
-      return relatedPosts.indexOf(i) % 2 === 0;
-    }
-  );
-
-  [relatedStoriesFirstHalf, relatedStoriesSecondHalf] = partition(
-    relatedStories,
-    i => {
-      return relatedStories.indexOf(i) % 2 === 0;
-    }
-  );
 
   return (
     <div>
@@ -193,48 +172,6 @@ export const BlogPostTemplate = ({
             <div id="comments" className="mt-5">
               <DiscussionEmbed {...disqusConfig} />
             </div>
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Posts</span>
-                </h4>
-              </div>
-              <div className="col-md-6">
-                {relatedPostsFirstHalf.map(({ node }) => {
-                  return <BlogRollItem post={node} key={node.id} />;
-                })}
-              </div>
-              <div className="col-md-6">
-                {relatedPostsSecondHalf.map(({ node }) => {
-                  return <BlogRollItem post={node} key={node.id} />;
-                })}
-              </div>
-            </div>
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Videos</span>
-                </h4>
-                <VideosRoll videos={relatedVideos} />
-              </div>
-            </div>
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Stories</span>
-                </h4>
-              </div>
-              <div className="col-md-6">
-                {relatedStoriesFirstHalf.map(({ node }) => {
-                  return <StoriesRollItem post={node} key={node.id} />;
-                })}
-              </div>
-              <div className="col-md-6">
-                {relatedStoriesSecondHalf.map(({ node }) => {
-                  return <StoriesRollItem post={node} key={node.id} />;
-                })}
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -256,16 +193,36 @@ BlogPostTemplate.propTypes = {
   lastModifiedTime: PropTypes.string,
   lastModifiedTimeString: PropTypes.string,
   dateModifiedSeoFormat: PropTypes.string,
-  datePublishedSeoFormat: PropTypes.string,
-  relatedPosts: PropTypes.array,
-  relatedVideos: PropTypes.array,
-  relatedStories: PropTypes.array
+  datePublishedSeoFormat: PropTypes.string
 };
 
 const BlogPost = ({ data }) => {
   // console.log(`page data is`, data);
 
   const { markdownRemark: post } = data;
+
+  const relatedPosts = data.relatedPosts.edges;
+  const relatedVideos = data.recommendedVideos.edges;
+  const relatedStories = data.recommendedStories.edges;
+
+  let relatedPostsFirstHalf = [];
+  let relatedPostsSecondHalf = [];
+  let relatedStoriesFirstHalf = [];
+  let relatedStoriesSecondHalf = [];
+
+  [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(
+    relatedPosts,
+    i => {
+      return relatedPosts.indexOf(i) % 2 === 0;
+    }
+  );
+
+  [relatedStoriesFirstHalf, relatedStoriesSecondHalf] = partition(
+    relatedStories,
+    i => {
+      return relatedStories.indexOf(i) % 2 === 0;
+    }
+  );
 
   return (
     <Layout>
@@ -297,10 +254,59 @@ const BlogPost = ({ data }) => {
         }
         dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
         datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
-        relatedPosts={data.relatedPosts.edges}
-        relatedVideos={data.recommendedVideos.edges}
-        relatedStories={data.recommendedStories.edges}
       />
+      <div className="container">
+        <div className="row mt-5">
+          <div className="col-md-12">
+            <h4 className="font-weight-bold spanborder">
+              <span>Related Posts</span>
+            </h4>
+          </div>
+          <div className="col-md-6">
+            {relatedPostsFirstHalf.map(({ node }) => {
+              return <BlogRollItem post={node} key={node.id} />;
+            })}
+          </div>
+          <div className="col-md-6">
+            {relatedPostsSecondHalf.map(({ node }) => {
+              return <BlogRollItem post={node} key={node.id} />;
+            })}
+          </div>
+        </div>
+        <div className="row mt-5">
+          <div className="col-md-12">
+            <h4 className="font-weight-bold spanborder">
+              <span>Related Videos</span>
+            </h4>
+            <VideosRoll videos={relatedVideos} />
+          </div>
+        </div>
+        <div className="row mt-5">
+          <div className="col-md-12">
+            <h4 className="font-weight-bold spanborder">
+              <span>Related Stories</span>
+            </h4>
+          </div>
+          <div className="col-md-6">
+            {relatedStoriesFirstHalf.map(({ node }) => {
+              return <StoriesRollItem post={node} key={node.id} />;
+            })}
+          </div>
+          <div className="col-md-6">
+            {relatedStoriesSecondHalf.map(({ node }) => {
+              return <StoriesRollItem post={node} key={node.id} />;
+            })}
+          </div>
+        </div>
+        <div className="row mt-5">
+          <div className="col-md-12">
+            <h4 className="font-weight-bold spanborder">
+              <span>Related Services</span>
+            </h4>
+            <ServicesRoll services={data.recommendedServices.edges} />
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
@@ -382,6 +388,22 @@ export const pageQuery = graphql`
           id
           url
           type
+        }
+      }
+    }
+    recommendedServices: allServicesJson(
+      limit: 2
+      sort: { fields: [date], order: DESC }
+      filter: { tags: { in: $tags } }
+    ) {
+      edges {
+        node {
+          title
+          id
+          tags
+          url
+          description
+          image
         }
       }
     }
