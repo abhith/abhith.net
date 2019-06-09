@@ -5,6 +5,7 @@ import BlogRoll from "../components/BlogRoll";
 import SEO from "../components/seo/SEO";
 import StoriesRoll from "../components/StoriesRoll";
 import VideosRoll from "../components/VideosRoll";
+import ServicesRoll from "../components/ServicesRoll";
 
 class TagRoute extends React.Component {
   render() {
@@ -46,6 +47,12 @@ class TagRoute extends React.Component {
                 <span>Recommended Stories</span>
               </h4>
               <StoriesRoll posts={stories} />
+              <h4 className="font-weight-bold spanborder">
+                <span>Recommended Services</span>
+              </h4>
+              <ServicesRoll
+                services={this.props.data.recommendedServices.edges}
+              />
             </div>
             <div className="col-md-4">
               {/* {% include sidebar-featured.html %}     */}
@@ -72,6 +79,21 @@ export const tagPageQuery = graphql`
       description
       id
       image
+    }
+    recommendedServices: allServicesJson(
+      sort: { fields: [date], order: DESC }
+      filter: { tags: { in: [$tag] } }
+    ) {
+      edges {
+        node {
+          title
+          id
+          tags
+          url
+          description
+          image
+        }
+      }
     }
     recommendedStories: allStoriesJson(
       sort: { fields: [date], order: DESC }
