@@ -29,6 +29,7 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
   - [Highlight Matching Tag](#highlight-matching-tag)
   - [indent-rainbow](#indent-rainbow)
   - [Live Server](#live-server)
+  - [Markdown All in One](#markdown-all-in-one)
   - [npm Intellisense](#npm-intellisense)
   - [Polacode](#polacode)
   - [Peacock](#peacock)
@@ -99,6 +100,10 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 
 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) launch a development local Server with live reload feature for static & dynamic pages
 ![Live Server](https://github.com/ritwickdey/vscode-live-server/raw/master/images/Screenshot/vscode-live-server-animated-demo.gif)
+
+### Markdown All in One
+
+[Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) is All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
 
 ### npm Intellisense
 
