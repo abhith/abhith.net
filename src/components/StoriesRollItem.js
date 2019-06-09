@@ -11,7 +11,7 @@ const StoriesRollItem = ({ post }) => {
         <OutboundLink href={post.url} target="_blank">
           <PreviewCompatibleImage
             imageInfo={{
-              image: post.image,
+              image: `/img/tags/${post.tags[0]}.png`,
               className: "w-100",
               alt: post.title
             }}

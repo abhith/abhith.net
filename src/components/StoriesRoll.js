@@ -9,7 +9,11 @@ const StoriesRoll = props => {
   const { posts } = props;
 
   if (!posts || !posts.length) {
-    return <span>Stories Coming Soon...</span>;
+    return (
+      <div className="mb-5">
+        <span>Stories Coming Soon...</span>
+      </div>
+    );
   }
 
   return (
@@ -42,7 +46,7 @@ const StoriesRoll = props => {
               <OutboundLink href={post.url} target="_blank">
                 <PreviewCompatibleImage
                   imageInfo={{
-                    image: post.image,
+                    image: `/img/tags/${post.tags[0]}.png`,
                     className: "w-100",
                     alt: post.title
                   }}

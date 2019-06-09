@@ -3,7 +3,6 @@
     "title": "SHA 256 and SHA 512 hash examples",
     "url": "https://codeshare.co.uk/blog/sha-256-and-sha-512-hash-examples/",
     "description": "This post contains examples of how to generate a SHA 256 and SHA 512 hash key with the examples in C# and VB.NET. This solution matches the expected result for Ingenico's implementation for their payment gateway.",
-    "image": "https://codeshare.co.uk/media/1024/sha-256-and-sha-512-hash-examples.jpg?width=1910&height=1000&mode=crop&anchor=center",
     "date": "2019-06-06T18:30:28.263Z",
     "tags": ["security"]
   },
@@ -11,7 +10,6 @@
     "title": "Beyond Basics - ASP.Net Core Adding and Using Configuration",
     "url": "https://adamstorr.azurewebsites.net/blog/beyond-basics-aspnetcore-adding-and-using-configuration",
     "description": "Adding strongly typed configuration settings and injected them through dependency injection.",
-    "image": "https://placeimg.com/640/480/tech",
     "date": "2019-06-06T18:30:28.263Z",
     "tags": ["aspnet-core"]
   },
@@ -19,7 +17,6 @@
     "title": "Little great things about Visual Studio 2019 | The Visual Studio Blog",
     "url": "https://devblogs.microsoft.com/visualstudio/little-great-things-about-visual-studio-2019/",
     "description": "A few days ago, we announced the general availability of Visual Studio 2019. But I’ve been using Visual Studio 2019 exclusively since the first internal build – long before the release of Preview 1 in December of 2018. During this time,",
-    "image": "https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2019/04/git-pull.png",
     "date": "2019-05-15T18:30:28.263Z",
     "tags": ["visual-studio"]
   },
@@ -27,7 +24,6 @@
     "title": "View Clipboard Ring History in Visual Studio 2019 - Daily .NET Tips",
     "url": "https://dailydotnettips.com/view-clipboard-ring-history-in-visual-studio-2019/",
     "description": "You can now view clipboard ring history in Visual Studio 2019. Clipboard ring is all about copy multiple code block, and past them as and when need",
-    "image": "https://i1.wp.com/dailydotnettips.com/wp-content/uploads/2019/04/View-Clipboard-ring-history-in-Visual-Studio-2019.png?fit=1702%2C1092&ssl=1",
     "date": "2019-05-15T18:42:21.638Z",
     "tags": ["visual-studio"]
   },
@@ -35,7 +31,6 @@
     "title": "A Practical Example Of Asynchronous Programming in C# and ASP.NET",
     "url": "https://exceptionnotfound.net/asynchronous-programming-asp-net-csharp-practical-guide-refactoring/",
     "description": "Let's take an existing synchronous ASP.NET web app and begin refactoring it to use asynchronous programming.  Sample C# project included.",
-    "image": "https://exceptionnotfound.net/content/images/2019/02/object-model-2.png",
     "date": "2019-05-25T18:42:21.638Z",
     "tags": ["asynchronous-programming", "c-sharp"]
   },
@@ -43,14 +38,12 @@
     "title": "How to Add a Favicon to your Gatsby Site | Alex Trost",
     "url": "https://www.atrost.com/posts/add-favicon-gatsby/",
     "description": "Learn how to quickly add a favicon to your Gatsby site by utilizing React Helmet",
-    "image": "https://www.atrost.com/static/525431a2f5fb65a9b2433fb66961b4c4/ace1a/add-favicon-gatsby-cover.png",
     "date": "2019-06-06T18:42:21.638Z",
     "tags": ["gatsby"]
   },
   {
     "title": "Accessing Configuration in .NET Core Test Projects",
     "description": ".NET Core provides a clean configuration system and in ASP.NET Core that code is automatically configured for you. In test and other non-Web projects however you have to manually configure the configuration provider yourself. In this post I look at a couple of ways to set up a configuration provider both using raw configuration objects or by explicitly configuring through the depedency injection system.",
-    "image": "https://weblog.west-wind.com/images/2018/Accessing-Configuration-.NET-Core-Test-Projects/ConfigurationWheels.jpg",
     "url": "https://weblog.west-wind.com/posts/2018/Feb/18/Accessing-Configuration-in-NET-Core-Test-Projects",
     "date": "2019-06-06T19:42:21.638Z",
     "tags": ["dotnet-core"]
@@ -58,7 +51,6 @@
   {
     "title": "How to Connect to Your Local SQL Server From Inside Docker",
     "description": "If you are running an ASP.NET Core application from Docker and connecting to a SQL Server running on your PC then you might find you can't connect to it. In this post we'll look at what you need to do to make sure your containerized app can access SQL Server hosted on your own PC.",
-    "image": "https://static1.squarespace.com/static/56894e581c1210fead06f878/t/59c79919a8b2b0dc32a34dc1/1506253090337/SQLServerOverTcpIpEnabled.PNG?format=1500w",
     "url": "https://jack-vanlightly.com/blog/2017/9/24/how-to-connect-to-your-local-sql-server-from-inside-docker",
     "date": "2019-06-06T16:42:21.638Z",
     "tags": ["sql-server", "docker"]
@@ -66,7 +58,6 @@
   {
     "title": "The Clean Architecture",
     "description": "By Robert C. Martin (Uncle Bob)",
-    "image": "https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg",
     "url": "http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html",
     "date": "2012-08-13T16:42:21.638Z",
     "tags": ["architecture"]
@@ -74,7 +65,6 @@
   {
     "title": "Docker but no declaration was found in the volumes",
     "description": "How to solve",
-    "image": "https://placeimg.com/640/480/tech",
     "url": "https://azizkhani.github.io/2017-08-24-docker-but-no-declaration-was-found-in-the-volumes/",
     "date": "2017-08-24T16:42:21.638Z",
     "tags": ["docker"]

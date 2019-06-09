@@ -82,7 +82,6 @@ export const pageQuery = graphql`
           date(formatString: "MMM DD, YYYY")
           description
           id
-          image
           tags
           url
         }
