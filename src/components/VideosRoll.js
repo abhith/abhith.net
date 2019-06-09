@@ -6,7 +6,11 @@ const VideosRoll = props => {
   const { videos } = props;
 
   if (!videos || !videos.length) {
-    return <span>Videos Coming Soon...</span>;
+    return (
+      <div className="mb-5">
+        <span>Videos Coming Soon...</span>
+      </div>
+    );
   }
 
   return (
