@@ -8,6 +8,14 @@
     "tags": ["security"]
   },
   {
+    "title": "Beyond Basics - ASP.Net Core Adding and Using Configuration",
+    "url": "https://adamstorr.azurewebsites.net/blog/beyond-basics-aspnetcore-adding-and-using-configuration",
+    "description": "Adding strongly typed configuration settings and injected them through dependency injection.",
+    "image": "https://placeimg.com/640/480/tech",
+    "date": "2019-06-06T18:30:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Little great things about Visual Studio 2019 | The Visual Studio Blog",
     "url": "https://devblogs.microsoft.com/visualstudio/little-great-things-about-visual-studio-2019/",
     "description": "A few days ago, we announced the general availability of Visual Studio 2019. But I’ve been using Visual Studio 2019 exclusively since the first internal build – long before the release of Preview 1 in December of 2018. During this time,",

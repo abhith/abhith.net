@@ -11,6 +11,7 @@ commentId: 'best-laptop-for-programming'
 tags:
   - best-series
   - hardware
+  - shopping-guide
 ---
 
 For the past month, I have been in the search for the best laptop, that will help me to do things faster. Best in the sense which worth every penny and yet strong in specs, not a high-end gaming machine.
@@ -19,7 +20,7 @@ For the past month, I have been in the search for the best laptop, that will hel
 
 Laptops I used earlier are,
 
-- Dell Inspiron XXXX
+- Dell Inspiron (Exact series don't remember)
 - HP Pro Book
 - Lenovo Y520 (256 SSD)
 - Lenovo G40
