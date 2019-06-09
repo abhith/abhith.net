@@ -1,6 +1,6 @@
 [
   {
-    "title": "SmarterASP.net - Unlimited ASP.NET Web Hosting",
+    "title": "SmarterASP.net",
     "url": "https://www.SmarterASP.NET/index?r=100571651",
     "description": "ASP.NET Hosting by SmarterASP.net. Unlimited ASP.NET Hosting Plans Starting at $2.95 a month.",
     "image": "https://www.SmarterASP.NET/affiliate/300x250.gif",
@@ -13,10 +13,10 @@
     "description": "Design engaging images for your social media posts.",
     "image": "https://d33v4339jhl8k0.cloudfront.net/docs/assets/56e8039cc697911471461d2c/images/5c9a4dc20428633d2cf40feb/file-gujF776n6l.png",
     "date": "2019-06-08T18:30:28.263Z",
-    "tags": ["image"]
+    "tags": ["design-tool"]
   },
   {
-    "title": "Slugify - The-online-slug-generator",
+    "title": "Slugify",
     "url": "https://blog.tersmitten.nl/slugify/",
     "description": "The-online-slug-generator.",
     "image": "https://placeimg.com/640/480/tech",
@@ -32,11 +32,19 @@
     "tags": ["json"]
   },
   {
-    "title": "HEY META - Website Meta Tag Check",
+    "title": "HEY META",
     "url": "https://www.heymeta.com",
     "description": "Check and improve how search engines and social media websites see and display your website.",
     "image": "https://placeimg.com/640/480/tech",
     "date": "2019-05-08T18:30:28.263Z",
     "tags": ["seo"]
+  },
+  {
+    "title": "Graphic Designer | BeFunky",
+    "url": "https://www.befunky.com/features/graphic-designer/",
+    "description": "BeFunky's Graphic Designer offers easy-to-use design tools, empowering you to create stunning, professional quality designs.",
+    "image": "https://placeimg.com/640/480/tech",
+    "date": "2019-05-08T18:30:28.263Z",
+    "tags": ["design-tool"]
   }
 ]
