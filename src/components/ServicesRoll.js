@@ -22,7 +22,7 @@ const ServicesRoll = props => {
           <div className="col-lg-6 mb-4" key={service.id}>
             <div className="p-4 border rounded">
               <div className="row">
-                <div className="col-md-3 mb-4 mb-md-0">
+                {/* <div className="col-md-3 mb-4 mb-md-0">
                   <img
                     alt={service.title}
                     src={`/img/tags/${service.tags[0]}.png`}
@@ -30,8 +30,8 @@ const ServicesRoll = props => {
                     height="80"
                     width="80"
                   />
-                </div>
-                <div className="col-md-9">
+                </div> */}
+                <div className="col-md-12">
                   <OutboundLink target="_blank" href={service.url}>
                     <h4 className="text-dark mb-0"> {service.title} </h4>
                   </OutboundLink>
