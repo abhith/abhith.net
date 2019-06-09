@@ -10,8 +10,8 @@ const StoriesRoll = props => {
 
   if (!posts || !posts.length) {
     return (
-      <div className="mb-5">
-        <span>Stories Coming Soon...</span>
+      <div>
+        <span className="text-muted d-block mb-1">Stories Coming Soon...</span>
       </div>
     );
   }

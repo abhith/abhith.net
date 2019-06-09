@@ -7,8 +7,8 @@ const VideosRoll = props => {
 
   if (!videos || !videos.length) {
     return (
-      <div className="mb-5">
-        <span>Videos Coming Soon...</span>
+      <div>
+        <span className="text-muted d-block mb-1">Videos Coming Soon...</span>
       </div>
     );
   }
