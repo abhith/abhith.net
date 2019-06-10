@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import TagImage from "./TagImage";
 import Tags from "./Tags";
 
 const StoriesRollItem = ({ post }) => {
@@ -9,13 +9,7 @@ const StoriesRollItem = ({ post }) => {
     <div className="mb-3 d-flex align-items-center">
       <div className="col-md-4">
         <OutboundLink href={post.url} target="_blank">
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: `/img/tags/${post.tags[0]}.png`,
-              className: "w-100",
-              alt: post.title
-            }}
-          />
+          <TagImage tagSlug={post.tags[0]} />
         </OutboundLink>
       </div>
       <div>
