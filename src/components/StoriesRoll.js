@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-// import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import TagImage from "./TagImage";
 
 import Tags from "./Tags";
