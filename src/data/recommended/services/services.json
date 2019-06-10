@@ -46,5 +46,13 @@
     "image": "https://placeimg.com/640/480/tech",
     "date": "2019-05-08T18:30:28.263Z",
     "tags": ["design-tool"]
+  },
+  {
+    "title": "Renovate | Automated Dependency Updates",
+    "url": "https://github.com/apps/renovate",
+    "description": "Renovate Bot keeps source code dependencies up-to-date using automated Pull Requests.",
+    "image": "https://placeimg.com/640/480/tech",
+    "date": "2019-05-08T18:30:28.263Z",
+    "tags": ["github"]
   }
 ]
