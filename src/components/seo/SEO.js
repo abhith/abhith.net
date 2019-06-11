@@ -18,7 +18,7 @@ function SEO({
   dateModified,
   datePublished
 }) {
-  const { site, posts, stories, videos } = useStaticQuery(
+  const { site, posts, stories, videos, services } = useStaticQuery(
     graphql`
       query {
         site {
@@ -41,6 +41,9 @@ function SEO({
         stories: allStoriesJson {
           totalCount
         }
+        services: allServicesJson {
+          totalCount
+        }
         posts: allMarkdownRemark(
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
         ) {
@@ -52,7 +55,9 @@ function SEO({
 
   const sharingText = `Sharing ${posts.totalCount} posts, ${
     videos.totalCount
-  } videos and ${stories.totalCount} developer stories with the world.`;
+  } videos, ${stories.totalCount} developer stories and ${
+    services.totalCount
+  } tools/services with the world.`;
 
   const metaDescription =
     description || `${site.siteMetadata.description} ${sharingText}`;
