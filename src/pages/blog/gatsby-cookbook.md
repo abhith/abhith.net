@@ -20,7 +20,6 @@ I <3 Gatsby. This article contains some recipes which will be useful if you are 
 - [Using Google fonts in Gatsby](#using-google-fonts-in-gatsby)
 - [Using icons like Font Awesome in Gatsby](#using-icons-like-font-awesome-in-gatsby)
 - [Disqus integration in a Gatsby website](#disqus-integration-in-a-gatsby-website)
-- [Additional Resource](#additional-resource)
 
 #### Using Google fonts in Gatsby
 
@@ -60,7 +59,7 @@ You can change the font family and variants or number of fonts in the above conf
 
 Using [react-icons](https://github.com/react-icons/react-icons).
 
-Add it to your packages. 
+Add it to your packages.
 
 ```bash
 npm install react-icons --save
@@ -108,9 +107,5 @@ And now you can render the Disqus section by adding
 ```jsx
 <DiscussionEmbed {...disqusConfig} />
 ```
-
-#### Additional Resource
-
-- [Gatsby Blog with Disqus comments | janosh.io](https://janosh.io/blog/disqus-comments/)
 
 More recipes will be added as I explore **Gatsby**.
