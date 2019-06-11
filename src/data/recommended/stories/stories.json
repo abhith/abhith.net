@@ -14,11 +14,46 @@
     "tags": ["security"]
   },
   {
+    "title": "RxJS recipes: ‘forkJoin’ with the progress of completion for bulk network requests in Angular",
+    "url": "https://blog.angularindepth.com/rxjs-recipes-forkjoin-with-the-progress-of-completion-for-bulk-network-requests-in-angular-5d585a77cce1",
+    "description": "Adding customization to existing RxJS functions.",
+    "date": "2019-06-11T08:30:28.263Z",
+    "tags": ["angular","rxjs"]
+  },
+  {
     "title": "Beyond Basics - ASP.Net Core Adding and Using Configuration",
     "url": "https://adamstorr.azurewebsites.net/blog/beyond-basics-aspnetcore-adding-and-using-configuration",
     "description": "Adding strongly typed configuration settings and injected them through dependency injection.",
     "date": "2019-06-06T18:30:28.263Z",
     "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Implementing Sign In with Apple in ASP.NET Core",
+    "url": "https://www.scottbrady91.com/OpenID-Connect/Implementing-Sign-In-with-Apple-in-ASPNET-Core",
+    "description": "A primer on Sign In with Apple, including an example integration in ASP.NET Core",
+    "date": "2019-06-11T08:30:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Validation in ASP .NET Core",
+    "url": "https://wakeupandcode.com/validation-in-asp-net-core/",
+    "description": "This is the twenty-second of a series of posts on ASP .NET Core in 2019 - Wake Up And Code!",
+    "date": "2019-05-11T08:30:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Worker Service in ASP .NET Core",
+    "url": "https://wakeupandcode.com/worker-service-in-asp-net-core/",
+    "description": "This is the twenty-third of a series of posts on ASP .NET Core in 2019 - Wake Up And Code!",
+    "date": "2019-06-11T08:30:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Automatic reconnects with SignalR 3.0",
+    "url": "https://www.jerriepelser.com/blog/automatic-reconnects-signalr/",
+    "description": "In ASP.NET Core 3.0, Microsoft is updating the SignalR client by adding the ability to automatically reconnect when a connection is dropped. This blog post will show you how you can use this feature.",
+    "date": "2019-06-11T08:30:28.263Z",
+    "tags": ["aspnet-core", "signalr"]
   },
   {
     "title": "Little great things about Visual Studio 2019 | The Visual Studio Blog",
@@ -46,6 +81,13 @@
     "url": "https://www.atrost.com/posts/add-favicon-gatsby/",
     "description": "Learn how to quickly add a favicon to your Gatsby site by utilizing React Helmet",
     "date": "2019-06-06T18:42:21.638Z",
+    "tags": ["gatsby"]
+  },
+  {
+    "title": "Gatsby Blog with Disqus comments",
+    "url": "https://janosh.io/blog/disqus-comments",
+    "description": "If you’re running a Gatsby blog (or any React-powered blog for that matter) and you’d like to add comment functionality, rest assured, it’s very easy.",
+    "date": "2019-03-03T18:42:21.638Z",
     "tags": ["gatsby"]
   },
   {
