@@ -60,6 +60,7 @@ class TagRoute extends React.Component {
 
     const stories = data.recommendedStories.edges;
     const videos = data.recommendedVideos.edges;
+    const services = data.recommendedServices.edges;
 
     return (
       <Layout>
@@ -77,19 +78,34 @@ class TagRoute extends React.Component {
               <h4 className="font-weight-bold spanborder text-capitalize">
                 <span>{tag}</span>
               </h4>
+
               <BlogRoll posts={posts} />
-              <h4 className="font-weight-bold spanborder">
-                <span>Recommended Videos</span>
-              </h4>
-              <VideosRoll videos={videos} />
-              <h4 className="font-weight-bold spanborder">
-                <span>Recommended Stories</span>
-              </h4>
-              <StoriesRoll posts={stories} />
-              <h4 className="font-weight-bold spanborder">
-                <span>Recommended Services</span>
-              </h4>
-              <ServicesRoll services={data.recommendedServices.edges} />
+
+              {videos.length > 0 && (
+                <div>
+                  <h4 className="font-weight-bold spanborder">
+                    <span>Recommended Videos</span>
+                  </h4>
+                  <VideosRoll videos={videos} />
+                </div>
+              )}
+
+              {stories.length > 0 && (
+                <div>
+                  <h4 className="font-weight-bold spanborder">
+                    <span>Recommended Stories</span>
+                  </h4>
+                  <StoriesRoll posts={stories} />
+                </div>
+              )}
+              {services.length > 0 && (
+                <div>
+                  <h4 className="font-weight-bold spanborder">
+                    <span>Recommended Services</span>
+                  </h4>
+                  <ServicesRoll services={services} />
+                </div>
+              )}
             </div>
             <div className="col-md-4">
               {/* {% include sidebar-featured.html %}     */}
