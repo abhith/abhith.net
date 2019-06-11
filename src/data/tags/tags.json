@@ -60,6 +60,12 @@
     "image": "gatsby.png"
   },
   {
+    "title": "Jobs",
+    "slug": "jobs",
+    "description": "jobs related",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": ".NET Core",
     "slug": "dotnet-core",
     "description": ".NET is an Open Source Developer Platform for Building Apps.",
