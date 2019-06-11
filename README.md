@@ -6,28 +6,22 @@ This repo serves the source code for [www.abhith.net](https://www.abhith.net/), 
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
-## Features ##
+## Main Sections
 
-- A simple landing page with blog functionality built with Netlify CMS
-- Editabe Pages: Landing, About, Blog-Collection
-- Create Blog posts from Netlify CMS
-- Tags: Separate page for posts under each tag
-- Basic directory organization
-- Uses [mundana-theme](https://github.com/wowthemesnet/mundana-theme-jekyll)
-- Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
-- Uses `gatbsy-image` with Netlify-CMS preview support
-- Separate components for everything
-- Netlify deploy configuration
-- Netlify function support, see `src/lambda` folder
-- Perfect score on Lighthouse for SEO, Accessibility and Performance
-- ..and more
+Following are the main sections apart from my [blog](https://www.abhith.net/blog).
 
-## Prerequisites
+### Developer Stories
 
-- Node (I recommend using v8.2.0 or higher)
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+I read a lot, and that's how I stay updated about what's going on around. Here I am listing out some of the stories which I find useful. Find them [here](https://www.abhith.net/recommended/stories/).
 
-# CONTRIBUTING
+### Videos
 
-Contributions are always welcome, no matter how large or small. Before contributing,
-please read the [code of conduct](CODE_OF_CONDUCT.md).
+Similar to Developer Stories, here I am listing videos which worth sharing. Watch them [here](https://www.abhith.net/recommended/videos/)
+
+### Services
+
+There are plenty of online services available nowadays. Here I am sharing some of the useful ones which I explored yet.
+
+## CONTRIBUTING
+
+You can also suggest me good technical articles, videos and freemium tools and services. Contributions are always welcome, no matter how large or small. Before contributing, please read the [code of conduct](CODE_OF_CONDUCT.md).
