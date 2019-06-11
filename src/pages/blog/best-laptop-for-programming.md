@@ -53,12 +53,12 @@ Model Name: PT515-51-73EG
 
 ##### Cons
 
-- Upgradability because of its motherboard upside-down architecture.
+- Not easily upgradable because of its inverted motherboard construction.
 - Only zoned RGB keyboard.
 
 #### Gigabyte AERO 15 2019
 
-The new model displayed in Computex 2019 looks good. Waiting for the reviews.
+The new model displayed in the Computex 2019 looks good. Waiting for the reviews.
 
 ##### Pros
 
