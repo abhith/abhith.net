@@ -9,18 +9,57 @@ import ServicesRoll from "../components/ServicesRoll";
 
 class TagRoute extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges;
-    const tagDetails = this.props.data.tagDetails;
+    const data = this.props.data;
+
+    const posts = data.allMarkdownRemark.edges;
+    const tagDetails = data.tagDetails;
 
     const tag =
       tagDetails === null ? this.props.pageContext.tag : tagDetails.title;
-    const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? "" : "s"
-    } tagged with “${tag}”`;
 
-    const stories = this.props.data.recommendedStories.edges;
-    const videos = this.props.data.recommendedVideos.edges;
+    const totalPostCount = data.allMarkdownRemark.totalCount;
+    const totalVideoCount = data.recommendedVideos.totalCount;
+    const totalServiceCount = data.recommendedServices.totalCount;
+    const totalStoriesCount = data.recommendedStories.totalCount;
+    let summary = [];
+
+    if (totalPostCount > 0) {
+      summary.push(`${totalPostCount} post${totalPostCount === 1 ? "" : "s"}`);
+    }
+
+    if (totalVideoCount > 0) {
+      summary.push(
+        `${totalVideoCount} video${totalVideoCount === 1 ? "" : "s"}`
+      );
+    }
+
+    if (totalStoriesCount > 0) {
+      summary.push(
+        `${totalStoriesCount} developer stor${
+          totalStoriesCount === 1 ? "y" : "ies"
+        }`
+      );
+    }
+
+    if (totalServiceCount > 0) {
+      summary.push(
+        `${totalServiceCount} tool(s)/service${
+          totalServiceCount === 1 ? "" : "s"
+        }`
+      );
+    }
+
+    let tagHeader;
+    if (summary.length === 1) {
+      tagHeader = `${summary[0]} tagged with “${tag}”`;
+    } else {
+      tagHeader = `${summary
+        .join(", ")
+        .replace(/, ([^,]*)$/, " and $1")} tagged with “${tag}”`;
+    }
+
+    const stories = data.recommendedStories.edges;
+    const videos = data.recommendedVideos.edges;
 
     return (
       <Layout>
@@ -50,9 +89,7 @@ class TagRoute extends React.Component {
               <h4 className="font-weight-bold spanborder">
                 <span>Recommended Services</span>
               </h4>
-              <ServicesRoll
-                services={this.props.data.recommendedServices.edges}
-              />
+              <ServicesRoll services={data.recommendedServices.edges} />
             </div>
             <div className="col-md-4">
               {/* {% include sidebar-featured.html %}     */}
@@ -84,6 +121,7 @@ export const tagPageQuery = graphql`
       sort: { fields: [date], order: DESC }
       filter: { tags: { in: [$tag] } }
     ) {
+      totalCount
       edges {
         node {
           title
@@ -99,6 +137,7 @@ export const tagPageQuery = graphql`
       sort: { fields: [date], order: DESC }
       filter: { tags: { in: [$tag] } }
     ) {
+      totalCount
       edges {
         node {
           title
@@ -114,6 +153,7 @@ export const tagPageQuery = graphql`
       sort: { fields: [date], order: DESC }
       filter: { tags: { in: [$tag] } }
     ) {
+      totalCount
       edges {
         node {
           id
@@ -123,7 +163,6 @@ export const tagPageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
