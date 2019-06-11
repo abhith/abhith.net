@@ -5,7 +5,7 @@ description: My favorite extensions for Visual Studio Code
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-02-12T17:50:10.699Z
-lastModificationTime: 2019-05-07T14:00:00.000Z
+lastModificationTime: 2019-06-11T14:00:00.000Z
 image: /img/1200px-visual_studio_code_118.png
 tags:
   - visual-studio-code
@@ -30,6 +30,8 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
   - [indent-rainbow](#indent-rainbow)
   - [Live Server](#live-server)
   - [Markdown All in One](#markdown-all-in-one)
+  - [markdownlint](#markdownlint)
+  - [Markdown Shortcuts](#markdown-shortcuts)
   - [npm Intellisense](#npm-intellisense)
   - [Polacode](#polacode)
   - [Peacock](#peacock)
@@ -104,6 +106,14 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 ### Markdown All in One
 
 [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) is All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
+
+### markdownlint
+
+[markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) provides Markdown linting and style checking for Visual Studio Code.
+
+### Markdown Shortcuts
+
+[Markdown Shortcuts](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts) provide Shortcuts for Markdown editing.
 
 ### npm Intellisense
 
