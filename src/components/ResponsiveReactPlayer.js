@@ -6,6 +6,7 @@ const ResponsivePlayer = props => {
   return (
     <div className="player-wrapper">
       <ReactPlayer
+        light={true}
         className="react-player"
         url={props.url}
         width="100%"
