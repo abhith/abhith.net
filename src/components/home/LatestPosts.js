@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
-import { kebabCase } from "lodash";
 import BackgroundImage from "gatsby-background-image";
 import BlogRollItem from "../BlogRollItem";
+import Tags from "../Tags";
 
 function LatestPosts() {
   return (
@@ -37,23 +37,7 @@ function LatestPosts() {
                       <p className="excerpt">{node.frontmatter.description}</p>
                       <div>
                         <small className="d-block text-muted">
-                          In{" "}
-                          <span className="catlist">
-                            {node.frontmatter.tags &&
-                            node.frontmatter.tags.length
-                              ? node.frontmatter.tags.map(tag => (
-                                  <React.Fragment key={tag}>
-                                    <Link
-                                      className="text-capitalize text-muted smoothscroll"
-                                      to={`/tags/${kebabCase(tag)}/`}
-                                    >
-                                      {tag}
-                                    </Link>
-                                    <span className="sep">, </span>
-                                  </React.Fragment>
-                                ))
-                              : null}
-                          </span>{" "}
+                          In <Tags tags={node.frontmatter.tags}></Tags>
                         </small>
                         <small className="text-muted">
                           {node.frontmatter.date} &middot;{" "}
@@ -101,7 +85,7 @@ export const query = graphql`
             description
             image {
               childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
+                fluid(maxHeight: 200, quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -131,7 +115,7 @@ export const query = graphql`
             tags
             image {
               childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
+                fluid(maxWidth: 375, quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
