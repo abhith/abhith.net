@@ -9,14 +9,6 @@ import { truncate } from "lodash";
 const StoriesRoll = props => {
   const { posts } = props;
 
-  if (!posts || !posts.length) {
-    return (
-      <div>
-        <span className="text-muted d-block mb-1">Stories Coming Soon...</span>
-      </div>
-    );
-  }
-
   return (
     <>
       {posts &&
