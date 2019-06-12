@@ -49,6 +49,13 @@
     "tags": ["aspnet-core"]
   },
   {
+    "title": "Introducing Microsoft.FeatureManagement",
+    "url": "https://andrewlock.net/introducing-the-microsoft-featuremanagement-library-adding-feature-flags-to-an-asp-net-core-app-part-1/",
+    "description": "Adding feature flags to an ASP.NET Core app - Part 1",
+    "date": "2019-06-12T09:03:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Automatic reconnects with SignalR 3.0",
     "url": "https://www.jerriepelser.com/blog/automatic-reconnects-signalr/",
     "description": "In ASP.NET Core 3.0, Microsoft is updating the SignalR client by adding the ability to automatically reconnect when a connection is dropped. This blog post will show you how you can use this feature.",
