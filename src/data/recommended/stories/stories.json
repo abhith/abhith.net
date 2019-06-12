@@ -14,11 +14,18 @@
     "tags": ["security"]
   },
   {
+    "title": "17 Angular Libraries You Should Know About",
+    "url": "https://www.telerik.com/blogs/17-angular-libraries-you-should-know-about",
+    "description": "While it's fine to avoid using external libraries during development sometimes, they can help reduce development time significantly. Here, we list some useful Angular libraries that can help as you develop applications with Angular.",
+    "date": "2019-06-12T19:30:28.263Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "RxJS recipes: ‘forkJoin’ with the progress of completion for bulk network requests in Angular",
     "url": "https://blog.angularindepth.com/rxjs-recipes-forkjoin-with-the-progress-of-completion-for-bulk-network-requests-in-angular-5d585a77cce1",
     "description": "Adding customization to existing RxJS functions.",
     "date": "2019-06-11T08:30:28.263Z",
-    "tags": ["angular","rxjs"]
+    "tags": ["angular", "rxjs"]
   },
   {
     "title": "Beyond Basics - ASP.Net Core Adding and Using Configuration",
