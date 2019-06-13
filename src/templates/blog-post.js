@@ -12,6 +12,20 @@ import BlogRollItem from "../components/BlogRollItem";
 import VideosRoll from "../components/VideosRoll";
 import ServicesRoll from "../components/ServicesRoll";
 import StoriesRollItem from "../components/StoriesRollItem";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  RedditShareButton,
+  RedditIcon,
+  PocketShareButton,
+  PocketIcon
+} from "react-share";
 
 export const BlogPostTemplate = ({
   content,
@@ -28,13 +42,16 @@ export const BlogPostTemplate = ({
   lastModifiedTimeString,
   dateModifiedSeoFormat,
   datePublishedSeoFormat,
-  slug
+  slug,
+  siteMetadata
 }) => {
   const PostContent = contentComponent || Content;
   const disqusConfig = {
     shortname: `abhith`,
     config: { identifier: commentId, title }
   };
+
+  const pageUrl = `${siteMetadata.siteUrl}${slug}`;
 
   return (
     <div>
@@ -126,6 +143,59 @@ export const BlogPostTemplate = ({
       </div>
       <div className="container-lg pt-4 pb-4">
         <div className="row justify-content-center">
+          <div className="col-lg-2 pr-4 mb-4 col-md-12">
+            <div className="sticky-top sticky-top-offset text-center">
+              <div className="text-muted">Share this</div>
+              <div className="share d-inline-block">
+                <div className="a2a_kit a2a_kit_size_32 a2a_default_style">
+                  <FacebookShareButton
+                    url={pageUrl}
+                    quote={title}
+                    className="btn btn-round"
+                  >
+                    <FacebookIcon size={44} round />
+                  </FacebookShareButton>
+                  <TwitterShareButton
+                    url={pageUrl}
+                    className="btn btn-round"
+                    title={title}
+                    via={siteMetadata.social.twitter.split("@").join("")}
+                    hashtags={tags}
+                  >
+                    <TwitterIcon size={44} round></TwitterIcon>
+                  </TwitterShareButton>
+                  <LinkedinShareButton
+                    url={pageUrl}
+                    className="btn btn-round"
+                    title={title}
+                  >
+                    <LinkedinIcon size={44} round></LinkedinIcon>
+                  </LinkedinShareButton>
+                  <RedditShareButton
+                    url={pageUrl}
+                    className="btn btn-round"
+                    title={title}
+                  >
+                    <RedditIcon size={44} round></RedditIcon>
+                  </RedditShareButton>
+                  <PocketShareButton
+                    url={pageUrl}
+                    className="btn btn-round"
+                    title={title}
+                  >
+                    <PocketIcon size={44} round></PocketIcon>
+                  </PocketShareButton>
+                  <WhatsappShareButton
+                    url={pageUrl}
+                    className="btn btn-round"
+                    title={title}
+                  >
+                    <WhatsappIcon size={44} round></WhatsappIcon>
+                  </WhatsappShareButton>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="col-md-12 col-lg-8">
             <PostContent content={content} className={`article-post`} />
             {tags && tags.length ? (
@@ -193,7 +263,8 @@ BlogPostTemplate.propTypes = {
   lastModifiedTime: PropTypes.string,
   lastModifiedTimeString: PropTypes.string,
   dateModifiedSeoFormat: PropTypes.string,
-  datePublishedSeoFormat: PropTypes.string
+  datePublishedSeoFormat: PropTypes.string,
+  siteMetadata: PropTypes.object
 };
 
 const BlogPost = ({ data }) => {
@@ -255,6 +326,7 @@ const BlogPost = ({ data }) => {
         }
         dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
         datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
+        siteMetadata={data.site.siteMetadata}
       />
       <div className="container">
         {relatedPosts.length > 0 && (
@@ -365,6 +437,10 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
+        siteUrl
+        social {
+          twitter
+        }
         author {
           name
           minibio

@@ -39,6 +39,7 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.6.1",
     "react-player": "^1.11.0",
+    "react-share": "^3.0.0",
     "uuid": "^3.2.1"
   },
   "keywords": [
