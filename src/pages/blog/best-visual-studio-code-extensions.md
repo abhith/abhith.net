@@ -38,6 +38,7 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
   - [npm Intellisense](#npm-intellisense)
   - [Polacode](#polacode)
   - [Peacock](#peacock)
+  - [Turbo Console Log](#turbo-console-log)
 - [Themes](#themes)
   - [Material Icon Theme](#material-icon-theme)
   - [Material Theme](#material-theme)
@@ -132,6 +133,10 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 ### Peacock
 
 [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) subtly change the workspace color of your workspace. Ideal when you have multiple VS Code instances and you want to quickly identify which is which.
+
+### Turbo Console Log
+
+[Turbo Console Log](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log) enables automating the process of writing meaningful log messages.
 
 ## Themes
 
