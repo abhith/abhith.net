@@ -1,12 +1,54 @@
 [
   {
+    "title": "Largest FREE Microsoft eBook Giveaway! I’m Giving Away MILLIONS of FREE Microsoft eBooks again, including: Windows 10, Office 365, Office 2016, Power BI, Azure, Windows 8.1, Office 2013, SharePoint 2016, SharePoint 2013, Dynamics CRM, PowerShell, Exchange Server, System Center, Cloud, SQL Server and more!",
+    "url": "https://blogs.msdn.microsoft.com/mssmallbiz/2017/07/11/largest-free-microsoft-ebook-giveaway-im-giving-away-millions-of-free-microsoft-ebooks-again-including-windows-10-office-365-office-2016-power-bi-azure-windows-8-1-office-2013-sharepo/",
+    "description": "By Eric Ligman, Microsoft Director of Business & Sales Operations Blog",
+    "date": "2019-06-13T16:16:28.263Z",
+    "tags": ["microsoft", "downloads", "ebooks"]
+  },
+  {
+    "title": "Angular Tutorial For Beginners - Part Seven - Using Pipes In Angular",
+    "url": "https://www.c-sharpcorner.com/article/angular-tutorial-for-beginners-part-seven-using-pipes-in-angular/",
+    "description": "In this aticle, you will learn how to use pipes in Angular.",
+    "date": "2019-06-13T15:54:28.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "How to Debug LINQ queries in C#",
+    "url": "https://michaelscodingspot.com/debug-linq-in-csharp/",
+    "description": "By michaelscodingspot.com",
+    "date": "2019-06-13T15:49:28.263Z",
+    "tags": ["debug", "linq", "c-sharp"]
+  },
+  {
+    "title": "Hello, world!",
+    "url": "https://medium.com/android-microsoft/hello-world-57fc0630d47c",
+    "description": "First blogpost where we are going to talk about many things. How we work at Microsoft, what we do, where we are, our community, etc.",
+    "date": "2019-06-13T15:30:28.263Z",
+    "tags": ["microsoft", "android"]
+  },
+  {
+    "title": "How to create your own VS Code extension pack",
+    "url": "https://dev.to/thegeoffstevens/how-to-create-your-own-vs-code-extension-pack-nab",
+    "description": "Build and launch an extension pack for VS Code",
+    "date": "2019-06-13T14:30:28.263Z",
+    "tags": ["vscode", "ide"]
+  },
+  {
+    "title": "How to Use the DevTools Network Filter Effectively",
+    "url": "https://www.telerik.com/blogs/how-to-use-the-devtools-network-filter-effectively",
+    "description": "In this post we’ll go over the Network filter feature of Chrome DevTools to show you how to use it effectively in various use cases.",
+    "date": "2019-06-13T13:30:28.263Z",
+    "tags": ["debug"]
+  },
+  {
     "title": "The Paradox of Abstraction: When Good Code is Bad Code",
     "url": "https://michaelnthiessen.com/paradox-of-abstraction",
     "description": "By Michael Thiessen",
     "date": "2019-06-10T18:30:28.263Z",
     "tags": ["code"]
   },
-  {
+    {
     "title": "SHA 256 and SHA 512 hash examples",
     "url": "https://codeshare.co.uk/blog/sha-256-and-sha-512-hash-examples/",
     "description": "This post contains examples of how to generate a SHA 256 and SHA 512 hash key with the examples in C# and VB.NET. This solution matches the expected result for Ingenico's implementation for their payment gateway.",
