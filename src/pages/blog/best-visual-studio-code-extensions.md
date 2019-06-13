@@ -5,7 +5,7 @@ description: My favorite extensions for Visual Studio Code
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-02-12T17:50:10.699Z
-lastModificationTime: 2019-06-11T14:00:00.000Z
+lastModificationTime: 2019-06-13T16:02:00.000Z
 image: /img/1200px-visual_studio_code_118.png
 tags:
   - visual-studio-code
@@ -15,10 +15,13 @@ tags:
 
 If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vscode**. One major strength of **vscode** is its extensions. And these are the extensions which I find very useful in **vscode**,
 
+- [Debuggers](#debuggers)
+  - [Debugger for Chrome](#debugger-for-chrome)
 - [JavaScript](#javascript)
   - [JavaScript (ES6) code snippets](#javascript-es6-code-snippets)
   - [Import Cost](#import-cost)
 - [Programming Languages](#programming-languages)
+  - [ESLint](#eslint)
   - [TSLint](#tslint)
 - [Snippets](#snippets)
   - [Angular v7 Snippets](#angular-v7-snippets)
@@ -48,6 +51,12 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
   - [Path Intellisense](#path-intellisense)
   - [Prettier - Code formatter](#prettier---code-formatter)
 
+## Debuggers
+
+### Debugger for Chrome
+
+[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) enables you to debug your JavaScript code in the Chrome browser, or any other target that supports the Chrome Debugger protocol.
+
 ## JavaScript
 
 ### JavaScript (ES6) code snippets
@@ -59,6 +68,10 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) display import/require package size in the editor
 
 ## Programming Languages
+
+### ESLint
+
+[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) integrates ESLint JavaScript into VS Code.
 
 ### TSLint
 
