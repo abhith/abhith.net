@@ -21,6 +21,20 @@
     "tags": ["angular"]
   },
   {
+    "title": "Detect Responsive Screen Sizes in Angular",
+    "url": "https://scotch.io/tutorials/detect-responsive-screen-sizes-in-angular",
+    "description": "Detect Responsive Screen Sizes in Angular with a twist - we don't maintaining responsive breakpoint sizes in our code.",
+    "date": "2019-06-13T09:30:28.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "All you need to know about Ivy, The new Angular engine!",
+    "url": "https://blog.angularindepth.com/all-you-need-to-know-about-ivy-the-new-angular-engine-9cde471f42cf",
+    "description": "Smaller bundles, faster compilations, Better debugging, dynamic loading of module and components and advanced concepts like Higher order components. Angular Ivy — The complete guide for the 3rd generation of the Angular renderer.",
+    "date": "2019-06-13T09:31:28.263Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "RxJS recipes: ‘forkJoin’ with the progress of completion for bulk network requests in Angular",
     "url": "https://blog.angularindepth.com/rxjs-recipes-forkjoin-with-the-progress-of-completion-for-bulk-network-requests-in-angular-5d585a77cce1",
     "description": "Adding customization to existing RxJS functions.",
@@ -32,6 +46,20 @@
     "url": "https://adamstorr.azurewebsites.net/blog/beyond-basics-aspnetcore-adding-and-using-configuration",
     "description": "Adding strongly typed configuration settings and injected them through dependency injection.",
     "date": "2019-06-06T18:30:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Getting Started with Docker in Visual Studio 2019",
+    "url": "https://espressocoder.com/2019/06/11/getting-started-with-docker-in-visual-studio-2019/",
+    "description": "Adding strongly typed configuration settings and injected them through dependency injection.",
+    "date": "2019-06-13T09:35:28.263Z",
+    "tags": ["aspnet-core", "docker"]
+  },
+  {
+    "title": "Creating ASP.NET Core 2.2 Application Step-by-Step",
+    "url": "https://www.codeproject.com/Articles/5061469/Creating-ASP-NET-Core-2-2-Application-Step-by-Step",
+    "description": "This article will walk you through the creation of ASP.NET Core application using ASP.NET Core 2.2 from scratch, by utilizing the capabilities of package manager, EF Core, Identity API, Razor Class Library, etc.",
+    "date": "2019-06-13T09:47:28.263Z",
     "tags": ["aspnet-core"]
   },
   {
