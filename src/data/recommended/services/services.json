@@ -1,5 +1,13 @@
 [
   {
+    "title": "Blip",
+    "url": "https://blip.website/",
+    "description": "Test websites for speed, usability, security and the HTML5 doctype.",
+    "image": "",
+    "date": "2019-06-13T16:31:28.263Z",
+    "tags": ["benchmark"]
+  },
+  {
     "title": "SmarterASP.net",
     "url": "https://www.SmarterASP.NET/index?r=100571651",
     "description": "ASP.NET Hosting by SmarterASP.net. Unlimited ASP.NET Hosting Plans Starting at $2.95 a month.",
