@@ -7,14 +7,6 @@ import { truncate } from "lodash";
 const ServicesRoll = props => {
   const { services } = props;
 
-  if (!services || !services.length) {
-    return (
-      <div>
-        <span className="text-muted d-block mb-1">Services Coming Soon...</span>
-      </div>
-    );
-  }
-
   return (
     <>
       {services &&

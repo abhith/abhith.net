@@ -6,6 +6,12 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Angular",
+    "slug": "angular",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "ASP.NET",
     "slug": "aspnet",
     "description": "Open-source web framework for .NET",

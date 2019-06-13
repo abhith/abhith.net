@@ -5,14 +5,6 @@ import ResponsiveReactPlayer from "./ResponsiveReactPlayer";
 const VideosRoll = props => {
   const { videos } = props;
 
-  if (!videos || !videos.length) {
-    return (
-      <div>
-        <span className="text-muted d-block mb-1">Videos Coming Soon...</span>
-      </div>
-    );
-  }
-
   return (
     <>
       {videos &&

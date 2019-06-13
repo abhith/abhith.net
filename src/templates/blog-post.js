@@ -204,6 +204,7 @@ const BlogPost = ({ data }) => {
   const relatedPosts = data.relatedPosts.edges;
   const relatedVideos = data.recommendedVideos.edges;
   const relatedStories = data.recommendedStories.edges;
+  const relatedServices = data.recommendedServices.edges;
 
   let relatedPostsFirstHalf = [];
   let relatedPostsSecondHalf = [];
@@ -256,56 +257,66 @@ const BlogPost = ({ data }) => {
         datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
       />
       <div className="container">
-        <div className="row mt-5">
-          <div className="col-md-12">
-            <h4 className="font-weight-bold spanborder">
-              <span>Related Posts</span>
-            </h4>
+        {relatedPosts.length > 0 && (
+          <div className="row mt-5">
+            <div className="col-md-12">
+              <h4 className="font-weight-bold spanborder">
+                <span>Related Posts</span>
+              </h4>
+            </div>
+            <div className="col-md-6">
+              {relatedPostsFirstHalf.map(({ node }) => {
+                return <BlogRollItem post={node} key={node.id} />;
+              })}
+            </div>
+            <div className="col-md-6">
+              {relatedPostsSecondHalf.map(({ node }) => {
+                return <BlogRollItem post={node} key={node.id} />;
+              })}
+            </div>
           </div>
-          <div className="col-md-6">
-            {relatedPostsFirstHalf.map(({ node }) => {
-              return <BlogRollItem post={node} key={node.id} />;
-            })}
+        )}
+        {relatedVideos.length > 0 && (
+          <div className="row mt-5">
+            <div className="col-md-12">
+              <h4 className="font-weight-bold spanborder">
+                <span>Related Videos</span>
+              </h4>
+              <VideosRoll videos={relatedVideos} />
+            </div>
           </div>
-          <div className="col-md-6">
-            {relatedPostsSecondHalf.map(({ node }) => {
-              return <BlogRollItem post={node} key={node.id} />;
-            })}
+        )}
+
+        {relatedStories.length > 0 && (
+          <div className="row mt-5">
+            <div className="col-md-12">
+              <h4 className="font-weight-bold spanborder">
+                <span>Related Stories</span>
+              </h4>
+            </div>
+            <div className="col-md-6">
+              {relatedStoriesFirstHalf.map(({ node }) => {
+                return <StoriesRollItem post={node} key={node.id} />;
+              })}
+            </div>
+            <div className="col-md-6">
+              {relatedStoriesSecondHalf.map(({ node }) => {
+                return <StoriesRollItem post={node} key={node.id} />;
+              })}
+            </div>
           </div>
-        </div>
-        <div className="row mt-5">
-          <div className="col-md-12">
-            <h4 className="font-weight-bold spanborder">
-              <span>Related Videos</span>
-            </h4>
-            <VideosRoll videos={relatedVideos} />
+        )}
+
+        {relatedServices.length > 0 && (
+          <div className="row mt-5">
+            <div className="col-md-12">
+              <h4 className="font-weight-bold spanborder">
+                <span>Related Services</span>
+              </h4>
+              <ServicesRoll services={relatedServices} />
+            </div>
           </div>
-        </div>
-        <div className="row mt-5">
-          <div className="col-md-12">
-            <h4 className="font-weight-bold spanborder">
-              <span>Related Stories</span>
-            </h4>
-          </div>
-          <div className="col-md-6">
-            {relatedStoriesFirstHalf.map(({ node }) => {
-              return <StoriesRollItem post={node} key={node.id} />;
-            })}
-          </div>
-          <div className="col-md-6">
-            {relatedStoriesSecondHalf.map(({ node }) => {
-              return <StoriesRollItem post={node} key={node.id} />;
-            })}
-          </div>
-        </div>
-        <div className="row mt-5">
-          <div className="col-md-12">
-            <h4 className="font-weight-bold spanborder">
-              <span>Related Services</span>
-            </h4>
-            <ServicesRoll services={data.recommendedServices.edges} />
-          </div>
-        </div>
+        )}
       </div>
     </Layout>
   );
