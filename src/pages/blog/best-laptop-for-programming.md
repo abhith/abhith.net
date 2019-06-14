@@ -2,19 +2,20 @@
 templateKey: blog-post
 title: Best Laptop for Programming
 description: >-
-  If you are in the hunt for a new laptop, this post worth a visit.
+  If you are in the hunt for a new laptop in 2019, this post worth a visit.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-06-08T22:50:00.000Z
+lastModificationTime: 2019-06-14T19:02:00.000Z
 image: /img/best-laptop-for-programming.png
 commentId: 'best-laptop-for-programming'
 tags:
   - best-series
-  - hardware
+  - laptop
   - shopping-guide
 ---
 
-For the past month, I have been in the search for the best laptop, that will help me to do things faster. Best in the sense which worth every penny and yet strong in specs, not a high-end gaming machine.
+For the past month, I have been in the search for the best laptop, that will help me to do things faster. **Best in the sense which worth every penny and yet strong in specs**, not a high-end gaming machine.
 
 ### History
 
@@ -39,12 +40,26 @@ Right now its time to own a machine, and the **minimum** features am looking for
 
 ### Shortlisted Laptops
 
-After watching tons of reviews and all, my shortlisted items are,
+The main youtube channels which I rely for laptop reviews are,
+
+- [Dave Lee (Dave 2D)](https://www.youtube.com/channel/UCVYamHliCI9rw1tHR1xbkfw)
+- [OWNorDisown](https://www.youtube.com/channel/UCkTweJExGMqp3NLvzvOn-yg)
+- [Matthew Moniz](https://www.youtube.com/channel/UCVlMUh4WsDQvOxCJJXmWwdw)
+- [Jarrod'sTech](https://www.youtube.com/channel/UC2Rzju32yQPkQ7oIhmeuLwg)
+- [Bob Of All Trades](https://www.youtube.com/user/satanjamez)
+
+And After watching tons of reviews and all, my shortlisted items are,
 
 #### Acer Predator Triton 500
 
 Model Name: PT515-51-73EG
 [Website](https://www.acer.com/ac/en/US/content/predator-model/NH.Q50AA.003)
+
+Watch the reviews,
+
+`youtube: https://www.youtube.com/watch?v=pXkE0BlTBmI`
+`youtube: https://www.youtube.com/watch?v=rOCiNSZIhmM`
+`youtube: https://www.youtube.com/watch?v=qwGTHLeG2dY`
 
 ##### Pros
 
@@ -53,8 +68,10 @@ Model Name: PT515-51-73EG
 
 ##### Cons
 
-- Not easily upgradable because of its inverted motherboard construction.
-- Only zoned RGB keyboard.
+Not easily upgradable because of its inverted motherboard construction. See the below video,
+`youtube: https://www.youtube.com/watch?v=6-PmEaytJOA`
+
+Other than that, Only zoned RGB keyboard not per key.
 
 #### Gigabyte AERO 15 2019
 
@@ -79,8 +96,11 @@ Waiting for the new model to release with updated hardware including 9th generat
 
 #### HP Omen 15 (Latest)
 
-- Check out the [review](https://www.youtube.com/watch?v=EloUckKqAKc) by Bob Of All Trades.
-- So far cheapest in my list.
+Check out the below review.
+
+`youtube: https://www.youtube.com/watch?v=EloUckKqAKc`
+
+Its the cheapest in my list.
 
 ##### Cons
 
