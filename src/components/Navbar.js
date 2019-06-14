@@ -59,9 +59,7 @@ const Navbar = class extends React.Component {
             <span className="navbar-toggler-icon" />
           </button>
           <div
-            className={`navbar-collapse collapse ${
-              this.state.navBarActiveClass
-            }`}
+            className={`navbar-collapse collapse ${this.state.navBarActiveClass}`}
             id="navbarColor02"
           >
             <ul className="navbar-nav mr-auto d-flex align-items-center">
@@ -93,7 +91,7 @@ const Navbar = class extends React.Component {
               <li className="nav-item">
                 <OutboundLink
                   className="nav-link"
-                  href="https://www.buymeacoffee.com/abhith"
+                  href="https://ko-fi.com/abhith"
                   target="_blank"
                 >
                   Buy me a coffee <FaCoffee className="text-danger" />
