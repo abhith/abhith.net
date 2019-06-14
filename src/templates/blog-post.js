@@ -12,6 +12,8 @@ import BlogRollItem from "../components/BlogRollItem";
 import VideosRoll from "../components/VideosRoll";
 import ServicesRoll from "../components/ServicesRoll";
 import StoriesRollItem from "../components/StoriesRollItem";
+import { FaCoffee } from "react-icons/fa";
+
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -233,6 +235,15 @@ export const BlogPostTemplate = ({
                       href={author.url}
                     >
                       Follow
+                    </OutboundLink>
+                  </span>
+                  <span>
+                    <OutboundLink
+                      className="btn btn-outline-info btn-sm btn-round ml-2"
+                      href="https://ko-fi.com/abhith"
+                      target="_blank"
+                    >
+                      Buy me a coffee <FaCoffee className="text-danger" />
                     </OutboundLink>
                   </span>
                 </h5>
