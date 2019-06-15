@@ -278,132 +278,201 @@ BlogPostTemplate.propTypes = {
   siteMetadata: PropTypes.object
 };
 
-const BlogPost = ({ data }) => {
-  // console.log(`page data is`, data);
+class BlogPost extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      alertbarClass: ""
+    };
+  }
 
-  const { markdownRemark: post } = data;
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
 
-  const relatedPosts = data.relatedPosts.edges;
-  const relatedVideos = data.recommendedVideos.edges;
-  const relatedStories = data.recommendedStories.edges;
-  const relatedServices = data.recommendedServices.edges;
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
 
-  let relatedPostsFirstHalf = [];
-  let relatedPostsSecondHalf = [];
-  let relatedStoriesFirstHalf = [];
-  let relatedStoriesSecondHalf = [];
-
-  [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(
-    relatedPosts,
-    i => {
-      return relatedPosts.indexOf(i) % 2 === 0;
+  handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > 280) {
+      this.setState({
+        alertbarClass: "show"
+      });
+    } else {
+      this.setState({
+        alertbarClass: ""
+      });
     }
-  );
+  };
 
-  [relatedStoriesFirstHalf, relatedStoriesSecondHalf] = partition(
-    relatedStories,
-    i => {
-      return relatedStories.indexOf(i) % 2 === 0;
-    }
-  );
+  render() {
+    const data = this.props.data;
+    const { markdownRemark: post } = data;
 
-  return (
-    <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        slug={post.fields.slug}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        image={post.frontmatter.image}
-        date={post.frontmatter.dateString}
-        author={data.site.siteMetadata.author}
-        readingTime={post.fields.readingTime.text}
-        commentId={
-          post.frontmatter.commentId === null
-            ? post.fields.slug
-            : post.frontmatter.commentId
-        }
-        lastModifiedTime={
-          post.frontmatter.lastModificationTime === null
-            ? post.frontmatter.date
-            : post.frontmatter.lastModificationTime
-        }
-        lastModifiedTimeString={
-          post.frontmatter.lastModificationTime === null
-            ? post.frontmatter.dateString
-            : post.frontmatter.lastModificationTimeString
-        }
-        dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
-        datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
-        siteMetadata={data.site.siteMetadata}
-      />
-      <div className="container">
-        {relatedPosts.length > 0 && (
-          <div className="row mt-5">
-            <div className="col-md-12">
-              <h4 className="font-weight-bold spanborder">
-                <span>Related Posts</span>
-              </h4>
+    const relatedPosts = data.relatedPosts.edges;
+    const relatedVideos = data.recommendedVideos.edges;
+    const relatedStories = data.recommendedStories.edges;
+    const relatedServices = data.recommendedServices.edges;
+    let featuredServices = [];
+    featuredServices.push(data.featuredServices.edges[0].node);
+    featuredServices.push(data.featuredServices.edges[1].node);
+
+    let relatedPostsFirstHalf = [];
+    let relatedPostsSecondHalf = [];
+    let relatedStoriesFirstHalf = [];
+    let relatedStoriesSecondHalf = [];
+
+    [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(
+      relatedPosts,
+      i => {
+        return relatedPosts.indexOf(i) % 2 === 0;
+      }
+    );
+
+    [relatedStoriesFirstHalf, relatedStoriesSecondHalf] = partition(
+      relatedStories,
+      i => {
+        return relatedStories.indexOf(i) % 2 === 0;
+      }
+    );
+
+    return (
+      <Layout>
+        <BlogPostTemplate
+          content={post.html}
+          slug={post.fields.slug}
+          contentComponent={HTMLContent}
+          description={post.frontmatter.description}
+          tags={post.frontmatter.tags}
+          title={post.frontmatter.title}
+          image={post.frontmatter.image}
+          date={post.frontmatter.dateString}
+          author={data.site.siteMetadata.author}
+          readingTime={post.fields.readingTime.text}
+          commentId={
+            post.frontmatter.commentId === null
+              ? post.fields.slug
+              : post.frontmatter.commentId
+          }
+          lastModifiedTime={
+            post.frontmatter.lastModificationTime === null
+              ? post.frontmatter.date
+              : post.frontmatter.lastModificationTime
+          }
+          lastModifiedTimeString={
+            post.frontmatter.lastModificationTime === null
+              ? post.frontmatter.dateString
+              : post.frontmatter.lastModificationTimeString
+          }
+          dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
+          datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
+          siteMetadata={data.site.siteMetadata}
+        />
+        <div className="container">
+          {relatedPosts.length > 0 && (
+            <div className="row mt-5">
+              <div className="col-md-12">
+                <h4 className="font-weight-bold spanborder">
+                  <span>Related Posts</span>
+                </h4>
+              </div>
+              <div className="col-md-6">
+                {relatedPostsFirstHalf.map(({ node }) => {
+                  return <BlogRollItem post={node} key={node.id} />;
+                })}
+              </div>
+              <div className="col-md-6">
+                {relatedPostsSecondHalf.map(({ node }) => {
+                  return <BlogRollItem post={node} key={node.id} />;
+                })}
+              </div>
             </div>
-            <div className="col-md-6">
-              {relatedPostsFirstHalf.map(({ node }) => {
-                return <BlogRollItem post={node} key={node.id} />;
-              })}
+          )}
+          {relatedVideos.length > 0 && (
+            <div className="row mt-5">
+              <div className="col-md-12">
+                <h4 className="font-weight-bold spanborder">
+                  <span>Related Videos</span>
+                </h4>
+                <VideosRoll videos={relatedVideos} />
+              </div>
             </div>
-            <div className="col-md-6">
-              {relatedPostsSecondHalf.map(({ node }) => {
-                return <BlogRollItem post={node} key={node.id} />;
-              })}
+          )}
+
+          {relatedStories.length > 0 && (
+            <div className="row mt-5">
+              <div className="col-md-12">
+                <h4 className="font-weight-bold spanborder">
+                  <span>Related Stories</span>
+                </h4>
+              </div>
+              <div className="col-md-6">
+                {relatedStoriesFirstHalf.map(({ node }) => {
+                  return <StoriesRollItem post={node} key={node.id} />;
+                })}
+              </div>
+              <div className="col-md-6">
+                {relatedStoriesSecondHalf.map(({ node }) => {
+                  return <StoriesRollItem post={node} key={node.id} />;
+                })}
+              </div>
+            </div>
+          )}
+
+          {relatedServices.length > 0 && (
+            <div className="row mt-5">
+              <div className="col-md-12">
+                <h4 className="font-weight-bold spanborder">
+                  <span>Related Services</span>
+                </h4>
+                <ServicesRoll services={relatedServices} />
+              </div>
+            </div>
+          )}
+        </div>
+        <div className={`alertbar ${this.state.alertbarClass}`}>
+          <div className="container">
+            <div className="row prevnextlinks small font-weight-bold">
+              <div className="col-md-6 rightborder pl-0">
+                <OutboundLink
+                  className="text-dark"
+                  href={featuredServices[0].url}
+                  target="_blank"
+                >
+                  <img
+                    height="30px"
+                    className="mr-1"
+                    src={featuredServices[0].image}
+                    alt={featuredServices[0].title}
+                  />
+                  {featuredServices[0].title}
+                </OutboundLink>
+              </div>
+
+              <div className="col-md-6 text-right pr-0">
+                <OutboundLink
+                  className="text-dark"
+                  href={featuredServices[1].url}
+                  target="_blank"
+                >
+                  {featuredServices[1].title}
+                  <img
+                    height="30px"
+                    className="ml-1"
+                    src={featuredServices[1].image}
+                    alt={featuredServices[1].title}
+                  />
+                </OutboundLink>
+              </div>
             </div>
           </div>
-        )}
-        {relatedVideos.length > 0 && (
-          <div className="row mt-5">
-            <div className="col-md-12">
-              <h4 className="font-weight-bold spanborder">
-                <span>Related Videos</span>
-              </h4>
-              <VideosRoll videos={relatedVideos} />
-            </div>
-          </div>
-        )}
-
-        {relatedStories.length > 0 && (
-          <div className="row mt-5">
-            <div className="col-md-12">
-              <h4 className="font-weight-bold spanborder">
-                <span>Related Stories</span>
-              </h4>
-            </div>
-            <div className="col-md-6">
-              {relatedStoriesFirstHalf.map(({ node }) => {
-                return <StoriesRollItem post={node} key={node.id} />;
-              })}
-            </div>
-            <div className="col-md-6">
-              {relatedStoriesSecondHalf.map(({ node }) => {
-                return <StoriesRollItem post={node} key={node.id} />;
-              })}
-            </div>
-          </div>
-        )}
-
-        {relatedServices.length > 0 && (
-          <div className="row mt-5">
-            <div className="col-md-12">
-              <h4 className="font-weight-bold spanborder">
-                <span>Related Services</span>
-              </h4>
-              <ServicesRoll services={relatedServices} />
-            </div>
-          </div>
-        )}
-      </div>
-    </Layout>
-  );
-};
+        </div>
+      </Layout>
+    );
+  }
+}
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
@@ -501,6 +570,21 @@ export const pageQuery = graphql`
           tags
           url
           description
+          image
+        }
+      }
+    }
+    featuredServices: allServicesJson(
+      limit: 2
+      sort: { fields: [date], order: DESC }
+      filter: { isAffiliate: { eq: true } }
+    ) {
+      edges {
+        node {
+          title
+          id
+          tags
+          url
           image
         }
       }

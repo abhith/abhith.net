@@ -31,3 +31,7 @@ a[target="_blank"]::after {
 .gatsby-resp-iframe-wrapper {
   margin-bottom: 0.5rem !important;
 }
+
+.show {
+  display: block;
+}
