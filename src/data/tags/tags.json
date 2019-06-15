@@ -60,6 +60,12 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Content Writing",
+    "slug": "content-writing",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": ".NET Core",
     "slug": "dotnet-core",
     "description": ".NET is an Open Source Developer Platform for Building Apps.",
@@ -93,6 +99,12 @@
     "title": "Visual Studio",
     "slug": "visual-studio",
     "description": "I always loved to work with the latest and the greatest versions of Visual Studio. I started on VS 2008, now most of the time working with VS 2019.",
+    "image": "no-tag-image.png"
+  },
+  {
+    "title": "Website Benchmark",
+    "slug": "website-benchmark",
+    "description": "",
     "image": "no-tag-image.png"
   }
 ]

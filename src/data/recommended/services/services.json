@@ -1,11 +1,20 @@
 [
   {
+    "title": "Grammarly - Instant Grammar Checker",
+    "url": "https://www.jdoqocy.com/gh116shqnhp4D9AA9E94667CAC8E",
+    "description": "Correct all grammar errors and enhance your writing.",
+    "image": "https://www.tqlkg.com/bs122ltxlrpAJFGGFKFACCDIGIEK",
+    "date": "2019-06-15T17:31:28.263Z",
+    "isAffiliate": true,
+    "tags": ["content-writing"]
+  },
+  {
     "title": "Blip",
     "url": "https://blip.website/",
     "description": "Test websites for speed, usability, security and the HTML5 doctype.",
     "image": "",
     "date": "2019-06-13T16:31:28.263Z",
-    "tags": ["benchmark"]
+    "tags": ["website-benchmark"]
   },
   {
     "title": "SmarterASP.net",
@@ -13,6 +22,7 @@
     "description": "ASP.NET Hosting by SmarterASP.net. Unlimited ASP.NET Hosting Plans Starting at $2.95 a month.",
     "image": "https://www.SmarterASP.NET/affiliate/300x250.gif",
     "date": "2019-05-15T18:30:28.263Z",
+    "isAffiliate": true,
     "tags": ["hosting", "sql-server", "aspnet"]
   },
   {
