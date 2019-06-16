@@ -38,13 +38,6 @@ module.exports = {
         name: "pages"
       }
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/img`,
-        name: "images"
-      }
-    },
     "gatsby-transformer-json",
     {
       resolve: "gatsby-source-filesystem",
@@ -164,6 +157,19 @@ module.exports = {
         trackingId: "UA-104139048-1"
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Abhith Rajan`,
+        short_name: `Abhith`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `static/img/android-chrome-144x144.png`
+      }
+    },
+    `gatsby-plugin-offline`,
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ],
   // for avoiding CORS while developing Netlify Functions locally
