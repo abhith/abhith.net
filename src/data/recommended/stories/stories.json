@@ -1,5 +1,12 @@
 [
   {
+    "title": "Serializing a PascalCase Newtonsoft.Json JObject to camelCase",
+    "url": "https://andrewlock.net/serializing-a-pascalcase-newtonsoft-json-jobject-to-camelcase/",
+    "description": "In this post Andrew Lock describe one of the quirks of serializing JSON.NET JObject (contract resolvers are not honoured), and show how to get camelCase names when serializing a JObject that stored its property names in PascalCase.",
+    "date": "2019-06-16T14:16:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Largest FREE Microsoft eBook Giveaway! I’m Giving Away MILLIONS of FREE Microsoft eBooks again, including: Windows 10, Office 365, Office 2016, Power BI, Azure, Windows 8.1, Office 2013, SharePoint 2016, SharePoint 2013, Dynamics CRM, PowerShell, Exchange Server, System Center, Cloud, SQL Server and more!",
     "url": "https://blogs.msdn.microsoft.com/mssmallbiz/2017/07/11/largest-free-microsoft-ebook-giveaway-im-giving-away-millions-of-free-microsoft-ebooks-again-including-windows-10-office-365-office-2016-power-bi-azure-windows-8-1-office-2013-sharepo/",
     "description": "By Eric Ligman, Microsoft Director of Business & Sales Operations Blog",
