@@ -24,9 +24,8 @@ export default class RecommendedServicesIndexPage extends React.Component {
           <h4 className="font-weight-bold spanborder">
             <span>Services</span>
           </h4>
-          <div className="row gap-y listrecent listrecent listauthor">
-            <ServicesRoll services={services} />
-          </div>
+
+          <ServicesRoll services={services} />
         </div>
       </Layout>
     );
