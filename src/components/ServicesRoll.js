@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Tags from "./Tags";
-import { truncate } from "lodash";
 
 const ServicesRoll = props => {
   const { services } = props;
@@ -12,7 +11,7 @@ const ServicesRoll = props => {
       <>
         {services &&
           services.map(({ node: service }) => (
-            <div className="col-6 mb-4" key={service.id}>
+            <div className="col-12" key={service.id}>
               <div className="p-4 border rounded">
                 <div className="row">
                   {/* <div className="col-md-3 mb-4 mb-md-0">
@@ -31,9 +30,7 @@ const ServicesRoll = props => {
                     <small className="d-block text-muted">
                       In <Tags tags={service.tags} />
                     </small>
-                    <div className="excerpt">
-                      {truncate(service.description, { length: 86 })}
-                    </div>
+                    <div className="excerpt">{service.description}</div>
                   </div>
                 </div>
               </div>
