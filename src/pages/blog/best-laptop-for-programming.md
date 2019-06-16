@@ -2,11 +2,11 @@
 templateKey: blog-post
 title: Best Laptop for Programming
 description: >-
-  If you are in the hunt for a new laptop in 2019, this post worth a visit.
+ Best laptop in 2019 with min spec of i7-9750H, RTX-2060 and Thunderbolt 3.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-06-08T22:50:00.000Z
-lastModificationTime: 2019-06-14T19:02:00.000Z
+lastModificationTime: 2019-06-15T23:02:00.000Z
 image: /img/best-laptop-for-programming.png
 commentId: 'best-laptop-for-programming'
 tags:
@@ -69,9 +69,10 @@ Watch the reviews,
 ##### Cons
 
 Not easily upgradable because of its inverted motherboard construction. See the below video,
+
 `youtube: https://www.youtube.com/watch?v=6-PmEaytJOA`
 
-Other than that, Only zoned RGB keyboard not per key.
+Other than that, Only zoned RGB keyboard, **NO** per key RGB.
 
 #### Gigabyte AERO 15 2019
 
@@ -100,7 +101,7 @@ Check out the below review.
 
 `youtube: https://www.youtube.com/watch?v=EloUckKqAKc`
 
-Its the cheapest in my list.
+Its the cheapest in this list.
 
 ##### Cons
 
@@ -108,13 +109,10 @@ Its the cheapest in my list.
 
 ### Skipped Laptops
 
-#### Lenovo Y740
-
-- Big Charger and small battery.
-
-#### Asus ROG Zephyrus s GX701
-
-- Lack of thunderbolt support.
+- **Acer Helios 300 (2019)** - Lack of thunderbolt support.
+- **Lenovo Y740** - Big Charger and small battery.
+- **Asus ROG Zephyrus S GX701** - Lack of thunderbolt support.
+- **ASUS ROG Zephyrus S GX502GW** - Lack of thunderbolt support.
 
 ### Conclusion
 
