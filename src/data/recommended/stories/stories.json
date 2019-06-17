@@ -1,5 +1,26 @@
 [
   {
+    "title": "Suggesting Changes on GitHub",
+    "url": "https://haacked.com/archive/2019/06/03/suggested-changes/",
+    "description": "A little known but very useful feature on GitHub that provides a lightweight way to suggest a small change.",
+    "date": "2019-06-17T10:32:28.263Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "Understanding Angular Property Binding and Interpolation",
+    "url": "https://www.telerik.com/blogs/understanding-angular-property-binding-and-interpolation",
+    "description": "Understanding Angular’s data binding types is important when building Angular applications. Learn about property binding and interpolation so you can understand which method best suits the task at hand.",
+    "date": "2019-06-17T10:21:28.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Angular CLI under the hood — builders demystified v2",
+    "url": "https://blog.angularindepth.com/angular-cli-under-the-hood-builders-demystified-v2-e73ee0f2d811",
+    "description": "An in-depth overview of internal Angular CLI APIs and example of custom builder",
+    "date": "2019-06-17T10:16:28.263Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "Serializing a PascalCase Newtonsoft.Json JObject to camelCase",
     "url": "https://andrewlock.net/serializing-a-pascalcase-newtonsoft-json-jobject-to-camelcase/",
     "description": "In this post Andrew Lock describe one of the quirks of serializing JSON.NET JObject (contract resolvers are not honoured), and show how to get camelCase names when serializing a JObject that stored its property names in PascalCase.",
