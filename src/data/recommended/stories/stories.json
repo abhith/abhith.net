@@ -1,5 +1,33 @@
 [
   {
+    "title": "Getting rid of Time Zone issues within Azure Functions",
+    "url": "https://blog.maximerouiller.com/post/getting-rid-of-time-zone-issues-within-azure-functions/",
+    "description": "By Maxime Rouiller",
+    "date": "2019-06-17T16:00:28.263Z",
+    "tags": ["azure", "serverless"]
+  },
+  {
+    "title": "ASP.NET Core - Protect your API with API Keys",
+    "url": "https://josefottosson.se/asp-net-core-protect-your-api-with-api-keys/",
+    "description": "Josef Ottosson - I will show you how to protect your ASP.NET Core endpoints by using the concept of API keys. We will also learn the difference between Authentication and Authorization.",
+    "date": "2019-06-17T15:00:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "How to Write a Summary of Accomplishments on Your Resume (Not Just List Duties)",
+    "url": "https://business.tutsplus.com/tutorials/write-a-summary-of-accomplishments-for-resume--cms-33311",
+    "description": "Recruiters and career experts say you should fill your resume with a list of accomplishments, not just the tasks you were paid to do.",
+    "date": "2019-06-17T14:47:28.263Z",
+    "tags": ["jobs"]
+  },
+  {
+    "title": "GitHub! Code better together with GitHub and Microsoft Teams",
+    "url": "https://techcommunity.microsoft.com/t5/Microsoft-Teams-Blog/GitHub-Code-better-together-with-GitHub-and-Microsoft-Teams/ba-p/659444",
+    "description": "Developers can now collaborate from anywhere using GitHub app in Microsoft Teams! GitHub app in Teams support Tab, Messaging Extension, Bot and Personal app capabilities.",
+    "date": "2019-06-17T13:47:28.263Z",
+    "tags": ["github"]
+  },
+  {
     "title": "vuejs/awesome-vue",
     "url": "https://github.com/vuejs/awesome-vue",
     "description": "A curated list of awesome things related to Vue.js",
