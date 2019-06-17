@@ -36,6 +36,12 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Awesome Lists",
+    "slug": "awesome-list",
+    "description": "An awesome list is a list of awesome things curated by the community.",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "Best Series",
     "slug": "best-series",
     "description": "Best in classess listed under this tag",
