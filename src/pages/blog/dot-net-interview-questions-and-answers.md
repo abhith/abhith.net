@@ -165,7 +165,7 @@ Of course there is another better solution, which is using SQL OFFSET-FETCH clau
 - [Can we define multiple actions with same name in a MVC controller?](https://stackoverflow.com/questions/1045316/asp-net-mvc-ambiguous-action-methods)
 - [Areas in MVC](https://dzone.com/articles/areas-in-aspnet-mvc)
 - [Mvc request life cycle](https://www.codeproject.com/Articles/1028156/%2FArticles%2F1028156%2FA-Detailed-Walkthrough-of-ASP-NET-MVC-Request-Life)
-- [Difference between tempdata viewdata and viewbag](https://www.linkedin.com/pulse/difference-between-viewdata-viewbag-tempdata-sunmbal-siddiqui/)
+- [Difference between TempData ViewData and ViewBag](https://www.linkedin.com/pulse/difference-between-viewdata-viewbag-tempdata-sunmbal-siddiqui/)
 
 #### Other
 
