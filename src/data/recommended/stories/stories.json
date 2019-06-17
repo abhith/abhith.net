@@ -1,5 +1,19 @@
 [
   {
+    "title": "Throwing .NET Exceptions: ArgumentException and InvalidOperationException",
+    "url": "https://www.telerik.com/blogs/throwing-net-exceptions-argumentexception-invalidoperationexception",
+    "description": "An exception is thrown when an error is encountered in a running application, whether from bad code or bad user input. This post describes when and how to raise the ArgumentException and InvalidOperationException standard .NET exception types.",
+    "date": "2019-05-30T12:00:28.263Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Angular 8.0 - What's New And How To Upgrade",
+    "url": "https://www.c-sharpcorner.com/article/angular-8-0-whats-new-and-how-to-upgrade/",
+    "description": "In this article, we will discuss the new features of Angular 8. Also, we will discuss how to upgrade an existing application into Angular 8.",
+    "date": "2019-06-17T12:00:28.263Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "Suggesting Changes on GitHub",
     "url": "https://haacked.com/archive/2019/06/03/suggested-changes/",
     "description": "A little known but very useful feature on GitHub that provides a lightweight way to suggest a small change.",
