@@ -7,12 +7,12 @@ import Tags from "./Tags";
 const StoriesRollItem = ({ post }) => {
   return (
     <div className="mb-3 d-flex align-items-center">
-      <div className="col-md-4">
+      <div className="col-4">
         <OutboundLink href={post.url} target="_blank">
           <TagImage tagSlug={post.tags[0]} />
         </OutboundLink>
       </div>
-      <div>
+      <div className="col-8">
         <h2 className="mb-2 h6 font-weight-bold">
           <OutboundLink className="text-dark" target="_blank" href={post.url}>
             {post.title}

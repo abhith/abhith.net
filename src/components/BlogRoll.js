@@ -15,7 +15,7 @@ const BlogRoll = props => {
             className="mb-5 d-flex justify-content-between main-loop-card"
             key={post.id}
           >
-            <div className="pr-3">
+            <div className="col-9 pr-3">
               <h2 className="mb-1 h4 font-weight-bold">
                 <Link className="text-dark" to={post.fields.slug}>
                   {post.frontmatter.title}
@@ -29,7 +29,7 @@ const BlogRoll = props => {
                 {post.frontmatter.date} &middot; {post.fields.readingTime.text}
               </small>
             </div>
-            <div className="col-md-3 pr-0 text-right">
+            <div className="col-3 pr-0 text-right">
               <Link to={`${post.fields.slug}`}>
                 <Img
                   className="w-100"
