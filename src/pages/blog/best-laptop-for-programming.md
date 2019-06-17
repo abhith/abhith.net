@@ -87,7 +87,9 @@ The new model displayed in the Computex 2019 looks good. Waiting for the reviews
 - Unavailable at the moment.
 - Web Camera position
 
-#### Thinkpad X1 Extreme
+#### ThinkPad X1 Extreme (2nd Gen) (15.6") Laptop
+
+[Official Website](https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/X1-Extreme-Gen-2/p/22TP2TXX1E2)
 
 Waiting for the new model to release with updated hardware including 9th generation Intel CPU's.
 
