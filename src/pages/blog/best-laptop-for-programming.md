@@ -64,6 +64,9 @@ Model Name: WA-7US5130SP
 - Unavailable at the moment.
 - Web Camera position
 
+##### Purchase AERO 15
+[Amazon](https://amzn.to/31FXy6U)
+
 #### Acer Predator Triton 500
 
 Model Name: PT515-51-73EG
@@ -87,6 +90,10 @@ Not easily upgradable because of its inverted motherboard construction. See the 
 `youtube: https://www.youtube.com/watch?v=6-PmEaytJOA`
 
 Other than that, Only zoned RGB keyboard, **NO** per key RGB.
+
+##### Purchase 
+
+Couldn't find the exact one in [Amazon](https://amzn.to/2KrpHcz) but similar spec with intel 8750H found [here](https://amzn.to/2KrpHcz).
 
 #### ThinkPad X1 Extreme (2nd Gen) (15.6") Laptop
 
