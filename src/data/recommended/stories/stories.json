@@ -1,5 +1,12 @@
 [
   {
+    "title": "Postman v7.2 Supports GraphQL",
+    "url": "https://blog.getpostman.com/2019/06/18/postman-v7-2-supports-graphql/",
+    "description": "If you’ve been waiting for GraphQL support in Postman, the wait is over – with the release of Postman v7.2, Postman now supports GraphQL! Adding inbuilt support for GraphQL has been our number two most…",
+    "date": "2019-06-19T16:52:28.263Z",
+    "tags": ["graphql"]
+  },
+  {
     "title": "How to integrate Vue.js and ASP.NET Core using SPA Extension",
     "url": "https://techcommunity.microsoft.com/t5/Windows-Dev-AppConsult/How-to-integrate-Vue-js-and-ASP-NET-Core-using-SPA-Extension/ba-p/698648",
     "description": "By KazukiOta",
