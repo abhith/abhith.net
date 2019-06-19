@@ -1,5 +1,19 @@
 [
   {
+    "title": "How to integrate Vue.js and ASP.NET Core using SPA Extension",
+    "url": "https://techcommunity.microsoft.com/t5/Windows-Dev-AppConsult/How-to-integrate-Vue-js-and-ASP-NET-Core-using-SPA-Extension/ba-p/698648",
+    "description": "By KazukiOta",
+    "date": "2019-06-19T10:52:28.263Z",
+    "tags": ["aspnet-core", "vue"]
+  },
+  {
+    "title": "Perfecting Continuous Delivery of NuGet packages for Azure Artifacts",
+    "url": "https://cloudblogs.microsoft.com/industry-blog/en-gb/cross-industry/2019/06/18/perfecting-continuous-delivery-of-nuget-packages-for-azure-artifacts/",
+    "description": "Azure Artifacts is Microsoft’s solution to package management. Originally available as a separate extension on Visual Studio Marketplace, it is now pre-installed in Azure DevOps Services and Azure DevOps Server 2019, TFS 2018, and 2017.",
+    "date": "2019-06-19T10:00:28.263Z",
+    "tags": ["azure", "devops"]
+  },
+  {
     "title": "Getting rid of Time Zone issues within Azure Functions",
     "url": "https://blog.maximerouiller.com/post/getting-rid-of-time-zone-issues-within-azure-functions/",
     "description": "By Maxime Rouiller",
