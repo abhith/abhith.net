@@ -39,18 +39,19 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-dark">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item">
-            <figure className="image is-vertical-center">
-              <Img
-                fluid={this.props.logo.childImageSharp.fluid}
-                className="nav-logo"
-              />
-            </figure>
-          </Link>
+      <nav className="navbar has-shadow is-spaced is-dark">
+        <div className="container">
+          <div className="navbar-brand">
+            <Link to="/" className="navbar-item">
+              <figure className="image is-vertical-center">
+                <Img
+                  fluid={this.props.logo.childImageSharp.fluid}
+                  className="nav-logo"
+                />
+              </figure>
+            </Link>
 
-          {/* <a
+            {/* <a
             className="navbar-item is-hidden-desktop"
             href="https://github.com/jgthms/bulma"
             target="_blank"
@@ -70,23 +71,23 @@ const Navbar = class extends React.Component {
             </span>
           </a> */}
 
-          <div
-            className={`navbar-burger burger ${this.state.hamburgerMenuClass}`}
-            onClick={() => this.toggleHamburger()}
-            data-target="navMenubd-example"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
+            <div
+              className={`navbar-burger burger ${this.state.hamburgerMenuClass}`}
+              onClick={() => this.toggleHamburger()}
+              data-target="navMenubd-example"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-        </div>
 
-        <div
-          id="navMenubd-example"
-          className={`navbar-menu ${this.state.navBarActiveClass}`}
-        >
-          <div className="navbar-start">
-            {/* <div className="navbar-item has-dropdown is-hoverable">
+          <div
+            id="navMenubd-example"
+            className={`navbar-menu ${this.state.navBarActiveClass}`}
+          >
+            <div className="navbar-start">
+              {/* <div className="navbar-item has-dropdown is-hoverable">
               <a
                 className="navbar-link  is-active"
                 href="/documentation/overview/start/"
@@ -357,29 +358,29 @@ const Navbar = class extends React.Component {
                 </a>
               </div>
             </div> */}
-            <Link to="/" className="navbar-item">
-              Home
-            </Link>
-            <Link to="/about" className="navbar-item">
-              About
-            </Link>
-            <Link to="/blog" className="navbar-item">
-              Blog
-            </Link>
-            <Link to="/recommended" className="navbar-item">
-              Recommended
-            </Link>
+              <Link to="/" className="navbar-item">
+                Home
+              </Link>
+              <Link to="/about" className="navbar-item">
+                About
+              </Link>
+              <Link to="/blog" className="navbar-item">
+                Blog
+              </Link>
+              <Link to="/recommended" className="navbar-item">
+                Recommended
+              </Link>
 
-            {/* <a className="navbar-item " href="http://bulma.io/expo/">
+              {/* <a className="navbar-item " href="http://bulma.io/expo/">
               <span className="bd-emoji">🎨</span> &nbsp;Expo
             </a>
             <a className="navbar-item " href="http://bulma.io/love/">
               <span className="bd-emoji">❤️</span> &nbsp;Love
             </a> */}
-          </div>
+            </div>
 
-          <div className="navbar-end">
-            {/* <a
+            <div className="navbar-end">
+              {/* <a
               className="navbar-item is-hidden-desktop-only"
               href="https://github.com/jgthms/bulma"
               target="_blank"
@@ -397,9 +398,9 @@ const Navbar = class extends React.Component {
                 <i className="fa fa-twitter"></i>
               </span>
             </a> */}
-            <div className="navbar-item">
-              <div className="field is-grouped">
-                {/* <p className="control">
+              <div className="navbar-item">
+                <div className="field is-grouped">
+                  {/* <p className="control">
                   <a
                     className="bd-tw-button button"
                     data-social-network="Twitter"
@@ -414,15 +415,16 @@ const Navbar = class extends React.Component {
                     <span>Tweet</span>
                   </a>
                 </p> */}
-                <p className="control">
-                  <OutboundLink
-                    className="button is-primary"
-                    href="https://ko-fi.com/abhith"
-                    target="_blank"
-                  >
-                    Buy me a coffee <FaCoffee className="text-danger" />
-                  </OutboundLink>
-                </p>
+                  <p className="control">
+                    <OutboundLink
+                      className="button is-primary"
+                      href="https://ko-fi.com/abhith"
+                      target="_blank"
+                    >
+                      Buy me a coffee <FaCoffee className="text-danger" />
+                    </OutboundLink>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
