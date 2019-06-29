@@ -11,25 +11,20 @@ const BlogRoll = props => {
     <>
       {posts &&
         posts.map(({ node: post }) => (
-          <div
-            className="mb-5 d-flex justify-content-between main-loop-card"
-            key={post.id}
-          >
-            <div className="col-9 pr-3">
-              <h2 className="mb-1 h4 has-text-weight-bold">
+          <div className="mb-5 columns" key={post.id}>
+            <div className="column is-three-quarters pr-3">
+              <h2 className="mb-1 title is-4 has-text-weight-bold">
                 <Link className="text-dark" to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>
               </h2>
               <p className="excerpt">{post.frontmatter.description}</p>
-              <small className="d-block text-muted">
-                In <Tags tags={post.frontmatter.tags} />
-              </small>
+              <Tags tags={post.frontmatter.tags} />
               <small className="text-muted">
                 {post.frontmatter.date} &middot; {post.fields.readingTime.text}
               </small>
             </div>
-            <div className="col-3 pr-0 text-right">
+            <div className="column pr-0 text-right">
               <Link to={`${post.fields.slug}`}>
                 <Img
                   className="w-100"

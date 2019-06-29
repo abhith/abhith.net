@@ -18,15 +18,15 @@ export default class BlogIndexPage extends React.Component {
             slug="\blog"
           />
 
-          <div className="row mt-3">
-            <div className="col-md-8 main-loop">
-              <h4 className="spanborder">
-                <span className="has-text-weight-bold">All Stories</span>
+          <div className="columns mt-3">
+            <div className="column is-two-thirds">
+              <h4 className="spanborder has-text-weight-bold">
+                <span>All Stories</span>
               </h4>
               <BlogRoll posts={posts} />
             </div>
 
-            <div className="col-md-4">
+            <div className="column">
               {/* {% include sidebar-featured.html %}     */}
             </div>
           </div>
