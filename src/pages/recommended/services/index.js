@@ -11,21 +11,25 @@ export default class RecommendedServicesIndexPage extends React.Component {
     const services = data.recommendedServices.edges;
     return (
       <Layout>
-        <div className="container">
+        <div className="container mt-3">
           <SEO
             title="Recommended Services"
             description="Service/Service providers which Abhith recommends."
             slug="\recommended\services"
           />
 
-          <h1 className="has-text-weight-bold title h6 text-uppercase mb-4">
+          <h1 className="title is-6 has-text-weight-bold mb-4">
             <span>Recommended</span>
           </h1>
-          <h4 className="has-text-weight-bold spanborder">
+          <h4 className="title is-4 has-text-weight-bold spanborder">
             <span>Services</span>
           </h4>
-
-          <ServicesRoll services={services} />
+          <div className="columns">
+            <div className="column is-two-thirds">
+              <ServicesRoll services={services} />
+            </div>
+            <div className="column"></div>
+          </div>
         </div>
       </Layout>
     );

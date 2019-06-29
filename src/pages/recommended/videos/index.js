@@ -17,18 +17,18 @@ export default class RecommendedVideosIndexPage extends React.Component {
             description="Videos which Abhith recommends."
             slug="\recommended\videos"
           />
-          <div className="row mt-3">
-            <div className="col-md-8 main-loop">
-              <h1 className="has-text-weight-bold title h6 text-uppercase mb-4">
+          <div className="columns mt-3">
+            <div className="column is-two-thirds main-loop">
+              <h1 className="has-text-weight-bold title is-6 text-uppercase mb-4">
                 <span>Recommended</span>
               </h1>
-              <h4 className=" spanborder">
-                <span className="has-text-weight-bold">Videos</span>
+              <h4 className="spanborder">
+                <span className="title is-4 has-text-weight-bold">Videos</span>
               </h4>
               <VideosRoll videos={videos} />
             </div>
 
-            <div className="col-md-4">
+            <div className="column">
               {/* {% include sidebar-featured.html %}     */}
             </div>
           </div>
