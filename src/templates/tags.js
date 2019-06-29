@@ -70,10 +70,10 @@ class TagRoute extends React.Component {
           slug={`\\tags\\${this.props.pageContext.tag}`}
         />
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-8">
-              <h1 className="title h6 text-uppercase mb-4">
-                <span className="has-text-weight-bold">Tags</span>
+          <div className="columns">
+            <div className="column is-two-thirds">
+              <h1 className="title is-6 has-text-weight-bold mb-4">
+                <span>Tags</span>
               </h1>
               <h4 className="spanborder text-capitalize">
                 <span className="has-text-weight-bold">{tag}</span>
@@ -113,7 +113,7 @@ class TagRoute extends React.Component {
                 </div>
               )}
             </div>
-            <div className="col-md-4">
+            <div className="column">
               {/* {% include sidebar-featured.html %}     */}
             </div>
           </div>
