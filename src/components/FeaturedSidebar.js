@@ -6,26 +6,25 @@ import Tags from "./Tags";
 const FeaturedSidebar = ({ items }) => {
   return (
     <div className="sticky-top sticky-top-offset">
-      <h4 className="font-weight-bold spanborder">
-        <span>Featured</span>
+      <h4 className="spanborder">
+        <span className="has-text-weight-bold">Featured</span>
       </h4>
       <ol className="list-featured">
         {items &&
           items.map(({ node: item }) => (
-            <li className="mb-4" key={item.id}>
+            <li className="ml-3 mb-4" key={item.id}>
               <span>
-                <h6 className="font-weight-bold">
-                  <OutboundLink
-                    className="text-dark"
-                    target="_blank"
-                    href={item.url}
-                  >
+                <OutboundLink
+                  className="text-dark"
+                  target="_blank"
+                  href={item.url}
+                >
+                  <h6 className="title is-6 has-text-weight-bold">
                     {item.title}
-                  </OutboundLink>
-                </h6>
-                <span className="d-block text-muted">
-                  In <Tags tags={item.tags} />
-                </span>
+                  </h6>
+                </OutboundLink>
+
+                <Tags tags={item.tags} />
               </span>
             </li>
           ))}

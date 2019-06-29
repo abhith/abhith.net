@@ -6,27 +6,24 @@ import Tags from "./Tags";
 
 const BlogRollItem = ({ post: node }) => {
   return (
-    <div className="mb-3 d-flex align-items-center">
-      <div className="col-4">
-        <Link to={`${node.fields.slug}`}>
-          <Img
-            className="w-100"
-            fluid={node.frontmatter.image.childImageSharp.fluid}
-          />
-        </Link>
-      </div>
-      <div className="col-8">
-        <h2 className="mb-2 h6 font-weight-bold">
-          <Link className="text-dark" to={`${node.fields.slug}`}>
-            {node.frontmatter.title}
+    <div className="columns">
+      <div className="column is-one-third">
+        <figure className="image">
+          <Link to={`${node.fields.slug}`}>
+            <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
           </Link>
-        </h2>
-        <small className="d-block text-muted">
-          In <Tags tags={node.frontmatter.tags} />
-        </small>
-        <small className="text-muted">
-          {node.frontmatter.date} &middot; {node.fields.readingTime.text}
-        </small>
+        </figure>
+      </div>
+      <div className="column">
+        <div className="content">
+          <Link to={`${node.fields.slug}`}>
+            <p className="title is-6">{node.frontmatter.title}</p>
+          </Link>
+          <small className="text-muted">
+            {node.frontmatter.date} &middot; {node.fields.readingTime.text}
+          </small>
+          <Tags tags={node.frontmatter.tags} />
+        </div>
       </div>
     </div>
   );

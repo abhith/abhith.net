@@ -5,50 +5,43 @@ import { FaStar } from "react-icons/fa";
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="bg-white border-top p-3 text-muted small">
+      <footer className="footer">
         <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div>
-              <span className="navbar-brand mr-2 mb-0">
+          <div className="columns">
+            <div className="column is-half">
+              <Link to="/" className="title">
                 <strong>Abhith</strong>
-              </span>
-              <span>Copyright © 2019.</span>
-
-              <Link to="/privacy-policy" className="text-dark ml-1">
-                Privacy Policy
               </Link>
-              <span> |</span>
-              <Link to="/tags" className="text-dark ml-1">
-                Tags
-              </Link>
-              <span> | </span>
-              <OutboundLink
-                className="text-dark ml-1"
-                target="_blank"
-                href="https://github.com/Abhith/abhith.net"
-              >
-                <FaStar className="fab" /> on Github
-              </OutboundLink>
             </div>
-            <div>
-              Made with{" "}
-              <OutboundLink
-                target="_blank"
-                className="text-dark font-weight-bold"
-                href="https://www.wowthemes.net/mundana-jekyll-theme/"
-              >
-                {" "}
-                Mundana Jekyll Theme{" "}
-              </OutboundLink>{" "}
-              by{" "}
-              <OutboundLink
-                className="text-dark"
-                target="_blank"
-                href="https://www.wowthemes.net"
-              >
-                WowThemes
-              </OutboundLink>
-              .
+            <div className="column">
+              <p className="subtitle is-5">Links</p>
+              <ul className="list-clean">
+                <li>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
+                </li>
+                <li>
+                  <Link to="/tags">Tags</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="column">
+              <p className="subtitle is-5">Find Me On</p>
+              <ul className="list-clean has-icons">
+                <li>
+                  <OutboundLink
+                    className="link"
+                    target="_blank"
+                    href="https://github.com/Abhith/abhith.net"
+                  >
+                    <FaStar className="fab" /> Abhith.net on Github
+                  </OutboundLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column content has-text-centered">
+              <span>Copyright © 2019</span>
             </div>
           </div>
         </div>
@@ -56,5 +49,4 @@ const Footer = class extends React.Component {
     );
   }
 };
-
 export default Footer;

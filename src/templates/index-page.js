@@ -14,29 +14,37 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
     <SEO />
     <LatestPosts />
     <Hero />
-    <div className="row mt-3">
-      <div className="col-md-8 main-loop">
-        <h4 className="font-weight-bold spanborder">
-          <span>Recommended Videos</span>
-        </h4>
-        <VideosRoll videos={videos} />
-        <div className="row justify-content-center mb-3">
-          <Link to="/recommended/videos" className="btn btn-secondary">
-            View More Videos
-          </Link>
+    <div className="section">
+      <div className="columns">
+        <div className="column is-two-thirds">
+          <h4 className="spanborder">
+            <span className="title is-4 has-text-weight-bold">
+              Recommended Videos
+            </span>
+          </h4>
+          <VideosRoll videos={videos} />
+          <div className="is-pulled-right">
+            <Link to="/recommended/videos" className="button is-link">
+              View More Videos
+            </Link>
+          </div>
+          <h4 className="spanborder">
+            <span className="title is-4 has-text-weight-bold">
+              Recommended Stories
+            </span>
+          </h4>
+          <StoriesRoll posts={stories} />
+          <div className="is-pulled-right">
+            <Link to="/recommended/stories" className="button is-link">
+              View More Developer Stories
+            </Link>
+          </div>
         </div>
-        <h4 className="font-weight-bold spanborder">
-          <span>Recommended Stories</span>
-        </h4>
-        <StoriesRoll posts={stories} />
-        <div className="row justify-content-center mb-3">
-          <Link to="/recommended/stories" className="btn btn-secondary">
-            View More Developer Stories
-          </Link>
+        <div className="column is-one-third">
+          <div className="container">
+            <FeaturedSidebar items={featured} />
+          </div>
         </div>
-      </div>
-      <div className="col-md-4">
-        <FeaturedSidebar items={featured} />
       </div>
     </div>
   </div>

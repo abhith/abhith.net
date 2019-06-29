@@ -1,5 +1,6 @@
 @import "~bulma/sass/utilities/initial-variables" 
 @import "~bulma" 
+@import "SassMeister-input"
 
 .nav-logo
   width: 112px 
@@ -8,4 +9,39 @@
 .is-vertical-center 
   display: flex
   align-items: center
+
+.has-background-lightblue
+  fill: #e8f3ec!important
+  background-color:#e8f3ec!important
+
+.spanborder 
+  border-bottom: 1px solid #e8f3ec
+  margin-bottom: 2rem
+
+.spanborder span 
+    border-bottom: 1px solid rgba(0,0,0,.44)
+    display: inline-block
+    padding-bottom: 20px
+    margin-bottom: -1px
+
+/* React Player */
+
+.player-wrapper 
+  position: relative
+  padding-top: 56.25% 
+
+
+.react-player 
+  position: absolute
+  top: 0
+  left: 0
+
+
+a[target="_blank"]::after 
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==)
+  margin: 0 3px 0 5px
+
+
+.gatsby-resp-iframe-wrapper 
+  margin-bottom: 0.5rem !important
 
