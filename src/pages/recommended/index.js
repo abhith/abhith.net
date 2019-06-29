@@ -4,8 +4,9 @@ import SEO from "../../components/seo/SEO";
 import VideosRoll from "../../components/VideosRoll";
 import StoriesRollItem from "../../components/StoriesRollItem";
 import { graphql, Link } from "gatsby";
-import BackgroundImage from "gatsby-background-image";
+
 import { FaGlobe, FaVideo, FaBookOpen } from "react-icons/fa";
+import Img from "gatsby-image";
 
 export default class RecommendedIndexPage extends React.Component {
   render() {
@@ -22,26 +23,22 @@ export default class RecommendedIndexPage extends React.Component {
             description="Developer stories, videos, and services which Abhith recommends."
             slug="\recommended"
           />
-          <h1 className="title h6 text-uppercase mb-4">
-            <span className="has-text-weight-bold">Recommended</span>
+          <h1 className="title is-4 has-text-weight-bold mt-3 mb-4">
+            Recommended
           </h1>
-          <div className="row">
-            <div className="col-md-6">
-              <div className="card border-0 mb-4 box-shadow">
+          <div className="columns">
+            <div className="column">
+              <div>
                 <Link to="/recommended/stories">
-                  <BackgroundImage
-                    Tag="div"
-                    className={`img-bg topfirstimage`}
-                    fluid={storiesImgData}
-                  />
+                  <Img fluid={storiesImgData} />
                 </Link>
-                <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                  <h2 className="h4 has-text-weight-bold">
-                    <Link className="text-dark" to="/recommended/stories">
+                <div className="mt-1">
+                  <Link to="/recommended/stories">
+                    <h2 className="title is-4 has-text-weight-bold">
                       Developer Stories
-                    </Link>
-                  </h2>
-                  <p className="excerpt">
+                    </h2>
+                  </Link>
+                  <p className="content">
                     I read a lot, and that's how I stay updated about what's
                     going on around. Here I am listing out some of the stories
                     which I find useful.
@@ -58,29 +55,23 @@ export default class RecommendedIndexPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="column">
               {data.recommendedStories.edges.map(({ node }) => {
                 return <StoriesRollItem post={node} key={node.id} />;
               })}
             </div>
           </div>
 
-          <div className="row ">
-            <div className="col-md-6">
-              <div className="card border-0 mb-4 box-shadow">
+          <div className="columns">
+            <div className="column">
+              <div>
                 <Link to="/recommended/videos">
-                  <BackgroundImage
-                    Tag="div"
-                    className={`img-bg topfirstimage`}
-                    fluid={videoImgData}
-                  />
+                  <Img fluid={videoImgData} />
                 </Link>
-                <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                  <h2 className="h4 has-text-weight-bold">
-                    <Link className="text-dark" to="/recommended/videos">
-                      VIDEOS
-                    </Link>
-                  </h2>
+                <div className="mt-1">
+                  <Link className="text-dark" to="/recommended/videos">
+                    <h2 className="title is-4 has-text-weight-bold">VIDEOS</h2>
+                  </Link>
                   <p className="excerpt">
                     Similar to Developer Stories, here I am listing videos which
                     worth sharing.
@@ -98,26 +89,22 @@ export default class RecommendedIndexPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="column">
               <VideosRoll videos={videos} />
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-6">
-              <div className="card border-0 mb-4 box-shadow">
+          <div className="columns">
+            <div className="column is-half">
+              <div className="">
                 <Link to="/recommended/services">
-                  <BackgroundImage
-                    Tag="div"
-                    className={`img-bg topfirstimage`}
-                    fluid={serviceImgData}
-                  />
+                  <Img fluid={serviceImgData} />
                 </Link>
-                <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                  <h2 className="h4 has-text-weight-bold">
-                    <Link className="text-dark" to="/recommended/services">
+                <div className="">
+                  <Link className="text-dark" to="/recommended/services">
+                    <h2 className="title is-4 has-text-weight-bold">
                       Services
-                    </Link>
-                  </h2>
+                    </h2>
+                  </Link>
                   <p className="excerpt">
                     There are plenty of online services available nowadays. Here
                     I am sharing some of the useful ones which I explored yet.

@@ -23,7 +23,6 @@ function LatestPosts() {
                         <figure className="image">
                           <Link to={`${node.fields.slug}`}>
                             <Img
-                              className="w-100"
                               fluid={
                                 node.frontmatter.image.childImageSharp.fluid
                               }
