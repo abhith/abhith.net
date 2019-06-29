@@ -19,11 +19,11 @@ export default class RecommendedVideosIndexPage extends React.Component {
           />
           <div className="row mt-3">
             <div className="col-md-8 main-loop">
-              <h1 className="font-weight-bold title h6 text-uppercase mb-4">
+              <h1 className="has-text-weight-bold title h6 text-uppercase mb-4">
                 <span>Recommended</span>
               </h1>
-              <h4 className="font-weight-bold spanborder">
-                <span>Videos</span>
+              <h4 className=" spanborder">
+                <span className="has-text-weight-bold">Videos</span>
               </h4>
               <VideosRoll videos={videos} />
             </div>

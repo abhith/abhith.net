@@ -72,19 +72,21 @@ class TagRoute extends React.Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <h1 className="font-weight-bold title h6 text-uppercase mb-4">
-                <span>Tags</span>
+              <h1 className="title h6 text-uppercase mb-4">
+                <span className="has-text-weight-bold">Tags</span>
               </h1>
-              <h4 className="font-weight-bold spanborder text-capitalize">
-                <span>{tag}</span>
+              <h4 className="spanborder text-capitalize">
+                <span className="has-text-weight-bold">{tag}</span>
               </h4>
 
               <BlogRoll posts={posts} />
 
               {videos.length > 0 && (
                 <div>
-                  <h4 className="font-weight-bold spanborder">
-                    <span>Recommended Videos</span>
+                  <h4 className=" spanborder">
+                    <span className="has-text-weight-bold">
+                      Recommended Videos
+                    </span>
                   </h4>
                   <VideosRoll videos={videos} />
                 </div>
@@ -92,16 +94,20 @@ class TagRoute extends React.Component {
 
               {stories.length > 0 && (
                 <div>
-                  <h4 className="font-weight-bold spanborder">
-                    <span>Recommended Stories</span>
+                  <h4 className=" spanborder">
+                    <span className="has-text-weight-bold">
+                      Recommended Stories
+                    </span>
                   </h4>
                   <StoriesRoll posts={stories} />
                 </div>
               )}
               {services.length > 0 && (
                 <div>
-                  <h4 className="font-weight-bold spanborder">
-                    <span>Recommended Services</span>
+                  <h4 className=" spanborder">
+                    <span className="has-text-weight-bold">
+                      Recommended Services
+                    </span>
                   </h4>
                   <ServicesRoll services={services} />
                 </div>

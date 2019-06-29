@@ -83,7 +83,7 @@ export const BlogPostTemplate = ({
                     : `col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center`
                 }
               >
-                <p className="text-uppercase font-weight-bold">
+                <p className="text-uppercase ">
                   {tags && tags.length ? (
                     <span className="taglist">
                       {tags.map(tag => (
@@ -205,7 +205,7 @@ export const BlogPostTemplate = ({
                 <span className="taglist">
                   {tags.map(tag => (
                     <Link
-                      className="sscroll btn btn-light btn-sm font-weight-bold"
+                      className="sscroll btn btn-light btn-sm "
                       to={`/tags/${kebabCase(tag)}/`}
                       key={tag}
                     >
@@ -226,7 +226,7 @@ export const BlogPostTemplate = ({
                 />
               </div>
               <div className="col-md-10">
-                <h5 className="font-weight-bold">
+                <h5 className="has-text-weight-bold">
                   Written by {author.name}{" "}
                   <span>
                     <OutboundLink
@@ -374,8 +374,8 @@ class BlogPost extends React.Component {
           {relatedPosts.length > 0 && (
             <div className="row mt-5">
               <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Posts</span>
+                <h4 className=" spanborder">
+                  <span className="has-text-weight-bold">Related Posts</span>
                 </h4>
               </div>
               <div className="col-md-6">
@@ -393,8 +393,8 @@ class BlogPost extends React.Component {
           {relatedVideos.length > 0 && (
             <div className="row mt-5">
               <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Videos</span>
+                <h4 className=" spanborder">
+                  <span className="has-text-weight-bold">Related Videos</span>
                 </h4>
                 <VideosRoll videos={relatedVideos} />
               </div>
@@ -404,8 +404,8 @@ class BlogPost extends React.Component {
           {relatedStories.length > 0 && (
             <div className="row mt-5">
               <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Stories</span>
+                <h4 className="spanborder">
+                  <span className="has-text-weight-bold">Related Stories</span>
                 </h4>
               </div>
               <div className="col-md-6">
@@ -424,8 +424,8 @@ class BlogPost extends React.Component {
           {relatedServices.length > 0 && (
             <div className="row mt-5">
               <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Services</span>
+                <h4 className=" spanborder">
+                  <span className="has-text-weight-bold">Related Services</span>
                 </h4>
                 <ServicesRoll services={relatedServices} />
               </div>
@@ -434,7 +434,7 @@ class BlogPost extends React.Component {
         </div>
         <div className={`alertbar ${this.state.alertbarClass}`}>
           <div className="container">
-            <div className="row prevnextlinks small font-weight-bold">
+            <div className="row prevnextlinks small">
               <div className="col-md-6 rightborder pl-0">
                 <OutboundLink
                   className="text-dark"

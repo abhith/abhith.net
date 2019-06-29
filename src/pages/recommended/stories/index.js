@@ -19,10 +19,10 @@ export default class RecommendedStoriesIndexPage extends React.Component {
           />
           <div className="row mt-3">
             <div className="col-md-8 main-loop">
-              <h1 className="font-weight-bold title h6 text-uppercase mb-4">
-                <span>Recommended</span>
+              <h1 className=" title h6 text-uppercase mb-4">
+                <span className="has-text-weight-bold">Recommended</span>
               </h1>
-              <h4 className="font-weight-bold spanborder">
+              <h4 className="has-text-weight-bold spanborder">
                 <span>Developer Stories</span>
               </h4>
               <StoriesRoll posts={stories} />

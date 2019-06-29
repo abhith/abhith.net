@@ -22,8 +22,8 @@ export default class RecommendedIndexPage extends React.Component {
             description="Developer stories, videos, and services which Abhith recommends."
             slug="\recommended"
           />
-          <h1 className="font-weight-bold title h6 text-uppercase mb-4">
-            <span>Recommended</span>
+          <h1 className="title h6 text-uppercase mb-4">
+            <span className="has-text-weight-bold">Recommended</span>
           </h1>
           <div className="row">
             <div className="col-md-6">
@@ -36,7 +36,7 @@ export default class RecommendedIndexPage extends React.Component {
                   />
                 </Link>
                 <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                  <h2 className="h4 font-weight-bold">
+                  <h2 className="h4 has-text-weight-bold">
                     <Link className="text-dark" to="/recommended/stories">
                       Developer Stories
                     </Link>
@@ -76,7 +76,7 @@ export default class RecommendedIndexPage extends React.Component {
                   />
                 </Link>
                 <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                  <h2 className="h4 font-weight-bold">
+                  <h2 className="h4 has-text-weight-bold">
                     <Link className="text-dark" to="/recommended/videos">
                       VIDEOS
                     </Link>
@@ -113,7 +113,7 @@ export default class RecommendedIndexPage extends React.Component {
                   />
                 </Link>
                 <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                  <h2 className="h4 font-weight-bold">
+                  <h2 className="h4 has-text-weight-bold">
                     <Link className="text-dark" to="/recommended/services">
                       Services
                     </Link>

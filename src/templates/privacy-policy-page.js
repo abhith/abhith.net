@@ -14,12 +14,12 @@ export const PrivacyPolicyPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div className="container">
+    <div className="container  mt-5 mb-3">
       <SEO title={title} description={description} slug="/privacy-policy" />
 
-      <h3 className="font-weight-bold spanborder">
-        <span> {title}</span>
-      </h3>
+      <h1 className="title spanborder has-text-weight-bold">
+        <span className="has-text-weight-bold"> {title}</span>
+      </h1>
       <div className="page-content">
         <PageContent className="content" content={content} />
       </div>

@@ -14,11 +14,12 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div className="container">
+    <div className="container mt-5 mb-3">
       <SEO title={title} description={description} slug="/about" />
-      <h3 className="font-weight-bold spanborder">
+
+      <h1 className="title spanborder has-text-weight-bold">
         <span> {title}</span>
-      </h3>
+      </h1>
       <div className="page-content">
         <PageContent className="content" content={content} />
       </div>

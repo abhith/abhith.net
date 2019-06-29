@@ -13,7 +13,7 @@ const StoriesRollItem = ({ post }) => {
         </OutboundLink>
       </div>
       <div className="col-8">
-        <h2 className="mb-2 h6 font-weight-bold">
+        <h2 className="mb-2 h6 has-text-weight-bold">
           <OutboundLink className="text-dark" target="_blank" href={post.url}>
             {post.title}
           </OutboundLink>

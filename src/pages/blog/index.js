@@ -20,8 +20,8 @@ export default class BlogIndexPage extends React.Component {
 
           <div className="row mt-3">
             <div className="col-md-8 main-loop">
-              <h4 className="font-weight-bold spanborder">
-                <span>All Stories</span>
+              <h4 className="spanborder">
+                <span className="has-text-weight-bold">All Stories</span>
               </h4>
               <BlogRoll posts={posts} />
             </div>

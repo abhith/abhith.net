@@ -77,15 +77,13 @@ const TagsPage = ({
       <section className="section">
         <SEO
           title="Tags"
-          description={`Summary of all the ${
-            tags.length
-          } tags used in abhith.net`}
+          description={`Summary of all the ${tags.length} tags used in abhith.net`}
           slug="/tags"
         />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <h1 className="font-weight-bold title h6 text-uppercase mb-4">
+              <h1 className="has-text-weight-bold title h6 text-uppercase mb-4">
                 <span>Tags</span>
               </h1>
               {tags.map(tag => (

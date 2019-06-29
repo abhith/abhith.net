@@ -16,7 +16,7 @@ const BlogRoll = props => {
             key={post.id}
           >
             <div className="col-9 pr-3">
-              <h2 className="mb-1 h4 font-weight-bold">
+              <h2 className="mb-1 h4 has-text-weight-bold">
                 <Link className="text-dark" to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>

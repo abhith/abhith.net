@@ -18,10 +18,10 @@ export default class RecommendedServicesIndexPage extends React.Component {
             slug="\recommended\services"
           />
 
-          <h1 className="font-weight-bold title h6 text-uppercase mb-4">
+          <h1 className="has-text-weight-bold title h6 text-uppercase mb-4">
             <span>Recommended</span>
           </h1>
-          <h4 className="font-weight-bold spanborder">
+          <h4 className="has-text-weight-bold spanborder">
             <span>Services</span>
           </h4>
 
