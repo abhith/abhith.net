@@ -102,6 +102,12 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "SQL Server",
+    "slug": "sql-server",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "Visual Studio",
     "slug": "visual-studio",
     "description": "I always loved to work with the latest and the greatest versions of Visual Studio. I started on VS 2008, now most of the time working with VS 2019.",

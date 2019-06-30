@@ -1,5 +1,12 @@
 [
   {
+    "title": "Enter data privacy. Exit SQL Server 2008.",
+    "url": "https://www.red-gate.com/blog/audit-and-compliance/enter-data-privacy-exit-sql-server-2008",
+    "description": "SQL Server 2008 and SQL Server 2008 R2 are out of extended support as of July 2019, but the end of bug fixes, security updates and ongoing support has far-reaching data privacy implications, as James Boother from Microsoft Gold Partner, Coeo, explains.",
+    "date": "2019-06-30T13:52:28.263Z",
+    "tags": ["sql-server"]
+  },
+  {
     "title": "Postman v7.2 Supports GraphQL",
     "url": "https://blog.getpostman.com/2019/06/18/postman-v7-2-supports-graphql/",
     "description": "If you’ve been waiting for GraphQL support in Postman, the wait is over – with the release of Postman v7.2, Postman now supports GraphQL! Adding inbuilt support for GraphQL has been our number two most…",
