@@ -114,6 +114,18 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Visual Studio Code",
+    "slug": "vscode",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
+    "title": "Web.config",
+    "slug": "web-config",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "Website Benchmark",
     "slug": "website-benchmark",
     "description": "",

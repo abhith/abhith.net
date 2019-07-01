@@ -1,5 +1,33 @@
 [
   {
+    "title": "Access your local ASP.NET Core web application from the public web",
+    "url": "https://www.jerriepelser.com/blog/using-ngrok-with-aspnet-core/",
+    "description": "ngrok is tunnelling software that allows you to expose your local web server to the outside world. This is ideal for scenarios like testing webhooks.",
+    "date": "2019-07-01T09:22:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Web.config transformations - The definitive syntax guide",
+    "url": "https://blog.elmah.io/web-config-transformations-the-definitive-syntax-guide/",
+    "description": "The best tutorial for web.config/app.config transformations. Learn the syntax and how to test it. Included are also examples like replacing appSettings.",
+    "date": "2019-07-01T08:22:28.263Z",
+    "tags": ["web-config"]
+  },
+  {
+    "title": "10 Tricks Every Developer Should Know in Visual Studio Code",
+    "url": "https://blog.syncfusion.com/post/10-tricks-in-visual-studio-code.aspx",
+    "description": "This blog provides you 10 essential tricks one should know in using Visual Studio Code for editing the computer source codes.",
+    "date": "2019-07-01T08:12:28.263Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "Visual Studio tips and tricks",
+    "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-tips-and-tricks/",
+    "description": "Whether you are new or have been using Visual Studio for years, there are a bunch of tips and tricks that can make you more productive. We’ve been sharing tips on Twitter using the #vstip hashtag for a while, and this is a collection of the best ones so far.",
+    "date": "2019-07-01T07:52:28.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
     "title": "Enter data privacy. Exit SQL Server 2008.",
     "url": "https://www.red-gate.com/blog/audit-and-compliance/enter-data-privacy-exit-sql-server-2008",
     "description": "SQL Server 2008 and SQL Server 2008 R2 are out of extended support as of July 2019, but the end of bug fixes, security updates and ongoing support has far-reaching data privacy implications, as James Boother from Microsoft Gold Partner, Coeo, explains.",
