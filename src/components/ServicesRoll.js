@@ -11,13 +11,20 @@ const ServicesRoll = props => {
       {services &&
         services.map(({ node: service }) => (
           <div className="box" key={service.id}>
-            <div className="columns p-4 border rounded">
+            <div className="columns">
               <div className="column">
-                <OutboundLink target="_blank" href={service.url}>
-                  <h4 className="title is-5"> {service.title} </h4>
-                </OutboundLink>
+                <h4 className="title is-4">
+                  <OutboundLink
+                    className="has-text-dark"
+                    target="_blank"
+                    href={service.url}
+                  >
+                    {service.title}{" "}
+                  </OutboundLink>
+                </h4>
+
+                <div className="subtitle">{service.description}</div>
                 <Tags tags={service.tags} />
-                <div className="subtitle is-6">{service.description}</div>
               </div>
             </div>
           </div>

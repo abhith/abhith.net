@@ -9,20 +9,20 @@ const FeaturedSidebar = ({ items }) => {
       <h4 className="spanborder">
         <span className="has-text-weight-bold">Featured</span>
       </h4>
-      <ol className="list-featured">
+      <ol className="list-clean">
         {items &&
           items.map(({ node: item }) => (
             <li className="ml-3 mb-4" key={item.id}>
               <span>
-                <OutboundLink
-                  className="text-dark"
-                  target="_blank"
-                  href={item.url}
-                >
-                  <h6 className="title is-6 has-text-weight-bold">
+                <h6 className="has-text-weight-bold">
+                  <OutboundLink
+                    target="_blank"
+                    className="has-text-dark"
+                    href={item.url}
+                  >
                     {item.title}
-                  </h6>
-                </OutboundLink>
+                  </OutboundLink>
+                </h6>
 
                 <Tags tags={item.tags} />
               </span>

@@ -417,7 +417,7 @@ const Navbar = class extends React.Component {
                 </p> */}
                   <p className="control">
                     <OutboundLink
-                      className="button is-primary"
+                      className="button is-light"
                       href="https://ko-fi.com/abhith"
                       target="_blank"
                     >

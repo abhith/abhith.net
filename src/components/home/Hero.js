@@ -10,27 +10,28 @@ export default function Hero() {
         // console.log(data);
         const page = data.markdownRemark;
         return (
-          <div className="section has-background-lightblue">
-            <div className="container">
-              <div className="columns">
-                <div className="column">
-                  <div className="container">
-                    <h1 className="title">{page.frontmatter.heading}</h1>
-                    <p className="subtitle">{page.frontmatter.subheading}</p>
-                    <Link to="/about" className="button is-dark">
-                      Read More
-                    </Link>
+          <div className=" ">
+            <div className="container has-background-lightblue">
+              <div className="section">
+                <div className="columns">
+                  <div className="column is-vertical-center">
+                    <div className="">
+                      <h1 className="title mb-3">{page.frontmatter.heading}</h1>
+                      <p className="subtitle">{page.frontmatter.subheading}</p>
+                      <Link to="/about" className="button is-dark">
+                        Read More
+                      </Link>
+                    </div>
                   </div>
-                </div>
-
-                <div className="column">
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: page.frontmatter.image,
-                      className: `center-image`,
-                      alt: `${page.frontmatter.heading}`
-                    }}
-                  />
+                  <div className="column">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: page.frontmatter.image,
+                        className: `center-image`,
+                        alt: `${page.frontmatter.heading}`
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

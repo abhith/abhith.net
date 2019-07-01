@@ -14,20 +14,24 @@ const StoriesRoll = props => {
       {posts &&
         posts.map(({ node: post }) => (
           <div className="mb-5 columns" key={post.id}>
-            <div className="column is-three-quarters pr-3">
-              <OutboundLink
-                className="text-dark"
-                target="_blank"
-                href={post.url}
-              >
-                <h2 className="title is-4">{post.title}</h2>
-              </OutboundLink>
+            <div className="column is-three-quarters">
+              <div className="content">
+                <h2 className="title is-4">
+                  <OutboundLink
+                    className="has-text-dark"
+                    target="_blank"
+                    href={post.url}
+                  >
+                    {post.title}
+                  </OutboundLink>
+                </h2>
 
-              <p className="subtitle is-6">
-                {truncate(post.description, { length: 186 })}
-              </p>
-              <Tags tags={post.tags} />
-              <small className="text-muted">{post.date}</small>
+                <p className="subtitle is-5">
+                  {truncate(post.description, { length: 186 })}
+                </p>
+                <Tags tags={post.tags} />
+                <small className="text-muted">{post.date}</small>
+              </div>
             </div>
             <div className="column is-one-quarter">
               <OutboundLink href={post.url} target="_blank">

@@ -12,14 +12,14 @@ const BlogRoll = props => {
       {posts &&
         posts.map(({ node: post }) => (
           <div className="mb-5 columns" key={post.id}>
-            <div className="column is-three-quarters pr-3">
+            <div className="column is-three-quarters">
               <div className="content">
-                <h2 className="mb-1 title is-4 has-text-weight-bold">
-                  <Link className="text-dark" to={post.fields.slug}>
+                <Link className="text-dark" to={post.fields.slug}>
+                  <h2 className="mb-1 title is-4 has-text-weight-bold">
                     {post.frontmatter.title}
-                  </Link>
-                </h2>
-                <p className="excerpt">{post.frontmatter.description}</p>
+                  </h2>
+                </Link>
+                <p className="subtitle">{post.frontmatter.description}</p>
                 <Tags tags={post.frontmatter.tags} />
                 <small className="text-muted">
                   {post.frontmatter.date} &middot;{" "}
@@ -27,12 +27,9 @@ const BlogRoll = props => {
                 </small>
               </div>
             </div>
-            <div className="column pr-0 text-right">
+            <div className="column">
               <Link to={`${post.fields.slug}`}>
-                <Img
-                  className="w-100"
-                  fluid={post.frontmatter.image.childImageSharp.fluid}
-                />
+                <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
               </Link>
             </div>
           </div>

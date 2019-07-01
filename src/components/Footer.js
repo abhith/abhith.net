@@ -17,19 +17,23 @@ const Footer = class extends React.Component {
               <p className="subtitle is-5">Links</p>
               <ul className="list-clean">
                 <li>
-                  <Link to="/privacy-policy">Privacy Policy</Link>
+                  <Link to="/privacy-policy" className="has-text-grey-dark">
+                    Privacy Policy
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/tags">Tags</Link>
+                  <Link to="/tags" className="has-text-grey-dark">
+                    Tags
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="column">
-              <p className="subtitle is-5">Find Me On</p>
+              <p className="subtitle is-5">More</p>
               <ul className="list-clean has-icons">
                 <li>
                   <OutboundLink
-                    className="link"
+                    className="has-text-grey-dark"
                     target="_blank"
                     href="https://github.com/Abhith/abhith.net"
                   >
