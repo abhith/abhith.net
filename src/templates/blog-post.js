@@ -66,62 +66,53 @@ export const BlogPostTemplate = ({
         dateModified={dateModifiedSeoFormat}
         datePublished={datePublishedSeoFormat}
       />
-      <div className="container">
-        <div className="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
-          <div className="h-100 tofront">
-            <div
-              className={
-                image == null
-                  ? `row justify-content-center`
-                  : `row justify-content-between`
-              }
-            >
-              <div
-                className={
-                  image == null
-                    ? ` col-md-8 pr-0 pr-md-4 pt-4 pb-4 align-self-center`
-                    : `col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center`
-                }
-              >
-                <p className="text-uppercase ">
-                  {tags && tags.length ? (
-                    <span className="taglist">
-                      {tags.map(tag => (
-                        <React.Fragment key={tag}>
-                          <Link
-                            className="sscroll text-danger"
-                            to={`/tags/${kebabCase(tag)}/`}
-                          >
-                            {tag}
-                          </Link>{" "}
-                          <span className="sep">, </span>
-                        </React.Fragment>
-                      ))}
-                    </span>
-                  ) : null}
-                </p>
-                <h1 className="display-4 mb-4 article-headline">{title}</h1>
 
-                <div className="d-flex align-items-center">
-                  <img
-                    className="rounded-circle"
-                    src={author.image}
-                    alt={author.name}
-                    width="70"
-                  />
-                  <small className="ml-3">
-                    {" "}
+      <div className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column">
+              <p className="text-uppercase ">
+                {tags && tags.length ? (
+                  <span className="taglist">
+                    {tags.map(tag => (
+                      <React.Fragment key={tag}>
+                        <Link
+                          className="has-text-danger has-text-weight-bold is-uppercase"
+                          to={`/tags/${kebabCase(tag)}/`}
+                        >
+                          {tag}
+                        </Link>{" "}
+                        <span className="sep">, </span>
+                      </React.Fragment>
+                    ))}
+                  </span>
+                ) : null}
+              </p>
+              <h1 className="title is-1 mb-4 article-headline">{title}</h1>
+              <div className="media">
+                <figure className="media-left">
+                  <p className="image is-64x64">
+                    <img
+                      className="is-rounded"
+                      src={author.image}
+                      alt={author.name}
+                    />
+                  </p>
+                </figure>
+                <div className="media-content">
+                  <small>
                     {author.name}{" "}
                     <span>
                       <OutboundLink
                         target="_blank"
-                        className="btn btn-outline-success btn-sm btn-round ml-1"
+                        className="button is-success is-outlined is-small is-rounded ml-1"
                         href={author.url}
                       >
                         Follow
                       </OutboundLink>
                     </span>
-                    <span className="text-muted d-block mt-1">
+                    <br />
+                    <span className="text-muted mt-1">
                       {date} &middot; {readingTime} &middot; Last Updated:{" "}
                       <time dateTime={lastModifiedTime}>
                         {lastModifiedTimeString}
@@ -131,127 +122,134 @@ export const BlogPostTemplate = ({
                 </div>
               </div>
 
-              {image && (
-                <div className="col-md-6 pr-0 align-self-center">
-                  <Img
-                    className="rounded"
-                    fluid={image.childImageSharp.fluid}
-                  />
-                </div>
-              )}
+              {/*  */}
+            </div>
+            <div className="column">
+              <Img fluid={image.childImageSharp.fluid} />
             </div>
           </div>
         </div>
       </div>
-      <div className="container-lg pt-4 pb-4">
-        <div className="row justify-content-center">
-          <div className="col-lg-2 pr-4 mb-4 col-md-12">
-            <div className="sticky-top sticky-top-offset text-center">
-              <div className="text-muted">Share this</div>
-              <div className="share d-inline-block">
-                <div className="a2a_kit a2a_kit_size_32 a2a_default_style">
-                  <FacebookShareButton
-                    url={pageUrl}
-                    quote={title}
-                    className="btn btn-round"
-                  >
-                    <FacebookIcon size={44} round />
-                  </FacebookShareButton>
-                  <TwitterShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                    via={siteMetadata.social.twitter.split("@").join("")}
-                    hashtags={tags}
-                  >
-                    <TwitterIcon size={44} round></TwitterIcon>
-                  </TwitterShareButton>
-                  <LinkedinShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                  >
-                    <LinkedinIcon size={44} round></LinkedinIcon>
-                  </LinkedinShareButton>
-                  <RedditShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                  >
-                    <RedditIcon size={44} round></RedditIcon>
-                  </RedditShareButton>
-                  <PocketShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                  >
-                    <PocketIcon size={44} round></PocketIcon>
-                  </PocketShareButton>
-                  <WhatsappShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                  >
-                    <WhatsappIcon size={44} round></WhatsappIcon>
-                  </WhatsappShareButton>
+      <div className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-2 pr-4 mb-4">
+              <div className="sticky-top sticky-top-offset text-center">
+                <div className="text-muted">Share this</div>
+                <div className="share d-inline-block">
+                  <p class="buttons">
+                    <FacebookShareButton
+                      url={pageUrl}
+                      quote={title}
+                      className="button is-medium"
+                    >
+                      <FacebookIcon size={36} />
+                    </FacebookShareButton>
+
+                    <TwitterShareButton
+                      url={pageUrl}
+                      className="button is-medium"
+                      title={title}
+                      via={siteMetadata.social.twitter.split("@").join("")}
+                      hashtags={tags}
+                    >
+                      <TwitterIcon size={36}></TwitterIcon>
+                    </TwitterShareButton>
+                    <LinkedinShareButton
+                      url={pageUrl}
+                      className="button is-medium"
+                      title={title}
+                    >
+                      <LinkedinIcon size={36}></LinkedinIcon>
+                    </LinkedinShareButton>
+                    <RedditShareButton
+                      url={pageUrl}
+                      className="button is-medium"
+                      title={title}
+                    >
+                      <RedditIcon size={36}></RedditIcon>
+                    </RedditShareButton>
+                    <PocketShareButton
+                      url={pageUrl}
+                      className="button is-medium"
+                      title={title}
+                    >
+                      <PocketIcon size={36}></PocketIcon>
+                    </PocketShareButton>
+                    <WhatsappShareButton
+                      url={pageUrl}
+                      className="button is-medium"
+                      title={title}
+                    >
+                      <WhatsappIcon size={36}></WhatsappIcon>
+                    </WhatsappShareButton>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-12 col-lg-8">
-            <PostContent content={content} className={`article-post`} />
-            {tags && tags.length ? (
-              <div className="mb-4">
-                <span className="taglist">
-                  {tags.map(tag => (
-                    <Link
-                      className="sscroll btn btn-light btn-sm "
-                      to={`/tags/${kebabCase(tag)}/`}
-                      key={tag}
-                    >
-                      {tag}
-                    </Link>
-                  ))}
-                </span>
-              </div>
-            ) : null}
+            <div className="column is-8">
+              <PostContent content={content} className={`content`} />
+              {tags && tags.length ? (
+                <div className="mb-4">
+                  <span className="taglist">
+                    {tags.map(tag => (
+                      <Link
+                        className="sscroll btn btn-light btn-sm "
+                        to={`/tags/${kebabCase(tag)}/`}
+                        key={tag}
+                      >
+                        {tag}
+                      </Link>
+                    ))}
+                  </span>
+                </div>
+              ) : null}
 
-            <div className="row mt-5">
-              <div className="col-md-2 align-self-center">
-                <img
-                  className="rounded-circle"
-                  src={author.image}
-                  alt={author.name}
-                  width="90"
-                />
+              <div className="container mt-5">
+                <div className="media">
+                  <figure className="media-left">
+                    <p className="image is-96x96">
+                      <img
+                        className="is-rounded"
+                        src={author.image}
+                        alt={author.name}
+                      />
+                    </p>
+                  </figure>
+                  <div className="media-content">
+                    <div className="content">
+                      <p>
+                        <strong className="title is-4">
+                          Written by {author.name}
+                        </strong>{" "}
+                        <span>
+                          <OutboundLink
+                            target="_blank"
+                            className="button is-success is-outlined is-small is-rounded ml-1"
+                            href={author.url}
+                          >
+                            Follow
+                          </OutboundLink>
+                        </span>
+                        <span>
+                          <OutboundLink
+                            className="button is-info is-outlined is-small is-rounded ml-1"
+                            href="https://ko-fi.com/abhith"
+                            target="_blank"
+                          >
+                            Buy me a coffee <FaCoffee className="text-danger" />
+                          </OutboundLink>
+                        </span>
+                        <br />
+                        {author.minibio}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="col-md-10">
-                <h5 className="has-text-weight-bold">
-                  Written by {author.name}{" "}
-                  <span>
-                    <OutboundLink
-                      target="_blank"
-                      className="btn btn-outline-success btn-sm btn-round ml-2"
-                      href={author.url}
-                    >
-                      Follow
-                    </OutboundLink>
-                  </span>
-                  <span>
-                    <OutboundLink
-                      className="btn btn-outline-info btn-sm btn-round ml-2"
-                      href="https://ko-fi.com/abhith"
-                      target="_blank"
-                    >
-                      Buy me a coffee <FaCoffee className="text-danger" />
-                    </OutboundLink>
-                  </span>
-                </h5>
-                {author.minibio}
+              <div id="comments" className="mt-5">
+                <DiscussionEmbed {...disqusConfig} />
               </div>
-            </div>
-            <div id="comments" className="mt-5">
-              <DiscussionEmbed {...disqusConfig} />
             </div>
           </div>
         </div>
@@ -372,70 +370,76 @@ class BlogPost extends React.Component {
         />
         <div className="container">
           {relatedPosts.length > 0 && (
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className=" spanborder">
-                  <span className="has-text-weight-bold">Related Posts</span>
-                </h4>
-              </div>
-              <div className="col-md-6">
-                {relatedPostsFirstHalf.map(({ node }) => {
-                  return <BlogRollItem post={node} key={node.id} />;
-                })}
-              </div>
-              <div className="col-md-6">
-                {relatedPostsSecondHalf.map(({ node }) => {
-                  return <BlogRollItem post={node} key={node.id} />;
-                })}
+            <div className="section">
+              <h4 className="spanborder">
+                <span className="has-text-weight-bold">Related Posts</span>
+              </h4>
+              <div className="columns">
+                <div className="column">
+                  {relatedPostsFirstHalf.map(({ node }) => {
+                    return <BlogRollItem post={node} key={node.id} />;
+                  })}
+                </div>
+                <div className="column">
+                  {relatedPostsSecondHalf.map(({ node }) => {
+                    return <BlogRollItem post={node} key={node.id} />;
+                  })}
+                </div>
               </div>
             </div>
           )}
           {relatedVideos.length > 0 && (
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className=" spanborder">
-                  <span className="has-text-weight-bold">Related Videos</span>
-                </h4>
-                <VideosRoll videos={relatedVideos} />
+            <div className="section">
+              <h4 className=" spanborder">
+                <span className="has-text-weight-bold">Related Videos</span>
+              </h4>
+              <div className="columns">
+                <div className="column is-full">
+                  <VideosRoll videos={relatedVideos} />
+                </div>
               </div>
             </div>
           )}
 
           {relatedStories.length > 0 && (
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className="spanborder">
-                  <span className="has-text-weight-bold">Related Stories</span>
-                </h4>
-              </div>
-              <div className="col-md-6">
-                {relatedStoriesFirstHalf.map(({ node }) => {
-                  return <StoriesRollItem post={node} key={node.id} />;
-                })}
-              </div>
-              <div className="col-md-6">
-                {relatedStoriesSecondHalf.map(({ node }) => {
-                  return <StoriesRollItem post={node} key={node.id} />;
-                })}
+            <div className="section">
+              <h4 className="spanborder">
+                <span className="has-text-weight-bold">Related Stories</span>
+              </h4>
+              <div className="columns">
+                <div className="column is-half">
+                  {relatedStoriesFirstHalf.map(({ node }) => {
+                    return <StoriesRollItem post={node} key={node.id} />;
+                  })}
+                </div>
+                <div className="column is-half">
+                  {relatedStoriesSecondHalf.map(({ node }) => {
+                    return <StoriesRollItem post={node} key={node.id} />;
+                  })}
+                </div>
               </div>
             </div>
           )}
 
           {relatedServices.length > 0 && (
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className=" spanborder">
-                  <span className="has-text-weight-bold">Related Services</span>
-                </h4>
-                <ServicesRoll services={relatedServices} />
+            <div className="section">
+              <div className="columns">
+                <div className="column is-full">
+                  <h4 className=" spanborder">
+                    <span className="has-text-weight-bold">
+                      Related Services
+                    </span>
+                  </h4>
+                  <ServicesRoll services={relatedServices} />
+                </div>
               </div>
             </div>
           )}
         </div>
-        <div className={`alertbar ${this.state.alertbarClass}`}>
+        {/* <div className={`alertbar ${this.state.alertbarClass}`}>
           <div className="container">
-            <div className="row prevnextlinks small">
-              <div className="col-md-6 rightborder pl-0">
+            <div className="columns prevnextlinks small">
+              <div className="column is-half rightborder pl-0">
                 <OutboundLink
                   className="text-dark"
                   href={featuredServices[0].url}
@@ -451,7 +455,7 @@ class BlogPost extends React.Component {
                 </OutboundLink>
               </div>
 
-              <div className="col-md-6 text-right pr-0">
+              <div className="column is-half text-right pr-0">
                 <OutboundLink
                   className="text-dark"
                   href={featuredServices[1].url}
@@ -468,7 +472,7 @@ class BlogPost extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </Layout>
     );
   }
