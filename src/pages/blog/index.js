@@ -17,17 +17,18 @@ export default class BlogIndexPage extends React.Component {
             description="Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More"
             slug="\blog"
           />
+          <div className="section">
+            <div className="columns">
+              <div className="column is-two-thirds">
+                <h4 className="title is-4 spanborder has-text-weight-bold">
+                  <span>All Stories</span>
+                </h4>
+                <BlogRoll posts={posts} />
+              </div>
 
-          <div className="columns mt-3">
-            <div className="column is-two-thirds">
-              <h4 className="title is-4 spanborder has-text-weight-bold">
-                <span>All Stories</span>
-              </h4>
-              <BlogRoll posts={posts} />
-            </div>
-
-            <div className="column">
-              {/* {% include sidebar-featured.html %}     */}
+              <div className="column">
+                {/* {% include sidebar-featured.html %}     */}
+              </div>
             </div>
           </div>
         </div>

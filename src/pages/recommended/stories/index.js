@@ -17,19 +17,21 @@ export default class RecommendedStoriesIndexPage extends React.Component {
             description="Developer stories which Abhith recommends."
             slug="\recommended\stories"
           />
-          <div className="columns mt-3">
-            <div className="column is-two-thirds main-loop">
-              <h1 className="title is-6 text-uppercase mb-4">
-                <span className="has-text-weight-bold">Recommended</span>
-              </h1>
-              <h4 className="has-text-weight-bold spanborder">
-                <span>Developer Stories</span>
-              </h4>
-              <StoriesRoll posts={stories} />
-            </div>
+          <div className="section">
+            <div className="columns">
+              <div className="column is-two-thirds main-loop">
+                <h1 className="title is-6 text-uppercase mb-4">
+                  <span className="has-text-weight-bold">Recommended</span>
+                </h1>
+                <h4 className="has-text-weight-bold spanborder">
+                  <span>Developer Stories</span>
+                </h4>
+                <StoriesRoll posts={stories} />
+              </div>
 
-            <div className="column">
-              {/* {% include sidebar-featured.html %}     */}
+              <div className="column">
+                {/* {% include sidebar-featured.html %}     */}
+              </div>
             </div>
           </div>
         </div>

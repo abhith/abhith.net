@@ -23,106 +23,111 @@ export default class RecommendedIndexPage extends React.Component {
             description="Developer stories, videos, and services which Abhith recommends."
             slug="\recommended"
           />
-          <h1 className="title is-4 has-text-weight-bold mt-3 mb-4">
-            Recommended
-          </h1>
-          <div className="columns">
-            <div className="column">
-              <div>
-                <Link to="/recommended/stories">
-                  <Img fluid={storiesImgData} />
-                </Link>
-                <div className="mt-1">
+          <div className="section">
+            <h1 className="title is-4 has-text-weight-bold mb-4">
+              Recommended
+            </h1>
+            <div className="columns">
+              <div className="column">
+                <div>
                   <Link to="/recommended/stories">
-                    <h2 className="title is-4 has-text-weight-bold">
-                      Developer Stories
-                    </h2>
+                    <Img fluid={storiesImgData} />
                   </Link>
-                  <p className="content">
-                    I read a lot, and that's how I stay updated about what's
-                    going on around. Here I am listing out some of the stories
-                    which I find useful.
-                  </p>
-                  <div>
-                    <Link
-                      className="sscroll btn btn-gray btn-sm"
-                      to="/recommended/stories"
-                    >
-                      <FaBookOpen /> {data.recommendedStories.totalCount}{" "}
-                      STORIES
+                  <div className="mt-1">
+                    <Link to="/recommended/stories">
+                      <h2 className="title is-4 has-text-weight-bold">
+                        Developer Stories
+                      </h2>
                     </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="column">
-              {data.recommendedStories.edges.map(({ node }) => {
-                return <StoriesRollItem post={node} key={node.id} />;
-              })}
-            </div>
-          </div>
-
-          <div className="columns">
-            <div className="column">
-              <div>
-                <Link to="/recommended/videos">
-                  <Img fluid={videoImgData} />
-                </Link>
-                <div className="mt-1">
-                  <Link className="text-dark" to="/recommended/videos">
-                    <h2 className="title is-4 has-text-weight-bold">VIDEOS</h2>
-                  </Link>
-                  <p className="excerpt">
-                    Similar to Developer Stories, here I am listing videos which
-                    worth sharing.
-                  </p>
-                  <div>
-                    <small className="d-block text-muted">
+                    <p className="content">
+                      I read a lot, and that's how I stay updated about what's
+                      going on around. Here I am listing out some of the stories
+                      which I find useful.
+                    </p>
+                    <div>
                       <Link
-                        className="sscroll btn btn-lightblue btn-sm"
-                        to="/recommended/videos"
+                        className="sscroll btn btn-gray btn-sm"
+                        to="/recommended/stories"
                       >
-                        <FaVideo /> {data.recommendedVideos.totalCount} VIDEOS
+                        <FaBookOpen /> {data.recommendedStories.totalCount}{" "}
+                        STORIES
                       </Link>
-                    </small>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div className="column">
+                {data.recommendedStories.edges.map(({ node }) => {
+                  return <StoriesRollItem post={node} key={node.id} />;
+                })}
+              </div>
             </div>
-            <div className="column">
-              <VideosRoll videos={videos} />
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column is-half">
-              <div className="">
-                <Link to="/recommended/services">
-                  <Img fluid={serviceImgData} />
-                </Link>
-                <div className="">
-                  <Link className="text-dark" to="/recommended/services">
-                    <h2 className="title is-4 has-text-weight-bold">
-                      Services
-                    </h2>
+
+            <div className="columns">
+              <div className="column">
+                <div>
+                  <Link to="/recommended/videos">
+                    <Img fluid={videoImgData} />
                   </Link>
-                  <p className="excerpt">
-                    There are plenty of online services available nowadays. Here
-                    I am sharing some of the useful ones which I explored yet.
-                  </p>
-                  <div>
-                    <Link
-                      className="sscroll btn btn-light btn-sm"
-                      to="/recommended/services"
-                    >
-                      <FaGlobe /> {data.services.totalCount} SERVICES
+                  <div className="mt-1">
+                    <Link className="text-dark" to="/recommended/videos">
+                      <h2 className="title is-4 has-text-weight-bold">
+                        VIDEOS
+                      </h2>
                     </Link>
+                    <p className="excerpt">
+                      Similar to Developer Stories, here I am listing videos
+                      which worth sharing.
+                    </p>
+                    <div>
+                      <small className="d-block text-muted">
+                        <Link
+                          className="sscroll btn btn-lightblue btn-sm"
+                          to="/recommended/videos"
+                        >
+                          <FaVideo /> {data.recommendedVideos.totalCount} VIDEOS
+                        </Link>
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div className="column">
+                <VideosRoll videos={videos} />
+              </div>
             </div>
-            {/* <div className="col-md-6">
+            <div className="columns">
+              <div className="column is-half">
+                <div className="">
+                  <Link to="/recommended/services">
+                    <Img fluid={serviceImgData} />
+                  </Link>
+                  <div className="">
+                    <Link className="text-dark" to="/recommended/services">
+                      <h2 className="title is-4 has-text-weight-bold">
+                        Services
+                      </h2>
+                    </Link>
+                    <p className="excerpt">
+                      There are plenty of online services available nowadays.
+                      Here I am sharing some of the useful ones which I explored
+                      yet.
+                    </p>
+                    <div>
+                      <Link
+                        className="sscroll btn btn-light btn-sm"
+                        to="/recommended/services"
+                      >
+                        <FaGlobe /> {data.services.totalCount} SERVICES
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="col-md-6">
               <VideosRoll videos={videos} />
             </div> */}
+            </div>
           </div>
         </div>
       </Layout>

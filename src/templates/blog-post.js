@@ -137,7 +137,7 @@ export const BlogPostTemplate = ({
               <div className="sticky-top sticky-top-offset text-center">
                 <div className="text-muted">Share this</div>
                 <div className="share d-inline-block">
-                  <p class="buttons">
+                  <div className="buttons">
                     <FacebookShareButton
                       url={pageUrl}
                       quote={title}
@@ -183,7 +183,7 @@ export const BlogPostTemplate = ({
                     >
                       <WhatsappIcon size={36}></WhatsappIcon>
                     </WhatsappShareButton>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
