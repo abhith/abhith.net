@@ -6,6 +6,12 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Android",
+    "slug": "android",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "Angular",
     "slug": "angular",
     "description": "",
@@ -68,6 +74,18 @@
   {
     "title": "Content Writing",
     "slug": "content-writing",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
+    "title": "Database",
+    "slug": "database",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
+    "title": "Flutter",
+    "slug": "flutter",
     "description": "",
     "image": "no-tag-image.png"
   },

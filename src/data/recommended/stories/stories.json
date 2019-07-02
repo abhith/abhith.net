@@ -1,5 +1,19 @@
 [
   {
+    "title": "Add Flutter to existing Android/iOS app",
+    "url": "https://medium.com/flutter-community/add-flutter-to-existing-android-ios-app-ae8c4fb1582e",
+    "description": "By Nirav Tukadiya",
+    "date": "2019-07-02T09:22:28.263Z",
+    "tags": ["flutter", "android"]
+  },
+  {
+    "title": "Memstate: The Practical Argument for Big, In-Memory Data",
+    "url": "https://www.softwaremeadows.com/posts/memstate-_the_practical_argument_for_big_in-memory_data/",
+    "description": "Appeared in Software Meadows",
+    "date": "2019-07-02T08:22:28.263Z",
+    "tags": ["database"]
+  },
+  {
     "title": "Access your local ASP.NET Core web application from the public web",
     "url": "https://www.jerriepelser.com/blog/using-ngrok-with-aspnet-core/",
     "description": "ngrok is tunnelling software that allows you to expose your local web server to the outside world. This is ideal for scenarios like testing webhooks.",
