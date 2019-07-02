@@ -1,12 +1,12 @@
 ---
 templateKey: blog-post
-title: Best Laptop for Programming
+title: Best Laptop for Programming Under $2500 Dollars 2019
 description: >-
  Best laptop under 2500$ in 2019 with min spec of i7-9750H, RTX-2060 and Thunderbolt 3 support.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-06-08T22:50:00.000Z
-lastModificationTime: 2019-06-18T13:02:00.000Z
+lastModificationTime: 2019-07-02T13:02:00.000Z
 image: /img/best-laptop-for-programming.png
 commentId: 'best-laptop-for-programming'
 tags:
@@ -65,7 +65,18 @@ Model Name: WA-7US5130SP
 - Web Camera position
 
 ##### Purchase AERO 15
-[Amazon](https://amzn.to/31FXy6U)
+
+[Amazon](https://amzn.to/2Xj05jQ)
+
+#### ThinkPad X1 Extreme (2nd Gen) (15.6") Laptop
+
+[Official Website](https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/X1-Extreme-Gen-2/p/22TP2TXX1E2)
+
+Waiting for the new model to release with updated hardware including 9th generation Intel CPU's.
+
+##### Cons
+
+- Unavailable at the moment.
 
 #### Acer Predator Triton 500
 
@@ -91,19 +102,9 @@ Not easily upgradable because of its inverted motherboard construction. See the 
 
 Other than that, Only zoned RGB keyboard, **NO** per key RGB.
 
-##### Purchase 
+##### Purchase
 
 Couldn't find the exact one in [Amazon](https://amzn.to/2KrpHcz) but similar spec with intel 8750H found [here](https://amzn.to/2KrpHcz).
-
-#### ThinkPad X1 Extreme (2nd Gen) (15.6") Laptop
-
-[Official Website](https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/X1-Extreme-Gen-2/p/22TP2TXX1E2)
-
-Waiting for the new model to release with updated hardware including 9th generation Intel CPU's.
-
-##### Cons
-
-- Unavailable at the moment.
 
 #### HP Omen 15 (Latest)
 
