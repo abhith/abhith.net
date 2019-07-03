@@ -41,9 +41,7 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
           </div>
         </div>
         <div className="column is-one-third">
-          <div className="container">
-            <FeaturedSidebar items={featured} />
-          </div>
+          <FeaturedSidebar items={featured} />
         </div>
       </div>
     </div>

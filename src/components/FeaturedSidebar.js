@@ -5,7 +5,7 @@ import Tags from "./Tags";
 
 const FeaturedSidebar = ({ items }) => {
   return (
-    <div className="sticky-top sticky-top-offset">
+    <div className="sticky">
       <h4 className="spanborder">
         <span className="has-text-weight-bold">Featured</span>
       </h4>
