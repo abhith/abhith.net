@@ -1,5 +1,19 @@
 [
   {
+    "title": "Top 10 Monospaced Coding Fonts for Developers",
+    "url": "https://scotch.io/bar-talk/top-10-monospace-fonts-for-developers",
+    "description": "Developers are extremely passionate about certain things: developer tools, tabs vs. spaces, CSS in JS (or not!), and FONTS! Let's take a look at the top 10 Fonts for Developers!",
+    "date": "2019-07-03T10:22:28.263Z",
+    "tags": ["ide"]
+  },
+  {
+    "title": "Optimize Angular bundle size in 4 steps",
+    "url": "https://blog.angularindepth.com/optimize-angular-bundle-size-in-4-steps-4a3b3737bf45",
+    "description": "By Siyang Kern Zhao",
+    "date": "2019-07-02T13:22:28.263Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "Add Flutter to existing Android/iOS app",
     "url": "https://medium.com/flutter-community/add-flutter-to-existing-android-ios-app-ae8c4fb1582e",
     "description": "By Nirav Tukadiya",
