@@ -1,5 +1,19 @@
 [
   {
+    "title": "Demystifying Azure App Services Plan",
+    "url": "https://www.petri.com/demystifying-azure-app-services-plan",
+    "description": "Are you curious about what an Azure App Service plan is, exactly? In this article we'll dive into the essence and capabilities of an App Service plan.",
+    "date": "2019-07-04T09:22:28.263Z",
+    "tags": ["azure"]
+  },
+  {
+    "title": "Converting strings to numbers with vanilla JavaScript",
+    "url": "https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/",
+    "description": "Post found in Make Things",
+    "date": "2019-07-03T14:22:28.263Z",
+    "tags": ["javascript"]
+  },
+  {
     "title": "Top 10 Monospaced Coding Fonts for Developers",
     "url": "https://scotch.io/bar-talk/top-10-monospace-fonts-for-developers",
     "description": "Developers are extremely passionate about certain things: developer tools, tabs vs. spaces, CSS in JS (or not!), and FONTS! Let's take a look at the top 10 Fonts for Developers!",

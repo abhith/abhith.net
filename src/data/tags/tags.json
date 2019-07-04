@@ -48,6 +48,12 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Microsoft Azure",
+    "slug": "azure",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "Best Series",
     "slug": "best-series",
     "description": "Best in classess listed under this tag",
@@ -104,6 +110,12 @@
   {
     "title": "IDE",
     "slug": "ide",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
+    "title": "JavaScript",
+    "slug": "javascript",
     "description": "",
     "image": "no-tag-image.png"
   },
