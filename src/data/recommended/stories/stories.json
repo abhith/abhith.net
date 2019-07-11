@@ -1,5 +1,12 @@
 [
   {
+    "title": "C# 8: Static Local Functions and Using Declarations",
+    "url": "https://www.telerik.com/blogs/c-8-static-local-functions-and-using-declarations",
+    "description": "The next major version release of the C# language (C# 8) comes with exciting new features. Let's look at two new features in C# 8, static local functions and the using declaration.",
+    "date": "2019-07-10T08:22:28.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "Demystifying Azure App Services Plan",
     "url": "https://www.petri.com/demystifying-azure-app-services-plan",
     "description": "Are you curious about what an Azure App Service plan is, exactly? In this article we'll dive into the essence and capabilities of an App Service plan.",
