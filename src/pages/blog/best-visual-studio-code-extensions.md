@@ -56,6 +56,10 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 
 ### Debugger for Chrome
 
+[![](https://vsmarketplacebadge.apphb.com/version-short/msjsdiag.debugger-for-chrome.svg)](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) 
+[![](https://vsmarketplacebadge.apphb.com/installs-short/msjsdiag.debugger-for-chrome.svg)](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) 
+[![](https://vsmarketplacebadge.apphb.com/rating-short/msjsdiag.debugger-for-chrome.svg)](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+
 [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) enables you to debug your JavaScript code in the Chrome browser, or any other target that supports the Chrome Debugger protocol.
 
 ## JavaScript
