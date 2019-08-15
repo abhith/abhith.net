@@ -3,23 +3,28 @@ title: Project management - Organize issues using labels
 author: Abhith Rajan
 authorURL: http://twitter.com/abhithrajan
 date: "2019-02-06T00:00:00.000Z"
+lastModificationTime: 2019-08-15T10:22:00.000Z
 templateKey: blog-post
-image: /img/rawpixel-455996-unsplash.png
+image: /img/blog/project-management-organize-issues-using-labels.png
 description: >-
-    Here I am listing the labels which I used to manage my projects in Gitlab and GitHub.
+  Here I am listing the labels which I used to manage my projects in Gitlab and GitHub.
 tags:
   - project-management
   - github
   - gitlab
 ---
 
+Labels are a good way to categorize the tasks. But having too many in an unorganized way results more clutter.
+Here is my way of labeling issues/tasks. This is the way I organize my tasks in **GitHub**, **GitLab** and in **Jira**.
+
 ### Area
 
 Indicating the area to which issues belong.
 
-| Label              | Description       | Color |
-| ------------------ | ----------------- | ----- |
-| area: optimization | Fine tuning works |       |
+| Label               | Description       | Color |
+| ------------------- | ----------------- | ----- |
+| area: optimization  | Fine tuning works |       |
+| area: documentation |                   |       |
 
 ### Priority
 
