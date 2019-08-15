@@ -15,6 +15,8 @@ tags:
 
 If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vscode**. One major strength of **vscode** is its extensions. And these are the extensions which I find very useful in **vscode**,
 
+> I have created an **Extension Pack** for **Visual Studio Code** which includes all the listed extensions. You can install it from [here](https://marketplace.visualstudio.com/items?itemName=abhith.vscode-favorites).
+
 - [Debuggers](#debuggers)
   - [Debugger for Chrome](#debugger-for-chrome)
 - [JavaScript](#javascript)
