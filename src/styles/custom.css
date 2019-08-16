@@ -1,4 +1,4 @@
-.center-image {
+/* .center-image {
   position: relative;
   top: 50%;
   transform: perspective(1px) translateY(-50%);
@@ -10,28 +10,20 @@
   height: 200px;
 }
 
-/* React Player */
-
-.player-wrapper {
-  position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
-}
-
-.react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-a[target="_blank"]::after {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
-  margin: 0 3px 0 5px;
-}
-
-.gatsby-resp-iframe-wrapper {
-  margin-bottom: 0.5rem !important;
-}
-
 .show {
   display: block;
+} */
+
+.content .tag, .content .number, .content .token {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
 }
