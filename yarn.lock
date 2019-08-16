@@ -832,7 +832,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
@@ -5625,12 +5625,12 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-background-image@^0.7.0:
-  version "0.7.6"
-  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.7.6.tgz#726a76aac4f7e149767dc8bc399da3203c71fac1"
-  integrity sha512-u2c8JIeFN29YRaqc+9CLD7oGp0EqISgr9MRqB3HXTO5b+z6qZedd+zYZje5UScKggFyU8p45gnXY2H0bDuWDPw==
+gatsby-background-image@^0.8.0:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.8.4.tgz#15885108abe3006b3b6649973cea0c0fc1280dd4"
+  integrity sha512-6D37XUPXL1RSgveb/qFNzWsebLJQRO6jX/SECaqpY9nGVuAREdAtoo9HsGbLQsKLF/LrUQ2+OEJUehMJUR7lMQ==
   dependencies:
-    "@babel/runtime" "^7.4.5"
+    "@babel/runtime" "^7.5.5"
     global "^4.4.0"
     prop-types "^15.7.2"
 
