@@ -5,7 +5,7 @@ description: This cookbook will help you solve common problems while writing Flu
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2018-04-30T19:22:00.000Z
-lastModificationTime: 2019-05-02T09:22:00.000Z
+lastModificationTime: 2019-08-16T21:22:00.000Z
 image: /img/flutter-logo-s.png
 tags:
   - flutter
@@ -24,6 +24,7 @@ Most of the solution implementations mentioned below can be found in my repo [ht
     - [Additional Resources](#additional-resources)
 - [Build](#build)
   - [Build failed - null value in entry: outputFile=null](#build-failed---null-value-in-entry-outputfilenull)
+  - [Error importing package:http/http.dart](#error-importing-packagehttphttpdart)
 
 ### Navigation
 
@@ -60,3 +61,26 @@ One thing not mentioned in the video is accessing the bloc instance via Inherite
 
 Recently my machine shutdown unexpectedly during a build in progress. After that, all the build is failing with this error.
 > Removing the .gradle directory in the root project directory will fix the problem.
+
+#### Error importing package:http/http.dart
+
+After long time, when I tried to build, I got this error. To resolve,
+
+Go to your **pubspec.yaml** file , and add the `http` dependency:
+
+```yml
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  http: any
+```
+
+Then run the following,
+
+```bash
+flutter packages get
+```
+
+If you are using **VS Code** as the IDE, the above will be automatically executed once you save the **pubspec.yaml** file. (If you installed the [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) extension for VS Code).
