@@ -3,9 +3,9 @@ templateKey: blog-post
 title: Best Visual Studio Code Extensions
 description: My favorite extensions for Visual Studio Code
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2019-02-12T17:50:10.699Z
-lastModificationTime: 2019-06-13T16:02:00.000Z
+lastModificationTime: 2019-08-15T11:02:00.000Z
 image: /img/1200px-visual_studio_code_118.png
 tags:
   - visual-studio-code
@@ -14,6 +14,8 @@ tags:
 ---
 
 If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vscode**. One major strength of **vscode** is its extensions. And these are the extensions which I find very useful in **vscode**,
+
+> I have created an **Extension Pack** for **Visual Studio Code** which includes all the listed extensions. You can install it from [here](https://marketplace.visualstudio.com/items?itemName=abhith.vscode-favorites).
 
 - [Debuggers](#debuggers)
   - [Debugger for Chrome](#debugger-for-chrome)
@@ -24,7 +26,7 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
   - [ESLint](#eslint)
   - [TSLint](#tslint)
 - [Snippets](#snippets)
-  - [Angular v7 Snippets](#angular-v7-snippets)
+  - [Angular Snippets (Version 8)](#angular-snippets-version-8)
   - [Document This](#document-this)
   - [ES7 React/Redux/GraphQL/React-Native snippets](#es7-reactreduxgraphqlreact-native-snippets)
   - [Icon Fonts](#icon-fonts)
@@ -56,15 +58,27 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 
 ### Debugger for Chrome
 
+[![Debugger for Chrome](https://vsmarketplacebadge.apphb.com/version-short/msjsdiag.debugger-for-chrome.svg)](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+[![Debugger for Chrome](https://vsmarketplacebadge.apphb.com/installs-short/msjsdiag.debugger-for-chrome.svg)](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+[![Debugger for Chrome](https://vsmarketplacebadge.apphb.com/rating-short/msjsdiag.debugger-for-chrome.svg)](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+
 [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) enables you to debug your JavaScript code in the Chrome browser, or any other target that supports the Chrome Debugger protocol.
 
 ## JavaScript
 
 ### JavaScript (ES6) code snippets
 
+[![JavaScript (ES6) code snippets](https://vsmarketplacebadge.apphb.com/version-short/xabikos.JavaScriptSnippets.svg)](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+[![JavaScript (ES6) code snippets](https://vsmarketplacebadge.apphb.com/installs-short/xabikos.JavaScriptSnippets.svg)](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+[![JavaScript (ES6) code snippets](https://vsmarketplacebadge.apphb.com/rating-short/xabikos.JavaScriptSnippets.svg)](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+
 [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) contains code snippets for JavaScript in ES6 syntax
 
 ### Import Cost
+
+[![Import Cost](https://vsmarketplacebadge.apphb.com/version-short/wix.vscode-import-cost.svg)](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+[![Import Cost](https://vsmarketplacebadge.apphb.com/installs-short/wix.vscode-import-cost.svg)](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+[![Import Cost](https://vsmarketplacebadge.apphb.com/rating-short/wix.vscode-import-cost.svg)](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
 
 [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) display import/require package size in the editor
 
@@ -72,69 +86,133 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 
 ### ESLint
 
+[![ESLint](https://vsmarketplacebadge.apphb.com/version-short/dbaeumer.vscode-eslint.svg)](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+[![ESLint](https://vsmarketplacebadge.apphb.com/installs-short/dbaeumer.vscode-eslint.svg)](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+[![ESLint](https://vsmarketplacebadge.apphb.com/rating-short/dbaeumer.vscode-eslint.svg)](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) integrates ESLint JavaScript into VS Code.
 
 ### TSLint
+
+[![TSLint](https://vsmarketplacebadge.apphb.com/version-short/ms-vscode.vscode-typescript-tslint-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
+[![TSLint](https://vsmarketplacebadge.apphb.com/installs-short/ms-vscode.vscode-typescript-tslint-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
+[![TSLint](https://vsmarketplacebadge.apphb.com/rating-short/ms-vscode.vscode-typescript-tslint-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
 
 [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin) support for Visual Studio Code
 
 ## Snippets
 
-### Angular v7 Snippets
+### Angular Snippets (Version 8)
 
-[Angular v7 Snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2) by John Papa
+[![Angular Snippets (Version 8)](https://vsmarketplacebadge.apphb.com/version-short/johnpapa.Angular2.svg)](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
+[![Angular Snippets (Version 8)](https://vsmarketplacebadge.apphb.com/installs-short/johnpapa.Angular2.svg)](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
+[![Angular Snippets (Version 8)](https://vsmarketplacebadge.apphb.com/rating-short/johnpapa.Angular2.svg)](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
+
+[Angular Snippets (Version 8)](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2) by John Papa
 
 ### Document This
+
+[![Document This](https://vsmarketplacebadge.apphb.com/version-short/joelday.docthis.svg)](https://marketplace.visualstudio.com/items?itemName=joelday.docthis)
+[![Document This](https://vsmarketplacebadge.apphb.com/installs-short/joelday.docthis.svg)](https://marketplace.visualstudio.com/items?itemName=joelday.docthis)
+[![Document This](https://vsmarketplacebadge.apphb.com/rating-short/joelday.docthis.svg)](https://marketplace.visualstudio.com/items?itemName=joelday.docthis)
 
 [Document This](https://marketplace.visualstudio.com/items?itemName=joelday.docthis) automatically generates detailed JSDoc comments in TypeScript and JavaScript files.
 
 ### ES7 React/Redux/GraphQL/React-Native snippets
 
+[![ES7 React/Redux/GraphQL/React-Native snippets](https://vsmarketplacebadge.apphb.com/version-short/dsznajder.es7-react-js-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+[![ES7 React/Redux/GraphQL/React-Native snippets](https://vsmarketplacebadge.apphb.com/installs-short/dsznajder.es7-react-js-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+[![ES7 React/Redux/GraphQL/React-Native snippets](https://vsmarketplacebadge.apphb.com/rating-short/dsznajder.es7-react-js-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+
 [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/itemdetails?itemName=dsznajder.es7-react-js-snippets) contains simple extensions for React, Redux and Graphql in JS/TS with ES7 syntax
 
 ### Icon Fonts
 
-[Icon Fonts](https://marketplace.visualstudio.com/items?itemName=idleberg.icon-fonts) contains snippets for popular icon fonts such as Font Awesome, Ionicons, Glyphicons, Octicons, Material Design Icons and many more!  
+[![Icon Fonts](https://vsmarketplacebadge.apphb.com/version-short/idleberg.icon-fonts.svg)](https://marketplace.visualstudio.com/items?itemName=idleberg.icon-fonts)
+[![Icon Fonts](https://vsmarketplacebadge.apphb.com/installs-short/idleberg.icon-fonts.svg)](https://marketplace.visualstudio.com/items?itemName=idleberg.icon-fonts)
+[![Icon Fonts](https://vsmarketplacebadge.apphb.com/rating-short/idleberg.icon-fonts.svg)](https://marketplace.visualstudio.com/items?itemName=idleberg.icon-fonts)
+
+[Icon Fonts](https://marketplace.visualstudio.com/items?itemName=idleberg.icon-fonts) contains snippets for popular icon fonts such as Font Awesome, Ionicons, Glyphicons, Octicons, Material Design Icons and many more!
 
 ## Other
 
 ### Highlight Matching Tag
 
-[Highlight Matching Tag](https://marketplace.visualstudio.com/itemdetails?itemName=vincaslt.highlight-matching-tag) highlights matching closing or opening tag  
+[![Highlight Matching Tag](https://vsmarketplacebadge.apphb.com/version-short/vincaslt.highlight-matching-tag.svg)](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
+[![Highlight Matching Tag](https://vsmarketplacebadge.apphb.com/installs-short/vincaslt.highlight-matching-tag.svg)](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
+[![Highlight Matching Tag](https://vsmarketplacebadge.apphb.com/rating-short/vincaslt.highlight-matching-tag.svg)](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
+
+[Highlight Matching Tag](https://marketplace.visualstudio.com/itemdetails?itemName=vincaslt.highlight-matching-tag) highlights matching closing or opening tag
 
 ### indent-rainbow
 
-[indent-rainbow](https://marketplace.visualstudio.com/itemdetails?itemName=oderwat.indent-rainbow) makes indentation easier to read. This extension colorizes the indentation in front of your text alternating four different colors on each step.  
+[![indent-rainbow](https://vsmarketplacebadge.apphb.com/version-short/oderwat.indent-rainbow.svg)](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+[![indent-rainbow](https://vsmarketplacebadge.apphb.com/installs-short/oderwat.indent-rainbow.svg)](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+[![indent-rainbow](https://vsmarketplacebadge.apphb.com/rating-short/oderwat.indent-rainbow.svg)](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+
+[indent-rainbow](https://marketplace.visualstudio.com/itemdetails?itemName=oderwat.indent-rainbow) makes indentation easier to read. This extension colorizes the indentation in front of your text alternating four different colors on each step.
 
 ### Live Server
+
+[![Live Server](https://vsmarketplacebadge.apphb.com/version-short/ritwickdey.LiveServer.svg)](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+[![Live Server](https://vsmarketplacebadge.apphb.com/installs-short/ritwickdey.LiveServer.svg)](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+[![Live Server](https://vsmarketplacebadge.apphb.com/rating-short/ritwickdey.LiveServer.svg)](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) launch a development local Server with live reload feature for static & dynamic pages
 
 ### Markdown All in One
 
+[![Markdown All in One](https://vsmarketplacebadge.apphb.com/version-short/yzhang.markdown-all-in-one.svg)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+[![Markdown All in One](https://vsmarketplacebadge.apphb.com/installs-short/yzhang.markdown-all-in-one.svg)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+[![Markdown All in One](https://vsmarketplacebadge.apphb.com/rating-short/yzhang.markdown-all-in-one.svg)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
 [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) is All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
 
 ### markdownlint
+
+[![markdownlint](https://vsmarketplacebadge.apphb.com/version-short/DavidAnson.vscode-markdownlint.svg)](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+[![markdownlint](https://vsmarketplacebadge.apphb.com/installs-short/DavidAnson.vscode-markdownlint.svg)](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+[![markdownlint](https://vsmarketplacebadge.apphb.com/rating-short/DavidAnson.vscode-markdownlint.svg)](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) provides Markdown linting and style checking for Visual Studio Code.
 
 ### Markdown Shortcuts
 
+[![Markdown Shortcuts](https://vsmarketplacebadge.apphb.com/version-short/mdickin.markdown-shortcuts.svg)](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts)
+[![Markdown Shortcuts](https://vsmarketplacebadge.apphb.com/installs-short/mdickin.markdown-shortcuts.svg)](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts)
+[![Markdown Shortcuts](https://vsmarketplacebadge.apphb.com/rating-short/mdickin.markdown-shortcuts.svg)](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts)
+
 [Markdown Shortcuts](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts) provide Shortcuts for Markdown editing.
 
 ### npm Intellisense
+
+[![npm Intellisense](https://vsmarketplacebadge.apphb.com/version-short/christian-kohler.npm-intellisense.svg)](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+[![npm Intellisense](https://vsmarketplacebadge.apphb.com/installs-short/christian-kohler.npm-intellisense.svg)](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+[![npm Intellisense](https://vsmarketplacebadge.apphb.com/rating-short/christian-kohler.npm-intellisense.svg)](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 
 [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense) is a visual Studio Code plugin that autocompletes npm modules in import statements
 
 ### Polacode
 
+[![Polacode](https://vsmarketplacebadge.apphb.com/version-short/pnp.polacode.svg)](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
+[![Polacode](https://vsmarketplacebadge.apphb.com/installs-short/pnp.polacode.svg)](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
+[![Polacode](https://vsmarketplacebadge.apphb.com/rating-short/pnp.polacode.svg)](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
+
 [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode) 📸 makes sharing code as a picture easier.
 
 ### Peacock
 
+[![Peacock](https://vsmarketplacebadge.apphb.com/version-short/johnpapa.vscode-peacock.svg)](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
+[![Peacock](https://vsmarketplacebadge.apphb.com/installs-short/johnpapa.vscode-peacock.svg)](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
+[![Peacock](https://vsmarketplacebadge.apphb.com/rating-short/johnpapa.vscode-peacock.svg)](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
+
 [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) subtly change the workspace color of your workspace. Ideal when you have multiple VS Code instances and you want to quickly identify which is which.
 
 ### Turbo Console Log
+
+[![Turbo Console Log](https://vsmarketplacebadge.apphb.com/version-short/ChakrounAnas.turbo-console-log.svg)](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log)
+[![Turbo Console Log](https://vsmarketplacebadge.apphb.com/installs-short/ChakrounAnas.turbo-console-log.svg)](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log)
+[![Turbo Console Log](https://vsmarketplacebadge.apphb.com/rating-short/ChakrounAnas.turbo-console-log.svg)](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log)
 
 [Turbo Console Log](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log) enables automating the process of writing meaningful log messages.
 
@@ -142,9 +220,17 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 
 ### Material Icon Theme
 
+[![Material Icon Theme](https://vsmarketplacebadge.apphb.com/version-short/PKief.material-icon-theme.svg)](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+[![Material Icon Theme](https://vsmarketplacebadge.apphb.com/installs-short/PKief.material-icon-theme.svg)](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+[![Material Icon Theme](https://vsmarketplacebadge.apphb.com/rating-short/PKief.material-icon-theme.svg)](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) provides material design icons for Visual Studio Code
 
 ### Material Theme
+
+[![Material Theme](https://vsmarketplacebadge.apphb.com/version-short/Equinusocio.vsc-material-theme.svg)](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
+[![Material Theme](https://vsmarketplacebadge.apphb.com/installs-short/Equinusocio.vsc-material-theme.svg)](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
+[![Material Theme](https://vsmarketplacebadge.apphb.com/rating-short/Equinusocio.vsc-material-theme.svg)](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
 
 [Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) is one of the most epic theme now for Visual Studio Code
 
@@ -152,32 +238,64 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 
 ### Bracket Pair Colorizer 2
 
+[![Bracket Pair Colorizer 2](https://vsmarketplacebadge.apphb.com/version-short/CoenraadS.bracket-pair-colorizer-2.svg)](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+[![Bracket Pair Colorizer 2](https://vsmarketplacebadge.apphb.com/installs-short/CoenraadS.bracket-pair-colorizer-2.svg)](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+[![Bracket Pair Colorizer 2](https://vsmarketplacebadge.apphb.com/rating-short/CoenraadS.bracket-pair-colorizer-2.svg)](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+
 [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) is a customizable extension for colorizing matching brackets
 
 ### Better Comments
 
-[Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) improves your code commenting by annotating with alert, informational, TODOs, and more!  
+[![Better Comments](https://vsmarketplacebadge.apphb.com/version-short/aaron-bond.better-comments.svg)](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+[![Better Comments](https://vsmarketplacebadge.apphb.com/installs-short/aaron-bond.better-comments.svg)](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+[![Better Comments](https://vsmarketplacebadge.apphb.com/rating-short/aaron-bond.better-comments.svg)](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+
+[Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) improves your code commenting by annotating with alert, informational, TODOs, and more!
 
 ### Bookmarks
 
-[Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks) enables you to mark lines and jump to them  
+[![Bookmarks](https://vsmarketplacebadge.apphb.com/version-short/alefragnani.Bookmarks.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+[![Bookmarks](https://vsmarketplacebadge.apphb.com/installs-short/alefragnani.Bookmarks.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+[![Bookmarks](https://vsmarketplacebadge.apphb.com/rating-short/alefragnani.Bookmarks.svg)](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+
+[Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks) enables you to mark lines and jump to them
 
 ### Code Spell Checker
+
+[![Code Spell Checker](https://vsmarketplacebadge.apphb.com/version-short/streetsidesoftware.code-spell-checker.svg)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+[![Code Spell Checker](https://vsmarketplacebadge.apphb.com/installs-short/streetsidesoftware.code-spell-checker.svg)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+[![Code Spell Checker](https://vsmarketplacebadge.apphb.com/rating-short/streetsidesoftware.code-spell-checker.svg)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
 [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) is a spelling checker for source code
 
 ### Git History
 
-[Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) enables you to view git log, file history, compare branches or commits 
+[![Git History](https://vsmarketplacebadge.apphb.com/version-short/donjayamanne.githistory.svg)](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+[![Git History](https://vsmarketplacebadge.apphb.com/installs-short/donjayamanne.githistory.svg)](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+[![Git History](https://vsmarketplacebadge.apphb.com/rating-short/donjayamanne.githistory.svg)](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+
+[Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) enables you to view git log, file history, compare branches or commits
 
 ### GitLens — Git supercharged
+
+[![GitLens — Git supercharged](https://vsmarketplacebadge.apphb.com/version-short/eamodio.gitlens.svg)](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+[![GitLens — Git supercharged](https://vsmarketplacebadge.apphb.com/installs-short/eamodio.gitlens.svg)](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+[![GitLens — Git supercharged](https://vsmarketplacebadge.apphb.com/rating-short/eamodio.gitlens.svg)](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) supercharge the Git capabilities built into Visual Studio Code — Visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more
 
 ### Path Intellisense
 
+[![Path Intellisense](https://vsmarketplacebadge.apphb.com/version-short/christian-kohler.path-intellisense.svg)](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+[![Path Intellisense](https://vsmarketplacebadge.apphb.com/installs-short/christian-kohler.path-intellisense.svg)](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+[![Path Intellisense](https://vsmarketplacebadge.apphb.com/rating-short/christian-kohler.path-intellisense.svg)](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+
 [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) is a Visual Studio Code plugin that autocompletes filenames.
 
 ### Prettier - Code formatter
+
+[![Prettier - Code formatter](https://vsmarketplacebadge.apphb.com/version-short/esbenp.prettier-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+[![Prettier - Code formatter](https://vsmarketplacebadge.apphb.com/installs-short/esbenp.prettier-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+[![Prettier - Code formatter](https://vsmarketplacebadge.apphb.com/rating-short/esbenp.prettier-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) is the VS Code plugin for prettier/prettier

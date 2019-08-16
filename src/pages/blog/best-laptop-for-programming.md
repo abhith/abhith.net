@@ -1,12 +1,12 @@
 ---
 templateKey: blog-post
-title: Best Laptop for Programming
+title: Best Laptop for Programming Under $2500 Dollars 2019
 description: >-
- Best laptop in 2019 with min spec of i7-9750H, RTX-2060 and Thunderbolt 3.
+ Best laptop under 2500$ in 2019 with min spec of i7-9750H, RTX-2060 and Thunderbolt 3 support.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
 date: 2019-06-08T22:50:00.000Z
-lastModificationTime: 2019-06-15T23:02:00.000Z
+lastModificationTime: 2019-07-02T13:02:00.000Z
 image: /img/best-laptop-for-programming.png
 commentId: 'best-laptop-for-programming'
 tags:
@@ -50,10 +50,38 @@ The main youtube channels which I rely for laptop reviews are,
 
 And After watching tons of reviews and all, my shortlisted items are,
 
+#### AERO 15
+
+Model Name: WA-7US5130SP
+[Official Website](https://store.gigabyte.us/aero-15-oled-wa-7us5130sp-uhd-amoled-i7-9750h-nvidia-geforce-rtx-2060-gddr6-6gb-16gb-ram-512gb-m-2-pcie-ssd-win-10-pro-gaming-laptop/)
+
+##### Pros
+
+- Matching my requirement 5/5.
+
+##### Cons
+
+- Unavailable at the moment.
+- Web Camera position
+
+##### Purchase AERO 15
+
+[Amazon](https://amzn.to/2Xj05jQ)
+
+#### ThinkPad X1 Extreme (2nd Gen) (15.6") Laptop
+
+[Official Website](https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/X1-Extreme-Gen-2/p/22TP2TXX1E2)
+
+Waiting for the new model to release with updated hardware including 9th generation Intel CPU's.
+
+##### Cons
+
+- Unavailable at the moment.
+
 #### Acer Predator Triton 500
 
 Model Name: PT515-51-73EG
-[Website](https://www.acer.com/ac/en/US/content/predator-model/NH.Q50AA.003)
+[Official Website](https://www.acer.com/ac/en/US/content/predator-model/NH.Q50AA.003)
 
 Watch the reviews,
 
@@ -74,28 +102,9 @@ Not easily upgradable because of its inverted motherboard construction. See the 
 
 Other than that, Only zoned RGB keyboard, **NO** per key RGB.
 
-#### Gigabyte AERO 15 2019
+##### Purchase
 
-The new model displayed in the Computex 2019 looks good. Waiting for the reviews.
-
-##### Pros
-
-- Matching my requirement 5/5.
-
-##### Cons
-
-- Unavailable at the moment.
-- Web Camera position
-
-#### ThinkPad X1 Extreme (2nd Gen) (15.6") Laptop
-
-[Official Website](https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/X1-Extreme-Gen-2/p/22TP2TXX1E2)
-
-Waiting for the new model to release with updated hardware including 9th generation Intel CPU's.
-
-##### Cons
-
-- Unavailable at the moment.
+Couldn't find the exact one in [Amazon](https://amzn.to/2KrpHcz) but similar spec with intel 8750H found [here](https://amzn.to/2KrpHcz).
 
 #### HP Omen 15 (Latest)
 

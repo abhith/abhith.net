@@ -1,5 +1,110 @@
 [
   {
+    "title": "C# 8: Static Local Functions and Using Declarations",
+    "url": "https://www.telerik.com/blogs/c-8-static-local-functions-and-using-declarations",
+    "description": "The next major version release of the C# language (C# 8) comes with exciting new features. Let's look at two new features in C# 8, static local functions and the using declaration.",
+    "date": "2019-07-10T08:22:28.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Demystifying Azure App Services Plan",
+    "url": "https://www.petri.com/demystifying-azure-app-services-plan",
+    "description": "Are you curious about what an Azure App Service plan is, exactly? In this article we'll dive into the essence and capabilities of an App Service plan.",
+    "date": "2019-07-04T09:22:28.263Z",
+    "tags": ["azure"]
+  },
+  {
+    "title": "Converting strings to numbers with vanilla JavaScript",
+    "url": "https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/",
+    "description": "Post found in Make Things",
+    "date": "2019-07-03T14:22:28.263Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "Top 10 Monospaced Coding Fonts for Developers",
+    "url": "https://scotch.io/bar-talk/top-10-monospace-fonts-for-developers",
+    "description": "Developers are extremely passionate about certain things: developer tools, tabs vs. spaces, CSS in JS (or not!), and FONTS! Let's take a look at the top 10 Fonts for Developers!",
+    "date": "2019-07-03T10:22:28.263Z",
+    "tags": ["ide"]
+  },
+  {
+    "title": "Optimize Angular bundle size in 4 steps",
+    "url": "https://blog.angularindepth.com/optimize-angular-bundle-size-in-4-steps-4a3b3737bf45",
+    "description": "By Siyang Kern Zhao",
+    "date": "2019-07-02T13:22:28.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Add Flutter to existing Android/iOS app",
+    "url": "https://medium.com/flutter-community/add-flutter-to-existing-android-ios-app-ae8c4fb1582e",
+    "description": "By Nirav Tukadiya",
+    "date": "2019-07-02T09:22:28.263Z",
+    "tags": ["flutter", "android"]
+  },
+  {
+    "title": "Memstate: The Practical Argument for Big, In-Memory Data",
+    "url": "https://www.softwaremeadows.com/posts/memstate-_the_practical_argument_for_big_in-memory_data/",
+    "description": "Appeared in Software Meadows",
+    "date": "2019-07-02T08:22:28.263Z",
+    "tags": ["database"]
+  },
+  {
+    "title": "Access your local ASP.NET Core web application from the public web",
+    "url": "https://www.jerriepelser.com/blog/using-ngrok-with-aspnet-core/",
+    "description": "ngrok is tunnelling software that allows you to expose your local web server to the outside world. This is ideal for scenarios like testing webhooks.",
+    "date": "2019-07-01T09:22:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Web.config transformations - The definitive syntax guide",
+    "url": "https://blog.elmah.io/web-config-transformations-the-definitive-syntax-guide/",
+    "description": "The best tutorial for web.config/app.config transformations. Learn the syntax and how to test it. Included are also examples like replacing appSettings.",
+    "date": "2019-07-01T08:22:28.263Z",
+    "tags": ["web-config"]
+  },
+  {
+    "title": "10 Tricks Every Developer Should Know in Visual Studio Code",
+    "url": "https://blog.syncfusion.com/post/10-tricks-in-visual-studio-code.aspx",
+    "description": "This blog provides you 10 essential tricks one should know in using Visual Studio Code for editing the computer source codes.",
+    "date": "2019-07-01T08:12:28.263Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "Visual Studio tips and tricks",
+    "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-tips-and-tricks/",
+    "description": "Whether you are new or have been using Visual Studio for years, there are a bunch of tips and tricks that can make you more productive. We’ve been sharing tips on Twitter using the #vstip hashtag for a while, and this is a collection of the best ones so far.",
+    "date": "2019-07-01T07:52:28.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Enter data privacy. Exit SQL Server 2008.",
+    "url": "https://www.red-gate.com/blog/audit-and-compliance/enter-data-privacy-exit-sql-server-2008",
+    "description": "SQL Server 2008 and SQL Server 2008 R2 are out of extended support as of July 2019, but the end of bug fixes, security updates and ongoing support has far-reaching data privacy implications, as James Boother from Microsoft Gold Partner, Coeo, explains.",
+    "date": "2019-06-30T13:52:28.263Z",
+    "tags": ["sql-server"]
+  },
+  {
+    "title": "Postman v7.2 Supports GraphQL",
+    "url": "https://blog.getpostman.com/2019/06/18/postman-v7-2-supports-graphql/",
+    "description": "If you’ve been waiting for GraphQL support in Postman, the wait is over – with the release of Postman v7.2, Postman now supports GraphQL! Adding inbuilt support for GraphQL has been our number two most…",
+    "date": "2019-06-19T16:52:28.263Z",
+    "tags": ["graphql"]
+  },
+  {
+    "title": "How to integrate Vue.js and ASP.NET Core using SPA Extension",
+    "url": "https://techcommunity.microsoft.com/t5/Windows-Dev-AppConsult/How-to-integrate-Vue-js-and-ASP-NET-Core-using-SPA-Extension/ba-p/698648",
+    "description": "By KazukiOta",
+    "date": "2019-06-19T10:52:28.263Z",
+    "tags": ["aspnet-core", "vue"]
+  },
+  {
+    "title": "Perfecting Continuous Delivery of NuGet packages for Azure Artifacts",
+    "url": "https://cloudblogs.microsoft.com/industry-blog/en-gb/cross-industry/2019/06/18/perfecting-continuous-delivery-of-nuget-packages-for-azure-artifacts/",
+    "description": "Azure Artifacts is Microsoft’s solution to package management. Originally available as a separate extension on Visual Studio Marketplace, it is now pre-installed in Azure DevOps Services and Azure DevOps Server 2019, TFS 2018, and 2017.",
+    "date": "2019-06-19T10:00:28.263Z",
+    "tags": ["azure", "devops"]
+  },
+  {
     "title": "Getting rid of Time Zone issues within Azure Functions",
     "url": "https://blog.maximerouiller.com/post/getting-rid-of-time-zone-issues-within-azure-functions/",
     "description": "By Maxime Rouiller",

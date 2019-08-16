@@ -6,6 +6,12 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Android",
+    "slug": "android",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "Angular",
     "slug": "angular",
     "description": "",
@@ -42,6 +48,12 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Microsoft Azure",
+    "slug": "azure",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "Best Series",
     "slug": "best-series",
     "description": "Best in classess listed under this tag",
@@ -72,16 +84,40 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "Database",
+    "slug": "database",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": ".NET Core",
     "slug": "dotnet-core",
     "description": ".NET is an Open Source Developer Platform for Building Apps.",
     "image": "dotnet-core.png"
   },
   {
+    "title": "Flutter",
+    "slug": "flutter",
+    "description": "",
+    "image": "no-tag-image.png"
+  },  
+  {
     "title": "Gatsby",
     "slug": "gatsby",
     "description": "One of my favorite language.",
     "image": "gatsby.png"
+  },
+  {
+    "title": "IDE",
+    "slug": "ide",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
+    "title": "JavaScript",
+    "slug": "javascript",
+    "description": "",
+    "image": "no-tag-image.png"
   },
   {
     "title": "Jobs",
@@ -102,9 +138,27 @@
     "image": "no-tag-image.png"
   },
   {
+    "title": "SQL Server",
+    "slug": "sql-server",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
     "title": "Visual Studio",
     "slug": "visual-studio",
     "description": "I always loved to work with the latest and the greatest versions of Visual Studio. I started on VS 2008, now most of the time working with VS 2019.",
+    "image": "no-tag-image.png"
+  },
+  {
+    "title": "Visual Studio Code",
+    "slug": "vscode",
+    "description": "",
+    "image": "no-tag-image.png"
+  },
+  {
+    "title": "Web.config",
+    "slug": "web-config",
+    "description": "",
     "image": "no-tag-image.png"
   },
   {
