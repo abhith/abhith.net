@@ -43,7 +43,11 @@ const TagImage = ({ tagSlug }) => (
         return null;
       }
 
-      return <Img fluid={image.node.fluid} alt={imageAlt} />;
+      return (
+        <figure className="image">
+          <Img fluid={image.node.fluid} alt={imageAlt} />
+        </figure>
+      );
     }}
   />
 );

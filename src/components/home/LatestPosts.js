@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
-import BackgroundImage from "gatsby-background-image";
+import Img from "gatsby-image";
 import BlogRollItem from "../BlogRollItem";
 import Tags from "../Tags";
 
@@ -12,49 +12,52 @@ function LatestPosts() {
         const latestPost = data.latestPost.edges;
         const recentPosts = data.recentPosts.edges;
         return (
-          <div className="row remove-site-content-margin">
-            <div className="col-md-6">
+          <section className="section">
+            <div className="columns">
               {latestPost.map(({ node }) => {
                 const title = node.frontmatter.title;
                 return (
-                  <div
-                    className="card border-0 mb-4 box-shadow"
-                    key={node.fields.slug}
-                  >
-                    <Link to={`${node.fields.slug}`}>
-                      <BackgroundImage
-                        Tag="div"
-                        className={`img-bg topfirstimage`}
-                        fluid={node.frontmatter.image.childImageSharp.fluid}
-                      />
-                    </Link>
-                    <div className="card-body px-0 pb-0 d-flex flex-column align-items-start">
-                      <h2 className="h4 font-weight-bold">
-                        <Link className="text-dark" to={`${node.fields.slug}`}>
-                          {title}
-                        </Link>
-                      </h2>
-                      <p className="excerpt">{node.frontmatter.description}</p>
-                      <div>
-                        <small className="d-block text-muted">
-                          In <Tags tags={node.frontmatter.tags}></Tags>
-                        </small>
-                        <small className="text-muted">
-                          {node.frontmatter.date} &middot;{" "}
-                          {node.fields.readingTime.text}
-                        </small>
+                  <div className="column" key={node.fields.slug}>
+                    <div className="columns">
+                      <div className="column">
+                        <figure className="image">
+                          <Link to={`${node.fields.slug}`}>
+                            <Img
+                              fluid={
+                                node.frontmatter.image.childImageSharp.fluid
+                              }
+                            />
+                          </Link>
+                        </figure>
+                      </div>
+                    </div>
+                    <div className="columns">
+                      <div className="column">
+                        <div className="content">
+                          <Link to={`${node.fields.slug}`}>
+                            <p className="title is-4">{title}</p>
+                          </Link>
+
+                          <p>{node.frontmatter.description}</p>
+                          <Tags tags={node.frontmatter.tags}></Tags>
+                          <small>
+                            {node.frontmatter.date} &middot;{" "}
+                            {node.fields.readingTime.text}
+                          </small>
+                        </div>
                       </div>
                     </div>
                   </div>
                 );
               })}
+
+              <div className="column">
+                {recentPosts.map(({ node }) => {
+                  return <BlogRollItem post={node} key={node.fields.slug} />;
+                })}
+              </div>
             </div>
-            <div className="col-md-6">
-              {recentPosts.map(({ node }) => {
-                return <BlogRollItem post={node} key={node.fields.slug} />;
-              })}
-            </div>
-          </div>
+          </section>
         );
       }}
     />

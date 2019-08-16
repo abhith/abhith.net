@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     `gatsby-plugin-sitemap`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -138,17 +139,11 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-netlify-cms",
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
-    },
-    {
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
       options: {
         printRejected: true,
         develop: false, // Activates purging in npm run develop
-        purgeOnly: ["/main.css", "/theme.css"] // applies purging only on the bulma css file
+        purgeOnly: ["/all.sass"] // applies purging only on the bulma css file
       }
     }, // must be after other CSS plugins
     {

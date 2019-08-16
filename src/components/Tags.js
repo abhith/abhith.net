@@ -4,21 +4,24 @@ import { kebabCase } from "lodash";
 import React from "react";
 
 const Tags = ({ tags }) => (
-  <span className="catlist">
-    {tags && tags.length
-      ? tags.map(tag => (
-          <React.Fragment key={tag}>
-            <Link
-              className="text-capitalize text-muted smoothscroll"
-              to={`/tags/${kebabCase(tag)}/`}
-            >
-              {tag}
-            </Link>
-            <span className="sep">, </span>
-          </React.Fragment>
-        ))
-      : null}
-  </span>
+  <small>
+    <div className="tags">
+      {tags && tags.length
+        ? tags.map(tag => (
+            <React.Fragment key={tag}>
+              <span className="tag">
+                <Link
+                  className="text-capitalize text-muted smoothscroll"
+                  to={`/tags/${kebabCase(tag)}/`}
+                >
+                  {tag}
+                </Link>
+              </span>
+            </React.Fragment>
+          ))
+        : null}
+    </div>
+  </small>
 );
 
 Tags.propTypes = {

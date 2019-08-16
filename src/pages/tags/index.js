@@ -77,55 +77,59 @@ const TagsPage = ({
       <section className="section">
         <SEO
           title="Tags"
-          description={`Summary of all the ${
-            tags.length
-          } tags used in abhith.net`}
+          description={`Summary of all the ${tags.length} tags used in abhith.net`}
           slug="/tags"
         />
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-8">
-              <h1 className="font-weight-bold title h6 text-uppercase mb-4">
+          <div className="columns">
+            <div className="column is-two-thirds">
+              <h1 className="has-text-weight-bold title is-6 text-uppercase mb-4">
                 <span>Tags</span>
               </h1>
               {tags.map(tag => (
-                <div key={tag.slug} className="mb-3">
-                  <span className="taglist">
-                    <Link
-                      className="sscroll btn btn-dark btn-lg"
-                      to={`/tags/${kebabCase(tag.slug)}/`}
-                    >
-                      {tag.slug}
-                    </Link>
-                    <Link
-                      className="sscroll btn btn-light btn-sm"
-                      to={`/tags/${kebabCase(tag.slug)}/`}
-                    >
-                      <FaFileAlt /> {tag.totalPosts} POSTS
-                    </Link>
-                    <Link
-                      className="sscroll btn btn-lightblue btn-sm"
-                      to={`/tags/${kebabCase(tag.slug)}/`}
-                    >
-                      <FaVideo /> {tag.totalVideos} VIDEOS
-                    </Link>
-                    <Link
-                      className="sscroll btn btn-gray btn-sm"
-                      to={`/tags/${kebabCase(tag.slug)}/`}
-                    >
-                      <FaBookOpen /> {tag.totalStories} STORIES
-                    </Link>
-                    <Link
-                      className="sscroll btn btn-outline-info btn-sm"
-                      to={`/tags/${kebabCase(tag.slug)}/`}
-                    >
-                      <FaGlobe /> {tag.totalServices} SERVICES
-                    </Link>
-                  </span>
+                <div className="box" key={tag.slug}>
+                  <Link to={`/tags/${kebabCase(tag.slug)}/`}>
+                    <p className="title mb-2">{tag.slug}</p>
+                  </Link>
+                  <div className="buttons">
+                    {tag.totalPosts > 0 && (
+                      <Link
+                        className="button is-light"
+                        to={`/tags/${kebabCase(tag.slug)}/`}
+                      >
+                        <FaFileAlt /> {tag.totalPosts} POSTS
+                      </Link>
+                    )}
+                    {tag.totalVideos > 0 && (
+                      <Link
+                        className="button is-info"
+                        to={`/tags/${kebabCase(tag.slug)}/`}
+                      >
+                        <FaVideo /> {tag.totalVideos} VIDEOS
+                      </Link>
+                    )}
+
+                    {tag.totalStories > 0 && (
+                      <Link
+                        className="button is-link"
+                        to={`/tags/${kebabCase(tag.slug)}/`}
+                      >
+                        <FaBookOpen /> {tag.totalStories} STORIES
+                      </Link>
+                    )}
+                    {tag.totalServices > 0 && (
+                      <Link
+                        className="button is-white"
+                        to={`/tags/${kebabCase(tag.slug)}/`}
+                      >
+                        <FaGlobe /> {tag.totalServices} SERVICES
+                      </Link>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
-            <div className="col-md-4">
+            <div className="column">
               {/* {% include sidebar-featured.html %}     */}
             </div>
           </div>

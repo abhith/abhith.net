@@ -56,7 +56,7 @@ export const BlogPostTemplate = ({
   const pageUrl = `${siteMetadata.siteUrl}${slug}`;
 
   return (
-    <div>
+    <div className="container">
       <SEO
         title={title}
         description={description}
@@ -66,193 +66,179 @@ export const BlogPostTemplate = ({
         dateModified={dateModifiedSeoFormat}
         datePublished={datePublishedSeoFormat}
       />
-      <div className="container">
-        <div className="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
-          <div className="h-100 tofront">
-            <div
-              className={
-                image == null
-                  ? `row justify-content-center`
-                  : `row justify-content-between`
-              }
-            >
-              <div
-                className={
-                  image == null
-                    ? ` col-md-8 pr-0 pr-md-4 pt-4 pb-4 align-self-center`
-                    : `col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center`
-                }
-              >
-                <p className="text-uppercase font-weight-bold">
-                  {tags && tags.length ? (
-                    <span className="taglist">
-                      {tags.map(tag => (
-                        <React.Fragment key={tag}>
-                          <Link
-                            className="sscroll text-danger"
-                            to={`/tags/${kebabCase(tag)}/`}
-                          >
-                            {tag}
-                          </Link>{" "}
-                          <span className="sep">, </span>
-                        </React.Fragment>
-                      ))}
-                    </span>
-                  ) : null}
-                </p>
-                <h1 className="display-4 mb-4 article-headline">{title}</h1>
+      <div className="columns">
+        <div className="column">
+          <p className="text-uppercase ">
+            {tags && tags.length ? (
+              <span className="taglist">
+                {tags.map(tag => (
+                  <React.Fragment key={tag}>
+                    <Link
+                      className="has-text-danger has-text-weight-bold is-uppercase"
+                      to={`/tags/${kebabCase(tag)}/`}
+                    >
+                      {tag}
+                    </Link>{" "}
+                    <span className="sep">, </span>
+                  </React.Fragment>
+                ))}
+              </span>
+            ) : null}
+          </p>
+          <h1 className="title is-1 mb-4 article-headline">{title}</h1>
+          <div className="media">
+            <figure className="media-left">
+              <p className="image is-64x64">
+                <img
+                  className="is-rounded"
+                  src={author.image}
+                  alt={author.name}
+                />
+              </p>
+            </figure>
+            <div className="media-content">
+              <small>
+                {author.name}{" "}
+                <span>
+                  <OutboundLink
+                    target="_blank"
+                    className="button is-success is-outlined is-small is-rounded ml-1"
+                    href={author.url}
+                  >
+                    Follow
+                  </OutboundLink>
+                </span>
+                <br />
+                <span className="text-muted mt-1">
+                  {date} &middot; {readingTime} &middot; Last Updated:{" "}
+                  <time dateTime={lastModifiedTime}>
+                    {lastModifiedTimeString}
+                  </time>
+                </span>
+              </small>
+            </div>
+          </div>
+        </div>
+        <div className="column">
+          <Img fluid={image.childImageSharp.fluid} />
+        </div>
+      </div>
+      <div className="columns is-centered">
+        <div className="column is-2 pr-4 mb-4">
+          <div className="sticky has-text-centered">
+            <div className="text-muted">Share this</div>
 
-                <div className="d-flex align-items-center">
+            <div className="buttons is-centered">
+              <FacebookShareButton
+                url={pageUrl}
+                quote={title}
+                className="button is-medium is-white"
+              >
+                <FacebookIcon size={44} round />
+              </FacebookShareButton>
+
+              <TwitterShareButton
+                url={pageUrl}
+                className="button is-medium is-white"
+                title={title}
+                via={siteMetadata.social.twitter.split("@").join("")}
+                hashtags={tags}
+              >
+                <TwitterIcon size={44} round></TwitterIcon>
+              </TwitterShareButton>
+              <LinkedinShareButton
+                url={pageUrl}
+                className="button is-medium is-white"
+                title={title}
+              >
+                <LinkedinIcon size={44} round></LinkedinIcon>
+              </LinkedinShareButton>
+              <RedditShareButton
+                url={pageUrl}
+                className="button is-medium is-white"
+                title={title}
+              >
+                <RedditIcon size={44} round></RedditIcon>
+              </RedditShareButton>
+              <PocketShareButton
+                url={pageUrl}
+                className="button is-medium is-white"
+                title={title}
+              >
+                <PocketIcon size={44} round></PocketIcon>
+              </PocketShareButton>
+              <WhatsappShareButton
+                url={pageUrl}
+                className="button is-medium is-white"
+                title={title}
+              >
+                <WhatsappIcon size={44} round></WhatsappIcon>
+              </WhatsappShareButton>
+            </div>
+          </div>
+        </div>
+        <div className="column is-8">
+          <PostContent content={content} className={`content`} />
+          {tags && tags.length ? (
+            <div className="mb-4">
+              <span className="taglist">
+                {tags.map(tag => (
+                  <Link
+                    className="sscroll btn btn-light btn-sm "
+                    to={`/tags/${kebabCase(tag)}/`}
+                    key={tag}
+                  >
+                    {tag}
+                  </Link>
+                ))}
+              </span>
+            </div>
+          ) : null}
+
+          <div className="container mt-5">
+            <div className="media">
+              <figure className="media-left">
+                <p className="image is-96x96">
                   <img
-                    className="rounded-circle"
+                    className="is-rounded"
                     src={author.image}
                     alt={author.name}
-                    width="70"
                   />
-                  <small className="ml-3">
-                    {" "}
-                    {author.name}{" "}
+                </p>
+              </figure>
+              <div className="media-content">
+                <div className="content">
+                  <p>
+                    <strong className="title is-4">
+                      Written by {author.name}
+                    </strong>{" "}
                     <span>
                       <OutboundLink
                         target="_blank"
-                        className="btn btn-outline-success btn-sm btn-round ml-1"
+                        className="button is-success is-outlined is-small is-rounded ml-1"
                         href={author.url}
                       >
                         Follow
                       </OutboundLink>
                     </span>
-                    <span className="text-muted d-block mt-1">
-                      {date} &middot; {readingTime} &middot; Last Updated:{" "}
-                      <time dateTime={lastModifiedTime}>
-                        {lastModifiedTimeString}
-                      </time>
+                    <span>
+                      <OutboundLink
+                        className="button is-info is-outlined is-small is-rounded ml-1"
+                        href="https://ko-fi.com/abhith"
+                        target="_blank"
+                      >
+                        Buy me a coffee <FaCoffee className="text-danger" />
+                      </OutboundLink>
                     </span>
-                  </small>
-                </div>
-              </div>
-
-              {image && (
-                <div className="col-md-6 pr-0 align-self-center">
-                  <Img
-                    className="rounded"
-                    fluid={image.childImageSharp.fluid}
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="container-lg pt-4 pb-4">
-        <div className="row justify-content-center">
-          <div className="col-lg-2 pr-4 mb-4 col-md-12">
-            <div className="sticky-top sticky-top-offset text-center">
-              <div className="text-muted">Share this</div>
-              <div className="share d-inline-block">
-                <div className="a2a_kit a2a_kit_size_32 a2a_default_style">
-                  <FacebookShareButton
-                    url={pageUrl}
-                    quote={title}
-                    className="btn btn-round"
-                  >
-                    <FacebookIcon size={44} round />
-                  </FacebookShareButton>
-                  <TwitterShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                    via={siteMetadata.social.twitter.split("@").join("")}
-                    hashtags={tags}
-                  >
-                    <TwitterIcon size={44} round></TwitterIcon>
-                  </TwitterShareButton>
-                  <LinkedinShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                  >
-                    <LinkedinIcon size={44} round></LinkedinIcon>
-                  </LinkedinShareButton>
-                  <RedditShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                  >
-                    <RedditIcon size={44} round></RedditIcon>
-                  </RedditShareButton>
-                  <PocketShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                  >
-                    <PocketIcon size={44} round></PocketIcon>
-                  </PocketShareButton>
-                  <WhatsappShareButton
-                    url={pageUrl}
-                    className="btn btn-round"
-                    title={title}
-                  >
-                    <WhatsappIcon size={44} round></WhatsappIcon>
-                  </WhatsappShareButton>
+                    <br />
+                    {author.minibio}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-12 col-lg-8">
-            <PostContent content={content} className={`article-post`} />
-            {tags && tags.length ? (
-              <div className="mb-4">
-                <span className="taglist">
-                  {tags.map(tag => (
-                    <Link
-                      className="sscroll btn btn-light btn-sm font-weight-bold"
-                      to={`/tags/${kebabCase(tag)}/`}
-                      key={tag}
-                    >
-                      {tag}
-                    </Link>
-                  ))}
-                </span>
-              </div>
-            ) : null}
-
-            <div className="row mt-5">
-              <div className="col-md-2 align-self-center">
-                <img
-                  className="rounded-circle"
-                  src={author.image}
-                  alt={author.name}
-                  width="90"
-                />
-              </div>
-              <div className="col-md-10">
-                <h5 className="font-weight-bold">
-                  Written by {author.name}{" "}
-                  <span>
-                    <OutboundLink
-                      target="_blank"
-                      className="btn btn-outline-success btn-sm btn-round ml-2"
-                      href={author.url}
-                    >
-                      Follow
-                    </OutboundLink>
-                  </span>
-                  <span>
-                    <OutboundLink
-                      className="btn btn-outline-info btn-sm btn-round ml-2"
-                      href="https://ko-fi.com/abhith"
-                      target="_blank"
-                    >
-                      Buy me a coffee <FaCoffee className="text-danger" />
-                    </OutboundLink>
-                  </span>
-                </h5>
-                {author.minibio}
-              </div>
-            </div>
-            <div id="comments" className="mt-5">
-              <DiscussionEmbed {...disqusConfig} />
-            </div>
+          <div id="comments" className="mt-5">
+            <DiscussionEmbed {...disqusConfig} />
           </div>
         </div>
       </div>
@@ -340,102 +326,109 @@ class BlogPost extends React.Component {
 
     return (
       <Layout>
-        <BlogPostTemplate
-          content={post.html}
-          slug={post.fields.slug}
-          contentComponent={HTMLContent}
-          description={post.frontmatter.description}
-          tags={post.frontmatter.tags}
-          title={post.frontmatter.title}
-          image={post.frontmatter.image}
-          date={post.frontmatter.dateString}
-          author={data.site.siteMetadata.author}
-          readingTime={post.fields.readingTime.text}
-          commentId={
-            post.frontmatter.commentId === null
-              ? post.fields.slug
-              : post.frontmatter.commentId
-          }
-          lastModifiedTime={
-            post.frontmatter.lastModificationTime === null
-              ? post.frontmatter.date
-              : post.frontmatter.lastModificationTime
-          }
-          lastModifiedTimeString={
-            post.frontmatter.lastModificationTime === null
-              ? post.frontmatter.dateString
-              : post.frontmatter.lastModificationTimeString
-          }
-          dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
-          datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
-          siteMetadata={data.site.siteMetadata}
-        />
-        <div className="container">
+        <div className="section">
+          <BlogPostTemplate
+            content={post.html}
+            slug={post.fields.slug}
+            contentComponent={HTMLContent}
+            description={post.frontmatter.description}
+            tags={post.frontmatter.tags}
+            title={post.frontmatter.title}
+            image={post.frontmatter.image}
+            date={post.frontmatter.dateString}
+            author={data.site.siteMetadata.author}
+            readingTime={post.fields.readingTime.text}
+            commentId={
+              post.frontmatter.commentId === null
+                ? post.fields.slug
+                : post.frontmatter.commentId
+            }
+            lastModifiedTime={
+              post.frontmatter.lastModificationTime === null
+                ? post.frontmatter.date
+                : post.frontmatter.lastModificationTime
+            }
+            lastModifiedTimeString={
+              post.frontmatter.lastModificationTime === null
+                ? post.frontmatter.dateString
+                : post.frontmatter.lastModificationTimeString
+            }
+            dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
+            datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
+            siteMetadata={data.site.siteMetadata}
+          />
+
           {relatedPosts.length > 0 && (
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Posts</span>
-                </h4>
+            <>
+              <h4 className="spanborder">
+                <span className="has-text-weight-bold">Related Posts</span>
+              </h4>
+              <div className="columns">
+                <div className="column">
+                  {relatedPostsFirstHalf.map(({ node }) => {
+                    return <BlogRollItem post={node} key={node.id} />;
+                  })}
+                </div>
+                <div className="column">
+                  {relatedPostsSecondHalf.map(({ node }) => {
+                    return <BlogRollItem post={node} key={node.id} />;
+                  })}
+                </div>
               </div>
-              <div className="col-md-6">
-                {relatedPostsFirstHalf.map(({ node }) => {
-                  return <BlogRollItem post={node} key={node.id} />;
-                })}
-              </div>
-              <div className="col-md-6">
-                {relatedPostsSecondHalf.map(({ node }) => {
-                  return <BlogRollItem post={node} key={node.id} />;
-                })}
-              </div>
-            </div>
+            </>
           )}
           {relatedVideos.length > 0 && (
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Videos</span>
-                </h4>
-                <VideosRoll videos={relatedVideos} />
+            <>
+              <h4 className=" spanborder">
+                <span className="has-text-weight-bold">Related Videos</span>
+              </h4>
+              <div className="columns">
+                <div className="column is-full">
+                  <VideosRoll videos={relatedVideos} />
+                </div>
               </div>
-            </div>
+            </>
           )}
 
           {relatedStories.length > 0 && (
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Stories</span>
-                </h4>
+            <>
+              <h4 className="spanborder">
+                <span className="has-text-weight-bold">Related Stories</span>
+              </h4>
+              <div className="columns">
+                <div className="column is-half">
+                  {relatedStoriesFirstHalf.map(({ node }) => {
+                    return <StoriesRollItem post={node} key={node.id} />;
+                  })}
+                </div>
+                <div className="column is-half">
+                  {relatedStoriesSecondHalf.map(({ node }) => {
+                    return <StoriesRollItem post={node} key={node.id} />;
+                  })}
+                </div>
               </div>
-              <div className="col-md-6">
-                {relatedStoriesFirstHalf.map(({ node }) => {
-                  return <StoriesRollItem post={node} key={node.id} />;
-                })}
-              </div>
-              <div className="col-md-6">
-                {relatedStoriesSecondHalf.map(({ node }) => {
-                  return <StoriesRollItem post={node} key={node.id} />;
-                })}
-              </div>
-            </div>
+            </>
           )}
 
           {relatedServices.length > 0 && (
-            <div className="row mt-5">
-              <div className="col-md-12">
-                <h4 className="font-weight-bold spanborder">
-                  <span>Related Services</span>
-                </h4>
-                <ServicesRoll services={relatedServices} />
+            <>
+              <div className="columns">
+                <div className="column is-full">
+                  <h4 className=" spanborder">
+                    <span className="has-text-weight-bold">
+                      Related Services
+                    </span>
+                  </h4>
+                  <ServicesRoll services={relatedServices} />
+                </div>
               </div>
-            </div>
+            </>
           )}
         </div>
-        <div className={`alertbar ${this.state.alertbarClass}`}>
+        {/* <div className={`alertbar ${this.state.alertbarClass}`}>
           <div className="container">
-            <div className="row prevnextlinks small font-weight-bold">
-              <div className="col-md-6 rightborder pl-0">
+            <div className="columns prevnextlinks small">
+              <div className="column is-half rightborder pl-0">
                 <OutboundLink
                   className="text-dark"
                   href={featuredServices[0].url}
@@ -451,7 +444,7 @@ class BlogPost extends React.Component {
                 </OutboundLink>
               </div>
 
-              <div className="col-md-6 text-right pr-0">
+              <div className="column is-half text-right pr-0">
                 <OutboundLink
                   className="text-dark"
                   href={featuredServices[1].url}
@@ -468,7 +461,7 @@ class BlogPost extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </Layout>
     );
   }

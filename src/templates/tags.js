@@ -70,45 +70,53 @@ class TagRoute extends React.Component {
           slug={`\\tags\\${this.props.pageContext.tag}`}
         />
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-8">
-              <h1 className="font-weight-bold title h6 text-uppercase mb-4">
-                <span>Tags</span>
-              </h1>
-              <h4 className="font-weight-bold spanborder text-capitalize">
-                <span>{tag}</span>
-              </h4>
+          <div className="section">
+            <div className="columns">
+              <div className="column is-two-thirds">
+                <h1 className="title is-6 has-text-weight-bold mb-4">
+                  <span>Tags</span>
+                </h1>
+                <h4 className="spanborder text-capitalize">
+                  <span className="has-text-weight-bold">{tag}</span>
+                </h4>
 
-              <BlogRoll posts={posts} />
+                <BlogRoll posts={posts} />
 
-              {videos.length > 0 && (
-                <div>
-                  <h4 className="font-weight-bold spanborder">
-                    <span>Recommended Videos</span>
-                  </h4>
-                  <VideosRoll videos={videos} />
-                </div>
-              )}
+                {videos.length > 0 && (
+                  <div>
+                    <h4 className=" spanborder">
+                      <span className="has-text-weight-bold">
+                        Recommended Videos
+                      </span>
+                    </h4>
+                    <VideosRoll videos={videos} />
+                  </div>
+                )}
 
-              {stories.length > 0 && (
-                <div>
-                  <h4 className="font-weight-bold spanborder">
-                    <span>Recommended Stories</span>
-                  </h4>
-                  <StoriesRoll posts={stories} />
-                </div>
-              )}
-              {services.length > 0 && (
-                <div>
-                  <h4 className="font-weight-bold spanborder">
-                    <span>Recommended Services</span>
-                  </h4>
-                  <ServicesRoll services={services} />
-                </div>
-              )}
-            </div>
-            <div className="col-md-4">
-              {/* {% include sidebar-featured.html %}     */}
+                {stories.length > 0 && (
+                  <div>
+                    <h4 className=" spanborder">
+                      <span className="has-text-weight-bold">
+                        Recommended Stories
+                      </span>
+                    </h4>
+                    <StoriesRoll posts={stories} />
+                  </div>
+                )}
+                {services.length > 0 && (
+                  <div>
+                    <h4 className=" spanborder">
+                      <span className="has-text-weight-bold">
+                        Recommended Services
+                      </span>
+                    </h4>
+                    <ServicesRoll services={services} />
+                  </div>
+                )}
+              </div>
+              <div className="column">
+                {/* {% include sidebar-featured.html %}     */}
+              </div>
             </div>
           </div>
         </div>

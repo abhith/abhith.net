@@ -16,12 +16,13 @@ export const PrivacyPolicyPageTemplate = ({
   return (
     <div className="container">
       <SEO title={title} description={description} slug="/privacy-policy" />
-
-      <h3 className="font-weight-bold spanborder">
-        <span> {title}</span>
-      </h3>
-      <div className="page-content">
-        <PageContent className="content" content={content} />
+      <div className="section">
+        <h1 className="title spanborder has-text-weight-bold">
+          <span className="has-text-weight-bold"> {title}</span>
+        </h1>
+        <div className="page-content">
+          <PageContent className="content" content={content} />
+        </div>
       </div>
     </div>
   );
