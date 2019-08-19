@@ -1,5 +1,19 @@
 [
   {
+    "title": "Why You Should Use Windows Defender's Ransomware Prevention",
+    "url": "https://lifehacker.com/why-you-should-use-windows-defenders-ransomware-prevent-1837311176",
+    "description": "A crucial security feature in Windows Defender comes disabled by default: Ransomware Protection...",
+    "date": "2019-08-18T08:22:28.263Z",
+    "tags": ["security"]
+  },
+  {
+    "title": "Adam Storr - Multiple Ways to Register Your Dependencies with ASP.NET Core 3",
+    "url": "https://adamstorr.azurewebsites.net/blog/multiple-ways-to-register-your-dependencies-with-aspnet-core-3",
+    "description": "Exploring the multiple ways you can register your service dependencies with the new IHost found in ASP.NET Core 3 (Preview).",
+    "date": "2019-08-18T13:22:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "C# 8: Static Local Functions and Using Declarations",
     "url": "https://www.telerik.com/blogs/c-8-static-local-functions-and-using-declarations",
     "description": "The next major version release of the C# language (C# 8) comes with exciting new features. Let's look at two new features in C# 8, static local functions and the using declaration.",
@@ -244,7 +258,7 @@
     "date": "2019-06-10T18:30:28.263Z",
     "tags": ["code"]
   },
-    {
+  {
     "title": "SHA 256 and SHA 512 hash examples",
     "url": "https://codeshare.co.uk/blog/sha-256-and-sha-512-hash-examples/",
     "description": "This post contains examples of how to generate a SHA 256 and SHA 512 hash key with the examples in C# and VB.NET. This solution matches the expected result for Ingenico's implementation for their payment gateway.",
