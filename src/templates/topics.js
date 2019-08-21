@@ -12,10 +12,10 @@ class TagRoute extends React.Component {
     const data = this.props.data;
 
     const posts = data.allMarkdownRemark.edges;
-    const tagDetails = data.tagDetails;
+    const topicDetails = data.topicDetails;
 
     const tag =
-      tagDetails === null ? this.props.pageContext.tag : tagDetails.title;
+    topicDetails === null ? this.props.pageContext.tag : topicDetails.title;
 
     const totalPostCount = data.allMarkdownRemark.totalCount;
     const totalVideoCount = data.recommendedVideos.totalCount;
@@ -67,14 +67,14 @@ class TagRoute extends React.Component {
         <SEO
           title={tag}
           description={tagHeader}
-          slug={`\\tags\\${this.props.pageContext.tag}`}
+          slug={`\\topics\\${this.props.pageContext.tag}`}
         />
         <div className="container">
           <div className="section">
             <div className="columns">
               <div className="column is-two-thirds">
                 <h1 className="title is-6 has-text-weight-bold mb-4">
-                  <span>Tags</span>
+                  <span>Topics</span>
                 </h1>
                 <h4 className="spanborder text-capitalize">
                   <span className="has-text-weight-bold">{tag}</span>
@@ -134,7 +134,7 @@ export const tagPageQuery = graphql`
         title
       }
     }
-    tagDetails: tagsJson(slug: { eq: $tag }) {
+    topicDetails: tagsJson(slug: { eq: $tag }) {
       title
       slug
       description
