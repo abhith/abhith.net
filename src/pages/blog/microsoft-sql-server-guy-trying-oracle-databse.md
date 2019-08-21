@@ -5,7 +5,7 @@ description: >-
   This post contains my personal experiences trying Oracle Database.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
-date: 2019-05-08T15:11:27.975Z
+date: 2019-08-21T15:11:27.975Z
 lastModificationTime: 2019-05-26T14:38:00.000Z
 image: /img/logo-oracle-database.png
 tags:
@@ -28,6 +28,7 @@ I have worked with **Microsoft SQL Server** for the past 7 years and still enjoy
   - [VARCHAR to BLOB](#varchar-to-blob)
   - [Update BLOB via Query](#update-blob-via-query)
   - [Oracle localhost connection string for an ASP.NET CORE & Dapper project](#oracle-localhost-connection-string-for-an-aspnet-core--dapper-project)
+  - [ORA-00933: SQL command not properly ended](#ora-00933-sql-command-not-properly-ended)
 - [Conclusion](#conclusion)
 
 ## Noticed Differences
@@ -90,6 +91,10 @@ using (var dbConn = new OracleConnection(ConnectionString))
 ```
 
 Replace **YOUR_USER_ID** and **YOUR_USER_PASSWORD** with appropriate values.
+
+### ORA-00933: SQL command not properly ended
+
+This is happened when my query contained **semicolon** ";" at the end. Removing the semicolon ";" from the end of the query solved the problem.
 
 ## Conclusion
 
