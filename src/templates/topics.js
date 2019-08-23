@@ -134,7 +134,7 @@ export const tagPageQuery = graphql`
         title
       }
     }
-    topicDetails: tagsJson(slug: { eq: $tag }) {
+    topicDetails: topicsJson(slug: { eq: $tag }) {
       title
       slug
       description

@@ -16,7 +16,7 @@ const TopicImage = ({ slug }) => (
             }
           }
         }
-        allTagsJson {
+        allTopicsJson {
           edges {
             node {
               slug
@@ -28,7 +28,7 @@ const TopicImage = ({ slug }) => (
       }
     `}
     render={data => {
-      const tagNode = data.allTagsJson.edges.find(
+      const tagNode = data.allTopicsJson.edges.find(
         edge => edge.node.slug === slug
       );
 
