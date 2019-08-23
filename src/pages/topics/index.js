@@ -5,7 +5,7 @@ import Layout from "../../components/Layout";
 import SEO from "../../components/seo/SEO";
 import { FaFileAlt, FaVideo, FaBookOpen, FaGlobe } from "react-icons/fa";
 
-const TagsPage = ({
+const TopicsPage = ({
   data: {
     allMarkdownRemark: { group: postsGroup },
     allStoriesJson: { group: storiesGroup },
@@ -13,10 +13,10 @@ const TagsPage = ({
     allServicesJson: { group: servicesGroup }
   }
 }) => {
-  let tags = [];
+  let topics = [];
 
   postsGroup.forEach(node => {
-    tags.push({
+    topics.push({
       slug: node.fieldValue,
       totalPosts: node.totalCount,
       totalVideos: 0,
@@ -26,11 +26,11 @@ const TagsPage = ({
   });
 
   storiesGroup.forEach(node => {
-    let tag = tags.find(tag => tag.slug === node.fieldValue);
-    if (tag) {
-      tag.totalStories = node.totalCount;
+    let topic = topics.find(topic => topic.slug === node.fieldValue);
+    if (topic) {
+      topic.totalStories = node.totalCount;
     } else {
-      tags.push({
+      topics.push({
         slug: node.fieldValue,
         totalPosts: 0,
         totalVideos: 0,
@@ -41,11 +41,11 @@ const TagsPage = ({
   });
 
   videosGroup.forEach(node => {
-    let tag = tags.find(tag => tag.slug === node.fieldValue);
-    if (tag) {
-      tag.totalVideos = node.totalCount;
+    let topic = topics.find(topic => topic.slug === node.fieldValue);
+    if (topic) {
+      topic.totalVideos = node.totalCount;
     } else {
-      tags.push({
+      topics.push({
         slug: node.fieldValue,
         totalPosts: 0,
         totalVideos: node.totalCount,
@@ -56,11 +56,11 @@ const TagsPage = ({
   });
 
   servicesGroup.forEach(node => {
-    let tag = tags.find(tag => tag.slug === node.fieldValue);
-    if (tag) {
-      tag.totalServices = node.totalCount;
+    let topic = topics.find(topic => topic.slug === node.fieldValue);
+    if (topic) {
+      topic.totalServices = node.totalCount;
     } else {
-      tags.push({
+      topics.push({
         slug: node.fieldValue,
         totalPosts: 0,
         totalVideos: 0,
@@ -70,59 +70,59 @@ const TagsPage = ({
     }
   });
 
-  tags = sortBy(tags, tag => tag.slug);
+  topics = sortBy(topics, topic => topic.slug);
 
   return (
     <Layout>
       <section className="section">
         <SEO
-          title="Tags"
-          description={`Summary of all the ${tags.length} tags used in abhith.net`}
-          slug="/tags"
+          title="Topics"
+          description={`Summary of all the ${topics.length} topics in abhith.net`}
+          slug="/topics"
         />
         <div className="container">
           <div className="columns">
             <div className="column is-two-thirds">
               <h1 className="has-text-weight-bold title is-6 text-uppercase mb-4">
-                <span>Tags</span>
+                <span>All Topics</span>
               </h1>
-              {tags.map(tag => (
-                <div className="box" key={tag.slug}>
-                  <Link to={`/tags/${kebabCase(tag.slug)}/`}>
-                    <p className="title mb-2">{tag.slug}</p>
+              {topics.map(topic => (
+                <div className="box" key={topic.slug}>
+                  <Link to={`/topics/${kebabCase(topic.slug)}/`}>
+                    <p className="title mb-2">{topic.slug}</p>
                   </Link>
                   <div className="buttons">
-                    {tag.totalPosts > 0 && (
+                    {topic.totalPosts > 0 && (
                       <Link
                         className="button is-light"
-                        to={`/tags/${kebabCase(tag.slug)}/`}
+                        to={`/topics/${kebabCase(topic.slug)}/`}
                       >
-                        <FaFileAlt /> {tag.totalPosts} POSTS
+                        <FaFileAlt /> {topic.totalPosts} POSTS
                       </Link>
                     )}
-                    {tag.totalVideos > 0 && (
+                    {topic.totalVideos > 0 && (
                       <Link
                         className="button is-info"
-                        to={`/tags/${kebabCase(tag.slug)}/`}
+                        to={`/topics/${kebabCase(topic.slug)}/`}
                       >
-                        <FaVideo /> {tag.totalVideos} VIDEOS
+                        <FaVideo /> {topic.totalVideos} VIDEOS
                       </Link>
                     )}
 
-                    {tag.totalStories > 0 && (
+                    {topic.totalStories > 0 && (
                       <Link
                         className="button is-link"
-                        to={`/tags/${kebabCase(tag.slug)}/`}
+                        to={`/topics/${kebabCase(topic.slug)}/`}
                       >
-                        <FaBookOpen /> {tag.totalStories} STORIES
+                        <FaBookOpen /> {topic.totalStories} STORIES
                       </Link>
                     )}
-                    {tag.totalServices > 0 && (
+                    {topic.totalServices > 0 && (
                       <Link
                         className="button is-white"
-                        to={`/tags/${kebabCase(tag.slug)}/`}
+                        to={`/topics/${kebabCase(topic.slug)}/`}
                       >
-                        <FaGlobe /> {tag.totalServices} SERVICES
+                        <FaGlobe /> {topic.totalServices} SERVICES
                       </Link>
                     )}
                   </div>
@@ -138,10 +138,10 @@ const TagsPage = ({
     </Layout>
   );
 };
-export default TagsPage;
+export default TopicsPage;
 
-export const tagPageQuery = graphql`
-  query TagsQuery {
+export const pageQuery = graphql`
+  query PageQuery {
     site {
       siteMetadata {
         title
