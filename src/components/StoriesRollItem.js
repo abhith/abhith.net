@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TagImage from "./TagImage";
-import Tags from "./Tags";
+import TopicsBar from "./TopicsBar";
 
 const StoriesRollItem = ({ post }) => {
   return (
@@ -22,7 +22,7 @@ const StoriesRollItem = ({ post }) => {
             {post.title}
           </OutboundLink>
         </h2>
-        <Tags tags={post.tags} />
+        <TopicsBar topics={post.tags} />
         <small className="text-muted">{post.date}</small>
       </div>
     </div>

@@ -3,18 +3,18 @@ import { Link } from "gatsby";
 import { kebabCase } from "lodash";
 import React from "react";
 
-const Tags = ({ tags }) => (
+const TopicsBar = ({ topics }) => (
   <small>
     <div className="tags">
-      {tags && tags.length
-        ? tags.map(tag => (
-            <React.Fragment key={tag}>
+      {topics && topics.length
+        ? topics.map(topic => (
+            <React.Fragment key={topic}>
               <span className="tag">
                 <Link
                   className="text-capitalize text-muted smoothscroll"
-                  to={`/tags/${kebabCase(tag)}/`}
+                  to={`/tags/${kebabCase(topic)}/`}
                 >
-                  {tag}
+                  {topic}
                 </Link>
               </span>
             </React.Fragment>
@@ -24,8 +24,8 @@ const Tags = ({ tags }) => (
   </small>
 );
 
-Tags.propTypes = {
-  tags: PropTypes.array
+TopicsBar.propTypes = {
+  topics: PropTypes.array
 };
 
-export default Tags;
+export default TopicsBar;
