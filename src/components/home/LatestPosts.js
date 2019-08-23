@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 import BlogRollItem from "../BlogRollItem";
-import Tags from "../Tags";
+import TopicsBar from "../TopicsBar";
 
 function LatestPosts() {
   return (
@@ -39,7 +39,7 @@ function LatestPosts() {
                           </Link>
 
                           <p>{node.frontmatter.description}</p>
-                          <Tags tags={node.frontmatter.tags}></Tags>
+                          <TopicsBar topics={node.frontmatter.tags}/>
                           <small>
                             {node.frontmatter.date} &middot;{" "}
                             {node.fields.readingTime.text}

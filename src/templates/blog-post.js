@@ -12,6 +12,7 @@ import BlogRollItem from "../components/BlogRollItem";
 import VideosRoll from "../components/VideosRoll";
 import ServicesRoll from "../components/ServicesRoll";
 import StoriesRollItem from "../components/StoriesRollItem";
+import TopicsBar from "../components/TopicsBar";
 import { FaCoffee } from "react-icons/fa";
 
 import {
@@ -75,7 +76,7 @@ export const BlogPostTemplate = ({
                   <React.Fragment key={tag}>
                     <Link
                       className="has-text-danger has-text-weight-bold is-uppercase"
-                      to={`/tags/${kebabCase(tag)}/`}
+                      to={`/topics/${kebabCase(tag)}/`}
                     >
                       {tag}
                     </Link>{" "}
@@ -179,22 +180,7 @@ export const BlogPostTemplate = ({
         </div>
         <div className="column is-8">
           <PostContent content={content} className={`content`} />
-          {tags && tags.length ? (
-            <div className="mb-4">
-              <span className="taglist">
-                {tags.map(tag => (
-                  <Link
-                    className="sscroll btn btn-light btn-sm "
-                    to={`/tags/${kebabCase(tag)}/`}
-                    key={tag}
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </span>
-            </div>
-          ) : null}
-
+          <TopicsBar topics={tags} />
           <div className="container mt-5">
             <div className="media">
               <figure className="media-left">

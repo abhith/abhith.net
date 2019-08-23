@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { graphql, StaticQuery } from "gatsby";
 
-const TagImage = ({ tagSlug }) => (
+const TopicImage = ({ slug }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -16,7 +16,7 @@ const TagImage = ({ tagSlug }) => (
             }
           }
         }
-        allTagsJson {
+        allTopicsJson {
           edges {
             node {
               slug
@@ -28,15 +28,15 @@ const TagImage = ({ tagSlug }) => (
       }
     `}
     render={data => {
-      const tagNode = data.allTagsJson.edges.find(
-        edge => edge.node.slug === tagSlug
+      const tagNode = data.allTopicsJson.edges.find(
+        edge => edge.node.slug === slug
       );
 
-      const tagImageName = tagNode ? tagNode.node.image : "no-tag-image.png";
+      const topicImageName = tagNode ? tagNode.node.image : "no-tag-image.png";
       const imageAlt = tagNode ? tagNode.node.title : "No Image";
 
       const image = data.allImageSharp.edges.find(
-        edge => edge.node.fluid.originalName === tagImageName
+        edge => edge.node.fluid.originalName === topicImageName
       );
 
       if (!image) {
@@ -51,4 +51,4 @@ const TagImage = ({ tagSlug }) => (
     }}
   />
 );
-export default TagImage;
+export default TopicImage;

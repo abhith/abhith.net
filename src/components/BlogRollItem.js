@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
-import Tags from "./Tags";
+import TopicsBar from "./TopicsBar";
 
 const BlogRollItem = ({ post: node }) => {
   return (
@@ -22,7 +22,7 @@ const BlogRollItem = ({ post: node }) => {
           <small className="text-muted">
             {node.frontmatter.date} &middot; {node.fields.readingTime.text}
           </small>
-          <Tags tags={node.frontmatter.tags} />
+          <TopicsBar topics={node.frontmatter.tags} />
         </div>
       </div>
     </div>
