@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ceb3b988-acb1-4f96-9024-62ea791176bc/deploy-status)](https://app.netlify.com/sites/abhith/deploys)
 
-This repo serves the source code for [www.abhith.net](https://www.abhith.net/), and is deployed via [Netlify CMS](https://www.netlifycms.org).
+This repo serves the source code for [www.abhith.net](https://www.abhith.net/). Designed using [Bulma](https://bulma.io) and is deployed via [Netlify](https://www.netlify.com/).
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
