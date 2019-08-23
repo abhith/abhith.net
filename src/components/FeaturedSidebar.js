@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import Tags from "./Tags";
+import TopicsBar from "./TopicsBar";
 
 const FeaturedSidebar = ({ items }) => {
   return (
@@ -24,7 +24,7 @@ const FeaturedSidebar = ({ items }) => {
                   </OutboundLink>
                 </h6>
 
-                <Tags tags={item.tags} />
+                <TopicsBar topics={item.tags} />
               </span>
             </li>
           ))}

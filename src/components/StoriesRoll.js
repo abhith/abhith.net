@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import TagImage from "./TagImage";
+import TopicImage from "./TopicImage";
 
-import Tags from "./Tags";
+import TopicsBar from "./TopicsBar";
 import { truncate } from "lodash";
 
 const StoriesRoll = props => {
@@ -29,13 +29,13 @@ const StoriesRoll = props => {
                 <p className="subtitle is-5">
                   {truncate(post.description, { length: 186 })}
                 </p>
-                <Tags tags={post.tags} />
+                <TopicsBar topics={post.tags} />
                 <small className="text-muted">{post.date}</small>
               </div>
             </div>
             <div className="column is-one-quarter">
               <OutboundLink href={post.url} target="_blank">
-                <TagImage tagSlug={post.tags[0]} />
+                <TopicImage slug={post.tags[0]} />
               </OutboundLink>
             </div>
           </div>

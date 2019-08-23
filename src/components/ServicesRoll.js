@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import Tags from "./Tags";
+import TopicsBar from "./TopicsBar";
 
 const ServicesRoll = props => {
   const { services } = props;
@@ -24,7 +24,7 @@ const ServicesRoll = props => {
                 </h4>
 
                 <div className="subtitle">{service.description}</div>
-                <Tags tags={service.tags} />
+                <TopicsBar topics={service.tags} />
               </div>
             </div>
           </div>

@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import TagImage from "./TagImage";
-import Tags from "./Tags";
+import TopicImage from "./TopicImage";
+import TopicsBar from "./TopicsBar";
 
 const StoriesRollItem = ({ post }) => {
   return (
     <div className="columns">
       <div className="column is-one-third">
         <OutboundLink href={post.url} target="_blank">
-          <TagImage tagSlug={post.tags[0]} />
+          <TopicImage slug={post.tags[0]} />
         </OutboundLink>
       </div>
       <div className="column is-two-third">
@@ -22,7 +22,7 @@ const StoriesRollItem = ({ post }) => {
             {post.title}
           </OutboundLink>
         </h2>
-        <Tags tags={post.tags} />
+        <TopicsBar topics={post.tags} />
         <small className="text-muted">{post.date}</small>
       </div>
     </div>

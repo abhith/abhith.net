@@ -17,13 +17,28 @@ const Footer = class extends React.Component {
               <p className="subtitle is-5">Links</p>
               <ul className="list-clean">
                 <li>
-                  <Link to="/privacy-policy" className="has-text-grey-dark">
-                    Privacy Policy
+                  <Link to="/about" className="has-text-grey-dark">
+                    About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/tags" className="has-text-grey-dark">
-                    Tags
+                  <Link to="/blog" className="has-text-grey-dark">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/recommended" className="has-text-grey-dark">
+                    Recommended
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/topics" className="has-text-grey-dark">
+                    Topics
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/privacy-policy" className="has-text-grey-dark">
+                    Privacy Policy
                   </Link>
                 </li>
               </ul>
