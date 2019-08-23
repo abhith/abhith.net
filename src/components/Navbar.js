@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { FaCoffee } from "react-icons/fa";
+import { FaCoffee, FaRss, FaHeart, FaGithub, FaTwitter, FaHome, FaInfoCircle, FaBullhorn } from "react-icons/fa";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -359,45 +359,45 @@ const Navbar = class extends React.Component {
               </div>
             </div> */}
               <Link to="/" className="navbar-item">
-                Home
+                <FaHome color="green" /> <span> &nbsp;Home</span>
               </Link>
               <Link to="/about" className="navbar-item">
-                About
+               <FaInfoCircle color="cyan"/> <span> &nbsp;About</span>
               </Link>
               <Link to="/blog" className="navbar-item">
-                Blog
+                <span className="icon">
+                  <FaRss color={"orange"}></FaRss>
+                </span>
+                <span>Blog</span>
               </Link>
               <Link to="/recommended" className="navbar-item">
-                Recommended
+                <FaHeart color="red" /> <span> &nbsp;Recommended</span>
               </Link>
-
-              {/* <a className="navbar-item " href="http://bulma.io/expo/">
-              <span className="bd-emoji">🎨</span> &nbsp;Expo
-            </a>
-            <a className="navbar-item " href="http://bulma.io/love/">
-              <span className="bd-emoji">❤️</span> &nbsp;Love
-            </a> */}
+              <Link to="/topics" className="navbar-item">
+                <FaBullhorn color="turquoise" /><span> &nbsp;Topics</span> 
+              </Link>
             </div>
 
             <div className="navbar-end">
-              {/* <a
-              className="navbar-item is-hidden-desktop-only"
-              href="https://github.com/jgthms/bulma"
-              target="_blank"
-            >
-              <span className="icon" style={{ color: "#333" }}>
-                <i className="fa fa-github"></i>
-              </span>
-            </a>
-            <a
-              className="navbar-item is-hidden-desktop-only"
-              href="https://twitter.com/jgthms"
-              target="_blank"
-            >
-              <span className="icon" style={{ color: "#55acee" }}>
-                <i className="fa fa-twitter"></i>
-              </span>
-            </a> */}
+              <OutboundLink
+                className="navbar-item is-hidden-desktop-only"
+                href="https://github.com/Abhith/abhith.net"
+                target="_blank"
+              >
+                <span className="icon" style={{ color: "#333" }}>
+                  <FaGithub></FaGithub>
+                </span>
+              </OutboundLink>
+              <OutboundLink
+                className="navbar-item is-hidden-desktop-only"
+                href="https://twitter.com/abhithRajan"
+                target="_blank"
+              >
+                <span className="icon" style={{ color: "#55acee" }}>
+                  <FaTwitter></FaTwitter>
+                </span>
+              </OutboundLink>
+
               <div className="navbar-item">
                 <div className="field is-grouped">
                   {/* <p className="control">
@@ -417,11 +417,13 @@ const Navbar = class extends React.Component {
                 </p> */}
                   <p className="control">
                     <OutboundLink
-                      className="button is-light"
+                      className="button k-button k-primary raised has-gradient slanted"
                       href="https://ko-fi.com/abhith"
                       target="_blank"
                     >
-                      Buy me a coffee <FaCoffee className="text-danger" />
+                      <span>
+                        BUY ME A <FaCoffee/>
+                      </span>
                     </OutboundLink>
                   </p>
                 </div>
