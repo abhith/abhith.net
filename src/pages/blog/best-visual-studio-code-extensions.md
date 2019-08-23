@@ -5,7 +5,7 @@ description: My favorite extensions for Visual Studio Code
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
 date: 2019-02-12T17:50:10.699Z
-lastModificationTime: 2019-08-15T11:02:00.000Z
+lastModificationTime: 2019-08-22T14:02:00.000Z
 image: /img/1200px-visual_studio_code_118.png
 tags:
   - visual-studio-code
@@ -25,6 +25,7 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 - [Programming Languages](#programming-languages)
   - [ESLint](#eslint)
   - [TSLint](#tslint)
+  - [Vetur](#vetur)
 - [Snippets](#snippets)
   - [Angular Snippets (Version 8)](#angular-snippets-version-8)
   - [Document This](#document-this)
@@ -99,6 +100,14 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
 [![TSLint](https://vsmarketplacebadge.apphb.com/rating-short/ms-vscode.vscode-typescript-tslint-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
 
 [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin) support for Visual Studio Code
+
+### Vetur
+
+[![Vetur](https://vsmarketplacebadge.apphb.com/version-short/octref.vetur.svg)](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+[![Vetur](https://vsmarketplacebadge.apphb.com/installs-short/octref.vetur.svg)](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+[![Vetur](https://vsmarketplacebadge.apphb.com/rating-short/octref.vetur.svg)](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+
+Vue tooling for VS Code
 
 ## Snippets
 

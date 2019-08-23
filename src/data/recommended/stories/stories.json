@@ -1,5 +1,12 @@
 [
   {
+    "title": "Avoiding ASP.Net Core Configuration Pitfalls With Array Values",
+    "url": "https://rimdev.io/avoiding-aspnet-core-configuration-pitfalls-with-array-values/",
+    "description": "ASP.NET Core continues to improve on the legacy of the .NET Framework. Our team is impressed with its performance and excited about future possibilities, but change is seldom a smooth transition. In this post, I’ll explain a pitfall you may run into using the newest configuration model in .NET Core and options to mitigate the issue.",
+    "date": "2019-08-22T18:22:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Why You Should Use Windows Defender's Ransomware Prevention",
     "url": "https://lifehacker.com/why-you-should-use-windows-defenders-ransomware-prevent-1837311176",
     "description": "A crucial security feature in Windows Defender comes disabled by default: Ransomware Protection...",
