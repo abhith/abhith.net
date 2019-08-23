@@ -12,7 +12,7 @@ const TopicsBar = ({ topics }) => (
               <span className="tag">
                 <Link
                   className="text-capitalize text-muted smoothscroll"
-                  to={`/tags/${kebabCase(topic)}/`}
+                  to={`/topics/${kebabCase(topic)}/`}
                 >
                   {topic}
                 </Link>
