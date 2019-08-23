@@ -6,6 +6,13 @@ This repo serves the source code for [www.abhith.net](https://www.abhith.net/). 
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
+## Design Inspiration
+
+- [wowthemesnet/mundana-theme-jekyll](https://github.com/wowthemesnet/mundana-theme-jekyll)
+- [cssninjaStudio/krypton](https://github.com/cssninjaStudio/krypton)
+
+Since I am not a designer by profession, copy paste is what I do in most cases plus do some tweaks according to my likes.
+
 ## Main Sections
 
 Following are the main sections apart from my [blog](https://www.abhith.net/blog).
