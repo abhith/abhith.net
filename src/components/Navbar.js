@@ -39,7 +39,7 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav className="navbar has-shadow is-spaced is-dark">
+      <nav className="navbar has-shadow is-spaced is-dark a-nav">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
