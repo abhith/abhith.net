@@ -1,71 +1,102 @@
 import React from "react";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import { FaStar } from "react-icons/fa";
-const Footer = class extends React.Component {
-  render() {
-    return (
-      <footer className="footer">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-half">
-              <Link to="/" className="title">
-                <strong>Abhith</strong>
-              </Link>
-            </div>
-            <div className="column">
-              <p className="subtitle is-5">Links</p>
-              <ul className="list-clean">
-                <li>
-                  <Link to="/about" className="has-text-grey-dark">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" className="has-text-grey-dark">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/recommended" className="has-text-grey-dark">
-                    Recommended
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/topics" className="has-text-grey-dark">
-                    Topics
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/privacy-policy" className="has-text-grey-dark">
-                    Privacy Policy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="column">
-              <p className="subtitle is-5">More</p>
-              <ul className="list-clean has-icons">
+
+function Footer() {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            description
+          }
+        }
+      }
+    `
+  );
+
+  return (
+    <footer class="abhith-footer">
+      <div class="container">
+        <div class="footer-logo">
+          <Link to="/">
+            {/* <img
+              class="rotating"
+              src="assets/images/logo/krypton-gradient.svg"
+              alt=""
+            /> */}
+            <div class="brand-name">Abhith Rajan</div>
+            <div class="brand-subtitle">{site.siteMetadata.description}</div>
+          </Link>
+        </div>
+
+        <div class="columns footer-columns is-vcentered">
+          <div class="column is-4">
+            <ul class="footer-links">
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+
+              <li>
+                <Link to="/recommended">Recommended</Link>
+              </li>
+            </ul>
+          </div>
+          <div class="column is-4">
+            {/* <div class="subscribe-block">
+              <form>
+                <div class="control">
+                  <input
+                    class="krypton-subscribe-input"
+                    type="email"
+                    name="email"
+                    placeholder=""
+                  />
+                  <button class="subscribe-button">
+                    <span>Subscribe</span>
+                  </button>
+                </div>
+              </form>
+            </div> */}
+          </div>
+          <div class="column is-4">
+            <ul class="footer-links">
+              <li>
+                <Link to="/topics">Topics</Link>
+              </li>
+              <li>
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li>
                 <li>
                   <OutboundLink
-                    className="has-text-grey-dark"
                     target="_blank"
                     href="https://github.com/Abhith/abhith.net"
                   >
                     <FaStar className="fab" /> Abhith.net on Github
                   </OutboundLink>
                 </li>
-              </ul>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column content has-text-centered">
-              <span>Copyright © 2019</span>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-    );
-  }
-};
+        <p class="k-copyright">© 2019 | Abhith. All Rights Reserved</p>
+        <br />
+        <p class="coded-by">
+          Designed and Coded by{" "}
+          <OutboundLink href="https://twitter.com/AbhithRajan" target="_blank">
+            Abhith Rajan
+          </OutboundLink>
+        </p>
+      </div>
+
+      {/* <img class="solar-system" src="assets/images/bg/solar.svg" alt="" /> */}
+    </footer>
+  );
+}
 export default Footer;
