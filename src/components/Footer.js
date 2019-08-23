@@ -27,7 +27,9 @@ function Footer() {
               alt=""
             /> */}
             <div className="brand-name">Abhith Rajan</div>
-            <div className="brand-subtitle">{site.siteMetadata.description}</div>
+            <div className="brand-subtitle">
+              {site.siteMetadata.description}
+            </div>
           </Link>
         </div>
 
@@ -73,14 +75,12 @@ function Footer() {
                 <Link to="/privacy-policy">Privacy Policy</Link>
               </li>
               <li>
-                <li>
-                  <OutboundLink
-                    target="_blank"
-                    href="https://github.com/Abhith/abhith.net"
-                  >
-                    <FaStar className="fab" /> Abhith.net on Github
-                  </OutboundLink>
-                </li>
+                <OutboundLink
+                  target="_blank"
+                  href="https://github.com/Abhith/abhith.net"
+                >
+                  <FaStar className="fab" /> Abhith.net on Github
+                </OutboundLink>
               </li>
             </ul>
           </div>
