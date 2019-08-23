@@ -17,23 +17,23 @@ function Footer() {
   );
 
   return (
-    <footer class="abhith-footer">
-      <div class="container">
-        <div class="footer-logo">
+    <footer className="abhith-footer">
+      <div className="container">
+        <div className="footer-logo">
           <Link to="/">
             {/* <img
-              class="rotating"
+              className="rotating"
               src="assets/images/logo/krypton-gradient.svg"
               alt=""
             /> */}
-            <div class="brand-name">Abhith Rajan</div>
-            <div class="brand-subtitle">{site.siteMetadata.description}</div>
+            <div className="brand-name">Abhith Rajan</div>
+            <div className="brand-subtitle">{site.siteMetadata.description}</div>
           </Link>
         </div>
 
-        <div class="columns footer-columns is-vcentered">
-          <div class="column is-4">
-            <ul class="footer-links">
+        <div className="columns footer-columns is-vcentered">
+          <div className="column is-4">
+            <ul className="footer-links">
               <li>
                 <Link to="/about">About</Link>
               </li>
@@ -47,25 +47,25 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div class="column is-4">
-            {/* <div class="subscribe-block">
+          <div className="column is-4">
+            {/* <div className="subscribe-block">
               <form>
-                <div class="control">
+                <div className="control">
                   <input
-                    class="krypton-subscribe-input"
+                    className="krypton-subscribe-input"
                     type="email"
                     name="email"
                     placeholder=""
                   />
-                  <button class="subscribe-button">
+                  <button className="subscribe-button">
                     <span>Subscribe</span>
                   </button>
                 </div>
               </form>
             </div> */}
           </div>
-          <div class="column is-4">
-            <ul class="footer-links">
+          <div className="column is-4">
+            <ul className="footer-links">
               <li>
                 <Link to="/topics">Topics</Link>
               </li>
@@ -85,9 +85,9 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <p class="k-copyright">© 2019 | Abhith. All Rights Reserved</p>
+        <p className="k-copyright">© 2019 | Abhith. All Rights Reserved</p>
         <br />
-        <p class="coded-by">
+        <p className="coded-by">
           Designed and Coded by{" "}
           <OutboundLink href="https://twitter.com/AbhithRajan" target="_blank">
             Abhith Rajan
@@ -95,7 +95,7 @@ function Footer() {
         </p>
       </div>
 
-      {/* <img class="solar-system" src="assets/images/bg/solar.svg" alt="" /> */}
+      {/* <img className="solar-system" src="assets/images/bg/solar.svg" alt="" /> */}
     </footer>
   );
 }
