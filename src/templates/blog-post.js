@@ -75,7 +75,7 @@ export const BlogPostTemplate = ({
                   <React.Fragment key={tag}>
                     <Link
                       className="has-text-danger has-text-weight-bold is-uppercase"
-                      to={`/tags/${kebabCase(tag)}/`}
+                      to={`/topics/${kebabCase(tag)}/`}
                     >
                       {tag}
                     </Link>{" "}
