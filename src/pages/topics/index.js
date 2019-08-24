@@ -97,7 +97,7 @@ const TopicsPage = ({
                         className="button is-light"
                         to={`/topics/${kebabCase(topic.slug)}/`}
                       >
-                        <FaFileAlt /> {topic.totalPosts} POSTS
+                        <FaFileAlt /> <span>&nbsp;{topic.totalPosts} POSTS</span>
                       </Link>
                     )}
                     {topic.totalVideos > 0 && (
@@ -105,7 +105,7 @@ const TopicsPage = ({
                         className="button is-info"
                         to={`/topics/${kebabCase(topic.slug)}/`}
                       >
-                        <FaVideo /> {topic.totalVideos} VIDEOS
+                        <FaVideo /> <span>&nbsp;{topic.totalVideos} VIDEOS</span>
                       </Link>
                     )}
 
@@ -114,7 +114,7 @@ const TopicsPage = ({
                         className="button is-link"
                         to={`/topics/${kebabCase(topic.slug)}/`}
                       >
-                        <FaBookOpen /> {topic.totalStories} STORIES
+                        <FaBookOpen /> <span>&nbsp;{topic.totalStories} STORIES</span>
                       </Link>
                     )}
                     {topic.totalServices > 0 && (
@@ -122,7 +122,7 @@ const TopicsPage = ({
                         className="button is-white"
                         to={`/topics/${kebabCase(topic.slug)}/`}
                       >
-                        <FaGlobe /> {topic.totalServices} SERVICES
+                        <FaGlobe /> <span>&nbsp;{topic.totalServices} SERVICES</span>
                       </Link>
                     )}
                   </div>
