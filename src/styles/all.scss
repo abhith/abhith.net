@@ -1,0 +1,125 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma";
+
+@import "partials/theme-default";
+@import "partials/_colors";
+@import "partials/_layout";
+@import "partials/_buttons";
+@import "partials/_footer";
+@import "SassMeister-input";
+
+.nav-logo {
+  width: 112px;
+  height: 28px;
+}
+
+.is-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.has-background-lightblue {
+  fill: #e8f3ec !important;
+  background-color: #e8f3ec !important;
+}
+
+.spanborder {
+  border-bottom: 1px solid #e8f3ec;
+  margin-bottom: 2rem;
+}
+
+.spanborder span {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-bottom: -1px;
+}
+
+/* React Player */
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+a[target="_blank"]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+}
+
+.gatsby-resp-iframe-wrapper {
+  margin-bottom: 0.5rem !important;
+}
+
+article {
+  font-size: 20px;
+  line-height: 1.86;
+  font-family: Lora;
+}
+
+.article-headline {
+  font-family: Georgia, Times, Times New Roman, serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #222;
+}
+
+article img,
+article p {
+  margin-bottom: 2rem;
+}
+
+article:first-letter {
+  float: left;
+  font-size: 5em;
+  line-height: 1;
+  margin: 0 0.2em 0 0;
+  vertical-align: top;
+}
+
+article .h1,
+article .h2,
+article .h3,
+article .h4,
+article .h5,
+article .h6,
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+.sticky {
+  top: 1em;
+  position: sticky;
+}
+.token.tag,
+.token.content,
+.token.number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
