@@ -50,27 +50,6 @@ const Navbar = class extends React.Component {
                 />
               </figure>
             </Link>
-
-            {/* <a
-            className="navbar-item is-hidden-desktop"
-            href="https://github.com/jgthms/bulma"
-            target="_blank"
-          >
-            <span className="icon" style={{ color: "#333" }}>
-              <i className="fa fa-github"></i>
-            </span>
-          </a>
-
-          <a
-            className="navbar-item is-hidden-desktop"
-            href="https://twitter.com/jgthms"
-            target="_blank"
-          >
-            <span className="icon" style={{ color: "#55acee" }}>
-              <i className="fa fa-twitter"></i>
-            </span>
-          </a> */}
-
             <div
               className={`navbar-burger burger ${this.state.hamburgerMenuClass}`}
               onClick={() => this.toggleHamburger()}
