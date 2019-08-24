@@ -12,33 +12,35 @@ export default function Hero() {
         return (
           <div className="hero-body has-background-lightblue">
             <div className="container">
-                <div className="columns is-vcentered">
-                    <div className="column is-5 landing-caption">
-                        <h1 className="title is-1 is-semibold is-spaced main-title">{page.frontmatter.heading}</h1>
-                        <h2 className="subtitle">
-                          {page.frontmatter.subheading}
-                        </h2>
-                        <p>
-                          <Link to="/about" className="button k-button k-primary raised has-gradient is-fat is-bold">
-                            <span className="text"> Read More</span>
-                            <span className="front-gradient"></span>
-                          </Link>                            
-                        </p>
-                    </div>
-                    <div className="column is-7">
-                        <figure className="image">
-                            <PreviewCompatibleImage
+              <div className="columns is-vcentered">
+                <div className="column is-5 landing-caption">
+                  <h1 className="title is-1 is-semibold is-spaced main-title">
+                    {page.frontmatter.heading}
+                  </h1>
+                  <h2 className="subtitle">{page.frontmatter.subheading}</h2>
+                  <p>
+                    <Link
+                      to="/about"
+                      className="button k-button k-primary raised has-gradient is-fat is-bold"
+                    >
+                      <span className="text"> Read More</span>
+                      <span className="front-gradient"></span>
+                    </Link>
+                  </p>
+                </div>
+                <div className="column is-7">
+                  <figure className="image">
+                    <PreviewCompatibleImage
                       imageInfo={{
                         image: page.frontmatter.image,
                         alt: `${page.frontmatter.heading}`
                       }}
                     />
-                        </figure>
-                    </div>
+                  </figure>
                 </div>
+              </div>
             </div>
-        </div>
-          
+          </div>
         );
       }}
     />
