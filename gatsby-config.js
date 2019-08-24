@@ -139,14 +139,6 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
-      options: {
-        printRejected: true,
-        develop: false, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"] // applies purging only on the bulma css file
-      }
-    }, // must be after other CSS plugins
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-104139048-1"
