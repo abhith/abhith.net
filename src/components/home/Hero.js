@@ -10,32 +10,35 @@ export default function Hero() {
         // console.log(data);
         const page = data.markdownRemark;
         return (
-          <div className=" ">
-            <div className="container has-background-lightblue">
-              <div className="section">
-                <div className="columns">
-                  <div className="column is-vertical-center">
-                    <div className="">
-                      <h1 className="title mb-3">{page.frontmatter.heading}</h1>
-                      <p className="subtitle">{page.frontmatter.subheading}</p>
-                      <Link to="/about" className="button is-dark">
-                        Read More
-                      </Link>
+          <div className="hero-body has-background-lightblue">
+            <div className="container">
+                <div className="columns is-vcentered">
+                    <div className="column is-5 landing-caption">
+                        <h1 className="title is-1 is-semibold is-spaced main-title">{page.frontmatter.heading}</h1>
+                        <h2 className="subtitle">
+                          {page.frontmatter.subheading}
+                        </h2>
+                        <p>
+                          <Link to="/about" className="button k-button k-primary raised has-gradient is-fat is-bold">
+                            <span className="text"> Read More</span>
+                            <span className="front-gradient"></span>
+                          </Link>                            
+                        </p>
                     </div>
-                  </div>
-                  <div className="column">
-                    <PreviewCompatibleImage
+                    <div className="column is-7">
+                        <figure className="image">
+                            <PreviewCompatibleImage
                       imageInfo={{
                         image: page.frontmatter.image,
-                        className: `center-image`,
                         alt: `${page.frontmatter.heading}`
                       }}
                     />
-                  </div>
+                        </figure>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+          
         );
       }}
     />
