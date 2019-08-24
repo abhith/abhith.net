@@ -6,7 +6,9 @@ This repo serves the source code for [www.abhith.net](https://www.abhith.net/). 
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
-## Design Inspiration
+## Design
+
+The CSS framework used in this project is [Bulma](https://bulma.io). And the design inspiration came from the following,
 
 - [wowthemesnet/mundana-theme-jekyll](https://github.com/wowthemesnet/mundana-theme-jekyll)
 - [cssninjaStudio/krypton](https://github.com/cssninjaStudio/krypton)
