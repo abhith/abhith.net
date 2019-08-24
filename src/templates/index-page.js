@@ -16,27 +16,29 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
     <Hero />
     <div className="section">
       <div className="columns">
-        <div className="column is-two-thirds">
-          <h4 className="spanborder">
-            <span className="title is-4 has-text-weight-bold">
-              Recommended Videos
-            </span>
-          </h4>
-          <VideosRoll videos={videos} />
-          <div className="is-pulled-right">
-            <Link to="/recommended/videos" className="button is-link">
-              View More Videos
-            </Link>
-          </div>
+        <div className="column is-one-third">
           <h4 className="spanborder">
             <span className="title is-4 has-text-weight-bold">
               Recommended Stories
             </span>
           </h4>
           <StoriesRoll posts={stories} />
-          <div className="is-pulled-right">
+          <div className="has-text-centered">
             <Link to="/recommended/stories" className="button is-link">
               View More Developer Stories
+            </Link>
+          </div>
+        </div>
+        <div className="column is-one-third">
+        <h4 className="spanborder">
+            <span className="title is-4 has-text-weight-bold">
+              Recommended Videos
+            </span>
+          </h4>
+          <VideosRoll videos={videos} />
+          <div className="has-text-centered">
+            <Link to="/recommended/videos" className="button is-link">
+              View More Videos
             </Link>
           </div>
         </div>
