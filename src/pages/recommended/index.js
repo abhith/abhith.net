@@ -5,7 +5,6 @@ import VideosRoll from "../../components/VideosRoll";
 import StoriesRollItem from "../../components/StoriesRollItem";
 import { graphql, Link } from "gatsby";
 
-import { FaGlobe, FaVideo, FaBookOpen } from "react-icons/fa";
 import Img from "gatsby-image";
 
 export default class RecommendedIndexPage extends React.Component {
