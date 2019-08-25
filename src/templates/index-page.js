@@ -23,22 +23,27 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
             </span>
           </h4>
           <StoriesRoll posts={stories} />
-          <div className="has-text-centered">
-            <Link to="/recommended/stories" className="button is-link">
-              View More Developer Stories
+          <div className="cta-wrapper has-text-centered">
+            <Link to="/recommended/stories" className="button k-button k-primary raised has-gradient is-bold">
+              <span class="text">View More Stories</span>
+              <span class="front-gradient"></span>
             </Link>
           </div>
         </div>
         <div className="column is-one-third">
-        <h4 className="spanborder">
+          <h4 className="spanborder">
             <span className="title is-4 has-text-weight-bold">
               Recommended Videos
             </span>
           </h4>
           <VideosRoll videos={videos} />
-          <div className="has-text-centered">
-            <Link to="/recommended/videos" className="button is-link">
-              View More Videos
+          <div className="cta-wrapper has-text-centered">
+            <Link
+              to="/recommended/videos"
+              className="button k-button k-primary raised has-gradient is-bold"
+            >
+              <span class="text">View More Videos</span>
+              <span class="front-gradient"></span>
             </Link>
           </div>
         </div>
