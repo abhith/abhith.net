@@ -11,15 +11,16 @@ export default class BlogIndexPage extends React.Component {
     const posts = data.allMarkdownRemark.edges;
     return (
       <Layout>
-        <div className="container">
-          <SEO
-            title="Blog"
-            description="Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More"
-            slug="\blog"
-          />
-          <div className="section">
+        <SEO
+          title="Blog"
+          description="Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More"
+          slug="\blog"
+        />
+
+        <div className="section">
+          <div className="container">
             <div className="columns">
-              <div className="column is-two-thirds">
+              <div className="column is-9">
                 <h4 className="title is-4 spanborder has-text-weight-bold">
                   <span>All Stories</span>
                 </h4>

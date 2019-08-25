@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
-import TopicsBar from "./TopicsBar";
-
 const BlogRoll = props => {
   const { posts } = props;
 
@@ -11,27 +9,43 @@ const BlogRoll = props => {
     <>
       {posts &&
         posts.map(({ node: post }) => (
-          <div className="mb-5 columns" key={post.id}>
-            <div className="column is-three-quarters">
+          <div className="blog-post" key={post.id}>
+            <Link to={post.fields.slug}>
+              <div className="featured-image">
+                <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+              </div>
               <div className="content">
-                <Link className="text-dark" to={post.fields.slug}>
-                  <h2 className="mb-1 title is-4 has-text-weight-bold">
-                    {post.frontmatter.title}
-                  </h2>
-                </Link>
-                <p className="subtitle">{post.frontmatter.description}</p>
-                <TopicsBar topics={post.frontmatter.tags} />
-                <small className="text-muted">
+                <div className="post-title">{post.frontmatter.title}</div>
+                <span className="blog-date">
                   {post.frontmatter.date} &middot;{" "}
                   {post.fields.readingTime.text}
-                </small>
+                </span>
+                <p>{post.frontmatter.description}</p>
+                <div className="post-meta">
+                  <div className="author-block">
+                    <div className="image is-32x32">
+                      <img src="/img/abhith-avatar.jpg" alt="abhith rajan" />
+                    </div>
+                    <div className="author-name">
+                      <span>by Abhith Rajan</span>
+                      <span>
+                        <small>in</small> {post.frontmatter.tags.join()}
+                      </span>
+                    </div>
+                  </div>
+                  {/* <div className="stats-block">
+                    <div className="comments">
+                      <i data-feather="message-circle"></i>
+                      <span>0</span>
+                    </div>
+                    <div className="likes">
+                      <i data-feather="heart"></i>
+                      <span>39</span>
+                    </div>
+                  </div> */}
+                </div>
               </div>
-            </div>
-            <div className="column">
-              <Link to={`${post.fields.slug}`}>
-                <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
-              </Link>
-            </div>
+            </Link>
           </div>
         ))}
     </>
