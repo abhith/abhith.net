@@ -1,5 +1,19 @@
 [
   {
+    "title": "C# Constructor: Usage, Examples, Best Practices, and Pitfalls",
+    "url": "https://blog.submain.com/c-constructor-usage-examples-best-practices/",
+    "description": "Today we define the concept of a C# constructor, then show usage examples with general tips on best practices to follow and pitfalls to be aware of.",
+    "date": "2019-08-26T16:22:28.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Visual Studio Tips and Tricks: Increasing your Productivity for .NET | .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/visual-studio-tips-and-tricks-increasing-your-productivity-for-net/",
+    "description": "The .NET team is constantly thinking of new ways to make developers more productive. We’ve been working hard over the past year to take the feedback you’ve sent us and turn it into tools that you want! In this post I’ll cover some of the latest productivity features available in Visual Studio 2019 Preview.",
+    "date": "2019-08-26T08:22:28.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
     "title": "Avoiding ASP.Net Core Configuration Pitfalls With Array Values",
     "url": "https://rimdev.io/avoiding-aspnet-core-configuration-pitfalls-with-array-values/",
     "description": "ASP.NET Core continues to improve on the legacy of the .NET Framework. Our team is impressed with its performance and excited about future possibilities, but change is seldom a smooth transition. In this post, I’ll explain a pitfall you may run into using the newest configuration model in .NET Core and options to mitigate the issue.",
