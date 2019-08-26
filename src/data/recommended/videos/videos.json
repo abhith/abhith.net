@@ -1,5 +1,14 @@
 [
   {
+    "title": "IdentityServer4: New & Improved for ASP.NET Core - Brock Allen & Dominick Baier",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=YXdJ2HLAOdE",
+    "date": "2019-08-27T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Modeling Data for NoSQL Document Databases",
     "description": "",
     "image": "",
