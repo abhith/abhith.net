@@ -11286,6 +11286,13 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-particles-js@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-2.7.0.tgz#1b13a85d948e63016cb2b400f734758b0a985727"
+  integrity sha512-gsYIr55plOMB6nZW2iBjgXoqOZqBvggW9trNTk0mYHkvqQUpuxhcCDGwRwnts10XQ442PjzxZbklwMlhSOcfgA==
+  dependencies:
+    lodash "^4.17.11"
+
 react-player@^1.12.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/react-player/-/react-player-1.12.0.tgz#01ce8d1b018b9eef10e5cbf8a46bc35ef5bd508e"
