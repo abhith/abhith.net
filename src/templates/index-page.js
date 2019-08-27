@@ -10,10 +10,11 @@ import SEO from "../components/seo/SEO";
 import VideosRoll from "../components/VideosRoll";
 
 export const IndexPageTemplate = ({ stories, featured, videos }) => (
-  <div className="container">
+  <>
     <SEO />
-    <LatestPosts />
     <Hero />
+    <LatestPosts />
+
     <div className="section">
       <div className="columns">
         <div className="column is-one-third">
@@ -25,8 +26,8 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
           <StoriesRoll posts={stories} />
           <div className="cta-wrapper has-text-centered">
             <Link to="/recommended/stories" className="button k-button k-primary raised has-gradient is-bold">
-              <span class="text">View More Stories</span>
-              <span class="front-gradient"></span>
+              <span className="text">View More Stories</span>
+              <span className="front-gradient"></span>
             </Link>
           </div>
         </div>
@@ -42,8 +43,8 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
               to="/recommended/videos"
               className="button k-button k-primary raised has-gradient is-bold"
             >
-              <span class="text">View More Videos</span>
-              <span class="front-gradient"></span>
+              <span className="text">View More Videos</span>
+              <span className="front-gradient"></span>
             </Link>
           </div>
         </div>
@@ -52,7 +53,7 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
         </div>
       </div>
     </div>
-  </div>
+  </>
 );
 
 IndexPageTemplate.propTypes = {
