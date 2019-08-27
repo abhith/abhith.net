@@ -1,11 +1,12 @@
-.a-nav{
-    background: #0f0330 !important;
+.a-nav {
+  background: #0f0330 !important;
 }
 
-.hero, .section {
-    &.is-transparent {
-        background: transparent !important;
-    }
+.hero,
+.section {
+  &.is-transparent {
+    background: transparent !important;
+  }
 }
 
 
@@ -14,17 +15,17 @@
 ========================================================================== */
 
 .content-wrapper {
-    padding: 20px 0;
-    position: relative;
-    z-index: 2;
-    //Medium size modifier
-    &.is-medium {
-        padding: 40px 0;
-    }
-    //Large size modifier
-    &.is-large {
-        padding: 60px 0;
-    }
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+  //Medium size modifier
+  &.is-medium {
+    padding: 40px 0;
+  }
+  //Large size modifier
+  &.is-large {
+    padding: 60px 0;
+  }
 }
 
 /* ==========================================================================
@@ -32,48 +33,47 @@
 ========================================================================== */
 
 .section {
+  outline: none !important;
+  position: relative;
+  //Outline reset
+  &:active,
+  &:focus {
     outline: none !important;
+  }
+  //relative modifier
+  &.is-relative {
     position: relative;
-    //Outline reset
-    &:active, &:focus {
-        outline: none !important;
-    }
-    //relative modifier
-    &.is-relative {
-        position: relative;
-    }
-    //Background colors
-    &.is-dark {
-        background: #3c019e;
-    }
-    &.is-darker {
-        background: #320184;
-    }
-    &.is-darkest {
-        background: #270068;
-    }
-    &.is-end {
-        background: #1c004c;
-    }
-    //Background shapes
-    .has-bg-shapes {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: 0;
-    }
+  }
+  //Background colors
+  &.is-dark {
+    background: #3c019e;
+  }
+  &.is-darker {
+    background: #320184;
+  }
+  &.is-darkest {
+    background: #270068;
+  }
+  &.is-end {
+    background: #1c004c;
+  }
+  //Background shapes
+  .has-bg-shapes {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
 }
-
-
 
 //CTA Spacing
 .cta-wrapper {
-    margin: 30px 0;
-    &.is-small {
-        margin: 20px 0;
-    }
+  margin: 30px 0;
+  &.is-small {
+    margin: 20px 0;
+  }
 }
 
 /* ==========================================================================
@@ -82,114 +82,94 @@
 
 //Buy title
 .buy-title {
-    padding: 20px 0;
-    text-transform: uppercase;
-    font-size: .8rem;
-    color: $white;
-    opacity: 0.7;
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: $white;
+  opacity: 0.7;
 }
 
 .accepted-currencies {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
-        margin: 0 10px;
-    }
-    i {
-        font-size: 1.2rem;
-        padding: 10px;
-        border-radius: 3px;
-        color: $white;
-        background: darken(#1c004c, 5%);
-        opacity: 0.7;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    margin: 0 10px;
+  }
+  i {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 3px;
+    color: $white;
+    background: darken(#1c004c, 5%);
+    opacity: 0.7;
+  }
 }
 
 //Common styles
-.title, .subtitle {
-    //lighttext modifier
-    &.is-light {
-        color: $white;
-        + p {
-            color: $white;
-        }
+.title,
+.subtitle {
+  //lighttext modifier
+  &.is-light {
+    color: $white;
+    + p {
+      color: $white;
     }
-    //Semibold modifier
-    &.is-semibold {
-        font-weight: 600;
-    }
-    //Thin modifier
-    &.is-thin {
-        font-weight: 300 !important;
-    }
-    //Uppercase modifier
-    &.is-uppercase {
-        text-transform: uppercase;
-    }
-    //Small spacing modifier
-    &.is-tight {
-        margin-bottom: 10px !important;
-    }
-    //Ultra small spacing modifier
-    &.is-compressed {
-        margin-bottom: 5px !important;
-    }
+  }
+  //Semibold modifier
+  &.is-semibold {
+    font-weight: 600;
+  }
+  //Thin modifier
+  &.is-thin {
+    font-weight: 300 !important;
+  }
+  //Uppercase modifier
+  &.is-uppercase {
+    text-transform: uppercase;
+  }
+  //Small spacing modifier
+  &.is-tight {
+    margin-bottom: 10px !important;
+  }
+  //Ultra small spacing modifier
+  &.is-compressed {
+    margin-bottom: 5px !important;
+  }
 }
 
 //Titles
 .title {
-    &.main-title {
-        text-shadow: 4px 4px 2px rgba(150, 150, 150, 0.1);
-    }
+  &.main-title {
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 0.1);
+  }
 }
 
 //Subtitles
 .subtitle {
-    opacity: 0.8;
-    &.is-compact {
-        max-width: 600px;
-        margin: 0 auto;
-    }
+  opacity: 0.8;
+  &.is-compact {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 //Divider
 .divider {
-    height: 3px;
-    width: 75px;
-    @include primary-gradient-left();
-    margin: 20px 0;
-    //Centered modifier
-    &.is-centered {
-        margin: 20px auto;
-    }
-    //Long modifier
-    &.is-long {
-        width: 150px;
-    }
-    //Acts as a spacing element
-    &.is-spacer {
-        margin-top: 120px;
-    }
+  height: 3px;
+  width: 75px;
+  @include primary-gradient-left();
+  margin: 20px 0;
+  //Centered modifier
+  &.is-centered {
+    margin: 20px auto;
+  }
+  //Long modifier
+  &.is-long {
+    width: 150px;
+  }
+  //Acts as a spacing element
+  &.is-spacer {
+    margin-top: 120px;
+  }
 }
-
-
-/* ==========================================================================
-3. Partners and Client logos
-========================================================================== */
-
-//Wrapper
-.partners {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-    //Item
-    .partner-item {
-        margin: 0 10px;
-        img {
-            height: 100px;
-        }
-    }
-}
-
