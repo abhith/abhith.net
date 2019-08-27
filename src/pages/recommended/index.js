@@ -48,10 +48,10 @@ export default class RecommendedIndexPage extends React.Component {
                         to="/recommended/stories"
                         className="button k-button k-primary raised has-gradient is-bold"
                       >
-                        <span class="text">
+                        <span className="text">
                           View All {data.recommendedStories.totalCount} Stories
                         </span>
-                        <span class="front-gradient"></span>
+                        <span className="front-gradient"></span>
                       </Link>
                     </div>
                   </div>
@@ -85,10 +85,10 @@ export default class RecommendedIndexPage extends React.Component {
                         to="/recommended/videos"
                         className="button k-button k-primary raised has-gradient is-bold"
                       >
-                        <span class="text">
+                        <span className="text">
                           View All {data.recommendedVideos.totalCount} Videos
                         </span>
-                        <span class="front-gradient"></span>
+                        <span className="front-gradient"></span>
                       </Link>
                     </div>
                   </div>
@@ -120,10 +120,10 @@ export default class RecommendedIndexPage extends React.Component {
                         to="/recommended/services"
                         className="button k-button k-primary raised has-gradient is-bold"
                       >
-                        <span class="text">
+                        <span className="text">
                           View All {data.services.totalCount} Services
                         </span>
-                        <span class="front-gradient"></span>
+                        <span className="front-gradient"></span>
                       </Link>
                     </div>
                   </div>
