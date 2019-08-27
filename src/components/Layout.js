@@ -7,7 +7,7 @@ const TemplateWrapper = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main role="main" className="site-content">
+      <main role="main">
         {children}
       </main>
       <Footer />
