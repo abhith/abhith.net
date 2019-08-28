@@ -67,11 +67,11 @@ export const BlogPostTemplate = ({
         dateModified={dateModifiedSeoFormat}
         datePublished={datePublishedSeoFormat}
       />
-      <section class="hero is-primary">
-        <div class="hero-body">
-          <div class="container is-fluid">
-            <div class="columns is-vcentered">
-              <div class="column is-5 is-offset-1 post-caption">
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <div className="container is-fluid">
+            <div className="columns is-vcentered">
+              <div className="column is-5 is-offset-1 post-caption">
                 <p className="text-uppercase ">
                   {tags && tags.length ? (
                     <span className="taglist">
@@ -89,16 +89,16 @@ export const BlogPostTemplate = ({
                     </span>
                   ) : null}
                 </p>
-                <div class="divider"></div>
-                <h1 class="title is-2 is-light is-semibold is-spaced main-title">
+                <div className="divider"></div>
+                <h1 className="title is-2 is-light is-semibold is-spaced main-title">
                   {title}
                 </h1>
 
-                <div class="author-block">
-                  <div class="image is-64x64">
+                <div className="author-block">
+                  <div className="image is-64x64">
                     <img src="/img/abhith-avatar.jpg" alt="" />
                   </div>
-                  <div class="author-name">
+                  <div className="author-name">
                     <span>by {author.name} {" "}<OutboundLink
                       target="_blank"
                       className="button is-info is-outlined is-small is-rounded ml-1"
@@ -116,8 +116,8 @@ export const BlogPostTemplate = ({
                   </div>
                 </div>
               </div>
-              <div class="column is-5">
-                <figure class="image">
+              <div className="column is-5">
+                <figure className="image">
                   <Img
                     fluid={image.childImageSharp.fluid}
                     className="blog-featured"
@@ -128,8 +128,8 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </section>
-      <section class="section">
-        <div class="container">
+      <section className="section">
+        <div className="container">
           <div className="columns is-centered">
             <div className="column is-2 pr-4 mb-4">
               <div className="sticky has-text-centered">
