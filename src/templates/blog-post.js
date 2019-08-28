@@ -185,7 +185,7 @@ export const BlogPostTemplate = ({
               </div>
             </div>
             <div className="column is-8">
-              <PostContent content={content} className={`content`} />
+              <PostContent content={content} className={`content post-body`} />
               <TopicsBar topics={tags} />
               <div className="container mt-5">
                 <div className="media">
