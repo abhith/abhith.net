@@ -5908,6 +5908,13 @@ gatsby-plugin-page-creator@^2.1.12:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-polyfill-io@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-polyfill-io/-/gatsby-plugin-polyfill-io-1.1.0.tgz#61424c773ae123680e50b9a6692a4b939a1e6e13"
+  integrity sha512-v2uiJvuAhtUU/30c257+KBj+hA0pMxpsCdq7PIcXLdGZlVhXJTporD5WIEPP5jeGl3zOp4y3FdQF1C10wlt1MA==
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-prefetch-google-fonts@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-prefetch-google-fonts/-/gatsby-plugin-prefetch-google-fonts-1.4.3.tgz#0557879c7ba0085e4d53107699a8c1073bd52d0e"
