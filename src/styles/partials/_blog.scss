@@ -172,14 +172,14 @@ TABLE OF CONTENTS
             border-radius: 50%;
         }
         .author-name {
-            font-size: .75rem;
+            font-size: .85rem;
             // font-family: 'Cabin', sans-serif;
             // color: $white;
             padding: 0 10px;
             span {
                 display: block;
                 &:nth-child(2) {
-                    color: $secondary;
+                    color:$chosen-dark-grey;
                     small {
                         // color: $white !important;
                     }

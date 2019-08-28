@@ -57,7 +57,7 @@ export const BlogPostTemplate = ({
   const pageUrl = `${siteMetadata.siteUrl}${slug}`;
 
   return (
-    <div className="container">
+    <div className="blog-post-wrapper">
       <SEO
         title={title}
         description={description}
@@ -67,167 +67,175 @@ export const BlogPostTemplate = ({
         dateModified={dateModifiedSeoFormat}
         datePublished={datePublishedSeoFormat}
       />
-      <div className="columns">
-        <div className="column">
-          <p className="text-uppercase ">
-            {tags && tags.length ? (
-              <span className="taglist">
-                {tags.map(tag => (
-                  <React.Fragment key={tag}>
-                    <Link
-                      className="has-text-danger has-text-weight-bold is-uppercase"
-                      to={`/topics/${kebabCase(tag)}/`}
-                    >
-                      {tag}
-                    </Link>{" "}
-                    <span className="sep">, </span>
-                  </React.Fragment>
-                ))}
-              </span>
-            ) : null}
-          </p>
-          <h1 className="title is-1 mb-4 article-headline">{title}</h1>
-          <div className="media">
-            <figure className="media-left">
-              <p className="image is-64x64">
-                <img
-                  className="is-rounded"
-                  src={author.image}
-                  alt={author.name}
-                />
-              </p>
-            </figure>
-            <div className="media-content">
-              <small>
-                {author.name}{" "}
-                <span>
-                  <OutboundLink
-                    target="_blank"
-                    className="button is-success is-outlined is-small is-rounded ml-1"
-                    href={author.url}
-                  >
-                    Follow
-                  </OutboundLink>
-                </span>
-                <br />
-                <span className="text-muted mt-1">
-                  {date} &middot; {readingTime} &middot; Last Updated:{" "}
-                  <time dateTime={lastModifiedTime}>
-                    {lastModifiedTimeString}
-                  </time>
-                </span>
-              </small>
-            </div>
-          </div>
-        </div>
-        <div className="column">
-          <Img fluid={image.childImageSharp.fluid} />
-        </div>
-      </div>
-      <div className="columns is-centered">
-        <div className="column is-2 pr-4 mb-4">
-          <div className="sticky has-text-centered">
-            <div className="text-muted">Share this</div>
-
-            <div className="buttons is-centered">
-              <FacebookShareButton
-                url={pageUrl}
-                quote={title}
-                className="button is-medium is-white"
-              >
-                <FacebookIcon size={44} round />
-              </FacebookShareButton>
-
-              <TwitterShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-                via={siteMetadata.social.twitter.split("@").join("")}
-                hashtags={tags}
-              >
-                <TwitterIcon size={44} round></TwitterIcon>
-              </TwitterShareButton>
-              <LinkedinShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-              >
-                <LinkedinIcon size={44} round></LinkedinIcon>
-              </LinkedinShareButton>
-              <RedditShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-              >
-                <RedditIcon size={44} round></RedditIcon>
-              </RedditShareButton>
-              <PocketShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-              >
-                <PocketIcon size={44} round></PocketIcon>
-              </PocketShareButton>
-              <WhatsappShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-              >
-                <WhatsappIcon size={44} round></WhatsappIcon>
-              </WhatsappShareButton>
-            </div>
-          </div>
-        </div>
-        <div className="column is-8">
-          <PostContent content={content} className={`content`} />
-          <TopicsBar topics={tags} />
-          <div className="container mt-5">
-            <div className="media">
-              <figure className="media-left">
-                <p className="image is-96x96">
-                  <img
-                    className="is-rounded"
-                    src={author.image}
-                    alt={author.name}
-                  />
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container is-fluid">
+            <div class="columns is-vcentered">
+              <div class="column is-5 is-offset-1 post-caption">
+                <p className="text-uppercase ">
+                  {tags && tags.length ? (
+                    <span className="taglist">
+                      {tags.map(tag => (
+                        <React.Fragment key={tag}>
+                          <Link
+                            className="has-text-danger has-text-weight-bold is-uppercase"
+                            to={`/topics/${kebabCase(tag)}/`}
+                          >
+                            {tag}
+                          </Link>{" "}
+                          <span className="sep">, </span>
+                        </React.Fragment>
+                      ))}
+                    </span>
+                  ) : null}
                 </p>
-              </figure>
-              <div className="media-content">
-                <div className="content">
-                  <p>
-                    <strong className="title is-4">
-                      Written by {author.name}
-                    </strong>{" "}
+                <div class="divider"></div>
+                <h1 class="title is-2 is-light is-semibold is-spaced main-title">
+                  {title}
+                </h1>
+
+                <div class="author-block">
+                  <div class="image is-64x64">
+                    <img src="/img/abhith-avatar.jpg" alt="" />
+                  </div>
+                  <div class="author-name">
+                    <span>by {author.name} {" "}<OutboundLink
+                      target="_blank"
+                      className="button is-info is-outlined is-small is-rounded ml-1"
+                      href={author.url}
+                    >
+                      Follow
+                    </OutboundLink></span>
+                    
                     <span>
-                      <OutboundLink
-                        target="_blank"
-                        className="button is-success is-outlined is-small is-rounded ml-1"
-                        href={author.url}
-                      >
-                        Follow
-                      </OutboundLink>
+                      {date} &middot; {readingTime} &middot; Last Updated:{" "}
+                      <time dateTime={lastModifiedTime}>
+                        {lastModifiedTimeString}
+                      </time>
                     </span>
-                    <span>
-                      <OutboundLink
-                        className="button is-info is-outlined is-small is-rounded ml-1"
-                        href="https://ko-fi.com/abhith"
-                        target="_blank"
-                      >
-                        Buy me a coffee <FaCoffee className="text-danger" />
-                      </OutboundLink>
-                    </span>
-                    <br />
-                    {author.minibio}
-                  </p>
+                  </div>
                 </div>
+              </div>
+              <div class="column is-5">
+                <figure class="image">
+                  <Img
+                    fluid={image.childImageSharp.fluid}
+                    className="blog-featured"
+                  />
+                </figure>
               </div>
             </div>
           </div>
-          <div id="comments" className="mt-5">
-            <DiscussionEmbed {...disqusConfig} />
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div className="columns is-centered">
+            <div className="column is-2 pr-4 mb-4">
+              <div className="sticky has-text-centered">
+                <div className="text-muted">Share this</div>
+
+                <div className="buttons is-centered">
+                  <FacebookShareButton
+                    url={pageUrl}
+                    quote={title}
+                    className="button is-medium is-white"
+                  >
+                    <FacebookIcon size={44} round />
+                  </FacebookShareButton>
+
+                  <TwitterShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                    via={siteMetadata.social.twitter.split("@").join("")}
+                    hashtags={tags}
+                  >
+                    <TwitterIcon size={44} round></TwitterIcon>
+                  </TwitterShareButton>
+                  <LinkedinShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                  >
+                    <LinkedinIcon size={44} round></LinkedinIcon>
+                  </LinkedinShareButton>
+                  <RedditShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                  >
+                    <RedditIcon size={44} round></RedditIcon>
+                  </RedditShareButton>
+                  <PocketShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                  >
+                    <PocketIcon size={44} round></PocketIcon>
+                  </PocketShareButton>
+                  <WhatsappShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                  >
+                    <WhatsappIcon size={44} round></WhatsappIcon>
+                  </WhatsappShareButton>
+                </div>
+              </div>
+            </div>
+            <div className="column is-8">
+              <PostContent content={content} className={`content`} />
+              <TopicsBar topics={tags} />
+              <div className="container mt-5">
+                <div className="media">
+                  <figure className="media-left">
+                    <p className="image is-96x96">
+                      <img
+                        className="is-rounded"
+                        src={author.image}
+                        alt={author.name}
+                      />
+                    </p>
+                  </figure>
+                  <div className="media-content">
+                    <div className="content">
+                      <p>
+                        <strong className="title is-4">
+                          Written by {author.name}
+                        </strong>{" "}
+                        <span>
+                          <OutboundLink
+                            target="_blank"
+                            className="button is-success is-outlined is-small is-rounded ml-1"
+                            href={author.url}
+                          >
+                            Follow
+                          </OutboundLink>
+                        </span>
+                        <span>
+                          <OutboundLink
+                            className="button is-info is-outlined is-small is-rounded ml-1"
+                            href="https://ko-fi.com/abhith"
+                            target="_blank"
+                          >
+                            Buy me a coffee <FaCoffee className="text-danger" />
+                          </OutboundLink>
+                        </span>
+                        <br />
+                        {author.minibio}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="comments" className="mt-5">
+                <DiscussionEmbed {...disqusConfig} />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
@@ -312,38 +320,37 @@ class BlogPost extends React.Component {
 
     return (
       <Layout>
+        <BlogPostTemplate
+          content={post.html}
+          slug={post.fields.slug}
+          contentComponent={HTMLContent}
+          description={post.frontmatter.description}
+          tags={post.frontmatter.tags}
+          title={post.frontmatter.title}
+          image={post.frontmatter.image}
+          date={post.frontmatter.dateString}
+          author={data.site.siteMetadata.author}
+          readingTime={post.fields.readingTime.text}
+          commentId={
+            post.frontmatter.commentId === null
+              ? post.fields.slug
+              : post.frontmatter.commentId
+          }
+          lastModifiedTime={
+            post.frontmatter.lastModificationTime === null
+              ? post.frontmatter.date
+              : post.frontmatter.lastModificationTime
+          }
+          lastModifiedTimeString={
+            post.frontmatter.lastModificationTime === null
+              ? post.frontmatter.dateString
+              : post.frontmatter.lastModificationTimeString
+          }
+          dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
+          datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
+          siteMetadata={data.site.siteMetadata}
+        />
         <div className="section">
-          <BlogPostTemplate
-            content={post.html}
-            slug={post.fields.slug}
-            contentComponent={HTMLContent}
-            description={post.frontmatter.description}
-            tags={post.frontmatter.tags}
-            title={post.frontmatter.title}
-            image={post.frontmatter.image}
-            date={post.frontmatter.dateString}
-            author={data.site.siteMetadata.author}
-            readingTime={post.fields.readingTime.text}
-            commentId={
-              post.frontmatter.commentId === null
-                ? post.fields.slug
-                : post.frontmatter.commentId
-            }
-            lastModifiedTime={
-              post.frontmatter.lastModificationTime === null
-                ? post.frontmatter.date
-                : post.frontmatter.lastModificationTime
-            }
-            lastModifiedTimeString={
-              post.frontmatter.lastModificationTime === null
-                ? post.frontmatter.dateString
-                : post.frontmatter.lastModificationTimeString
-            }
-            dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
-            datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
-            siteMetadata={data.site.siteMetadata}
-          />
-
           {relatedPosts.length > 0 && (
             <>
               <h4 className="spanborder">
