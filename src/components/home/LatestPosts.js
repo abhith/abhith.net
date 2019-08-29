@@ -38,7 +38,7 @@ export const query = graphql`
   query {
     lastUpdatedPost: allMarkdownRemark(
       sort: { fields: [frontmatter___lastModificationTime], order: DESC }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" }, lastModificationTime: { ne: null } }}
       limit: 1
     ) {
       edges {
