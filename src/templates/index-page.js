@@ -18,9 +18,9 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
       <div className="hero-body">
         <div className="container is-fluid">
           <div className="columns is-centered">
-            <div className="column is-12 is-10-fullhd">
+            <div className="column is-12">
               <div className="columns is-vcentered">
-                <div className="column">
+                <div className="column has-text-centered">
                   <div className="title"> 📬 Recommended </div>
                   <div className="subtitle">
                     Developer stories, videos and services
