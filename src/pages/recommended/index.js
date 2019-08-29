@@ -59,7 +59,13 @@ export default class RecommendedIndexPage extends React.Component {
               </div>
               <div className="column">
                 {data.recommendedStories.edges.map(({ node }) => {
-                  return <StoriesRollItem post={node} key={node.id} />;
+                  return (
+                    <StoriesRollItem
+                      post={node}
+                      key={node.id}
+                      showDescription={false}
+                    />
+                  );
                 })}
               </div>
             </div>
@@ -185,7 +191,7 @@ export const pageQuery = graphql`
       }
     }
     recommendedStories: allStoriesJson(
-      limit: 3
+      limit: 2
       sort: { fields: [date], order: DESC }
     ) {
       totalCount

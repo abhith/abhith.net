@@ -2,34 +2,43 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicImage from "./TopicImage";
-import TopicsBar from "./TopicsBar";
 
-const StoriesRollItem = ({ post }) => {
+const StoriesRollItem = ({ post, showDescription }) => {
   return (
-    <div className="columns">
-      <div className="column is-one-third">
-        <OutboundLink href={post.url} target="_blank">
+    <div className="blog-post">
+      <OutboundLink target="_blank" href={post.url}>
+        <div className="featured-image">
           <TopicImage slug={post.tags[0]} />
-        </OutboundLink>
-      </div>
-      <div className="column is-two-third">
-        <h2 className="title is-6 has-text-weight-bold">
-          <OutboundLink
-            className="has-text-dark"
-            target="_blank"
-            href={post.url}
-          >
-            {post.title}
-          </OutboundLink>
-        </h2>
-        <TopicsBar topics={post.tags} />
-        <small className="text-muted">{post.date}</small>
-      </div>
+        </div>
+        <div className="content">
+          <div className="post-title">{post.title}</div>
+          <span className="blog-date">{post.date}</span>
+          {showDescription && <p>{post.description}</p>}
+          <div className="post-meta">
+            <div className="author-block">
+              {/* <div className="image is-32x32">
+                <img src="/img/abhith-avatar.jpg" alt="abhith rajan" />
+              </div> */}
+              <div className="author-name">
+                <span>www.site.com</span>
+                <span>
+                  <small>in</small> {post.tags.join()}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </OutboundLink>
     </div>
   );
 };
 StoriesRollItem.propTypes = {
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
+  showDescription: PropTypes.bool
+};
+
+StoriesRollItem.defaultProps = {
+  showDescription: true
 };
 
 export default StoriesRollItem;
