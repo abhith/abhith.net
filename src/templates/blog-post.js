@@ -13,6 +13,7 @@ import VideosRoll from "../components/VideosRoll";
 import ServicesRoll from "../components/ServicesRoll";
 import StoriesRollItem from "../components/StoriesRollItem";
 import TopicsBar from "../components/TopicsBar";
+import TitleBar from "../components/TitleBar";
 import { FaCoffee } from "react-icons/fa";
 
 import {
@@ -99,14 +100,17 @@ export const BlogPostTemplate = ({
                     <img src="/img/abhith-avatar.jpg" alt="" />
                   </div>
                   <div className="author-name">
-                    <span>by {author.name} {" "}<OutboundLink
-                      target="_blank"
-                      className="button is-info is-outlined is-small is-rounded ml-1"
-                      href={author.url}
-                    >
-                      Follow
-                    </OutboundLink></span>
-                    
+                    <span>
+                      by {author.name}{" "}
+                      <OutboundLink
+                        target="_blank"
+                        className="button is-info is-outlined is-small is-rounded ml-1"
+                        href={author.url}
+                      >
+                        Follow
+                      </OutboundLink>
+                    </span>
+
                     <span>
                       {date} &middot; {readingTime} &middot; Last Updated:{" "}
                       <time dateTime={lastModifiedTime}>
@@ -350,74 +354,66 @@ class BlogPost extends React.Component {
           datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
           siteMetadata={data.site.siteMetadata}
         />
-        <div className="section">
-          {relatedPosts.length > 0 && (
-            <>
-              <h4 className="spanborder">
-                <span className="has-text-weight-bold">Related Posts</span>
-              </h4>
-              <div className="columns">
-                <div className="column">
-                  {relatedPostsFirstHalf.map(({ node }) => {
-                    return <BlogRollItem post={node} key={node.id} />;
-                  })}
+        <section>
+          <div className="container is-fluid">
+            {relatedPosts.length > 0 && (
+              <>
+                <TitleBar title={`Related Posts`}></TitleBar>
+                <div className="columns">
+                  <div className="column">
+                    {relatedPostsFirstHalf.map(({ node }) => {
+                      return <BlogRollItem post={node} key={node.id} />;
+                    })}
+                  </div>
+                  <div className="column">
+                    {relatedPostsSecondHalf.map(({ node }) => {
+                      return <BlogRollItem post={node} key={node.id} />;
+                    })}
+                  </div>
                 </div>
-                <div className="column">
-                  {relatedPostsSecondHalf.map(({ node }) => {
-                    return <BlogRollItem post={node} key={node.id} />;
-                  })}
+              </>
+            )}
+            {relatedVideos.length > 0 && (
+              <>
+                <TitleBar title={`Related Videos`}></TitleBar>
+                <div className="columns">
+                  <div className="column is-full">
+                    <VideosRoll videos={relatedVideos} />
+                  </div>
                 </div>
-              </div>
-            </>
-          )}
-          {relatedVideos.length > 0 && (
-            <>
-              <h4 className=" spanborder">
-                <span className="has-text-weight-bold">Related Videos</span>
-              </h4>
-              <div className="columns">
-                <div className="column is-full">
-                  <VideosRoll videos={relatedVideos} />
-                </div>
-              </div>
-            </>
-          )}
+              </>
+            )}
 
-          {relatedStories.length > 0 && (
-            <>
-              <h4 className="spanborder">
-                <span className="has-text-weight-bold">Related Stories</span>
-              </h4>
-              <div className="columns">
-                <div className="column is-half">
-                  {relatedStoriesFirstHalf.map(({ node }) => {
-                    return <StoriesRollItem post={node} key={node.id} />;
-                  })}
+            {relatedStories.length > 0 && (
+              <>
+                <TitleBar title={`Related Stories`}></TitleBar>
+                <div className="columns">
+                  <div className="column is-half">
+                    {relatedStoriesFirstHalf.map(({ node }) => {
+                      return <StoriesRollItem post={node} key={node.id} />;
+                    })}
+                  </div>
+                  <div className="column is-half">
+                    {relatedStoriesSecondHalf.map(({ node }) => {
+                      return <StoriesRollItem post={node} key={node.id} />;
+                    })}
+                  </div>
                 </div>
-                <div className="column is-half">
-                  {relatedStoriesSecondHalf.map(({ node }) => {
-                    return <StoriesRollItem post={node} key={node.id} />;
-                  })}
-                </div>
-              </div>
-            </>
-          )}
+              </>
+            )}
 
-          {relatedServices.length > 0 && (
-            <>
-              <div className="columns">
-                <div className="column is-full">
-                  <h4 className=" spanborder">
-                    <span className="has-text-weight-bold">
-                      Related Services
-                    </span>
-                  </h4>
-                  <ServicesRoll services={relatedServices} />
+            {relatedServices.length > 0 && (
+              <>
+                <div className="columns">
+                  <div className="column is-full">
+                    <TitleBar title={`Related Services`}></TitleBar>
+                    <ServicesRoll services={relatedServices} />
+                  </div>
                 </div>
-              </div>
-            </>
-          )}
-        </div>
+              </>
+            )}
+          </div>
+        </section>
         {/* <div className={`alertbar ${this.state.alertbarClass}`}>
           <div className="container">
             <div className="columns prevnextlinks small">
