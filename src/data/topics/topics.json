@@ -90,6 +90,12 @@
     "image": ""
   },
   {
+    "title": "Download Site",
+    "slug": "download-site",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": ".NET Core",
     "slug": "dotnet-core",
     "description": ".NET is an Open Source Developer Platform for Building Apps.",
