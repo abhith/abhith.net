@@ -32,8 +32,16 @@ const TopicImage = ({ slug }) => (
         edge => edge.node.slug === slug
       );
 
-      const topicImageName = tagNode ? tagNode.node.image : "no-tag-image.png";
+      const noImageName = "no-topic-image.png";
+
+      let topicImageName = tagNode ? tagNode.node.image : noImageName;
+      // empty string check
+      if (topicImageName === "" || topicImageName === null) {
+        topicImageName = noImageName;
+      }
       const imageAlt = tagNode ? tagNode.node.title : "No Image";
+
+      // console.log(`${slug} - ${topicImageName}`);
 
       const image = data.allImageSharp.edges.find(
         edge => edge.node.fluid.originalName === topicImageName

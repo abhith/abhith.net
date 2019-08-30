@@ -3,91 +3,91 @@
     "title": "Analytics",
     "slug": "analytics",
     "description": "Google Analytics (GA) is the one which we used in almost all the public facing websites.",
-    "image": "no-tag-image.png"
+    "image": "analytics.png"
   },
   {
     "title": "Android",
     "slug": "android",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Angular",
     "slug": "angular",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "ASP.NET",
     "slug": "aspnet",
     "description": "Open-source web framework for .NET",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "ASP.NET Core",
     "slug": "aspnet-core",
     "description": "ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-based, Internet-connected applications.",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "ASP.NET Web Forms",
     "slug": "aspnet-web-forms",
     "description": "ASP.NET Web Forms is a web application framework and one of several programming models supported by the Microsoft ASP.NET technology",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Asynchronous Programming",
     "slug": "asynchronous-programming",
     "description": "I tend to use Async - Await every where possible. Not just in C#, now a days in the JavaScript instead of the promises.",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Awesome Lists",
     "slug": "awesome-list",
     "description": "An awesome list is a list of awesome things curated by the community.",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Microsoft Azure",
     "slug": "azure",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Best Series",
     "slug": "best-series",
     "description": "Best in classess listed under this tag",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Cache",
     "slug": "cache",
     "description": "One area to check for performance.",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "CMS",
     "slug": "cms",
     "description": "Best in classess listed under this tag",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "C#",
     "slug": "c-sharp",
     "description": "One of my favorite language.",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Content Writing",
     "slug": "content-writing",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Database",
     "slug": "database",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": ".NET Core",
@@ -99,7 +99,7 @@
     "title": "Flutter",
     "slug": "flutter",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },  
   {
     "title": "Gatsby",
@@ -111,60 +111,60 @@
     "title": "IDE",
     "slug": "ide",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "JavaScript",
     "slug": "javascript",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Jobs",
     "slug": "jobs",
     "description": "jobs related",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Microsoft Orleans",
     "slug": "microsoft-orleans",
     "description": "Orleans is a framework that provides a straightforward approach to building distributed high-scale computing applications, without the need to learn and apply complex concurrency or other scaling patterns.",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "NoSQL",
     "slug": "nosql",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "SQL Server",
     "slug": "sql-server",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Visual Studio",
     "slug": "visual-studio",
     "description": "I always loved to work with the latest and the greatest versions of Visual Studio. I started on VS 2008, now most of the time working with VS 2019.",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Visual Studio Code",
     "slug": "vscode",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Web.config",
     "slug": "web-config",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   },
   {
     "title": "Website Benchmark",
     "slug": "website-benchmark",
     "description": "",
-    "image": "no-tag-image.png"
+    "image": ""
   }
 ]
