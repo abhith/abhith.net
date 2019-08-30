@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicImage from "./TopicImage";
+import { domainFromURL } from "../utils/common";
 
 const StoriesRollItem = ({ post, showDescription }) => {
   return (
@@ -15,14 +16,9 @@ const StoriesRollItem = ({ post, showDescription }) => {
           <span className="blog-date">{post.date}</span>
           {showDescription && <p>{post.description}</p>}
           <div className="post-meta">
-            <div className="author-block">
-              <div className="author-name">
-                <span>www.site.com</span>
-                <span>
-                  <small>in</small> {post.tags.join()}
-                </span>
-              </div>
-            </div>
+            <span>
+              <small>in</small> {post.tags.join()} | {domainFromURL(post.url)}
+            </span>
           </div>
         </div>
       </OutboundLink>

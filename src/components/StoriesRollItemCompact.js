@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicImage from "./TopicImage";
+import {domainFromURL} from "../utils/common"
 
 const StoriesRollItemCompact = ({ post, showDescription }) => {
   return (
@@ -15,7 +16,7 @@ const StoriesRollItemCompact = ({ post, showDescription }) => {
           </div>
           <div className="column is-four-fifths">
             <div className="post-title">{post.title}</div>
-            <small>in</small> {post.tags.join()} | <span>www.site.com</span>
+            <small>in</small> {post.tags.join()} | <span>{domainFromURL(post.url)}</span>
           </div>
         </div>
         <div className="columns">
