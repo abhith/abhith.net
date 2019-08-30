@@ -542,20 +542,6 @@ TABLE OF CONTENTS
       position: relative;
     }
 
-    /*input:checked + label:after {
-        content:'';
-        width: 0; 
-        height: 0; 
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 5px solid white;
-        position:absolute;
-        right:10px;
-        top:calc(50% - 2.5px);
-        pointer-events:none;
-        z-index:3;
-    }*/
-
     input:checked + label:before {
       position: absolute;
       right: 0;
