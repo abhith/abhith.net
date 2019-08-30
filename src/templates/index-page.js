@@ -136,7 +136,7 @@ export const pageQuery = graphql`
       }
     }
     featured: allServicesJson(
-      limit: 5
+      limit: 10
       sort: { fields: [isAffiliate, date], order: [ASC, DESC] }
     ) {
       edges {
