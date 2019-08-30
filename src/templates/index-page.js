@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
                 Recommended Stories
               </span>
             </h4>
-            <StoriesRoll posts={stories} />
+            <StoriesRoll posts={stories} mode={`compact`} />
             <div className="cta-wrapper has-text-centered">
               <Link
                 to="/recommended/stories"

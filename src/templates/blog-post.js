@@ -11,7 +11,7 @@ import { DiscussionEmbed } from "disqus-react";
 import BlogRollItem from "../components/BlogRollItem";
 import VideosRoll from "../components/VideosRoll";
 import ServicesRoll from "../components/ServicesRoll";
-import StoriesRollItem from "../components/StoriesRollItem";
+import StoriesRoll from "../components/StoriesRoll";
 import TopicsBar from "../components/TopicsBar";
 import TitleBar from "../components/TitleBar";
 import { FaCoffee } from "react-icons/fa";
@@ -389,14 +389,10 @@ class BlogPost extends React.Component {
                 <TitleBar title={`Related Stories`}></TitleBar>
                 <div className="columns">
                   <div className="column is-half">
-                    {relatedStoriesFirstHalf.map(({ node }) => {
-                      return <StoriesRollItem post={node} key={node.id} />;
-                    })}
+                    <StoriesRoll posts={relatedStoriesFirstHalf} />
                   </div>
                   <div className="column is-half">
-                    {relatedStoriesSecondHalf.map(({ node }) => {
-                      return <StoriesRollItem post={node} key={node.id} />;
-                    })}
+                    <StoriesRoll posts={relatedStoriesSecondHalf} />
                   </div>
                 </div>
               </>

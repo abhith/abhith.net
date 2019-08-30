@@ -2,10 +2,10 @@ import React from "react";
 import Layout from "../../components/Layout";
 import SEO from "../../components/seo/SEO";
 import VideosRoll from "../../components/VideosRoll";
-import StoriesRollItem from "../../components/StoriesRollItem";
 import { graphql, Link } from "gatsby";
 
 import Img from "gatsby-image";
+import StoriesRoll from "../../components/StoriesRoll";
 
 export default class RecommendedIndexPage extends React.Component {
   render() {
@@ -14,6 +14,7 @@ export default class RecommendedIndexPage extends React.Component {
     const serviceImgData = data.serviceImg.childImageSharp.fluid;
     const storiesImgData = data.storiesImg.childImageSharp.fluid;
     const videos = data.recommendedVideos.edges;
+    const stories = data.recommendedStories.edges;
     return (
       <Layout>
         <div className="container">
@@ -58,15 +59,7 @@ export default class RecommendedIndexPage extends React.Component {
                 </div>
               </div>
               <div className="column">
-                {data.recommendedStories.edges.map(({ node }) => {
-                  return (
-                    <StoriesRollItem
-                      post={node}
-                      key={node.id}
-                      showDescription={false}
-                    />
-                  );
-                })}
+                <StoriesRoll posts={stories} mode={`compact`} showDescription={false}></StoriesRoll>
               </div>
             </div>
 
@@ -191,7 +184,7 @@ export const pageQuery = graphql`
       }
     }
     recommendedStories: allStoriesJson(
-      limit: 2
+      limit: 3
       sort: { fields: [date], order: DESC }
     ) {
       totalCount
