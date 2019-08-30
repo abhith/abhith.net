@@ -20,7 +20,7 @@ export default function Hero() {
                   params={{
                     particles: {
                       number: {
-                        value: 4,
+                        value: 7,
                         density: {
                           enable: true,
                           value_area: 800
@@ -53,6 +53,22 @@ export default function Hero() {
                           },
                           {
                             src: "/img/site/particles/github.png",
+                            height: 20,
+                            width: 20
+                          },
+
+                          {
+                            src: "/img/site/particles/javascript.png",
+                            height: 20,
+                            width: 20
+                          },
+                          {
+                            src: "/img/site/particles/microsoft-azure-3.png",
+                            height: 20,
+                            width: 20
+                          },
+                          {
+                            src: "/img/site/particles/vue-9.png",
                             height: 20,
                             width: 20
                           }
