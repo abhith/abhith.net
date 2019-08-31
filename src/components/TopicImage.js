@@ -32,7 +32,7 @@ const TopicImage = ({ slug }) => (
         edge => edge.node.slug === slug
       );
 
-      const noImageName = "no-topic-image.png";
+      const noImageName = "no_image_available.svg";
 
       let topicImageName = tagNode ? tagNode.node.image : noImageName;
       // empty string check
