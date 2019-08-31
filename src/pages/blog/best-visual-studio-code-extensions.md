@@ -5,7 +5,7 @@ description: My favorite extensions for Visual Studio Code
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
 date: 2019-02-12T17:50:10.699Z
-lastModificationTime: 2019-08-22T14:02:00.000Z
+lastModificationTime: 2019-08-31T20:02:00.000Z
 image: /img/1200px-visual_studio_code_118.png
 tags:
   - visual-studio-code
@@ -13,7 +13,7 @@ tags:
   - best-series
 ---
 
-If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vscode**. One major strength of **vscode** is its extensions. And these are the extensions which I find very useful in **vscode**,
+If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vscode**. One major strength of **vscode** is its extensions. And these are my favorites,
 
 > I have created an **Extension Pack** for **Visual Studio Code** which includes all the listed extensions. You can install it from [here](https://marketplace.visualstudio.com/items?itemName=abhith.vscode-favorites).
 
@@ -32,6 +32,7 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
   - [ES7 React/Redux/GraphQL/React-Native snippets](#es7-reactreduxgraphqlreact-native-snippets)
   - [Icon Fonts](#icon-fonts)
 - [Other](#other)
+  - [Auto Rename Tag](#auto-rename-tag)
   - [Highlight Matching Tag](#highlight-matching-tag)
   - [indent-rainbow](#indent-rainbow)
   - [Live Server](#live-server)
@@ -42,7 +43,9 @@ If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vs
   - [Polacode](#polacode)
   - [Peacock](#peacock)
   - [Turbo Console Log](#turbo-console-log)
+  - [Version Lens](#version-lens)
 - [Themes](#themes)
+  - [Dracula Official](#dracula-official)
   - [Material Icon Theme](#material-icon-theme)
   - [Material Theme](#material-theme)
 - [Uncategorized](#uncategorized)
@@ -145,6 +148,14 @@ Vue tooling for VS Code
 
 ## Other
 
+### Auto Rename Tag
+
+[![Auto Rename Tag](https://vsmarketplacebadge.apphb.com/version-short/formulahendry.auto-rename-tag.svg)](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+[![Auto Rename Tag](https://vsmarketplacebadge.apphb.com/installs-short/formulahendry.auto-rename-tag.svg)](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+[![Auto Rename Tag](https://vsmarketplacebadge.apphb.com/rating-short/formulahendry.auto-rename-tag.svg)](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+[Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) as the name suggests, auto rename paired HTML/XML tag.
+
 ### Highlight Matching Tag
 
 [![Highlight Matching Tag](https://vsmarketplacebadge.apphb.com/version-short/vincaslt.highlight-matching-tag.svg)](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
@@ -225,7 +236,23 @@ Vue tooling for VS Code
 
 [Turbo Console Log](https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log) enables automating the process of writing meaningful log messages.
 
+### Version Lens
+
+[![Version Lens](https://vsmarketplacebadge.apphb.com/version-short/pflannery.vscode-versionlens.svg)](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
+[![Version Lens](https://vsmarketplacebadge.apphb.com/installs-short/pflannery.vscode-versionlens.svg)](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
+[![Version Lens](https://vsmarketplacebadge.apphb.com/rating-short/pflannery.vscode-versionlens.svg)](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
+
+[Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens) shows the latest version for each package using code lens.
+
 ## Themes
+
+### Dracula Official
+
+[![Dracula Official](https://vsmarketplacebadge.apphb.com/version-short/dracula-theme.theme-dracula.svg)](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+[![Dracula Official](https://vsmarketplacebadge.apphb.com/installs-short/dracula-theme.theme-dracula.svg)](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+[![Dracula Official](https://vsmarketplacebadge.apphb.com/rating-short/dracula-theme.theme-dracula.svg)](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+
+[Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula) is the official Dracula Theme. A dark theme for many editors, shells, and more.
 
 ### Material Icon Theme
 
