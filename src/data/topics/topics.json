@@ -106,7 +106,7 @@
     "slug": "flutter",
     "description": "",
     "image": "flutter.svg"
-  },  
+  },
   {
     "title": "Gatsby",
     "slug": "gatsby",
@@ -154,6 +154,12 @@
     "slug": "sql-server",
     "description": "",
     "image": "microsoft-sql-server.svg"
+  },
+  {
+    "title": "Security",
+    "slug": "security",
+    "description": "",
+    "image": ""
   },
   {
     "title": "Visual Studio",

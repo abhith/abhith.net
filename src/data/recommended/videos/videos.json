@@ -1,5 +1,14 @@
 [
   {
+    "title": "OAuth 2.0 and OpenID Connect (in plain English)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=996OiexHze0",
+    "date": "2019-08-31T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
     "title": "IdentityServer4: New & Improved for ASP.NET Core - Brock Allen & Dominick Baier",
     "description": "",
     "image": "",
