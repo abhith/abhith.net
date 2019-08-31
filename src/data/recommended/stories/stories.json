@@ -1,9 +1,16 @@
 [
   {
+    "title": "Essential Gatsby plugins. Part 1, SEO and Images | Dev Diary",
+    "url": "https://markoskon.com/gatsby-plugins-seo-and-images",
+    "description": "In this post, we'll see what plugins you can use in order to improve the SEO of your Gatsby app and handle images effectively.",
+    "date": "2019-08-31T16:22:28.263Z",
+    "tags": ["gatsby"]
+  },
+  {
     "title": "Best bots to improve your software development process - Livable Software",
     "url": "https://livablesoftware.com/best-bots-software-development/",
     "description": "Software bots can assist developers in all phases of the development process. Here, we present a selection of the most useful bots you can start using right away to develop and maintain your (open source) project",
-    "date": "2019-08-31T16:22:28.263Z",
+    "date": "2019-08-31T16:02:28.263Z",
     "tags": ["github"]
   },
   {
