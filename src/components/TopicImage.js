@@ -43,6 +43,17 @@ const TopicImage = ({ slug }) => (
 
       // console.log(`${slug} - ${topicImageName}`);
 
+      var ext = topicImageName.substr(topicImageName.lastIndexOf(".") + 1);
+
+      if (ext === "svg") {
+        const pathToImage = `/img/topics/${topicImageName}`;
+        return (
+          <figure className="image">
+            <img src={pathToImage} alt={imageAlt}></img>
+          </figure>
+        );
+      }
+
       const image = data.allImageSharp.edges.find(
         edge => edge.node.fluid.originalName === topicImageName
       );
