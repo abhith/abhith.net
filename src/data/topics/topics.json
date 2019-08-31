@@ -9,13 +9,13 @@
     "title": "Android",
     "slug": "android",
     "description": "",
-    "image": ""
+    "image": "android.svg"
   },
   {
     "title": "Angular",
     "slug": "angular",
     "description": "",
-    "image": ""
+    "image": "angular-icon-1.svg"
   },
   {
     "title": "ASP.NET",
@@ -45,13 +45,13 @@
     "title": "Awesome Lists",
     "slug": "awesome-list",
     "description": "An awesome list is a list of awesome things curated by the community.",
-    "image": ""
+    "image": "awesome.svg"
   },
   {
     "title": "Microsoft Azure",
     "slug": "azure",
     "description": "",
-    "image": ""
+    "image": "microsoft-azure-3.svg"
   },
   {
     "title": "Best Series",
@@ -99,19 +99,25 @@
     "title": ".NET Core",
     "slug": "dotnet-core",
     "description": ".NET is an Open Source Developer Platform for Building Apps.",
-    "image": "dotnet-core.png"
+    "image": "dot-net-core-7.svg"
   },
   {
     "title": "Flutter",
     "slug": "flutter",
     "description": "",
-    "image": ""
+    "image": "flutter.svg"
   },  
   {
     "title": "Gatsby",
     "slug": "gatsby",
     "description": "One of my favorite language.",
-    "image": "gatsby.png"
+    "image": "gatsby.svg"
+  },
+  {
+    "title": "GitHub",
+    "slug": "github",
+    "description": "",
+    "image": "github-1.svg"
   },
   {
     "title": "IDE",
@@ -123,7 +129,7 @@
     "title": "JavaScript",
     "slug": "javascript",
     "description": "",
-    "image": ""
+    "image": "javascript.svg"
   },
   {
     "title": "Jobs",
@@ -147,19 +153,19 @@
     "title": "SQL Server",
     "slug": "sql-server",
     "description": "",
-    "image": ""
+    "image": "microsoft-sql-server.svg"
   },
   {
     "title": "Visual Studio",
     "slug": "visual-studio",
     "description": "I always loved to work with the latest and the greatest versions of Visual Studio. I started on VS 2008, now most of the time working with VS 2019.",
-    "image": ""
+    "image": "visual-studio-2013.svg"
   },
   {
     "title": "Visual Studio Code",
     "slug": "vscode",
     "description": "",
-    "image": ""
+    "image": "visual-studio-code-1.svg"
   },
   {
     "title": "Web.config",
