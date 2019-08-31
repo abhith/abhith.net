@@ -1,11 +1,18 @@
-var proxy = require("http-proxy-middleware");
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = "https://www.abhith.net",
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === "production";
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
     title: "Abhith Rajan",
     description:
       "An aspiring software engineer with more than 7 years of experience.",
-    siteUrl: `https://www.abhith.net`,
+    siteUrl,
     author: {
       name: "Abhith Rajan",
       minibio: `
@@ -25,8 +32,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sass",
       options: {
-        useResolveUrlLoader: true,
-      },
+        useResolveUrlLoader: true
+      }
     },
     `gatsby-plugin-sitemap`,
     {
@@ -153,9 +160,30 @@ module.exports = {
     {
       resolve: `gatsby-plugin-polyfill-io`,
       options: {
-         features: [`Array.prototype.map`, `fetch`]
-      },
-   },
+        features: [`Array.prototype.map`, `fetch`]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }]
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
     `gatsby-plugin-offline`,
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]

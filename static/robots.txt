@@ -1,2 +1,0 @@
-User-agent: *
-sitemap: https://www.abhith.net/sitemap.xml
