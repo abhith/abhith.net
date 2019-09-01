@@ -22,7 +22,7 @@ function LatestPosts() {
                     return <BlogRollItem post={node} key={node.fields.slug} />;
                   })}
                 </div>
-                <BlogCard post={lastUpdatedPost}></BlogCard>
+                <BlogCard post={lastUpdatedPost} tag={`Recently Updated`}></BlogCard>
               </div>
             </div>
           </section>
