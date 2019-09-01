@@ -1,6 +1,7 @@
 # WWW.ABHITH.NET
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ceb3b988-acb1-4f96-9024-62ea791176bc/deploy-status)](https://app.netlify.com/sites/abhith/deploys)
+[![DeepScan grade](https://deepscan.io/api/teams/5261/projects/7035/branches/64959/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5261&pid=7035&bid=64959)
 
 This repo serves the source code for [www.abhith.net](https://www.abhith.net/). Designed using [Bulma](https://bulma.io) and is deployed via [Netlify](https://www.netlify.com/).
 
