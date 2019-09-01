@@ -10,8 +10,8 @@ const BlogCard = ({ post, tag }) => {
         <div className="featured-image card-image">
           <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
           {tag && (
-            <div class="card-content is-overlay is-clipped">
-              <span class="tag is-info">{tag}</span>
+            <div className="card-content is-overlay is-clipped">
+              <span className="tag is-info">{tag}</span>
             </div>
           )}
         </div>
