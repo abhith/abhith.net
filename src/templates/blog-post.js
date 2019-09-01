@@ -68,7 +68,7 @@ export const BlogPostTemplate = ({
         dateModified={dateModifiedSeoFormat}
         datePublished={datePublishedSeoFormat}
       />
-      <section className="hero is-primary">
+      <section className="hero hero-is-secondary">
         <div className="hero-body">
           <div className="container is-fluid">
             <div className="columns is-vcentered">
