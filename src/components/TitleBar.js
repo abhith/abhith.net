@@ -1,6 +1,5 @@
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
 import React from "react";
+import PropTypes from "prop-types";
 
 const TitleBar = ({ title }) => (
   <h4 className="spanborder title is-4">
@@ -8,6 +7,8 @@ const TitleBar = ({ title }) => (
   </h4>
 );
 
-TitleBar.propTypes = {};
+TitleBar.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 export default TitleBar;

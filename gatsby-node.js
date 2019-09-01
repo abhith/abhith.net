@@ -227,12 +227,12 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Then we can loop through the array of object literals to create
     // each redirect. A for loop would do the trick
-    for (var { f: f } of redirectBatch1) {
+    for (var { f: slug } of redirectBatch1) {
       createRedirect({
-        fromPath: `/post/${f}`,
+        fromPath: `/post/${slug}`,
         isPermanent: true,
         redirectInBrowser: true,
-        toPath: `/blog/${f}`
+        toPath: `/blog/${slug}`
       });
 
       let redirectBatch2 = [
@@ -276,7 +276,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       ];
 
-      for (var { f: f, t: t } of redirectBatch2) {
+      for (var { f, t } of redirectBatch2) {
         createRedirect({
           fromPath: `/post/${f}`,
           isPermanent: true,
