@@ -10,7 +10,7 @@ image: /img/1200px-visual_studio_code_118.png
 tags:
   - visual-studio-code
   - ide
-  - best-series
+  - awesome-list
 ---
 
 If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vscode**. One major strength of **vscode** is its extensions. And these are my favorites,

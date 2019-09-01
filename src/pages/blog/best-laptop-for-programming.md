@@ -2,15 +2,15 @@
 templateKey: blog-post
 title: Best Laptop for Programming Under $2500 Dollars 2019
 description: >-
- Best laptop under 2500$ in 2019 with min spec of i7-9750H, RTX-2060 and Thunderbolt 3 support.
+  Best laptop under 2500$ in 2019 with min spec of i7-9750H, RTX-2060 and Thunderbolt 3 support.
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2019-06-08T22:50:00.000Z
 lastModificationTime: 2019-07-02T13:02:00.000Z
 image: /img/best-laptop-for-programming.png
-commentId: 'best-laptop-for-programming'
+commentId: "best-laptop-for-programming"
 tags:
-  - best-series
+  - awesome-list
   - laptop
   - shopping-guide
 ---

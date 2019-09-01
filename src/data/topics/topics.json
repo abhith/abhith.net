@@ -54,12 +54,6 @@
     "image": "microsoft-azure-3.svg"
   },
   {
-    "title": "Best Series",
-    "slug": "best-series",
-    "description": "Best in classess listed under this tag",
-    "image": ""
-  },
-  {
     "title": "Cache",
     "slug": "cache",
     "description": "One area to check for performance.",
