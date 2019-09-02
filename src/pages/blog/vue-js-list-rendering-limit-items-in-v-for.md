@@ -1,47 +1,51 @@
 ---
 templateKey: blog-post
-title: 'Vue.js List Rendering : Limit items in v-for'
+title: "Vue.js List Rendering : Limit items in v-for"
 description: One way to limit the iteration of items in Vue v-for directive.
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2018-02-27T18:25:00.000Z
 lastModificationTime: 2018-09-06T18:25:00.000Z
 image: /img/vuejs.png
 tags:
   - vue
   - javascript
-commentId: '9aec474d-215a-44a1-8d06-9ec21bebd5fe'
+commentId: "9aec474d-215a-44a1-8d06-9ec21bebd5fe"
 ---
+
 Today I had to render 200+ items in a bootstrap table which didn't appear to be user-friendly. So I planned to show first 20 of them on load, and if the user wanted, show full items.
 
 To do that, my Vue app code looks like this,
 
 ```js
 var app = new Vue({
-    el: '#app',
-    data: {
-        countries: [],
-        isLoadingCountries: false,
-        showLessCountries: true
-    },
-    methods: {
-        getCountries: function () {
-            app.isLoadingCountries = true;
-            app.$http.get('some-url').then(function (response) {
-                if (response.data) {
-                    if (response.data.isSuccess) {
-                        app.countries = response.data.countries;
-                    }
-                }
-            }).then(function () {
-                app.isLoadingCountries = false;
-            });
-        }
-    },
-    created: function () {
-        this.getCountries();
+  el: "#app",
+  data: {
+    countries: [],
+    isLoadingCountries: false,
+    showLessCountries: true
+  },
+  methods: {
+    getCountries: function() {
+      app.isLoadingCountries = true;
+      app.$http
+        .get("some-url")
+        .then(function(response) {
+          if (response.data) {
+            if (response.data.isSuccess) {
+              app.countries = response.data.countries;
+            }
+          }
+        })
+        .then(function() {
+          app.isLoadingCountries = false;
+        });
     }
-})
+  },
+  created: function() {
+    this.getCountries();
+  }
+});
 ```
 
 Basically, it contains an array, one flag to indicate the data fetch operation is ongoing or not, one flag to indicate whether the full list is showing or fewer items, and a function to fill the data in the array. I hope the naming convention in the code is pretty self-explanatory.
@@ -50,25 +54,27 @@ And my markup,
 
 ```html
 <table class="table" v-if="!isLoadingCountries">
-    <thead>
-        <tr>
-            <th scope="col">Country</th>
-        </tr>
-    </thead>
-    <tbody v-if="showLessCountries">
-        <tr v-for="country in countries.slice(0, 20)">
-            <td><h5>{{country.name}}</h5></td>
-        </tr>
-    </tbody>
-    <tbody v-else>
-        <tr v-for="country in countries">
-            <td><h5>{{country.name}}</h5></td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Country</th>
+    </tr>
+  </thead>
+  <tbody v-if="showLessCountries">
+    <tr v-for="country in countries.slice(0, 20)">
+      <td><h5>{{country.name}}</h5></td>
+    </tr>
+  </tbody>
+  <tbody v-else>
+    <tr v-for="country in countries">
+      <td><h5>{{country.name}}</h5></td>
+    </tr>
+  </tbody>
 </table>
-<button v-if="!isLoadingCountries"
-        @@click="showLessCountries = !showLessCountries">
-    {{showLessCountries===true? "Show All Countries" : "Show Less"}}
+<button
+  v-if="!isLoadingCountries"
+  @@click="showLessCountries = !showLessCountries"
+>
+  {{showLessCountries===true? "Show All Countries" : "Show Less"}}
 </button>
 ```
 
@@ -79,65 +85,68 @@ Here, Using **Array.slice()**, we get a new array with the limited number of ite
 As **_Andrew Butler_** pointed out in the comments, we can avoid the markup duplication by using a computed property. And the code becomes,
 
 ```js
-    var app = new Vue({
-      el: "#app",
-      data: {
-        countries: [],
-        isLoadingCountries: false,
-        showLessCountries: true
-      },
-      computed: {
-        countriesToDisplay: function() {
-          if (this.showLessCountries) {
-            return this.countries.slice(0, 10);
-          } else {
-            return this.countries;
-          }
-        }
-      },
-      methods: {
-        getCountries: function() {
-          app.isLoadingCountries = true;
-          app.$http
-            .get("some-url")
-            .then(function(response) {
-              if (response.data) {
-                if (response.data.isSuccess) {
-                  app.countries = response.data.countries;
-                }
-              }
-            })
-            .then(function() {
-              app.isLoadingCountries = false;
-            });
-        }
-      },
-      created: function() {
-        this.getCountries();
+var app = new Vue({
+  el: "#app",
+  data: {
+    countries: [],
+    isLoadingCountries: false,
+    showLessCountries: true
+  },
+  computed: {
+    countriesToDisplay: function() {
+      if (this.showLessCountries) {
+        return this.countries.slice(0, 10);
+      } else {
+        return this.countries;
       }
-    });
+    }
+  },
+  methods: {
+    getCountries: function() {
+      app.isLoadingCountries = true;
+      app.$http
+        .get("some-url")
+        .then(function(response) {
+          if (response.data) {
+            if (response.data.isSuccess) {
+              app.countries = response.data.countries;
+            }
+          }
+        })
+        .then(function() {
+          app.isLoadingCountries = false;
+        });
+    }
+  },
+  created: function() {
+    this.getCountries();
+  }
+});
 ```
 
 And the markup,
 
 ```html
-    <table class="table" v-if="!isLoadingCountries">
-        <thead>
-            <tr>
-                <th scope="col">Country</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="country in countriesToDisplay">
-                <td>
-                    <h5>{{country.name}}</h5>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <button v-if="!isLoadingCountries" @@click="showLessCountries = !showLessCountries">
-        {{showLessCountries===true? "Show All Countries" : "Show Less"}}
-    </button>
+<table class="table" v-if="!isLoadingCountries">
+  <thead>
+    <tr>
+      <th scope="col">Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="country in countriesToDisplay">
+      <td>
+        <h5>{{country.name}}</h5>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button
+  v-if="!isLoadingCountries"
+  @@click="showLessCountries = !showLessCountries"
+>
+  {{showLessCountries===true? "Show All Countries" : "Show Less"}}
+</button>
 ```
 
 If you know a better way to do the same, let me know.
