@@ -56,6 +56,10 @@ export const BlogPostTemplate = ({
   };
 
   const pageUrl = `${siteMetadata.siteUrl}${slug}`;
+  const githubURL = `https://github.com/Abhith/abhith.net/blob/master/src/pages${slug.substring(
+    0,
+    slug.length - 1
+  )}.md`;
 
   return (
     <div className="blog-post-wrapper">
@@ -191,6 +195,17 @@ export const BlogPostTemplate = ({
             <div className="column is-8">
               <PostContent content={content} className={`content post-body`} />
               <TopicsBar topics={tags} />
+              <div id="typo" class="bd-typo">
+                <p className="has-text-grey">
+                  This page is{" "}
+                  <strong className="has-text-grey">open source</strong>. Noticed a
+                  typo? Or something unclear?
+                  <br />
+                  <OutboundLink href={githubURL} target="_blank" className="has-text-grey">
+                    Improve this page on GitHub
+                  </OutboundLink>
+                </p>
+              </div>
               <div className="container mt-5">
                 <div className="media">
                   <figure className="media-left">
