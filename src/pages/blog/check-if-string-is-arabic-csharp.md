@@ -1,12 +1,12 @@
 ---
 templateKey: blog-post
-title: 'Check if string is Arabic - C#'
+title: "Check if string is Arabic - C#"
 description: >-
   In one simple line of code, we can check whether the given string is Arabic or
   not, in C#.
 author: Abhith Rajan
-authorURL: 'http://twitter.com/abhithrajan'
-date: '2017-09-06T00:00:00.000Z'
+authorURL: "http://twitter.com/abhithrajan"
+date: "2017-09-06T00:00:00.000Z"
 image: /img/2017-09-06-check-if-string-is-arabic-csharp.png
 tags:
   - aspnet
@@ -22,15 +22,17 @@ So we had to do some changes, UX team prepared the RTL layout for displaying con
 
 To classify, or to check whether the given content language is Arabic or not, we used the following extension method,
 
-<pre style="font-family:Consolas;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="color:#608b4e;">///</span><span style="color:#608b4e;">&nbsp;</span><span style="color:#608b4e;">&lt;</span><span style="color:#608b4e;">summary</span><span style="color:#608b4e;">&gt;</span>
-<span style="color:#608b4e;">///</span><span style="color:#608b4e;">&nbsp;To&nbsp;check&nbsp;whether&nbsp;the&nbsp;given&nbsp;string&nbsp;is&nbsp;Arabic.</span>
-<span style="color:#608b4e;">///</span><span style="color:#608b4e;">&nbsp;</span><span style="color:#608b4e;">&lt;/</span><span style="color:#608b4e;">summary</span><span style="color:#608b4e;">&gt;</span>
-<span style="color:#608b4e;">///</span><span style="color:#608b4e;">&nbsp;</span><span style="color:#608b4e;">&lt;</span><span style="color:#608b4e;">param</span><span style="color:#c8c8c8;">&nbsp;name</span><span style="color:#608b4e;">=</span><span style="color:#c8c8c8;">&quot;</span>input<span style="color:#c8c8c8;">&quot;</span><span style="color:#608b4e;">&gt;&lt;/</span><span style="color:#608b4e;">param</span><span style="color:#608b4e;">&gt;</span>
-<span style="color:#608b4e;">///</span><span style="color:#608b4e;">&nbsp;</span><span style="color:#608b4e;">&lt;</span><span style="color:#608b4e;">returns</span><span style="color:#608b4e;">&gt;</span><span style="color:#608b4e;">Returns&nbsp;True&nbsp;if&nbsp;Arabic</span><span style="color:#608b4e;">&lt;/</span><span style="color:#608b4e;">returns</span><span style="color:#608b4e;">&gt;</span>
-<span style="color:#569cd6;">public</span>&nbsp;<span style="color:#569cd6;">static</span>&nbsp;<span style="color:#569cd6;">bool</span>&nbsp;<span style="color:cyan;">IsRtl</span>(<span style="color:#569cd6;">this</span>&nbsp;<span style="color:#569cd6;">string</span>&nbsp;input)
+```cs
+/// <summary>
+/// To check whether the given string is Arabic.
+/// </summary>
+/// <param name="input"></param>
+/// <returns>Returns True if Arabic</returns>
+public static bool IsRtl(this string input)
 {
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#569cd6;">return</span>&nbsp;<span style="color:lightblue;">Regex</span><span style="color:#b4b4b4;">.</span><span style="color:cyan;">IsMatch</span>(input,&nbsp;<span style="color:#d69d85;">@&quot;</span><span style="color:#62ccff;">\p{IsArabic}</span><span style="color:#d69d85;">&quot;</span>);
-}</pre>
+    return Regex.IsMatch(input, @"\p{IsArabic}");
+}
+```
 
 And it is now part of my [Code.Library](https://github.com/Abhith/Code.Library) package ValidationHelper module.
 
