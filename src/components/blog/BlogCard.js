@@ -3,12 +3,17 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
-const BlogCard = ({ post }) => {
+const BlogCard = ({ post, tag }) => {
   return (
     <div className="column card-post">
       <Link to={post.fields.slug}>
-        <div className="featured-image">
+        <div className="featured-image card-image">
           <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+          {tag && (
+            <div className="card-content is-overlay is-clipped">
+              <span className="tag is-info">{tag}</span>
+            </div>
+          )}
         </div>
         <div className="content">
           <div className="post-title">{post.frontmatter.title}</div>
@@ -35,7 +40,8 @@ const BlogCard = ({ post }) => {
   );
 };
 BlogCard.propTypes = {
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
+  tag: PropTypes.string
 };
 
 export default BlogCard;
