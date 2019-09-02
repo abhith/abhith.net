@@ -195,7 +195,7 @@ export const BlogPostTemplate = ({
             <div className="column is-8">
               <PostContent content={content} className={`content post-body`} />
               <TopicsBar topics={tags} />
-              <div id="typo" class="bd-typo">
+              <div id="typo" className="bd-typo">
                 <p className="has-text-grey">
                   This page is{" "}
                   <strong className="has-text-grey">open source</strong>. Noticed a
