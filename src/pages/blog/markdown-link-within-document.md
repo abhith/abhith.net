@@ -21,17 +21,20 @@ So for better usability, I had to link them, I know how to do it in **HTML** and
 
 To create the link,
 
-<pre style="font-family:Consolas;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="color:#569cd6;">[</span><span style="color:#569cd6;">Link&nbsp;text</span><span style="color:#569cd6;">](#some-id)</span>
-</pre>
+```md
+[Link text](#some-id)
+```
 
-And anchor point the target area by,
-<pre style="font-family:Consolas;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="font-weight:bold;">#&nbsp;</span><span style="color:maroon;">&lt;a&nbsp;name=&quot;some-id&quot;&gt;&lt;/a&gt;</span><span style="font-weight:bold;">&nbsp;DETAIL&nbsp;SECTION</span>
-</pre>
+And add anchor point the target area by,
 
-Notice the usage of "some-id" in both. You can replace "some-id" with any proper text.
+```md
+# <a name="some-id"></a> DETAIL SECTION
+```
+
+Notice the usage of "_some-id_" in both. You can replace "_some-id_" with any proper text.
+
+> As you can see, we are adding an anchor tag (HTML element) to the **Markdown** to make it work. Having HTML in markdown file is not that nice and some linters will complain about the same, this as a dirty hack.
 
 ### Update 1 - 2nd May 2019
 
-If you are using some kind of markdown transformer, there might be an option to make the header links automatically. Since I switched my website to **Gatsby**. It has a plugin called `gatsby-remark-autolink-headers` which does this.
-
-If nothing worked out, the solution mentioned in this article is still valid.
+If you are using some kind of markdown transformer, there might be an option to make the header links automatically. Like **gatsby-remark-autolink-headers** in case of **Gatsby**.
