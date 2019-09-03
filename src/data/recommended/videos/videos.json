@@ -1,5 +1,14 @@
 [
   {
+    "title": "Implementing Authentication and Authorization with ASP.NET Core 2 - Chris Klug",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=-50ntzz18XU",
+    "date": "2019-09-03T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
     "title": "OAuth 2.0 and OpenID Connect (in plain English)",
     "description": "",
     "image": "",
@@ -24,7 +33,7 @@
     "url": "https://www.youtube.com/watch?v=IUxT7ZRHlZ4",
     "date": "2019-06-13T16:19:21.638Z",
     "type": "youtube",
-    "tags": ["databases","nosql"]
+    "tags": ["databases", "nosql"]
   },
   {
     "title": "",
