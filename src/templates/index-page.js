@@ -21,7 +21,13 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
             <div className="column is-12">
               <div className="columns is-vcentered">
                 <div className="column has-text-centered">
-                  <div className="title"> 📬 Recommended </div>
+                  <div className="title">
+                    {" "}
+                    <span role="img" aria-label="inbox">
+                      📬
+                    </span>{" "}
+                    Recommended{" "}
+                  </div>
                   <div className="subtitle">
                     Developer stories, videos and services
                   </div>
