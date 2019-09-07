@@ -3,12 +3,13 @@ import React from "react";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
 import SEO from "../components/seo/SEO";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import Pagination from "../components/Pagination";
 
 export default class BlogIndexPage extends React.Component {
   render() {
     const { pageContext, data } = this.props;
-    console.log(pageContext);
+    // console.log(pageContext);
     const posts = data.allMarkdownRemark.edges;
     const { previousPagePath, nextPagePath } = pageContext;
     return (
@@ -27,22 +28,10 @@ export default class BlogIndexPage extends React.Component {
                   <span>All Stories</span>
                 </h4>
                 <BlogRoll posts={posts} />
-                <nav
-                  className="pagination is-rounded is-medium"
-                  role="navigation"
-                  aria-label="pagination"
-                >
-                  {previousPagePath ? (
-                    <Link className="pagination-previous" to={previousPagePath}>
-                      Previous
-                    </Link>
-                  ) : null}
-                  {nextPagePath ? (
-                    <Link className="pagination-next" to={nextPagePath}>
-                      Next
-                    </Link>
-                  ) : null}
-                </nav>
+                <Pagination
+                  previousPagePath={previousPagePath}
+                  nextPagePath={nextPagePath}
+                ></Pagination>
               </div>
               <div className="column">
                 {/* {% include sidebar-featured.html %}     */}

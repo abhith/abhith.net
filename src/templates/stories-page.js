@@ -1,13 +1,14 @@
 import React from "react";
-import Layout from "../../../components/Layout";
-import SEO from "../../../components/seo/SEO";
-import StoriesRoll from "../../../components/StoriesRoll";
+import Layout from "../components/Layout";
+import SEO from "../components/seo/SEO";
+import StoriesRoll from "../components/StoriesRoll";
 import { graphql } from "gatsby";
+import Pagination from "../components/Pagination";
 
 export default class RecommendedStoriesIndexPage extends React.Component {
   render() {
-    const { data } = this.props;
-
+    const { pageContext, data } = this.props;
+    const { previousPagePath, nextPagePath } = pageContext;
     const stories = data.recommendedStories.edges;
     return (
       <Layout>
@@ -27,6 +28,10 @@ export default class RecommendedStoriesIndexPage extends React.Component {
                   <span>Developer Stories</span>
                 </h4>
                 <StoriesRoll posts={stories} />
+                <Pagination
+                  previousPagePath={previousPagePath}
+                  nextPagePath={nextPagePath}
+                ></Pagination>
               </div>
 
               <div className="column">
@@ -41,8 +46,12 @@ export default class RecommendedStoriesIndexPage extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query RecommendedStoriesIndexPageQuery {
-    recommendedStories: allStoriesJson(sort: { fields: [date], order: DESC }) {
+  query RecommendedStoriesIndexPageQuery($skip: Int!, $limit: Int!) {
+    recommendedStories: allStoriesJson(
+      sort: { fields: [date], order: DESC }
+      skip: $skip
+      limit: $limit
+    ) {
       edges {
         node {
           title

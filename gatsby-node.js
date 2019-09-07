@@ -83,6 +83,15 @@ exports.createPages = ({ actions, graphql }) => {
       component: path.resolve("src/templates/blog-page.js") // Just like `createPage()`
     });
 
+    // Create your paginated stories
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: stories, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/stories", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/stories-page.js") // Just like `createPage()`
+    });
+
     // Tag pages:
     let tags = [];
     // Iterate through each post, putting all found tags into `tags`
