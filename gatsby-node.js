@@ -1,3 +1,4 @@
+const { paginate } = require("gatsby-awesome-pagination");
 const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
@@ -71,6 +72,15 @@ exports.createPages = ({ actions, graphql }) => {
           tags: postTags
         }
       });
+    });
+
+    // Create your paginated pages
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: posts, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/blog-page.js") // Just like `createPage()`
     });
 
     // Tag pages:

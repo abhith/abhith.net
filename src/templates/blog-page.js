@@ -1,14 +1,16 @@
 import React from "react";
 
-import Layout from "../../components/Layout";
-import BlogRoll from "../../components/BlogRoll";
-import SEO from "../../components/seo/SEO";
-import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import BlogRoll from "../components/BlogRoll";
+import SEO from "../components/seo/SEO";
+import { graphql, Link } from "gatsby";
 
 export default class BlogIndexPage extends React.Component {
   render() {
-    const { data } = this.props;
+    const { pageContext, data } = this.props;
+    console.log(pageContext);
     const posts = data.allMarkdownRemark.edges;
+    const { previousPagePath, nextPagePath } = pageContext;
     return (
       <Layout>
         <SEO
@@ -25,8 +27,23 @@ export default class BlogIndexPage extends React.Component {
                   <span>All Stories</span>
                 </h4>
                 <BlogRoll posts={posts} />
+                <nav
+                  className="pagination is-rounded is-medium"
+                  role="navigation"
+                  aria-label="pagination"
+                >
+                  {previousPagePath ? (
+                    <Link className="pagination-previous" to={previousPagePath}>
+                      Previous
+                    </Link>
+                  ) : null}
+                  {nextPagePath ? (
+                    <Link className="pagination-next" to={nextPagePath}>
+                      Next
+                    </Link>
+                  ) : null}
+                </nav>
               </div>
-
               <div className="column">
                 {/* {% include sidebar-featured.html %}     */}
               </div>
@@ -39,10 +56,12 @@ export default class BlogIndexPage extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query BlogRollQuery {
+  query BlogRollQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      skip: $skip
+      limit: $limit
     ) {
       edges {
         node {
