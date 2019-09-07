@@ -198,10 +198,14 @@ export const BlogPostTemplate = ({
               <div id="typo" className="bd-typo">
                 <p className="has-text-grey">
                   This page is{" "}
-                  <strong className="has-text-grey">open source</strong>. Noticed a
-                  typo? Or something unclear?
+                  <strong className="has-text-grey">open source</strong>.
+                  Noticed a typo? Or something unclear?
                   <br />
-                  <OutboundLink href={githubURL} target="_blank" className="has-text-grey">
+                  <OutboundLink
+                    href={githubURL}
+                    target="_blank"
+                    className="has-text-grey"
+                  >
                     Improve this page on GitHub
                   </OutboundLink>
                 </p>
@@ -369,99 +373,66 @@ class BlogPost extends React.Component {
           datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
           siteMetadata={data.site.siteMetadata}
         />
-        <section>
-          <div className="container is-fluid">
-            {relatedPosts.length > 0 && (
-              <>
-                <TitleBar title={`Related Posts`}></TitleBar>
-                <div className="columns">
-                  <div className="column">
-                    {relatedPostsFirstHalf.map(({ node }) => {
-                      return <BlogRollItem post={node} key={node.id} />;
-                    })}
-                  </div>
-                  <div className="column">
-                    {relatedPostsSecondHalf.map(({ node }) => {
-                      return <BlogRollItem post={node} key={node.id} />;
-                    })}
-                  </div>
+        {relatedPosts.length > 0 && (
+          <section className="section">
+            <div className="container is-fluid">
+              <TitleBar title={`Related Posts`}></TitleBar>
+              <div className="columns">
+                <div className="column">
+                  {relatedPostsFirstHalf.map(({ node }) => {
+                    return <BlogRollItem post={node} key={node.id} />;
+                  })}
                 </div>
-              </>
-            )}
-            {relatedVideos.length > 0 && (
-              <>
-                <TitleBar title={`Related Videos`}></TitleBar>
-                <div className="columns">
-                  <div className="column is-full">
-                    <VideosRoll videos={relatedVideos} />
-                  </div>
+                <div className="column">
+                  {relatedPostsSecondHalf.map(({ node }) => {
+                    return <BlogRollItem post={node} key={node.id} />;
+                  })}
                 </div>
-              </>
-            )}
-
-            {relatedStories.length > 0 && (
-              <>
-                <TitleBar title={`Related Stories`}></TitleBar>
-                <div className="columns">
-                  <div className="column is-half">
-                    <StoriesRoll posts={relatedStoriesFirstHalf} />
-                  </div>
-                  <div className="column is-half">
-                    <StoriesRoll posts={relatedStoriesSecondHalf} />
-                  </div>
-                </div>
-              </>
-            )}
-
-            {relatedServices.length > 0 && (
-              <>
-                <div className="columns">
-                  <div className="column is-full">
-                    <TitleBar title={`Related Services`}></TitleBar>
-                    <ServicesRoll services={relatedServices} />
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        </section>
-        {/* <div className={`alertbar ${this.state.alertbarClass}`}>
-          <div className="container">
-            <div className="columns prevnextlinks small">
-              <div className="column is-half rightborder pl-0">
-                <OutboundLink
-                  className="text-dark"
-                  href={featuredServices[0].url}
-                  target="_blank"
-                >
-                  <img
-                    height="30px"
-                    className="mr-1"
-                    src={featuredServices[0].image}
-                    alt={featuredServices[0].title}
-                  />
-                  {featuredServices[0].title}
-                </OutboundLink>
-              </div>
-
-              <div className="column is-half text-right pr-0">
-                <OutboundLink
-                  className="text-dark"
-                  href={featuredServices[1].url}
-                  target="_blank"
-                >
-                  {featuredServices[1].title}
-                  <img
-                    height="30px"
-                    className="ml-1"
-                    src={featuredServices[1].image}
-                    alt={featuredServices[1].title}
-                  />
-                </OutboundLink>
               </div>
             </div>
-          </div>
-        </div> */}
+          </section>
+        )}
+        {relatedVideos.length > 0 && (
+          <section className="section">
+            <div className="container is-fluid">
+              <TitleBar title={`Related Videos`}></TitleBar>
+              <div className="columns">
+                <div className="column is-full">
+                  <VideosRoll videos={relatedVideos} />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {relatedStories.length > 0 && (
+          <section className="section">
+            <div className="container is-fluid">
+              <TitleBar title={`Related Stories`}></TitleBar>
+              <div className="columns">
+                <div className="column is-half">
+                  <StoriesRoll posts={relatedStoriesFirstHalf} />
+                </div>
+                <div className="column is-half">
+                  <StoriesRoll posts={relatedStoriesSecondHalf} />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {relatedServices.length > 0 && (
+          <section className="section">
+            <div className="container is-fluid">
+              <div className="columns">
+                <div className="column is-full">
+                  <TitleBar title={`Related Services`}></TitleBar>
+                  <ServicesRoll services={relatedServices} />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
       </Layout>
     );
   }
