@@ -3,7 +3,7 @@ templateKey: blog-post
 title: 2017 Year In Review
 description: Abhith Rajan's  2017 year in review.
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2018-01-01T09:26:00.000Z
 image: /img/brigitte-tohm-181096.jpg
 tags:
@@ -12,17 +12,17 @@ tags:
 
 Last year on my appraisal form, under objectives for next year (2017), I put the following,
 
- - [[  ] Work on projects using technology .NET CORE, Angular 2, Typescript 2](#1)
- - [[  ] Get a new designation (Senior Software Engineer / Project Manager / DevOps Manager)](#2)
- - [[  ] Learn product management](#3)
- - [[x] Mentor more](#4)
- - [[x] Contribute more to Open Source](#5)
+- [[ ] Work on projects using technology .NET CORE, Angular 2, Typescript 2](#1)
+- [[ ] Get a new designation (Senior Software Engineer / Project Manager / DevOps Manager)](#2)
+- [[ ] Learn product management](#3)
+- [[x] Mentor more](#4)
+- [[x] Contribute more to Open Source](#5)
 
 ### <a name="1"></a>Work on projects using technology .NET CORE, Angular 2, Typescript 2 - Inconclusive
 
 I did work on Angular 2 & Angular 4 and Typescript a little as part of my side project which is in Ionic. But that isn't enough and I didn't find time for .NET Core, basically, I was giving time to let it get mature enough since initially SignalR etc weren't supported. Now I really need to focus on it since am a C# guy.
 
-Apart from the above, I did learn/tried some other, some of which are 
+Apart from the above, I did learn/tried some other, some of which are
 
 - [Umbraco](#6)
 - [Vue](#7)
@@ -49,13 +49,13 @@ Vue is our number one choice when it comes to client-side programming. It is bec
 
 #### <a name="8"></a>Xamarin forms
 
-Learning Xamarin forms was just personal and we don't use it in the company since my current company focused on Web for now. 
+Learning Xamarin forms was just personal and we don't use it in the company since my current company focused on Web for now.
 
 <div>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Ionic?src=hash&amp;ref_src=twsrc%5Etfw">#Ionic</a> guy going to try <a href="https://twitter.com/hashtag/Xamarin?src=hash&amp;ref_src=twsrc%5Etfw">#Xamarin</a></p>&mdash; Abhith Rajan (@AbhithRajan) <a href="https://twitter.com/AbhithRajan/status/849329774971506688?ref_src=twsrc%5Etfw">April 4, 2017</a></blockquote>
 </div>
 
-I had a personal project piggyvault.in, and for its mobile application, I used ionic. The app built so faster since ionic was very easy because of the knowledge I had in AngularJS. After few months, I fall for Xamarin because of its native nature And I tried Xamarin Android first, 
+I had a personal project piggyvault.in, and for its mobile application, I used ionic. The app built so faster since ionic was very easy because of the knowledge I had in AngularJS. After few months, I fall for Xamarin because of its native nature And I tried Xamarin Android first,
 
 <div>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Learning async tasks in detail just to rescue my hello world <a href="https://twitter.com/hashtag/Xamarin?src=hash&amp;ref_src=twsrc%5Etfw">#Xamarin</a> <a href="https://twitter.com/hashtag/Android?src=hash&amp;ref_src=twsrc%5Etfw">#Android</a> app from deadlock.</p>&mdash; Abhith Rajan (@AbhithRajan) <a href="https://twitter.com/AbhithRajan/status/857673566166319105?ref_src=twsrc%5Etfw">April 27, 2017</a></blockquote>
@@ -87,7 +87,7 @@ I wasn't able to achieve this since there are no such positions in my current co
 
 Apart from some video tutorials, and reading knowledge. Nothing more I learned. But I am doing it with my knowledge, for Socialboard, raffle, and for other projects. I want to learn it properly so that I can do it properly.
 
-### <a name="4"></a>Mentor more 
+### <a name="4"></a>Mentor more
 
 I learn/try first and pass it to the colleagues. In case of Vue, AWS, Sitefinity and all, the same happened. I like to do things in the more organized way,
 
@@ -103,7 +103,7 @@ we initially used **Asana** for task management,
  
  **Slack** for group communication, **Skype** for vocal communications and that's too many tabs in the browser. Now we use Bitrix24 for all, it has task management, group communications, and vocal/video calls and more. I introduced it to the company after trying myself and it was a good change.  I always appreciate people for their goodness. My colleagues make fun of me for saying **thanks** to them for the little things they have done for me. It's part my nature. And the same way sharing my experiences and thoughts with my colleagues, when they are in a mess, they seek my advice and I tend to have a solution in every situation. In the middle of last year, I started PR reviews, and now it's part of our workflow for major projects and no comments received for any of my code and I did correct/improvise my colleague's codes and did appreciate when I see the good code.
 
-### <a name="5"></a>Contribute more to Open Source 
+### <a name="5"></a>Contribute more to Open Source
 
 If you count the stars I have given in GitHub for others projects, that's too much contribution in some way to courage them to continue their good work. Other than that, this blog is one of my initiatives.
 
@@ -111,7 +111,7 @@ If you count the stars I have given in GitHub for others projects, that's too mu
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">My site (<a href="https://t.co/uEYEWL312U">https://t.co/uEYEWL312U</a>) contents copied into a <a href="https://twitter.com/hashtag/github?src=hash&amp;ref_src=twsrc%5Etfw">#github</a> repo for better <a href="https://twitter.com/hashtag/collaboration?src=hash&amp;ref_src=twsrc%5Etfw">#collaboration</a> <a href="https://t.co/oeammZOWKG">https://t.co/oeammZOWKG</a><a href="https://twitter.com/hashtag/community?src=hash&amp;ref_src=twsrc%5Etfw">#community</a> <a href="https://twitter.com/hashtag/matters?src=hash&amp;ref_src=twsrc%5Etfw">#matters</a></p>&mdash; Abhith Rajan (@AbhithRajan) <a href="https://twitter.com/AbhithRajan/status/903215867353280512?ref_src=twsrc%5Etfw">August 31, 2017</a></blockquote>
 </div>
 
-Apart from the above, there is a couple of things. One of our flagship products digital raffle draw system went live. The other product Socialboard is getting its momentum, and the feedback app also went live. 
+Apart from the above, there is a couple of things. One of our flagship products digital raffle draw system went live. The other product Socialboard is getting its momentum, and the feedback app also went live.
 
 Last year I received (1000/6000) *100=(1/6)*100 = 16.6667 % raise. And I did perform well. Our team delivered around 8 new projects including two new products and maintained around 20 old projects. Talking about the experience in the company, it was floating, lows and highs. My working time is 10 am to 6 pm, Sunday to Thursday and 10 am to 2 am, on Saturdays. The Saturday half day work is the most annoying since I believe developers need 2 days off so that they can sharpen their axes and get a fresh start from the next week. And the startup nature of the company, ie too many works, few resources. Time, quality, cost at which time is the main constraint for the projects we got, that way controlling cost. But we have to deliver quality as well. As everyone knows, these will not work well and so the work pressure. Handling minimum of two-three projects 95% of days for the past year.
 
@@ -120,6 +120,6 @@ Last year I received (1000/6000) *100=(1/6)*100 = 16.6667 % raise. And I did per
 </div>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-It needs to change, hoping for a miracle. 
+It needs to change, hoping for a miracle.
 
 And that's that.

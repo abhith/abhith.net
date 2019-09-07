@@ -22,7 +22,6 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
               <div className="columns is-vcentered">
                 <div className="column has-text-centered">
                   <div className="title">
-                    {" "}
                     <span role="img" aria-label="inbox">
                       📬
                     </span>{" "}
