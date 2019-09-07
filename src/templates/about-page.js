@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import SEO from "../components/seo/SEO";
+import Timeline from "../components/about/Timeline";
 
 export const AboutPageTemplate = ({
   title,
@@ -16,14 +17,15 @@ export const AboutPageTemplate = ({
   return (
     <div className="container">
       <SEO title={title} description={description} slug="/about" />
-      <div className="section">
+      <section className="section">
         <h1 className="title spanborder has-text-weight-bold">
           <span> {title}</span>
         </h1>
         <div className="page-content">
           <PageContent className="content" content={content} />
         </div>
-      </div>
+      </section>
+      <Timeline></Timeline>
     </div>
   );
 };
