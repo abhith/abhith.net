@@ -184,6 +184,15 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#00d1b2`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     `gatsby-plugin-offline`,
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]
