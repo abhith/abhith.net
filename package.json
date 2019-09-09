@@ -11,7 +11,7 @@
     "gatsby-awesome-pagination": "^0.3.4",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-google-analytics": "^2.1.14",
-    "gatsby-plugin-manifest": "^2.2.12",
+    "gatsby-plugin-manifest": "^2.2.15",
     "gatsby-plugin-netlify": "^2.1.10",
     "gatsby-plugin-nprogress": "^2.1.5",
     "gatsby-plugin-offline": "^3.0.3",
