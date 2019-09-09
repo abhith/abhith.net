@@ -1,5 +1,19 @@
 [
   {
+    "title": "A clean way to add Swagger to ASP.NET Core application",
+    "url": "https://www.talkingdotnet.com/clean-way-to-add-swagger-asp-net-core-application/",
+    "description": "In this post find out a clean way to add Swagger to ASP.NET Core application using extension methods to make startup.cs clean and manageable.",
+    "date": "2019-09-09T16:22:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "What’s New in Angular V8 — All Powerful Features and Improvements",
+    "url": "https://hackernoon.com/whats-new-in-angular-v8-all-powerful-features-and-improvements-9s1c3awu",
+    "description": "Angular 8 is finally here (in May)!",
+    "date": "2019-09-02T16:22:28.263Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "Essential Gatsby plugins. Part 1, SEO and Images | Dev Diary",
     "url": "https://markoskon.com/gatsby-plugins-seo-and-images",
     "description": "In this post, we'll see what plugins you can use in order to improve the SEO of your Gatsby app and handle images effectively.",
