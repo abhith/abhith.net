@@ -837,7 +837,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.0.tgz#4fc1d642a9fd0299754e8b5de62c631cf5568205"
   integrity sha512-89eSBLJsxNxOERC0Op4vd+0Bqm6wRMqMbFtV3i0/fbaWw/mJ8Q3eBvgX0G4SyrOOLCtbu98HspF8o09MRT+KzQ==
@@ -6074,12 +6074,12 @@ gatsby-remark-images@^3.1.20:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-remark-prismjs@^3.3.12:
-  version "3.3.12"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.12.tgz#4239bb48a5e2eb5fcff5adbbac1a6821012bd9bf"
-  integrity sha512-PE744uWg0M09hFZSOpQac+oUpmwKHAYJc0unLIszNdXvbihPL8rhi9aahKiz3EvQDbQ35WNHHPOsS/OjtegmIw==
+gatsby-remark-prismjs@^3.3.13:
+  version "3.3.13"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.13.tgz#25888e65b49028eb1a952846a34cb631e757160b"
+  integrity sha512-m5EIH2D1PE6kpqaPbas8cd85rIdXoux5Q3FUo5gkKkiBefdTt3Kk1kA2eW/qzEs8hovHWmRigFzA/HsvK8A1/A==
   dependencies:
-    "@babel/runtime" "^7.5.5"
+    "@babel/runtime" "^7.6.0"
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.4.1"
 
