@@ -21,7 +21,7 @@
     "gatsby-plugin-sass": "^2.1.14",
     "gatsby-plugin-sharp": "^2.2.20",
     "gatsby-plugin-sitemap": "^2.2.10",
-    "gatsby-remark-autolink-headers": "^2.1.8",
+    "gatsby-remark-autolink-headers": "^2.1.10",
     "gatsby-remark-copy-linked-files": "^2.1.19",
     "gatsby-remark-embed-video": "^1.7.1",
     "gatsby-remark-external-links": "^0.0.4",
