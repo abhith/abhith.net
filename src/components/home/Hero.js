@@ -20,7 +20,7 @@ export default function Hero() {
                   params={{
                     particles: {
                       number: {
-                        value: 7,
+                        value: 8,
                         density: {
                           enable: true,
                           value_area: 800
@@ -38,6 +38,11 @@ export default function Hero() {
                         images: [
                           {
                             src: "/img/site/particles/react.svg",
+                            height: 20,
+                            width: 23
+                          },
+                          {
+                            src: "/img/site/particles/nuxt-emoji.png",
                             height: 20,
                             width: 23
                           },
