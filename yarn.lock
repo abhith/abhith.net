@@ -4340,10 +4340,10 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-disqus-react@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/disqus-react/-/disqus-react-1.0.6.tgz#35540425cf105075e9f2cc1f18e7b03f63a55879"
-  integrity sha512-rH3oq0FsjX4lIfRu2AmannoLVEv4n7tlwrwQ/aCnFD/j7ClVogpU72WOuj8OwtdQYX8cEYUbaurdwTqSTD2SFg==
+disqus-react@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/disqus-react/-/disqus-react-1.0.7.tgz#61061d3b6237b956baa9c5d96780fd311cdbecfc"
+  integrity sha512-7sPHIauS5mUxkZtGtik/ELZ38kOGH3N+YFNt7U4ncczNdAVmWNmAetDE+dHYnrL1Xx+Pgueh1uKpvfUIeu7WuQ==
 
 dns-equal@^1.0.0:
   version "1.0.0"
@@ -5836,7 +5836,7 @@ gatsby-cli@^2.7.47:
     ink "^2.3.0"
     ink-spinner "^3.0.1"
 
-gatsby-core-utils@^1.0.7, gatsby-core-utils@^1.0.8:
+gatsby-core-utils@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.8.tgz#e765a1338d65ff1de65238c7f0a9967e07da20fa"
   integrity sha512-080Jl8NamTbCGliKxXpMjEO1XUYU5FAow+VPR/j6hJk+Kl/gFmpE1mqa5QnHRGLZQhBP/h2T0mUwnSJn9m/Jsw==

@@ -6,7 +6,7 @@
   "dependencies": {
     "bulma": "^0.7.5",
     "bulma-timeline": "^3.0.4",
-    "disqus-react": "^1.0.6",
+    "disqus-react": "^1.0.7",
     "gatsby": "^2.15.14",
     "gatsby-awesome-pagination": "^0.3.4",
     "gatsby-image": "^2.2.18",
