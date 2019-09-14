@@ -132,7 +132,7 @@ export const BlogPostTemplate = ({
         </div>
       </section>
       <section className="section">
-        <div className="container">
+        <div className="container is-fluid">
           <div className="columns is-centered">
             <div className="column is-2 pr-4 mb-4">
               <div className="sticky has-text-centered">
