@@ -1,13 +1,14 @@
 import React from "react";
-import Layout from "../../../components/Layout";
-import SEO from "../../../components/seo/SEO";
-import VideosRoll from "../../../components/VideosRoll";
+import Layout from "../components/Layout";
+import SEO from "../components/seo/SEO";
+import VideosRoll from "../components/VideosRoll";
 import { graphql } from "gatsby";
+import Pagination from "../components/Pagination";
 
 export default class RecommendedVideosIndexPage extends React.Component {
   render() {
-    const { data } = this.props;
-
+    const { pageContext, data } = this.props;
+    const { previousPagePath, nextPagePath } = pageContext;
     const videos = data.recommendedVideos.edges;
     return (
       <Layout>
@@ -29,6 +30,10 @@ export default class RecommendedVideosIndexPage extends React.Component {
                   </span>
                 </h4>
                 <VideosRoll videos={videos} />
+                <Pagination
+                  previousPagePath={previousPagePath}
+                  nextPagePath={nextPagePath}
+                ></Pagination>
               </div>
 
               <div className="column">
@@ -43,7 +48,7 @@ export default class RecommendedVideosIndexPage extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query RecommendedVideosIndexPageQuery {
+  query RecommendedVideosIndexPageQuery($skip: Int!, $limit: Int!) {
     videoImg: file(relativePath: { eq: "recommended-video.png" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 505) {
@@ -51,7 +56,11 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendedVideos: allVideosJson(sort: { fields: [date], order: DESC }) {
+    recommendedVideos: allVideosJson(
+      sort: { fields: [date], order: DESC }
+      skip: $skip
+      limit: $limit
+    ) {
       totalCount
       edges {
         node {

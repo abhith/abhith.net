@@ -1,13 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../../components/Layout";
-import SEO from "../../../components/seo/SEO";
-import ServicesRoll from "../../../components/ServicesRoll";
+import Layout from "../components/Layout";
+import SEO from "../components/seo/SEO";
+import ServicesRoll from "../components/ServicesRoll";
+import Pagination from "../components/Pagination";
 
 export default class RecommendedServicesIndexPage extends React.Component {
   render() {
-    const { data } = this.props;
-
+    const { pageContext, data } = this.props;
+    const { previousPagePath, nextPagePath } = pageContext;
     const services = data.recommendedServices.edges;
     return (
       <Layout>
@@ -27,6 +28,10 @@ export default class RecommendedServicesIndexPage extends React.Component {
             <div className="columns">
               <div className="column is-two-thirds">
                 <ServicesRoll services={services} />
+                <Pagination
+                  previousPagePath={previousPagePath}
+                  nextPagePath={nextPagePath}
+                ></Pagination>
               </div>
               <div className="column"></div>
             </div>
@@ -38,9 +43,11 @@ export default class RecommendedServicesIndexPage extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query RecommendedServicesIndexPageQuery {
+  query RecommendedServicesIndexPageQuery($skip: Int!, $limit: Int!) {
     recommendedServices: allServicesJson(
       sort: { fields: [date], order: DESC }
+      skip: $skip
+      limit: $limit
     ) {
       edges {
         node {

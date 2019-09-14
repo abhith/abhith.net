@@ -92,6 +92,24 @@ exports.createPages = ({ actions, graphql }) => {
       component: path.resolve("src/templates/stories-page.js") // Just like `createPage()`
     });
 
+    // Create your paginated vieos
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: videos, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/videos", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/videos-page.js") // Just like `createPage()`
+    });
+
+    // Create your paginated vieos
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: services, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/services", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/services-page.js") // Just like `createPage()`
+    });
+
     // Tag pages:
     let tags = [];
     // Iterate through each post, putting all found tags into `tags`
