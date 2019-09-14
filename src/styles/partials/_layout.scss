@@ -293,9 +293,21 @@ article h6 {
 
 .has-numbers {
   span {
-    // display: block;
     &.tag {
-      // display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $secondary;
+      background: transparent;
+      border: 1px solid $secondary;
+    }
+  }
+}
+
+.tags {
+  span {
+    display: block;
+    &.tag {
+      display: flex;
       justify-content: center;
       align-items: center;
       color: $secondary;
