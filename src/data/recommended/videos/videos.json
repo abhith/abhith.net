@@ -1,12 +1,57 @@
 [
   {
+    "title": "Analyzing your applications with Application Insights",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=pqZF8LjBh68",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["azure"]
+  },
+  {
+    "title": "Webinar: XOR DDoS - Post Attack Analysis",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=YxY7i7R0R2U",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "[GreHack 2017] Down The Rabbit Hole: How Hackers Exploit Weak SSH Credentials To Build DDoS Botnets",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=jEtke3Dfxeo",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "Securing Web Applications and APIs with ASP.NET Core 2.2 and 3.0 - Brock Allen & Dominick Baier",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=EYk3KTwwbFA",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "The Async Await Episode I Promised",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=vn3tm0quoqE",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["asynchronous-programming", "javascript"]
+  },
+  {
     "title": "Implementing Authentication and Authorization with ASP.NET Core 2 - Chris Klug",
     "description": "",
     "image": "",
     "url": "https://www.youtube.com/watch?v=-50ntzz18XU",
     "date": "2019-09-03T00:19:21.638Z",
     "type": "youtube",
-    "tags": ["security"]
+    "tags": ["security", "aspnet-core"]
   },
   {
     "title": "OAuth 2.0 and OpenID Connect (in plain English)",
