@@ -9,7 +9,14 @@ import FeaturedSidebar from "../components/FeaturedSidebar";
 import SEO from "../components/seo/SEO";
 import VideosRoll from "../components/VideosRoll";
 
-export const IndexPageTemplate = ({ stories, featured, videos }) => (
+export const IndexPageTemplate = ({
+  stories,
+  featured,
+  videos,
+  totalStories,
+  totalVideos,
+  totalServices
+}) => (
   <>
     <SEO />
     <Hero />
@@ -27,8 +34,10 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
                     </span>{" "}
                     Recommended{" "}
                   </div>
-                  <div className="subtitle">
-                    Developer stories, videos and services
+                  <div className="subtitle has-numbers">
+                    <span className="tag">{totalStories}</span> Developer stories,{" "}
+                    <span className="tag">{totalVideos}</span> Videos and{" "}
+                    <span className="tag">{totalServices}</span> Services
                   </div>
                 </div>
               </div>
@@ -86,7 +95,10 @@ export const IndexPageTemplate = ({ stories, featured, videos }) => (
 IndexPageTemplate.propTypes = {
   stories: PropTypes.array,
   videos: PropTypes.array,
-  featured: PropTypes.array
+  featured: PropTypes.array,
+  totalStories: PropTypes.number,
+  totalVideos: PropTypes.number,
+  totalServices: PropTypes.number
 };
 
 const IndexPage = ({ data }) => {
@@ -96,6 +108,9 @@ const IndexPage = ({ data }) => {
         stories={data.recommendedStories.edges}
         videos={data.recommendedVideos.edges}
         featured={data.featured.edges}
+        totalStories={data.recommendedStories.totalCount}
+        totalVideos={data.recommendedVideos.totalCount}
+        totalServices={data.featured.totalCount}
       />
     </Layout>
   );
@@ -117,6 +132,7 @@ export const pageQuery = graphql`
       limit: 5
       sort: { fields: [date], order: DESC }
     ) {
+      totalCount
       edges {
         node {
           title
@@ -132,6 +148,7 @@ export const pageQuery = graphql`
       limit: 3
       sort: { fields: [date], order: DESC }
     ) {
+      totalCount
       edges {
         node {
           id
@@ -144,6 +161,7 @@ export const pageQuery = graphql`
       limit: 10
       sort: { fields: [isAffiliate, date], order: [ASC, DESC] }
     ) {
+      totalCount
       edges {
         node {
           title
