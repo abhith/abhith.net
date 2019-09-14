@@ -304,15 +304,16 @@ article h6 {
 }
 
 .tags {
-  span {
-    display: block;
-    &.tag {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .tag {
+      margin: 5px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $secondary;
+      color: $primary !important;
       background: transparent;
-      border: 1px solid $secondary;
-    }
+      border: 1px solid $primary;
   }
 }
