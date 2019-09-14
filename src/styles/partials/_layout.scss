@@ -9,7 +9,6 @@
   }
 }
 
-
 /* ==========================================================================
 2. Main content wrapper
 ========================================================================== */
@@ -290,4 +289,18 @@ article h6 {
   white-space: inherit;
   background: inherit;
   margin: inherit;
+}
+
+.has-numbers {
+  span {
+    // display: block;
+    &.tag {
+      // display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $secondary;
+      background: transparent;
+      border: 1px solid $secondary;
+    }
+  }
 }
