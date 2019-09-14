@@ -15,19 +15,21 @@ export default class Pagination extends Component {
         role="navigation"
         aria-label="pagination"
       >
-        {this.props.previousPagePath ? (
-          <Link
-            className="pagination-previous"
-            to={this.props.previousPagePath}
-          >
-            Previous
-          </Link>
-        ) : null}
-        {this.props.nextPagePath ? (
-          <Link className="pagination-next" to={this.props.nextPagePath}>
-            Next
-          </Link>
-        ) : null}
+        <Link
+          className="pagination-previous"
+          to={this.props.previousPagePath}
+          disabled={!this.props.previousPagePath}
+        >
+          Previous
+        </Link>
+
+        <Link
+          className="pagination-next"
+          to={this.props.nextPagePath}
+          disabled={!this.props.nextPagePath}
+        >
+          Next
+        </Link>
       </nav>
     );
   }
