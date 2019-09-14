@@ -41,7 +41,6 @@ export const BlogPostTemplate = ({
   date,
   author,
   readingTime,
-  commentId,
   lastModifiedTime,
   lastModifiedTimeString,
   dateModifiedSeoFormat,
@@ -50,10 +49,6 @@ export const BlogPostTemplate = ({
   siteMetadata
 }) => {
   const PostContent = contentComponent || Content;
-  const disqusConfig = {
-    shortname: `abhith`,
-    config: { identifier: commentId, title }
-  };
 
   const pageUrl = `${siteMetadata.siteUrl}${slug}`;
   const githubURL = `https://github.com/Abhith/abhith.net/blob/master/src/pages${slug.substring(
@@ -252,9 +247,6 @@ export const BlogPostTemplate = ({
                   </div>
                 </div>
               </div>
-              <div id="comments" className="mt-5">
-                <DiscussionEmbed {...disqusConfig} />
-              </div>
             </div>
           </div>
         </div>
@@ -273,7 +265,6 @@ BlogPostTemplate.propTypes = {
   date: PropTypes.string,
   author: PropTypes.object,
   readingTime: PropTypes.string,
-  commentId: PropTypes.string,
   lastModifiedTime: PropTypes.string,
   lastModifiedTimeString: PropTypes.string,
   dateModifiedSeoFormat: PropTypes.string,
@@ -290,25 +281,25 @@ class BlogPost extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    // window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    // window.removeEventListener("scroll", this.handleScroll);
   }
 
-  handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > 280) {
-      this.setState({
-        alertbarClass: "show"
-      });
-    } else {
-      this.setState({
-        alertbarClass: ""
-      });
-    }
-  };
+  // handleScroll = () => {
+  //   const currentScrollPos = window.pageYOffset;
+  //   if (currentScrollPos > 280) {
+  //     this.setState({
+  //       alertbarClass: "show"
+  //     });
+  //   } else {
+  //     this.setState({
+  //       alertbarClass: ""
+  //     });
+  //   }
+  // };
 
   render() {
     const data = this.props.data;
@@ -341,6 +332,16 @@ class BlogPost extends React.Component {
       }
     );
 
+    const commentId =
+      post.frontmatter.commentId === null
+        ? post.fields.slug
+        : post.frontmatter.commentId;
+
+    const disqusConfig = {
+      shortname: `abhith`,
+      config: { identifier: commentId, title: post.frontmatter.title }
+    };
+
     return (
       <Layout>
         <BlogPostTemplate
@@ -354,11 +355,6 @@ class BlogPost extends React.Component {
           date={post.frontmatter.dateString}
           author={data.site.siteMetadata.author}
           readingTime={post.fields.readingTime.text}
-          commentId={
-            post.frontmatter.commentId === null
-              ? post.fields.slug
-              : post.frontmatter.commentId
-          }
           lastModifiedTime={
             post.frontmatter.lastModificationTime === null
               ? post.frontmatter.date
@@ -433,6 +429,11 @@ class BlogPost extends React.Component {
             </div>
           </section>
         )}
+        <section className="section">
+          <div className="container is-fluid">
+            <DiscussionEmbed {...disqusConfig} />
+          </div>
+        </section>
       </Layout>
     );
   }
