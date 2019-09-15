@@ -66,6 +66,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-reading-time`,
+          `@weknow/gatsby-remark-twitter`,
           {
             resolve: "gatsby-remark-relative-images",
             options: {
