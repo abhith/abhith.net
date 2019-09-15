@@ -66,7 +66,12 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-reading-time`,
-          `@weknow/gatsby-remark-twitter`,
+          {
+            resolve: "@weknow/gatsby-remark-twitter",
+            options: {
+              align: "center"
+            }
+          },
           {
             resolve: "gatsby-remark-relative-images",
             options: {
@@ -191,8 +196,8 @@ module.exports = {
         // Setting a color is optional.
         color: `#00d1b2`,
         // Disable the loading spinner.
-        showSpinner: false,
-      },
+        showSpinner: false
+      }
     },
     `gatsby-plugin-offline`,
     "gatsby-plugin-netlify" // make sure to keep it last in the array
