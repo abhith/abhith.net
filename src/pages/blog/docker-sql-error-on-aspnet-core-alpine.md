@@ -4,7 +4,7 @@ title: Docker - SQL Error on ASP.NET Core Alpine
 description: >-
   Having trouble to connect to a remote SQL server from an ASP.NET Core app running on top of Alpine dotnet on a linux container?
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2019-05-07T09:26:00.000Z
 image: /img/large.png
 tags:
