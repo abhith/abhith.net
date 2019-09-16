@@ -53,7 +53,7 @@ function SEO({
     `
   );
 
-  const sharingText = `Sharing ${posts.totalCount} posts, ${videos.totalCount} videos, ${stories.totalCount} developer stories and ${services.totalCount} tools/services with the world.`;
+  const sharingText = `Sharing ${posts.totalCount} posts, ${videos.totalCount} videos, ${stories.totalCount} developer stories and ${services.totalCount} tools and services with the world.`;
 
   const metaDescription =
     description || `${site.siteMetadata.description} ${sharingText}`;
