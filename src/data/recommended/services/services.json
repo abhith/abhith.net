@@ -1,5 +1,13 @@
 [
   {
+    "title": "Sourcetree | Free Git GUI for Mac and Windows",
+    "url": "https://www.sourcetreeapp.com/",
+    "description": "A Git GUI that offers a visual representation of your repositories. Sourcetree is a free Git client for Windows and Mac. It supports Git-flow out of the box.",
+    "image": "",
+    "date": "2019-09-17T19:31:28.263Z",
+    "tags": ["github", "git", "gitlab"]
+  },
+  {
     "title": "HTTP Status Codes — httpstatuses.com",
     "url": "https://httpstatuses.com/",
     "description": "HTTP Status Code directory, with definitions, details and helpful code references.",
