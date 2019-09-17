@@ -108,10 +108,22 @@
     "image": "gatsby.svg"
   },
   {
+    "title": "Git",
+    "slug": "git",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "GitHub",
     "slug": "github",
     "description": "",
     "image": "github-1.svg"
+  },
+  {
+    "title": "GitLab",
+    "slug": "gitlab",
+    "description": "",
+    "image": ""
   },
   {
     "title": "IDE",
