@@ -1,5 +1,12 @@
 [
   {
+    "title": "C# Exception Handling Best Practices - DZone Performance",
+    "url": "https://dzone.com/articles/c-exception-handling-best-practices",
+    "description": "Learn what an exception is, about the anatomy of C# exceptions, the basic try catch finally block, exception filters, and how to create C# exception types.",
+    "date": "2019-09-18T16:22:28.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "A clean way to add Swagger to ASP.NET Core application",
     "url": "https://www.talkingdotnet.com/clean-way-to-add-swagger-asp-net-core-application/",
     "description": "In this post find out a clean way to add Swagger to ASP.NET Core application using extension methods to make startup.cs clean and manageable.",
