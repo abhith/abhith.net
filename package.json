@@ -69,7 +69,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.0.1",
+    "eslint-config-react-app": "^5.0.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "resolve-url-loader": "^3.1.0",
