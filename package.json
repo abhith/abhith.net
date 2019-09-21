@@ -30,7 +30,7 @@
     "gatsby-remark-prismjs": "^3.3.13",
     "gatsby-remark-reading-time": "^1.0.1",
     "gatsby-remark-relative-images": "^0.2.3",
-    "gatsby-remark-responsive-iframe": "^2.2.16",
+    "gatsby-remark-responsive-iframe": "^2.2.17",
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-transformer-json": "^2.2.8",
     "gatsby-transformer-remark": "^2.6.24",
