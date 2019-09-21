@@ -1,5 +1,32 @@
 [
   {
+    "title": "How does HTTPS work? What's a CA? What's a self-signed Certificate?",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=T4Df5_cojAs",
+    "date": "2019-09-21T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "What Is JWT and Why Should You Use JWT",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM",
+    "date": "2019-09-21T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "Authentication on the Web (Sessions, Cookies, JWT, localStorage, and more)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=2PPSXonhIck",
+    "date": "2019-09-21T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
     "title": "Analyzing your applications with Application Insights",
     "description": "",
     "image": "",
