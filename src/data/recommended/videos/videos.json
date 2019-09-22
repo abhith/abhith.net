@@ -1,5 +1,50 @@
 [
   {
+    "title": "GOTO 2018 • Introduction to OAuth 2.0 and OpenID Connect • Philippe De Ryck",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=GyCL8AJUhww",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "Proof Key for Code Exchange (PKCE)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=2pJShFKYoJc",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "What is JWT ? JSON Web Token Explained",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=926mknSW9Lo",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "OAuth and OpenID Connect for Microservices",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=BdKmZ7mPNns",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "OAuth 2.0: An Overview",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=CPbvxxslDTU",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
     "title": "How does HTTPS work? What's a CA? What's a self-signed Certificate?",
     "description": "",
     "image": "",
