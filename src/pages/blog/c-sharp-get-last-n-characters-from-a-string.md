@@ -44,3 +44,5 @@ And you can use the above like,
 ```cs
 mystring.GetLast(5)
 ```
+
+This extension method is now part of the [Code.Library](https://code-library.abhith.net) Nuget package.
