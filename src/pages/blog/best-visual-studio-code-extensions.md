@@ -8,14 +8,14 @@ date: 2019-02-12T17:50:10.699Z
 lastModificationTime: 2019-08-31T20:02:00.000Z
 image: /img/1200px-visual_studio_code_118.png
 tags:
-  - visual-studio-code
+  - vscode
   - ide
   - awesome-list
 ---
 
 If you ask which is my favorite **IDE**, it is **Visual Studio Code** a.k.a **vscode**. One major strength of **vscode** is its extensions. And these are my favorites,
 
-> I have created an **Extension Pack** for **Visual Studio Code** which includes all the listed extensions. You can install it from [here](https://marketplace.visualstudio.com/items?itemName=abhith.vscode-favorites).
+> I have created an **Extension Pack** for **Visual Studio Code** which includes all the listed extensions. You can install it from [marketplace](https://marketplace.visualstudio.com/items?itemName=abhith.vscode-favorites).
 
 - [Debuggers](#debuggers)
   - [Debugger for Chrome](#debugger-for-chrome)
