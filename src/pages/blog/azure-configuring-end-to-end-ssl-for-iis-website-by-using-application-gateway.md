@@ -8,28 +8,43 @@ authorURL: "https://twitter.com/abhithrajan"
 date: 2019-09-24T09:26:00.000Z
 image: /img/blog/azure-configuring-end-to-end-ssl-for-iis-website-by-using-application-gateway/cover.png
 tags:
-  - aspnet-core
+  - azure
+  - iis
+  - security
 ---
 
-Lets start from the user, we pointed the domain to the Application Gateway Public IP, now we need to do the following in the Azure Application Gateway.
+For most cases we do SSL offloading at the Application Gateway end. i.e, HTTPS traffic between public and application gateway, HTTP traffic between application gateway and websites hosted under it. But in some cases we need end to end SSL. In our case, it was for the Identity Server.
+
+So lets start, We pointed the domain to the Application Gateway Public IP and We assume you purchased the SSL for your domain and we need the SSL certificate in two formats.
+
+1. **PFX** format for application gateway HTTPS listener.
+2. **CER** format for application gateway HTTP Settings.
+
+Now we need to do the following,
 
 1. Add an HTTPS listener for that domain with the Certificate.
 2. Create a backend pool with the VM where we will publish the website in the IIS.
 3. Add an HTTP Settings with the Certificate as shown in the picture.
+
+![Application Gateway HTTP Settings](../../../static/img/blog/azure-configuring-end-to-end-ssl-for-iis-website-by-using-application-gateway/application-gateway-http-settings.png)
+
 4. Create a rule which connects the listener (1) and backend pool(2) via the newly created HTTP settings (3).
 
-Once all this done, user will be able to hit Application Gateway with HTTPS and probably will see 404 since the VM not accepting the requests. So lets configure the VM to accept the traffic through 443 port. In the VM,
+Once all this done, user will be able to hit Application Gateway with HTTPS and probably will see 404 since the VM not responding to the requests. So lets configure the VM to accept the traffic through 443 port. In the VM,
 
 - Install the SSL certificate.
-- Configure the HTTPS website in the IIS with that certificate and the domain.
+- Configure the HTTPS website in the IIS with that certificate and the hostname (domain).
 
-Since we specified the host name in the bindings for the new site. One more thing we have to do is, since we are using 443 port by default to connect to the VM from Application Gateway with that newly created HTTP Settings, the backend health check probe for the same will also check the health of the machines in the backend pool via 443 port. Unless we specified a custom probe, the `default website`\* should be listening on the 443 port too otherwise you may experience some 503 from the application gateway, and you can check that whether the newly added backend pool will be showing in the unhealthy backend pools of Application Gateway.
+After this done, check whether you are able to reach the website successfully. If you are getting any 502 errors, check the following
 
-In the default website, add a binding for 443 port as shown in the below picture.
+- In the Application Gateway, check the unhealthy backend pools.
+- If our backend pool with the HTTPS HTTP settings name is in that unhealthy list, that indicates the VM in the backend pool not responding 200 back to the health probe check.
+- By default health probe check for HTTPS will sent health check requests to the VM's IP on 443 port, and in the IIS, no website will be listening for 443 port (Without any hostname specified).
+- To overcome, all we have to do is, on the default website (if there is no default site, add another binding to our site) as shown below,
 
-[PICTURE IS ABOUT TO UPDATE]
+![IIS default 443 port binding](../../../static/img/blog/azure-configuring-end-to-end-ssl-for-iis-website-by-using-application-gateway/iis-https-default.png)
 
-Once this done, VM will accept the HTTPS traffic through the Application Gateway and we are done.
+Once this done, watch the unhealthy backend pools and you may notice that our backend pool is healthy now (It will take at least 30 seconds to update). Now application gateway will route traffic to our VM over HTTPS and the VM will serve the website and we are done.
 
 ### Additional Resources
 
