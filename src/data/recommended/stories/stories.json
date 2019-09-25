@@ -1,5 +1,19 @@
 [
   {
+    "title": "Azure SQL DB Design Note: Choosing the Right Database Reservation Size",
+    "url": "https://techcommunity.microsoft.com/t5/SQL-Customer-Success-Engineering/Azure-SQL-DB-Design-Note-Choosing-the-Right-Database-Reservation/ba-p/872825",
+    "description": "A good article on available options on Azure SQL DB.",
+    "date": "2019-09-25T13:27:28.263Z",
+    "tags": ["azure", "sql-server"]
+  },
+  {
+    "title": ".NET Videos | Free videos from the .NET team and community",
+    "url": "https://dotnet.microsoft.com/learn/videos",
+    "description": "Free videos for learning all aspects of the .NET developer platform, including web, mobile, desktop, C#, machine learning, containers/docker, and data access.",
+    "date": "2019-09-25T13:22:28.263Z",
+    "tags": ["c-sharp", "dotnet-core", "aspnet-core"]
+  },
+  {
     "title": "C# Exception Handling Best Practices - DZone Performance",
     "url": "https://dzone.com/articles/c-exception-handling-best-practices",
     "description": "Learn what an exception is, about the anatomy of C# exceptions, the basic try catch finally block, exception filters, and how to create C# exception types.",
