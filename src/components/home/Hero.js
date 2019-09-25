@@ -160,7 +160,7 @@ export const query = graphql`
         subheading
         image {
           childImageSharp {
-            fluid(maxWidth: 510) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
