@@ -1,21 +1,85 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
 import SEO from "../components/seo/SEO";
 import StoriesRoll from "../components/StoriesRoll";
 import VideosRoll from "../components/VideosRoll";
 import ServicesRoll from "../components/ServicesRoll";
-
+import { kebabCase, sortBy } from "lodash";
 class TagRoute extends React.Component {
   render() {
     const data = this.props.data;
+
+    const postsGroup = data.allBlogPostTopics.group;
+    const storiesGroup = data.allStoriesJson.group;
+    const videosGroup = data.allVideosJson.group;
+    const servicesGroup = data.allServicesJson.group;
+
+    let topics = [];
+
+    postsGroup.forEach(node => {
+      topics.push({
+        slug: node.fieldValue,
+        totalPosts: node.totalCount,
+        totalVideos: 0,
+        totalStories: 0,
+        totalServices: 0
+      });
+    });
+
+    storiesGroup.forEach(node => {
+      let topic = topics.find(topic => topic.slug === node.fieldValue);
+      if (topic) {
+        topic.totalStories = node.totalCount;
+      } else {
+        topics.push({
+          slug: node.fieldValue,
+          totalPosts: 0,
+          totalVideos: 0,
+          totalStories: node.totalCount,
+          totalServices: 0
+        });
+      }
+    });
+
+    videosGroup.forEach(node => {
+      let topic = topics.find(topic => topic.slug === node.fieldValue);
+      if (topic) {
+        topic.totalVideos = node.totalCount;
+      } else {
+        topics.push({
+          slug: node.fieldValue,
+          totalPosts: 0,
+          totalVideos: node.totalCount,
+          totalStories: 0,
+          totalServices: 0
+        });
+      }
+    });
+
+    servicesGroup.forEach(node => {
+      let topic = topics.find(topic => topic.slug === node.fieldValue);
+      if (topic) {
+        topic.totalServices = node.totalCount;
+      } else {
+        topics.push({
+          slug: node.fieldValue,
+          totalPosts: 0,
+          totalVideos: 0,
+          totalStories: 0,
+          totalServices: node.totalCount
+        });
+      }
+    });
+
+    topics = sortBy(topics, topic => topic.slug);
 
     const posts = data.allMarkdownRemark.edges;
     const topicDetails = data.topicDetails;
 
     const tag =
-    topicDetails === null ? this.props.pageContext.tag : topicDetails.title;
+      topicDetails === null ? this.props.pageContext.tag : topicDetails.title;
 
     const totalPostCount = data.allMarkdownRemark.totalCount;
     const totalVideoCount = data.recommendedVideos.totalCount;
@@ -69,19 +133,48 @@ class TagRoute extends React.Component {
           description={tagHeader}
           slug={`\\topics\\${this.props.pageContext.tag}`}
         />
-        <div className="container">
-          <div className="section">
+        <div className="hero is-primary is-bold">
+          <div className="hero-body">
+            <div className="container">
+              <div className="columns is-vcentered">
+                <div className="column is-two-thirds">
+                  <h1 className="title"> {tag} </h1>
+                  <h2 className="subtitle">{tagHeader}</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section className="section">
+          <div className="container">
             <div className="columns">
-              <div className="column is-two-thirds">
-                <h1 className="title is-6 has-text-weight-bold mb-4">
-                  <span>Topics</span>
-                </h1>
-                <h4 className="spanborder text-capitalize">
-                  <span className="has-text-weight-bold">{tag}</span>
-                </h4>
-
+              <div className="column is-3 is-2-widescreen">
+                <div className="menu">
+                  <p className="menu-label"> Filter by topic </p>
+                  <ul className="menu-list">
+                    <li>
+                      <a href="/topics">All</a>
+                    </li>
+                    {topics.map(topic => (
+                      <li key={topic.slug}>
+                        <Link
+                          className={
+                            topic.slug === this.props.pageContext.tag
+                              ? "is-active"
+                              : ""
+                          }
+                          to={`/topics/${kebabCase(topic.slug)}/`}
+                        >
+                          {topic.slug}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="column is-9 is-10-widescreen">
                 <BlogRoll posts={posts} />
-
                 {videos.length > 0 && (
                   <div>
                     <h4 className=" spanborder">
@@ -119,7 +212,7 @@ class TagRoute extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </Layout>
     );
   }
@@ -216,6 +309,30 @@ export const tagPageQuery = graphql`
             }
           }
         }
+      }
+    }
+    allBlogPostTopics: allMarkdownRemark {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
+    }
+    allStoriesJson {
+      group(field: tags) {
+        fieldValue
+        totalCount
+      }
+    }
+    allVideosJson {
+      group(field: tags) {
+        fieldValue
+        totalCount
+      }
+    }
+    allServicesJson {
+      group(field: tags) {
+        fieldValue
+        totalCount
       }
     }
   }
