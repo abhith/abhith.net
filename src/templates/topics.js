@@ -149,7 +149,7 @@ class TagRoute extends React.Component {
         <section className="section">
           <div className="container">
             <div className="columns">
-              <div className="column is-3 is-2-widescreen">
+              <div className="column is-3 is-2-widescreen is-hidden-mobile">
                 <div className="menu">
                   <p className="menu-label"> Filter by topic </p>
                   <ul className="menu-list">
