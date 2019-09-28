@@ -54,6 +54,12 @@
     "image": "microsoft-azure-3.svg"
   },
   {
+    "title": "C#",
+    "slug": "c-sharp",
+    "description": "One of my favorite language.",
+    "image": ""
+  },
+  {
     "title": "Cache",
     "slug": "cache",
     "description": "One area to check for performance.",
@@ -66,14 +72,14 @@
     "image": ""
   },
   {
-    "title": "C#",
-    "slug": "c-sharp",
-    "description": "One of my favorite language.",
+    "title": "Content Writing",
+    "slug": "content-writing",
+    "description": "",
     "image": ""
   },
   {
-    "title": "Content Writing",
-    "slug": "content-writing",
+    "title": "CSS",
+    "slug": "css",
     "description": "",
     "image": ""
   },

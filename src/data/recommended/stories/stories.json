@@ -1,5 +1,12 @@
 [
   {
+    "title": "Responsive Youtube Embed | Tutorial | Avex Designs",
+    "url": "https://avexdesigns.com/responsive-youtube-embed/",
+    "description": "Use this responsive YouTube embed to create responsive videos with CSS. Resizing YouTube videos for your responsive web site using CSS and HTML.",
+    "date": "2019-09-28T22:27:28.263Z",
+    "tags": ["css"]
+  },
+  {
     "title": "Azure SQL DB Design Note: Choosing the Right Database Reservation Size",
     "url": "https://techcommunity.microsoft.com/t5/SQL-Customer-Success-Engineering/Azure-SQL-DB-Design-Note-Choosing-the-Right-Database-Reservation/ba-p/872825",
     "description": "A good article on available options on Azure SQL DB.",
