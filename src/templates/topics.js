@@ -7,6 +7,7 @@ import StoriesRoll from "../components/StoriesRoll";
 import VideosRoll from "../components/VideosRoll";
 import ServicesRoll from "../components/ServicesRoll";
 import { kebabCase, sortBy } from "lodash";
+import PageHero from "../components/PageHero";
 class TagRoute extends React.Component {
   render() {
     const data = this.props.data;
@@ -133,18 +134,7 @@ class TagRoute extends React.Component {
           description={tagHeader}
           slug={`\\topics\\${this.props.pageContext.tag}`}
         />
-        <div className="hero is-primary is-bold">
-          <div className="hero-body">
-            <div className="container">
-              <div className="columns is-vcentered">
-                <div className="column is-two-thirds">
-                  <h1 className="title"> {tag} </h1>
-                  <h2 className="subtitle">{tagHeader}</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <PageHero title={tag} subtitle={tagHeader}></PageHero>
 
         <section className="section">
           <div className="container">
@@ -154,7 +144,7 @@ class TagRoute extends React.Component {
                   <p className="menu-label"> Filter by topic </p>
                   <ul className="menu-list">
                     <li>
-                      <a href="/topics">All</a>
+                      <Link to={`/topics`}>All</Link>
                     </li>
                     {topics.map(topic => (
                       <li key={topic.slug}>
