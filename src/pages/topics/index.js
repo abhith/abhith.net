@@ -1,5 +1,5 @@
 import React from "react";
-import { kebabCase, sortBy } from "lodash";
+import { capitalize, sortBy } from "lodash";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import SEO from "../../components/seo/SEO";
@@ -12,7 +12,8 @@ const TopicsPage = ({
     allMarkdownRemark: { group: postsGroup },
     allStoriesJson: { group: storiesGroup },
     allVideosJson: { group: videosGroup },
-    allServicesJson: { group: servicesGroup }
+    allServicesJson: { group: servicesGroup },
+    allTopicsJson: { edges: existingTopics }
   }
 }) => {
   let topics = [];
@@ -72,6 +73,18 @@ const TopicsPage = ({
     }
   });
 
+  // merging with existing topics
+  topics.forEach(node => {
+    let topicDetails = existingTopics.find(
+      topic => topic.node.slug === node.slug
+    );
+    if (topicDetails) {
+      node.title = topicDetails.node.title;
+    } else {
+      node.title = capitalize(node.slug);
+    }
+  });
+
   topics = sortBy(topics, topic => topic.slug);
 
   return (
@@ -100,13 +113,13 @@ const TopicsPage = ({
                             <TopicImage slug={topic.slug} />
                           </figure>
                         </div>
-                        <h2 className="mt-2 title">{topic.slug}</h2>
+                        <h2 className="mt-2 title is-4">{topic.title}</h2>
 
                         <div className="buttons has-addons mb-2">
                           {topic.totalPosts > 0 && (
                             <Link
                               className="button is-outlined"
-                              to={`/topics/${kebabCase(topic.slug)}/`}
+                              to={`/topics/${topic.slug}/`}
                             >
                               <FaFileAlt />
                               <span>&nbsp;{topic.totalPosts}</span>
@@ -115,7 +128,7 @@ const TopicsPage = ({
                           {topic.totalVideos > 0 && (
                             <Link
                               className="button is-primary is-outlined"
-                              to={`/topics/${kebabCase(topic.slug)}/`}
+                              to={`/topics/${topic.slug}/`}
                             >
                               <FaVideo /> <span>&nbsp;{topic.totalVideos}</span>
                             </Link>
@@ -124,7 +137,7 @@ const TopicsPage = ({
                           {topic.totalStories > 0 && (
                             <Link
                               className="button is-link is-outlined"
-                              to={`/topics/${kebabCase(topic.slug)}/`}
+                              to={`/topics/${topic.slug}/`}
                             >
                               <FaBookOpen />
                               <span>&nbsp;{topic.totalStories}</span>
@@ -133,7 +146,7 @@ const TopicsPage = ({
                           {topic.totalServices > 0 && (
                             <Link
                               className="button is-success is-outlined"
-                              to={`/topics/${kebabCase(topic.slug)}/`}
+                              to={`/topics/${topic.slug}/`}
                             >
                               <FaGlobe />
                               <span>&nbsp;{topic.totalServices}</span>
@@ -143,7 +156,7 @@ const TopicsPage = ({
                         <p className="position-absolute guide">
                           <Link
                             className="is-bold"
-                            to={`/topics/${kebabCase(topic.slug)}/`}
+                            to={`/topics/${topic.slug}/`}
                           >
                             View details{" "}
                             <svg
@@ -202,6 +215,15 @@ export const pageQuery = graphql`
       group(field: tags) {
         fieldValue
         totalCount
+      }
+    }
+    allTopicsJson {
+      edges {
+        node {
+          slug
+          image
+          title
+        }
       }
     }
   }
