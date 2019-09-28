@@ -392,7 +392,7 @@ class BlogPost extends React.Component {
           <section className="section">
             <div className="container is-fluid">
               <TitleBar title={`Related Videos`}></TitleBar>
-              <VideosRoll videos={relatedVideos} itemsPerRow={2} />
+              <VideosRoll videos={relatedVideos} itemsPerRow={3} />
               <div className="cta-wrapper has-text-centered">
                 <Link
                   to="/recommended/videos"
@@ -516,7 +516,7 @@ export const pageQuery = graphql`
       }
     }
     recommendedVideos: allVideosJson(
-      limit: 4
+      limit: 3
       sort: { fields: [date], order: DESC }
       filter: { tags: { in: $tags } }
     ) {
