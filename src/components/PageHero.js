@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const PageHero = ({ title, subtitle }) => (
-  <section className="hero is-primary is-bold">
+const PageHero = ({ title, subtitle, className }) => (
+  <section className={`hero is-primary is-bold ${className}`}>
     <div className="hero-body">
       <div className="container">
         <div className="columns is-vcentered">
@@ -18,7 +18,8 @@ const PageHero = ({ title, subtitle }) => (
 
 PageHero.protoTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired
+  subtitle: PropTypes.string.isRequired,
+  className: PropTypes.string
 };
 
 export default PageHero;
