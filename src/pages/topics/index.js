@@ -3,7 +3,9 @@ import { kebabCase, sortBy } from "lodash";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import SEO from "../../components/seo/SEO";
+import PageHero from "../../components/PageHero";
 import { FaFileAlt, FaVideo, FaBookOpen, FaGlobe } from "react-icons/fa";
+import TopicImage from "../../components/TopicImage";
 
 const TopicsPage = ({
   data: {
@@ -74,63 +76,94 @@ const TopicsPage = ({
 
   return (
     <Layout>
+      <SEO
+        title="Topics"
+        description={`Summary of all the ${topics.length} topics in abhith.net`}
+        slug="/topics"
+      />
+      <PageHero
+        title={`All Topics`}
+        subtitle={`Summary of all the ${topics.length} topics in abhith.net`}
+        className={`position-relative page-hero`}
+      ></PageHero>
       <section className="section">
-        <SEO
-          title="Topics"
-          description={`Summary of all the ${topics.length} topics in abhith.net`}
-          slug="/topics"
-        />
-        <div className="container">
-          <div className="columns">
-            <div className="column is-two-thirds">
-              <h1 className="has-text-weight-bold title is-6 text-uppercase mb-4">
-                <span>All Topics</span>
-              </h1>
-              {topics.map(topic => (
-                <div className="box" key={topic.slug}>
-                  <Link to={`/topics/${kebabCase(topic.slug)}/`}>
-                    <p className="title mb-2">{topic.slug}</p>
-                  </Link>
-                  <div className="buttons">
-                    {topic.totalPosts > 0 && (
-                      <Link
-                        className="button is-light"
-                        to={`/topics/${kebabCase(topic.slug)}/`}
-                      >
-                        <FaFileAlt /> <span>&nbsp;{topic.totalPosts} POSTS</span>
-                      </Link>
-                    )}
-                    {topic.totalVideos > 0 && (
-                      <Link
-                        className="button is-info"
-                        to={`/topics/${kebabCase(topic.slug)}/`}
-                      >
-                        <FaVideo /> <span>&nbsp;{topic.totalVideos} VIDEOS</span>
-                      </Link>
-                    )}
+        <div className="container is-fluid" id="topics-block">
+          <div className="columns is-centered">
+            <div className="column is-9">
+              <div className="columns is-centered is-multiline">
+                {topics.map(topic => (
+                  <div className="column is-3" key={topic.slug}>
+                    <div className="block">
+                      <div className="inner-block position-relative">
+                        <div className="media-left">
+                          <figure className="image is-64x64">
+                            <TopicImage slug={topic.slug} />
+                          </figure>
+                        </div>
+                        <h2 className="mt-2 title">{topic.slug}</h2>
 
-                    {topic.totalStories > 0 && (
-                      <Link
-                        className="button is-link"
-                        to={`/topics/${kebabCase(topic.slug)}/`}
-                      >
-                        <FaBookOpen /> <span>&nbsp;{topic.totalStories} STORIES</span>
-                      </Link>
-                    )}
-                    {topic.totalServices > 0 && (
-                      <Link
-                        className="button is-white"
-                        to={`/topics/${kebabCase(topic.slug)}/`}
-                      >
-                        <FaGlobe /> <span>&nbsp;{topic.totalServices} SERVICES</span>
-                      </Link>
-                    )}
+                        <div className="buttons has-addons mb-2">
+                          {topic.totalPosts > 0 && (
+                            <Link
+                              className="button is-outlined"
+                              to={`/topics/${kebabCase(topic.slug)}/`}
+                            >
+                              <FaFileAlt />
+                              <span>&nbsp;{topic.totalPosts}</span>
+                            </Link>
+                          )}
+                          {topic.totalVideos > 0 && (
+                            <Link
+                              className="button is-primary is-outlined"
+                              to={`/topics/${kebabCase(topic.slug)}/`}
+                            >
+                              <FaVideo /> <span>&nbsp;{topic.totalVideos}</span>
+                            </Link>
+                          )}
+
+                          {topic.totalStories > 0 && (
+                            <Link
+                              className="button is-link is-outlined"
+                              to={`/topics/${kebabCase(topic.slug)}/`}
+                            >
+                              <FaBookOpen />
+                              <span>&nbsp;{topic.totalStories}</span>
+                            </Link>
+                          )}
+                          {topic.totalServices > 0 && (
+                            <Link
+                              className="button is-success is-outlined"
+                              to={`/topics/${kebabCase(topic.slug)}/`}
+                            >
+                              <FaGlobe />
+                              <span>&nbsp;{topic.totalServices}</span>
+                            </Link>
+                          )}
+                        </div>
+                        <p className="position-absolute guide">
+                          <Link
+                            className="is-bold"
+                            to={`/topics/${kebabCase(topic.slug)}/`}
+                          >
+                            View details{" "}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="#007bff"
+                              style={{ verticalAlign: "middle" }}
+                            >
+                              <path fill="none" d="M0 0h24v24H0V0z"></path>
+                              <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"></path>
+                            </svg>
+                          </Link>
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-            <div className="column">
-              {/* {% include sidebar-featured.html %}     */}
+                ))}
+              </div>
             </div>
           </div>
         </div>

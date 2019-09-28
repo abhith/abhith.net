@@ -393,3 +393,39 @@ article h6 {
   margin-left: -0.75rem;
   font-size: 1.125rem;
 }
+
+// Topics
+
+#topics-block .inner-block {
+  background: #fff;
+  border: 1px solid #dedede;
+  padding: 2rem;
+  border-radius: 12px;
+  min-height: 300px;
+}
+
+#topics-block .inner-block .guide {
+  bottom: 0;
+  padding: 1rem 2rem;
+  background: #f2f7fc;
+  width: 100%;
+  left: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+#topics-block {
+  margin-top: -9rem;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.page-hero {
+  padding-bottom: 10rem;
+}
