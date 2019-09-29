@@ -141,7 +141,15 @@ module.exports = {
               noInlineHighlight: false
             }
           },
-          "gatsby-remark-external-links"
+          "gatsby-remark-external-links",
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                table: "table"
+              }
+            }
+          }
         ]
       }
     },
