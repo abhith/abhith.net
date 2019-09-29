@@ -1,5 +1,12 @@
 [
   {
+    "title": "4. Four ways to style react components",
+    "url": "https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822",
+    "description": "There are four different options to style React components. All depend on your personal preferences and the specific complexity of your application. In React, inline styles are not specified as a…",
+    "date": "2019-09-29T13:27:28.263Z",
+    "tags": ["react"]
+  },
+  {
     "title": "Responsive Youtube Embed | Tutorial | Avex Designs",
     "url": "https://avexdesigns.com/responsive-youtube-embed/",
     "description": "Use this responsive YouTube embed to create responsive videos with CSS. Resizing YouTube videos for your responsive web site using CSS and HTML.",
