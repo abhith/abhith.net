@@ -1,5 +1,13 @@
 [
   {
+    "title": "FilePizza - Your files, delivered",
+    "url": "https://file.pizza/",
+    "description": "Free peer-to-peer file transfers in your browser. ",
+    "image": "",
+    "date": "2019-09-27T19:31:28.263Z",
+    "tags": ["download-site"]
+  },
+  {
     "title": "Sourcetree | Free Git GUI for Mac and Windows",
     "url": "https://www.sourcetreeapp.com/",
     "description": "A Git GUI that offers a visual representation of your repositories. Sourcetree is a free Git client for Windows and Mac. It supports Git-flow out of the box.",
