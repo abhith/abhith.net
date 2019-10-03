@@ -18,6 +18,12 @@
     "image": "angular-icon-1.svg"
   },
   {
+    "title": "API",
+    "slug": "api",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "ASP.NET",
     "slug": "aspnet",
     "description": "Open-source web framework for .NET",
@@ -164,12 +170,6 @@
   {
     "title": "NoSQL",
     "slug": "nosql",
-    "description": "",
-    "image": ""
-  },
-  {
-    "title": "REST",
-    "slug": "rest",
     "description": "",
     "image": ""
   },
