@@ -1,5 +1,12 @@
 [
   {
+    "title": "Tracepoints: Debug with less clutter",
+    "url": "https://devblogs.microsoft.com/visualstudio/tracepoints/",
+    "description": "Have you ever accidentally shipped a log statement to production? Are you tired of cleaning up log statements while debugging? The solution is here!",
+    "date": "2019-10-03T13:27:28.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
     "title": "4. Four ways to style react components",
     "url": "https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822",
     "description": "There are four different options to style React components. All depend on your personal preferences and the specific complexity of your application. In React, inline styles are not specified as a…",
