@@ -6060,12 +6060,12 @@ gatsby-remark-classes@^0.1.2:
   dependencies:
     unist-util-visit "^1.4.0"
 
-gatsby-remark-copy-linked-files@^2.1.19:
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.19.tgz#0126da478edafe05f66120f92875e9b1eea49b64"
-  integrity sha512-VKiWxw9x2KZNERoVAtx9oyIjjAtw9vorcNVBND2zlwoo04qyEK5vbnbJmaedCv1XxEpYEJSd7TVw/8saAqz3Vg==
+gatsby-remark-copy-linked-files@^2.1.24:
+  version "2.1.24"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.24.tgz#ae2df5393fe5026509c3bbfd2c7d1f0a351572cb"
+  integrity sha512-B5uoYZR1yVFaCOxZgWe8mAyadVia7ODqnPEZ2EuS8obRDUTTNJTvX1AdYdqn9RVe3vUFjj43Vmu4RxQ8R9Ty8A==
   dependencies:
-    "@babel/runtime" "^7.6.0"
+    "@babel/runtime" "^7.6.2"
     cheerio "^1.0.0-rc.3"
     fs-extra "^8.1.0"
     is-relative-url "^3.0.0"
