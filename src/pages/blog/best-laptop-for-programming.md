@@ -6,8 +6,8 @@ description: >-
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
 date: 2019-06-08T22:50:00.000Z
-lastModificationTime: 2019-07-02T13:02:00.000Z
-image: /img/best-laptop-for-programming.png
+lastModificationTime: 2019-10-05T20:02:00.000Z
+image: /img/blog/best-laptop-for-programming.png
 commentId: "best-laptop-for-programming"
 tags:
   - awesome-list
@@ -40,7 +40,7 @@ Right now its time to own a machine, and the **minimum** features am looking for
 
 ### Shortlisted Laptops
 
-The main youtube channels which I rely for laptop reviews are,
+The main YouTube channels which I rely for laptop reviews are,
 
 - [Dave Lee (Dave 2D)](https://www.youtube.com/channel/UCVYamHliCI9rw1tHR1xbkfw)
 - [OWNorDisown](https://www.youtube.com/channel/UCkTweJExGMqp3NLvzvOn-yg)
@@ -55,14 +55,12 @@ And After watching tons of reviews and all, my shortlisted items are,
 Model Name: WA-7US5130SP
 [Official Website](https://store.gigabyte.us/aero-15-oled-wa-7us5130sp-uhd-amoled-i7-9750h-nvidia-geforce-rtx-2060-gddr6-6gb-16gb-ram-512gb-m-2-pcie-ssd-win-10-pro-gaming-laptop/)
 
-##### Pros
-
-- Matching my requirement 5/5.
+On the pro side, it ticks all my requirement 5/5.
 
 ##### Cons
 
-- Unavailable at the moment.
 - Web Camera position
+- Thermal throttling
 
 ##### Purchase AERO 15
 
@@ -71,12 +69,6 @@ Model Name: WA-7US5130SP
 #### ThinkPad X1 Extreme (2nd Gen) (15.6") Laptop
 
 [Official Website](https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/X1-Extreme-Gen-2/p/22TP2TXX1E2)
-
-Waiting for the new model to release with updated hardware including 9th generation Intel CPU's.
-
-##### Cons
-
-- Unavailable at the moment.
 
 #### Acer Predator Triton 500
 
@@ -89,20 +81,11 @@ Watch the reviews,
 `youtube: https://www.youtube.com/watch?v=rOCiNSZIhmM`
 `youtube: https://www.youtube.com/watch?v=qwGTHLeG2dY`
 
-##### Pros
-
-- Matching my requirement 4/5.
-- Available in UAE via [newegg.com](https://www.newegg.com/global/ae-en/p/N82E16834316772?item=9SIA0ZX9AE2712&nm_mc=otc-hatch&cm_mmc=otc-hatch-_-notebooks-_-acer+america-_-9sia0zx9ae2712).
-
-##### Cons
-
-Not easily upgradable because of its inverted motherboard construction. See the below video,
+On the pro side, it matches my requirement 4/5. But on the con side, it is not easily upgradable because of its inverted motherboard construction. See the below video,
 
 `youtube: https://www.youtube.com/watch?v=6-PmEaytJOA`
 
 Other than that, Only zoned RGB keyboard, **NO** per key RGB.
-
-##### Purchase
 
 Couldn't find the exact one in [Amazon](https://amzn.to/2KrpHcz) but similar spec with intel 8750H found [here](https://amzn.to/2KrpHcz).
 
@@ -112,11 +95,11 @@ Check out the below review.
 
 `youtube: https://www.youtube.com/watch?v=EloUckKqAKc`
 
-Its the cheapest in this list.
+Its the cheapest in this list. And it got a bit more gaming look.
 
-##### Cons
+#### Any Refurbished WORKSTATION
 
-- More gaming look.
+To save some bucks.
 
 ### Skipped Laptops
 
@@ -127,4 +110,4 @@ Its the cheapest in this list.
 
 ### Conclusion
 
-This is not the end of this post. Consider it as a draft for now. I will update my thoughts on the non-available machines once they are released.
+And my search ended when I found a good deal on [Dell Precision 7720](https://www.newegg.com/global/ae-en/p/N82E16834844793?Item=N82E16834844793). Even though it only ticked 2 out of my 5 requirements, am pretty satisfied with it.
