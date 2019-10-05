@@ -3,14 +3,14 @@ templateKey: blog-post
 title: Download file using WCF REST Service
 description: Download file using WCF Service
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2018-03-07T08:55:00.000Z
 image: /img/florian-klauer-489-unsplash.jpg
 tags:
   - wcf
-  - rest
   - dotnet
 ---
+
 Recently, We deployed a web application in a load balanced environment. And one of the features in the app was to download some data as excel and it was working fine in DEV (as usual) but keep failing in the PROD. When I checked it on the individual servers, all worked fine but not under SLB (Software Load Balancing).
 
 So I reviewed the code and found out that there are two requests being sent, one after another, one for generating the file in the server and another one for fetching the generated file. Pretty bad implementation, right?
@@ -51,7 +51,7 @@ public Stream GetReportByDate(string cultureName, string someId)
 }
 ```
 
-Here **ContentType**  can be whatever it is, if you know it.  **application/octet-stream** is appropriate for entitites whose sole intended purpose is to be saved to disk.
+Here **ContentType** can be whatever it is, if you know it. **application/octet-stream** is appropriate for entitites whose sole intended purpose is to be saved to disk.
 If you only generates say PDF, then the content type part can be changed to,
 
 ```cs
