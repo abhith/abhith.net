@@ -5990,12 +5990,12 @@ gatsby-plugin-robots-txt@^1.5.0:
     "@babel/runtime" "^7.5.1"
     generate-robotstxt "^7.1.0"
 
-gatsby-plugin-sass@^2.1.14:
-  version "2.1.14"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.1.14.tgz#16c21f9bfdded165c5bd0f7b46b6ff6f1801d627"
-  integrity sha512-ly9iy6wdd9oojP5XupZTvcBjwxDsvY7lXcZDQmhVNMWJPSw9O2AHjLEW2BSa7pSL4p/SOGdHdIboSDAZJtZMyg==
+gatsby-plugin-sass@^2.1.17:
+  version "2.1.17"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.1.17.tgz#0c0735f9c61601a80ebb14a5f286b8d90e643b03"
+  integrity sha512-SiCbX2RH1WpQOIdnljLviV5N94wmDZoqEPZlTbZinr0TePYOLMVu5Wio/yEZm9sFzVeEpkxQt3AeKaMozsyOIw==
   dependencies:
-    "@babel/runtime" "^7.6.0"
+    "@babel/runtime" "^7.6.2"
     sass-loader "^7.3.1"
 
 gatsby-plugin-sharp@^2.2.25:
@@ -6042,12 +6042,12 @@ gatsby-react-router-scroll@^2.1.8:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-remark-autolink-headers@^2.1.10:
-  version "2.1.10"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.10.tgz#58fea6ede8c52586e5239cc9d4dff26f75d8aab5"
-  integrity sha512-MXQuxgTurOXMYi3Rpywz2kMe4Px/H3B2OBy5ZphL9WwOFfaiRK10GkRNMNlHSDNA0K5151PnuSd5mKxLOCxbYw==
+gatsby-remark-autolink-headers@^2.1.13:
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.13.tgz#f707e6d5ab063aae368604edfae0c948e8154884"
+  integrity sha512-DQnb1eLfMFX5QXn2LDV/eu587dEBrjKuVB+Pt1Q3cVr3BpyFHjDiDYxMgGfgNJ5L1omB3DFHiuBrUmng6XJtWA==
   dependencies:
-    "@babel/runtime" "^7.6.0"
+    "@babel/runtime" "^7.6.2"
     github-slugger "^1.2.1"
     lodash "^4.17.15"
     mdast-util-to-string "^1.0.6"
