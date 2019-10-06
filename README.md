@@ -1,10 +1,20 @@
 # WWW.ABHITH.NET
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ceb3b988-acb1-4f96-9024-62ea791176bc/deploy-status)](https://app.netlify.com/sites/abhith/deploys)
+[![DeepScan grade](https://deepscan.io/api/teams/5261/projects/7035/branches/64959/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5261&pid=7035&bid=64959)
 
-This repo serves the source code for [www.abhith.net](https://www.abhith.net/), and is deployed via [Netlify CMS](https://www.netlifycms.org).
+This repo serves the source code for [www.abhith.net](https://www.abhith.net/). Designed using [Bulma](https://bulma.io) and is deployed via [Netlify](https://www.netlify.com/).
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+
+## Design
+
+The CSS framework used in this project is [Bulma](https://bulma.io). And the design inspiration came from the following,
+
+- [wowthemesnet/mundana-theme-jekyll](https://github.com/wowthemesnet/mundana-theme-jekyll)
+- [cssninjaStudio/krypton](https://github.com/cssninjaStudio/krypton)
+
+Since I am not a designer by profession, copy paste is what I do in most cases plus do some tweaks according to my likes.
 
 ## Main Sections
 

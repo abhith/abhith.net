@@ -3,7 +3,7 @@ title: Project management - Organize issues using labels
 author: Abhith Rajan
 authorURL: http://twitter.com/abhithrajan
 date: "2019-02-06T00:00:00.000Z"
-lastModificationTime: 2019-08-15T10:22:00.000Z
+lastModificationTime: 2019-09-15T10:22:00.000Z
 templateKey: blog-post
 image: /img/blog/project-management-organize-issues-using-labels.png
 description: >-
@@ -25,6 +25,7 @@ Indicating the area to which issues belong.
 | ------------------- | ----------------- | ----- |
 | area: optimization  | Fine tuning works |       |
 | area: documentation |                   |       |
+| area: security      |                   |       |
 
 ### Priority
 

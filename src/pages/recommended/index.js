@@ -2,11 +2,10 @@ import React from "react";
 import Layout from "../../components/Layout";
 import SEO from "../../components/seo/SEO";
 import VideosRoll from "../../components/VideosRoll";
-import StoriesRollItem from "../../components/StoriesRollItem";
 import { graphql, Link } from "gatsby";
 
-import { FaGlobe, FaVideo, FaBookOpen } from "react-icons/fa";
 import Img from "gatsby-image";
+import StoriesRoll from "../../components/StoriesRoll";
 
 export default class RecommendedIndexPage extends React.Component {
   render() {
@@ -15,6 +14,7 @@ export default class RecommendedIndexPage extends React.Component {
     const serviceImgData = data.serviceImg.childImageSharp.fluid;
     const storiesImgData = data.storiesImg.childImageSharp.fluid;
     const videos = data.recommendedVideos.edges;
+    const stories = data.recommendedStories.edges;
     return (
       <Layout>
         <div className="container">
@@ -44,22 +44,22 @@ export default class RecommendedIndexPage extends React.Component {
                       going on around. Here I am listing out some of the stories
                       which I find useful.
                     </p>
-                    <div>
+                    <div className="cta-wrapper has-text-centered">
                       <Link
-                        className="sscroll btn btn-gray btn-sm"
                         to="/recommended/stories"
+                        className="button k-button k-primary raised has-gradient is-bold"
                       >
-                        <FaBookOpen /> {data.recommendedStories.totalCount}{" "}
-                        STORIES
+                        <span className="text">
+                          View All {data.recommendedStories.totalCount} Stories
+                        </span>
+                        <span className="front-gradient"></span>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="column">
-                {data.recommendedStories.edges.map(({ node }) => {
-                  return <StoriesRollItem post={node} key={node.id} />;
-                })}
+                <StoriesRoll posts={stories} mode={`compact`} showDescription={false}></StoriesRoll>
               </div>
             </div>
 
@@ -79,15 +79,16 @@ export default class RecommendedIndexPage extends React.Component {
                       Similar to Developer Stories, here I am listing videos
                       which worth sharing.
                     </p>
-                    <div>
-                      <small className="d-block text-muted">
-                        <Link
-                          className="sscroll btn btn-lightblue btn-sm"
-                          to="/recommended/videos"
-                        >
-                          <FaVideo /> {data.recommendedVideos.totalCount} VIDEOS
-                        </Link>
-                      </small>
+                    <div className="cta-wrapper has-text-centered">
+                      <Link
+                        to="/recommended/videos"
+                        className="button k-button k-primary raised has-gradient is-bold"
+                      >
+                        <span className="text">
+                          View All {data.recommendedVideos.totalCount} Videos
+                        </span>
+                        <span className="front-gradient"></span>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -113,20 +114,20 @@ export default class RecommendedIndexPage extends React.Component {
                       Here I am sharing some of the useful ones which I explored
                       yet.
                     </p>
-                    <div>
+                    <div className="cta-wrapper has-text-centered">
                       <Link
-                        className="sscroll btn btn-light btn-sm"
                         to="/recommended/services"
+                        className="button k-button k-primary raised has-gradient is-bold"
                       >
-                        <FaGlobe /> {data.services.totalCount} SERVICES
+                        <span className="text">
+                          View All {data.services.totalCount} Services
+                        </span>
+                        <span className="front-gradient"></span>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-              {/* <div className="col-md-6">
-              <VideosRoll videos={videos} />
-            </div> */}
             </div>
           </div>
         </div>

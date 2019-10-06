@@ -5,8 +5,8 @@ description: >-
   This post contains my personal experiences trying Oracle Database.
 author: Abhith Rajan
 authorURL: 'https://twitter.com/abhithrajan'
-date: 2019-08-21T15:11:27.975Z
-lastModificationTime: 2019-05-26T14:38:00.000Z
+date: 2019-05-08T15:11:27.975Z
+lastModificationTime: 2019-08-21T15:11:27.975Z
 image: /img/logo-oracle-database.png
 tags:
   - sql-server

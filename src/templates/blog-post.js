@@ -11,8 +11,9 @@ import { DiscussionEmbed } from "disqus-react";
 import BlogRollItem from "../components/BlogRollItem";
 import VideosRoll from "../components/VideosRoll";
 import ServicesRoll from "../components/ServicesRoll";
-import StoriesRollItem from "../components/StoriesRollItem";
+import StoriesRoll from "../components/StoriesRoll";
 import TopicsBar from "../components/TopicsBar";
+import TitleBar from "../components/TitleBar";
 import { FaCoffee } from "react-icons/fa";
 
 import {
@@ -40,7 +41,6 @@ export const BlogPostTemplate = ({
   date,
   author,
   readingTime,
-  commentId,
   lastModifiedTime,
   lastModifiedTimeString,
   dateModifiedSeoFormat,
@@ -49,15 +49,15 @@ export const BlogPostTemplate = ({
   siteMetadata
 }) => {
   const PostContent = contentComponent || Content;
-  const disqusConfig = {
-    shortname: `abhith`,
-    config: { identifier: commentId, title }
-  };
 
   const pageUrl = `${siteMetadata.siteUrl}${slug}`;
+  const githubURL = `https://github.com/Abhith/abhith.net/blob/master/src/pages${slug.substring(
+    0,
+    slug.length - 1
+  )}.md`;
 
   return (
-    <div className="container">
+    <div className="blog-post-wrapper">
       <SEO
         title={title}
         description={description}
@@ -67,167 +67,190 @@ export const BlogPostTemplate = ({
         dateModified={dateModifiedSeoFormat}
         datePublished={datePublishedSeoFormat}
       />
-      <div className="columns">
-        <div className="column">
-          <p className="text-uppercase ">
-            {tags && tags.length ? (
-              <span className="taglist">
-                {tags.map(tag => (
-                  <React.Fragment key={tag}>
-                    <Link
-                      className="has-text-danger has-text-weight-bold is-uppercase"
-                      to={`/topics/${kebabCase(tag)}/`}
-                    >
-                      {tag}
-                    </Link>{" "}
-                    <span className="sep">, </span>
-                  </React.Fragment>
-                ))}
-              </span>
-            ) : null}
-          </p>
-          <h1 className="title is-1 mb-4 article-headline">{title}</h1>
-          <div className="media">
-            <figure className="media-left">
-              <p className="image is-64x64">
-                <img
-                  className="is-rounded"
-                  src={author.image}
-                  alt={author.name}
-                />
-              </p>
-            </figure>
-            <div className="media-content">
-              <small>
-                {author.name}{" "}
-                <span>
-                  <OutboundLink
-                    target="_blank"
-                    className="button is-success is-outlined is-small is-rounded ml-1"
-                    href={author.url}
-                  >
-                    Follow
-                  </OutboundLink>
-                </span>
-                <br />
-                <span className="text-muted mt-1">
-                  {date} &middot; {readingTime} &middot; Last Updated:{" "}
-                  <time dateTime={lastModifiedTime}>
-                    {lastModifiedTimeString}
-                  </time>
-                </span>
-              </small>
-            </div>
-          </div>
-        </div>
-        <div className="column">
-          <Img fluid={image.childImageSharp.fluid} />
-        </div>
-      </div>
-      <div className="columns is-centered">
-        <div className="column is-2 pr-4 mb-4">
-          <div className="sticky has-text-centered">
-            <div className="text-muted">Share this</div>
-
-            <div className="buttons is-centered">
-              <FacebookShareButton
-                url={pageUrl}
-                quote={title}
-                className="button is-medium is-white"
-              >
-                <FacebookIcon size={44} round />
-              </FacebookShareButton>
-
-              <TwitterShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-                via={siteMetadata.social.twitter.split("@").join("")}
-                hashtags={tags}
-              >
-                <TwitterIcon size={44} round></TwitterIcon>
-              </TwitterShareButton>
-              <LinkedinShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-              >
-                <LinkedinIcon size={44} round></LinkedinIcon>
-              </LinkedinShareButton>
-              <RedditShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-              >
-                <RedditIcon size={44} round></RedditIcon>
-              </RedditShareButton>
-              <PocketShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-              >
-                <PocketIcon size={44} round></PocketIcon>
-              </PocketShareButton>
-              <WhatsappShareButton
-                url={pageUrl}
-                className="button is-medium is-white"
-                title={title}
-              >
-                <WhatsappIcon size={44} round></WhatsappIcon>
-              </WhatsappShareButton>
-            </div>
-          </div>
-        </div>
-        <div className="column is-8">
-          <PostContent content={content} className={`content`} />
-          <TopicsBar topics={tags} />
-          <div className="container mt-5">
-            <div className="media">
-              <figure className="media-left">
-                <p className="image is-96x96">
-                  <img
-                    className="is-rounded"
-                    src={author.image}
-                    alt={author.name}
-                  />
+      <section className="hero hero-is-secondary">
+        <div className="hero-body">
+          <div className="container is-fluid">
+            <div className="columns is-vcentered">
+              <div className="column is-5 is-offset-1 post-caption">
+                <p className="text-uppercase ">
+                  {tags && tags.length ? (
+                    <span className="taglist">
+                      {tags.map(tag => (
+                        <React.Fragment key={tag}>
+                          <Link
+                            className="has-text-danger has-text-weight-bold is-uppercase"
+                            to={`/topics/${kebabCase(tag)}/`}
+                          >
+                            {tag}
+                          </Link>{" "}
+                          <span className="sep">, </span>
+                        </React.Fragment>
+                      ))}
+                    </span>
+                  ) : null}
                 </p>
-              </figure>
-              <div className="media-content">
-                <div className="content">
-                  <p>
-                    <strong className="title is-4">
-                      Written by {author.name}
-                    </strong>{" "}
+                <div className="divider"></div>
+                <h1 className="title is-2 is-light is-semibold is-spaced main-title">
+                  {title}
+                </h1>
+
+                <div className="author-block">
+                  <div className="image is-64x64">
+                    <img src="/img/abhith-avatar.jpg" alt="" />
+                  </div>
+                  <div className="author-name">
                     <span>
+                      by {author.name}{" "}
                       <OutboundLink
                         target="_blank"
-                        className="button is-success is-outlined is-small is-rounded ml-1"
+                        className="button is-info is-outlined is-small is-rounded ml-1"
                         href={author.url}
                       >
                         Follow
                       </OutboundLink>
                     </span>
+
                     <span>
-                      <OutboundLink
-                        className="button is-info is-outlined is-small is-rounded ml-1"
-                        href="https://ko-fi.com/abhith"
-                        target="_blank"
-                      >
-                        Buy me a coffee <FaCoffee className="text-danger" />
-                      </OutboundLink>
+                      {date} &middot; {readingTime} &middot; Last Updated:{" "}
+                      <time dateTime={lastModifiedTime}>
+                        {lastModifiedTimeString}
+                      </time>
                     </span>
-                    <br />
-                    {author.minibio}
-                  </p>
+                  </div>
+                </div>
+              </div>
+              <div className="column is-5">
+                <figure className="image">
+                  <Img
+                    fluid={image.childImageSharp.fluid}
+                    className="blog-featured"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container is-fluid">
+          <div className="columns is-centered">
+            <div className="column is-2 pr-4 mb-4">
+              <div className="sticky has-text-centered">
+                <div className="text-muted">Share this</div>
+
+                <div className="buttons is-centered">
+                  <FacebookShareButton
+                    url={pageUrl}
+                    quote={title}
+                    className="button is-medium is-white"
+                  >
+                    <FacebookIcon size={44} round />
+                  </FacebookShareButton>
+
+                  <TwitterShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                    via={siteMetadata.social.twitter.split("@").join("")}
+                    hashtags={tags}
+                  >
+                    <TwitterIcon size={44} round></TwitterIcon>
+                  </TwitterShareButton>
+                  <LinkedinShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                  >
+                    <LinkedinIcon size={44} round></LinkedinIcon>
+                  </LinkedinShareButton>
+                  <RedditShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                  >
+                    <RedditIcon size={44} round></RedditIcon>
+                  </RedditShareButton>
+                  <PocketShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                  >
+                    <PocketIcon size={44} round></PocketIcon>
+                  </PocketShareButton>
+                  <WhatsappShareButton
+                    url={pageUrl}
+                    className="button is-medium is-white"
+                    title={title}
+                  >
+                    <WhatsappIcon size={44} round></WhatsappIcon>
+                  </WhatsappShareButton>
+                </div>
+              </div>
+            </div>
+            <div className="column is-8">
+              <PostContent content={content} className={`content post-body`} />
+              <TopicsBar topics={tags} />
+              <div id="typo" className="bd-typo">
+                <p className="has-text-grey">
+                  This page is{" "}
+                  <strong className="has-text-grey">open source</strong>.
+                  Noticed a typo? Or something unclear?
+                  <br />
+                  <OutboundLink
+                    href={githubURL}
+                    target="_blank"
+                    className="has-text-grey"
+                  >
+                    Improve this page on GitHub
+                  </OutboundLink>
+                </p>
+              </div>
+              <div className="container mt-5">
+                <div className="media">
+                  <figure className="media-left">
+                    <p className="image is-96x96">
+                      <img
+                        className="is-rounded"
+                        src={author.image}
+                        alt={author.name}
+                      />
+                    </p>
+                  </figure>
+                  <div className="media-content">
+                    <div className="content">
+                      <p>
+                        <strong className="title is-4">
+                          Written by {author.name}
+                        </strong>{" "}
+                        <span>
+                          <OutboundLink
+                            target="_blank"
+                            className="button is-success is-outlined is-small is-rounded ml-1"
+                            href={author.url}
+                          >
+                            Follow
+                          </OutboundLink>
+                        </span>
+                        <span>
+                          <OutboundLink
+                            className="button is-info is-outlined is-small is-rounded ml-1"
+                            href="https://ko-fi.com/abhith"
+                            target="_blank"
+                          >
+                            Buy me a coffee <FaCoffee className="text-danger" />
+                          </OutboundLink>
+                        </span>
+                        <br />
+                        {author.minibio}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="comments" className="mt-5">
-            <DiscussionEmbed {...disqusConfig} />
-          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
@@ -242,7 +265,6 @@ BlogPostTemplate.propTypes = {
   date: PropTypes.string,
   author: PropTypes.object,
   readingTime: PropTypes.string,
-  commentId: PropTypes.string,
   lastModifiedTime: PropTypes.string,
   lastModifiedTimeString: PropTypes.string,
   dateModifiedSeoFormat: PropTypes.string,
@@ -259,25 +281,25 @@ class BlogPost extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    // window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    // window.removeEventListener("scroll", this.handleScroll);
   }
 
-  handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > 280) {
-      this.setState({
-        alertbarClass: "show"
-      });
-    } else {
-      this.setState({
-        alertbarClass: ""
-      });
-    }
-  };
+  // handleScroll = () => {
+  //   const currentScrollPos = window.pageYOffset;
+  //   if (currentScrollPos > 280) {
+  //     this.setState({
+  //       alertbarClass: "show"
+  //     });
+  //   } else {
+  //     this.setState({
+  //       alertbarClass: ""
+  //     });
+  //   }
+  // };
 
   render() {
     const data = this.props.data;
@@ -310,45 +332,47 @@ class BlogPost extends React.Component {
       }
     );
 
+    const commentId =
+      post.frontmatter.commentId === null
+        ? post.fields.slug
+        : post.frontmatter.commentId;
+
+    const disqusConfig = {
+      shortname: `abhith`,
+      config: { identifier: commentId, title: post.frontmatter.title }
+    };
+
     return (
       <Layout>
-        <div className="section">
-          <BlogPostTemplate
-            content={post.html}
-            slug={post.fields.slug}
-            contentComponent={HTMLContent}
-            description={post.frontmatter.description}
-            tags={post.frontmatter.tags}
-            title={post.frontmatter.title}
-            image={post.frontmatter.image}
-            date={post.frontmatter.dateString}
-            author={data.site.siteMetadata.author}
-            readingTime={post.fields.readingTime.text}
-            commentId={
-              post.frontmatter.commentId === null
-                ? post.fields.slug
-                : post.frontmatter.commentId
-            }
-            lastModifiedTime={
-              post.frontmatter.lastModificationTime === null
-                ? post.frontmatter.date
-                : post.frontmatter.lastModificationTime
-            }
-            lastModifiedTimeString={
-              post.frontmatter.lastModificationTime === null
-                ? post.frontmatter.dateString
-                : post.frontmatter.lastModificationTimeString
-            }
-            dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
-            datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
-            siteMetadata={data.site.siteMetadata}
-          />
-
-          {relatedPosts.length > 0 && (
-            <>
-              <h4 className="spanborder">
-                <span className="has-text-weight-bold">Related Posts</span>
-              </h4>
+        <BlogPostTemplate
+          content={post.html}
+          slug={post.fields.slug}
+          contentComponent={HTMLContent}
+          description={post.frontmatter.description}
+          tags={post.frontmatter.tags}
+          title={post.frontmatter.title}
+          image={post.frontmatter.image}
+          date={post.frontmatter.dateString}
+          author={data.site.siteMetadata.author}
+          readingTime={post.fields.readingTime.text}
+          lastModifiedTime={
+            post.frontmatter.lastModificationTime === null
+              ? post.frontmatter.date
+              : post.frontmatter.lastModificationTime
+          }
+          lastModifiedTimeString={
+            post.frontmatter.lastModificationTime === null
+              ? post.frontmatter.dateString
+              : post.frontmatter.lastModificationTimeString
+          }
+          dateModifiedSeoFormat={post.frontmatter.dateModifiedSeoFormat}
+          datePublishedSeoFormat={post.frontmatter.datePublishedSeoFormat}
+          siteMetadata={data.site.siteMetadata}
+        />
+        {relatedPosts.length > 0 && (
+          <section className="section">
+            <div className="container is-fluid">
+              <TitleBar title={`Related Posts`}></TitleBar>
               <div className="columns">
                 <div className="column">
                   {relatedPostsFirstHalf.map(({ node }) => {
@@ -361,93 +385,60 @@ class BlogPost extends React.Component {
                   })}
                 </div>
               </div>
-            </>
-          )}
-          {relatedVideos.length > 0 && (
-            <>
-              <h4 className=" spanborder">
-                <span className="has-text-weight-bold">Related Videos</span>
-              </h4>
-              <div className="columns">
-                <div className="column is-full">
-                  <VideosRoll videos={relatedVideos} />
-                </div>
+            </div>
+          </section>
+        )}
+        {relatedVideos.length > 0 && (
+          <section className="section">
+            <div className="container is-fluid">
+              <TitleBar title={`Related Videos`}></TitleBar>
+              <VideosRoll videos={relatedVideos} itemsPerRow={3} />
+              <div className="cta-wrapper has-text-centered">
+                <Link
+                  to="/recommended/videos"
+                  className="button k-button k-primary raised has-gradient is-bold"
+                >
+                  <span className="text">View More Videos</span>
+                  <span className="front-gradient"></span>
+                </Link>
               </div>
-            </>
-          )}
+            </div>
+          </section>
+        )}
 
-          {relatedStories.length > 0 && (
-            <>
-              <h4 className="spanborder">
-                <span className="has-text-weight-bold">Related Stories</span>
-              </h4>
+        {relatedStories.length > 0 && (
+          <section className="section">
+            <div className="container is-fluid">
+              <TitleBar title={`Related Stories`}></TitleBar>
               <div className="columns">
                 <div className="column is-half">
-                  {relatedStoriesFirstHalf.map(({ node }) => {
-                    return <StoriesRollItem post={node} key={node.id} />;
-                  })}
+                  <StoriesRoll posts={relatedStoriesFirstHalf} />
                 </div>
                 <div className="column is-half">
-                  {relatedStoriesSecondHalf.map(({ node }) => {
-                    return <StoriesRollItem post={node} key={node.id} />;
-                  })}
+                  <StoriesRoll posts={relatedStoriesSecondHalf} />
                 </div>
               </div>
-            </>
-          )}
+            </div>
+          </section>
+        )}
 
-          {relatedServices.length > 0 && (
-            <>
+        {relatedServices.length > 0 && (
+          <section className="section">
+            <div className="container is-fluid">
               <div className="columns">
                 <div className="column is-full">
-                  <h4 className=" spanborder">
-                    <span className="has-text-weight-bold">
-                      Related Services
-                    </span>
-                  </h4>
+                  <TitleBar title={`Related Services`}></TitleBar>
                   <ServicesRoll services={relatedServices} />
                 </div>
               </div>
-            </>
-          )}
-        </div>
-        {/* <div className={`alertbar ${this.state.alertbarClass}`}>
-          <div className="container">
-            <div className="columns prevnextlinks small">
-              <div className="column is-half rightborder pl-0">
-                <OutboundLink
-                  className="text-dark"
-                  href={featuredServices[0].url}
-                  target="_blank"
-                >
-                  <img
-                    height="30px"
-                    className="mr-1"
-                    src={featuredServices[0].image}
-                    alt={featuredServices[0].title}
-                  />
-                  {featuredServices[0].title}
-                </OutboundLink>
-              </div>
-
-              <div className="column is-half text-right pr-0">
-                <OutboundLink
-                  className="text-dark"
-                  href={featuredServices[1].url}
-                  target="_blank"
-                >
-                  {featuredServices[1].title}
-                  <img
-                    height="30px"
-                    className="ml-1"
-                    src={featuredServices[1].image}
-                    alt={featuredServices[1].title}
-                  />
-                </OutboundLink>
-              </div>
             </div>
+          </section>
+        )}
+        <section className="section">
+          <div className="container is-fluid">
+            <DiscussionEmbed {...disqusConfig} />
           </div>
-        </div> */}
+        </section>
       </Layout>
     );
   }

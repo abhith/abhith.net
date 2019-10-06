@@ -2,34 +2,36 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicImage from "./TopicImage";
-import TopicsBar from "./TopicsBar";
+import { domainFromURL } from "../utils/common";
 
-const StoriesRollItem = ({ post }) => {
+const StoriesRollItem = ({ post, showDescription }) => {
   return (
-    <div className="columns">
-      <div className="column is-one-third">
-        <OutboundLink href={post.url} target="_blank">
+    <div className="blog-post">
+      <OutboundLink target="_blank" href={post.url}>
+        <div className="featured-image">
           <TopicImage slug={post.tags[0]} />
-        </OutboundLink>
-      </div>
-      <div className="column is-two-third">
-        <h2 className="title is-6 has-text-weight-bold">
-          <OutboundLink
-            className="has-text-dark"
-            target="_blank"
-            href={post.url}
-          >
-            {post.title}
-          </OutboundLink>
-        </h2>
-        <TopicsBar topics={post.tags} />
-        <small className="text-muted">{post.date}</small>
-      </div>
+        </div>
+        <div className="content">
+          <div className="post-title">{post.title}</div>
+          <span className="blog-date">{post.date}</span>
+          {showDescription && <p>{post.description}</p>}
+          <div className="post-meta">
+            <span>
+              <small>in</small> {post.tags.join()} | {domainFromURL(post.url)}
+            </span>
+          </div>
+        </div>
+      </OutboundLink>
     </div>
   );
 };
 StoriesRollItem.propTypes = {
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
+  showDescription: PropTypes.bool
+};
+
+StoriesRollItem.defaultProps = {
+  showDescription: true
 };
 
 export default StoriesRollItem;

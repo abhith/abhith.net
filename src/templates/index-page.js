@@ -9,49 +9,96 @@ import FeaturedSidebar from "../components/FeaturedSidebar";
 import SEO from "../components/seo/SEO";
 import VideosRoll from "../components/VideosRoll";
 
-export const IndexPageTemplate = ({ stories, featured, videos }) => (
-  <div className="container">
+export const IndexPageTemplate = ({
+  stories,
+  featured,
+  videos,
+  totalStories,
+  totalVideos,
+  totalServices
+}) => (
+  <>
     <SEO />
-    <LatestPosts />
     <Hero />
-    <div className="section">
-      <div className="columns">
-        <div className="column is-two-thirds">
-          <h4 className="spanborder">
-            <span className="title is-4 has-text-weight-bold">
-              Recommended Videos
-            </span>
-          </h4>
-          <VideosRoll videos={videos} />
-          <div className="is-pulled-right">
-            <Link to="/recommended/videos" className="button is-link">
-              View More Videos
-            </Link>
+    <LatestPosts />
+    <div className="hero is-primary is-bold">
+      <div className="hero-body">
+        <div className="container is-fluid">
+          <div className="columns is-centered">
+            <div className="column is-12">
+              <div className="columns is-vcentered">
+                <div className="column has-text-centered">
+                  <div className="title">
+                    <span role="img" aria-label="inbox">
+                      📬
+                    </span>{" "}
+                    Recommended{" "}
+                  </div>
+                  <div className="subtitle has-numbers">
+                    <span className="tag">{totalStories}</span> Developer stories,{" "}
+                    <span className="tag">{totalVideos}</span> Videos and{" "}
+                    <span className="tag">{totalServices}</span> Services
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h4 className="spanborder">
-            <span className="title is-4 has-text-weight-bold">
-              Recommended Stories
-            </span>
-          </h4>
-          <StoriesRoll posts={stories} />
-          <div className="is-pulled-right">
-            <Link to="/recommended/stories" className="button is-link">
-              View More Developer Stories
-            </Link>
-          </div>
-        </div>
-        <div className="column is-one-third">
-          <FeaturedSidebar items={featured} />
         </div>
       </div>
     </div>
-  </div>
+    <div className="section">
+      <div className="container is-fluid">
+        <div className="columns">
+          <div className="column is-one-third">
+            <h4 className="spanborder">
+              <span className="title is-4 has-text-weight-bold">
+                Recommended Stories
+              </span>
+            </h4>
+            <StoriesRoll posts={stories} mode={`compact`} />
+            <div className="cta-wrapper has-text-centered">
+              <Link
+                to="/recommended/stories"
+                className="button k-button k-primary raised has-gradient is-bold"
+              >
+                <span className="text">View More Stories</span>
+                <span className="front-gradient"></span>
+              </Link>
+            </div>
+          </div>
+          <div className="column is-one-third">
+            <h4 className="spanborder">
+              <span className="title is-4 has-text-weight-bold">
+                Recommended Videos
+              </span>
+            </h4>
+            <VideosRoll videos={videos} />
+            <div className="cta-wrapper has-text-centered">
+              <Link
+                to="/recommended/videos"
+                className="button k-button k-primary raised has-gradient is-bold"
+              >
+                <span className="text">View More Videos</span>
+                <span className="front-gradient"></span>
+              </Link>
+            </div>
+          </div>
+          <div className="column is-one-third">
+            <FeaturedSidebar items={featured} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </>
 );
 
 IndexPageTemplate.propTypes = {
   stories: PropTypes.array,
   videos: PropTypes.array,
-  featured: PropTypes.array
+  featured: PropTypes.array,
+  totalStories: PropTypes.number,
+  totalVideos: PropTypes.number,
+  totalServices: PropTypes.number
 };
 
 const IndexPage = ({ data }) => {
@@ -61,6 +108,9 @@ const IndexPage = ({ data }) => {
         stories={data.recommendedStories.edges}
         videos={data.recommendedVideos.edges}
         featured={data.featured.edges}
+        totalStories={data.recommendedStories.totalCount}
+        totalVideos={data.recommendedVideos.totalCount}
+        totalServices={data.featured.totalCount}
       />
     </Layout>
   );
@@ -82,6 +132,7 @@ export const pageQuery = graphql`
       limit: 5
       sort: { fields: [date], order: DESC }
     ) {
+      totalCount
       edges {
         node {
           title
@@ -97,6 +148,7 @@ export const pageQuery = graphql`
       limit: 3
       sort: { fields: [date], order: DESC }
     ) {
+      totalCount
       edges {
         node {
           id
@@ -106,9 +158,10 @@ export const pageQuery = graphql`
       }
     }
     featured: allServicesJson(
-      limit: 5
+      limit: 10
       sort: { fields: [isAffiliate, date], order: [ASC, DESC] }
     ) {
+      totalCount
       edges {
         node {
           title

@@ -1,5 +1,37 @@
 [
   {
+    "title": "FilePizza - Your files, delivered",
+    "url": "https://file.pizza/",
+    "description": "Free peer-to-peer file transfers in your browser. ",
+    "image": "",
+    "date": "2019-09-27T19:31:28.263Z",
+    "tags": ["download-site"]
+  },
+  {
+    "title": "Sourcetree | Free Git GUI for Mac and Windows",
+    "url": "https://www.sourcetreeapp.com/",
+    "description": "A Git GUI that offers a visual representation of your repositories. Sourcetree is a free Git client for Windows and Mac. It supports Git-flow out of the box.",
+    "image": "",
+    "date": "2019-09-17T19:31:28.263Z",
+    "tags": ["github", "git", "gitlab"]
+  },
+  {
+    "title": "HTTP Status Codes — httpstatuses.com",
+    "url": "https://httpstatuses.com/",
+    "description": "HTTP Status Code directory, with definitions, details and helpful code references.",
+    "image": "",
+    "date": "2019-09-14T19:31:28.263Z",
+    "tags": ["api"]
+  },
+  {
+    "title": "Worldvectorlogo — Brand logos free to download",
+    "url": "https://worldvectorlogo.com/",
+    "description": "Worldvectorlogo has the largest SVG logo vector collection. All logos work with EPS, AI, PSD and Adobe PDF. No account and unlimited downloads for free.",
+    "image": "",
+    "date": "2019-08-30T19:31:28.263Z",
+    "tags": ["download-site"]
+  },
+  {
     "title": "WebPageTest - Website Performance and Optimization Test",
     "url": "https://www.webpagetest.org/",
     "description": "Run a free website speed test from around the globe using real browsers at consumer connection speeds with detailed optimization recommendations.",

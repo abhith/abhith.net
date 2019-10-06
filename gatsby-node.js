@@ -1,3 +1,4 @@
+const { paginate } = require("gatsby-awesome-pagination");
 const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
@@ -21,12 +22,20 @@ exports.createPages = ({ actions, graphql }) => {
             }
           }
         }
+        group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
+        }
       }
       allStoriesJson {
         edges {
           node {
             tags
           }
+        }
+        group(field: tags) {
+          fieldValue
+          totalCount
         }
       }
       allVideosJson {
@@ -35,12 +44,20 @@ exports.createPages = ({ actions, graphql }) => {
             tags
           }
         }
+        group(field: tags) {
+          fieldValue
+          totalCount
+        }
       }
       allServicesJson {
         edges {
           node {
             tags
           }
+        }
+        group(field: tags) {
+          fieldValue
+          totalCount
         }
       }
     }
@@ -54,6 +71,68 @@ exports.createPages = ({ actions, graphql }) => {
     const stories = result.data.allStoriesJson.edges;
     const videos = result.data.allVideosJson.edges;
     const services = result.data.allServicesJson.edges;
+
+    const postsGroup = result.data.allMarkdownRemark.group;
+    const storiesGroup = result.data.allStoriesJson.group;
+    const videosGroup = result.data.allVideosJson.group;
+    const servicesGroup = result.data.allServicesJson.group;
+
+    let topics = [];
+
+    postsGroup.forEach(node => {
+      topics.push({
+        slug: node.fieldValue,
+        totalPosts: node.totalCount,
+        totalVideos: 0,
+        totalStories: 0,
+        totalServices: 0
+      });
+    });
+
+    storiesGroup.forEach(node => {
+      let topic = topics.find(topic => topic.slug === node.fieldValue);
+      if (topic) {
+        topic.totalStories = node.totalCount;
+      } else {
+        topics.push({
+          slug: node.fieldValue,
+          totalPosts: 0,
+          totalVideos: 0,
+          totalStories: node.totalCount,
+          totalServices: 0
+        });
+      }
+    });
+
+    videosGroup.forEach(node => {
+      let topic = topics.find(topic => topic.slug === node.fieldValue);
+      if (topic) {
+        topic.totalVideos = node.totalCount;
+      } else {
+        topics.push({
+          slug: node.fieldValue,
+          totalPosts: 0,
+          totalVideos: node.totalCount,
+          totalStories: 0,
+          totalServices: 0
+        });
+      }
+    });
+
+    servicesGroup.forEach(node => {
+      let topic = topics.find(topic => topic.slug === node.fieldValue);
+      if (topic) {
+        topic.totalServices = node.totalCount;
+      } else {
+        topics.push({
+          slug: node.fieldValue,
+          totalPosts: 0,
+          totalVideos: 0,
+          totalStories: 0,
+          totalServices: node.totalCount
+        });
+      }
+    });
 
     posts.forEach(edge => {
       const id = edge.node.id;
@@ -73,47 +152,103 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
 
-    // Tag pages:
-    let tags = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(edge => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags);
-      }
+    // Create your paginated pages
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: posts, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/blog-page.js") // Just like `createPage()`
     });
 
-    stories.forEach(edge => {
-      if (_.get(edge, `node.tags`)) {
-        tags = tags.concat(edge.node.tags);
-      }
+    // Create your paginated stories
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: stories, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/stories", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/stories-page.js") // Just like `createPage()`
     });
 
-    videos.forEach(edge => {
-      if (_.get(edge, `node.tags`)) {
-        tags = tags.concat(edge.node.tags);
-      }
+    // Create your paginated videos
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: videos, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/videos", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/videos-page.js") // Just like `createPage()`
     });
 
-    services.forEach(edge => {
-      if (_.get(edge, `node.tags`)) {
-        tags = tags.concat(edge.node.tags);
-      }
+    // Create your paginated tools
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: services, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/services", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/services-page.js") // Just like `createPage()`
     });
 
-    // Eliminate duplicate tags
-    tags = _.uniq(tags);
+    // Make topic pages
+    topics.forEach(topic => {
+      const topicPath = `/topics/${topic.slug}/`;
+      const topicStoriesPath = `/topics/${topic.slug}/stories/`;
+      const topicVideosPath = `/topics/${topic.slug}/videos/`;
+      const topicToolsPath = `/topics/${topic.slug}/tools/`;
 
-    // Make tag pages
-    tags.forEach(tag => {
-      const tagPath = `/topics/${_.kebabCase(tag)}/`;
-
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/topics.js`),
-        context: {
-          tag
+      if (topic.totalPosts > 0) {
+        createPage({
+          path: topicPath,
+          component: path.resolve(`src/templates/topic.js`),
+          context: {
+            tag: topic.slug
+          }
+        });
+      } else {
+        let topicRedirectPath;
+        if (topic.totalStories > 0) {
+          topicRedirectPath = topicStoriesPath;
+        } else if (topic.totalVideos > 0) {
+          topicRedirectPath = topicVideosPath;
+        } else {
+          topicRedirectPath = topicToolsPath;
         }
-      });
+        createRedirect({
+          fromPath: topicPath,
+          isPermanent: false,
+          redirectInBrowser: true,
+          toPath: topicRedirectPath
+        });
+      }
+
+      if (topic.totalStories > 0) {
+        createPage({
+          path: topicStoriesPath,
+          component: path.resolve(`src/templates/topic-stories.js`),
+          context: {
+            tag: topic.slug
+          }
+        });
+      }
+
+      if (topic.totalVideos > 0) {
+        createPage({
+          path: topicVideosPath,
+          component: path.resolve(`src/templates/topic-videos.js`),
+          context: {
+            tag: topic.slug
+          }
+        });
+      }
+
+      if (topic.totalServices > 0) {
+        createPage({
+          path: topicToolsPath,
+          component: path.resolve(`src/templates/topic-tools.js`),
+          context: {
+            tag: topic.slug
+          }
+        });
+      }
     });
 
     let redirectBatch1 = [
@@ -227,12 +362,12 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Then we can loop through the array of object literals to create
     // each redirect. A for loop would do the trick
-    for (var { f: f } of redirectBatch1) {
+    for (var { f: slug } of redirectBatch1) {
       createRedirect({
-        fromPath: `/post/${f}`,
+        fromPath: `/post/${slug}`,
         isPermanent: true,
         redirectInBrowser: true,
-        toPath: `/blog/${f}`
+        toPath: `/blog/${slug}`
       });
 
       let redirectBatch2 = [
@@ -276,7 +411,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       ];
 
-      for (var { f: f, t: t } of redirectBatch2) {
+      for (var { f, t } of redirectBatch2) {
         createRedirect({
           fromPath: `/post/${f}`,
           isPermanent: true,

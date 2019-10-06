@@ -1,11 +1,18 @@
-var proxy = require("http-proxy-middleware");
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = "https://www.abhith.net",
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === "production";
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
     title: "Abhith Rajan",
     description:
       "An aspiring software engineer with more than 7 years of experience.",
-    siteUrl: `https://www.abhith.net`,
+    siteUrl,
     author: {
       name: "Abhith Rajan",
       minibio: `
@@ -22,7 +29,12 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        useResolveUrlLoader: true
+      }
+    },
     `gatsby-plugin-sitemap`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -54,6 +66,12 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-reading-time`,
+          {
+            resolve: "@weknow/gatsby-remark-twitter",
+            options: {
+              align: "center"
+            }
+          },
           {
             resolve: "gatsby-remark-relative-images",
             options: {
@@ -123,29 +141,18 @@ module.exports = {
               noInlineHighlight: false
             }
           },
-          "gatsby-remark-external-links"
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
+          "gatsby-remark-external-links",
           {
-            family: `Lora`,
-            variants: [`400`, `400i`, `700`]
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                table: "table"
+              }
+            }
           }
         ]
       }
     },
-    {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
-      options: {
-        printRejected: true,
-        develop: false, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"] // applies purging only on the bulma css file
-      }
-    }, // must be after other CSS plugins
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -164,20 +171,43 @@ module.exports = {
         icon: `static/img/android-chrome-144x144.png`
       }
     },
+    {
+      resolve: `gatsby-plugin-polyfill-io`,
+      options: {
+        features: [`Array.prototype.map`, `fetch`]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }]
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#00d1b2`,
+        // Disable the loading spinner.
+        showSpinner: false
+      }
+    },
     `gatsby-plugin-offline`,
     "gatsby-plugin-netlify" // make sure to keep it last in the array
-  ],
-  // for avoiding CORS while developing Netlify Functions locally
-  // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
-  developMiddleware: app => {
-    app.use(
-      "/.netlify/functions/",
-      proxy({
-        target: "http://localhost:9000",
-        pathRewrite: {
-          "/.netlify/functions/": ""
-        }
-      })
-    );
-  }
+  ]
 };

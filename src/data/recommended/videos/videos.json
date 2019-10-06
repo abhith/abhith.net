@@ -1,12 +1,156 @@
 [
   {
+    "title": "GOTO 2018 • Introduction to OAuth 2.0 and OpenID Connect • Philippe De Ryck",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=GyCL8AJUhww",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "Proof Key for Code Exchange (PKCE)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=2pJShFKYoJc",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "What is JWT ? JSON Web Token Explained",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=926mknSW9Lo",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "OAuth and OpenID Connect for Microservices",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=BdKmZ7mPNns",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "OAuth 2.0: An Overview",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=CPbvxxslDTU",
+    "date": "2019-09-22T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "How does HTTPS work? What's a CA? What's a self-signed Certificate?",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=T4Df5_cojAs",
+    "date": "2019-09-21T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "What Is JWT and Why Should You Use JWT",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM",
+    "date": "2019-09-21T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "Authentication on the Web (Sessions, Cookies, JWT, localStorage, and more)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=2PPSXonhIck",
+    "date": "2019-09-21T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "Analyzing your applications with Application Insights",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=pqZF8LjBh68",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["azure"]
+  },
+  {
+    "title": "Webinar: XOR DDoS - Post Attack Analysis",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=YxY7i7R0R2U",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "[GreHack 2017] Down The Rabbit Hole: How Hackers Exploit Weak SSH Credentials To Build DDoS Botnets",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=jEtke3Dfxeo",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "Securing Web Applications and APIs with ASP.NET Core 2.2 and 3.0 - Brock Allen & Dominick Baier",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=EYk3KTwwbFA",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "The Async Await Episode I Promised",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=vn3tm0quoqE",
+    "date": "2019-09-14T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["asynchronous-programming", "javascript"]
+  },
+  {
+    "title": "Implementing Authentication and Authorization with ASP.NET Core 2 - Chris Klug",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=-50ntzz18XU",
+    "date": "2019-09-03T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security", "aspnet-core"]
+  },
+  {
+    "title": "OAuth 2.0 and OpenID Connect (in plain English)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=996OiexHze0",
+    "date": "2019-08-31T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
+    "title": "IdentityServer4: New & Improved for ASP.NET Core - Brock Allen & Dominick Baier",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=YXdJ2HLAOdE",
+    "date": "2019-08-27T00:19:21.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Modeling Data for NoSQL Document Databases",
     "description": "",
     "image": "",
     "url": "https://www.youtube.com/watch?v=IUxT7ZRHlZ4",
     "date": "2019-06-13T16:19:21.638Z",
     "type": "youtube",
-    "tags": ["databases","nosql"]
+    "tags": ["databases", "nosql"]
   },
   {
     "title": "",

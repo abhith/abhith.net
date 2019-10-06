@@ -1,13 +1,14 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import "../styles/all.sass";
+import "typeface-lora";
+
 
 const TemplateWrapper = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main role="main" className="site-content">
+      <main role="main">
         {children}
       </main>
       <Footer />

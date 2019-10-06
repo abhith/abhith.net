@@ -1,5 +1,89 @@
 [
   {
+    "title": "Tracepoints: Debug with less clutter",
+    "url": "https://devblogs.microsoft.com/visualstudio/tracepoints/",
+    "description": "Have you ever accidentally shipped a log statement to production? Are you tired of cleaning up log statements while debugging? The solution is here!",
+    "date": "2019-10-03T13:27:28.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "4. Four ways to style react components",
+    "url": "https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822",
+    "description": "There are four different options to style React components. All depend on your personal preferences and the specific complexity of your application. In React, inline styles are not specified as a…",
+    "date": "2019-09-29T13:27:28.263Z",
+    "tags": ["react"]
+  },
+  {
+    "title": "Responsive Youtube Embed | Tutorial | Avex Designs",
+    "url": "https://avexdesigns.com/responsive-youtube-embed/",
+    "description": "Use this responsive YouTube embed to create responsive videos with CSS. Resizing YouTube videos for your responsive web site using CSS and HTML.",
+    "date": "2019-09-28T22:27:28.263Z",
+    "tags": ["css"]
+  },
+  {
+    "title": "Azure SQL DB Design Note: Choosing the Right Database Reservation Size",
+    "url": "https://techcommunity.microsoft.com/t5/SQL-Customer-Success-Engineering/Azure-SQL-DB-Design-Note-Choosing-the-Right-Database-Reservation/ba-p/872825",
+    "description": "A good article on available options on Azure SQL DB.",
+    "date": "2019-09-25T13:27:28.263Z",
+    "tags": ["azure", "sql-server"]
+  },
+  {
+    "title": ".NET Videos | Free videos from the .NET team and community",
+    "url": "https://dotnet.microsoft.com/learn/videos",
+    "description": "Free videos for learning all aspects of the .NET developer platform, including web, mobile, desktop, C#, machine learning, containers/docker, and data access.",
+    "date": "2019-09-25T13:22:28.263Z",
+    "tags": ["c-sharp", "dotnet-core", "aspnet-core"]
+  },
+  {
+    "title": "C# Exception Handling Best Practices - DZone Performance",
+    "url": "https://dzone.com/articles/c-exception-handling-best-practices",
+    "description": "Learn what an exception is, about the anatomy of C# exceptions, the basic try catch finally block, exception filters, and how to create C# exception types.",
+    "date": "2019-09-18T16:22:28.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "A clean way to add Swagger to ASP.NET Core application",
+    "url": "https://www.talkingdotnet.com/clean-way-to-add-swagger-asp-net-core-application/",
+    "description": "In this post find out a clean way to add Swagger to ASP.NET Core application using extension methods to make startup.cs clean and manageable.",
+    "date": "2019-09-09T16:22:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "What’s New in Angular V8 — All Powerful Features and Improvements",
+    "url": "https://hackernoon.com/whats-new-in-angular-v8-all-powerful-features-and-improvements-9s1c3awu",
+    "description": "Angular 8 is finally here (in May)!",
+    "date": "2019-09-02T16:22:28.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Essential Gatsby plugins. Part 1, SEO and Images | Dev Diary",
+    "url": "https://markoskon.com/gatsby-plugins-seo-and-images",
+    "description": "In this post, we'll see what plugins you can use in order to improve the SEO of your Gatsby app and handle images effectively.",
+    "date": "2019-08-31T16:22:28.263Z",
+    "tags": ["gatsby"]
+  },
+  {
+    "title": "Best bots to improve your software development process - Livable Software",
+    "url": "https://livablesoftware.com/best-bots-software-development/",
+    "description": "Software bots can assist developers in all phases of the development process. Here, we present a selection of the most useful bots you can start using right away to develop and maintain your (open source) project",
+    "date": "2019-08-31T16:02:28.263Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "C# Constructor: Usage, Examples, Best Practices, and Pitfalls",
+    "url": "https://blog.submain.com/c-constructor-usage-examples-best-practices/",
+    "description": "Today we define the concept of a C# constructor, then show usage examples with general tips on best practices to follow and pitfalls to be aware of.",
+    "date": "2019-08-26T16:22:28.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Visual Studio Tips and Tricks: Increasing your Productivity for .NET | .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/visual-studio-tips-and-tricks-increasing-your-productivity-for-net/",
+    "description": "The .NET team is constantly thinking of new ways to make developers more productive. We’ve been working hard over the past year to take the feedback you’ve sent us and turn it into tools that you want! In this post I’ll cover some of the latest productivity features available in Visual Studio 2019 Preview.",
+    "date": "2019-08-26T08:22:28.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
     "title": "Avoiding ASP.Net Core Configuration Pitfalls With Array Values",
     "url": "https://rimdev.io/avoiding-aspnet-core-configuration-pitfalls-with-array-values/",
     "description": "ASP.NET Core continues to improve on the legacy of the .NET Framework. Our team is impressed with its performance and excited about future possibilities, but change is seldom a smooth transition. In this post, I’ll explain a pitfall you may run into using the newest configuration model in .NET Core and options to mitigate the issue.",

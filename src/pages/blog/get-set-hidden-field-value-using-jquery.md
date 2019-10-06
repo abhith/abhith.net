@@ -6,8 +6,8 @@ date: "2017-10-01T00:00:00.000Z"
 templateKey: blog-post
 image: /img/js-jquery-html-css.jpg
 description: >-
-    This article explains how to set and get hidden field value using jQuery.
-commentId: '1354e7e4-bbca-481c-ac69-2fab4ff2bbd8'
+  This article explains how to set and get hidden field value using jQuery.
+commentId: "1354e7e4-bbca-481c-ac69-2fab4ff2bbd8"
 tags:
   - javascript
   - jquery
@@ -20,12 +20,14 @@ Like I mentioned, it can be done easily using jQuery,
 
 ### SET
 
-<pre style="font-family:Consolas;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="color:cyan;">$</span>(<span style="color:#d69d85;">&#39;#</span><span style="color:lightskyblue;">hiddenFieldControlId</span><span style="color:#d69d85;">&#39;</span>).<span style="color:cyan;">val</span>(<span style="color:violet;">valueToBeAssigned</span>);
-</pre>
+```js
+$("#hiddenFieldControlId").val(valueToBeAssigned);
+```
 
 ### GET
 
-<pre style="font-family:Consolas;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="color:#569cd6;">var</span>&nbsp;<span style="color:violet;">hiddenFieldValue</span>&nbsp;<span style="color:#b4b4b4;">=</span>&nbsp;<span style="color:cyan;">$</span>(<span style="color:#d69d85;">&#39;#</span><span style="color:lightskyblue;">hiddenFieldControlId</span><span style="color:#d69d85;">&#39;</span>).<span style="color:cyan;">val</span>();
-</pre>
+```js
+var hiddenFieldValue = $("#hiddenFieldControlId").val();
+```
 
 That's it. Replace the **hiddenFieldControlId** with the **id** attribute value of your hidden field and make sure **jQuery** referenced in the page.

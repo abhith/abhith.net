@@ -32,8 +32,27 @@ const TopicImage = ({ slug }) => (
         edge => edge.node.slug === slug
       );
 
-      const topicImageName = tagNode ? tagNode.node.image : "no-tag-image.png";
+      const noImageName = "no_image_available.svg";
+
+      let topicImageName = tagNode ? tagNode.node.image : noImageName;
+      // empty string check
+      if (topicImageName === "" || topicImageName === null) {
+        topicImageName = noImageName;
+      }
       const imageAlt = tagNode ? tagNode.node.title : "No Image";
+
+      // console.log(`${slug} - ${topicImageName}`);
+
+      var ext = topicImageName.substr(topicImageName.lastIndexOf(".") + 1);
+
+      if (ext === "svg") {
+        const pathToImage = `/img/topics/${topicImageName}`;
+        return (
+          <figure className="image">
+            <img src={pathToImage} alt={imageAlt}></img>
+          </figure>
+        );
+      }
 
       const image = data.allImageSharp.edges.find(
         edge => edge.node.fluid.originalName === topicImageName

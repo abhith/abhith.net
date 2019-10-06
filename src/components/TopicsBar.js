@@ -9,14 +9,12 @@ const TopicsBar = ({ topics }) => (
       {topics && topics.length
         ? topics.map(topic => (
             <React.Fragment key={topic}>
-              <span className="tag">
-                <Link
-                  className="text-capitalize text-muted smoothscroll"
-                  to={`/topics/${kebabCase(topic)}/`}
-                >
-                  {topic}
-                </Link>
-              </span>
+              <Link
+                className="text-capitalize smoothscroll"
+                to={`/topics/${kebabCase(topic)}/`}
+              >
+                <span className="tag">{topic}</span>
+              </Link>
             </React.Fragment>
           ))
         : null}

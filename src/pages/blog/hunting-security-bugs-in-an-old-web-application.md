@@ -6,8 +6,8 @@ date: "2017-10-09T00:00:00.000Z"
 templateKey: blog-post
 image: /img/2017-10-09-hunting-security-bugs-in-an-old-web-application.jpg
 description: >-
-    In this post, I am sharing one of my security bug hunting experience in an older ASP.NET web form project.
-commentId: '0f364148-7c40-4a1e-9ced-c8e4f54d1dae'
+  In this post, I am sharing one of my security bug hunting experience in an older ASP.NET web form project.
+commentId: "0f364148-7c40-4a1e-9ced-c8e4f54d1dae"
 tags:
   - aspnet-web-forms
   - security
@@ -59,14 +59,16 @@ The above request was handled by the PDF download handler module, its intended f
 
 So I checked the request handler and its code given below,
 
-<pre style="font-family:Fantasque Sans Mono;font-size:13;color:gainsboro;background:#1e1e1e;"><span style="color:#569cd6;">protected</span>&nbsp;<span style="color:#569cd6;">void</span>&nbsp;<span style="color:cyan;">Page_Load</span>(<span style="color:#569cd6;">object</span>&nbsp;sender,&nbsp;<span style="color:lightblue;">EventArgs</span>&nbsp;e)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#569cd6;">string</span>&nbsp;fileName&nbsp;<span style="color:#b4b4b4;">=</span>&nbsp;<span style="color:violet;">Request</span><span style="color:#b4b4b4;">.</span><span style="color:violet;">QueryString</span>[<span style="color:#d69d85;">&quot;fileName&quot;</span>]<span style="color:#b4b4b4;">.</span><span style="color:cyan;">ToString</span>();
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:violet;">Response</span><span style="color:#b4b4b4;">.</span><span style="color:violet;">ContentType</span>&nbsp;<span style="color:#b4b4b4;">=</span>&nbsp;<span style="color:#d69d85;">&quot;application/octet-stream&quot;</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:violet;">Response</span><span style="color:#b4b4b4;">.</span><span style="color:cyan;">AddHeader</span>(<span style="color:#d69d85;">&quot;Content-Disposition&quot;</span>,&nbsp;<span style="color:#d69d85;">&quot;attachment;filename=&quot;</span>&nbsp;<span style="color:#b4b4b4;">+</span>&nbsp;fileName);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:violet;">Response</span><span style="color:#b4b4b4;">.</span><span style="color:cyan;">TransmitFile</span>(&nbsp;fileName);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:violet;">Response</span><span style="color:#b4b4b4;">.</span><span style="color:cyan;">End</span>();
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+```cs
+protected void Page_Load(object sender, EventArgs e)
+{
+    string fileName = Request.QueryString["fileName"].ToString();
+    Response.ContentType = "application/octet-stream";
+    Response.AddHeader("Content-Disposition", "attachment;filename=" + fileName);
+    Response.TransmitFile( fileName);
+    Response.End();
+}
+```
 
 The above code is doing its intended function very well but it can do unintended function as well **if you know what I mean**. To prove my point, I tried to invoke the same handler with the suspicious input and boom, here comes the requested file.
 
