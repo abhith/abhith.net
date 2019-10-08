@@ -41,4 +41,4 @@ eg.
 
 ### Additional Resource
 
-- [IP Security <ipSecurity>](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/security/ipsecurity)
+- [IP Security](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/security/ipsecurity)
