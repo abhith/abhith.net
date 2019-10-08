@@ -1,5 +1,12 @@
 [
   {
+    "title": "How to reference an existing .NET Framework Project in an ASP.NET Core 1.0 Web App",
+    "url": "https://www.hanselman.com/blog/HowToReferenceAnExistingNETFrameworkProjectInAnASPNETCore10WebApp.aspx",
+    "description": "I had a reader send me a question yesterday. She basically wanted to use her existing .NET Framework libraries in an ASP.NET Core application, and it wasn't ...",
+    "date": "2019-10-08T13:27:28.263Z",
+    "tags": ["aspnet-core", "dotnet"]
+  },
+  {
     "title": "Tracepoints: Debug with less clutter",
     "url": "https://devblogs.microsoft.com/visualstudio/tracepoints/",
     "description": "Have you ever accidentally shipped a log statement to production? Are you tired of cleaning up log statements while debugging? The solution is here!",

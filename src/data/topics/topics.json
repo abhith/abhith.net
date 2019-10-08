@@ -102,6 +102,12 @@
     "image": ""
   },
   {
+    "title": ".NET",
+    "slug": "dotnet",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": ".NET Core",
     "slug": "dotnet-core",
     "description": ".NET is an Open Source Developer Platform for Building Apps.",
