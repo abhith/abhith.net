@@ -7,7 +7,6 @@
     "sourceMap": true,
     "lib": ["dom", "es2015", "es2017"],
     "strict": true,
-    // "noImplicitAny": true,
     "noEmit": true,
     "isolatedModules": true,
     "esModuleInterop": true,
