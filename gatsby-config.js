@@ -154,6 +154,8 @@ module.exports = {
       }
     },
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-tslint`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
