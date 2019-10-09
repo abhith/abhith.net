@@ -153,6 +153,7 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

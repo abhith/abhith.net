@@ -4,6 +4,8 @@
   "version": "2.0.0",
   "author": "Abhith Rajan",
   "dependencies": {
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "bulma": "^0.7.5",
     "bulma-timeline": "^3.0.4",
@@ -13,6 +15,7 @@
     "gatsby-image": "^2.2.18",
     "gatsby-plugin-google-analytics": "^2.1.16",
     "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-plugin-mdx": "^1.0.49",
     "gatsby-plugin-netlify": "^2.1.13",
     "gatsby-plugin-nprogress": "^2.1.6",
     "gatsby-plugin-offline": "^3.0.6",
