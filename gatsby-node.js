@@ -439,3 +439,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
+exports.onCreateWebpackConfig = require("./gatsby/node/onCreateWebpackConfig");
