@@ -1,5 +1,12 @@
 [
   {
+    "title": "Embedding Videos in Your Gatsby.js Sites",
+    "url": "https://scotch.io/tutorials/embedding-videos-in-your-gatsbyjs-sites",
+    "description": "After blogging for more than a decade, I have realized that a blog post is kinda incomplete without some visual treat. The process of adding images is more or less the same. However, videos and GIFs are one level up which is rendered/embedded differently in various web applications, and the embed",
+    "date": "2019-10-09T13:27:28.263Z",
+    "tags": ["gatsby"]
+  },
+  {
     "title": "How to reference an existing .NET Framework Project in an ASP.NET Core 1.0 Web App",
     "url": "https://www.hanselman.com/blog/HowToReferenceAnExistingNETFrameworkProjectInAnASPNETCore10WebApp.aspx",
     "description": "I had a reader send me a question yesterday. She basically wanted to use her existing .NET Framework libraries in an ASP.NET Core application, and it wasn't ...",
