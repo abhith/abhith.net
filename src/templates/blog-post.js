@@ -309,9 +309,6 @@ class BlogPost extends React.Component {
     const relatedVideos = data.recommendedVideos.edges;
     const relatedStories = data.recommendedStories.edges;
     const relatedServices = data.recommendedServices.edges;
-    let featuredServices = [];
-    featuredServices.push(data.featuredServices.edges[0].node);
-    featuredServices.push(data.featuredServices.edges[1].node);
 
     let relatedPostsFirstHalf = [];
     let relatedPostsSecondHalf = [];
@@ -540,21 +537,6 @@ export const pageQuery = graphql`
           tags
           url
           description
-          image
-        }
-      }
-    }
-    featuredServices: allServicesJson(
-      limit: 2
-      sort: { fields: [date], order: DESC }
-      filter: { isAffiliate: { eq: true } }
-    ) {
-      edges {
-        node {
-          title
-          id
-          tags
-          url
           image
         }
       }
