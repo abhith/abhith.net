@@ -11,6 +11,7 @@ const log = (message, section) =>
   console.log(`\n\u001B[36m${message} \u001B[4m${section}\u001B[0m\u001B[0m\n`);
 
 const query = require("../data/data.query");
+const normalize = require("../data/data.normalize");
 
 module.exports = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions;
@@ -21,11 +22,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
   // Create blog post pages.
-  const articles = result.data.articles.edges.map(({ node: article }) => {
-    return {
-      ...article
-    };
-  });
+  const articles = result.data.articles.edges.map(normalize.local.articles);
   // you'll call `createPage` for each result
   log(`Creating`, "article posts");
 
@@ -33,7 +30,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     createPage({
       // This is the slug you created before
       // (or `node.frontmatter.slug`)
-      path: article.fields.slug,
+      path: article.slug,
       // This component will wrap our MDX content
       component: templates.article,
       // You can use the values in this context in
