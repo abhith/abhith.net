@@ -1,9 +1,10 @@
 import Layout from "@components/Layout";
-import SEO from "@components/seo/SEO";
 import MDXRenderer from "@components/MDX";
+import SEO from "@components/seo/SEO";
 
 import { graphql } from "gatsby";
 import React from "react";
+import { IArticle } from "@types";
 // import { YouTube, Twitter, TomatoBox } from "./ui";
 
 // const shortcodes = { YouTube, Twitter, TomatoBox };
@@ -11,7 +12,7 @@ import React from "react";
 export default ({ pageContext }) => {
   console.log(pageContext);
 
-  const { article } = pageContext;
+  const { article }: { article: IArticle } = pageContext;
   // const commentId =
   //   post.frontmatter.commentId === null
   //     ? post.fields.slug
@@ -20,16 +21,16 @@ export default ({ pageContext }) => {
   return (
     <Layout>
       <div className="blog-post-wrapper">
-        {/* <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description}
-          image={post.frontmatter.image.childImageSharp.fluid.src}
+        <SEO
+          title={article.title}
+          description={article.excerpt}
+          image={article.hero.full.src}
           isBlogPost={true}
-          slug={post.fields.slug}
-          dateModified={post.frontmatter.dateModifiedSeoFormat}
-          datePublished={post.frontmatter.datePublishedSeoFormat}
-        /> */}
-        <h1>TEST</h1>
+          slug={article.slug}
+          dateModified={article.dateModifiedSeoFormat}
+          datePublished={article.datePublishedSeoFormat}
+        />
+        <h1>{article.title}</h1>
         <MDXRenderer content={article.body}>
           <h2>TEST</h2>
         </MDXRenderer>
