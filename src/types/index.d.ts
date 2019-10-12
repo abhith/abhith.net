@@ -13,6 +13,8 @@ export interface IArticle {
   };
   timeToRead: string;
   date: string;
+  lastModifiedTime: string;
+  lastModifiedTimeString: string;
   dateModifiedSeoFormat: string;
   datePublishedSeoFormat: string;
   tags: string[];
