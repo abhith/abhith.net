@@ -27,6 +27,12 @@ module.exports = async ({ graphql, actions, reporter }) => {
   log(`Creating`, "article posts");
 
   articles.forEach((article, index) => {
+    // related articles
+    let relatedArticles = articles.filter(
+      item =>
+        article.id !== item.id && article.tags.some(t => item.tags.includes(t))
+    );
+
     createPage({
       // This is the slug you created before
       // (or `node.frontmatter.slug`)
@@ -35,7 +41,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       component: templates.article,
       // You can use the values in this context in
       // our page layout component
-      context: { article }
+      context: { article, relatedArticles }
     });
   });
 
