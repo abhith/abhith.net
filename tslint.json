@@ -3,13 +3,10 @@
   "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
   "jsRules": {},
   "rules": {
-    "interface-name": false,
-    "semicolon": [true, "never"],
-    "member-access": [false],
+    "prettier": true,
     "ordered-imports": [true],
-    "no-console": [false],
-    "no-var-requires": true,
-    "quotemark": [true, "double", "jsx-double"]
+    "quotemark": [true, "double", "jsx-double"],
+    "no-implicit-dependencies": [true, ["@components", "@types"]]
   },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }
