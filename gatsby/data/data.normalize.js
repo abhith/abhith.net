@@ -23,6 +23,7 @@ function normalizeHero(article) {
 module.exports.local = {
   articles: ({ node: article }) => {
     return {
+      id: article.id,
       title: article.frontmatter.title,
       body: article.body,
       slug: article.fields.slug,
