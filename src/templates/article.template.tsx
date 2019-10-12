@@ -5,9 +5,8 @@ import SEO from "@components/seo/SEO";
 import { graphql } from "gatsby";
 import React from "react";
 import { IArticle } from "@types";
-// import { YouTube, Twitter, TomatoBox } from "./ui";
 
-// const shortcodes = { YouTube, Twitter, TomatoBox };
+import ArticleHero from "../sections/article/Article.Hero";
 
 export default ({ pageContext }) => {
   console.log(pageContext);
@@ -30,7 +29,7 @@ export default ({ pageContext }) => {
           dateModified={article.dateModifiedSeoFormat}
           datePublished={article.datePublishedSeoFormat}
         />
-        <h1>{article.title}</h1>
+        <ArticleHero article={article}></ArticleHero>
         <MDXRenderer content={article.body}>
           <h2>TEST</h2>
         </MDXRenderer>

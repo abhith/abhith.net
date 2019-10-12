@@ -211,6 +211,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        displayName: process.env.NODE_ENV === `development`
+      }
+    },
+    {
       resolve: "gatsby-plugin-sass",
       options: {
         useResolveUrlLoader: true
