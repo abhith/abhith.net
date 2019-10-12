@@ -48,7 +48,10 @@ function MDX({ content, children, ...props }) {
   return (
     <MDXProvider>
       {/* <MDXBody> */}
-      <MDXRenderer {...props}>{content}</MDXRenderer>
+      <article className="content post-body">
+        <MDXRenderer {...props}>{content}</MDXRenderer>
+      </article>
+
       {children}
       {/* </MDXBody> */}
     </MDXProvider>
