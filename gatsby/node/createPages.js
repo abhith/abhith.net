@@ -30,8 +30,6 @@ module.exports = async ({ graphql, actions, reporter }) => {
   log(`Creating`, "article posts");
 
   articles.forEach((article, index) => {
-    log(`Creating`, `${article.fields.slug} {templates.article}`);
-
     createPage({
       // This is the slug you created before
       // (or `node.frontmatter.slug`)

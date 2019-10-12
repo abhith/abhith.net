@@ -1,21 +1,21 @@
 {
+  "include": ["./src/**/*"],
   "compilerOptions": {
+    "target": "esnext",
     "module": "commonjs",
-    "target": "es5",
+    "lib": ["dom", "es2017"],
+    // "allowJs": true,
+    // "checkJs": true,
     "jsx": "react",
-    "sourceMap": true,
-    "lib": ["dom", "es2015", "es2017"],
     "strict": true,
-    "noEmit": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
-    "noUnusedLocals": false,
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "skipLibCheck": true,
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["components/*"]
     }
-  },
-  "include": ["./src/**/*"]
+  }
 }

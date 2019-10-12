@@ -25,7 +25,6 @@
     "gatsby-plugin-sass": "^2.1.17",
     "gatsby-plugin-sharp": "^2.2.25",
     "gatsby-plugin-sitemap": "^2.2.14",
-    "gatsby-plugin-tslint": "^0.0.2",
     "gatsby-plugin-typescript": "^2.1.12",
     "gatsby-remark-autolink-headers": "^2.1.13",
     "gatsby-remark-classes": "^0.1.2",
@@ -81,6 +80,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "@types/node": "^12.7.12",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
     "eslint-config-react-app": "^5.0.2",
@@ -91,10 +91,9 @@
     "rimraf": "^3.0.0",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
     "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^4.1.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.4"
   },
   "husky": {
     "hooks": {
