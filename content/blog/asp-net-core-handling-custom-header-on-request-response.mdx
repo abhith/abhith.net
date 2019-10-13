@@ -5,7 +5,7 @@ description: >-
   There may be situations where you want to add a custom header in your ASP.NET
   Core API response or you need to read a header from the request.
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2019-04-25T12:11:27.975Z
 image: /img/jungwoo-hong-100345-unsplash.jpg
 tags:
@@ -21,12 +21,12 @@ You can access the request headers or modify the response headers easily inside 
 
 ## Add custom hader to response
 
-```cs
+```csharp
  Response.Headers.Add("your-custom-header-id", custom_header_value);
 ```
 
 ## Read a request header
 
-```cs
+```csharp
  var yourHeader = Request.Headers["your-custom-header-id"].FirstOrDefault();
 ```
