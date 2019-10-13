@@ -9,7 +9,7 @@ import { MDXProvider } from "@mdx-js/react";
 
 // import Anchor from "@components/Anchor";
 // import Blockquote from "@components/Blockquote";
-// import Code from "@components/Code";
+import Code from "@components/Code";
 // import Headings from "@components/Headings";
 // import HorizontalRule from "@components/HorizontalRule";
 // import Lists from "@components/Lists";
@@ -20,33 +20,33 @@ import { MDXProvider } from "@mdx-js/react";
 // import mediaqueries from "@styles/media";
 // import { toKebabCase } from "@utils";
 
-// const components = {
-//   img: ImageZoom,
-//   a: Anchor,
-//   blockquote: Blockquote,
-//   h1: Headings.h2, // h1 reserved article title
-//   h2: Headings.h2,
-//   h3: Headings.h3,
-//   h4: Headings.h4,
-//   h5: Headings.h5,
-//   h6: Headings.h6,
-//   hr: HorizontalRule,
-//   ul: Lists.ul,
-//   ol: Lists.ol,
-//   p: Paragraph,
-//   code: Code.Prism,
-//   pre: Code.Pre,
-//   table: Tables.Table,
-//   thead: Tables.Head,
-//   th: Tables.HeadCell,
-//   td: Tables.Cell
-// };
+const components = {
+  //   img: ImageZoom,
+  //   a: Anchor,
+  //   blockquote: Blockquote,
+  //   h1: Headings.h2, // h1 reserved article title
+  //   h2: Headings.h2,
+  //   h3: Headings.h3,
+  //   h4: Headings.h4,
+  //   h5: Headings.h5,
+  //   h6: Headings.h6,
+  //   hr: HorizontalRule,
+  //   ul: Lists.ul,
+  //   ol: Lists.ol,
+  //   p: Paragraph,
+  //   code: Code.Prism,
+  pre: Code.Pre
+  //   table: Tables.Table,
+  //   thead: Tables.Head,
+  //   th: Tables.HeadCell,
+  //   td: Tables.Cell
+};
 
 function MDX({ content, children, ...props }) {
   // const [colorMode] = useColorMode();
 
   return (
-    <MDXProvider>
+    <MDXProvider components={components}>
       {/* <MDXBody> */}
       <article className="content post-body">
         <MDXRenderer {...props}>{content}</MDXRenderer>
@@ -306,12 +306,12 @@ export default MDX;
 //   }
 // `;
 
-// /**
-//  * MDXBody
-//  * Here we're applying "global" selectors to make sure we maintain an article
-//  * body type feel. We're also applying all the Prism selecotors and styles within
-//  * the MDXBody.
-//  */
+/**
+ * MDXBody
+ * Here we're applying "global" selectors to make sure we maintain an article
+ * body type feel. We're also applying all the Prism selecotors and styles within
+ * the MDXBody.
+ */
 // const MDXBody = styled.div`
 //   position: relative;
 //   z-index: 10;
@@ -319,7 +319,5 @@ export default MDX;
 //   justify-content: center;
 //   flex-direction: column;
 
-//   ${HeadingsCSS}
 //   ${PrismCSS}
-//   ${ImageCSS}
 // `;
