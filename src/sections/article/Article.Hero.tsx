@@ -1,6 +1,5 @@
 import { IArticle } from "@types";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
 import Image from "@components/Image";
