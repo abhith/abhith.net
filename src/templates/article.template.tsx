@@ -12,6 +12,7 @@ import { FaCoffee } from "react-icons/fa";
 
 import ArticleHero from "../sections/article/Article.Hero";
 import ArticleShare from "../sections/article/Article.Share";
+import RelatedArticles from "../sections/article/Article.RelatedArticles";
 
 const siteQuery = graphql`
   {
@@ -33,9 +34,12 @@ const siteQuery = graphql`
 `;
 
 export default ({ pageContext, location }) => {
-  console.log(pageContext);
+  console.log(pageContext, location);
 
-  const { article }: { article: IArticle } = pageContext;
+  const {
+    article,
+    relatedArticles
+  }: { article: IArticle; relatedArticles: IArticle[] } = pageContext;
   const results = useStaticQuery(siteQuery);
   console.log(results);
   const githubURL = `https://github.com/Abhith/abhith.net/blob/master/src/pages${article.slug.substring(
@@ -136,6 +140,7 @@ export default ({ pageContext, location }) => {
           </div>
         </section>
       </div>
+      <RelatedArticles articles={relatedArticles}></RelatedArticles>
     </Layout>
   );
 };
