@@ -6,7 +6,8 @@
     "prettier": true,
     "ordered-imports": [true],
     "quotemark": [true, "double", "jsx-double"],
-    "no-implicit-dependencies": [true, ["@components", "@types"]]
+    "no-implicit-dependencies": [true, ["@components", "@types"]],
+    "noImplicitAny": false
   },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }
