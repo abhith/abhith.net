@@ -4,44 +4,31 @@ import SEO from "@components/seo/SEO";
 import TopicsBar from "@components/TopicsBar";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import React from "react";
 
 import { IArticle } from "@types";
 import { FaCoffee } from "react-icons/fa";
 
 import ArticleHero from "../sections/article/Article.Hero";
-import ArticleShare from "../sections/article/Article.Share";
 import RelatedArticles from "../sections/article/Article.RelatedArticles";
-
-const siteQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        siteUrl
-        social {
-          twitter
-        }
-        author {
-          name
-          minibio
-          url
-          image
-        }
-      }
-    }
-  }
-`;
+import RelatedStories from "../sections/article/Article.RelatedStories";
+import RelatedTools from "../sections/article/Article.RelatedTools";
+import RelatedVideos from "../sections/article/Article.RelatedVideos";
+import ArticleShare from "../sections/article/Article.Share";
 
 export default ({ pageContext, location }) => {
   console.log(pageContext, location);
 
   const {
     article,
-    relatedArticles
-  }: { article: IArticle; relatedArticles: IArticle[] } = pageContext;
-  const results = useStaticQuery(siteQuery);
-  console.log(results);
+    relatedArticles,
+    relatedStories,
+    relatedVideos,
+    relatedTools
+  } = pageContext;
+  // const results = useStaticQuery(siteQuery);
+  // console.log(results);
   const githubURL = `https://github.com/Abhith/abhith.net/blob/master/src/pages${article.slug.substring(
     0,
     article.slug.length - 1
@@ -140,7 +127,10 @@ export default ({ pageContext, location }) => {
           </div>
         </section>
       </div>
-      <RelatedArticles articles={relatedArticles}></RelatedArticles>
+      <RelatedArticles articles={relatedArticles} />
+      <RelatedVideos relatedVideos={relatedVideos} />
+      <RelatedStories relatedStories={relatedStories} />
+      <RelatedTools relatedServices={relatedTools} />
     </Layout>
   );
 };
