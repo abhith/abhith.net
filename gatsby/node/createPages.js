@@ -23,6 +23,21 @@ module.exports = async ({ graphql, actions, reporter }) => {
   }
   // Create blog post pages.
   const articles = result.data.articles.edges.map(normalize.local.articles);
+
+  const allStories = await graphql(query.local.stories);
+  if (allStories.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "allStories" query');
+  }
+
+  const allVideos = await graphql(query.local.videos);
+  if (allVideos.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "allVideos" query');
+  }
+
+  const allTools = await graphql(query.local.tools);
+  if (allTools.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "allTools" query');
+  }
   // you'll call `createPage` for each result
   log(`Creating`, "article posts");
 
@@ -33,15 +48,31 @@ module.exports = async ({ graphql, actions, reporter }) => {
         article.id !== item.id && article.tags.some(t => item.tags.includes(t))
     );
 
+    let relatedStories = allStories.data.stories.edges
+      .filter(item => article.tags.some(t => item.node.tags.includes(t)))
+      .slice(0, 6);
+
+    let relatedVideos = allVideos.data.videos.edges
+      .filter(item => article.tags.some(t => item.node.tags.includes(t)))
+      .slice(0, 3);
+
+    let relatedTools = allTools.data.tools.edges
+      .filter(item => article.tags.some(t => item.node.tags.includes(t)))
+      .slice(0, 2);
+
     createPage({
-      // This is the slug you created before
-      // (or `node.frontmatter.slug`)
       path: article.slug,
       // This component will wrap our MDX content
       component: templates.article,
       // You can use the values in this context in
       // our page layout component
-      context: { article, relatedArticles }
+      context: {
+        article,
+        relatedArticles,
+        relatedStories,
+        relatedVideos,
+        relatedTools
+      }
     });
   });
 

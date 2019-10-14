@@ -47,5 +47,51 @@ module.exports.local = {
           }
         }
       }
-    }`
+    }`,
+  stories: `{
+    stories: allStoriesJson(
+    sort: { fields: [date], order: DESC }
+  ) {
+    edges {
+      node {
+        title
+        date(formatString: "MMM DD, YYYY")
+        description
+        id
+        tags
+        url
+      }
+    }
+  }
+  }`,
+  videos: `{
+    videos:allVideosJson(
+    sort: { fields: [date], order: DESC }
+  ) {
+    edges {
+      node {
+        id
+        url
+        type
+        tags
+      }
+    }
+  }
+  }`,
+  tools: `{
+    tools:allServicesJson(
+    sort: { fields: [date], order: DESC }
+  ) {
+    edges {
+      node {
+        title
+        id
+        tags
+        url
+        description
+        image
+      }
+    }
+  }
+  }`
 };
