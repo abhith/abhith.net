@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
 import Image from "@components/Image";
 
 const BlogRollItem = ({ post }) => {
@@ -9,8 +8,7 @@ const BlogRollItem = ({ post }) => {
     <div className="blog-post">
       <Link to={post.slug}>
         <div className="featured-image">
-          {/* <Img fluid={post.frontmatter.image.childImageSharp.fluid} /> */}
-          <Image src={post.hero.full} />
+          <Image src={post.hero.full} alt={post.title} />
         </div>
         <div className="content">
           <div className="post-title">{post.title}</div>
