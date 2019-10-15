@@ -6,13 +6,13 @@ class TopicIndexPage extends React.Component {
   render() {
     const data = this.props.data;
 
-    const posts = data.allMarkdownRemark.edges;
+    const posts = data.allMdx.edges;
     const topicDetails = data.topicDetails;
 
     const title =
       topicDetails === null ? this.props.pageContext.tag : topicDetails.title;
 
-    const totalPostCount = data.allMarkdownRemark.totalCount;
+    const totalPostCount = data.allMdx.totalCount;
     const totalVideoCount = data.recommendedVideos.totalCount;
     const totalServiceCount = data.recommendedServices.totalCount;
     const totalStoriesCount = data.recommendedStories.totalCount;
@@ -49,7 +49,7 @@ export const topicIndexPageQuery = graphql`
       id
       image
     }
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {

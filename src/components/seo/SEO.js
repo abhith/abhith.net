@@ -44,9 +44,7 @@ function SEO({
         services: allServicesJson {
           totalCount
         }
-        posts: allMarkdownRemark(
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        ) {
+        posts: allMdx {
           totalCount
         }
       }

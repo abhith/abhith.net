@@ -9,7 +9,7 @@ import TopicImage from "../../components/TopicImage";
 
 const TopicsPage = ({
   data: {
-    allMarkdownRemark: { group: postsGroup },
+    articleTagsGroup: { group: postsGroup },
     allStoriesJson: { group: storiesGroup },
     allVideosJson: { group: videosGroup },
     allServicesJson: { group: servicesGroup },
@@ -193,7 +193,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark {
+    articleTagsGroup: allMdx {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
