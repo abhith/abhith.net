@@ -1,5 +1,12 @@
 [
   {
+    "title": "New in ASP.NET Core 3.0: Worker Services",
+    "url": "https://asp.net-hacker.rocks/2019/10/02/aspnetcore30-workerservice.html",
+    "description": "In this post I'm giving a quick introduction into the Worker Services and what you can do with it. I'm also introducing a small project that shows the usage of Worker Services, gRPC and many more cool new ASP.NET Core 3.0 stuff.",
+    "date": "2019-10-15T08:27:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Embedding Videos in Your Gatsby.js Sites",
     "url": "https://scotch.io/tutorials/embedding-videos-in-your-gatsbyjs-sites",
     "description": "After blogging for more than a decade, I have realized that a blog post is kinda incomplete without some visual treat. The process of adding images is more or less the same. However, videos and GIFs are one level up which is rendered/embedded differently in various web applications, and the embed",
