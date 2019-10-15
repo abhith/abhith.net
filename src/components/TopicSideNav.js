@@ -7,7 +7,7 @@ const TopicSideNav = ({ slug }) => (
   <StaticQuery
     query={graphql`
       query {
-        allBlogPostTopics: allMarkdownRemark {
+        allBlogPostTopics: allMdx {
           group(field: frontmatter___tags) {
             fieldValue
             totalCount

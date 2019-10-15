@@ -86,11 +86,12 @@ module.exports = async ({ graphql, actions, reporter }) => {
               slug
             }
             frontmatter {
-              tags
               templateKey
             }
           }
         }
+      }
+      articleTagsGroup: allMdx {
         group(field: frontmatter___tags) {
           fieldValue
           totalCount
@@ -136,12 +137,12 @@ module.exports = async ({ graphql, actions, reporter }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    const pages = result.data.allMarkdownRemark.edges;
     const stories = result.data.allStoriesJson.edges;
     const videos = result.data.allVideosJson.edges;
     const services = result.data.allServicesJson.edges;
 
-    const postsGroup = result.data.allMarkdownRemark.group;
+    const postsGroup = result.data.articleTagsGroup.group;
     const storiesGroup = result.data.allStoriesJson.group;
     const videosGroup = result.data.allVideosJson.group;
     const servicesGroup = result.data.allServicesJson.group;
@@ -203,10 +204,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
       }
     });
 
-    posts.forEach(edge => {
+    pages.forEach(edge => {
       const id = edge.node.id;
-      const postTags = edge.node.frontmatter.tags;
-
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -215,8 +214,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
         ),
         // additional data can be passed via context
         context: {
-          id,
-          tags: postTags
+          id
         }
       });
     });
@@ -224,7 +222,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     // Create your paginated pages
     paginate({
       createPage, // The Gatsby `createPage` function
-      items: posts, // An array of objects
+      items: articles, // An array of objects
       itemsPerPage: 10, // How many items you want per page
       pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
       component: path.resolve("src/templates/blog-page.js") // Just like `createPage()`
