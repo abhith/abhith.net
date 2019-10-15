@@ -66,8 +66,11 @@ const ArticleHero = ({ article }: IArticleHeroProps) => {
             </div>
             <div className="column is-5">
               <figure className="image">
-                <Image src={article.hero.full} />
-                {/* <Img fluid={article.hero.full} className="blog-featured" /> */}
+                <Image
+                  src={article.hero.full}
+                  className={`blog-featured`}
+                  alt={article.title}
+                />
               </figure>
             </div>
           </div>
