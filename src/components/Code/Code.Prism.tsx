@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
+import Highlight from "prism-react-renderer";
 import styled from "@emotion/styled";
 import theme from "prism-react-renderer/themes/nightOwl";
-
 import mediaqueries from "@styles/media";
 import { copyToClipboard } from "@utils";
 import { FaCopy, FaClipboard } from "react-icons/fa";
+
+import Prism from "prismjs";
+require("prismjs/components/prism-csharp");
 
 const Pre = styled.pre`
   position: relative;
@@ -21,7 +23,7 @@ const LineNo = styled.span`
 function CodePrism({ codeString, language, metastring, ...props }) {
   return (
     <Highlight
-      {...defaultProps}
+      Prism={Prism}
       theme={theme}
       code={codeString}
       language={language}
