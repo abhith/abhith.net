@@ -93,5 +93,16 @@ module.exports.local = {
       }
     }
   }
+  }`,
+  topics: `{
+    topics: allTopicsJson {
+      edges {
+        node {
+          slug
+          image
+          title
+        }
+      }
+    }
   }`
 };
