@@ -41,7 +41,11 @@ module.exports.local = {
           ? article.frontmatter.dateString
           : article.frontmatter.lastModificationTimeString,
       dateModifiedSeoFormat: article.frontmatter.dateModifiedSeoFormat,
-      datePublishedSeoFormat: article.frontmatter.datePublishedSeoFormat
+      datePublishedSeoFormat: article.frontmatter.datePublishedSeoFormat,
+      commentId:
+        article.frontmatter.commentId === null
+          ? article.fields.slug
+          : article.frontmatter.commentId
     };
   }
 };

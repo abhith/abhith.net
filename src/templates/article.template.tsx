@@ -4,7 +4,7 @@ import SEO from "@components/seo/SEO";
 import TopicsBar from "@components/TopicsBar";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
-import { graphql } from "gatsby";
+import { DiscussionEmbed } from "disqus-react";
 import React from "react";
 
 import { IArticle } from "@types";
@@ -18,7 +18,7 @@ import RelatedVideos from "../sections/article/Article.RelatedVideos";
 import ArticleShare from "../sections/article/Article.Share";
 
 export default ({ pageContext, location }) => {
-  console.log(pageContext, location);
+  // console.log(pageContext, location);
 
   const {
     article,
@@ -29,14 +29,15 @@ export default ({ pageContext, location }) => {
   } = pageContext;
   // const results = useStaticQuery(siteQuery);
   // console.log(results);
-  const githubURL = `https://github.com/Abhith/abhith.net/blob/master/src/pages${article.slug.substring(
+  const githubURL = `https://github.com/Abhith/abhith.net/blob/master/content${article.slug.substring(
     0,
     article.slug.length - 1
-  )}.md`;
-  // const commentId =
-  //   post.frontmatter.commentId === null
-  //     ? post.fields.slug
-  //     : post.frontmatter.commentId;
+  )}.mdx`;
+
+  const disqusConfig = {
+    shortname: `abhith`,
+    config: { identifier: article.commentId, title: article.title }
+  };
 
   return (
     <Layout>
@@ -131,6 +132,11 @@ export default ({ pageContext, location }) => {
       <RelatedVideos relatedVideos={relatedVideos} />
       <RelatedStories relatedStories={relatedStories} />
       <RelatedTools relatedServices={relatedTools} />
+      <section className="section">
+        <div className="container is-fluid">
+          <DiscussionEmbed {...disqusConfig} />
+        </div>
+      </section>
     </Layout>
   );
 };
