@@ -18,8 +18,9 @@ import React from "react";
 
 interface IArticleShareProps {
   article: IArticle;
+  location: any;
 }
-const ArticleShare = ({ article }: IArticleShareProps) => {
+const ArticleShare = ({ article, location }: IArticleShareProps) => {
   return (
     <div className="sticky has-text-centered">
       <div className="text-muted">Share this</div>

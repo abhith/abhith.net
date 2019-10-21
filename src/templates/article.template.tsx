@@ -56,7 +56,7 @@ export default ({ pageContext, location }) => {
           <div className="container is-fluid">
             <div className="columns is-centered">
               <div className="column is-2 pr-4 mb-4">
-                <ArticleShare article={article} />
+                <ArticleShare article={article} location={location} />
               </div>
               <div className="column is-8">
                 <MDXRenderer content={article.body}>
