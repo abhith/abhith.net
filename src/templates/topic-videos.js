@@ -12,7 +12,7 @@ class TopicVideosPage extends React.Component {
     const title =
       topicDetails === null ? this.props.pageContext.tag : topicDetails.title;
 
-    const totalPostCount = data.allMarkdownRemark.totalCount;
+    const totalPostCount = data.allMdx.totalCount;
     const totalVideoCount = data.recommendedVideos.totalCount;
     const totalServiceCount = data.recommendedServices.totalCount;
     const totalStoriesCount = data.recommendedStories.totalCount;
@@ -76,7 +76,7 @@ export const topicVideosPageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
