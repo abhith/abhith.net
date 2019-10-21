@@ -4,7 +4,8 @@ const path = require("path");
 
 const templatesDirectory = path.resolve(__dirname, "../../src/templates");
 const templates = {
-  article: path.resolve(templatesDirectory, "article.template.tsx")
+  article: path.resolve(templatesDirectory, "article.template.tsx"),
+  topic: path.resolve(templatesDirectory, "topic.template.tsx")
 };
 
 const log = (message, section) =>
@@ -37,6 +38,11 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const allTools = await graphql(query.local.tools);
   if (allTools.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "allTools" query');
+  }
+
+  const allTopics = await graphql(query.local.topics);
+  if (allTopics.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "allTopics" query');
   }
   // you'll call `createPage` for each result
   log(`Creating`, "article posts");
@@ -257,17 +263,34 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
     // Make topic pages
     topics.forEach(topic => {
+      // merge aggregated topics with topics collection
+
+      let topicNode = allTopics.data.topics.edges.find(
+        item => item.node.slug === topic.slug
+      );
+
+      if (topicNode) {
+        topic = { ...topicNode.node, ...topic };
+      } else {
+        topic.title = topic.slug;
+      }
+
       const topicPath = `/topics/${topic.slug}/`;
       const topicStoriesPath = `/topics/${topic.slug}/stories/`;
       const topicVideosPath = `/topics/${topic.slug}/videos/`;
       const topicToolsPath = `/topics/${topic.slug}/tools/`;
 
       if (topic.totalPosts > 0) {
+        const topicArticles = articles.filter(item =>
+          item.tags.includes(topic.slug)
+        );
+
         createPage({
           path: topicPath,
-          component: path.resolve(`src/templates/topic.js`),
+          component: templates.topic,
           context: {
-            tag: topic.slug
+            topic,
+            articles: topicArticles
           }
         });
       } else {
