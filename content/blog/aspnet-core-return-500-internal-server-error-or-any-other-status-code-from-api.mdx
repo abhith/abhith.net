@@ -17,7 +17,8 @@ In any case if you want to return a status code from your ASP.NET Core API, all 
 return  StatusCode(StatusCodes.Status500InternalServerError);
 ```
 
-`StatusCode` is from `Microsoft.AspNetCore.Mvc.ControllerBase.StatusCode` and `StatusCodes` from `Microsoft.AspNetCore.Http.StatusCodes`. The above code will return a 500 status code. Similar way, you can return any other status code. For the complete list, visit [StatusCodes Class (Microsoft.AspNetCore.Http) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes?view=aspnetcore-2.2)
+**StatusCode** is from **Microsoft.AspNetCore.Mvc.ControllerBase.StatusCode** and **StatusCodes** from **Microsoft.AspNetCore.Http.StatusCodes**.
+The above code will return a 500 status code. Similar way, you can return any other status code. For the complete list, visit [StatusCodes Class (Microsoft.AspNetCore.Http) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes?view=aspnetcore-2.2)
 
 HTTP status code 5xx indicates server error. 5xx series includes,
 
