@@ -1,7 +1,8 @@
 import React from "react";
-
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
+import Code from "@components/Code";
+import Tables from "@components/Tables";
 
 // import styled from "@emotion/styled";
 // import { css } from "@emotion/core";
@@ -9,12 +10,11 @@ import { MDXProvider } from "@mdx-js/react";
 
 // import Anchor from "@components/Anchor";
 // import Blockquote from "@components/Blockquote";
-import Code from "@components/Code";
+
 // import Headings from "@components/Headings";
 // import HorizontalRule from "@components/HorizontalRule";
 // import Lists from "@components/Lists";
 // import Paragraph from "@components/Paragraph";
-// import Tables from "@components/Tables";
 // import { ImageZoom } from "@components/Image";
 
 // import mediaqueries from "@styles/media";
@@ -35,8 +35,8 @@ const components = {
   //   ol: Lists.ol,
   //   p: Paragraph,
   //   code: Code.Prism,
-  pre: Code.Pre
-  //   table: Tables.Table,
+  pre: Code.Pre,
+  table: Tables.Table
   //   thead: Tables.Head,
   //   th: Tables.HeadCell,
   //   td: Tables.Cell
