@@ -49,10 +49,13 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
   articles.forEach((article, index) => {
     // related articles
-    let relatedArticles = articles.filter(
-      item =>
-        article.id !== item.id && article.tags.some(t => item.tags.includes(t))
-    );
+    let relatedArticles = articles
+      .filter(
+        item =>
+          article.id !== item.id &&
+          article.tags.some(t => item.tags.includes(t))
+      )
+      .slice(0, 6);
 
     let relatedStories = allStories.data.stories.edges
       .filter(item => article.tags.some(t => item.node.tags.includes(t)))
