@@ -1,14 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
+import Image from "@components/Image";
 
 const BlogCard = ({ post, tag }) => {
   return (
     <div className="column card-post">
-      <Link to={post.fields.slug}>
+      <Link to={post.slug}>
         <div className="featured-image card-image">
-          <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+          {/* <Img fluid={post.frontmatter.image.childImageSharp.fluid} /> */}
+          <Image src={post.hero.full} />
+
           {tag && (
             <div className="card-content is-overlay is-clipped">
               <span className="tag is-info">{tag}</span>
@@ -16,11 +18,11 @@ const BlogCard = ({ post, tag }) => {
           )}
         </div>
         <div className="content">
-          <div className="post-title">{post.frontmatter.title}</div>
+          <div className="post-title">{post.title}</div>
           <span className="blog-date">
-            {post.frontmatter.date} &middot; {post.fields.readingTime.text}
+            {post.date} &middot; {post.timeToRead}
           </span>
-          <p>{post.frontmatter.description}</p>
+          <p>{post.description}</p>
           <div className="post-meta">
             <div className="author-block">
               <div className="image is-32x32">
@@ -29,7 +31,7 @@ const BlogCard = ({ post, tag }) => {
               <div className="author-name">
                 <span>by Abhith Rajan</span>
                 <span>
-                  <small>in</small> {post.frontmatter.tags.join()}
+                  <small>in</small> {post.tags.join()}
                 </span>
               </div>
             </div>
