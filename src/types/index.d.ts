@@ -18,6 +18,7 @@ export interface IArticle {
   dateModifiedSeoFormat: string;
   datePublishedSeoFormat: string;
   tags: string[];
+  commentId: string;
 }
 
 interface IGatsbyImage {
