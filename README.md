@@ -14,8 +14,6 @@ The CSS framework used in this project is [Bulma](https://bulma.io). And the des
 - [wowthemesnet/mundana-theme-jekyll](https://github.com/wowthemesnet/mundana-theme-jekyll)
 - [cssninjaStudio/krypton](https://github.com/cssninjaStudio/krypton)
 
-Since I am not a designer by profession, copy paste is what I do in most cases plus do some tweaks according to my likes.
-
 ## Main Sections
 
 Following are the main sections apart from my [blog](https://www.abhith.net/blog).
