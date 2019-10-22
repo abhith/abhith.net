@@ -71,7 +71,6 @@
     "lint": "tslint --project .",
     "clean": "rimraf .cache public",
     "start:app": "npm run develop",
-    "start:lambda": "netlify-lambda serve src/lambda",
     "start": "run-p start:**",
     "build:app": "npm run clean && gatsby build",
     "build": "run-p build:**",
