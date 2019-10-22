@@ -1,13 +1,14 @@
-import React, { useState } from "react";
 import Highlight from "prism-react-renderer";
-import styled from "@emotion/styled";
 import theme from "prism-react-renderer/themes/nightOwl";
 import mediaqueries from "@styles/media";
+import React, { useState } from "react";
+import styled from "@emotion/styled";
 import { copyToClipboard } from "@utils";
 import { FaCopy, FaClipboard } from "react-icons/fa";
 
 import Prism from "prismjs";
 require("prismjs/components/prism-csharp");
+require("prismjs/components/prism-graphql");
 
 const Pre = styled.pre`
   position: relative;
