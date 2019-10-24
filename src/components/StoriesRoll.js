@@ -25,14 +25,7 @@ const StoriesRoll = ({ posts, mode, showDescription }) => {
     }
   };
 
-  return (
-    <>
-      {posts &&
-        posts.map(
-          ({ node: post }) => renderItem(mode, post)
-        )}
-    </>
-  );
+  return <>{posts && posts.map(({ node: post }) => renderItem(mode, post))}</>;
 };
 
 StoriesRoll.default = {
