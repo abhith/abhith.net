@@ -1,5 +1,5 @@
 import Highlight from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/nightOwl";
+import prismTheme from "prism-react-renderer/themes/nightOwl";
 import mediaqueries from "@styles/media";
 import React, { useState } from "react";
 import styled from "@emotion/styled";
@@ -10,22 +10,52 @@ import Prism from "prismjs";
 require("prismjs/components/prism-csharp");
 require("prismjs/components/prism-graphql");
 
+import theme from "@styles/theme";
+
 const Pre = styled.pre`
   position: relative;
 `;
 
 const LineNo = styled.span`
   display: inline-block;
-  width: 2em;
+  width: 32px;
   user-select: none;
   opacity: 0.3;
+  color: #dcd9e6;
+
+  ${mediaqueries.tablet`
+  opacity: 0;
+  width: 0;
+`};
 `;
 
-function CodePrism({ codeString, language, metastring, ...props }) {
+const RE = /{([\d,-]+)}/;
+
+function calculateLinesToHighlight(meta) {
+  if (RE.test(meta)) {
+    const lineNumbers = RE.exec(meta)[1]
+      .split(",")
+      .map(v => v.split("-").map(y => parseInt(y, 10)));
+
+    return index => {
+      const lineNumber = index + 1;
+      const inRange = lineNumbers.some(([start, end]) =>
+        end ? lineNumber >= start && lineNumber <= end : lineNumber === start
+      );
+      return inRange;
+    };
+  } else {
+    return () => false;
+  }
+}
+
+function CodePrism({ codeString, language, metastring }) {
+  const shouldHighlightLine = calculateLinesToHighlight(metastring);
+
   return (
     <Highlight
       Prism={Prism}
-      theme={theme}
+      theme={prismTheme}
       code={codeString}
       language={language}
     >
@@ -33,14 +63,23 @@ function CodePrism({ codeString, language, metastring, ...props }) {
         <div style={{ overflow: "auto" }}>
           <Pre className={className} style={style}>
             <Copy toCopy={codeString} />
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })}>
-                <LineNo>{i + 1}</LineNo>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
+
+            {tokens.map((line, index) => {
+              const { className } = getLineProps({
+                line,
+                key: index,
+                className: shouldHighlightLine(index) ? "highlight-line" : ""
+              });
+              return (
+                <div key={index} className={className}>
+                  <LineNo>{index + 1}</LineNo>
+
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              );
+            })}
           </Pre>
         </div>
       )}
@@ -97,7 +136,6 @@ const CopyButton = styled.button`
   border-image: initial;
   outline: none;
   background: transparent;
-
   &:hover {
     background: rgba(255, 255, 255, 0.07);
   }
@@ -109,7 +147,7 @@ const CopyButton = styled.button`
     top: -2%;
     width: 104%;
     height: 104%;
-    border: 2px solid #6166dc;
+    border: 2px solid ${theme.colors.accent};
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.01);
   }

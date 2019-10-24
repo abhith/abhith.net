@@ -1,11 +1,12 @@
-import React from "react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import { MDXProvider } from "@mdx-js/react";
 import Code from "@components/Code";
 import Tables from "@components/Tables";
-
-// import styled from "@emotion/styled";
-// import { css } from "@emotion/core";
+import { css } from "@emotion/core";
+import styled from "@emotion/styled";
+import { MDXProvider } from "@mdx-js/react";
+import mediaqueries from "@styles/media";
+import theme from "@styles/theme";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import React from "react";
 // import { useColorMode } from "theme-ui";
 
 // import Anchor from "@components/Anchor";
@@ -17,7 +18,6 @@ import Tables from "@components/Tables";
 // import Paragraph from "@components/Paragraph";
 // import { ImageZoom } from "@components/Image";
 
-// import mediaqueries from "@styles/media";
 // import { toKebabCase } from "@utils";
 
 const components = {
@@ -47,13 +47,12 @@ function MDX({ content, children, ...props }) {
 
   return (
     <MDXProvider components={components}>
-      {/* <MDXBody> */}
-      <article className="content post-body">
-        <MDXRenderer {...props}>{content}</MDXRenderer>
-      </article>
-
+      <MDXBody>
+        <article className="content post-body">
+          <MDXRenderer {...props}>{content}</MDXRenderer>
+        </article>
+      </MDXBody>
       {children}
-      {/* </MDXBody> */}
     </MDXProvider>
   );
 }
@@ -118,90 +117,74 @@ export default MDX;
 //     ${ARTICLE_WIDTH};
 //   }
 // `;
+const PrismCSS = css`
+  .prism-code {
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    font-size: 13px;
+    margin: 15px auto 50px;
+    border-radius: 5px;
+    font-family: ${theme.fonts.monospace};
+    background: ${theme.colors.prism.background};
 
-// const PrismCSS = p => css`
-//   .prism-code {
-//     overflow: scroll;
-//     width: 100%;
-//     max-width: 744px;
-//     margin: 0 auto;
-//     padding: 32px;
-//     font-size: 13px;
-//     margin: 15px auto 50px;
-//     border-radius: 5px;
-//     font-family: ${p.theme.fonts.monospace};
-//     background: ${p.theme.colors.prism.background};
+    .number-line {
+      display: inline-block;
+      width: 32px;
+      user-select: none;
+      opacity: 0.3;
+      color: #dcd9e6;
 
-//     .token-line {
-//       border-left: 3px solid transparent;
+      ${mediaqueries.tablet`
+        opacity: 0;
+        width: 0;
+      `};
+    }
 
-//       ${Object.keys(p.theme.colors.prism)
-//         .map(key => {
-//           return `.${toKebabCase(key)}{color:${p.theme.colors.prism[key]};}`;
-//         })
-//         .reduce((curr, next) => curr + next, ``)};
+    .token-line.highlight-line {
+      margin: 0 -32px;
+      padding: 0 32px;
+      background: ${theme.colors.prism.highlight};
+      border-left: 3px solid ${theme.colors.prism.highlightBorder};
 
-//       & > span {
-//       }
-//     }
+      ${mediaqueries.tablet`
+        margin: 0 -20px;
+        padding: 0 20px;
+      `};
+    }
 
-//     .number-line {
-//       display: inline-block;
-//       width: 32px;
-//       user-select: none;
-//       opacity: 0.3;
-//       color: #dcd9e6;
+    .operator + .maybe-class-name {
+      color: #ffcf74 !important;
+    }
 
-//       ${mediaqueries.tablet`
-//         opacity: 0;
-//         width: 0;
-//       `};
-//     }
+    .plain ~ .operator {
+      color: #5fa8aa !important;
+    }
 
-//     .token-line.highlight-line {
-//       margin: 0 -32px;
-//       padding: 0 32px;
-//       background: ${p.theme.colors.prism.highlight};
-//       border-left: 3px solid ${p.theme.colors.prism.highlightBorder};
+    ${mediaqueries.desktop`
+      left: -26px;
+    `};
 
-//       ${mediaqueries.tablet`
-//         margin: 0 -20px;
-//         padding: 0 20px;
-//       `};
-//     }
+    ${mediaqueries.tablet`
+      max-width: 526px;
+      padding: 20px 20px;
+      left: 0;
+    `};
 
-//     .operator + .maybe-class-name {
-//       color: #ffcf74 !important;
-//     }
-
-//     .plain ~ .operator {
-//       color: #5fa8aa !important;
-//     }
-
-//     ${mediaqueries.desktop`
-//       left: -26px;
-//     `};
-
-//     ${mediaqueries.tablet`
-//       max-width: 526px;
-//       padding: 20px 20px;
-//       left: 0;
-//     `};
-
-//     ${mediaqueries.phablet`
-//       border-radius: 0;
-//       margin: 0 auto 25px;
-//       padding: 25px 20px;
-//       overflow: initial;
-//       width: unset;
-//       max-width: unset;
-//       float: left;
-//       min-width: 100%;
-//       overflow: initial;
-//       position: relative;
-//     `};
-//   }
-// `;
+    ${mediaqueries.phablet`
+      border-radius: 0;
+      margin: 0 auto 25px;
+      padding: 25px 20px;
+      overflow: initial;
+      width: unset;
+      max-width: unset;
+      float: left;
+      min-width: 100%;
+      overflow: initial;
+      position: relative;
+    `};
+  }
+`;
 
 // const ImageCSS = css`
 //   .gatsby-resp-image-background-image {
@@ -312,12 +295,6 @@ export default MDX;
  * body type feel. We're also applying all the Prism selecotors and styles within
  * the MDXBody.
  */
-// const MDXBody = styled.div`
-//   position: relative;
-//   z-index: 10;
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-
-//   ${PrismCSS}
-// `;
+const MDXBody = styled.div`
+  ${PrismCSS}
+`;
