@@ -609,6 +609,9 @@ TABLE OF CONTENTS
       font-family: "Cabin", sans-serif;
       color: $white;
       opacity: 0.8;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: auto;
     }
     h2 {
       // font-family: 'Cabin', sans-serif;
@@ -618,7 +621,7 @@ TABLE OF CONTENTS
     }
     blockquote {
       padding: 0 20px;
-    //   font-size: 1.2em;
+      //   font-size: 1.2em;
       font-style: italic;
       color: #555555;
       border-left: 8px solid #78c0a8;
@@ -626,13 +629,12 @@ TABLE OF CONTENTS
       position: relative;
       background: #ededed;
       p {
-        margin-bottom:0;
+        margin-bottom: 0;
       }
     }
     hr {
       opacity: 0.3;
     }
-    
   }
   .comments {
     padding: 0 60px;
@@ -731,9 +733,9 @@ TABLE OF CONTENTS
 
 // Link to GitHub
 .bd-typo {
-  text-align: center
+  text-align: center;
 }
 
 .bd-typo:not(:first-child) {
-  margin-top: 3rem
+  margin-top: 3rem;
 }
