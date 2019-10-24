@@ -35,9 +35,9 @@ export const IndexPageTemplate = ({
                     Recommended{" "}
                   </div>
                   <div className="subtitle has-numbers">
-                    <span className="tag">{totalStories}</span> Developer stories,{" "}
-                    <span className="tag">{totalVideos}</span> Videos and{" "}
-                    <span className="tag">{totalServices}</span> Services
+                    <span className="tag">{totalStories}</span> Developer
+                    stories, <span className="tag">{totalVideos}</span> Videos
+                    and <span className="tag">{totalServices}</span> Services
                   </div>
                 </div>
               </div>

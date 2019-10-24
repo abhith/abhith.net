@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
-import { FaCoffee, FaRss, FaHeart, FaGithub, FaTwitter, FaHome, FaInfoCircle, FaBullhorn } from "react-icons/fa";
+import {
+  FaCoffee,
+  FaRss,
+  FaHeart,
+  FaGithub,
+  FaTwitter,
+  FaHome,
+  FaInfoCircle,
+  FaBullhorn
+} from "react-icons/fa";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -341,7 +350,7 @@ const Navbar = class extends React.Component {
                 <FaHome color="green" /> <span> &nbsp;Home</span>
               </Link>
               <Link to="/about" className="navbar-item">
-               <FaInfoCircle color="cyan"/> <span> &nbsp;About</span>
+                <FaInfoCircle color="cyan" /> <span> &nbsp;About</span>
               </Link>
               <Link to="/blog" className="navbar-item">
                 <span className="icon">
@@ -353,7 +362,8 @@ const Navbar = class extends React.Component {
                 <FaHeart color="red" /> <span> &nbsp;Recommended</span>
               </Link>
               <Link to="/topics" className="navbar-item">
-                <FaBullhorn color="turquoise" /><span> &nbsp;Topics</span> 
+                <FaBullhorn color="turquoise" />
+                <span> &nbsp;Topics</span>
               </Link>
             </div>
 
@@ -401,7 +411,7 @@ const Navbar = class extends React.Component {
                       target="_blank"
                     >
                       <span>
-                        BUY ME A <FaCoffee/>
+                        BUY ME A <FaCoffee />
                       </span>
                     </OutboundLink>
                   </p>
