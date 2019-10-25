@@ -1,20 +1,3 @@
-/*! _blog.scss | Krypton | Kit 1 | CSS Ninja */
-
-/* ==========================================================================
-Blog Posts
-========================================================================== */
-
-/***
-TABLE OF CONTENTS
-=============================================================================
-0. Landing page blog posts
-=============================================================================
-***/
-
-/* ==========================================================================
-0. Landing page blog posts
-========================================================================== */
-
 //Post item
 .blog-post {
   //featured image
@@ -604,19 +587,17 @@ TABLE OF CONTENTS
     box-shadow: 0 15px 26px rgba(0, 0, 0, 0.4);
   }
   .post-body {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
     .intro {
       font-style: italic;
       font-family: "Cabin", sans-serif;
       color: $white;
       opacity: 0.8;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      hyphens: auto;
     }
     h2 {
-      // font-family: 'Cabin', sans-serif;
       font-size: 1.5rem;
-      // color: $white;
       padding: 10px 0;
     }
     blockquote {
@@ -634,99 +615,6 @@ TABLE OF CONTENTS
     }
     hr {
       opacity: 0.3;
-    }
-  }
-  .comments {
-    padding: 0 60px;
-    .comments-heading {
-      font-size: 1.2rem;
-      color: $light-blue;
-      text-align: center;
-    }
-    .comments-list {
-      padding: 60px 40px;
-      .is-comment {
-        border-top: none !important;
-        img {
-          display: block;
-          border-radius: 50%;
-        }
-        .user-meta {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          span,
-          small {
-            display: block;
-          }
-          span {
-            font-size: 0.9rem;
-            font-family: "Cabin", sans-serif;
-            color: $light-blue;
-          }
-          small {
-            font-family: "Cabin", sans-serif;
-            font-size: 0.8rem;
-            color: $light-blue;
-            opacity: 0.7;
-            margin: 0 20px;
-          }
-        }
-        p {
-          font-family: "Cabin", sans-serif;
-          font-size: 0.9rem;
-          color: $white;
-          opacity: 0.7;
-        }
-        .post-controls {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          padding: 10px 0;
-          svg {
-            width: 16px;
-            height: 16px;
-            margin: 0 5px;
-            stroke: $white;
-            stroke-width: 1.6px;
-            transition: all 0.3s;
-            cursor: pointer;
-            opacity: 0.5;
-            &:hover {
-              stroke: $secondary;
-              opacity: 1;
-            }
-          }
-        }
-      }
-      .is-form {
-        margin-top: 60px;
-        display: flex;
-        justify-content: flex-start;
-        img {
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-        }
-        .control {
-          width: 100%;
-          margin: 0 10px;
-          label {
-            color: $light-blue;
-          }
-          .textarea {
-            width: 100%;
-            background: rgba(17, 149, 247, 0.08);
-            border: 1px solid rgba(0, 83, 251, 0.5);
-            color: $white;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-          }
-        }
-      }
-      .comment-controls {
-        margin: 10px;
-      }
     }
   }
 }
