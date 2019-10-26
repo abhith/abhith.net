@@ -18,17 +18,19 @@ import RelatedVideos from "../sections/article/Article.RelatedVideos";
 import ArticleShare from "../sections/article/Article.Share";
 
 export default ({ pageContext, location }) => {
-  // console.log(pageContext, location);
-
   const {
     article,
     relatedArticles,
     relatedStories,
     relatedVideos,
     relatedTools
+  }: {
+    article: IArticle;
+    relatedArticles: IArticle[];
+    relatedStories: any;
+    relatedVideos: any;
+    relatedTools: any;
   } = pageContext;
-  // const results = useStaticQuery(siteQuery);
-  // console.log(results);
   const githubURL = `https://github.com/Abhith/abhith.net/blob/master/content${article.slug.substring(
     0,
     article.slug.length - 1
@@ -36,7 +38,11 @@ export default ({ pageContext, location }) => {
 
   const disqusConfig = {
     shortname: `abhith`,
-    config: { identifier: article.commentId, title: article.title }
+    config: {
+      identifier: article.commentId,
+      title: article.title,
+      url: location.href
+    }
   };
 
   return (
