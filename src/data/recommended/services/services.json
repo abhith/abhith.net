@@ -1,8 +1,16 @@
 [
   {
+    "title": "Fork - a fast and friendly git client for Mac and Windows",
+    "url": "https://fork.dev/",
+    "description": "I switched to Fork from Sourcetree.",
+    "image": "",
+    "date": "2019-10-26T18:31:28.263Z",
+    "tags": ["github", "git", "gitlab"]
+  },
+  {
     "title": "FilePizza - Your files, delivered",
     "url": "https://file.pizza/",
-    "description": "Free peer-to-peer file transfers in your browser. ",
+    "description": "Free peer-to-peer file transfers in your browser.",
     "image": "",
     "date": "2019-09-27T19:31:28.263Z",
     "tags": ["download-site"]
