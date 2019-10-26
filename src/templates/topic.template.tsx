@@ -1,5 +1,5 @@
-import TopicPageBase from "@components/TopicPageBase";
 import BlogRoll from "@components/BlogRoll";
+import TopicPageBase from "@components/TopicPageBase";
 import React from "react";
 
 function Topic({ pageContext }) {
