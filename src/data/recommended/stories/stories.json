@@ -1,5 +1,12 @@
 [
   {
+    "title": "overflow-wrap | CSS-Tricks",
+    "url": "https://css-tricks.com/almanac/properties/o/overflow-wrap/",
+    "description": "The overflow-wrap property in CSS allows you to specify that the browser can break a line of text inside the targeted element onto multiple lines in an...",
+    "date": "2019-10-26T17:27:28.263Z",
+    "tags": ["css"]
+  },
+  {
     "title": "New in ASP.NET Core 3.0: Worker Services",
     "url": "https://asp.net-hacker.rocks/2019/10/02/aspnetcore30-workerservice.html",
     "description": "In this post I'm giving a quick introduction into the Worker Services and what you can do with it. I'm also introducing a small project that shows the usage of Worker Services, gRPC and many more cool new ASP.NET Core 3.0 stuff.",
