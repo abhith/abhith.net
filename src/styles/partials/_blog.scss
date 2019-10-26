@@ -176,7 +176,6 @@
 //Specific Media queries for blog posts
 @media screen and (max-width: 768px) {
   .blog-post {
-    width: 92%;
     margin: auto;
     a {
       display: block;
@@ -205,7 +204,6 @@
 
 //Post item
 .card-post {
-  width: 92%;
   margin: auto;
   //featured image
   img {
