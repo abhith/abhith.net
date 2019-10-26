@@ -6,7 +6,9 @@ const templatesDirectory = path.resolve(__dirname, "../../src/templates");
 const templates = {
   article: path.resolve(templatesDirectory, "article.template.tsx"),
   topic: path.resolve(templatesDirectory, "topic.template.tsx"),
-  topicStories: path.resolve(templatesDirectory, "topic.stories.template.tsx")
+  topicStories: path.resolve(templatesDirectory, "topic.stories.template.tsx"),
+  topicVideos: path.resolve(templatesDirectory, "topic.videos.template.tsx"),
+  topicTools: path.resolve(templatesDirectory, "topic.tools.template.tsx")
 };
 
 const log = (message, section) =>
@@ -330,21 +332,31 @@ module.exports = async ({ graphql, actions, reporter }) => {
       }
 
       if (topic.totalVideos > 0) {
+        let relatedVideos = allVideos.data.videos.edges.filter(item =>
+          item.node.tags.includes(topic.slug)
+        );
+
         createPage({
           path: topicVideosPath,
-          component: path.resolve(`src/templates/topic-videos.js`),
+          component: templates.topicVideos,
           context: {
-            tag: topic.slug
+            topic,
+            videos: relatedVideos
           }
         });
       }
 
       if (topic.totalServices > 0) {
+        let relatedTools = allTools.data.tools.edges.filter(item =>
+          item.node.tags.includes(topic.slug)
+        );
+
         createPage({
           path: topicToolsPath,
-          component: path.resolve(`src/templates/topic-tools.js`),
+          component: templates.topicTools,
           context: {
-            tag: topic.slug
+            topic,
+            tools: relatedTools
           }
         });
       }
