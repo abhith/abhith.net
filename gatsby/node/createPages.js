@@ -5,7 +5,8 @@ const path = require("path");
 const templatesDirectory = path.resolve(__dirname, "../../src/templates");
 const templates = {
   article: path.resolve(templatesDirectory, "article.template.tsx"),
-  topic: path.resolve(templatesDirectory, "topic.template.tsx")
+  topic: path.resolve(templatesDirectory, "topic.template.tsx"),
+  topicStories: path.resolve(templatesDirectory, "topic.stories.template.tsx")
 };
 
 const log = (message, section) =>
@@ -314,11 +315,16 @@ module.exports = async ({ graphql, actions, reporter }) => {
       }
 
       if (topic.totalStories > 0) {
+        let relatedStories = allStories.data.stories.edges.filter(item =>
+          item.node.tags.includes(topic.slug)
+        );
+
         createPage({
           path: topicStoriesPath,
-          component: path.resolve(`src/templates/topic-stories.js`),
+          component: templates.topicStories,
           context: {
-            tag: topic.slug
+            topic,
+            stories: relatedStories
           }
         });
       }
