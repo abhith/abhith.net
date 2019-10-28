@@ -1,5 +1,12 @@
 [
   {
+    "title": "IIS URL Redirect HTTP to HTTPS excluding one or more folders",
+    "url": "https://www.ryadel.com/en/iis-url-redirect-http-https-exclude-folder-subfolder-rewrite-web-config/",
+    "description": "How to configure IIS to rewrite or redirect all HTTP requests to HTTPS except the files in a specific subfolder (or more) with a web.config rewrite rule",
+    "date": "2018-10-17T17:27:28.263Z",
+    "tags": ["rewrite-rule"]
+  },
+  {
     "title": "overflow-wrap | CSS-Tricks",
     "url": "https://css-tricks.com/almanac/properties/o/overflow-wrap/",
     "description": "The overflow-wrap property in CSS allows you to specify that the browser can break a line of text inside the targeted element onto multiple lines in an...",
