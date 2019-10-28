@@ -6582,13 +6582,13 @@ gatsby-remark-copy-linked-files@^2.1.19:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embed-video@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-2.0.0.tgz#6b5bf6b81b864cc844ce99226752176f11979ef2"
-  integrity sha512-ZpPCDs0IkaO1XdYcCdwaTPtWvXb63znUiCKoMiI1yWRsrwJ47iGF6SFJqFUFFs/3V3x2yzkRVr2RYXGZRgLjfQ==
+gatsby-remark-embed-video@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-2.0.1.tgz#d7b5a8ecbde9ec8fc33fb2e569b87b2af35cb278"
+  integrity sha512-V+cW4Ev+iXb0jmqfqKpcdPRn9vsKahIdj9sAUj26Ox4rooknWCjhayBdxT51BM2u7P2u3ck3Ty96PnqW7e/Mog==
   dependencies:
     get-video-id "^3.1.4"
-    remark-burger "^1.0.0"
+    remark-burger "^1.0.1"
     unist-util-visit "^2.0.0"
 
 gatsby-remark-external-links@^0.0.4:
@@ -12668,7 +12668,7 @@ relay-runtime@2.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-burger@^1.0.0:
+remark-burger@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/remark-burger/-/remark-burger-1.0.1.tgz#cda57d4bc1e952ae86b2407fbcf36492ab352106"
   integrity sha512-F91SyEzat4hBkWsWElHIvMcCQuWoSeZXTuR4DmLvhUIjYkzzVLaX6GRxhkiDrZb/9asvTrYzwEr9HvxN1tqs9Q==
