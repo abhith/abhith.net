@@ -12,7 +12,7 @@
     "bulma": "^0.8.0",
     "bulma-timeline": "^3.0.4",
     "disqus-react": "^1.0.7",
-    "gatsby": "^2.17.0",
+    "gatsby": "^2.17.4",
     "gatsby-awesome-pagination": "^0.3.4",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-emotion": "^4.1.10",
