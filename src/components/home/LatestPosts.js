@@ -46,7 +46,7 @@ export const query = graphql`
   query {
     lastUpdatedPost: allArticle(
       sort: { fields: [lastModificationTime], order: DESC }
-      filter: { lastModificationTime: { ne: null } }
+      filter: { lastModificationTime: { ne: null }, draft: { eq: false } }
       limit: 1
     ) {
       edges {
@@ -81,6 +81,7 @@ export const query = graphql`
     }
     latestArticles: allArticle(
       sort: { fields: [date], order: DESC }
+      filter: { draft: { eq: false } }
       limit: 3
     ) {
       edges {

@@ -44,7 +44,7 @@ function SEO({
         services: allServicesJson {
           totalCount
         }
-        posts: allArticle {
+        posts: allArticle(filter: { draft: { eq: false } }) {
           totalCount
         }
       }

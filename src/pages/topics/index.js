@@ -193,7 +193,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    articleTagsGroup: allArticle {
+    articleTagsGroup: allArticle(filter: { draft: { eq: false } }) {
       group(field: tags) {
         fieldValue
         totalCount

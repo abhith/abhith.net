@@ -49,6 +49,7 @@ export default class BlogIndexPage extends React.Component {
 export const pageQuery = graphql`
   query BlogRollQuery($skip: Int!, $limit: Int!) {
     articles: allArticle(
+      filter: { draft: { eq: false } }
       sort: { order: DESC, fields: [date] }
       skip: $skip
       limit: $limit

@@ -10,7 +10,9 @@ const GatsbyFluid_withWebp = `
 
 module.exports.local = {
   articles: `{
-      articles: allArticle {
+      articles: allArticle(
+        filter: {draft: {eq: false}}
+      ) {
         edges {
           node {
             id

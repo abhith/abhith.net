@@ -103,7 +103,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      articleTagsGroup: allArticle {
+      articleTagsGroup: allArticle(filter: { draft: { eq: false } }) {
         group(field: tags) {
           fieldValue
           totalCount

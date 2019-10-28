@@ -7,7 +7,7 @@ const TopicSideNav = ({ slug }) => (
   <StaticQuery
     query={graphql`
       query {
-        allBlogPostTopics: allArticle {
+        allBlogPostTopics: allArticle(filter: { draft: { eq: false } }) {
           group(field: tags) {
             fieldValue
             totalCount
