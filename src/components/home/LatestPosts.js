@@ -9,23 +9,21 @@ function LatestPosts() {
     <StaticQuery
       query={query}
       render={data => {
-        const latestPost = data.latestPost.edges.map(
+        const latestArticles = data.latestArticles.edges.map(
           normalize.local.articles
-        )[0];
+        );
+
         const lastUpdatedPost = data.lastUpdatedPost.edges.map(
           normalize.local.articles
         )[0];
-        const recentPosts = data.recentPosts.edges.map(
-          normalize.local.articles
-        );
 
         return (
           <section className="section">
             <div className="container is-fluid">
               <div className="columns">
-                <BlogCard post={latestPost}></BlogCard>
+                <BlogCard post={latestArticles[0]}></BlogCard>
                 <div className="column">
-                  {recentPosts.map(node => {
+                  {latestArticles.slice(1, 2).map(node => {
                     return <BlogRollItem post={node} key={node.slug} />;
                   })}
                 </div>
@@ -46,127 +44,72 @@ export default LatestPosts;
 
 export const query = graphql`
   query {
-    lastUpdatedPost: allMdx(
-      sort: { fields: [frontmatter___lastModificationTime], order: DESC }
-      filter: { frontmatter: { lastModificationTime: { ne: null } } }
+    lastUpdatedPost: allArticle(
+      sort: { fields: [lastModificationTime], order: DESC }
+      filter: { lastModificationTime: { ne: null } }
       limit: 1
     ) {
       edges {
         node {
           id
           body
-          fields {
-            slug
-            readingTime {
-              text
-            }
-          }
-          frontmatter {
-            date
-            dateString: date(formatString: "MMMM DD, YYYY")
-            datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-            title
-            description
-            tags
-            lastModificationTime
-            lastModificationTimeString: lastModificationTime(
-              formatString: "MMMM DD, YYYY"
-            )
-            dateModifiedSeoFormat: lastModificationTime(
-              formatString: "YYYY-MM-DD"
-            )
-            image {
-              full: childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+          slug
+          timeToRead
+          date
+          dateString: date(formatString: "MMMM DD, YYYY")
+          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+          title
+          excerpt
+          tags
+          lastModificationTime
+          lastModificationTimeString: lastModificationTime(
+            formatString: "MMMM DD, YYYY"
+          )
+          dateModifiedSeoFormat: lastModificationTime(
+            formatString: "YYYY-MM-DD"
+          )
+          hero {
+            full: childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
-            commentId
           }
+          commentId
         }
       }
     }
-    latestPost: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-      limit: 1
+    latestArticles: allArticle(
+      sort: { fields: [date], order: DESC }
+      limit: 3
     ) {
       edges {
         node {
           id
           body
-          fields {
-            slug
-            readingTime {
-              text
-            }
-          }
-          frontmatter {
-            date
-            dateString: date(formatString: "MMMM DD, YYYY")
-            datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-            title
-            description
-            tags
-            lastModificationTime
-            lastModificationTimeString: lastModificationTime(
-              formatString: "MMMM DD, YYYY"
-            )
-            dateModifiedSeoFormat: lastModificationTime(
-              formatString: "YYYY-MM-DD"
-            )
-            image {
-              full: childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+          slug
+          timeToRead
+          date
+          dateString: date(formatString: "MMMM DD, YYYY")
+          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+          title
+          excerpt
+          tags
+          lastModificationTime
+          lastModificationTimeString: lastModificationTime(
+            formatString: "MMMM DD, YYYY"
+          )
+          dateModifiedSeoFormat: lastModificationTime(
+            formatString: "YYYY-MM-DD"
+          )
+          hero {
+            full: childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
-            commentId
           }
-        }
-      }
-    }
-    recentPosts: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-      skip: 1
-      limit: 2
-    ) {
-      edges {
-        node {
-          id
-          body
-          fields {
-            slug
-            readingTime {
-              text
-            }
-          }
-          frontmatter {
-            date
-            dateString: date(formatString: "MMMM DD, YYYY")
-            datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-            title
-            description
-            tags
-            lastModificationTime
-            lastModificationTimeString: lastModificationTime(
-              formatString: "MMMM DD, YYYY"
-            )
-            dateModifiedSeoFormat: lastModificationTime(
-              formatString: "YYYY-MM-DD"
-            )
-            image {
-              full: childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-            commentId
-          }
+          commentId
         }
       }
     }

@@ -44,7 +44,7 @@ function SEO({
         services: allServicesJson {
           totalCount
         }
-        posts: allMdx {
+        posts: allArticle {
           totalCount
         }
       }

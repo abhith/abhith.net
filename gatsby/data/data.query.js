@@ -10,43 +10,37 @@ const GatsbyFluid_withWebp = `
 
 module.exports.local = {
   articles: `{
-      articles: allMdx {
+      articles: allArticle {
         edges {
           node {
             id
             body
-            fields {
-              slug
-              readingTime {
-                text
-              }
-            }
-            frontmatter {
-              date
-              dateString: date(formatString: "MMMM DD, YYYY")
-              datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-              title
-              description
-              tags
-              lastModificationTime
-              lastModificationTimeString: lastModificationTime(
-                formatString: "MMMM DD, YYYY"
-              )
-              dateModifiedSeoFormat: lastModificationTime(
-                formatString: "YYYY-MM-DD"
-              )
-              image {
-                full: childImageSharp {
-                  fluid(maxWidth: 2048, quality: 100) {
-                    ${GatsbyFluid_withWebp}
-                  }
+            slug
+            timeToRead
+            date
+            dateString: date(formatString: "MMMM DD, YYYY")
+            datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+            title
+            excerpt
+            tags
+            lastModificationTime
+            lastModificationTimeString: lastModificationTime(
+              formatString: "MMMM DD, YYYY"
+            )
+            dateModifiedSeoFormat: lastModificationTime(
+              formatString: "YYYY-MM-DD"
+            )
+            hero {
+              full: childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ${GatsbyFluid_withWebp}
                 }
               }
-              commentId
             }
+            commentId
           }
         }
-      }
+      }      
     }`,
   stories: `{
     stories: allStoriesJson(

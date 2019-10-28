@@ -48,8 +48,8 @@ export default class BlogIndexPage extends React.Component {
 
 export const pageQuery = graphql`
   query BlogRollQuery($skip: Int!, $limit: Int!) {
-    articles: allMdx(
-      sort: { order: DESC, fields: [frontmatter___date] }
+    articles: allArticle(
+      sort: { order: DESC, fields: [date] }
       skip: $skip
       limit: $limit
     ) {
@@ -57,35 +57,29 @@ export const pageQuery = graphql`
         node {
           id
           body
-          fields {
-            slug
-            readingTime {
-              text
-            }
-          }
-          frontmatter {
-            date
-            dateString: date(formatString: "MMMM DD, YYYY")
-            datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-            title
-            description
-            tags
-            lastModificationTime
-            lastModificationTimeString: lastModificationTime(
-              formatString: "MMMM DD, YYYY"
-            )
-            dateModifiedSeoFormat: lastModificationTime(
-              formatString: "YYYY-MM-DD"
-            )
-            image {
-              full: childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+          slug
+          timeToRead
+          date
+          dateString: date(formatString: "MMMM DD, YYYY")
+          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+          title
+          excerpt
+          tags
+          lastModificationTime
+          lastModificationTimeString: lastModificationTime(
+            formatString: "MMMM DD, YYYY"
+          )
+          dateModifiedSeoFormat: lastModificationTime(
+            formatString: "YYYY-MM-DD"
+          )
+          hero {
+            full: childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
-            commentId
           }
+          commentId
         }
       }
     }

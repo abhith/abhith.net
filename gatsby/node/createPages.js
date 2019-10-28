@@ -103,8 +103,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      articleTagsGroup: allMdx {
-        group(field: frontmatter___tags) {
+      articleTagsGroup: allArticle {
+        group(field: tags) {
           fieldValue
           totalCount
         }

@@ -22,7 +22,7 @@ const BlogCard = ({ post, tag }) => {
           <span className="blog-date">
             {post.date} &middot; {post.timeToRead}
           </span>
-          <p>{post.description}</p>
+          <p>{post.excerpt}</p>
           <div className="post-meta">
             <div className="author-block">
               <div className="image is-32x32">

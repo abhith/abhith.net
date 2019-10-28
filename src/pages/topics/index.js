@@ -193,8 +193,8 @@ export const pageQuery = graphql`
         title
       }
     }
-    articleTagsGroup: allMdx {
-      group(field: frontmatter___tags) {
+    articleTagsGroup: allArticle {
+      group(field: tags) {
         fieldValue
         totalCount
       }
