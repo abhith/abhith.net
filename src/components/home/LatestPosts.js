@@ -23,7 +23,7 @@ function LatestPosts() {
               <div className="columns">
                 <BlogCard post={latestArticles[0]}></BlogCard>
                 <div className="column">
-                  {latestArticles.slice(1, 2).map(node => {
+                  {latestArticles.slice(1, 3).map(node => {
                     return <BlogRollItem post={node} key={node.slug} />;
                   })}
                 </div>
