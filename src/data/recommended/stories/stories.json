@@ -1,5 +1,12 @@
 [
   {
+    "title": "Using React Error Boundaries With AppInsights",
+    "url": "https://www.aaron-powell.com/posts/2019-10-24-using-react-error-boundaries-with-appinsights/",
+    "description": "Combining React Error Boundaries with AppInsights for automatic error logging",
+    "date": "2019-10-27T08:27:28.263Z",
+    "tags": ["react", "azure"]
+  },
+  {
     "title": "IIS URL Redirect HTTP to HTTPS excluding one or more folders",
     "url": "https://www.ryadel.com/en/iis-url-redirect-http-https-exclude-folder-subfolder-rewrite-web-config/",
     "description": "How to configure IIS to rewrite or redirect all HTTP requests to HTTPS except the files in a specific subfolder (or more) with a web.config rewrite rule",
