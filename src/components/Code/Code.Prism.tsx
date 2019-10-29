@@ -9,6 +9,7 @@ import { FaCopy, FaClipboard } from "react-icons/fa";
 import Prism from "prismjs";
 require("prismjs/components/prism-csharp");
 require("prismjs/components/prism-graphql");
+require("prismjs/components/prism-sql");
 
 import theme from "@styles/theme";
 
