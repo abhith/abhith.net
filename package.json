@@ -5,7 +5,7 @@
   "author": "Abhith Rajan",
   "dependencies": {
     "@emotion/core": "^10.0.21",
-    "@emotion/styled": "^10.0.17",
+    "@emotion/styled": "^10.0.23",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
     "@weknow/gatsby-remark-twitter": "^0.2.3",
