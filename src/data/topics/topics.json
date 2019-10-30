@@ -96,12 +96,6 @@
     "image": ""
   },
   {
-    "title": "Download Site",
-    "slug": "download-site",
-    "description": "",
-    "image": ""
-  },
-  {
     "title": ".NET",
     "slug": "dotnet",
     "description": "",
@@ -112,6 +106,12 @@
     "slug": "dotnet-core",
     "description": ".NET is an Open Source Developer Platform for Building Apps.",
     "image": "dot-net-core-7.svg"
+  },
+  {
+    "title": "Download Site",
+    "slug": "download-site",
+    "description": "",
+    "image": ""
   },
   {
     "title": "Flutter",
@@ -186,16 +186,16 @@
     "image": ""
   },
   {
-    "title": "SQL Server",
-    "slug": "sql-server",
-    "description": "",
-    "image": "microsoft-sql-server.svg"
-  },
-  {
     "title": "Security",
     "slug": "security",
     "description": "",
     "image": ""
+  },
+  {
+    "title": "SQL Server",
+    "slug": "sql-server",
+    "description": "",
+    "image": "microsoft-sql-server.svg"
   },
   {
     "title": "Visual Studio",
