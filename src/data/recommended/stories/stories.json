@@ -1,5 +1,12 @@
 [
   {
+    "title": "Code Cleanup: 7 Simple Daily Steps That Pay off in the End",
+    "url": "https://blog.submain.com/code-cleanup-7-simple-daily-steps-that-pay-off-in-the-end/",
+    "description": "Code cleanup doesn't have to be an arduous job. Learn seven simple steps you can perform daily to keep your codebase in great shape.",
+    "date": "2019-10-30T13:27:28.263Z",
+    "tags": ["style-guide"]
+  },
+  {
     "title": "Using React Error Boundaries With AppInsights",
     "url": "https://www.aaron-powell.com/posts/2019-10-24-using-react-error-boundaries-with-appinsights/",
     "description": "Combining React Error Boundaries with AppInsights for automatic error logging",
