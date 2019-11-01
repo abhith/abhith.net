@@ -618,3 +618,9 @@
 .bd-typo:not(:first-child) {
   margin-top: 3rem;
 }
+
+.ar-breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  // background-color: #19aaa1;
+}

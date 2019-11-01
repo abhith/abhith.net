@@ -26,7 +26,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
   // Create blog post pages.
-  const articles = result.data.articles.edges.map(normalize.local.articles);
+  let articles = result.data.articles.edges.map(normalize.local.articles);
+  articles = _.sortBy(articles, article => article.datePublishedSeoFormat); // you'll call `createPage` for each result
 
   const allStories = await graphql(query.local.stories);
   if (allStories.errors) {
@@ -47,8 +48,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
   if (allTopics.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "allTopics" query');
   }
-  // you'll call `createPage` for each result
-  log(`Creating`, "article posts");
+
+  log(`Creating`, "articles");
 
   articles.forEach((article, index) => {
     // related articles
@@ -83,7 +84,9 @@ module.exports = async ({ graphql, actions, reporter }) => {
         relatedArticles,
         relatedStories,
         relatedVideos,
-        relatedTools
+        relatedTools,
+        next: articles[index - 1],
+        previous: articles[index + 1]
       }
     });
   });
@@ -328,7 +331,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       });
     });
 
-    log(`Creating`, "blog");
+    log(`Creating`, "blog index");
 
     // Create your paginated pages
     paginate({

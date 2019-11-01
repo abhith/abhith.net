@@ -10,6 +10,7 @@ import React from "react";
 import { IArticle } from "@types";
 import { FaCoffee } from "react-icons/fa";
 
+import { Link } from "gatsby";
 import ArticleHero from "../sections/article/Article.Hero";
 import RelatedArticles from "../sections/article/Article.RelatedArticles";
 import RelatedStories from "../sections/article/Article.RelatedStories";
@@ -23,14 +24,19 @@ export default ({ pageContext, location }) => {
     relatedArticles,
     relatedStories,
     relatedVideos,
-    relatedTools
+    relatedTools,
+    next,
+    previous
   }: {
     article: IArticle;
     relatedArticles: IArticle[];
     relatedStories: any;
     relatedVideos: any;
     relatedTools: any;
+    next: IArticle;
+    previous: IArticle;
   } = pageContext;
+
   const githubURL = `https://github.com/Abhith/abhith.net/blob/master/content${article.slug.substring(
     0,
     article.slug.length - 1
@@ -64,6 +70,38 @@ export default ({ pageContext, location }) => {
               <ArticleShare article={article} location={location} />
             </div>
             <div className="column is-8">
+              <div className="ar-breadcrumb is-hidden-mobile">
+                <nav className="breadcrumb" aria-label="breadcrumbs">
+                  <ul>
+                    <li>
+                      <Link to={`/`}>Home</Link>
+                    </li>
+                    <li>
+                      <Link to={`/blog`}>Blog</Link>
+                    </li>
+                    <li className="is-active">
+                      <Link to={article.slug}>{article.title}</Link>
+                    </li>
+                  </ul>
+                </nav>
+                <nav className="bd-prev-next">
+                  {previous ? (
+                    <Link to={previous.slug} title={previous.title}>
+                      ←
+                    </Link>
+                  ) : (
+                    <span>←</span>
+                  )}
+
+                  {next ? (
+                    <Link to={next.slug} title={next.title}>
+                      →
+                    </Link>
+                  ) : (
+                    <span>→</span>
+                  )}
+                </nav>
+              </div>
               <MDXRenderer content={article.body}>
                 <TopicsBar topics={article.tags} />
                 <div id="typo" className="bd-typo">
