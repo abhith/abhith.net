@@ -9,7 +9,7 @@ My name is Abhith Rajan. I'm a [Software Engineer](https://github.com/abhith) ra
 
 I work for the Product Team at [Emcredit](https://www.emcredit.com/). At the moment my desk is located in **DIFC Dubai**, the leading financial centre in the Middle East, Africa and South Asia region.
 
-My role involves prototyping, developing backend as well as front end apps with the modern workflows, frameworks. Keeping an eye on the patterns and organized code. For the backend apps including microservices am a .NET guy. And Yeah, one of the microservice is running on ASP.NET CORE 3.0 which released on October 2019 and the rest is in 2.2. And for the front-end apps, we have so many choices, and my decision engine is given below,
+My role involves prototyping, developing backend as well as front end apps with the modern workflows, frameworks. Keeping an eye on the patterns and organized code. Same time deploy them on Azure and monitor everything running there. For the backend apps including microservices am a .NET guy. For the front-end apps, we have so many choices, and my decision engine is given below,
 
 - For full fledged portal or a custom CMS, go with **Angular**.
 - For micro apps, normally **Nuxt.js** (Which is built on top of Vue).
@@ -26,4 +26,4 @@ I started my career at [Aabasoft](http://aabasoft.com) where I joined as an inte
 
 ## INFORMATION OVERFLOW
 
-I love racing, big fan of **Valentino Rossi**. The first thing I bought after I got my first job was my **Yamaha R15 V2** bike. And I got a cool number for that bike, KL 40J **201**. After I moved to UAE, the one thing that hurt me most is, `I MISS MY BIKE`.
+I love racing, big fan of **Valentino Rossi**. The first thing I bought after I got my first job was my **Yamaha R15 V2** bike. And I got a cool number for that bike, KL 40J **201**. After I moved to UAE, the one thing that hurt me most is, **I MISS MY BIKE**.
