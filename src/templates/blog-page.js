@@ -3,17 +3,16 @@ import React from "react";
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
 import SEO from "../components/seo/SEO";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Pagination from "../components/Pagination";
 
 const normalize = require("../../gatsby/data/data.normalize");
 export default class BlogIndexPage extends React.Component {
   render() {
     const { pageContext, data } = this.props;
-    // console.log(pageContext);
     const articles = data.articles.edges.map(normalize.local.articles);
 
-    const { previousPagePath, nextPagePath } = pageContext;
+    const { previousPagePath, nextPagePath, topics } = pageContext;
     return (
       <Layout>
         <SEO
@@ -25,7 +24,7 @@ export default class BlogIndexPage extends React.Component {
         <div className="section">
           <div className="container">
             <div className="columns">
-              <div className="column is-9">
+              <div className="column is-9 is-10-widescreen">
                 <h4 className="title is-4 spanborder has-text-weight-bold">
                   <span>All Stories</span>
                 </h4>
@@ -35,8 +34,19 @@ export default class BlogIndexPage extends React.Component {
                   nextPagePath={nextPagePath}
                 ></Pagination>
               </div>
-              <div className="column">
-                {/* {% include sidebar-featured.html %}     */}
+              <div className="column is-3 is-2-widescreen is-hidden-mobile">
+                <div className="tags-widget">
+                  <h4 className="title is-4 spanborder has-text-weight-bold">
+                    <span>All Topics</span>
+                  </h4>
+                  <div className="tags">
+                    {topics.map(topic => (
+                      <Link to={`/topics/${topic.slug}/`} key={topic.slug}>
+                        <span className="tag">{topic.title}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

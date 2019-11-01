@@ -216,59 +216,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
       }
     });
 
-    pages.forEach(edge => {
-      const id = edge.node.id;
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id
-        }
-      });
-    });
-
-    // Create your paginated pages
-    paginate({
-      createPage, // The Gatsby `createPage` function
-      items: articles, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve("src/templates/blog-page.js") // Just like `createPage()`
-    });
-
-    // Create your paginated stories
-    paginate({
-      createPage, // The Gatsby `createPage` function
-      items: stories, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: "/recommended/stories", // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve("src/templates/stories-page.js") // Just like `createPage()`
-    });
-
-    // Create your paginated videos
-    paginate({
-      createPage, // The Gatsby `createPage` function
-      items: videos, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: "/recommended/videos", // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve("src/templates/videos-page.js") // Just like `createPage()`
-    });
-
-    // Create your paginated tools
-    paginate({
-      createPage, // The Gatsby `createPage` function
-      items: services, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: "/recommended/services", // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve("src/templates/services-page.js") // Just like `createPage()`
-    });
-
     // Make topic pages
-    topics.forEach(topic => {
+    topics.forEach((topic, index) => {
       // merge aggregated topics with topics collection
 
       let topicNode = allTopics.data.topics.edges.find(
@@ -276,8 +225,10 @@ module.exports = async ({ graphql, actions, reporter }) => {
       );
 
       if (topicNode) {
-        topic = { ...topicNode.node, ...topic };
+        topic = { ...topic, ...topicNode.node };
+        topics[index] = topic;
       } else {
+        log(`Missing topic definition`, `${topic.slug}`);
         topic.title = topic.slug;
       }
 
@@ -360,6 +311,62 @@ module.exports = async ({ graphql, actions, reporter }) => {
           }
         });
       }
+    });
+
+    pages.forEach(edge => {
+      const id = edge.node.id;
+      createPage({
+        path: edge.node.fields.slug,
+        tags: edge.node.frontmatter.tags,
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id
+        }
+      });
+    });
+
+    log(`Creating`, "blog");
+
+    // Create your paginated pages
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: articles, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/blog-page.js"), // Just like `createPage()`
+      context: {
+        topics
+      }
+    });
+
+    // Create your paginated stories
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: stories, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/stories", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/stories-page.js") // Just like `createPage()`
+    });
+
+    // Create your paginated videos
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: videos, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/videos", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/videos-page.js") // Just like `createPage()`
+    });
+
+    // Create your paginated tools
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: services, // An array of objects
+      itemsPerPage: 10, // How many items you want per page
+      pathPrefix: "/recommended/services", // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve("src/templates/services-page.js") // Just like `createPage()`
     });
 
     let redirectBatch1 = [
