@@ -19,6 +19,7 @@ rules:
       - test
       - revert
       - content
+      - ui
 help: |
   **Possible types**:
 
@@ -32,4 +33,5 @@ help: |
   `perf`:     Improves performance.
   `test`:     Adds or modifies tests.
   `revert`:   Changes that reverting other changes.
-  `content`:   Adds or alters site content
+  `content`:   Adds or alters site content.
+  `ui`: UI/UX updates
