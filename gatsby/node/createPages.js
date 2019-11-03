@@ -8,7 +8,8 @@ const templates = {
   topic: path.resolve(templatesDirectory, "topic.template.tsx"),
   topicStories: path.resolve(templatesDirectory, "topic.stories.template.tsx"),
   topicVideos: path.resolve(templatesDirectory, "topic.videos.template.tsx"),
-  topicTools: path.resolve(templatesDirectory, "topic.tools.template.tsx")
+  topicTools: path.resolve(templatesDirectory, "topic.tools.template.tsx"),
+  blog: path.resolve(templatesDirectory, "blog.template.tsx")
 };
 
 const log = (message, section) =>
@@ -339,7 +340,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       items: articles, // An array of objects
       itemsPerPage: 10, // How many items you want per page
       pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve("src/templates/blog-page.js"), // Just like `createPage()`
+      component: templates.blog, // Just like `createPage()`
       context: {
         topics
       }
