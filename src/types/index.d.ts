@@ -34,3 +34,12 @@ interface IGatsbyImageFluid extends IGatsbyImage {
   maxHeight: number;
   maxWidth: number;
 }
+
+export interface ITopic {
+  slug: string;
+  title: string;
+  totalPosts: number;
+  totalVideos: number;
+  totalStories: number;
+  totalServices: number;
+}

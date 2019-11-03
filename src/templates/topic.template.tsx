@@ -1,19 +1,12 @@
 import BlogRoll from "@components/BlogRoll";
 import TopicPageBase from "@components/TopicPageBase";
+import { TopicPageTab } from "@types";
 import React from "react";
 
 function Topic({ pageContext }) {
   const { topic, articles } = pageContext;
   return (
-    <TopicPageBase
-      slug={topic.slug}
-      title={topic.title}
-      totalPostCount={topic.totalPosts}
-      totalServiceCount={topic.totalServices}
-      totalStoriesCount={topic.totalStories}
-      totalVideoCount={topic.totalVideos}
-      activeTab="posts"
-    >
+    <TopicPageBase topic={topic} activeTab={TopicPageTab.Posts}>
       <BlogRoll posts={articles} />
     </TopicPageBase>
   );
