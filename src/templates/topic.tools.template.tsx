@@ -4,10 +4,10 @@ import { TopicPageTab } from "@types";
 import React from "react";
 
 function TopicTools({ pageContext }) {
-  const { topic, tools } = pageContext;
+  const { topic, tools, topics } = pageContext;
 
   return (
-    <TopicPageBase topic={topic} activeTab={TopicPageTab.Tools}>
+    <TopicPageBase topic={topic} activeTab={TopicPageTab.Tools} topics={topics}>
       <ServicesRoll services={tools} />
     </TopicPageBase>
   );

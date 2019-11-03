@@ -9,10 +9,16 @@ import React from "react";
 interface ITopicPageProps {
   activeTab: TopicPageTab;
   topic: ITopic;
+  topics: ITopic[];
   children: React.ReactChild;
 }
 
-const TopicPageBase = ({ activeTab, topic, children }: ITopicPageProps) => {
+const TopicPageBase = ({
+  activeTab,
+  topic,
+  topics,
+  children
+}: ITopicPageProps) => {
   const summary = [];
 
   let pageTitle;
@@ -85,7 +91,7 @@ const TopicPageBase = ({ activeTab, topic, children }: ITopicPageProps) => {
         <div className="container">
           <div className="columns">
             <div className="column is-3 is-2-widescreen is-hidden-mobile">
-              <TopicsSideNav slug={topic.slug} />
+              <TopicsSideNav activeTopic={topic.slug} topics={topics} />
             </div>
             <div className="column is-9 is-10-widescreen">
               <div className="tabs">

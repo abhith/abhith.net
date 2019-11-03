@@ -4,10 +4,14 @@ import { TopicPageTab } from "@types";
 import React from "react";
 
 function TopicVideos({ pageContext }) {
-  const { topic, videos } = pageContext;
+  const { topic, videos, topics } = pageContext;
 
   return (
-    <TopicPageBase topic={topic} activeTab={TopicPageTab.Videos}>
+    <TopicPageBase
+      topic={topic}
+      activeTab={TopicPageTab.Videos}
+      topics={topics}
+    >
       <VideosRoll videos={videos} />
     </TopicPageBase>
   );

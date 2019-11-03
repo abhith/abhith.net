@@ -233,7 +233,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
         topics[index] = topic;
       } else {
         log(`Missing topic definition`, `${topic.slug}`);
-        topic.title = topic.slug;
+        topic.title = _.startCase(topic.slug);
       }
 
       const topicPath = `/topics/${topic.slug}/`;
@@ -251,7 +251,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
           component: templates.topic,
           context: {
             topic,
-            articles: topicArticles
+            articles: topicArticles,
+            topics
           }
         });
       } else {
@@ -281,7 +282,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
           component: templates.topicStories,
           context: {
             topic,
-            stories: relatedStories
+            stories: relatedStories,
+            topics
           }
         });
       }
@@ -296,7 +298,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
           component: templates.topicVideos,
           context: {
             topic,
-            videos: relatedVideos
+            videos: relatedVideos,
+            topics
           }
         });
       }
@@ -311,7 +314,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
           component: templates.topicTools,
           context: {
             topic,
-            tools: relatedTools
+            tools: relatedTools,
+            topics
           }
         });
       }
