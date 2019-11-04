@@ -16,34 +16,34 @@ function Footer() {
   );
 
   return (
-    <footer class="ar-footer is-medium section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-5 is-4-widescreen">
-            <div class="summary">
+    <footer className="ar-footer is-medium section">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-5 is-4-widescreen">
+            <div className="summary">
               <Link to="/" className="brand">
-                <div class="brand-icon">
+                <div className="brand-icon">
                   <img
                     alt="Abhith Rajan"
                     role="presentation"
                     src="/img/site/brand/icon.png"
                   />
                 </div>
-                <div class="brand-content">
-                  <div class="brand-title"> Abhith Rajan </div>
-                  <div class="brand-subtitle">Full Stack Dev</div>
+                <div className="brand-content">
+                  <div className="brand-title"> Abhith Rajan </div>
+                  <div className="brand-subtitle">Full Stack Dev</div>
                 </div>
               </Link>
-              <hr class="spacer"></hr>
+              <hr className="spacer"></hr>
               <p> {site.siteMetadata.description}</p>
             </div>
           </div>
-          <div class="column is-7 is-6-widescreen is-offset-2-widescreen">
-            <div class="columns">
-              <div class="column is-4">
-                <div class="menu">
-                  <p class="menu-label"> Website </p>
-                  <ul class="menu-list">
+          <div className="column is-7 is-6-widescreen is-offset-2-widescreen">
+            <div className="columns">
+              <div className="column is-4">
+                <div className="menu">
+                  <p className="menu-label"> Website </p>
+                  <ul className="menu-list">
                     <li>
                       <Link to="/">Home</Link>
                     </li>
@@ -62,10 +62,10 @@ function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="column is-4">
-                <div class="menu">
-                  <p class="menu-label">Recommended</p>
-                  <ul class="menu-list">
+              <div className="column is-4">
+                <div className="menu">
+                  <p className="menu-label">Recommended</p>
+                  <ul className="menu-list">
                     <li>
                       <Link to="/recommended/stories">Stories</Link>
                     </li>
@@ -88,10 +88,10 @@ function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="column is-4">
-                <div class="menu">
-                  <p class="menu-label">Connect with me</p>
-                  <ul class="menu-list">
+              <div className="column is-4">
+                <div className="menu">
+                  <p className="menu-label">Connect with me</p>
+                  <ul className="menu-list">
                     <li>
                       <a
                         className="twitter-follow-button"
