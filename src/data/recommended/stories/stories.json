@@ -1,5 +1,12 @@
 [
   {
+    "title": "Introducing Orleans 3.0 | .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/orleans-3-0/",
+    "description": "This is a guest post from the Orleans team. Orleans is a cross-platform framework for building distributed applications with .NET. For more information, see https://github.com/dotnet/orleans. We are excited to announce the Orleans 3.0 release. A great number of improvements and fixes went in,",
+    "date": "2019-11-04T04:31:28.263Z",
+    "tags": ["microsoft-orleans"]
+  },
+  {
     "title": "Code Cleanup: 7 Simple Daily Steps That Pay off in the End",
     "url": "https://blog.submain.com/code-cleanup-7-simple-daily-steps-that-pay-off-in-the-end/",
     "description": "Code cleanup doesn't have to be an arduous job. Learn seven simple steps you can perform daily to keep your codebase in great shape.",
