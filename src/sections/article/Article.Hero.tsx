@@ -1,7 +1,6 @@
 import Image from "@components/Image";
 import { IArticle } from "@types";
 import { Link } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
 
 interface IArticleHeroProps {
@@ -32,7 +31,7 @@ const ArticleHero = ({ article }: IArticleHeroProps) => {
                 </span>
               ) : null}
             </p>
-            <div className="divider"></div>
+            <div className="divider" />
             <h1 className="title is-2 is-light is-semibold is-spaced main-title">
               {article.title}
             </h1>
@@ -43,16 +42,15 @@ const ArticleHero = ({ article }: IArticleHeroProps) => {
               </div>
               <div className="author-name">
                 <span>
-                  by Abhith Rajan{" "}
-                  <OutboundLink
-                    target="_blank"
-                    className="button is-info is-outlined is-small is-rounded ml-1"
-                    href={`https://twitter.com/abhithrajan`}
+                  <a
+                    className="twitter-follow-button"
+                    href="https://twitter.com/abhithrajan"
+                    data-show-screen-name="false"
                   >
-                    Follow
-                  </OutboundLink>
+                    Follow @AbhithRajan
+                  </a>
                 </span>
-
+                <span>by Abhith Rajan</span>
                 <span>
                   {article.date} &middot; {article.timeToRead} &middot; Last
                   Updated:{" "}

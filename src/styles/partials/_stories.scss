@@ -1,4 +1,3 @@
-
 //Post item
 .story-post {
   //featured image
@@ -65,7 +64,7 @@
   //Content
   .content {
     // width: 100%;
-    
+
     //Separator
     .rounded {
       margin-left: 0;
@@ -149,33 +148,6 @@
   }
 }
 
-//
-.post-caption {
-  .author-block {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    img {
-      border-radius: 50%;
-    }
-    .author-name {
-      font-size: 0.85rem;
-      // font-family: 'Cabin', sans-serif;
-      // color: $white;
-      padding: 0 10px;
-      span {
-        display: block;
-        &:nth-child(2) {
-          color: $chosen-dark-grey;
-          small {
-            // color: $white !important;
-          }
-        }
-      }
-    }
-  }
-}
-
 // //Specific Media queries for blog posts
 @media screen and (max-width: 768px) {
   .story-post {
@@ -205,4 +177,3 @@
     }
   }
 }
-

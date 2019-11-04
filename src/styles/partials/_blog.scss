@@ -155,17 +155,10 @@
     }
     .author-name {
       font-size: 0.85rem;
-      // font-family: 'Cabin', sans-serif;
-      // color: $white;
+      line-height: 1.45;
       padding: 0 10px;
       span {
         display: block;
-        &:nth-child(2) {
-          color: $chosen-dark-grey;
-          small {
-            // color: $white !important;
-          }
-        }
       }
     }
   }
