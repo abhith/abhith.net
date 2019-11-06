@@ -137,13 +137,13 @@ export default ({ pageContext, location }) => {
                             Written by {`Abhith Rajan`}
                           </strong>{" "}
                           <span>
-                            <OutboundLink
-                              target="_blank"
-                              className="button is-success is-outlined is-small is-rounded ml-1"
-                              href={`https://twitter.com/abhithrajan`}
+                            <a
+                              className="twitter-follow-button"
+                              href="https://twitter.com/abhithrajan"
+                              data-show-screen-name="false"
                             >
-                              Follow
-                            </OutboundLink>
+                              Follow @AbhithRajan
+                            </a>
                           </span>
                           <span>
                             <OutboundLink

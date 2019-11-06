@@ -10,7 +10,7 @@ interface ITopicSideNavProps {
 
 function TopicSideNav({ topics, activeTopic }: ITopicSideNavProps) {
   return (
-    <div className="menu">
+    <div className="menu ar-topic-menu">
       <p className="menu-label"> Filter by topic </p>
       <ul className="menu-list">
         <li>
