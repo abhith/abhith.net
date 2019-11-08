@@ -20,12 +20,15 @@ const ArticleHero = ({ article }: IArticleHeroProps) => {
                   {article.tags.map(tag => (
                     <React.Fragment key={tag}>
                       <Link
-                        className="has-text-danger has-text-weight-bold is-uppercase"
+                        className="has-text-primary has-text-weight-bold is-uppercase"
                         to={`/topics/${tag}/`}
                       >
                         {tag}
-                      </Link>{" "}
-                      <span className="sep">, </span>
+                      </Link>
+                      <span className="has-text-primary has-text-weight-light sep">
+                        {" "}
+                        |{" "}
+                      </span>
                     </React.Fragment>
                   ))}
                 </span>
