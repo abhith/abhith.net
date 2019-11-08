@@ -10,6 +10,7 @@ import Prism from "prismjs";
 require("prismjs/components/prism-csharp");
 require("prismjs/components/prism-graphql");
 require("prismjs/components/prism-sql");
+require("prismjs/components/prism-yaml");
 
 import theme from "@styles/theme";
 
