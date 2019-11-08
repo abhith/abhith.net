@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "Abhith Rajan",
   "dependencies": {
-    "@emotion/core": "^10.0.21",
+    "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.17",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
@@ -28,6 +28,7 @@
     "gatsby-plugin-sass": "^2.1.17",
     "gatsby-plugin-sharp": "^2.2.32",
     "gatsby-plugin-sitemap": "^2.2.14",
+    "gatsby-plugin-theme-ui": "^0.2.43",
     "gatsby-plugin-twitter": "^2.1.12",
     "gatsby-plugin-typescript": "^2.1.12",
     "gatsby-remark-autolink-headers": "^2.1.13",
@@ -60,6 +61,7 @@
     "react-particles-js": "^2.7.0",
     "react-player": "^1.14.0",
     "react-share": "^3.0.1",
+    "theme-ui": "^0.2.46",
     "typeface-lora": "^0.0.72",
     "uuid": "^3.3.3"
   },

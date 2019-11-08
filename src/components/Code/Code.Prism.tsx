@@ -12,8 +12,6 @@ require("prismjs/components/prism-graphql");
 require("prismjs/components/prism-sql");
 require("prismjs/components/prism-yaml");
 
-import theme from "@styles/theme";
-
 const Pre = styled.pre`
   position: relative;
 `;
@@ -149,7 +147,7 @@ const CopyButton = styled.button`
     top: -2%;
     width: 104%;
     height: 104%;
-    border: 2px solid ${theme.colors.accent};
+    border: 2px solid ${p => p.theme.colors.accent};
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.01);
   }
