@@ -5,7 +5,6 @@ import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { MDXProvider } from "@mdx-js/react";
 import mediaqueries from "@styles/media";
-import theme from "@styles/theme";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 
@@ -37,10 +36,10 @@ const components = {
   //   p: Paragraph,
   //   code: Code.Prism,
   pre: Code.Pre,
-  table: Tables.Table
-  //   thead: Tables.Head,
-  //   th: Tables.HeadCell,
-  //   td: Tables.Cell
+  table: Tables.Table,
+  thead: Tables.Head,
+  th: Tables.HeadCell,
+  td: Tables.Cell
 };
 
 function MDX({ content, children, ...props }) {
@@ -118,7 +117,7 @@ export default MDX;
 //     ${ARTICLE_WIDTH};
 //   }
 // `;
-const PrismCSS = css`
+const PrismCSS = p => css`
   .prism-code {
     width: 100%;
     margin: 0 auto;
@@ -126,8 +125,8 @@ const PrismCSS = css`
     font-size: 13px;
     margin: 15px auto 50px;
     border-radius: 5px;
-    font-family: ${theme.fonts.monospace};
-    background: ${theme.colors.prism.background};
+    font-family: ${p.theme.fonts.monospace};
+    background: ${p.theme.colors.prism.background};
 
     .number-line {
       display: inline-block;
@@ -145,8 +144,8 @@ const PrismCSS = css`
     .token-line.highlight-line {
       margin: 0 -32px;
       padding: 0 32px;
-      background: ${theme.colors.prism.highlight};
-      border-left: 3px solid ${theme.colors.prism.highlightBorder};
+      background: ${p.theme.colors.prism.highlight};
+      border-left: 3px solid ${p.theme.colors.prism.highlightBorder};
 
       ${mediaqueries.tablet`
         margin: 0 -20px;
