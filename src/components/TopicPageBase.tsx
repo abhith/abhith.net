@@ -1,6 +1,6 @@
 import Layout from "@components/Layout";
 import PageHero from "@components/PageHero";
-import SEO from "@components/seo/SEO";
+import SEO from "@components/SEO";
 import TopicsSideNav from "@components/TopicSideNav";
 import { ITopic, TopicPageTab } from "@types";
 import { Link } from "gatsby";
@@ -79,12 +79,15 @@ const TopicPageBase = ({
     pageSubtitle = tagHeader;
   }
 
+  const topicImage = topic.image ? `/img/topics/${topic.image}` : null;
+
   return (
     <Layout>
       <SEO
         title={pageTitle}
         description={pageSubtitle}
-        slug={`\\topics\\${topic.slug}`}
+        slug={`/topics/${topic.slug}`}
+        image={topicImage}
       />
       <PageHero title={topic.title} subtitle={pageSubtitle} />
       <section className="section">
