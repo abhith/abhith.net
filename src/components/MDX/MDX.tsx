@@ -1,3 +1,4 @@
+import Blockquote from "@components/Blockquote";
 import Code from "@components/Code";
 import Tables from "@components/Tables";
 import { css } from "@emotion/core";
@@ -7,10 +8,10 @@ import mediaqueries from "@styles/media";
 import theme from "@styles/theme";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
+
 // import { useColorMode } from "theme-ui";
 
 // import Anchor from "@components/Anchor";
-// import Blockquote from "@components/Blockquote";
 
 // import Headings from "@components/Headings";
 // import HorizontalRule from "@components/HorizontalRule";
@@ -23,7 +24,7 @@ import React from "react";
 const components = {
   //   img: ImageZoom,
   //   a: Anchor,
-  //   blockquote: Blockquote,
+  blockquote: Blockquote,
   //   h1: Headings.h2, // h1 reserved article title
   //   h2: Headings.h2,
   //   h3: Headings.h3,
