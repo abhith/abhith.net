@@ -11,6 +11,8 @@ require("prismjs/components/prism-csharp");
 require("prismjs/components/prism-graphql");
 require("prismjs/components/prism-sql");
 require("prismjs/components/prism-yaml");
+require("prismjs/components/prism-jsx");
+require("prismjs/components/prism-bash");
 
 const Pre = styled.pre`
   position: relative;
