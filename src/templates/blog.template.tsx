@@ -1,7 +1,7 @@
 import BlogRoll from "@components/BlogRoll";
 import Layout from "@components/Layout";
 import Pagination from "@components/Pagination";
-import SEO from "@components/seo/SEO";
+import SEO from "@components/SEO";
 import { graphql, Link } from "gatsby";
 import React from "react";
 import normalize from "../../gatsby/data/data.normalize";

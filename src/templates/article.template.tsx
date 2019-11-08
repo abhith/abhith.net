@@ -1,6 +1,6 @@
 import Layout from "@components/Layout";
 import MDXRenderer from "@components/MDX";
-import SEO from "@components/seo/SEO";
+import SEO from "@components/SEO";
 import TopicsBar from "@components/TopicsBar";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
