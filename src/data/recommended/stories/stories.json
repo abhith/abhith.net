@@ -1,5 +1,12 @@
 [
   {
+    "title": "Untrack files already added to git repository based on .gitignore",
+    "url": "https://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/",
+    "description": "Let’s say you have already added/committed some files to your git repository and you then add them to your .gitignore; these files will still be present in your repository index. This article we will see how to get rid of them.",
+    "date": "2019-11-09T16:31:28.263Z",
+    "tags": ["git"]
+  },
+  {
     "title": "Build a Svelte App (That Magic Framework You Heard About)",
     "url": "https://snipcart.com/blog/svelte-js-framework-tutorial",
     "description": "SvelteJS rethinks reactivity and frameworks—but how? This simple Svelte 3 tutorial has the answers. Have a look!",
