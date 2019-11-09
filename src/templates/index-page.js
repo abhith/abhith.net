@@ -6,7 +6,7 @@ import LatestPosts from "../components/home/LatestPosts";
 import Hero from "../components/home/Hero";
 import StoriesRoll from "../components/StoriesRoll";
 import FeaturedSidebar from "../components/FeaturedSidebar";
-import SEO from "../components/seo/SEO";
+import SEO from "../components/SEO";
 import VideosRoll from "../components/VideosRoll";
 
 export const IndexPageTemplate = ({

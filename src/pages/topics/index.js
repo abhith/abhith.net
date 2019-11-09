@@ -2,7 +2,7 @@ import React from "react";
 import { capitalize, sortBy } from "lodash";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
-import SEO from "../../components/seo/SEO";
+import SEO from "../../components/SEO";
 import PageHero from "../../components/PageHero";
 import { FaFileAlt, FaVideo, FaBookOpen, FaGlobe } from "react-icons/fa";
 import TopicImage from "../../components/TopicImage";

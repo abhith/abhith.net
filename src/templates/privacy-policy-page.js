@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import SEO from "../components/seo/SEO";
+import SEO from "../components/SEO";
 import Content, { HTMLContent } from "../components/Content";
 
 export const PrivacyPolicyPageTemplate = ({
