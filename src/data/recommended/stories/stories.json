@@ -1,5 +1,12 @@
 [
   {
+    "title": "Setting up Serilog in ASP.NET Core 3",
+    "url": "https://nblumhardt.com/2019/10/serilog-in-aspnetcore-3/",
+    "description": "TL; DR: I’ve put down everything I can think of about getting set up for successful production diagnostics using Serilog and ASP.NET Core.",
+    "date": "2019-11-10T10:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Build a Svelte App (That Magic Framework You Heard About)",
     "url": "https://snipcart.com/blog/svelte-js-framework-tutorial",
     "description": "SvelteJS rethinks reactivity and frameworks—but how? This simple Svelte 3 tutorial has the answers. Have a look!",
