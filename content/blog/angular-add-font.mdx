@@ -1,0 +1,79 @@
+---
+title: Angular - Add custom font
+description: >-
+  Short article about how to add custom font files to your angular project.
+author: Abhith Rajan
+authorURL: "https://twitter.com/abhithrajan"
+date: 2019-07-11T12:59:27.975Z
+image: /img/blog-azure-web-app-missing-mime-types.png
+draft: true
+tags:
+  - angular
+---
+
+To add custom fonts to your **Angular** project, put the font files in a folder, in my case `src > assets > fonts > fontname > font-files (.woff)`.
+
+> Here I am following the folder pattern which I found on ABP Zero boilerplate.
+
+Then create a css file under, `src > assets > fonts > fonts-fontname.css`.
+
+And on the css, add the `font-face` reffering to our new font-flies, example given below.
+
+```css
+@font-face {
+  font-family: "fontname";
+  src: url("./fontname/fontname.woff");
+}
+
+@font-face {
+  font-family: "fontname-Medium";
+  src: url("./fontname/fontname-medium.woff");
+}
+
+@font-face {
+  font-family: "fontname-Light";
+  src: url("./fontname/fontname-light.woff");
+}
+```
+
+Once this is done, now we have to include this in the angular build.
+To do that, update the `angular.json` to have reference to our new css files on the below specified paths,
+
+```json
+{
+ ...
+  "projects": {
+    "project-name": {
+     ...
+      "architect": {
+        "build": {
+          ...
+          "options": {
+            ...
+            "styles": [
+              ...
+              "src/assets/fonts/fonts-fontname.css",
+              ...
+            ],
+            ...
+          },
+          ...
+        },
+        ...,
+        "test": {
+          ...
+          "options": {
+            ...
+            "styles": [
+              ...
+              "src/assets/fonts/fonts-fontname.css",
+              ...
+            ],
+            ...
+          }
+        },
+        ...
+      }
+    },
+}
+```
