@@ -29,7 +29,7 @@
     "gatsby-plugin-sharp": "^2.2.32",
     "gatsby-plugin-sitemap": "^2.2.14",
     "gatsby-plugin-theme-ui": "^0.2.43",
-    "gatsby-plugin-twitter": "^2.1.12",
+    "gatsby-plugin-twitter": "^2.1.13",
     "gatsby-plugin-typescript": "^2.1.12",
     "gatsby-remark-autolink-headers": "^2.1.13",
     "gatsby-remark-classes": "^0.1.2",
