@@ -76,7 +76,7 @@ function Footer() {
                     <li>
                       <Link to="/recommended/services">Services</Link>
                     </li>
-                    <li>
+                    <li className="has-margin">
                       <GitHubButton
                         href="https://github.com/Abhith/abhith.net"
                         data-size="large"
@@ -93,7 +93,7 @@ function Footer() {
                 <div className="menu">
                   <p className="menu-label">Connect with me</p>
                   <ul className="menu-list">
-                    <li>
+                    <li className="has-margin">
                       <a
                         className="twitter-follow-button"
                         href="https://twitter.com/abhithrajan"
@@ -103,7 +103,7 @@ function Footer() {
                         Follow @AbhithRajan
                       </a>
                     </li>
-                    <li>
+                    <li className="has-margin">
                       <GitHubButton
                         href="https://github.com/Abhith"
                         data-size="large"
