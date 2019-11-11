@@ -59,6 +59,24 @@ const Navbar = class extends React.Component {
                 />
               </figure>
             </Link>
+            <OutboundLink
+              className="navbar-item is-hidden-desktop"
+              href="https://github.com/Abhith/abhith.net"
+              target="_blank"
+            >
+              <span className="icon" style={{ color: "#333" }}>
+                <FaGithub></FaGithub>
+              </span>
+            </OutboundLink>
+            <OutboundLink
+              className="navbar-item is-hidden-desktop"
+              href="https://twitter.com/AbhithRajan"
+              target="_blank"
+            >
+              <span className="icon" style={{ color: "#55acee" }}>
+                <FaTwitter></FaTwitter>
+              </span>
+            </OutboundLink>
             <div
               className={`navbar-burger burger ${this.state.hamburgerMenuClass}`}
               onClick={() => this.toggleHamburger()}
@@ -108,7 +126,7 @@ const Navbar = class extends React.Component {
               </OutboundLink>
               <OutboundLink
                 className="navbar-item is-hidden-desktop-only"
-                href="https://twitter.com/abhithRajan"
+                href="https://twitter.com/AbhithRajan"
                 target="_blank"
               >
                 <span className="icon" style={{ color: "#55acee" }}>
