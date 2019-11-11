@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import GitHubButton from "react-github-btn";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 function Footer() {
   const { site } = useStaticQuery(
@@ -111,6 +112,32 @@ function Footer() {
                       >
                         Follow @Abhith
                       </GitHubButton>
+                    </li>
+                    <li>
+                      <OutboundLink
+                        target="_blank"
+                        href={`https://www.linkedin.com/in/abhith`}
+                      >
+                        <img
+                          role="presentation"
+                          src="/img/site/icons/social/linkedin-icon-2.svg"
+                          alt="linkedin-logo"
+                        />{" "}
+                        LinkedIn
+                      </OutboundLink>
+                    </li>
+                    <li>
+                      <OutboundLink
+                        target="_blank"
+                        href={`https://gitlab.com/abhith`}
+                      >
+                        <img
+                          role="presentation"
+                          src="/img/site/icons/social/gitlab.svg"
+                          alt="gitlab-logo"
+                        />{" "}
+                        GitLab
+                      </OutboundLink>
                     </li>
                   </ul>
                 </div>
