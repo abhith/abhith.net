@@ -1,23 +1,23 @@
 ---
-templateKey: blog-post
 title: Angular - Add custom font
 description: >-
-  If you are seeing "404 Not Found" for .woff, .woff2 or for .json files even if they exist on your azure web app, this is the post for you.
+  Short article about how to add custom font files to your angular project.
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
 date: 2019-07-11T12:59:27.975Z
 image: /img/blog-azure-web-app-missing-mime-types.png
 draft: true
 tags:
-  - azure
-  - web-config
+  - angular
 ---
 
-src > assets > fonts > fontname > font-files (.woff)
+To add custom fonts to your **Angular** project, put the font files in a folder, in my case `src > assets > fonts > fontname > font-files (.woff)`.
 
-src > assets > fonts >
+> Here I am following the folder pattern which I found on ABP Zero boilerplate.
 
-fonts-fontname.css
+Then create a css file under, `src > assets > fonts > fonts-fontname.css`.
+
+And on the css, add the `font-face` reffering to our new font-flies, example given below.
 
 ```css
 @font-face {
@@ -36,13 +36,44 @@ fonts-fontname.css
 }
 ```
 
-angular.json
-
-````
-projects > projectname > architect > build > options > styles >
+Once this is done, now we have to include this in the angular build.
+To do that, update the `angular.json` to have reference to our new css files on the below specified paths,
 
 ```json
-"src/assets/fonts/fonts-fontname.css",
-````
-
-test > options > styles >
+{
+ ...
+  "projects": {
+    "project-name": {
+     ...
+      "architect": {
+        "build": {
+          ...
+          "options": {
+            ...
+            "styles": [
+              ...
+              "src/assets/fonts/fonts-fontname.css",
+              ...
+            ],
+            ...
+          },
+          ...
+        },
+        ...,
+        "test": {
+          ...
+          "options": {
+            ...
+            "styles": [
+              ...
+              "src/assets/fonts/fonts-fontname.css",
+              ...
+            ],
+            ...
+          }
+        },
+        ...
+      }
+    },
+}
+```
