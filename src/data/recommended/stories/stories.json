@@ -5,8 +5,8 @@
     "description": "TL; DR: I’ve put down everything I can think of about getting set up for successful production diagnostics using Serilog and ASP.NET Core.",
     "date": "2019-11-10T10:31:28.263Z",
     "tags": ["aspnet-core"]
-    },
-    {
+  },
+  {
     "title": "Untrack files already added to git repository based on .gitignore",
     "url": "https://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/",
     "description": "Let’s say you have already added/committed some files to your git repository and you then add them to your .gitignore; these files will still be present in your repository index. This article we will see how to get rid of them.",
