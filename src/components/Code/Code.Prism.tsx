@@ -13,6 +13,7 @@ require("prismjs/components/prism-sql");
 require("prismjs/components/prism-yaml");
 require("prismjs/components/prism-jsx");
 require("prismjs/components/prism-bash");
+require("prismjs/components/prism-json");
 
 const Pre = styled.pre`
   position: relative;
