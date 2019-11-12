@@ -1,23 +1,24 @@
 ---
-title: Angular - Add custom font
+title: Angular - Add Custom Font
 description: >-
-  Short article about how to add custom font files to your angular project.
+  A short article about how to add custom font files to your Angular projects.
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
-date: 2019-07-11T12:59:27.975Z
-image: /img/blog-azure-web-app-missing-mime-types.png
-draft: true
+date: 2019-11-12T12:59:27.975Z
+image: /img/blog/angular-add-custom-font.png
 tags:
   - angular
 ---
 
-To add custom fonts to your **Angular** project, put the font files in a folder, in my case `src > assets > fonts > fontname > font-files (.woff)`.
+To add custom fonts to your **Angular** project, put the font files under `src`.
 
 > Here I am following the folder pattern which I found on ABP Zero boilerplate.
 
-Then create a css file under, `src > assets > fonts > fonts-fontname.css`.
+In my case `src > assets > fonts > fontname > font-files (.woff)`.
 
-And on the css, add the `font-face` reffering to our new font-flies, example given below.
+Then create a **CSS** file, `src > assets > fonts > fonts-fontname.css`.
+
+And on the CSS, add the `font-face` referring to our new font-flies, an example is given below.
 
 ```css
 @font-face {
@@ -36,8 +37,8 @@ And on the css, add the `font-face` reffering to our new font-flies, example giv
 }
 ```
 
-Once this is done, now we have to include this in the angular build.
-To do that, update the `angular.json` to have reference to our new css files on the below specified paths,
+Once the CSS file is ready, now we have to include that too in the angular build.
+To do that, update the `angular.json` to have references to our new CSS file like in below example,
 
 ```json
 {
@@ -77,3 +78,7 @@ To do that, update the `angular.json` to have reference to our new css files on 
     },
 }
 ```
+
+_Note: the above code is tried and tested on **Angular 8**_
+
+Once we updated the `angular.json`, start a new build and see the new font applied in the places where it is used.
