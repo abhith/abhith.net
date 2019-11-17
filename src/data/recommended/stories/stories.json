@@ -1,5 +1,12 @@
 [
   {
+    "title": "Dapper vs. EF Core - Which is Faster?",
+    "url": "https://exceptionnotfound.net/dapper-vs-entity-framework-core-query-performance-benchmarking-2019/",
+    "description": "Let's find out if EF Core has gotten any better in the performance department, or if Dapper is still king of the ORM jungle.  Sample project included!",
+    "date": "2019-11-17T10:31:28.263Z",
+    "tags": ["dapper", "ef-core"]
+  },
+  {
     "title": "Setting up Serilog in ASP.NET Core 3",
     "url": "https://nblumhardt.com/2019/10/serilog-in-aspnetcore-3/",
     "description": "TL; DR: I’ve put down everything I can think of about getting set up for successful production diagnostics using Serilog and ASP.NET Core.",
