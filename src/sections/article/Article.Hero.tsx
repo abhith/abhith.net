@@ -17,20 +17,27 @@ const ArticleHero = ({ article }: IArticleHeroProps) => {
             <p className="text-uppercase ">
               {article.tags && article.tags.length ? (
                 <span className="taglist">
-                  {article.tags.map(tag => (
-                    <React.Fragment key={tag}>
+                  {article.tags
+                    .map<React.ReactNode>(tag => (
                       <Link
-                        className="has-text-primary has-text-weight-bold is-uppercase"
+                        key={tag}
+                        className="has-text-black has-text-weight-bold is-uppercase"
                         to={`/topics/${tag}/`}
                       >
                         {tag}
                       </Link>
-                      <span className="has-text-primary has-text-weight-light sep">
+                    ))
+                    .reduce((prev, curr, index) => [
+                      prev,
+                      <span
+                        key={index}
+                        className="has-text-primary has-text-weight-light sep"
+                      >
                         {" "}
                         |{" "}
-                      </span>
-                    </React.Fragment>
-                  ))}
+                      </span>,
+                      curr
+                    ])}
                 </span>
               ) : null}
             </p>
