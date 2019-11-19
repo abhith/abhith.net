@@ -1,5 +1,12 @@
 [
   {
+    "title": "Understanding Numerical Data Types in SQL",
+    "url": "https://academy.vertabelo.com/blog/understanding-numerical-data-types-sql/",
+    "description": "Want to know how cover the numeric and decimal data types of ANSI SQL and examine some functions that convert data from one type to another? Find out!",
+    "date": "2019-11-19T10:31:28.263Z",
+    "tags": ["sql-server"]
+  },
+  {
     "title": "Dapper vs. EF Core - Which is Faster?",
     "url": "https://exceptionnotfound.net/dapper-vs-entity-framework-core-query-performance-benchmarking-2019/",
     "description": "Let's find out if EF Core has gotten any better in the performance department, or if Dapper is still king of the ORM jungle.  Sample project included!",
