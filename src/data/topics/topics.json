@@ -90,6 +90,12 @@
     "image": ""
   },
   {
+    "title": "Dapper",
+    "slug": "dapper",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Database",
     "slug": "database",
     "description": "",
@@ -110,6 +116,12 @@
   {
     "title": "Download Site",
     "slug": "download-site",
+    "description": "",
+    "image": ""
+  },
+  {
+    "title": "Entity Framework Core",
+    "slug": "ef-core",
     "description": "",
     "image": ""
   },
