@@ -1,5 +1,12 @@
 [
   {
+    "title": "Angular Currency Pipe & Formatting Currency In Angular | Angular Wiki",
+    "url": "https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/",
+    "description": "Angular Currency Pipe is one of the bulit in pipe in Angular used to format currency value according to given country code,currency,decimal,locale information.",
+    "date": "2019-11-28T10:31:28.263Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "Understanding Numerical Data Types in SQL",
     "url": "https://academy.vertabelo.com/blog/understanding-numerical-data-types-sql/",
     "description": "Want to know how cover the numeric and decimal data types of ANSI SQL and examine some functions that convert data from one type to another? Find out!",
