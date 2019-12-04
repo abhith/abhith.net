@@ -1,91 +1,14 @@
+import Layout from "@components/Layout";
+import PageHero from "@components/PageHero";
+import SEO from "@components/SEO";
+import TopicImage from "@components/TopicImage";
+import { ITopic } from "@types";
+import { graphql, Link } from "gatsby";
 import React from "react";
-import { capitalize, sortBy } from "lodash";
-import { Link, graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import SEO from "../../components/SEO";
-import PageHero from "../../components/PageHero";
-import { FaFileAlt, FaVideo, FaBookOpen, FaGlobe } from "react-icons/fa";
-import TopicImage from "../../components/TopicImage";
+import { FaBookOpen, FaFileAlt, FaGlobe, FaVideo } from "react-icons/fa";
 
-const TopicsPage = ({
-  data: {
-    articleTagsGroup: { group: postsGroup },
-    allStoriesJson: { group: storiesGroup },
-    allVideosJson: { group: videosGroup },
-    allServicesJson: { group: servicesGroup },
-    allTopicsJson: { edges: existingTopics }
-  }
-}) => {
-  let topics = [];
-
-  postsGroup.forEach(node => {
-    topics.push({
-      slug: node.fieldValue,
-      totalPosts: node.totalCount,
-      totalVideos: 0,
-      totalStories: 0,
-      totalServices: 0
-    });
-  });
-
-  storiesGroup.forEach(node => {
-    let topic = topics.find(topic => topic.slug === node.fieldValue);
-    if (topic) {
-      topic.totalStories = node.totalCount;
-    } else {
-      topics.push({
-        slug: node.fieldValue,
-        totalPosts: 0,
-        totalVideos: 0,
-        totalStories: node.totalCount,
-        totalServices: 0
-      });
-    }
-  });
-
-  videosGroup.forEach(node => {
-    let topic = topics.find(topic => topic.slug === node.fieldValue);
-    if (topic) {
-      topic.totalVideos = node.totalCount;
-    } else {
-      topics.push({
-        slug: node.fieldValue,
-        totalPosts: 0,
-        totalVideos: node.totalCount,
-        totalStories: 0,
-        totalServices: 0
-      });
-    }
-  });
-
-  servicesGroup.forEach(node => {
-    let topic = topics.find(topic => topic.slug === node.fieldValue);
-    if (topic) {
-      topic.totalServices = node.totalCount;
-    } else {
-      topics.push({
-        slug: node.fieldValue,
-        totalPosts: 0,
-        totalVideos: 0,
-        totalStories: 0,
-        totalServices: node.totalCount
-      });
-    }
-  });
-
-  // merging with existing topics
-  topics.forEach(node => {
-    let topicDetails = existingTopics.find(
-      topic => topic.node.slug === node.slug
-    );
-    if (topicDetails) {
-      node.title = topicDetails.node.title;
-    } else {
-      node.title = capitalize(node.slug);
-    }
-  });
-
-  topics = sortBy(topics, topic => topic.slug);
+function TopicsPage({ pageContext }) {
+  const { topics }: { topics: ITopic[] } = pageContext;
 
   return (
     <Layout>
@@ -98,7 +21,7 @@ const TopicsPage = ({
         title={`All Topics`}
         subtitle={`Summary of all the ${topics.length} topics in abhith.net`}
         className={`position-relative page-hero`}
-      ></PageHero>
+      />
       <section className="section">
         <div className="container is-fluid" id="topics-block">
           <div className="columns is-centered">
@@ -183,48 +106,5 @@ const TopicsPage = ({
       </section>
     </Layout>
   );
-};
+}
 export default TopicsPage;
-
-export const pageQuery = graphql`
-  query PageQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    articleTagsGroup: allArticle(filter: { draft: { eq: false } }) {
-      group(field: tags) {
-        fieldValue
-        totalCount
-      }
-    }
-    allStoriesJson {
-      group(field: tags) {
-        fieldValue
-        totalCount
-      }
-    }
-    allVideosJson {
-      group(field: tags) {
-        fieldValue
-        totalCount
-      }
-    }
-    allServicesJson {
-      group(field: tags) {
-        fieldValue
-        totalCount
-      }
-    }
-    allTopicsJson {
-      edges {
-        node {
-          slug
-          image
-          title
-        }
-      }
-    }
-  }
-`;
