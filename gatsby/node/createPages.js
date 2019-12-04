@@ -9,7 +9,8 @@ const templates = {
   topicStories: path.resolve(templatesDirectory, "topic.stories.template.tsx"),
   topicVideos: path.resolve(templatesDirectory, "topic.videos.template.tsx"),
   topicTools: path.resolve(templatesDirectory, "topic.tools.template.tsx"),
-  blog: path.resolve(templatesDirectory, "blog.template.tsx")
+  blog: path.resolve(templatesDirectory, "blog.template.tsx"),
+  topics: path.resolve(templatesDirectory, "topics.template.tsx")
 };
 
 const log = (message, section) =>
@@ -220,10 +221,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
       }
     });
 
-    // Make topic pages
+    log(`Merging`, "topics");
     topics.forEach((topic, index) => {
-      // merge aggregated topics with topics collection
-
       let topicNode = allTopics.data.topics.edges.find(
         item => item.node.slug === topic.slug
       );
@@ -235,7 +234,24 @@ module.exports = async ({ graphql, actions, reporter }) => {
         log(`Missing topic definition`, `${topic.slug}`);
         topic.title = _.startCase(topic.slug);
       }
+    });
 
+    topics = _.sortBy(topics, topic => topic.title); // you'll call `createPage` for each result
+
+    log(`Creating`, "topic index");
+    createPage({
+      path: "/topics",
+      // This component will wrap our MDX content
+      component: templates.topics,
+      // You can use the values in this context in
+      // our page layout component
+      context: {
+        topics
+      }
+    });
+
+    log(`Creating`, "topic pages");
+    topics.forEach(topic => {
       const topicPath = `/topics/${topic.slug}/`;
       const topicStoriesPath = `/topics/${topic.slug}/stories/`;
       const topicVideosPath = `/topics/${topic.slug}/videos/`;
