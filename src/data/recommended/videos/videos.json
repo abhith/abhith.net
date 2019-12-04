@@ -1,5 +1,14 @@
 [
   {
+    "title": "An Illustrated Guide to OAuth and OpenID Connect",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=t18YB3xDfXI",
+    "date": "2019-12-04T11:19:21.638Z",
+    "type": "youtube",
+    "tags": ["security"]
+  },
+  {
     "title": "Improve security with Azure Sentinel, a cloud-native SIEM and SOAR solution | Azure Friday",
     "description": "",
     "image": "",
