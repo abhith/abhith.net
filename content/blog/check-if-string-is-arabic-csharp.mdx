@@ -11,14 +11,14 @@ image: /img/2017-09-06-check-if-string-is-arabic-csharp.png
 tags:
   - aspnet
   - localization
-  - csharp
+  - c-sharp
 ---
 
-I have pretty good experience in bilingual web app development, especially in English & Arabic languages. The challenge with switching website page from English to Arabic is not just the content translation, the whole layout need to be changed and the text direction for all need to be RTL where as for English it need to be LTR.
+I have pretty good experience in bilingual web app development, especially in English & Arabic languages. The challenge with switching website page from English to Arabic is not just the content translation, the whole layout needs to be changed and the text direction for all need to be RTL whereas for English it needs to be LTR.
 
-We developed this one app [socialboard](https://socialboard.io) which aggregates content from social medias and displays in a single place. Initially, we focused only on English content so everything in LTR even though some aggregated content was in Arabic. But then we got some clients whose primary language is Arabic. i.e most of the content of their social media was in Arabic.
+We developed this one app [socialboard](https://socialboard.io) which aggregates content from social media and displays in a single place. Initially, we focused only on English content so everything in LTR even though some aggregated content was in Arabic. But then we got some clients whose primary language is Arabic. i.e most of the content of their social media was in Arabic.
 
-So we had to do some changes, UX team prepared the RTL layout for displaying content. The development team had to classify content (i.e to flag them isRTL or not) during creation and use proper layout based on isRTL field value of the content.
+So we had to do some changes, the UX team prepared the RTL layout for displaying content. The development team had to classify content (i.e to flag them isRTL or not) during creation and use proper layout based on isRTL field value of the content.
 
 To classify, or to check whether the given content language is Arabic or not, we used the following extension method,
 
