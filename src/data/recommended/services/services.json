@@ -1,5 +1,13 @@
 [
   {
+    "title": "Screaming Frog SEO Spider",
+    "url": "https://www.screamingfrog.co.uk/seo-spider/",
+    "description": "The industry leading website crawler for Windows, MacOS and Ubuntu, trusted by thousands of SEOs and agencies worldwide for technical SEO audits.",
+    "image": "",
+    "date": "2019-12-15T13:31:28.263Z",
+    "tags": ["seo"]
+  },
+  {
     "title": "JSON Sorter - Sort JSON keys and values online",
     "url": "https://codeshack.io/json-sorter/",
     "description": "Sort JSON keys and values, rearrange your JSON text with this online tool, alphabetical and numerical sort.",
