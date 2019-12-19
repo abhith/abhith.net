@@ -1,5 +1,19 @@
 [
   {
+    "title": "Implement the OAuth 2.0 Authorization Code with PKCE Flow",
+    "url": "https://developer.okta.com/blog/2019/08/22/okta-authjs-pkce",
+    "description": "This tutorial shows you how to migrate from the OAuth 2.0 Implicit flow to the more secure Authorization Code with PKCE flow.",
+    "date": "2019-12-19T05:31:28.263Z",
+    "tags": ["oauth2"]
+  },
+  {
+    "title": "User Authentication and Identity with Angular, Asp.Net Core and IdentityServer",
+    "url": "https://fullstackmark.com/post/21/user-authentication-and-identity-with-angular-aspnet-core-and-identityserver",
+    "description": "In this post, we'll build an authentication and authorization flow based on the implicit grant type using OAuth2 and OpenID Connect protocols to authenticate an Angular SPA client against IdentityServer4 with the ultimate goal of making authorized requests against a protected ASP.NET Core Web API.",
+    "date": "2019-12-19T04:31:28.263Z",
+    "tags": ["angular", "identityserver", "aspnet-core"]
+  },
+  {
     "title": "Stop Using Avast and AVG Plugins Right Now",
     "url": "https://gizmodo.com/stop-using-avast-and-avg-plugins-right-now-1840213548",
     "description": "Two browsers have yanked Avast and AVG online security extensions from their web stores after a report revealed that they were unnecessarily sucking up a ton of data about users’ browsing history.",

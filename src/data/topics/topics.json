@@ -162,6 +162,12 @@
     "image": ""
   },
   {
+    "title": "IdentityServer",
+    "slug": "identityserver",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Internet Information Services",
     "slug": "iis",
     "description": "",
@@ -200,6 +206,12 @@
   {
     "title": "NoSQL",
     "slug": "nosql",
+    "description": "",
+    "image": ""
+  },
+  {
+    "title": "OAuth 2.0",
+    "slug": "oauth2",
     "description": "",
     "image": ""
   },
