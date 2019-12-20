@@ -14,6 +14,7 @@ require("prismjs/components/prism-yaml");
 require("prismjs/components/prism-jsx");
 require("prismjs/components/prism-bash");
 require("prismjs/components/prism-json");
+require("prismjs/components/prism-dart");
 
 const Pre = styled.pre`
   position: relative;
