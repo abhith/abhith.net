@@ -29,6 +29,21 @@ steps:
   inputs:
     sourceFolder: 'public'
     contents: '**' 
-    targetFolder: $(Build.ArtifactStagingDirectory)
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
     cleanTargetFolder: true 
   displayName: 'copy built site'
+
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
+    serverUrl: '$(FTP.ServerUrl)'
+    username: '$(FTP.Username)'
+    password: '$(FTP.Password)'
+    rootDirectory: '$(Build.ArtifactStagingDirectory)'
+    filePatterns: '**'
+    remoteDirectory: '/abhithdotnet/'
+    clean: false
+    cleanContents: false
+    preservePaths: true
+    trustSSL: true
+  displayName: 'publish'
