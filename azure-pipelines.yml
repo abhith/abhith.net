@@ -38,6 +38,7 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
 - task: FtpUpload@2
   inputs:
@@ -53,3 +54,4 @@ steps:
     preservePaths: true
     trustSSL: true
   displayName: 'publish'
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
