@@ -33,6 +33,12 @@ steps:
     cleanTargetFolder: true 
   displayName: 'copy built site'
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
