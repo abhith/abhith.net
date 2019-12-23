@@ -1,5 +1,12 @@
 [
   {
+    "title": "It Seemed Like a Popular Chat App. It’s Secretly a Spy Tool.",
+    "url": "https://www.nytimes.com/2019/12/22/us/politics/totok-app-uae.html",
+    "description": "ToTok, an Emirati messaging app that has been downloaded to millions of phones, is the latest escalation of a digital arms race.",
+    "date": "2019-12-23T05:31:28.263Z",
+    "tags": ["privacy"]
+  },
+  {
     "title": "Implement the OAuth 2.0 Authorization Code with PKCE Flow",
     "url": "https://developer.okta.com/blog/2019/08/22/okta-authjs-pkce",
     "description": "This tutorial shows you how to migrate from the OAuth 2.0 Implicit flow to the more secure Authorization Code with PKCE flow.",
