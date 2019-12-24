@@ -57,3 +57,4 @@ steps:
     trustSSL: true
   displayName: 'publish'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+  timeoutInMinutes: 0
