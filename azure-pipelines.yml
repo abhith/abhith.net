@@ -42,19 +42,4 @@ steps:
     publishLocation: 'Container'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-- task: FtpUpload@2
-  inputs:
-    credentialsOption: 'inputs'
-    serverUrl: '$(FTP.ServerUrl)'
-    username: '$(FTP.Username)'
-    password: '$(FTP.Password)'
-    rootDirectory: '$(Build.ArtifactStagingDirectory)'
-    filePatterns: '**'
-    remoteDirectory: '/abhithdotnet/'
-    clean: false
-    cleanContents: false
-    preservePaths: true
-    trustSSL: true
-  displayName: 'publish'
-  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
-  timeoutInMinutes: 0
+
