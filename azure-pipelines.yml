@@ -17,13 +17,15 @@ steps:
 
 - script: |
     npm install -g gatsby-cli
-  displayName: 'install gatsby'
+  displayName: 'install gatsby-cli'
 
 - script: |
-    npm install
-    npm run build
-    npx gatsby build
-  displayName: 'npm install, build and gatsby build'
+    yarn install
+  displayName: 'install dependencies'
+
+- script: |
+    yarn build
+  displayName: 'gatsby build'
 
 - task: CopyFiles@2
   inputs:
