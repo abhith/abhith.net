@@ -1,25 +1,33 @@
 ---
-title: ASP.NET Core - OCELOT: LOG REQUEST and REsponse
+title: .NET Core API Gateway Ocelot - Logging HTTP Requests & Response Including Headers & Body
 description: >-
-  There may be situations where you want to add a custom header in your ASP.NET
-  Core API response or you need to read a header from the request.
+  Setup Ocelot API Gateway in ASP.NET Core and configure HTTP request and response logging including headers and body.
 author: Abhith Rajan
-authorURL: "https://twitter.com/abhithrajan"
-date: 2019-04-25T12:11:27.975Z
-image: /img/jungwoo-hong-100345-unsplash.jpg
-draft: true
+date: 2019-12-26T17:11:27.975Z
+image: /img/blog/dotnet-core-api-gateway-ocelot-logging-http-requests-response-including-headers-body.png
 tags:
   - aspnet-core
+  - api
+  - api-gateway
 ---
 
-> New Empty Project 3.1
+We have many microservices running under one umbrella on production which is Azure Application Gateway and has only one endpoint for all. We are using path-based rules to route to each service.
 
+During development, we may need to simulate the same experience, i.e one endpoint instead of we referring separate URL endpoint for each service.
+
+For the microservices, I used to refer [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers). And I read about the Ocelot API gateway from there. So I set up a local API gateway using Ocelot, for that
+
+1. Created a new **ASP.NET Core 3.1** web application and choose the Empty template.
+2. Added the following NuGet packages
+
+```xml
 <PackageReference Include="Ocelot" Version="13.8.0" />
 <PackageReference Include="Serilog" Version="2.9.0" />
 <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
 <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+```
 
-# Program.cs
+3. Updated the Program.cs
 
 ```cs
 using System.IO;
@@ -43,6 +51,7 @@ namespace OcelotApiGw
         {
             var builder = WebHost.CreateDefaultBuilder(args);
 
+            // Ocelot configuration file
             builder.ConfigureAppConfiguration(
                           ic => ic.AddJsonFile(Path.Combine("configuration",
                                                             "configuration.json")))
@@ -78,7 +87,64 @@ namespace OcelotApiGw
 }
 ```
 
-# Middlewares
+Here we are configuring the Ocelot middleware as well as Serilog for logging.
+The Ocelot configuration file is added under "configuration" folder in the root directory.
+
+A sample Ocelot configuration file looks like this.
+
+## configuration.json
+
+```json
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/{version}/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5010
+        }
+      ],
+      "UpstreamPathTemplate": "/d/{version}/{everything}",
+      "UpstreamHttpMethod": ["POST", "PUT", "GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/b/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "UpstreamPathTemplate": "/a/b/{everything}",
+      "UpstreamHttpMethod": ["POST", "PUT", "GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5013
+        }
+      ],
+      "UpstreamPathTemplate": "/c/{everything}",
+      "UpstreamHttpMethod": ["POST", "PUT", "GET", "OPTIONS"]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44390"
+  }
+}
+```
+
+Apart from that, we are also adding one custom middleware `RequestResponseLoggingMiddleware` and its purpose is clear from its name, log request and response.
+
+## The Logging Middleware
+
+This is a slightly modified version of middleware mentioned in the article, [Using Middleware in ASP.NET Core to Log Requests and Responses](https://exceptionnotfound.net/using-middleware-to-log-requests-and-responses-in-asp-net-core/).
 
 ```cs
 using Microsoft.AspNetCore.Http;
@@ -179,50 +245,15 @@ namespace OcelotApiGw.Middlewares
 }
 ```
 
-## configuration.json
+Usually, the request body can be read only once. Here we are making use of the new `EnableBuffering` extension method to read the request body multiple times.
+You can read more about the feature here, [Re-reading ASP.Net Core request bodies with EnableBuffering()](https://devblogs.microsoft.com/aspnet/re-reading-asp-net-core-request-bodies-with-enablebuffering/).
 
-```json
-{
-  "ReRoutes": [
-    {
-      "DownstreamPathTemplate": "/{version}/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5010
-        }
-      ],
-      "UpstreamPathTemplate": "/d/{version}/{everything}",
-      "UpstreamHttpMethod": ["POST", "PUT", "GET"]
-    },
-    {
-      "DownstreamPathTemplate": "/a/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5011
-        }
-      ],
-      "UpstreamPathTemplate": "/a/b/{everything}",
-      "UpstreamHttpMethod": ["POST", "PUT", "GET"]
-    },
-    {
-      "DownstreamPathTemplate": "/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5013
-        }
-      ],
-      "UpstreamPathTemplate": "/c/{everything}",
-      "UpstreamHttpMethod": ["POST", "PUT", "GET", "OPTIONS"]
-    }
-  ],
-  "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:44390"
-  }
-}
-```
+That's it, run your projects, make some requests and then check the logs directory.
+
+> This logging middleware can be used in any other **ASP.NET Core** project.
+
+Here we used in the Ocelot API Gateway so that we don't need to check the logs of each microservices.
+
+## Bonus
+
+I am using a free tool [Tailviewer](https://kittyfisto.github.io/Tailviewer/) to go through my logs. Check it out, it is small in size also an opensource project.
