@@ -24,6 +24,12 @@
     "image": ""
   },
   {
+    "title": "API Gateway",
+    "slug": "api-gateway",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "ASP.NET",
     "slug": "aspnet",
     "description": "Open-source web framework for .NET",
@@ -98,6 +104,12 @@
   {
     "title": "Database",
     "slug": "database",
+    "description": "",
+    "image": ""
+  },
+  {
+    "title": "Debug",
+    "slug": "debug",
     "description": "",
     "image": ""
   },

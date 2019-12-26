@@ -1,5 +1,13 @@
 [
   {
+    "title": "Tailviewer",
+    "url": "https://kittyfisto.github.io/Tailviewer/",
+    "description": "A fast, free and open source log viewer for Windows",
+    "image": "",
+    "date": "2019-12-26T16:31:28.263Z",
+    "tags": ["debug"]
+  },
+  {
     "title": "Latency | Apex Software",
     "url": "https://latency.apex.sh/",
     "description": "Free global latency performance testing tool powered by Apex Ping.",
