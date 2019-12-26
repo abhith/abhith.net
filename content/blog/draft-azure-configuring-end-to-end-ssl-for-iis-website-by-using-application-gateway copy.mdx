@@ -1,0 +1,28 @@
+---
+templateKey: blog-post
+title: Azure - Configuring End-to-End SSL for IIS Website by using Application Gateway
+description: >-
+  This article brief about the steps involved in making an end to end HTTPS website which hosted in a VM IIS, in Azure and the traffic need to be routed via Application Gateway.
+author: Abhith Rajan
+authorURL: "https://twitter.com/abhithrajan"
+date: 2019-09-24T09:26:00.000Z
+image: /img/blog/azure-configuring-end-to-end-ssl-for-iis-website-by-using-application-gateway/cover.png
+draft: true
+tags:
+  - azure
+  - iis
+  - security
+---
+
+Azure provides multiple ways like CLI, Portal etc to manage its resource. My preferred option is portal. But not everything can be done through portal, in that case we may need to use the Cloud Shell, for that we need to know the commands. Here I am listing some of the commands,
+
+## Delete SSL from Application Gateway
+
+I added a HTTPS listener but the certificate chosen was wrong. So the site was showing certificate error while browsing. To fix that I need to configure the listener to have the correct certificate.
+
+> In this case, rather than deleting the certificate, you can update the certificate
+> I configured a wrong SSL in the portal.
+
+$AppGW = Get-AzureRmApplicationGateway -Name "Prod_AppGW" -ResourceGroupName "mycompany_Network"
+Remove-AzureRmApplicationGatewaySslCertificate -ApplicationGateway $AppGW -Name "mycompany.ae-wildcard-certificate"
+az network application-gateway ssl-cert delete -g mycompany_Network --gateway-name mycompany_Prod_AppGW -n mycompany.ae-wildcard-certificate

@@ -1,0 +1,228 @@
+---
+title: ASP.NET Core - OCELOT: LOG REQUEST and REsponse
+description: >-
+  There may be situations where you want to add a custom header in your ASP.NET
+  Core API response or you need to read a header from the request.
+author: Abhith Rajan
+authorURL: "https://twitter.com/abhithrajan"
+date: 2019-04-25T12:11:27.975Z
+image: /img/jungwoo-hong-100345-unsplash.jpg
+draft: true
+tags:
+  - aspnet-core
+---
+
+> New Empty Project 3.1
+
+<PackageReference Include="Ocelot" Version="13.8.0" />
+<PackageReference Include="Serilog" Version="2.9.0" />
+<PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+<PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+
+# Program.cs
+
+```cs
+using System.IO;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Serilog;
+using Serilog.Events;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+using Microsoft.AspNetCore.Builder;
+using OcelotApiGw.Middlewares;
+
+namespace OcelotApiGw
+{
+    public class Program
+    {
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            var builder = WebHost.CreateDefaultBuilder(args);
+
+            builder.ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .ConfigureServices(s =>
+                    {
+                        s.AddSingleton(builder);
+                        s.AddOcelot();
+                    })
+                    .UseStartup<Startup>()
+                    .UseSerilog((_, config) =>
+                    {
+                        config
+                            .MinimumLevel.Information()
+                            .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                            .Enrich.FromLogContext()
+                            .WriteTo.File(@"Logs\log.txt", rollingInterval: RollingInterval.Day);
+                    })
+                    .Configure(app =>
+                    {
+                        app.UseMiddleware<RequestResponseLoggingMiddleware>();
+                        app.UseOcelot().Wait();
+                    });
+
+            var host = builder.Build();
+            return host;
+        }
+
+        public static void Main(string[] args)
+        {
+            BuildWebHost(args).Run();
+        }
+    }
+}
+```
+
+# Middlewares
+
+```cs
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OcelotApiGw.Middlewares
+{
+    public class RequestResponseLoggingMiddleware
+    {
+        private readonly ILogger<RequestResponseLoggingMiddleware> _logger;
+        private readonly RequestDelegate _next;
+
+        public RequestResponseLoggingMiddleware(RequestDelegate next, ILogger<RequestResponseLoggingMiddleware> logger)
+        {
+            _next = next;
+            _logger = logger;
+        }
+
+        public async Task InvokeAsync(HttpContext context)
+        {
+            context.Request.EnableBuffering();
+
+            var builder = new StringBuilder();
+
+            var request = await FormatRequest(context.Request);
+
+            builder.Append("Request: ").AppendLine(request);
+            builder.AppendLine("Request headers:");
+            foreach (var header in context.Request.Headers)
+            {
+                builder.Append(header.Key).Append(':').AppendLine(header.Value);
+            }
+
+            //Copy a pointer to the original response body stream
+            var originalBodyStream = context.Response.Body;
+
+            //Create a new memory stream...
+            using var responseBody = new MemoryStream();
+            //...and use that for the temporary response body
+            context.Response.Body = responseBody;
+
+            //Continue down the Middleware pipeline, eventually returning to this class
+            await _next(context);
+
+            //Format the response from the server
+            var response = await FormatResponse(context.Response);
+            builder.Append("Response: ").AppendLine(response);
+            builder.AppendLine("Response headers: ");
+            foreach (var header in context.Response.Headers)
+            {
+                builder.Append(header.Key).Append(':').AppendLine(header.Value);
+            }
+
+            //Save log to chosen datastore
+            _logger.LogInformation(builder.ToString());
+
+            //Copy the contents of the new memory stream (which contains the response) to the original stream, which is then returned to the client.
+            await responseBody.CopyToAsync(originalBodyStream);
+        }
+
+        private async Task<string> FormatRequest(HttpRequest request)
+        {
+            // Leave the body open so the next middleware can read it.
+            using var reader = new StreamReader(
+                request.Body,
+                encoding: Encoding.UTF8,
+                detectEncodingFromByteOrderMarks: false,
+                leaveOpen: true);
+            var body = await reader.ReadToEndAsync();
+            // Do some processing with body…
+
+            var formattedRequest = $"{request.Scheme} {request.Host}{request.Path} {request.QueryString} {body}";
+
+            // Reset the request body stream position so the next middleware can read it
+            request.Body.Position = 0;
+
+            return formattedRequest;
+        }
+
+        private async Task<string> FormatResponse(HttpResponse response)
+        {
+            //We need to read the response stream from the beginning...
+            response.Body.Seek(0, SeekOrigin.Begin);
+
+            //...and copy it into a string
+            string text = await new StreamReader(response.Body).ReadToEndAsync();
+
+            //We need to reset the reader for the response so that the client can read it.
+            response.Body.Seek(0, SeekOrigin.Begin);
+
+            //Return the string for the response, including the status code (e.g. 200, 404, 401, etc.)
+            return $"{response.StatusCode}: {text}";
+        }
+    }
+}
+```
+
+## configuration.json
+
+```json
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/{version}/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5010
+        }
+      ],
+      "UpstreamPathTemplate": "/d/{version}/{everything}",
+      "UpstreamHttpMethod": ["POST", "PUT", "GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/a/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5011
+        }
+      ],
+      "UpstreamPathTemplate": "/a/b/{everything}",
+      "UpstreamHttpMethod": ["POST", "PUT", "GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5013
+        }
+      ],
+      "UpstreamPathTemplate": "/c/{everything}",
+      "UpstreamHttpMethod": ["POST", "PUT", "GET", "OPTIONS"]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44390"
+  }
+}
+```
