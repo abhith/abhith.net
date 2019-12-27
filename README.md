@@ -1,6 +1,5 @@
 # WWW.ABHITH.NET
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ceb3b988-acb1-4f96-9024-62ea791176bc/deploy-status)](https://app.netlify.com/sites/abhith/deploys)
 [![DeepScan grade](https://deepscan.io/api/teams/5261/projects/7035/branches/64959/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5261&pid=7035&bid=64959)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=bugs)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=code_smells)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
@@ -13,9 +12,8 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=sqale_index)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
 
-This repo serves the source code for [www.abhith.net](https://www.abhith.net/). Designed using [Bulma](https://bulma.io) and is deployed via [Netlify](https://www.netlify.com/).
-
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+This repo serves the source code for [www.abhith.net](https://www.abhith.net/).
+It follows the [JAMstack architecture](https://jamstack.org). Designed using [Bulma](https://bulma.io), and using [Render](https://render.com/) for continuous deployment.
 
 ## Inspired By
 
