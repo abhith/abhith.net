@@ -197,13 +197,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        googleAdClientId: "ca-pub-5964640183793435",
-        head: false // Optional
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Abhith Rajan`,
