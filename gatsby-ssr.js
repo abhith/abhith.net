@@ -26,7 +26,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       dangerouslySetInnerHTML={{
         __html: `
         (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: ${pluginOptions.googleAdClientId},
+            google_ad_client: "${pluginOptions.googleAdClientId}",
             enable_page_level_ads: true
         });
         `
