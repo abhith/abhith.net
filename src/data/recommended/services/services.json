@@ -1,5 +1,13 @@
 [
   {
+    "title": "Free for developers",
+    "url": "https://free-for.dev/",
+    "description": "Free For Dev is a GitHub repo listing out free services for developers",
+    "image": "",
+    "date": "2019-12-28T08:30:28.263Z",
+    "tags": ["awesome-list"]
+  },
+  {
     "title": "Render · The Easiest Cloud For All Your Apps and Websites",
     "url": "https://render.com/",
     "description": "A unified platform to build and run all your apps and web app free SSL, a global CDN, private networks and auto deploys from Git, FREE for static web page.",
