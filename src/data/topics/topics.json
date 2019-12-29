@@ -225,19 +225,25 @@
     "title": "OAuth 2.0",
     "slug": "oauth2",
     "description": "",
-    "image": ""
+    "image": "oauth.svg"
   },
   {
     "title": "Oracle Database",
     "slug": "oracle-database",
     "description": "",
-    "image": ""
+    "image": "oracle-6.svg"
   },
   {
     "title": "React",
     "slug": "react",
     "description": "",
     "image": ""
+  },
+  {
+    "title": "Privacy",
+    "slug": "privacy",
+    "description": "",
+    "image": "privacy.svg"
   },
   {
     "title": "Security",
