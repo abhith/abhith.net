@@ -125,7 +125,7 @@ export default ({ pageContext, location }) => {
                       <p className="image is-96x96">
                         <img
                           className="is-rounded"
-                          src={`https://www.abhith.net/img/abhith-avatar.jpg`}
+                          src={`https://www.abhith.net/img/abhith.jpg`}
                           alt={`Abhith Rajan`}
                         />
                       </p>

@@ -48,7 +48,7 @@ const ArticleHero = ({ article }: IArticleHeroProps) => {
 
             <div className="author-block">
               <div className="image is-64x64">
-                <img src="/img/abhith-avatar.jpg" alt="" />
+                <img src="/img/abhith.jpg" alt="" />
               </div>
               <div className="author-name">
                 <span>

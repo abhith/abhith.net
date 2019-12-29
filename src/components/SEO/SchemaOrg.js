@@ -34,7 +34,7 @@ export default React.memo(
           name: "Abhith Rajan",
           image: {
             "@type": "ImageObject",
-            url: "https://www.abhith.net/img/abhith-avatar.jpg",
+            url: "https://www.abhith.net/img/abhith.jpg",
             width: 300,
             height: 300
           }

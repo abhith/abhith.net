@@ -111,7 +111,7 @@ export default function Hero() {
                         {/* TODO: load image from site meta */}
                         <img
                           className="is-rounded hero-avatar"
-                          src="/img/abhith-avatar.jpg"
+                          src="/img/abhith.jpg"
                           alt=""
                         />
                       </figure>
