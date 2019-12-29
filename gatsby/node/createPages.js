@@ -29,7 +29,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
   }
   // Create blog post pages.
   let articles = result.data.articles.edges.map(normalize.local.articles);
-  articles = _.sortBy(articles, article => article.datePublishedSeoFormat); // you'll call `createPage` for each result
+  articles = _.orderBy(articles, ["datePublishedSeoFormat"], ["desc"]); // you'll call `createPage` for each result
 
   const allStories = await graphql(query.local.stories);
   if (allStories.errors) {
