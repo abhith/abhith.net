@@ -158,7 +158,7 @@ export const pageQuery = graphql`
       }
     }
     featured: allServicesJson(
-      limit: 10
+      limit: 9
       sort: { fields: [isAffiliate, date], order: [ASC, DESC] }
     ) {
       totalCount

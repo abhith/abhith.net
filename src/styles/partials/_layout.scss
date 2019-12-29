@@ -435,3 +435,26 @@ article h6 {
   width: 100%;
   height: 100%;
 }
+
+// featured
+.list-featured {
+  counter-reset: step-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-featured li {
+  counter-increment: step-counter;
+  display: flex;
+  font-size: 0.8rem;
+}
+
+.list-featured li::before {
+  content: "0" counter(step-counter);
+  font-weight: bold;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  font-family: Arial;
+  line-height: 1;
+  opacity: 0.1;
+}
