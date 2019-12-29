@@ -118,7 +118,7 @@ export default function Hero() {
                       <h1 className="title is-1 is-light is-semibold is-spaced main-title">
                         {page.frontmatter.heading}
                       </h1>
-                      <h2 className="subtitle is-6 is-light is-thin">
+                      <h2 className="subtitle is-light is-thin">
                         {page.frontmatter.subheading}
                       </h2>
                       <p>
