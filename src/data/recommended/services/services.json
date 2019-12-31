@@ -1,5 +1,13 @@
 [
   {
+    "title": "Flurl",
+    "url": "https://flurl.dev/",
+    "description": "Flurl is a modern, fluent, asynchronous, testable, portable, buzzword-laden URL builder and HTTP client library for .NET.",
+    "image": "",
+    "date": "2019-12-30T04:30:28.263Z",
+    "tags": ["api", "aspnet-core"]
+  },
+  {
     "title": "Free for developers",
     "url": "https://free-for.dev/",
     "description": "Free For Dev is a GitHub repo listing out free services for developers",

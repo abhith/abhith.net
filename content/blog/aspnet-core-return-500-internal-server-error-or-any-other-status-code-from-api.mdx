@@ -6,9 +6,11 @@ description: >-
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
 date: 2019-09-16T19:26:00.000Z
+lastModificationTime: 2019-12-30T04:02:00.000Z
 image: /img/blog/aspnet-core-return-500-internal-server-error-or-any-other-status-code-from-api.png
 tags:
   - aspnet-core
+  - api
 ---
 
 In any case if you want to return a status code from your ASP.NET Core API, all you have to do is in your controller method,
@@ -36,3 +38,63 @@ HTTP status code 5xx indicates server error. 5xx series includes,
 | 510         | Not Extended                    | Status510NotExtended                   |
 | 511         | Network Authentication Required | Status511NetworkAuthenticationRequired |
 | 599         | Network Connect Timeout Error   |
+
+You can also return some additional data along with the status code. Here is an example,
+
+```cs
+[Route("{code}")]
+[HttpGet]
+[ProducesResponseType(typeof(Merchant), 200)]
+public async Task<ActionResult> GetMerchant(string code)
+{
+    var input = new EntityRequestDto<string>
+    {
+        Id = code
+    };
+
+    var result = await _merchantService.GetMerchant(input, _settings.ConnectionStrings.Default);
+
+    if (result.IsSuccess)
+    {
+        return Ok(result.Value);
+    }
+    else
+    {
+        _logger.LogError("FAILED: GetMerchant", result.Error);
+        return StatusCode(StatusCodes.Status500InternalServerError, result.Error);
+    }
+}
+```
+
+If another service which is a client of the above API, they can get the additional info by,
+
+```cs
+public async Task<MerchantPreviewDto> GetMerchant(string merchantCode)
+{
+    try
+    {
+        var merchant = await $"{_apiBaseUri}/api/v1/merchants/{merchantCode}"
+            .WithOAuthBearerToken(...)
+            .GetJsonAsync<Merchant>().ConfigureAwait(false);
+
+        return ObjectMapper.Map<MerchantPreviewDto>(merchant);
+    }
+    catch (FlurlHttpException ex)
+    {
+        var error = await ex.GetResponseStringAsync();
+        throw new UserFriendlyException("Oops! There is a problem!", error);
+    }
+    catch (Exception ex)
+    {
+        throw new UserFriendlyException("Oops! There is a problem!", ex.Message);
+    }
+}
+```
+
+### Bonus
+
+On the client service, I am using **[Flurl](https://flurl.dev/)**, which is my favorite HTTP client.
+
+> Flurl is a modern, fluent, asynchronous, testable, portable, buzzword-laden URL builder and HTTP client library for .NET.
+
+Which one is your favorite HTTP client library for .NET?
