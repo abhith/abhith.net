@@ -1,5 +1,12 @@
 [
   {
+    "title": "OTP Login with .NET Core for Mobile-Friendly Web Apps",
+    "url": "https://codeburst.io/otp-login-with-net-core-for-mobile-friendly-web-apps-36b721592821",
+    "description": "When we build web applications, implementing authentication plays a vital role in providing personalized and secure services to users. But as we all know, typical authentication mechanisms like…",
+    "date": "2020-01-02T05:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Tools To Monitor and Work with Oracle on Azure",
     "url": "https://dbakevlar.com/2019/12/tools-to-monitor-and-work-with-oracle-on-azure/",
     "description": "",
