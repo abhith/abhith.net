@@ -39,7 +39,7 @@
     "title": "ASP.NET Core",
     "slug": "aspnet-core",
     "description": "ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-based, Internet-connected applications.",
-    "image": ""
+    "image": "aspnet-core.png"
   },
   {
     "title": "ASP.NET Web Forms",
