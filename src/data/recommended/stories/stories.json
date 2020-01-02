@@ -1,5 +1,12 @@
 [
   {
+    "title": "Handling Failed HTTP Responses With fetch()",
+    "url": "https://www.tjvantoll.com/2015/09/13/fetch-and-errors/",
+    "description": "",
+    "date": "2020-01-02T06:31:28.263Z",
+    "tags": ["javascript"]
+  },
+  {
     "title": "OTP Login with .NET Core for Mobile-Friendly Web Apps",
     "url": "https://codeburst.io/otp-login-with-net-core-for-mobile-friendly-web-apps-36b721592821",
     "description": "When we build web applications, implementing authentication plays a vital role in providing personalized and secure services to users. But as we all know, typical authentication mechanisms like…",
