@@ -1,5 +1,13 @@
 [
   {
+    "title": "JWT.IO",
+    "url": "https://jwt.io/",
+    "description": "JSON Web Token (JWT) is a compact URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is digitally signed using JSON Web Signature (JWS).",
+    "image": "",
+    "date": "2020-01-02T05:30:28.263Z",
+    "tags": ["identityserver"]
+  },
+  {
     "title": "Unix Time Stamp - Epoch Converter",
     "url": "https://www.unixtimestamp.com/index.php",
     "description": "Epoch and unix timestamp converter for developers. Date and time function syntax reference for various programming languages.",
