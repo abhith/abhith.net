@@ -10,7 +10,7 @@ interface IArticleHeroProps {
 
 const ArticleHero = ({ article }: IArticleHeroProps) => {
   return (
-    <section className="hero hero-is-secondary">
+    <section className="hero is-primary is-bold position-relative">
       <div className="hero-body">
         <div className="columns is-vcentered">
           <div className="column is-5 is-offset-1 post-caption">
@@ -21,7 +21,7 @@ const ArticleHero = ({ article }: IArticleHeroProps) => {
                     .map<React.ReactNode>(tag => (
                       <Link
                         key={tag}
-                        className="has-text-black has-text-weight-bold is-uppercase"
+                        className="has-text-warning has-text-weight-bold is-uppercase"
                         to={`/topics/${tag}/`}
                       >
                         {tag}

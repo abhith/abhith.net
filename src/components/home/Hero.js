@@ -7,11 +7,10 @@ export default function Hero() {
     <StaticQuery
       query={query}
       render={data => {
-        // console.log(data);
         const page = data.markdownRemark;
         return (
           <div className="hero-wrapper">
-            <section className="hero  is-transparent">
+            <section className="hero is-primary is-bold position-relative">
               <div className="hero-head"></div>
               <div id="particles-js">
                 <Particles
@@ -96,7 +95,6 @@ export default function Hero() {
                     retina_detect: true
                   }}
                   style={{
-                    backgroundColor: "#19aaa1",
                     position: "absolute",
                     width: "100%",
                     height: "100%"
