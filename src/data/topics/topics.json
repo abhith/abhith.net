@@ -102,6 +102,12 @@
     "image": ""
   },
   {
+    "title": "Dapr",
+    "slug": "dapr",
+    "description": "Dapr is a portable, event-driven runtime that makes it easy for developers to build resilient, microservice stateless and stateful applications that run on the cloud",
+    "image": "dapr.png"
+  },
+  {
     "title": "Database",
     "slug": "database",
     "description": "",

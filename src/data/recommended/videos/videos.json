@@ -1,5 +1,14 @@
 [
   {
+    "title": "Dapr, Rudr, OAM | Mark Russinovich presents next gen app development & deployment (Microsoft Ignite)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=LAUDVk8PaCY",
+    "date": "2020-01-04T14:20:21.638Z",
+    "type": "youtube",
+    "tags": ["dapr"]
+  },
+  {
     "title": "How to use Azure Bastion to connect securely to your Azure VMs | Azure Friday",
     "description": "",
     "image": "",
