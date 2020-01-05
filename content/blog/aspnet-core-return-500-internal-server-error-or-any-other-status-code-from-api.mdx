@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 title: ASP.NET Core - Return 500 (Internal Server Error) or any other Status Code from API
 description: >-
   A good API will respond with proper HTTP status codes. In ASP.NET Core, returning status code is easier than you might think.
@@ -20,7 +19,9 @@ return  StatusCode(StatusCodes.Status500InternalServerError);
 ```
 
 **StatusCode** is from **Microsoft.AspNetCore.Mvc.ControllerBase.StatusCode** and **StatusCodes** from **Microsoft.AspNetCore.Http.StatusCodes**.
-The above code will return a 500 status code. Similar way, you can return any other status code. For the complete list, visit [StatusCodes Class (Microsoft.AspNetCore.Http) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes?view=aspnetcore-2.2)
+The above code will return a 500 status code. Similar way, you can return any other status code. For the complete list,
+
+:point_right: [StatusCodes Class (Microsoft.AspNetCore.Http) | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes?view=aspnetcore-2.2)
 
 HTTP status code 5xx indicates server error. 5xx series includes,
 
