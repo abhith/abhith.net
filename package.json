@@ -60,6 +60,7 @@
     "react-particles-js": "^2.7.0",
     "react-player": "^1.14.2",
     "react-share": "^4.0.0",
+    "remark-emoji": "^2.0.2",
     "theme-ui": "^0.2.52",
     "typeface-lora": "^0.0.72",
     "uuid": "^3.3.3"

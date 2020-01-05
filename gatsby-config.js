@@ -173,7 +173,8 @@ module.exports = {
             }
           },
           { resolve: `gatsby-remark-responsive-iframe` }
-        ]
+        ],
+        remarkPlugins: [require("remark-emoji")]
       }
     },
     {
