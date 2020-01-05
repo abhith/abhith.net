@@ -146,7 +146,7 @@ module.exports = {
             resolve: "gatsby-remark-external-links",
             options: {
               target: "_blank",
-              rel: "nofollow noopener" // eslint-disable-line unicorn/prevent-abbreviations
+              rel: "nofollow noopener"
             }
           },
           {
