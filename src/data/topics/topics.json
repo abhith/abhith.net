@@ -252,6 +252,12 @@
     "image": "oracle-6.svg"
   },
   {
+    "title": "ORM",
+    "slug": "orm",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "React",
     "slug": "react",
     "description": "",
