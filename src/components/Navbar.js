@@ -142,15 +142,14 @@ const Navbar = class extends React.Component {
               <div className="navbar-item">
                 <div className="field is-grouped">
                   <p className="control">
-                    <OutboundLink
+                    <Link
+                      to="/donate"
                       className="button k-button k-primary raised has-gradient slanted"
-                      href="https://ko-fi.com/abhith"
-                      target="_blank"
                     >
                       <span>
                         BUY ME A <FaCoffee />
                       </span>
-                    </OutboundLink>
+                    </Link>
                   </p>
                 </div>
               </div>

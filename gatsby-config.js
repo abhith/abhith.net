@@ -7,6 +7,12 @@ const {
 const isNetlifyProduction = NETLIFY_ENV === "production";
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 const contentPosts = "content/blog";
+const path = require("path");
+
+const templatesDirectory = path.resolve(__dirname, "src/templates");
+const templates = {
+  page: path.resolve(templatesDirectory, "page.template.tsx")
+};
 
 module.exports = {
   siteMetadata: {
@@ -124,6 +130,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        defaultLayouts: { default: templates.page },
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,

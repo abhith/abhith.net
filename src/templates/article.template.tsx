@@ -122,7 +122,7 @@ export default ({ pageContext, location }) => {
                 <div className="container mt-5">
                   <div className="media">
                     <figure className="media-left">
-                      <p className="image is-96x96">
+                      <p className="image is-128x128">
                         <img
                           className="is-rounded"
                           src={`https://www.abhith.net/img/abhith.jpg`}
@@ -145,21 +145,18 @@ export default ({ pageContext, location }) => {
                               Follow @AbhithRajan
                             </a>
                           </span>
-                          <span>
-                            <OutboundLink
-                              className="button is-info is-outlined is-small is-rounded ml-1"
-                              href="https://ko-fi.com/abhith"
-                              target="_blank"
-                            >
-                              Buy me a coffee{" "}
-                              <FaCoffee className="text-danger" />
-                            </OutboundLink>
-                          </span>
                           <br />
                           {/* TODO: Make dynamic */}
                           {`
-        Abhith Rajan is an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products and services.
+        Abhith Rajan is an aspiring software engineer with more than 7 years of experience and proven successful track record of delivering technology-based products and services.
       `}
+                          <br />
+                          <Link
+                            to="/donate"
+                            className="button k-button k-primary raised has-gradient rounded"
+                          >
+                            Buy me a coffee <FaCoffee />
+                          </Link>
                         </p>
                       </div>
                     </div>
