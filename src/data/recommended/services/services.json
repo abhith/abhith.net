@@ -1,5 +1,13 @@
 [
   {
+    "title": "StaticGen | Top Open Source Static Site Generators",
+    "url": "https://www.staticgen.com",
+    "description": "StaticGen is a leaderboard of the top open source static site generators. Promoting a static approach to building websites.",
+    "image": "",
+    "date": "2020-01-07T05:30:28.263Z",
+    "tags": ["JAMstack"]
+  },
+  {
     "title": "JWT.IO",
     "url": "https://jwt.io/",
     "description": "JSON Web Token (JWT) is a compact URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is digitally signed using JSON Web Signature (JWS).",
