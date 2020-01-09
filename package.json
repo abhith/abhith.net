@@ -90,8 +90,6 @@
     "@types/node": "^13.1.5",
     "@types/react": "^16.9.15",
     "@types/react-dom": "^16.9.2",
-    "eslint-config-react-app": "^5.1.0",
-    "eslint-plugin-prettier": "^3.1.1",
     "husky": "^4.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
