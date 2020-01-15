@@ -1,5 +1,12 @@
 [
   {
+    "title": "Nine Performance Tips for Azure App Services",
+    "url": "https://odetocode.com/blogs/scott/archive/2020/01/14/nine-performance-tips-for-azure-app-services.aspx",
+    "description": "",
+    "date": "2020-01-15T06:31:28.263Z",
+    "tags": ["azure"]
+  },
+  {
     "title": "Adding HATEOAS to an ASP.NET Core API",
     "url": "https://baldbeardedbuilder.com/posts/adding-hateoas-to-an-aspnetcore-rest-api/",
     "description": "Implement simple JSON HATEOAS support to an ASP.NET Core web API",
