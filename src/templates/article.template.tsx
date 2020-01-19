@@ -66,10 +66,10 @@ export default ({ pageContext, location }) => {
         <ArticleHero article={article} />
         <section className="section">
           <div className="columns is-centered">
-            <div className="column is-2 pr-4 mb-4">
+            <div className="column is-1">
               <ArticleShare article={article} location={location} />
             </div>
-            <div className="column is-8">
+            <div className="column is-9">
               <div className="ar-breadcrumb is-hidden-mobile">
                 <nav className="breadcrumb" aria-label="breadcrumbs">
                   <ul>

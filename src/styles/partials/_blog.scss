@@ -594,5 +594,11 @@
 .ar-breadcrumb {
   display: flex;
   justify-content: space-between;
-  // background-color: #19aaa1;
+}
+
+.article-share {
+  button {
+    padding-bottom: 3rem !important;
+    padding-right: 1rem !important;
+  }
 }
