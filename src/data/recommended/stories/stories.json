@@ -1,9 +1,16 @@
 [
   {
+    "title": "ASP.Net Core 3 – Dependency Injection – Michał Białecki Blog",
+    "url": "https://www.michalbialecki.com/2020/01/17/asp-net-core-3-dependency-injection/",
+    "description": "",
+    "date": "2020-01-20T06:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Selective Projects Loading using Solution Filter in Visual Studio - Daily .NET Tips",
     "url": "https://dailydotnettips.com/selective-projects-loading-using-solution-filter-in-visual-studio/",
     "description": "Solution Filter in Visual Studio allows a faster load of the solution with selective projects. Solution Filter in Visual Studio allows us to select only the required projects and help in faster load and build.",
-    "date": "2020-01-20T06:31:28.263Z",
+    "date": "2020-01-20T04:31:28.263Z",
     "tags": ["visual-studio"]
   },
   {
