@@ -1,9 +1,16 @@
 [
   {
+    "title": "JavaScript equivalents of some common C# LINQ methods",
+    "url": "https://gist.github.com/DanDiplo/30528387da41332ff22b",
+    "description": "",
+    "date": "2020-01-20T06:31:28.263Z",
+    "tags": ["javascript", "linq", "c-sharp"]
+  },
+  {
     "title": "ASP.Net Core 3 – Dependency Injection – Michał Białecki Blog",
     "url": "https://www.michalbialecki.com/2020/01/17/asp-net-core-3-dependency-injection/",
     "description": "",
-    "date": "2020-01-20T06:31:28.263Z",
+    "date": "2020-01-20T05:31:28.263Z",
     "tags": ["aspnet-core"]
   },
   {
