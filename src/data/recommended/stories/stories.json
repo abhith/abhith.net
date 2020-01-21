@@ -1,5 +1,12 @@
 [
   {
+    "title": "10 Important Git Commands that Every Developer Should Know",
+    "url": "https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/",
+    "description": "Git is an important part of daily programming (especially if you’re working with a team) and is widely used in the software industry.",
+    "date": "2020-01-21T06:31:28.263Z",
+    "tags": ["git"]
+  },
+  {
     "title": "JavaScript equivalents of some common C# LINQ methods",
     "url": "https://gist.github.com/DanDiplo/30528387da41332ff22b",
     "description": "",
