@@ -1,5 +1,12 @@
 [
   {
+    "title": "Introducing `npm ci` for faster, more reliable builds",
+    "url": "https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable",
+    "description": "",
+    "date": "2020-01-22T07:31:28.263Z",
+    "tags": ["javascript", "azure-devops"]
+  },
+  {
     "title": "So Many Ways to Learn .NET in 2020",
     "url": "https://tattoocoder.com/so-many-ways-to-learn-net-in-2020/",
     "description": "It's a new year and sure to be on your list, as well as mine, is learning. Here is a quick list of some .NET learning resources for you to check off that resolution for 2020.",
