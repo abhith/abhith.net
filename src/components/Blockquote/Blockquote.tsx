@@ -10,12 +10,12 @@ const Blockquote = styled.blockquote`
   `};
 
   & > p {
-    max-width: 880px !important;
+    max-width: 95% !important;
     padding-right: 100px;
     padding-bottom: 0;
     width: 100%;
     margin: 0 auto;
-    font-size: 36px;
+    font-size: 26px;
     line-height: 1.32;
     font-weight: bold;
 
