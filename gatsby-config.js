@@ -37,67 +37,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-image`,
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+
     `gatsby-plugin-twitter`,
     `gatsby-plugin-theme-ui`,
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          `gatsby-remark-reading-time`,
-          {
-            resolve: "@weknow/gatsby-remark-twitter",
-            options: {
-              align: "center"
-            }
-          },
-          {
-            resolve: "gatsby-remark-relative-images",
-            options: {
-              name: "uploads"
-            }
-          },
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 1024
-            }
-          },
-          {
-            resolve: "gatsby-remark-copy-linked-files",
-            options: {
-              destinationDir: "static"
-            }
-          },
-          `gatsby-remark-autolink-headers`,
-          {
-            resolve: "gatsby-remark-embed-video",
-            options: {
-              width: 800,
-              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              height: 400, // Optional: Overrides optional.ratio
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true //Optional: Disable insertion of <style> border: 0
-            }
-          },
-          `gatsby-remark-responsive-iframe`,
-          "gatsby-remark-external-links",
-          {
-            resolve: `gatsby-remark-classes`,
-            options: {
-              classMap: {
-                table: "table"
-              }
-            }
-          }
-        ]
-      }
-    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
@@ -125,6 +70,27 @@ module.exports = {
       options: {
         path: contentPosts,
         name: contentPosts
+      }
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1024,
+              linkImagesToOriginal: false,
+              quality: 80,
+              withWebp: true
+            }
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`
+          },
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-external-links`
+        ]
       }
     },
     {
@@ -162,12 +128,7 @@ module.exports = {
               align: "center"
             }
           },
-          {
-            resolve: "gatsby-remark-relative-images",
-            options: {
-              name: "uploads"
-            }
-          },
+
           `gatsby-remark-autolink-headers`,
           {
             resolve: "gatsby-remark-embed-video",
