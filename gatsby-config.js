@@ -40,7 +40,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-
     `gatsby-plugin-twitter`,
     `gatsby-plugin-theme-ui`,
     {
@@ -128,7 +127,6 @@ module.exports = {
               align: "center"
             }
           },
-
           `gatsby-remark-autolink-headers`,
           {
             resolve: "gatsby-remark-embed-video",
