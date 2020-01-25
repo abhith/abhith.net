@@ -2,9 +2,10 @@ import Layout from "@components/Layout";
 import MDXRenderer from "@components/MDX";
 import SEO from "@components/SEO";
 import TopicsBar from "@components/TopicsBar";
+import Utterances from "@components/Utterances";
+
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
-import { DiscussionEmbed } from "disqus-react";
 import React from "react";
 
 import { IArticle } from "@types";
@@ -41,15 +42,6 @@ export default ({ pageContext, location }) => {
     0,
     article.slug.length - 1
   )}.mdx`;
-
-  const disqusConfig = {
-    shortname: `abhith`,
-    config: {
-      identifier: article.commentId,
-      title: article.title,
-      url: location.href
-    }
-  };
 
   return (
     <Layout>
@@ -119,6 +111,7 @@ export default ({ pageContext, location }) => {
                     </OutboundLink>
                   </p>
                 </div>
+                <Utterances repo={`Abhith/abhith.net`} />
                 <div className="container mt-5">
                   <div className="media">
                     <figure className="media-left">
@@ -171,11 +164,6 @@ export default ({ pageContext, location }) => {
       <RelatedVideos relatedVideos={relatedVideos} />
       <RelatedStories relatedStories={relatedStories} />
       <RelatedTools relatedServices={relatedTools} />
-      <section className="section">
-        <div className="container is-fluid">
-          <DiscussionEmbed {...disqusConfig} />
-        </div>
-      </section>
     </Layout>
   );
 };
