@@ -96,22 +96,6 @@ export default ({ pageContext, location }) => {
               </div>
               <MDXRenderer content={article.body}>
                 <TopicsBar topics={article.tags} />
-                <div id="typo" className="bd-typo">
-                  <p className="has-text-grey">
-                    This page is{" "}
-                    <strong className="has-text-grey">open source</strong>.
-                    Noticed a typo? Or something unclear?
-                    <br />
-                    <OutboundLink
-                      href={githubURL}
-                      target="_blank"
-                      className="has-text-grey"
-                    >
-                      Improve this page on GitHub
-                    </OutboundLink>
-                  </p>
-                </div>
-                <Utterances repo={`Abhith/abhith.net`} />
                 <div className="container mt-5">
                   <div className="media">
                     <figure className="media-left">
@@ -155,6 +139,22 @@ export default ({ pageContext, location }) => {
                     </div>
                   </div>
                 </div>
+                <div id="typo" className="bd-typo">
+                  <p className="has-text-grey">
+                    This page is{" "}
+                    <strong className="has-text-grey">open source</strong>.
+                    Noticed a typo? Or something unclear?
+                    <br />
+                    <OutboundLink
+                      href={githubURL}
+                      target="_blank"
+                      className="has-text-grey"
+                    >
+                      Improve this page on GitHub
+                    </OutboundLink>
+                  </p>
+                </div>
+                <Utterances repo={`Abhith/abhith.net`} />
               </MDXRenderer>
             </div>
           </div>
