@@ -1,5 +1,19 @@
 [
   {
+    "title": "Getting Started With Visual Studio Online - Cloud IDE | Build5Nines",
+    "url": "https://build5nines.com/getting-started-visual-studio-online-cloud-ide/",
+    "description": "The Visual Studio Online (VS Online) web-based IDE is now available to be used. Based on the popular Visual Studio Code editor, it offers a familiar feel and workspace for writing and working with source code..",
+    "date": "2020-01-26T08:31:28.263Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "Getting the Most Out of Application Insights for .NET (Core) Apps",
+    "url": "https://aspnetmonsters.com/2020/01/2020-01-20-getting-the-most-out-of-application-insights-for-net-core-apps/",
+    "description": "Application Insights is a powerful and surprisingly flexible application performance monitoring (APM) service hosted in Azure. Every time I’ve used Application Insights on a project, it has opened the",
+    "date": "2020-01-26T07:31:28.263Z",
+    "tags": ["azure"]
+  },
+  {
     "title": "Introducing `npm ci` for faster, more reliable builds",
     "url": "https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable",
     "description": "",
