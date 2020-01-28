@@ -156,6 +156,12 @@
     "image": ""
   },
   {
+    "title": "Drawing",
+    "slug": "drawing",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Entity Framework Core",
     "slug": "ef-core",
     "description": "",
