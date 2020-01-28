@@ -3,9 +3,10 @@ import PageHero from "@components/PageHero";
 import SEO from "@components/SEO";
 import TopicImage from "@components/TopicImage";
 import { ITopic } from "@types";
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import React from "react";
-import { FaBookOpen, FaFileAlt, FaGlobe, FaVideo } from "react-icons/fa";
+// tslint:disable-next-line: no-submodule-imports
+import { FiBookOpen, FiFileText, FiGlobe, FiVideo } from "react-icons/fi";
 
 function TopicsPage({ pageContext }) {
   const { topics }: { topics: ITopic[] } = pageContext;
@@ -28,7 +29,14 @@ function TopicsPage({ pageContext }) {
             <div className="column is-9">
               <div className="columns is-centered is-multiline">
                 {topics.map(topic => (
-                  <div className="column is-3" key={topic.slug}>
+                  <div
+                    className="column is-full-mobile
+                    is-half-tablet
+                    is-half-desktop
+                    is-one-third-widescreen
+                    is-one-quarter-fullhd"
+                    key={topic.slug}
+                  >
                     <div className="block">
                       <div className="inner-block position-relative">
                         <div className="media-left">
@@ -36,43 +44,50 @@ function TopicsPage({ pageContext }) {
                             <TopicImage slug={topic.slug} />
                           </figure>
                         </div>
-                        <h2 className="mt-2 title is-4">{topic.title}</h2>
-
-                        <div className="buttons has-addons mb-2">
+                        <h2 className="title is-4">{topic.title}</h2>
+                        <div className="buttons has-addons">
                           {topic.totalPosts > 0 && (
                             <Link
                               className="button is-outlined"
                               to={`/topics/${topic.slug}/`}
                             >
-                              <FaFileAlt />
-                              <span>&nbsp;{topic.totalPosts}</span>
+                              <span className="icon is-small">
+                                <FiFileText />
+                              </span>
+                              <span>{topic.totalPosts}</span>
                             </Link>
                           )}
                           {topic.totalVideos > 0 && (
                             <Link
                               className="button is-primary is-outlined"
-                              to={`/topics/${topic.slug}/`}
+                              to={`/topics/${topic.slug}/videos/`}
                             >
-                              <FaVideo /> <span>&nbsp;{topic.totalVideos}</span>
+                              <span className="icon is-small">
+                                <FiVideo />
+                              </span>
+                              <span>{topic.totalVideos}</span>
                             </Link>
                           )}
-
                           {topic.totalStories > 0 && (
                             <Link
                               className="button is-link is-outlined"
-                              to={`/topics/${topic.slug}/`}
+                              to={`/topics/${topic.slug}/stories/`}
                             >
-                              <FaBookOpen />
-                              <span>&nbsp;{topic.totalStories}</span>
+                              <span className="icon is-small">
+                                <FiBookOpen />
+                              </span>
+                              <span>{topic.totalStories}</span>
                             </Link>
                           )}
                           {topic.totalServices > 0 && (
                             <Link
                               className="button is-success is-outlined"
-                              to={`/topics/${topic.slug}/`}
+                              to={`/topics/${topic.slug}/tools/`}
                             >
-                              <FaGlobe />
-                              <span>&nbsp;{topic.totalServices}</span>
+                              <span className="icon is-small">
+                                <FiGlobe />
+                              </span>
+                              <span>{topic.totalServices}</span>
                             </Link>
                           )}
                         </div>

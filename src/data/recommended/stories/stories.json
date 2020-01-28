@@ -1,5 +1,12 @@
 [
   {
+    "title": "Discord - GITHUB WEBHOOK INTEGRATION",
+    "url": "https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks",
+    "description": "Discord's built in Webhooks function as an easy way to get automated messages and data updates sent to a text channel in your server....",
+    "date": "2020-01-27T08:31:28.263Z",
+    "tags": ["github"]
+  },
+  {
     "title": "Getting Started With Visual Studio Online - Cloud IDE | Build5Nines",
     "url": "https://build5nines.com/getting-started-visual-studio-online-cloud-ide/",
     "description": "The Visual Studio Online (VS Online) web-based IDE is now available to be used. Based on the popular Visual Studio Code editor, it offers a familiar feel and workspace for writing and working with source code..",
@@ -592,7 +599,7 @@
     "url": "https://michaelnthiessen.com/paradox-of-abstraction",
     "description": "By Michael Thiessen",
     "date": "2019-06-10T18:30:28.263Z",
-    "tags": ["code"]
+    "tags": ["style-guide"]
   },
   {
     "title": "SHA 256 and SHA 512 hash examples",
