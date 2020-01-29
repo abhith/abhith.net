@@ -17,7 +17,7 @@
     "gatsby-plugin-emotion": "^4.1.10",
     "gatsby-plugin-google-analytics": "^2.1.33",
     "gatsby-plugin-manifest": "^2.2.20",
-    "gatsby-plugin-mdx": "^1.0.64",
+    "gatsby-plugin-mdx": "^1.0.68",
     "gatsby-plugin-nprogress": "^2.1.12",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-polyfill-io": "^1.1.0",
