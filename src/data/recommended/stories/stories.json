@@ -1,5 +1,12 @@
 [
   {
+    "title": "Becoming an Angular Environmentalist",
+    "url": "https://medium.com/angular-in-depth/becoming-an-angular-environmentalist-45a48f7c20d8",
+    "description": "This article explains how to add configuration information to your Angular Application.",
+    "date": "2020-01-29T08:31:28.263Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "Discord - GITHUB WEBHOOK INTEGRATION",
     "url": "https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks",
     "description": "Discord's built in Webhooks function as an easy way to get automated messages and data updates sent to a text channel in your server....",
