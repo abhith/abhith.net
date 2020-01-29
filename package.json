@@ -11,7 +11,7 @@
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "bulma": "^0.8.0",
     "bulma-timeline": "^3.0.4",
-    "gatsby": "^2.19.3",
+    "gatsby": "^2.19.8",
     "gatsby-awesome-pagination": "^0.3.5",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-emotion": "^4.1.10",
