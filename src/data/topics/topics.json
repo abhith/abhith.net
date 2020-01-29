@@ -72,6 +72,12 @@
     "image": "microsoft-azure-3.svg"
   },
   {
+    "title": "Azure Pipelines",
+    "slug": "azure-pipelines",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "C#",
     "slug": "c-sharp",
     "description": "One of my favorite language.",

@@ -1,5 +1,23 @@
 [
   {
+    "title": "Azure Pipelines - Release",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=UUmgg2xqFxU",
+    "date": "2020-01-29T14:20:21.638Z",
+    "type": "youtube",
+    "tags": ["azure-pipelines"]
+  },
+  {
+    "title": "Azure Pipelines - Build",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=7pzBwuMjpP0",
+    "date": "2020-01-29T14:20:21.638Z",
+    "type": "youtube",
+    "tags": ["azure-pipelines"]
+  },
+  {
     "title": "Dapr, Rudr, OAM | Mark Russinovich presents next gen app development & deployment (Microsoft Ignite)",
     "description": "",
     "image": "",
