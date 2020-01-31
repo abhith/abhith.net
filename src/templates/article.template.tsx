@@ -9,6 +9,8 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
 
 import { IArticle } from "@types";
+
+// tslint:disable-next-line: no-submodule-imports
 import { FaCoffee } from "react-icons/fa";
 
 import { Link } from "gatsby";
@@ -139,7 +141,17 @@ export default ({ pageContext, location }) => {
                     </div>
                   </div>
                 </div>
-                <div id="typo" className="bd-typo">
+                <div id="typo" className="ar-typo">
+                  <p>
+                    👊 that ⭐️ button on the official{" "}
+                    <OutboundLink
+                      href="https://github.com/Abhith/abhith.net"
+                      target="_blank"
+                    >
+                      GitHub repo
+                    </OutboundLink>{" "}
+                    to stay up to date.
+                  </p>
                   <p className="has-text-grey">
                     This page is{" "}
                     <strong className="has-text-grey">open source</strong>.
