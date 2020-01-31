@@ -8,9 +8,7 @@ const BlogCard = ({ post, tag }) => {
     <div className="column card-post">
       <Link to={post.slug}>
         <div className="featured-image card-image">
-          {/* <Img fluid={post.frontmatter.image.childImageSharp.fluid} /> */}
           <Image src={post.hero.full} />
-
           {tag && (
             <div className="card-content is-overlay is-clipped">
               <span className="tag is-info">{tag}</span>
