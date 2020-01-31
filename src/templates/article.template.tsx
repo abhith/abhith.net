@@ -1,4 +1,5 @@
 import Layout from "@components/Layout";
+import LiveEdit from "@components/LiveEdit";
 import MDXRenderer from "@components/MDX";
 import SEO from "@components/SEO";
 import TopicsBar from "@components/TopicsBar";
@@ -44,6 +45,65 @@ export default ({ pageContext, location }) => {
     0,
     article.slug.length - 1
   )}.mdx`;
+
+  const askForCommentsCode = `
+  function AskForFeedback() {
+    const [isHelpful, setIsHelpful] = React.useState();
+    let note;
+    if (isHelpful === "yes") {
+      note = (
+        <div className="notification is-success is-light">
+          <h3>
+            👊 that ⭐️ button on the official{" "}
+            <a
+              href="https://github.com/Abhith/abhith.net"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub repo
+            </a>{" "}
+            to stay up to date.
+          </h3>
+          <p>Say thanks ♥ in the comments</p>
+        </div>
+      );
+    } else if (isHelpful === "no") {
+      note = (
+        <div className="notification is-warning is-light">
+          <h3>Sorry about that</h3>
+          <p> TODO(abhith): let me know how can I improve it?</p>
+        </div>
+      );
+    } else {
+      note = (
+        <>
+          <h3>Your opinion matters</h3>
+          <p>Please share your thought about this article </p>
+        </>
+      );
+    }
+    return (
+      <div className="content">
+        <h2>Was this article helpful?</h2>
+        <div className="buttons is-centered">         
+          <button
+            className="button is-success is-light"
+            onClick={() => setIsHelpful("yes")}
+          >
+            Yes
+          </button>
+          <button
+            className="button is-warning is-light"
+            onClick={() => setIsHelpful("no")}
+          >
+            No
+          </button>
+        </div>
+        {note}
+      </div>
+    );
+  } 
+  `.trim();
 
   return (
     <Layout>
@@ -98,7 +158,7 @@ export default ({ pageContext, location }) => {
               </div>
               <MDXRenderer content={article.body}>
                 <TopicsBar topics={article.tags} />
-                <div className="container mt-5">
+                <div className="container mt-5 mb-3">
                   <div className="media">
                     <figure className="media-left">
                       <p className="image is-128x128">
@@ -141,17 +201,8 @@ export default ({ pageContext, location }) => {
                     </div>
                   </div>
                 </div>
+                <LiveEdit code={askForCommentsCode} noInline={false} />
                 <div id="typo" className="ar-typo">
-                  <p>
-                    👊 that ⭐️ button on the official{" "}
-                    <OutboundLink
-                      href="https://github.com/Abhith/abhith.net"
-                      target="_blank"
-                    >
-                      GitHub repo
-                    </OutboundLink>{" "}
-                    to stay up to date.
-                  </p>
                   <p className="has-text-grey">
                     This page is{" "}
                     <strong className="has-text-grey">open source</strong>.
