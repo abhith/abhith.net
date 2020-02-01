@@ -10,6 +10,7 @@ const templates = {
   topicVideos: path.resolve(templatesDirectory, "topic.videos.template.tsx"),
   topicTools: path.resolve(templatesDirectory, "topic.tools.template.tsx"),
   blog: path.resolve(templatesDirectory, "blog.template.tsx"),
+  stories: path.resolve(templatesDirectory, "stories.template.tsx"),
   topics: path.resolve(templatesDirectory, "topics.template.tsx")
 };
 
@@ -345,34 +346,34 @@ module.exports = async ({ graphql, actions, reporter }) => {
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
-        // additional data can be passed via context
         context: {
           id
         }
       });
     });
 
-    log(`Creating`, "blog index");
-
-    // Create your paginated pages
+    log(`Creating`, "paginated blog");
     paginate({
-      createPage, // The Gatsby `createPage` function
-      items: articles, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
-      component: templates.blog, // Just like `createPage()`
+      createPage,
+      items: articles,
+      itemsPerPage: 10,
+      pathPrefix: "/blog",
+      component: templates.blog,
       context: {
         topics
       }
     });
 
-    // Create your paginated stories
+    log(`Creating`, "paginated stories");
     paginate({
-      createPage, // The Gatsby `createPage` function
-      items: stories, // An array of objects
-      itemsPerPage: 10, // How many items you want per page
-      pathPrefix: "/recommended/stories", // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve("src/templates/stories-page.js") // Just like `createPage()`
+      createPage,
+      items: stories,
+      itemsPerPage: 10,
+      pathPrefix: "/recommended/stories",
+      component: templates.stories,
+      context: {
+        topics
+      }
     });
 
     // Create your paginated videos

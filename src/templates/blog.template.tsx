@@ -2,7 +2,8 @@ import BlogRoll from "@components/BlogRoll";
 import Layout from "@components/Layout";
 import Pagination from "@components/Pagination";
 import SEO from "@components/SEO";
-import { graphql, Link } from "gatsby";
+import Topics from "@components/Topics";
+import { graphql } from "gatsby";
 import React from "react";
 import normalize from "../../gatsby/data/data.normalize";
 
@@ -23,7 +24,7 @@ function BlogPage({ pageContext, data }) {
           <div className="columns">
             <div className="column is-9 is-10-widescreen">
               <h4 className="title is-4 spanborder has-text-weight-bold">
-                <span>All Stories</span>
+                <span>All Articles</span>
               </h4>
               <BlogRoll posts={articles} />
               <Pagination
@@ -31,20 +32,7 @@ function BlogPage({ pageContext, data }) {
                 nextPagePath={nextPagePath}
               />
             </div>
-            <div className="column is-3 is-2-widescreen is-hidden-mobile">
-              <div className="tags-widget">
-                <h4 className="title is-4 spanborder has-text-weight-bold">
-                  <span>All Topics</span>
-                </h4>
-                <div className="tags">
-                  {topics.map(topic => (
-                    <Link to={`/topics/${topic.slug}/`} key={topic.slug}>
-                      <span className="tag">{topic.title}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Topics.Cloud topics={topics} />
           </div>
         </div>
       </div>
