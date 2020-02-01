@@ -1,21 +1,20 @@
-import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import * as polished from "polished";
+import React from "react";
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live";
-export const background = "#42374a";
-export const foreground = "#f8f8f2";
-export const red = "#ff5555";
-export const lightGrey = "#42374a";
+const foreground = "#f8f8f2";
+const red = "#ff5555";
+const lightGrey = "#42374a";
 // tslint:disable-next-line: no-submodule-imports
-import prismTheme from "prism-react-renderer/themes/nightOwl";
+import prismTheme from "prism-react-renderer/themes/shadesOfPurple";
 
-const StyledProvider = styled(LiveProvider)`
-  border-radius: ${polished.rem(3)};
-  box-shadow: 1px 1px 20px rgba(20, 20, 20, 0.27);
-  overflow: hidden;
-  margin-bottom: ${polished.rem(100)};
-`;
+// const StyledProvider = styled(LiveProvider)`
+//   border-radius: ${polished.rem(3)};
+//   box-shadow: 1px 1px 20px rgba(20, 20, 20, 0.27);
+//   overflow: hidden;
+//   margin-bottom: ${polished.rem(100)};
+// `;
 
 const LiveWrapper = styled.div`
   display: flex;
@@ -78,7 +77,7 @@ const StyledError = styled(LiveError)`
 `;
 
 const LiveEdit = ({ noInline, code }) => (
-  <StyledProvider code={code} noInline={noInline} theme={prismTheme}>
+  <LiveProvider code={code} noInline={noInline} theme={prismTheme}>
     <LiveWrapper>
       <StyledEditor>
         <LiveEditor />
@@ -86,7 +85,7 @@ const LiveEdit = ({ noInline, code }) => (
       <StyledPreview />
     </LiveWrapper>
     <StyledError />
-  </StyledProvider>
+  </LiveProvider>
 );
 
 export default LiveEdit;
