@@ -49,7 +49,7 @@ export default ({ pageContext, location }) => {
     if (isHelpful === "yes") {
       note = (
         <div className="notification is-success is-light">
-          <h3>
+          <h5>
             👊 that ⭐️ button on the official{" "}
             <a
               href="https://github.com/Abhith/abhith.net"
@@ -58,7 +58,7 @@ export default ({ pageContext, location }) => {
             >
               GitHub repo
             </a>
-          </h3>
+          </h5>
           <p>
             Please leave a comment below! <br />
             &#123; thank you ♥ &#125; is enough
@@ -68,21 +68,21 @@ export default ({ pageContext, location }) => {
     } else if (isHelpful === "no") {
       note = (
         <div className="notification is-warning is-light">
-          <h3>Sorry about that!</h3>
+          <h4>Sorry about that!</h4>
           <p> TODO(abhith): let me know how can I improve it?</p>
         </div>
       );
     } else {
       note = (
         <>
-          <h3>Your opinion matters</h3>
+          <h4>Your opinion matters</h4>
           <p>Please share your thought about this article </p>
         </>
       );
     }
     return (
       <div className="content">
-        <h2>Was this article helpful?</h2>
+        <h3>Was this article helpful?</h3>
         <div className="buttons is-centered">
           <button
             className="button is-success is-light"

@@ -44,9 +44,10 @@ const StyledEditor = styled.div`
   background: ${lightGrey};
   font-family: "Source Code Pro", monospace;
   font-size: ${polished.rem(14)};
-  height: ${polished.rem(275)};
-  max-height: ${polished.rem(275)};
+  height: ${polished.rem(250)};
+  max-height: ${polished.rem(250)};
   overflow: auto;
+  border-radius: 5px;
   ${column};
   * > textarea:focus {
     outline: none;
@@ -61,7 +62,7 @@ const StyledPreview = styled(LivePreview)`
   height: auto;
   overflow: hidden;
   text-align: center;
-
+  border-radius: 5px;
   ${column};
 `;
 
@@ -84,7 +85,6 @@ const LiveEdit = ({ noInline, code }) => (
       </StyledEditor>
       <StyledPreview />
     </LiveWrapper>
-
     <StyledError />
   </StyledProvider>
 );
