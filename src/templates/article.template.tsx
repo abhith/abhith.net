@@ -1,3 +1,9 @@
+import { Link } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
+import React from "react";
+
+import { IArticle } from "@types";
+
 import Layout from "@components/Layout";
 import LiveEdit from "@components/LiveEdit";
 import MDXRenderer from "@components/MDX";
@@ -5,16 +11,6 @@ import SEO from "@components/SEO";
 import TopicsBar from "@components/TopicsBar";
 import Utterances from "@components/Utterances";
 
-import { OutboundLink } from "gatsby-plugin-google-analytics";
-
-import React from "react";
-
-import { IArticle } from "@types";
-
-// tslint:disable-next-line: no-submodule-imports
-import { FaCoffee } from "react-icons/fa";
-
-import { Link } from "gatsby";
 import ArticleHero from "../sections/article/Article.Hero";
 import RelatedArticles from "../sections/article/Article.RelatedArticles";
 import RelatedStories from "../sections/article/Article.RelatedStories";
@@ -61,16 +57,18 @@ export default ({ pageContext, location }) => {
               rel="noopener noreferrer"
             >
               GitHub repo
-            </a>{" "}
-            to stay up to date.
+            </a>
           </h3>
-          <p>Say thanks ♥ in the comments</p>
+          <p>
+            Please leave a comment below! <br />
+            &#123; thank you ♥ &#125; is enough
+          </p>
         </div>
       );
     } else if (isHelpful === "no") {
       note = (
         <div className="notification is-warning is-light">
-          <h3>Sorry about that</h3>
+          <h3>Sorry about that!</h3>
           <p> TODO(abhith): let me know how can I improve it?</p>
         </div>
       );
@@ -85,24 +83,24 @@ export default ({ pageContext, location }) => {
     return (
       <div className="content">
         <h2>Was this article helpful?</h2>
-        <div className="buttons is-centered">         
+        <div className="buttons is-centered">
           <button
             className="button is-success is-light"
             onClick={() => setIsHelpful("yes")}
           >
-            Yes
+            👍 Yes
           </button>
           <button
             className="button is-warning is-light"
             onClick={() => setIsHelpful("no")}
           >
-            No
+            👎 No
           </button>
         </div>
         {note}
       </div>
     );
-  } 
+  }
   `.trim();
 
   return (
@@ -194,7 +192,7 @@ export default ({ pageContext, location }) => {
                             to="/donate"
                             className="button k-button k-primary raised has-gradient rounded"
                           >
-                            Buy me a coffee <FaCoffee />
+                            Buy me a coffee ☕
                           </Link>
                         </p>
                       </div>
