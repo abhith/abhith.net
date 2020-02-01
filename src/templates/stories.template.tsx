@@ -4,7 +4,7 @@ import SEO from "@components/SEO";
 import StoriesRoll from "@components/StoriesRoll";
 import Topics from "@components/Topics";
 
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react";
 
 function StoriesPage({ pageContext, data }) {
@@ -25,6 +25,40 @@ function StoriesPage({ pageContext, data }) {
               <h4 className="title is-4 spanborder has-text-weight-bold">
                 <span>All Recommended Developer Stories</span>
               </h4>
+              <div className="ar-breadcrumb is-hidden-mobile">
+                <nav className="breadcrumb" aria-label="breadcrumbs">
+                  <ul>
+                    <li>
+                      <Link to={`/`}>Home</Link>
+                    </li>
+                    <li>
+                      <Link to={`/recommended`}>Recommended</Link>
+                    </li>
+                    <li className="is-active">
+                      <a href="#" aria-current="page">
+                        Developer Stories
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <nav className="bd-prev-next">
+                  {previousPagePath ? (
+                    <Link to={previousPagePath} title={`previous`}>
+                      ←
+                    </Link>
+                  ) : (
+                    <span>←</span>
+                  )}
+
+                  {nextPagePath ? (
+                    <Link to={nextPagePath} title={`next`}>
+                      →
+                    </Link>
+                  ) : (
+                    <span>→</span>
+                  )}
+                </nav>
+              </div>
               <StoriesRoll posts={stories} />
               <Pagination
                 previousPagePath={previousPagePath}
