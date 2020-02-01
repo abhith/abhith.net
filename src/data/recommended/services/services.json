@@ -1,5 +1,13 @@
 [
   {
+    "title": "📙 Emojipedia — 😃 Home of Emoji Meanings 💁👌🎍😍",
+    "url": "https://emojipedia.org/",
+    "description": "The emoji search engine. A fast emoji search experience with options to browse every emoji by name, category, or platform.",
+    "image": "",
+    "date": "2020-02-01T05:30:28.263Z",
+    "tags": ["content-writing"]
+  },
+  {
     "title": "JS Paint",
     "url": "https://jspaint.app/",
     "description": "Classic MS Paint in the browser, with extra features",
