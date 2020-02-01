@@ -112,11 +112,11 @@ const Navbar = class extends React.Component {
                 <FaBullhorn color="turquoise" />
                 <span> &nbsp;Topics</span>
               </Link>
-              <button className="is-bold button k-button k-secondary raised has-gradient slanted">
+              {/* <button className="is-bold button k-button k-secondary raised has-gradient slanted">
                 <span role="img" aria-label="heart">
                   HAPPY NEW YEAR 20❤️20
                 </span>
-              </button>
+              </button> */}
             </div>
 
             <div className="navbar-end">
