@@ -1,5 +1,12 @@
 [
   {
+    "title": "Jira: Using Epics vs Components vs Labels - Modus Create",
+    "url": "https://moduscreate.com/blog/jira-using-epics-vs-components-vs-labels/",
+    "description": "We’re going to compare Epics, Components, and Labels as they are used in Atlassian’s tool, Jira.",
+    "date": "2020-01-02T08:31:28.263Z",
+    "tags": ["jira", "project-management"]
+  },
+  {
     "title": "Becoming an Angular Environmentalist",
     "url": "https://medium.com/angular-in-depth/becoming-an-angular-environmentalist-45a48f7c20d8",
     "description": "This article explains how to add configuration information to your Angular Application.",

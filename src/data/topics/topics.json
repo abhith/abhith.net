@@ -234,6 +234,12 @@
     "image": "javascript.svg"
   },
   {
+    "title": "Jira",
+    "slug": "jira",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Jobs",
     "slug": "jobs",
     "description": "jobs related",
@@ -316,6 +322,12 @@
     "slug": "privacy",
     "description": "",
     "image": "privacy.svg"
+  },
+  {
+    "title": "Project Management",
+    "slug": "project-management",
+    "description": "",
+    "image": ""
   },
   {
     "title": "Security",
