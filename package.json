@@ -15,7 +15,7 @@
     "gatsby-awesome-pagination": "^0.3.5",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-emotion": "^4.1.10",
-    "gatsby-plugin-google-analytics": "^2.1.33",
+    "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-manifest": "^2.2.40",
     "gatsby-plugin-mdx": "^1.0.69",
     "gatsby-plugin-nprogress": "^2.1.12",
