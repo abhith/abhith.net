@@ -1,8 +1,3 @@
-# Node.js with React
-# Build a Node.js project that uses React.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 trigger:
 - master
 
@@ -10,22 +5,17 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
 - script: |
     npm install -g gatsby-cli
-  displayName: 'install gatsby-cli'
+  displayName: 'Install gatsby-cli'
 
 - script: |
     yarn install
-  displayName: 'install dependencies'
+  displayName: 'Install dependencies'
 
 - script: |
     yarn build
-  displayName: 'gatsby build'
+  displayName: 'Gatsby build'
 
 - task: CopyFiles@2
   inputs:
