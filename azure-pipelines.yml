@@ -5,6 +5,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
 - script: |
     npm install -g gatsby-cli
   displayName: 'Install gatsby-cli'
@@ -23,7 +28,7 @@ steps:
     contents: '**' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
     cleanTargetFolder: true 
-  displayName: 'copy built site'
+  displayName: 'Copy built site'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
 - task: PublishBuildArtifacts@1
@@ -32,5 +37,6 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+  displayName: 'Publish Build Artifacts'
 
 
