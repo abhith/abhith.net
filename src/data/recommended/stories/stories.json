@@ -1,9 +1,16 @@
 [
   {
+    "title": "Getting the Web Root Path and the Content Root Path in ASP.NET Core",
+    "url": "https://mariusschulz.com/blog/getting-the-web-root-path-and-the-content-root-path-in-asp-net-core",
+    "description": "ASP.NET Core exposes an application's web and content root paths through the IWebHostEnvironment service, which is available via the built-in dependency injection system.",
+    "date": "2020-02-05T08:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Jira: Using Epics vs Components vs Labels - Modus Create",
     "url": "https://moduscreate.com/blog/jira-using-epics-vs-components-vs-labels/",
     "description": "We’re going to compare Epics, Components, and Labels as they are used in Atlassian’s tool, Jira.",
-    "date": "2020-01-02T08:31:28.263Z",
+    "date": "2020-02-02T08:31:28.263Z",
     "tags": ["jira", "project-management"]
   },
   {
