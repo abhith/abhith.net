@@ -42,6 +42,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-twitter`,
     `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-catch-links`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
