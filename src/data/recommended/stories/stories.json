@@ -1,5 +1,12 @@
 [
   {
+    "title": "Best Practices When Versioning a Release - via @codeship",
+    "url": "https://blog.codeship.com/best-practices-when-versioning-a-release/",
+    "description": "The way you version your software impacts how people use it and what they think about it; let's talk about semantic versioning for a release.",
+    "date": "2020-02-06T08:31:28.263Z",
+    "tags": ["devops"]
+  },
+  {
     "title": "Getting the Web Root Path and the Content Root Path in ASP.NET Core",
     "url": "https://mariusschulz.com/blog/getting-the-web-root-path-and-the-content-root-path-in-asp-net-core",
     "description": "ASP.NET Core exposes an application's web and content root paths through the IWebHostEnvironment service, which is available via the built-in dependency injection system.",
