@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.17",
+    "@fastly/performance-observer-polyfill": "^1.1.0",
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
     "@weknow/gatsby-remark-twitter": "^0.2.3",
@@ -43,6 +44,7 @@
     "gatsby-transformer-json": "^2.2.8",
     "gatsby-transformer-remark": "^2.6.49",
     "gatsby-transformer-sharp": "^2.2.19",
+    "intersection-observer": "^0.7.0",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.5",
     "node-sass": "^4.12.0",
