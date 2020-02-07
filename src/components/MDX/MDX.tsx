@@ -52,7 +52,7 @@ function MDX({ content, children, ...props }) {
           <MDXRenderer {...props}>{content}</MDXRenderer>
         </article>
       </MDXBody>
-      {children}
+      <div className="mt-3">{children}</div>
     </MDXProvider>
   );
 }
