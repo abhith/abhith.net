@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicsBar from "./TopicsBar";
-
-const FeaturedSidebar = ({ items }) => {
+import Button from "./Button";
+const FeaturedSidebar = ({ items, totalCount }) => {
   return (
     <div className="sticky">
       <h4 className="spanborder">
@@ -30,6 +30,11 @@ const FeaturedSidebar = ({ items }) => {
             </li>
           ))}
       </ol>
+      <Button
+        text={`View All ${totalCount} Services`}
+        path="/recommended/services"
+        align="left"
+      ></Button>
     </div>
   );
 };

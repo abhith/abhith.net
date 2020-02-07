@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import BlogRollItem from "../BlogRollItem";
 import BlogCard from "../blog/BlogCard";
+import Button from "../Button";
 const normalize = require("../../../gatsby/data/data.normalize");
 
 function LatestPosts() {
@@ -9,6 +10,7 @@ function LatestPosts() {
     <StaticQuery
       query={query}
       render={data => {
+        const totalArticlesCount = data.posts.totalCount;
         const latestArticles = data.latestArticles.edges.map(
           normalize.local.articles
         );
@@ -32,6 +34,10 @@ function LatestPosts() {
                   tag={`Recently Updated`}
                 ></BlogCard>
               </div>
+              <Button
+                text={`View All ${totalArticlesCount} Articles`}
+                path="/blog"
+              ></Button>
             </div>
           </section>
         );
@@ -113,6 +119,9 @@ export const query = graphql`
           commentId
         }
       }
+    }
+    posts: allArticle(filter: { draft: { eq: false } }) {
+      totalCount
     }
   }
 `;
