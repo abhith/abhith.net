@@ -7,7 +7,9 @@ const FeaturedSidebar = ({ items }) => {
   return (
     <div className="sticky">
       <h4 className="spanborder">
-        <span className="has-text-weight-bold">Featured</span>
+        <span className="title is-4 has-text-weight-bold">
+          Recommended Services
+        </span>
       </h4>
       <ol className="list-featured">
         {items &&
@@ -23,7 +25,6 @@ const FeaturedSidebar = ({ items }) => {
                     {item.title}
                   </OutboundLink>
                 </h6>
-
                 <TopicsBar topics={item.tags} />
               </span>
             </li>
