@@ -137,16 +137,15 @@ export default ({ pageContext, location }) => {
                   </ul>
                 </nav>
                 <nav className="bd-prev-next">
-                  {previous ? (
-                    <Link to={previous.slug} title={previous.title}>
+                  {next ? (
+                    <Link to={next.slug} title={next.title}>
                       ←
                     </Link>
                   ) : (
                     <span>←</span>
                   )}
-
-                  {next ? (
-                    <Link to={next.slug} title={next.title}>
+                  {previous ? (
+                    <Link to={previous.slug} title={previous.title}>
                       →
                     </Link>
                   ) : (
