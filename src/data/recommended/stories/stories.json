@@ -1,5 +1,12 @@
 [
   {
+    "title": "Smaller Docker Images for ASP.NET Core Apps",
+    "url": "https://itnext.io/smaller-docker-images-for-asp-net-core-apps-bee4a8fd1277",
+    "description": "In this article, I will keep efficiency in mind to describe several ways of .NET Core deployment on Docker. To start deploying on Docker we need a sample project. I will use the default ASP.NET Core…",
+    "date": "2020-02-11T09:31:28.263Z",
+    "tags": ["aspnet-core", "docker"]
+  },
+  {
     "title": "String Case Styles: Camel, Pascal, Snake, and Kebab Case",
     "url": "https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841",
     "description": "In programming, we often remove the spaces between words because programs of different sorts reserve the space (‘ ’) character for special purposes. Because the space character is reserved, we…",
