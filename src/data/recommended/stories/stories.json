@@ -1,5 +1,12 @@
 [
   {
+    "title": "String Case Styles: Camel, Pascal, Snake, and Kebab Case",
+    "url": "https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841",
+    "description": "In programming, we often remove the spaces between words because programs of different sorts reserve the space (‘ ’) character for special purposes. Because the space character is reserved, we…",
+    "date": "2020-02-11T08:31:28.263Z",
+    "tags": ["style-guide"]
+  },
+  {
     "title": "Setting Cloud Role Name in Application Insights",
     "url": "https://www.davepaquette.com/archive/2020/02/05/setting-cloud-role-name-in-application-insights.aspx",
     "description": "This post is a continuation of my series about using Application Insights in ASP.NET Core. Today we will explore the concept of Cloud Role and why it’s an important thing to get right for your app",
