@@ -1,13 +1,11 @@
 import { IArticle } from "@types";
 import {
-  FacebookShareButton,
-  FacebookIcon,
+  EmailShareButton,
+  EmailIcon,
   LinkedinShareButton,
   LinkedinIcon,
   TwitterShareButton,
   TwitterIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
   RedditShareButton,
   RedditIcon,
   PocketShareButton,
@@ -25,13 +23,6 @@ const ArticleShare = ({ article, location }: IArticleShareProps) => {
     <div className="sticky has-text-centered">
       <div className="text-muted">Share this</div>
       <div className="buttons is-centered article-share">
-        <FacebookShareButton
-          url={location.href}
-          quote={article.title}
-          className="button"
-        >
-          <FacebookIcon size={48} round />
-        </FacebookShareButton>
         <TwitterShareButton
           url={location.href}
           className="button"
@@ -40,36 +31,38 @@ const ArticleShare = ({ article, location }: IArticleShareProps) => {
           via="AbhithRajan"
           hashtags={article.tags}
         >
-          <TwitterIcon size={48} round />
+          <TwitterIcon size={48} round={true} />
         </TwitterShareButton>
         <LinkedinShareButton
           url={location.href}
           className="button"
           title={article.title}
         >
-          <LinkedinIcon size={48} round />
+          <LinkedinIcon size={48} round={true} />
         </LinkedinShareButton>
         <RedditShareButton
           url={location.href}
           className="button"
           title={article.title}
         >
-          <RedditIcon size={48} round />
+          <RedditIcon size={48} round={true} />
         </RedditShareButton>
         <PocketShareButton
           url={location.href}
           className="button"
           title={article.title}
         >
-          <PocketIcon size={48} round />
+          <PocketIcon size={48} round={true} />
         </PocketShareButton>
-        <WhatsappShareButton
+        <EmailShareButton
           url={location.href}
+          subject={article.title}
+          body={article.excerpt}
+          separator={`\n`}
           className="button"
-          title={article.title}
         >
-          <WhatsappIcon size={48} round />
-        </WhatsappShareButton>
+          <EmailIcon size={48} round={true} />
+        </EmailShareButton>
       </div>
     </div>
   );
