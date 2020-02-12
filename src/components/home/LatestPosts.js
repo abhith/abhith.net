@@ -20,7 +20,7 @@ function LatestPosts() {
         )[0];
 
         return (
-          <section className="section">
+          <section className="section ar-latest">
             <div className="container is-fluid">
               <div className="columns">
                 <BlogCard post={latestArticles[0]}></BlogCard>
