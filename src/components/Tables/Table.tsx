@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import mediaqueries from "@styles/media";
+import React from "react";
 
 const StyledTable = styled.table`
   position: relative;

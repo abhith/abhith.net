@@ -2,9 +2,8 @@ import prism from "./prism";
 
 export default {
   prism,
-
-  primary: "#000",
-  secondary: "#73737D",
+  primary: "#7f00ff",
+  secondary: "#00ff99",
   grey: "#73737D",
   background: "#fafafa",
   accent: "#6166DC",

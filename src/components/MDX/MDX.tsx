@@ -34,7 +34,7 @@ const components = {
   //   ul: Lists.ul,
   //   ol: Lists.ol,
   //   p: Paragraph,
-  //   code: Code.Prism,
+  code: Code.Prism,
   pre: Code.Pre,
   table: Tables.Table,
   thead: Tables.Head,
