@@ -56,7 +56,7 @@ export const IndexPageTemplate = ({
                 Recommended Stories
               </span>
             </h4>
-            <StoriesRoll posts={stories} mode={`compact`} />
+            <StoriesRoll posts={stories} />
             <Button
               text={`View All ${totalStories} Stories`}
               path="/recommended/stories"

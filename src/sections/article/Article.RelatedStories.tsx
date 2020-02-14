@@ -1,8 +1,7 @@
-import StoriesRoll from "@components/StoriesRoll";
+import StoriesRollItem from "@components/StoriesRollItem";
 import TitleBar from "@components/TitleBar";
 import { partition } from "lodash";
 import React from "react";
-
 const RelatedStories = ({ relatedStories }) => {
   if (relatedStories.length === 0) {
     return null;
@@ -10,6 +9,7 @@ const RelatedStories = ({ relatedStories }) => {
 
   let relatedStoriesFirstHalf = [];
   let relatedStoriesSecondHalf = [];
+  const columnElements = [];
 
   [relatedStoriesFirstHalf, relatedStoriesSecondHalf] = partition(
     relatedStories,
@@ -18,18 +18,23 @@ const RelatedStories = ({ relatedStories }) => {
     }
   );
 
+  const groupedItems = [relatedStoriesFirstHalf, relatedStoriesSecondHalf];
+
+  groupedItems.forEach((group, index) => {
+    columnElements.push(
+      <div className="column" key={index}>
+        {group.map(({ node: article }) => {
+          return <StoriesRollItem key={article.id} post={article} />;
+        })}
+      </div>
+    );
+  });
+
   return (
     <section className="section">
       <div className="container is-fluid">
         <TitleBar title={`Related Stories`} />
-        <div className="columns">
-          <div className="column is-half">
-            <StoriesRoll posts={relatedStoriesFirstHalf} />
-          </div>
-          <div className="column is-half">
-            <StoriesRoll posts={relatedStoriesSecondHalf} />
-          </div>
-        </div>
+        <div className="columns">{columnElements}</div>
       </div>
     </section>
   );
