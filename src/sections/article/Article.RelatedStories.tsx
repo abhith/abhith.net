@@ -9,7 +9,7 @@ const RelatedStories = ({ relatedStories }) => {
 
   let relatedStoriesFirstHalf = [];
   let relatedStoriesSecondHalf = [];
-  const columnElements = [];
+  const columnElements: JSX.Element[] = [];
 
   [relatedStoriesFirstHalf, relatedStoriesSecondHalf] = partition(
     relatedStories,
