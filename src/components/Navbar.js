@@ -78,18 +78,23 @@ const Navbar = class extends React.Component {
               </span>
             </OutboundLink>
             <div
+              role="button"
               className={`navbar-burger burger ${this.state.hamburgerMenuClass}`}
               onClick={() => this.toggleHamburger()}
-              data-target="navMenubd-example"
+              onKeyDown={() => this.toggleHamburger()}
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="ar-navMenu"
+              tabIndex={0}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
             </div>
           </div>
 
           <div
-            id="navMenubd-example"
+            id="ar-navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start">
