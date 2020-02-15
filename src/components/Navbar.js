@@ -4,12 +4,12 @@ import {
   FaCoffee,
   FaRss,
   FaHeart,
-  FaGithub,
   FaTwitter,
   FaHome,
   FaInfoCircle,
   FaBullhorn
 } from "react-icons/fa";
+import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -64,8 +64,8 @@ const Navbar = class extends React.Component {
               href="https://github.com/Abhith/abhith.net"
               target="_blank"
             >
-              <span className="icon" style={{ color: "#333" }}>
-                <FaGithub></FaGithub>
+              <span className="icon">
+                <GoMarkGithub size={24} />
               </span>
             </OutboundLink>
             <OutboundLink
@@ -74,7 +74,7 @@ const Navbar = class extends React.Component {
               target="_blank"
             >
               <span className="icon" style={{ color: "#55acee" }}>
-                <FaTwitter></FaTwitter>
+                <FaTwitter size={24} />
               </span>
             </OutboundLink>
             <div
@@ -130,8 +130,8 @@ const Navbar = class extends React.Component {
                 href="https://github.com/Abhith/abhith.net"
                 target="_blank"
               >
-                <span className="icon" style={{ color: "#333" }}>
-                  <FaGithub></FaGithub>
+                <span className="icon">
+                  <GoMarkGithub size={24} />
                 </span>
               </OutboundLink>
               <OutboundLink
@@ -140,7 +140,7 @@ const Navbar = class extends React.Component {
                 target="_blank"
               >
                 <span className="icon" style={{ color: "#55acee" }}>
-                  <FaTwitter></FaTwitter>
+                  <FaTwitter size={24} />
                 </span>
               </OutboundLink>
 
