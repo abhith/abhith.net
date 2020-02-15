@@ -1,5 +1,12 @@
 [
   {
+    "title": "How to Smooth Scroll Links in Gatsby",
+    "url": "https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558",
+    "description": "In this article you will learn how to create smooth scrolling links in GatsbyJS",
+    "date": "2020-02-15T10:31:28.263Z",
+    "tags": ["gatsby"]
+  },
+  {
     "title": "position: sticky problem",
     "url": "https://blog.cloud66.com/position-sticky-problem/",
     "description": "This article describes a few gotchas you might encounter if you're trying to integrate sticky positioning into an existing layout. If position sticky is not working for you read on!",
