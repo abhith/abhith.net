@@ -4,6 +4,11 @@ import React from "react";
 export default ({ headings }) => {
   const slugger = new Slugger();
 
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]');
+  }
+
   //   console.log(headings);
   return (
     <nav id="anchors" className="ar-anchors is-active">
@@ -18,7 +23,10 @@ export default ({ headings }) => {
             </li>
           ))}
         <li>
-          <a>Back to top</a>
+          <a href="#ar-comments">Comments</a>
+        </li>
+        <li>
+          <a href="#ar-navbar">Back to top</a>
         </li>
       </ul>
     </nav>

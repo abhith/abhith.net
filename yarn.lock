@@ -13881,6 +13881,11 @@ slugify@^1.3.6:
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.3.6.tgz#ba5fd6159b570fe4811d02ea9b1f4906677638c3"
   integrity sha512-wA9XS475ZmGNlEnYYLPReSfuz/c3VQsEMoU43mi6OnKMCdbnFXd4/Yg7J0lBv8jkPolacMpOrWEaoYxuE1+hoQ==
 
+smooth-scroll@^16.1.2:
+  version "16.1.2"
+  resolved "https://registry.yarnpkg.com/smooth-scroll/-/smooth-scroll-16.1.2.tgz#77e70bdaaee849a6a24420741406a7d99c53b819"
+  integrity sha512-zo/61lPWCxzsjYfxbqr9a94PIFSU840+0e053+n6Hf0RcX8MtjtNXNSInEYRlbGaJ2/nezyEWPywsm3TCya0vQ==
+
 snake-case@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/snake-case/-/snake-case-2.1.0.tgz#41bdb1b73f30ec66a04d4e2cad1b76387d4d6d9f"

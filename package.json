@@ -66,6 +66,7 @@
     "react-share": "^4.0.1",
     "reading-time": "^1.2.0",
     "remark-emoji": "^2.0.2",
+    "smooth-scroll": "^16.1.2",
     "theme-ui": "^0.3.1",
     "typeface-lora": "^0.0.72",
     "uuid": "^3.3.3"
