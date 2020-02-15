@@ -6,7 +6,6 @@ import { domainFromURL } from "../utils/common";
 import TopicsBar from "./TopicsBar";
 
 const StoriesRollItem = ({ post, showDescription }) => {
-  console.log(post);
   return (
     <div className="box ar-story">
       <OutboundLink className="media" target="_blank" href={post.url}>

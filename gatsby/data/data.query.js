@@ -40,6 +40,10 @@ module.exports.local = {
               }
             }
             commentId
+            headings {
+              depth
+              value
+            }
           }
         }
       }      

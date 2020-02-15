@@ -8,9 +8,9 @@ import Layout from "@components/Layout";
 import LiveEdit from "@components/LiveEdit";
 import MDXRenderer from "@components/MDX";
 import SEO from "@components/SEO";
+import TableOfContents from "@components/TableOfContents";
 import TopicsBar from "@components/TopicsBar";
 import Utterances from "@components/Utterances";
-
 import ArticleHero from "../sections/article/Article.Hero";
 import RelatedArticles from "../sections/article/Article.RelatedArticles";
 import RelatedStories from "../sections/article/Article.RelatedStories";
@@ -105,23 +105,21 @@ export default ({ pageContext, location }) => {
 
   return (
     <Layout>
-      <div className="blog-post-wrapper">
-        <SEO
-          title={article.title}
-          description={article.excerpt}
-          image={article.hero.full.src}
-          isBlogPost={true}
-          slug={article.slug}
-          dateModified={article.dateModifiedSeoFormat}
-          datePublished={article.datePublishedSeoFormat}
-        />
-        <ArticleHero article={article} />
-        <section className="section">
-          <div className="columns is-centered">
-            <div className="column is-1">
-              <ArticleShare article={article} location={location} />
-            </div>
-            <div className="column is-9">
+      <SEO
+        title={article.title}
+        description={article.excerpt}
+        image={article.hero.full.src}
+        isBlogPost={true}
+        slug={article.slug}
+        dateModified={article.dateModifiedSeoFormat}
+        datePublished={article.datePublishedSeoFormat}
+      />
+      <ArticleHero article={article} />
+      <div className="ar-main">
+        <div className="ar-side-background" />
+        <div className="ar-main-container container">
+          <div className="ar-duo">
+            <div className="ar-lead">
               <div className="ar-breadcrumb is-hidden-mobile">
                 <nav className="breadcrumb" aria-label="breadcrumbs">
                   <ul>
@@ -155,70 +153,76 @@ export default ({ pageContext, location }) => {
               </div>
               <MDXRenderer content={article.body}>
                 <TopicsBar topics={article.tags} />
-                <div className="container mt-5 mb-3">
-                  <div className="media">
-                    <figure className="media-left">
-                      <p className="image is-128x128">
-                        <img
-                          className="is-rounded"
-                          src={`https://www.abhith.net/img/abhith.jpg`}
-                          alt={`Abhith Rajan`}
-                        />
-                      </p>
-                    </figure>
-                    <div className="media-content">
-                      <div className="content">
-                        <p>
-                          <strong className="title is-4">
-                            Written by {`Abhith Rajan`}
-                          </strong>{" "}
-                          <span>
-                            <a
-                              className="twitter-follow-button"
-                              href="https://twitter.com/abhithrajan"
-                              data-show-screen-name="false"
-                            >
-                              Follow @AbhithRajan
-                            </a>
-                          </span>
-                          <br />
-                          {/* TODO: Make dynamic */}
-                          {`
+              </MDXRenderer>
+              <div className="container mt-5 mb-3">
+                <div className="media">
+                  <figure className="media-left">
+                    <p className="image is-128x128">
+                      <img
+                        className="is-rounded"
+                        src={`https://www.abhith.net/img/abhith.jpg`}
+                        alt={`Abhith Rajan`}
+                      />
+                    </p>
+                  </figure>
+                  <div className="media-content">
+                    <div className="content">
+                      <p>
+                        <strong className="title is-4">
+                          Written by {`Abhith Rajan`}
+                        </strong>{" "}
+                        <span>
+                          <a
+                            className="twitter-follow-button"
+                            href="https://twitter.com/abhithrajan"
+                            data-show-screen-name="false"
+                          >
+                            Follow @AbhithRajan
+                          </a>
+                        </span>
+                        <br />
+                        {/* TODO: Make dynamic */}
+                        {`
         Abhith Rajan is an aspiring software engineer with more than 7 years of experience and proven successful track record of delivering technology-based products and services.
       `}
-                          <br />
-                          <Link
-                            to="/donate"
-                            className="button k-button k-primary raised has-gradient rounded"
-                          >
-                            Buy me a coffee ☕
-                          </Link>
-                        </p>
-                      </div>
+                        <br />
+                        <Link
+                          to="/donate"
+                          className="button k-button k-primary raised has-gradient rounded"
+                        >
+                          Buy me a coffee ☕
+                        </Link>
+                      </p>
                     </div>
                   </div>
                 </div>
-                <LiveEdit code={askForCommentsCode} noInline={false} />
-                <div id="typo" className="ar-typo">
-                  <p className="has-text-grey">
-                    This page is{" "}
-                    <strong className="has-text-grey">open source</strong>.
-                    Noticed a typo? Or something unclear?
-                    <br />
-                    <OutboundLink
-                      href={githubURL}
-                      target="_blank"
-                      className="has-text-grey"
-                    >
-                      Improve this page on GitHub
-                    </OutboundLink>
-                  </p>
-                </div>
-                <Utterances repo={`Abhith/abhith.net`} />
-              </MDXRenderer>
+              </div>
+              <LiveEdit code={askForCommentsCode} noInline={false} />
+              <div id="typo" className="ar-typo">
+                <p className="has-text-grey">
+                  This page is{" "}
+                  <strong className="has-text-grey">open source</strong>.
+                  Noticed a typo? Or something unclear?
+                  <br />
+                  <OutboundLink
+                    href={githubURL}
+                    target="_blank"
+                    className="has-text-grey"
+                  >
+                    Improve this page on GitHub
+                  </OutboundLink>
+                </p>
+              </div>
+              <Utterances repo={`Abhith/abhith.net`} />
             </div>
+            <aside className="ar-side">
+              <div className="sticky">
+                <ArticleShare article={article} location={location} />
+                <TableOfContents headings={article.headings} />
+              </div>
+            </aside>
           </div>
-        </section>
+        </div>
       </div>
       <RelatedArticles articles={relatedArticles} />
       <RelatedVideos relatedVideos={relatedVideos} />
