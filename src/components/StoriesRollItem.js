@@ -19,8 +19,9 @@ const StoriesRollItem = ({ post, showDescription }) => {
             <div>
               <strong className="post-title">{post.title}</strong>
               <br />
-              <small>{domainFromURL(post.url)}</small>{" "}
-              <small>{post.date}</small>
+              <small>
+                {domainFromURL(post.url)} &middot; {post.date}
+              </small>
               <br />
             </div>
             <p>{showDescription && post.description}</p>
