@@ -8,33 +8,33 @@ interface IArticleRelatedArticlesProps {
   articles: IArticle[];
 }
 const RelatedArticles = ({ articles }: IArticleRelatedArticlesProps) => {
-  let relatedPostsFirstHalf = [];
-  let relatedPostsSecondHalf = [];
-  const rowElements = [];
-
-  [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(articles, i => {
-    return articles.indexOf(i) % 2 === 0;
-  });
-
-  rowElements.push(
-    <div className="columns" key={1}>
-      {relatedPostsFirstHalf.map(article => {
-        return <BlogCard post={article} key={article.id} />;
-      })}
-    </div>
-  );
-
-  rowElements.push(
-    <div className="columns" key={2}>
-      {relatedPostsSecondHalf.map(article => {
-        return <BlogCard post={article} key={article.id} />;
-      })}
-    </div>
-  );
-
   if (articles.length === 0) {
     return null;
   }
+
+  let relatedPostsFirstHalf = [];
+  let relatedPostsSecondHalf = [];
+  const rowElements: JSX.Element[] = [];
+
+  let rowItemsCollection = [];
+  if (articles.length > 3) {
+    [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(articles, i => {
+      return articles.indexOf(i) % 2 === 0;
+    });
+    rowItemsCollection = [relatedPostsFirstHalf, relatedPostsSecondHalf];
+  } else {
+    rowItemsCollection = [articles];
+  }
+
+  rowItemsCollection.forEach((rowItems, index) => {
+    rowElements.push(
+      <div className="columns" key={index}>
+        {rowItems.map(article => {
+          return <BlogCard post={article} key={article.id} />;
+        })}
+      </div>
+    );
+  });
 
   return (
     <section className="section">

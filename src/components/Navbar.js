@@ -4,12 +4,12 @@ import {
   FaCoffee,
   FaRss,
   FaHeart,
-  FaGithub,
   FaTwitter,
   FaHome,
   FaInfoCircle,
   FaBullhorn
 } from "react-icons/fa";
+import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -48,7 +48,7 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-spaced">
+      <nav className="navbar is-spaced" id="ar-navbar">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
@@ -64,8 +64,8 @@ const Navbar = class extends React.Component {
               href="https://github.com/Abhith/abhith.net"
               target="_blank"
             >
-              <span className="icon" style={{ color: "#333" }}>
-                <FaGithub></FaGithub>
+              <span className="icon">
+                <GoMarkGithub size={24} />
               </span>
             </OutboundLink>
             <OutboundLink
@@ -74,22 +74,27 @@ const Navbar = class extends React.Component {
               target="_blank"
             >
               <span className="icon" style={{ color: "#55acee" }}>
-                <FaTwitter></FaTwitter>
+                <FaTwitter size={24} />
               </span>
             </OutboundLink>
             <div
+              role="button"
               className={`navbar-burger burger ${this.state.hamburgerMenuClass}`}
               onClick={() => this.toggleHamburger()}
-              data-target="navMenubd-example"
+              onKeyDown={() => this.toggleHamburger()}
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="ar-navMenu"
+              tabIndex={0}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
             </div>
           </div>
 
           <div
-            id="navMenubd-example"
+            id="ar-navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start">
@@ -125,8 +130,8 @@ const Navbar = class extends React.Component {
                 href="https://github.com/Abhith/abhith.net"
                 target="_blank"
               >
-                <span className="icon" style={{ color: "#333" }}>
-                  <FaGithub></FaGithub>
+                <span className="icon">
+                  <GoMarkGithub size={24} />
                 </span>
               </OutboundLink>
               <OutboundLink
@@ -135,7 +140,7 @@ const Navbar = class extends React.Component {
                 target="_blank"
               >
                 <span className="icon" style={{ color: "#55acee" }}>
-                  <FaTwitter></FaTwitter>
+                  <FaTwitter size={24} />
                 </span>
               </OutboundLink>
 

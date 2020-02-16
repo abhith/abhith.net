@@ -24,7 +24,7 @@ const Utterances = ({ repo }) => {
     rootElm.current.appendChild(utterances);
   }, []);
 
-  return <div className="utterances" ref={rootElm} />;
+  return <div id="ar-comments" className="utterances" ref={rootElm} />;
 };
 
 export default Utterances;

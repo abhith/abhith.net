@@ -61,7 +61,6 @@ export default class RecommendedIndexPage extends React.Component {
               <div className="column">
                 <StoriesRoll
                   posts={stories}
-                  mode={`compact`}
                   showDescription={false}
                 ></StoriesRoll>
               </div>

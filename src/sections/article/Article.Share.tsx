@@ -20,9 +20,9 @@ interface IArticleShareProps {
 }
 const ArticleShare = ({ article, location }: IArticleShareProps) => {
   return (
-    <div className="sticky has-text-centered">
+    <div className="has-text-centered">
       <div className="text-muted">Share this</div>
-      <div className="buttons is-centered article-share">
+      <div className="buttons is-centered">
         <TwitterShareButton
           url={location.href}
           className="button"
