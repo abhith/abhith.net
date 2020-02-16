@@ -15,9 +15,14 @@ function LatestPosts() {
           normalize.local.articles
         );
 
-        const lastUpdatedPost = data.lastUpdatedPost.edges.map(
+        const lastUpdatedPosts = data.lastUpdatedPosts.edges.map(
           normalize.local.articles
-        )[0];
+        );
+
+        //* In order to skip the latest posts repeating in last updated one, we are fetching last four updated posts and selecting the one which is not in the latest posts.
+        const lastUpdatedPost = lastUpdatedPosts.find(u =>
+          latestArticles.every(a => a.id != u.id)
+        );
 
         return (
           <section className="section ar-latest">
@@ -50,10 +55,10 @@ export default LatestPosts;
 
 export const query = graphql`
   query {
-    lastUpdatedPost: allArticle(
+    lastUpdatedPosts: allArticle(
       sort: { fields: [lastModificationTime], order: DESC }
       filter: { lastModificationTime: { ne: null }, draft: { eq: false } }
-      limit: 1
+      limit: 4
     ) {
       edges {
         node {
