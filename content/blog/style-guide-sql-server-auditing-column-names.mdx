@@ -4,6 +4,7 @@ description: >-
   Naming convention for auditing fields in a SQL server table.
 author: Abhith Rajan
 date: 2020-02-05T08:26:00.000Z
+lastModificationTime: 2020-02-16T18:25:00.000Z
 image: /img/blog/style-guide-sql-server-auditing-column-names.png
 tags:
   - sql-server
@@ -13,14 +14,27 @@ tags:
 For most of the tables in our DB will have some kind of auditing fields.
 Following are the column names I used to use for those auditing fields.
 
-| Column Name          | description                     | Type         | Nullable |
-| -------------------- | ------------------------------- | ------------ | -------- |
-| CreationTime         | eg. 2019-09-15 13:56:13.8955178 | datetime2(7) | NOT NULL |
-| CreatorUserId        |                                 |              | NULL     |
-| DeleterUserId        |                                 |              | NULL     |
-| DeletionTime         |                                 | datetime2(7) | NULL     |
-| LastModificationTime |                                 | datetime2(7) | NULL     |
-| LastModifierUserId   |                                 |              | NULL     |
+## Creation Audited
+
+| Column Name   | description                     | Type         | Nullable |
+| ------------- | ------------------------------- | ------------ | -------- |
+| CreationTime  | eg. 2019-09-15 13:56:13.8955178 | datetime2(7) | NOT NULL |
+| CreatorUserId |                                 |              | NULL     |
+
+## Modification Audited
+
+| Column Name          | description | Type         | Nullable |
+| -------------------- | ----------- | ------------ | -------- |
+| LastModificationTime |             | datetime2(7) | NULL     |
+| LastModifierUserId   |             |              | NULL     |
+
+## Soft Delete
+
+| Column Name   | description | Type         | Nullable |
+| ------------- | ----------- | ------------ | -------- |
+| IsDeleted     |             | bit          | NOT NULL |
+| DeleterUserId |             |              | NULL     |
+| DeletionTime  |             | datetime2(7) | NULL     |
 
 If you have worked with [ABP](https://aspnetboilerplate.com/Pages/Documents/Entities#auditing) before, you know from where I adopted the naming convention.
 
