@@ -21,7 +21,7 @@ function LatestPosts() {
 
         //* In order to skip the latest posts repeating in last updated one, we are fetching last four updated posts and selecting the one which is not in the latest posts.
         const lastUpdatedPost = lastUpdatedPosts.find(u =>
-          latestArticles.every(a => a.id != u.id)
+          latestArticles.every(a => a.id !== u.id)
         );
 
         return (
