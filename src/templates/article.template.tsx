@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import React from "react";
+import GitHubButton from "react-github-btn";
 
 import { IArticle } from "@types";
 
@@ -218,6 +219,20 @@ export default ({ pageContext, location }) => {
             <aside className="ar-side">
               <div className="sticky">
                 <ArticleShare article={article} location={location} />
+                <div className="has-text-centered mt-3">
+                  <div className="text-muted mb-1">⭐ On GitHub</div>
+                  <div className="buttons is-centered">
+                    <GitHubButton
+                      href="https://github.com/Abhith/abhith.net"
+                      data-icon="octicon-star"
+                      data-size="large"
+                      data-show-count="true"
+                      aria-label="Star Abhith/abhith.net on GitHub"
+                    >
+                      Star
+                    </GitHubButton>
+                  </div>
+                </div>
                 <TableOfContents headings={article.headings} />
               </div>
             </aside>
