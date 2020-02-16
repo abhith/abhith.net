@@ -76,16 +76,6 @@ function Footer() {
                     <li>
                       <Link to="/recommended/services">Services</Link>
                     </li>
-                    <li className="has-margin">
-                      <GitHubButton
-                        href="https://github.com/Abhith/abhith.net"
-                        data-size="large"
-                        data-show-count="true"
-                        aria-label="Star Abhith/abhith.net on GitHub"
-                      >
-                        Star
-                      </GitHubButton>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -93,26 +83,6 @@ function Footer() {
                 <div className="menu">
                   <p className="menu-label">Connect with me</p>
                   <ul className="menu-list">
-                    <li className="has-margin">
-                      <a
-                        className="twitter-follow-button"
-                        href="https://twitter.com/abhithrajan"
-                        data-size="large"
-                        data-show-screen-name="false"
-                      >
-                        Follow @AbhithRajan
-                      </a>
-                    </li>
-                    <li className="has-margin">
-                      <GitHubButton
-                        href="https://github.com/Abhith"
-                        data-size="large"
-                        data-show-count="true"
-                        aria-label="Follow @Abhith on GitHub"
-                      >
-                        Follow @Abhith
-                      </GitHubButton>
-                    </li>
                     <li>
                       <OutboundLink
                         target="_blank"
@@ -138,6 +108,37 @@ function Footer() {
                         />{" "}
                         GitLab
                       </OutboundLink>
+                    </li>
+                    <li className="has-margin">
+                      <a
+                        className="twitter-follow-button"
+                        href="https://twitter.com/abhithrajan"
+                        data-size="large"
+                        data-show-screen-name="false"
+                      >
+                        Follow @AbhithRajan
+                      </a>
+                    </li>
+                    <li className="has-margin">
+                      <GitHubButton
+                        href="https://github.com/Abhith"
+                        data-size="large"
+                        data-show-count="true"
+                        aria-label="Follow @Abhith on GitHub"
+                      >
+                        Follow @Abhith
+                      </GitHubButton>
+                    </li>
+                    <li className="has-margin">
+                      <GitHubButton
+                        href="https://github.com/Abhith/abhith.net"
+                        data-icon="octicon-star"
+                        data-size="large"
+                        data-show-count="true"
+                        aria-label="Star Abhith/abhith.net on GitHub"
+                      >
+                        Star
+                      </GitHubButton>
                     </li>
                   </ul>
                 </div>
