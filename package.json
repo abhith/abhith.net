@@ -45,7 +45,6 @@
     "gatsby-transformer-json": "^2.2.8",
     "gatsby-transformer-remark": "^2.6.49",
     "gatsby-transformer-sharp": "^2.2.19",
-    "github-slugger": "^1.2.1",
     "intersection-observer": "^0.7.0",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.5",
