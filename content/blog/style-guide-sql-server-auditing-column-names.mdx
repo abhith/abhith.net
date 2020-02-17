@@ -16,25 +16,25 @@ Following are the column names I used to use for those auditing fields.
 
 ## Creation Audited
 
-| Column Name   | description                     | Type         | Nullable |
-| ------------- | ------------------------------- | ------------ | -------- |
-| CreationTime  | eg. 2019-09-15 13:56:13.8955178 | datetime2(7) | NOT NULL |
-| CreatorUserId |                                 |              | NULL     |
+| Column Name   | Type         | Nullable | Description                     |
+| ------------- | ------------ | -------- | ------------------------------- |
+| CreationTime  | datetime2(7) | NOT NULL | eg. 2019-09-15 13:56:13.8955178 |
+| CreatorUserId |              | NULL     |                                 |
 
 ## Modification Audited
 
-| Column Name          | description | Type         | Nullable |
-| -------------------- | ----------- | ------------ | -------- |
-| LastModificationTime |             | datetime2(7) | NULL     |
-| LastModifierUserId   |             |              | NULL     |
+| Column Name          | Type         | Nullable |
+| -------------------- | ------------ | -------- |
+| LastModificationTime | datetime2(7) | NULL     |
+| LastModifierUserId   |              | NULL     |
 
 ## Soft Delete
 
-| Column Name   | description | Type         | Nullable |
-| ------------- | ----------- | ------------ | -------- |
-| IsDeleted     |             | bit          | NOT NULL |
-| DeleterUserId |             |              | NULL     |
-| DeletionTime  |             | datetime2(7) | NULL     |
+| Column Name   | Type         | Nullable |
+| ------------- | ------------ | -------- |
+| IsDeleted     | bit          | NOT NULL |
+| DeleterUserId |              | NULL     |
+| DeletionTime  | datetime2(7) | NULL     |
 
 If you have worked with [ABP](https://aspnetboilerplate.com/Pages/Documents/Entities#auditing) before, you know from where I adopted the naming convention.
 
