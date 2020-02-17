@@ -1,38 +1,12 @@
 import styled from "@emotion/styled";
-import mediaqueries from "@styles/media";
 import React from "react";
-
-const StyledTable = styled.table`
-  position: relative;
-  line-height: 1.65;
-  color: ${p => p.theme.colors.grey};
-  transition: ${p => p.theme.colorModeTransition};
-  background: ${p => p.theme.colors.card};
-  margin: 45px auto 85px;
-  width: 100%;
-  max-width: 1004px;
-  border: 1px solid ${p => p.theme.colors.horizontalRule};
-  border-radius: 5px;
-  overflow: hidden;
-  border-collapse: separate;
-
-  ${mediaqueries.desktop`
-    margin: 25px auto 65px;
-  `}
-
-  ${mediaqueries.tablet`
-    max-width: 486px;
-  `};
-
-  ${mediaqueries.phablet`
-    margin: 15px auto 55px;
-  `};
-`;
 
 function Table({ children }) {
   return (
-    <div style={{ overflowX: "auto", padding: "0 20px" }}>
-      <StyledTable>{children}</StyledTable>
+    <div className="ar-snippet-preview mb-5">
+      <div className="table-container">
+        <table className="table is-narrow is-hoverable">{children}</table>
+      </div>
     </div>
   );
 }
