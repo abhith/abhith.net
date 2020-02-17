@@ -24,12 +24,14 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions;
 
   // Destructure the createPage function from the actions object
-  const result = await graphql(query.local.articles);
-  if (result.errors) {
+  const articlesResult = await graphql(query.local.articles);
+  if (articlesResult.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
   // Create blog post pages.
-  let articles = result.data.articles.edges.map(normalize.local.articles);
+  let articles = articlesResult.data.articles.edges.map(
+    normalize.local.articles
+  );
   articles = _.orderBy(articles, ["datePublishedSeoFormat"], ["desc"]); // you'll call `createPage` for each result
 
   const allStories = await graphql(query.local.stories);
@@ -178,9 +180,9 @@ module.exports = async ({ graphql, actions, reporter }) => {
     });
 
     storiesGroup.forEach(node => {
-      let topic = topics.find(topic => topic.slug === node.fieldValue);
-      if (topic) {
-        topic.totalStories = node.totalCount;
+      let storyTopic = topics.find(topic => topic.slug === node.fieldValue);
+      if (storyTopic) {
+        storyTopic.totalStories = node.totalCount;
       } else {
         topics.push({
           slug: node.fieldValue,
@@ -193,9 +195,9 @@ module.exports = async ({ graphql, actions, reporter }) => {
     });
 
     videosGroup.forEach(node => {
-      let topic = topics.find(topic => topic.slug === node.fieldValue);
-      if (topic) {
-        topic.totalVideos = node.totalCount;
+      let videoTopic = topics.find(topic => topic.slug === node.fieldValue);
+      if (videoTopic) {
+        videoTopic.totalVideos = node.totalCount;
       } else {
         topics.push({
           slug: node.fieldValue,
@@ -208,9 +210,9 @@ module.exports = async ({ graphql, actions, reporter }) => {
     });
 
     servicesGroup.forEach(node => {
-      let topic = topics.find(topic => topic.slug === node.fieldValue);
-      if (topic) {
-        topic.totalServices = node.totalCount;
+      let serviceTopic = topics.find(topic => topic.slug === node.fieldValue);
+      if (serviceTopic) {
+        serviceTopic.totalServices = node.totalCount;
       } else {
         topics.push({
           slug: node.fieldValue,
