@@ -442,11 +442,6 @@
   .ar-anchors.is-active {
     display: block;
   }
-
-  .ar-anchors.is-pinned {
-    position: fixed;
-    top: 0;
-  }
 }
 
 .ar-anchors-title {
@@ -454,10 +449,6 @@
   font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-}
-
-.ar-anchors-list li:last-child {
-  margin-top: 1em;
 }
 
 .ar-anchors-list a {

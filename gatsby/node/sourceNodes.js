@@ -12,7 +12,7 @@ module.exports = ({ actions }) => {
         tags: [String]
         lastModificationTime: Date @dateformat
         commentId: String
-        headings: [MdxHeadingMdx] @link
+        tableOfContents: JSON @link
       }
     `);
 };

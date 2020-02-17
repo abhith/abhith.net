@@ -233,7 +233,7 @@ export default ({ pageContext, location }) => {
                     </GitHubButton>
                   </div>
                 </div>
-                <TableOfContents headings={article.headings} />
+                <TableOfContents page={article} location={location} />
               </div>
             </aside>
           </div>

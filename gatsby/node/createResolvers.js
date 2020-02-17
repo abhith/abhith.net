@@ -23,8 +23,8 @@ module.exports = ({ createResolvers }) => {
       body: {
         resolve: mdxResolverPassthrough(`body`)
       },
-      headings: {
-        resolve: mdxResolverPassthrough(`headings`)
+      tableOfContents: {
+        resolve: mdxResolverPassthrough(`tableOfContents`)
       }
     }
   });

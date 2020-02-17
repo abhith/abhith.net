@@ -35,7 +35,7 @@ module.exports.local = {
       dateModifiedSeoFormat: article.dateModifiedSeoFormat,
       datePublishedSeoFormat: article.datePublishedSeoFormat,
       commentId: article.commentId === null ? article.slug : article.commentId,
-      headings: article.headings
+      tableOfContents: article.tableOfContents
     };
   }
 };
