@@ -1,5 +1,12 @@
 [
   {
+    "title": "Object Oriented Tricks: #2 Law of Demeter",
+    "url": "https://hackernoon.com/object-oriented-tricks-2-law-of-demeter-4ecc9becad85",
+    "description": "Each unit should have only limited knowledge about other units: only units “closely” related to the current unit. Each unit should only talk to its friends; don’t talk to strangers.",
+    "date": "2020-02-18T11:31:28.263Z",
+    "tags": ["style-guide"]
+  },
+  {
     "title": "Understand and Analyze Summary Report in Jmeter | Testing Journals",
     "url": "https://www.testingjournals.com/understand-summary-report-jmeter/",
     "description": "In this article we will discuss about Summary Report Listener. It contains a table where a row is created for each request from your test.",
