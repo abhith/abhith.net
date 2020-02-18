@@ -390,6 +390,12 @@
     "image": ""
   },
   {
+    "title": "Testing",
+    "slug": "testing",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Visual Studio",
     "slug": "visual-studio",
     "description": "I always loved to work with the latest and the greatest versions of Visual Studio. I started on VS 2008, now most of the time working with VS 2019.",

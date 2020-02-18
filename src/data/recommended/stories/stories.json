@@ -1,5 +1,12 @@
 [
   {
+    "title": "DEFECT CLUSTERING AND PESTICIDE PARADOX: - PITS Blog",
+    "url": "https://www.pitsolutions.ch/blog/defect-clustering-and-pesticide-paradox/",
+    "description": "Defect Clustering and Pesticide paradox are among the two important principles of testing. Definitions: Defect Clustering: When a small number of modules contains most of the bugs detected or show …",
+    "date": "2020-02-18T12:31:28.263Z",
+    "tags": ["testing"]
+  },
+  {
     "title": "Object Oriented Tricks: #2 Law of Demeter",
     "url": "https://hackernoon.com/object-oriented-tricks-2-law-of-demeter-4ecc9becad85",
     "description": "Each unit should have only limited knowledge about other units: only units “closely” related to the current unit. Each unit should only talk to its friends; don’t talk to strangers.",
