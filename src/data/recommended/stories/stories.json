@@ -1,5 +1,19 @@
 [
   {
+    "title": "At Least 20 VPN and Ad-Blocking Apps With 35 Million Downloads Actually Monitored Users' Phones",
+    "url": "https://gizmodo.com/at-least-20-vpn-and-ad-blocking-apps-with-35-million-do-1842228757",
+    "description": "At least 20 ad-blocking and virtual private network (VPN) apps owned by analytics firm Sensor Tower may have been secretly spying on users’ phones, according to a BuzzFeed News investigation on Monday.",
+    "date": "2020-03-10T12:31:28.263Z",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "ASP.NET Core MVC 3.x – AddMvc(), AddMvcCore(), AddControllers() and other bootstrapping approaches | StrathWeb. A free flowing web tech monologue.",
+    "url": "https://www.strathweb.com/2020/02/asp-net-core-mvc-3-x-addmvc-addmvccore-addcontrollers-and-other-bootstrapping-approaches/",
+    "description": "There are several ways of bootstrapping your MVC applications on top of ASP.NET Core 3.x...",
+    "date": "2020-03-10T11:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "New WhatsApp Alternative",
     "url": "https://fossbytes.com/open-source-messenger-session-doesnt-even-need-your-phone-number/",
     "description": "Session is a new open-source messenger app that addresses this issue and doesn't require your phone number to work. Session is technically a fork of another quite popular private messenger Signal. It is available for Android, iOS as well as PC.",
