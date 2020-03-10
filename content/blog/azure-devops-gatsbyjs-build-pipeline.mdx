@@ -5,6 +5,7 @@ description: >-
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
 date: 2020-02-04T15:11:27.975Z
+lastModificationTime: 2020-03-10T14:02:00.000Z
 image: /img/blog/azure-devops-gatsbyjs-build-pipeline/azure-devops-gatsbyjs-build-pipeline-cover.png
 tags:
   - azure-devops
@@ -77,7 +78,17 @@ And a successfull build looks like,
 
 ## Release Pipeline
 
-For the release pipeline, in case of [SmarterASP.NET][1], I used the **FTP Upload** task.
+Once we configured our build pipeline, created a release pipeline.
+
+### Build pipeline vs Release pipeline
+
+> A build is a pipeline that has no side-effects, it only takes in code and puts out compiled "artifacts". A release is a pipeline that has side-effects, it takes in artifacts and publishes or deploys them to environments.
+
+For the release pipeline, in case of [SmarterASP.NET][1], the stage contain one job and it has only one task, the **FTP Upload**.
+
+![Release Pipeline for Gatsby](../../static/img/blog/azure-devops-gatsbyjs-build-pipeline/release-pipeline.png)
+
+And the yml for the same look like below,
 
 ```yml
 steps:
@@ -95,6 +106,11 @@ steps:
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 ``
 ```
+
+### Notes
+
+- All the **\$(---)** are pipeline variables
+- **rootDirectory** can be browsed through the **...** button near to the **Root folder** text input (check the comments below)
 
 Even though I have successfully configured the CI/CD. But the time it took to complete the deployment was too long since the artifact size was high. The **gatsby-images** generate so many versions of the image files resulting increase in the artifact size. So the FTP upload takes so much time to finish.
 
