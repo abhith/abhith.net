@@ -1,5 +1,12 @@
 [
   {
+    "title": "Switch From Google Authenticator to a More Secure 2FA App",
+    "url": "https://lifehacker.com/switch-from-google-authenticator-to-a-more-secure-2fa-a-1842212483",
+    "description": "According to a recent report from Nightwatch Cybersecurity, Google’s Authenticator app for Android comes with an unfixed issue that can create a big security nightmare if you have any malware or otherwise shifty apps installed on your device. (The Microsoft Authenticator app for Android also shares the same issue, so don’t switch to that app either, for now.)",
+    "date": "2020-03-11T12:31:28.263Z",
+    "tags": ["android"]
+  },
+  {
     "title": "At Least 20 VPN and Ad-Blocking Apps With 35 Million Downloads Actually Monitored Users' Phones",
     "url": "https://gizmodo.com/at-least-20-vpn-and-ad-blocking-apps-with-35-million-do-1842228757",
     "description": "At least 20 ad-blocking and virtual private network (VPN) apps owned by analytics firm Sensor Tower may have been secretly spying on users’ phones, according to a BuzzFeed News investigation on Monday.",
