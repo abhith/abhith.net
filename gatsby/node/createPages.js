@@ -4,14 +4,14 @@ const path = require("path");
 
 const templatesDirectory = path.resolve(__dirname, "../../src/templates");
 const templates = {
-  article: path.resolve(templatesDirectory, "article.template.tsx"),
-  topic: path.resolve(templatesDirectory, "topic.template.tsx"),
-  topicStories: path.resolve(templatesDirectory, "topic.stories.template.tsx"),
-  topicVideos: path.resolve(templatesDirectory, "topic.videos.template.tsx"),
-  topicTools: path.resolve(templatesDirectory, "topic.tools.template.tsx"),
-  blog: path.resolve(templatesDirectory, "blog.template.tsx"),
-  stories: path.resolve(templatesDirectory, "stories.template.tsx"),
-  topics: path.resolve(templatesDirectory, "topics.template.tsx")
+  article: path.resolve(templatesDirectory, "article-template.js"),
+  topic: path.resolve(templatesDirectory, "topic-template.js"),
+  topicStories: path.resolve(templatesDirectory, "topic-stories-template.js"),
+  topicVideos: path.resolve(templatesDirectory, "topic-videos-template.js"),
+  topicTools: path.resolve(templatesDirectory, "topic-tools-template.js"),
+  blog: path.resolve(templatesDirectory, "blog-template.js"),
+  stories: path.resolve(templatesDirectory, "stories-template.js"),
+  topics: path.resolve(templatesDirectory, "topics-template.js")
 };
 
 const log = (message, section) =>

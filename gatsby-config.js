@@ -11,7 +11,7 @@ const path = require("path");
 
 const templatesDirectory = path.resolve(__dirname, "src/templates");
 const templates = {
-  page: path.resolve(templatesDirectory, "page.template.tsx")
+  page: path.resolve(templatesDirectory, "page-template.js")
 };
 
 module.exports = {
@@ -35,7 +35,6 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-typescript`,
     `gatsby-image`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,

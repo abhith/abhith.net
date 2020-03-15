@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import LatestPosts from "../components/home/LatestPosts";
-import Hero from "../components/home/Hero";
-import StoriesRoll from "../components/StoriesRoll";
-import FeaturedSidebar from "../components/FeaturedSidebar";
-import SEO from "../components/SEO";
-import VideosRoll from "../components/VideosRoll";
-import Button from "../components/Button";
+import Layout from "../components/layout";
+import LatestPosts from "../components/home/latest-posts";
+import Hero from "../components/home/hero";
+import StoriesRoll from "../components/stories-roll";
+import FeaturedSidebar from "../components/featured-sidebar";
+import SEO from "../components/seo/seo";
+import VideosRoll from "../components/videos-roll";
+import Button from "../components/button";
 
 export const IndexPageTemplate = ({
   stories,

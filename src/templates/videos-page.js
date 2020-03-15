@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import VideosRoll from "../components/VideosRoll";
+import Layout from "../components/layout";
+import SEO from "../components/seo/seo";
+import VideosRoll from "../components/videos-roll";
 import { graphql } from "gatsby";
-import Pagination from "../components/Pagination";
+import Pagination from "../components/pagination";
 
 export default class RecommendedVideosIndexPage extends React.Component {
   render() {

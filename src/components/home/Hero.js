@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import PreviewCompatibleImage from "../preview-compatible-image";
 import Particles from "react-particles-js";
 export default function Hero() {
   return (

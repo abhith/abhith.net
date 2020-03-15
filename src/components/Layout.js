@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "./footer";
+import Navbar from "./navbar";
 import "typeface-lora";
 
 const TemplateWrapper = ({ children }) => {

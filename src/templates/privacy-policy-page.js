@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import Content, { HTMLContent } from "../components/Content";
+import Layout from "../components/layout";
+import SEO from "../components/seo/seo";
+import Content, { HTMLContent } from "../components/content";
 
 export const PrivacyPolicyPageTemplate = ({
   title,

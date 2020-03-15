@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import SEO from "../../components/SEO";
-import VideosRoll from "../../components/VideosRoll";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo/seo";
+import VideosRoll from "../../components/videos-roll";
 import { graphql, Link } from "gatsby";
 
 import Img from "gatsby-image";
-import StoriesRoll from "../../components/StoriesRoll";
+import StoriesRoll from "../../components/stories-roll";
 
 export default class RecommendedIndexPage extends React.Component {
   render() {

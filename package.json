@@ -30,7 +30,6 @@
     "gatsby-plugin-sitemap": "^2.2.14",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-twitter": "^2.1.12",
-    "gatsby-plugin-typescript": "^2.1.19",
     "gatsby-remark-autolink-headers": "^2.1.24",
     "gatsby-remark-copy-linked-files": "^2.1.19",
     "gatsby-remark-embed-video": "^2.0.0",
@@ -91,20 +90,13 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "@types/lodash": "^4.14.149",
-    "@types/node": "^13.7.0",
-    "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-preset-gatsby": "^0.2.35",
     "husky": "^4.2.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "resolve-url-loader": "^3.1.0",
-    "rimraf": "^3.0.1",
-    "tslint": "^5.20.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^4.2.0",
-    "typescript": "^3.7.3"
+    "rimraf": "^3.0.1"
   },
   "husky": {
     "hooks": {

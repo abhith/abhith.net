@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import SchemaOrg from "./SchemaOrg";
+import SchemaOrg from "./schema-org";
 
 // <link rel="canonical" href={url} />
 // <meta property="fb:app_id" content={seo.social.fbAppID} />

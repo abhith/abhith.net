@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import ServicesRoll from "../components/ServicesRoll";
-import Pagination from "../components/Pagination";
+import Layout from "../components/layout";
+import SEO from "../components/seo/seo";
+import ServicesRoll from "../components/services-roll";
+import Pagination from "../components/pagination";
 
 export default class RecommendedServicesIndexPage extends React.Component {
   render() {
