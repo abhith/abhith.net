@@ -4,8 +4,8 @@ description: This cookbook will help you solve common problems while writing Flu
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
 date: 2018-04-30T19:22:00.000Z
-lastModificationTime: 2019-12-20T13:22:00.000Z
-image: /img/flutter-logo-s.png
+lastModificationTime: 2020-03-11T00:11:00.000Z
+image: /img/blog/flutter-cookbook.png
 tags:
   - flutter
   - cookbook
@@ -13,17 +13,6 @@ tags:
 ---
 
 Most of the solution implementations mentioned below can be found in my repo [https://github.com/Abhith/piggy-flutter](https://github.com/Abhith/piggy-flutter).
-
-#### Table of Contents <!-- omit in toc -->
-
-- [Navigation](#navigation)
-  - [Move to a new screen without back](#move-to-a-new-screen-without-back)
-- [Tutorials](#tutorials)
-  - [BLoC pattern](#bloc-pattern)
-    - [Additional Resources](#additional-resources)
-- [Build](#build)
-  - [Build failed - null value in entry: outputFile=null](#build-failed---null-value-in-entry-outputfilenull)
-  - [Error importing package:http/http.dart](#error-importing-packagehttphttpdart)
 
 ### Navigation
 
@@ -82,3 +71,15 @@ If you are using **VS Code** as the IDE, the above will be automatically execute
 #### SocketException: OS Error: Connection refused, errno = 111 when trying to connect to localhost
 
 My ASPNET Core API's where running on localhost and I was trying to request against the same using the Android emulator, then your server endpoint should be **10.0.2.2:<PORT_NUMBER>** instead of **localhost:<PORT_NUMBER>** as AVD uses 10.0.2.2 as an alias to your host loopback interface (i.e) localhost.
+
+#### More than one file was found with OS independent path 'META-INF/proguard/androidx-annotations.pro'
+
+Adding following in the `android > app > build.gradle` fixed the build error,
+
+```java
+android {
+     packagingOptions {
+         exclude 'META-INF/proguard/androidx-annotations.pro'
+     }
+ }
+```
