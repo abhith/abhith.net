@@ -1,5 +1,12 @@
 [
   {
+    "title": "blowdart/AspNetAuthorizationWorkshop",
+    "url": "https://github.com/blowdart/AspNetAuthorizationWorkshop",
+    "description": "A workshop for moving through the various new pieces in ASP.NET Core Authorization - blowdart/AspNetAuthorizationWorkshop",
+    "date": "2020-03-16T12:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Switch From Google Authenticator to a More Secure 2FA App",
     "url": "https://lifehacker.com/switch-from-google-authenticator-to-a-more-secure-2fa-a-1842212483",
     "description": "According to a recent report from Nightwatch Cybersecurity, Google’s Authenticator app for Android comes with an unfixed issue that can create a big security nightmare if you have any malware or otherwise shifty apps installed on your device. (The Microsoft Authenticator app for Android also shares the same issue, so don’t switch to that app either, for now.)",
