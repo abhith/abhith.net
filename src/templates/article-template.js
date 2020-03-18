@@ -181,7 +181,10 @@ export default ({ pageContext, location }) => {
                           to="/donate"
                           className="button k-button k-primary raised has-gradient rounded"
                         >
-                          Buy me a coffee ☕
+                          Buy me a coffee{" "}
+                          <span role="img" aria-label="coffee">
+                            ☕
+                          </span>
                         </Link>
                       </p>
                     </div>
@@ -210,7 +213,12 @@ export default ({ pageContext, location }) => {
               <div className="sticky">
                 <ArticleShare article={article} location={location} />
                 <div className="has-text-centered mt-3">
-                  <div className="text-muted mb-1">⭐ On GitHub</div>
+                  <div className="text-muted mb-1">
+                    <span role="img" aria-label="star">
+                      ⭐
+                    </span>{" "}
+                    On GitHub
+                  </div>
                   <div className="buttons is-centered">
                     <GitHubButton
                       href="https://github.com/Abhith/abhith.net"
