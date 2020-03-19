@@ -6589,20 +6589,20 @@ gatsby-plugin-emotion@^4.1.10:
     "@babel/runtime" "^7.7.6"
     "@emotion/babel-preset-css-prop" "^10.0.23"
 
-gatsby-plugin-google-analytics@^2.1.33:
-  version "2.1.35"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.35.tgz#d47ce2510a82f4f59f45c2a074940f2783da4241"
-  integrity sha512-csZc0LgpMAw0cD27zpGKYHw41veYLLjoxT2guTY1hC3/tMRNZ38XUvO4TKcFGjgobppOg/UuLNF31YzjwJRmpA==
+gatsby-plugin-google-analytics@^2.1.36:
+  version "2.1.38"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.38.tgz#37907b2000abf19dcba06da31ccca99abf3fbbc2"
+  integrity sha512-Ce5E1qoD1jQkDcQIm4qPmu0L66ujqwHua0Vy+UC4rUw2GdIn5dunpBklgYaDFF2DG1gDyMwJ4v+XElLaltXcDQ==
   dependencies:
-    "@babel/runtime" "^7.7.6"
+    "@babel/runtime" "^7.8.7"
 
-gatsby-plugin-manifest@^2.2.40:
-  version "2.2.41"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.41.tgz#c6952e466b163145b74aa071822a97a797a68e01"
-  integrity sha512-eKbnpDSLbGUzmnfE65uLit/J8XS4LYslyRHtqMhTja6JcdzjXVWFsO9043tqUXfL8+JBw5PccCxZM8BIN23+Vw==
+gatsby-plugin-manifest@^2.2.42:
+  version "2.2.48"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.48.tgz#a082addd697a9d7c27ce51f1c08690b8215c8283"
+  integrity sha512-RWD2HlKT7TFcXs3SIiZTWjq3Ud4z79cms8pBLXjlNNddatnSNi0ne2RknERCQgmTQvcJ9eNeIzfzVtR3WAcBYA==
   dependencies:
-    "@babel/runtime" "^7.7.6"
-    gatsby-core-utils "^1.0.28"
+    "@babel/runtime" "^7.8.7"
+    gatsby-core-utils "^1.0.34"
     semver "^5.7.1"
     sharp "^0.23.4"
 
