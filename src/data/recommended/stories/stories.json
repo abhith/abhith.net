@@ -1,5 +1,12 @@
 [
   {
+    "title": "5 tips to improve your productivity in C# 8.0",
+    "url": "https://blog.miguelbernard.com/5-tips-to-improve-your-productivity-in-c-8-0/",
+    "description": "Microsoft added a lot of new syntax goodies in their latest release of C#, namely: index from the end, range operator, null coalescing operator, using variables, verbatim string with interpolation",
+    "date": "2020-03-22T10:31:28.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "Gatsby React Scroll toTop",
     "url": "https://publiuslogic.com/blog/gatsby-react-scroll-toTop/",
     "description": "Gatsby React Scroll toTop. Built with React Hooks, Styled Components and Love",
