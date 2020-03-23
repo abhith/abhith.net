@@ -43,7 +43,7 @@
     "gatsby-source-filesystem": "^2.1.57",
     "gatsby-transformer-json": "^2.3.0",
     "gatsby-transformer-remark": "^2.6.59",
-    "gatsby-transformer-sharp": "^2.3.17",
+    "gatsby-transformer-sharp": "^2.4.1",
     "intersection-observer": "^0.7.0",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.5",
