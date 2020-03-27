@@ -1,5 +1,12 @@
 [
   {
+    "title": "Centralized exception handling and request validation in ASP.NET Core | StrathWeb. A free flowing web tech monologue.",
+    "url": "https://www.strathweb.com/2018/07/centralized-exception-handling-and-request-validation-in-asp-net-core/",
+    "description": "",
+    "date": "2020-03-27T10:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "5 tips to improve your productivity in C# 8.0",
     "url": "https://blog.miguelbernard.com/5-tips-to-improve-your-productivity-in-c-8-0/",
     "description": "Microsoft added a lot of new syntax goodies in their latest release of C#, namely: index from the end, range operator, null coalescing operator, using variables, verbatim string with interpolation",
