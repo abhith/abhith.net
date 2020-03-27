@@ -1,5 +1,14 @@
 [
   {
+    "title": "Global Error Handling in ASP.NET Core Web API",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=tk1QK71DVtg",
+    "date": "2020-03-27T14:20:21.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Design Microservice Architectures the Right Way",
     "description": "",
     "image": "",
