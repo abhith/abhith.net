@@ -7,7 +7,8 @@ import {
   FaTwitter,
   FaHome,
   FaInfoCircle,
-  FaBullhorn
+  FaBullhorn,
+  FaShieldAlt
 } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
@@ -117,11 +118,16 @@ const Navbar = class extends React.Component {
                 <FaBullhorn color="turquoise" />
                 <span> &nbsp;Topics</span>
               </Link>
-              {/* <button className="is-bold button k-button k-secondary raised has-gradient slanted">
-                <span role="img" aria-label="heart">
-                  HAPPY NEW YEAR 20❤️20
+              <OutboundLink
+                className="is-bold button k-button k-secondary raised has-gradient"
+                href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
+                target="_blank"
+              >
+                <FaShieldAlt color="black" size={24} />
+                <span role="img" aria-label="heart" className="ml-1">
+                  Break The Chain | STAY SAFE
                 </span>
-              </button> */}
+              </OutboundLink>
             </div>
 
             <div className="navbar-end">
