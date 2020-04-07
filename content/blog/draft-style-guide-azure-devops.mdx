@@ -19,7 +19,17 @@ repo > build\azure-devops\{project-name}\azure-pipelines.yml
 
 ## Naming Convention
 
+### Build Pipelines
+
+#### Pipeline Name
+
+Project Name-CI
+
 ### Release Pipelines
+
+#### Pipeline Name
+
+Project Name-CD
 
 #### Release name format
 
@@ -28,3 +38,10 @@ $(Build.DefinitionName)-Release-$(rev:r)
 #### Archive file to create
 
 E:\Backups\{webiste-name}-$(Build.BuildId)-$(System.JobId).zip
+
+#### Stages
+
+- Dev
+- Test
+- Production
+- Sandbox
