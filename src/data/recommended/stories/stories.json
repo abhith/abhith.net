@@ -1,5 +1,26 @@
 [
   {
+    "title": "Logging with ILogger in .NET: Recommendations and best practices",
+    "url": "https://blog.rsuter.com/logging-with-ilogger-recommendations-and-best-practices/",
+    "description": "This blog describes and outlines some best practices for using new the logging system which has been introduced with .NET Core but is also available in all .NET Standard 2.0 supporting .NET frameworks.",
+    "date": "2020-04-10T20:31:28.263Z",
+    "tags": ["dotnet-core"]
+  },
+  {
+    "title": "HTTP API Problem Details in ASP.NET Core - CodeOpinion",
+    "url": "https://codeopinion.com/http-api-problem-details-in-asp-net-core/",
+    "description": "Writing HTTP API's in ASP.NET Core? Here's how to use RFC 7807 Problem Details in ASP.NET Core when creating HTTP API's.",
+    "date": "2020-04-10T19:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Building Gatsby with GitHub Actions and deploying to Netlify‎",
+    "url": "https://sung.codes/blog/2019/12/25/building-gatsby-with-git-hub-actions-and-deploying-to-netlify/",
+    "description": "",
+    "date": "2020-04-10T18:31:28.263Z",
+    "tags": ["gatsby", "github", "devops"]
+  },
+  {
     "title": "4 Common Mistakes with the Repository Pattern - Programming with Mosh‎",
     "url": "https://programmingwithmosh.com/net/common-mistakes-with-the-repository-pattern/",
     "description": "",
