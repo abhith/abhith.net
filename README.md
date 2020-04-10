@@ -13,6 +13,7 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Abhith/abhith.net/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Abhith/abhith.net/context:javascript)
+![Discord](https://img.shields.io/discord/671364953487310854)
 
 This repo serves the source code for [www.abhith.net](https://www.abhith.net/).
 It follows the [JAMstack architecture](https://jamstack.org). Designed using [Bulma](https://bulma.io), and using [Render](https://render.com/) for continuous deployment.
