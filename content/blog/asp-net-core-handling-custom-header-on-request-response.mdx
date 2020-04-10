@@ -14,11 +14,6 @@ tags:
 
 You can access the request headers or modify the response headers easily inside the controller in your **ASP.NET Core** applications.
 
-##### Table of Contents <!-- omit in toc -->
-
-- [Add custom header to response](#add-custom-hader-to-response)
-- [Read a request header](#read-a-request-header)
-
 ## Add custom header to response
 
 ```csharp
@@ -30,6 +25,8 @@ You can access the request headers or modify the response headers easily inside 
 ```csharp
  var yourHeader = Request.Headers["your-custom-header-id"].FirstOrDefault();
 ```
+
+### Get bearer token value
 
 Another example where we get the bearer token from the **Authorization** header,
 
