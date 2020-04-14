@@ -1,5 +1,12 @@
 [
   {
+    "title": "Svelte vs. React: A Comparison",
+    "url": "https://medium.com/swlh/svelte-vs-react-a-comparison-4ddf3448e4a4",
+    "description": "The fruit bowl of frontend frameworks is full and React is the fat melon taking up all the space. Do we really need another technology to learn? Rich Harris of the New York Times says yes, and…",
+    "date": "2020-04-13T09:31:28.263Z",
+    "tags": ["svelte", "react"]
+  },
+  {
     "title": "Logging with ILogger in .NET: Recommendations and best practices",
     "url": "https://blog.rsuter.com/logging-with-ilogger-recommendations-and-best-practices/",
     "description": "This blog describes and outlines some best practices for using new the logging system which has been introduced with .NET Core but is also available in all .NET Standard 2.0 supporting .NET frameworks.",
