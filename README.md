@@ -15,14 +15,10 @@
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Abhith/abhith.net/context:javascript)
 ![Discord](https://img.shields.io/discord/671364953487310854)
 
+![website](./static/img/repo/banner.png)
+
 This repo serves the source code for [www.abhith.net](https://www.abhith.net/).
 It follows the [JAMstack architecture](https://jamstack.org). Designed using [Bulma](https://bulma.io), and using [Render](https://render.com/) for continuous deployment.
-
-## Inspired By
-
-- [wowthemesnet/mundana-theme-jekyll](https://github.com/wowthemesnet/mundana-theme-jekyll)
-- [cssninjaStudio/krypton](https://github.com/cssninjaStudio/krypton)
-- [narative/gatsby-theme-novela](https://github.com/narative/gatsby-theme-novela/)
 
 ## Main Sections
 
@@ -34,11 +30,11 @@ I read a lot, and that's how I stay updated about what's going on around. Here I
 
 ### Videos
 
-Similar to Developer Stories, here I am listing videos which worth sharing. Watch them [here](https://www.abhith.net/recommended/videos/)
+Here I am listing videos which worth sharing. Watch them [here](https://www.abhith.net/recommended/videos/)
 
-### Services
+### Tools and Services
 
-There are plenty of online services available nowadays. Here I am sharing some of the useful ones which I explored yet.
+Here I am sharing some tools and services which I find useful.
 
 ## CONTRIBUTING
 
