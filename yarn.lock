@@ -6826,10 +6826,10 @@ gatsby-plugin-mdx@^1.1.7:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-nprogress@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.2.0.tgz#4c8a1e054a0cd2196fa922463be9b3e6bc8a4df9"
-  integrity sha512-VVhOOYbNv9l64vXJmssRgTEu2IgYZM97FFNdaHMqjvi8gMRu4YpbniGPLjCFY83Bt87OqyrGwOIG0cZ4eJfcYw==
+gatsby-plugin-nprogress@^2.2.1:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.2.2.tgz#fc54e7c41ee08c3ab7b489d7e9139646307d0ad2"
+  integrity sha512-ldKLqKF8Hzjel6LVzbHvT0PcjHk5JsFmnOrRXUnGZTntcU9/xyFKE1ezr4LlYEK8c1cZ9C76pGBWzrC6F9bbKQ==
   dependencies:
     "@babel/runtime" "^7.8.7"
     nprogress "^0.2.0"
@@ -6882,10 +6882,10 @@ gatsby-plugin-robots-txt@^1.5.0:
     "@babel/runtime" "^7.5.1"
     generate-robotstxt "^7.1.0"
 
-gatsby-plugin-sass@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.2.0.tgz#74ff9cb1f8d034b17a72f80ff995cd79ced282cf"
-  integrity sha512-KqjvuLX244zb6EAoF8izUMmaOgynAuLg0PSkqpvWLqtgeisZdbWkFJ8G3jH6CoATzFWUmoMkncsUCUW30eCmXw==
+gatsby-plugin-sass@^2.2.1:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.2.2.tgz#216549b1d9b12cf4cba6ce7752ce0a535aa9a768"
+  integrity sha512-outmh5jhFWNCwVaoHzC6iBjnC9U92TenDkqh+04Oij7fAhSzh277H+TtMU/H8GgeiILXsrGkOGfM5I15a0FrEA==
   dependencies:
     "@babel/runtime" "^7.8.7"
     sass-loader "^7.3.1"
@@ -6957,10 +6957,10 @@ gatsby-remark-autolink-headers@^2.1.25:
     mdast-util-to-string "^1.1.0"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-copy-linked-files@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.2.0.tgz#bdd944b0409d9e6bab04a6ef521a35b1c9d19d9b"
-  integrity sha512-B4ddNCXBwE2upv6tzBl46/rZXYJdEYf6zBrFYBhVGKtdAMj8irxmDlkzdxrr7kTvLAG7TSu6ww/x5QW9+yqUew==
+gatsby-remark-copy-linked-files@^2.2.1:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.2.2.tgz#207ba21b2d050695580abd2aae29f7e7ae21f18c"
+  integrity sha512-s0BgPRd1bWu71gKyOevwr90N7HTsXXOrGeV+iEb2sGGusslNkHyhYjQ5dEiGFVgQr9Nkm4uBuJyovFLcPByszQ==
   dependencies:
     "@babel/runtime" "^7.8.7"
     cheerio "^1.0.0-rc.3"
@@ -7045,10 +7045,10 @@ gatsby-remark-responsive-iframe@^2.3.1:
     lodash "^4.17.15"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-smartypants@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-2.2.0.tgz#40abef6865cd30575307f73572e9c13f98785af2"
-  integrity sha512-KGod56at+4CuxwH/Pm/6AX7ohPdKJQRYcFRSzJxtQFxJkoj1DQ81mLK6TFdXx2v4HaCX0b19xmC/rfzu72B/Bg==
+gatsby-remark-smartypants@^2.2.1:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-2.2.2.tgz#e7c2e62fadcd2f76334d54a4ee42a3cef4f81d6c"
+  integrity sha512-J7dYzkrVmQj7vxI2rbDOvJFmO+GKC4dXKHzp1tmRTd0FhndZzrSnSJZ3DXveNzyH/9BaPLPFCDbo1AjOtK+zRg==
   dependencies:
     "@babel/runtime" "^7.8.7"
     retext "^5.0.0"
