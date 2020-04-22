@@ -1,5 +1,14 @@
 [
   {
+    "title": "JOTB19 - Drinking from the firehose, with virtual streams and virtual actors by Sergey Bykov",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=UQ2CrH65lxA",
+    "date": "2020-04-22T19:20:21.638Z",
+    "type": "youtube",
+    "tags": ["microsoft-orleans"]
+  },
+  {
     "title": "Clean Architecture with ASP.NET Core 3.0 - Jason Taylor - NDC Sydney 2019",
     "description": "",
     "image": "",
