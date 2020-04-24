@@ -65,7 +65,7 @@ function StoriesPage({ pageContext, data }) {
                 nextPagePath={nextPagePath}
               />
             </div>
-            <TopicsCloud topics={topics} />
+            <TopicsCloud topics={topics} section="stories" />
           </div>
         </div>
       </div>
