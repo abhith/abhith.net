@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
-const Head = styled.thead`
+const TableHead = styled.thead`
   font-weight: 600;
-  font-family: ${p => p.theme.fonts.serif};
+  font-family: ${(p) => p.theme.fonts.serif};
 `;
 
-export default Head;
+export default TableHead;

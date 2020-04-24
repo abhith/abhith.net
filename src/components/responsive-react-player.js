@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactPlayer from "react-player";
 
-const ResponsivePlayer = props => {
+const ResponsiveReactPlayer = (props) => {
   return (
     <div className="player-wrapper">
       <ReactPlayer
@@ -16,8 +16,8 @@ const ResponsivePlayer = props => {
   );
 };
 
-ResponsivePlayer.propTypes = {
-  url: PropTypes.string.isRequired
+ResponsiveReactPlayer.propTypes = {
+  url: PropTypes.string.isRequired,
 };
 
-export default ResponsivePlayer;
+export default ResponsiveReactPlayer;

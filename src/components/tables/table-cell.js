@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 // tslint:disable-next-line: no-implicit-dependencies
 import mediaqueries from "@styles/media";
 
-const Cell = styled.td`
+const TableCell = styled.td`
   font-size: 16px;
 
   ${mediaqueries.tablet`
@@ -10,4 +10,4 @@ const Cell = styled.td`
   `}
 `;
 
-export default Cell;
+export default TableCell;
