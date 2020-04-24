@@ -3,7 +3,7 @@ import Footer from "./footer";
 import Navbar from "./navbar";
 import "typeface-lora";
 
-const TemplateWrapper = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
@@ -13,4 +13,4 @@ const TemplateWrapper = ({ children }) => {
   );
 };
 
-export default TemplateWrapper;
+export default Layout;
