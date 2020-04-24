@@ -2,7 +2,7 @@ const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = "https://www.abhith.net",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env;
 const isNetlifyProduction = NETLIFY_ENV === "production";
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
@@ -11,7 +11,7 @@ const path = require("path");
 
 const templatesDirectory = path.resolve(__dirname, "src/templates");
 const templates = {
-  page: path.resolve(templatesDirectory, "page-template.js")
+  page: path.resolve(templatesDirectory, "page-template.js"),
 };
 
 module.exports = {
@@ -26,13 +26,13 @@ module.exports = {
         Abhith Rajan is an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products and services.
       `,
       url: `https://twitter.com/abhithrajan`,
-      image: `https://www.abhith.net/img/abhith.jpg`
+      image: `https://www.abhith.net/img/abhith.jpg`,
     },
     image: `https://www.abhith.net/img/abhith.jpg`,
     social: {
       twitter: "@AbhithRajan",
-      fbAppID: ""
-    }
+      fbAppID: "",
+    },
   },
   plugins: [
     `gatsby-image`,
@@ -47,29 +47,29 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/img`,
-        name: "uploads"
-      }
+        name: "uploads",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
+        name: "pages",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/data`,
-        name: "data"
-      }
+        name: "data",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: contentPosts,
-        name: contentPosts
-      }
+        name: contentPosts,
+      },
     },
     {
       resolve: "gatsby-transformer-remark",
@@ -78,19 +78,19 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1024,
+              maxWidth: 1920,
               linkImagesToOriginal: false,
-              quality: 80,
-              withWebp: true
-            }
+              quality: 90,
+              withWebp: true,
+            },
           },
           {
-            resolve: `gatsby-remark-images-medium-zoom`
+            resolve: `gatsby-remark-images-medium-zoom`,
           },
           `gatsby-remark-autolink-headers`,
-          `gatsby-remark-external-links`
-        ]
-      }
+          `gatsby-remark-external-links`,
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
@@ -100,17 +100,19 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1024,
               linkImagesToOriginal: false,
-              quality: 80,
-              withWebp: true
-            }
+              quality: 90,
+              withWebp: true,
+              markdownCaptions: true,
+              maxWidth: 1920,
+              showCaptions: true,
+            },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              destinationDir: "static"
-            }
+              destinationDir: "static",
+            },
           },
           { resolve: `gatsby-remark-numbered-footnotes` },
           { resolve: `gatsby-remark-smartypants` },
@@ -118,14 +120,14 @@ module.exports = {
             resolve: "gatsby-remark-external-links",
             options: {
               target: "_blank",
-              rel: "nofollow noopener"
-            }
+              rel: "nofollow noopener",
+            },
           },
           {
             resolve: "@weknow/gatsby-remark-twitter",
             options: {
-              align: "center"
-            }
+              align: "center",
+            },
           },
           `gatsby-remark-autolink-headers`,
           {
@@ -135,33 +137,33 @@ module.exports = {
               ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
               height: 400, // Optional: Overrides optional.ratio
               related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true //Optional: Disable insertion of <style> border: 0
-            }
+              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+            },
           },
-          { resolve: `gatsby-remark-responsive-iframe` }
+          { resolve: `gatsby-remark-responsive-iframe` },
         ],
-        remarkPlugins: [require("remark-emoji")]
-      }
+        remarkPlugins: [require("remark-emoji")],
+      },
     },
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
-        displayName: process.env.NODE_ENV === `development`
-      }
+        displayName: process.env.NODE_ENV === `development`,
+      },
     },
     {
       resolve: "gatsby-plugin-sass",
       options: {
-        useResolveUrlLoader: true
-      }
+        useResolveUrlLoader: true,
+      },
     },
     `gatsby-plugin-sitemap`,
     "gatsby-transformer-json",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-104139048-1"
-      }
+        trackingId: "UA-104139048-1",
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -172,14 +174,14 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/img/android-chrome-144x144.png`
-      }
+        icon: `static/img/android-chrome-144x144.png`,
+      },
     },
     {
       resolve: `gatsby-plugin-polyfill-io`,
       options: {
-        features: [`Array.prototype.map`, `fetch`]
-      }
+        features: [`Array.prototype.map`, `fetch`],
+      },
     },
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -187,20 +189,20 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: "*" }]
+            policy: [{ userAgent: "*" }],
           },
           "branch-deploy": {
             policy: [{ userAgent: "*", disallow: ["/"] }],
             sitemap: null,
-            host: null
+            host: null,
           },
           "deploy-preview": {
             policy: [{ userAgent: "*", disallow: ["/"] }],
             sitemap: null,
-            host: null
-          }
-        }
-      }
+            host: null,
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-nprogress`,
@@ -208,9 +210,9 @@ module.exports = {
         // Setting a color is optional.
         color: `#00d1b2`,
         // Disable the loading spinner.
-        showSpinner: false
-      }
+        showSpinner: false,
+      },
     },
-    `gatsby-plugin-offline` // make sure to keep it last in the array
-  ]
+    `gatsby-plugin-offline`, // make sure to keep it last in the array
+  ],
 };
