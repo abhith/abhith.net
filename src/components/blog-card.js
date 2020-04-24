@@ -11,7 +11,7 @@ const BlogCard = ({ post, tag }) => {
           <Image src={post.hero.full} />
           {tag && (
             <div className="card-content is-overlay is-clipped">
-              <span className="tag is-info">{tag}</span>
+              <span className="tag is-primary">{tag}</span>
             </div>
           )}
         </div>
@@ -41,7 +41,7 @@ const BlogCard = ({ post, tag }) => {
 };
 BlogCard.propTypes = {
   post: PropTypes.object.isRequired,
-  tag: PropTypes.string
+  tag: PropTypes.string,
 };
 
 export default BlogCard;
