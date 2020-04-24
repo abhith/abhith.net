@@ -1,5 +1,32 @@
 [
   {
+    "title": "Validation using MediatR's Pipeline Behaviors and FluentValidation | Clean .NET Core",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=2JzQuIvxIqk",
+    "date": "2020-04-23T19:20:21.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core", "mediatr"]
+  },
+  {
+    "title": "Distributed Transactions are dead - Sergey Bykov",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=epOLEdaPSLQ",
+    "date": "2020-04-23T19:20:21.638Z",
+    "type": "youtube",
+    "tags": ["microsoft-orleans"]
+  },
+  {
+    "title": "Clean ASP.NET Core API using MediatR and CQRS | Setup",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=YzOBrVlthMk",
+    "date": "2020-04-23T19:20:21.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core", "mediatr", "cqrs"]
+  },
+  {
     "title": "JOTB19 - Drinking from the firehose, with virtual streams and virtual actors by Sergey Bykov",
     "description": "",
     "image": "",

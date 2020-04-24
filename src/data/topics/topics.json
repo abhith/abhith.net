@@ -126,6 +126,12 @@
     "image": ""
   },
   {
+    "title": "CQRS",
+    "slug": "cqrs",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Dapper",
     "slug": "dapper",
     "description": "",
@@ -315,6 +321,12 @@
     "title": "LINQ",
     "slug": "linq",
     "description": "",
+    "image": ""
+  },
+  {
+    "title": "MediatR",
+    "slug": "mediatr",
+    "description": "Simple, unambitious mediator implementation in .NET",
     "image": ""
   },
   {
