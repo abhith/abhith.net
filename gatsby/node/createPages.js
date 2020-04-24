@@ -11,7 +11,7 @@ const templates = {
   topicTools: path.resolve(templatesDirectory, "topic-tools-template.js"),
   blog: path.resolve(templatesDirectory, "blog-template.js"),
   stories: path.resolve(templatesDirectory, "stories-template.js"),
-  topics: path.resolve(templatesDirectory, "topics-template.js")
+  topics: path.resolve(templatesDirectory, "topics-template.js"),
 };
 
 const log = (message, section) =>
@@ -60,22 +60,22 @@ module.exports = async ({ graphql, actions, reporter }) => {
     // related articles
     let relatedArticles = articles
       .filter(
-        item =>
+        (item) =>
           article.id !== item.id &&
-          article.tags.some(t => item.tags.includes(t))
+          article.tags.some((t) => item.tags.includes(t))
       )
       .slice(0, 6);
 
     let relatedStories = allStories.data.stories.edges
-      .filter(item => article.tags.some(t => item.node.tags.includes(t)))
+      .filter((item) => article.tags.some((t) => item.node.tags.includes(t)))
       .slice(0, 6);
 
     let relatedVideos = allVideos.data.videos.edges
-      .filter(item => article.tags.some(t => item.node.tags.includes(t)))
+      .filter((item) => article.tags.some((t) => item.node.tags.includes(t)))
       .slice(0, 3);
 
     let relatedTools = allTools.data.tools.edges
-      .filter(item => article.tags.some(t => item.node.tags.includes(t)))
+      .filter((item) => article.tags.some((t) => item.node.tags.includes(t)))
       .slice(0, 2);
 
     createPage({
@@ -91,8 +91,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
         relatedVideos,
         relatedTools,
         next: articles[index - 1],
-        previous: articles[index + 1]
-      }
+        previous: articles[index + 1],
+      },
     });
   });
 
@@ -151,9 +151,9 @@ module.exports = async ({ graphql, actions, reporter }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()));
+      result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }
 
@@ -169,18 +169,18 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
     let topics = [];
 
-    postsGroup.forEach(node => {
+    postsGroup.forEach((node) => {
       topics.push({
         slug: node.fieldValue,
         totalPosts: node.totalCount,
         totalVideos: 0,
         totalStories: 0,
-        totalServices: 0
+        totalServices: 0,
       });
     });
 
-    storiesGroup.forEach(node => {
-      let storyTopic = topics.find(topic => topic.slug === node.fieldValue);
+    storiesGroup.forEach((node) => {
+      let storyTopic = topics.find((topic) => topic.slug === node.fieldValue);
       if (storyTopic) {
         storyTopic.totalStories = node.totalCount;
       } else {
@@ -189,13 +189,13 @@ module.exports = async ({ graphql, actions, reporter }) => {
           totalPosts: 0,
           totalVideos: 0,
           totalStories: node.totalCount,
-          totalServices: 0
+          totalServices: 0,
         });
       }
     });
 
-    videosGroup.forEach(node => {
-      let videoTopic = topics.find(topic => topic.slug === node.fieldValue);
+    videosGroup.forEach((node) => {
+      let videoTopic = topics.find((topic) => topic.slug === node.fieldValue);
       if (videoTopic) {
         videoTopic.totalVideos = node.totalCount;
       } else {
@@ -204,13 +204,13 @@ module.exports = async ({ graphql, actions, reporter }) => {
           totalPosts: 0,
           totalVideos: node.totalCount,
           totalStories: 0,
-          totalServices: 0
+          totalServices: 0,
         });
       }
     });
 
-    servicesGroup.forEach(node => {
-      let serviceTopic = topics.find(topic => topic.slug === node.fieldValue);
+    servicesGroup.forEach((node) => {
+      let serviceTopic = topics.find((topic) => topic.slug === node.fieldValue);
       if (serviceTopic) {
         serviceTopic.totalServices = node.totalCount;
       } else {
@@ -219,7 +219,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           totalPosts: 0,
           totalVideos: 0,
           totalStories: 0,
-          totalServices: node.totalCount
+          totalServices: node.totalCount,
         });
       }
     });
@@ -227,7 +227,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     log(`Merging`, "topics");
     topics.forEach((topic, index) => {
       let topicNode = allTopics.data.topics.edges.find(
-        item => item.node.slug === topic.slug
+        (item) => item.node.slug === topic.slug
       );
 
       if (topicNode) {
@@ -239,7 +239,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       }
     });
 
-    topics = _.sortBy(topics, topic => topic.title); // you'll call `createPage` for each result
+    topics = _.sortBy(topics, (topic) => topic.title); // you'll call `createPage` for each result
 
     log(`Creating`, "topic index");
     createPage({
@@ -249,19 +249,19 @@ module.exports = async ({ graphql, actions, reporter }) => {
       // You can use the values in this context in
       // our page layout component
       context: {
-        topics
-      }
+        topics,
+      },
     });
 
     log(`Creating`, "topic pages");
-    topics.forEach(topic => {
+    topics.forEach((topic) => {
       const topicPath = `/topics/${topic.slug}/`;
       const topicStoriesPath = `/topics/${topic.slug}/stories/`;
       const topicVideosPath = `/topics/${topic.slug}/videos/`;
       const topicToolsPath = `/topics/${topic.slug}/tools/`;
 
       if (topic.totalPosts > 0) {
-        const topicArticles = articles.filter(item =>
+        const topicArticles = articles.filter((item) =>
           item.tags.includes(topic.slug)
         );
 
@@ -271,8 +271,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
           context: {
             topic,
             articles: topicArticles,
-            topics
-          }
+            topics,
+          },
         });
       } else {
         let topicRedirectPath;
@@ -287,12 +287,12 @@ module.exports = async ({ graphql, actions, reporter }) => {
           fromPath: topicPath,
           isPermanent: false,
           redirectInBrowser: true,
-          toPath: topicRedirectPath
+          toPath: topicRedirectPath,
         });
       }
 
       if (topic.totalStories > 0) {
-        let relatedStories = allStories.data.stories.edges.filter(item =>
+        let relatedStories = allStories.data.stories.edges.filter((item) =>
           item.node.tags.includes(topic.slug)
         );
 
@@ -302,13 +302,13 @@ module.exports = async ({ graphql, actions, reporter }) => {
           context: {
             topic,
             stories: relatedStories,
-            topics
-          }
+            topics,
+          },
         });
       }
 
       if (topic.totalVideos > 0) {
-        let relatedVideos = allVideos.data.videos.edges.filter(item =>
+        let relatedVideos = allVideos.data.videos.edges.filter((item) =>
           item.node.tags.includes(topic.slug)
         );
 
@@ -318,13 +318,13 @@ module.exports = async ({ graphql, actions, reporter }) => {
           context: {
             topic,
             videos: relatedVideos,
-            topics
-          }
+            topics,
+          },
         });
       }
 
       if (topic.totalServices > 0) {
-        let relatedTools = allTools.data.tools.edges.filter(item =>
+        let relatedTools = allTools.data.tools.edges.filter((item) =>
           item.node.tags.includes(topic.slug)
         );
 
@@ -334,13 +334,13 @@ module.exports = async ({ graphql, actions, reporter }) => {
           context: {
             topic,
             tools: relatedTools,
-            topics
-          }
+            topics,
+          },
         });
       }
     });
 
-    pages.forEach(edge => {
+    pages.forEach((edge) => {
       const id = edge.node.id;
       createPage({
         path: edge.node.fields.slug,
@@ -349,8 +349,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         context: {
-          id
-        }
+          id,
+        },
       });
     });
 
@@ -362,8 +362,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
       pathPrefix: "/blog",
       component: templates.blog,
       context: {
-        topics
-      }
+        topics,
+      },
     });
 
     log(`Creating`, "paginated stories");
@@ -374,8 +374,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
       pathPrefix: "/recommended/stories",
       component: templates.stories,
       context: {
-        topics
-      }
+        topics,
+      },
     });
 
     // Create your paginated videos
@@ -384,7 +384,10 @@ module.exports = async ({ graphql, actions, reporter }) => {
       items: videos, // An array of objects
       itemsPerPage: 10, // How many items you want per page
       pathPrefix: "/recommended/videos", // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve("src/templates/videos-page.js") // Just like `createPage()`
+      component: path.resolve("src/templates/videos-page.js"), // Just like `createPage()`
+      context: {
+        topics: topics.filter((topic) => topic.totalVideos > 0),
+      },
     });
 
     // Create your paginated tools
@@ -393,116 +396,116 @@ module.exports = async ({ graphql, actions, reporter }) => {
       items: services, // An array of objects
       itemsPerPage: 10, // How many items you want per page
       pathPrefix: "/recommended/services", // Creates pages like `/blog`, `/blog/2`, etc
-      component: path.resolve("src/templates/services-page.js") // Just like `createPage()`
+      component: path.resolve("src/templates/services-page.js"), // Just like `createPage()`
     });
 
     let redirectBatch1 = [
       { f: `hello-world/` },
       {
-        f: `inserting-rewrite-rule-in-release-config/`
+        f: `inserting-rewrite-rule-in-release-config/`,
       },
       {
-        f: `redirect-non-www-urls-to-www-urls/`
+        f: `redirect-non-www-urls-to-www-urls/`,
       },
       {
-        f: `event-tracking-with-google-analytics/`
+        f: `event-tracking-with-google-analytics/`,
       },
       {
-        f: `umbraco-get-current-page-in-partial-view/`
+        f: `umbraco-get-current-page-in-partial-view/`,
       },
       {
-        f: `set-selected-option-by-value-via-jquery/`
+        f: `set-selected-option-by-value-via-jquery/`,
       },
       { f: `best-umbraco-packages/` },
       {
-        f: `xamarin-development-problems-and-solutions/`
+        f: `xamarin-development-problems-and-solutions/`,
       },
 
       {
-        f: `redirect-www-to-non-www-using-webconfig-in-iis/`
+        f: `redirect-www-to-non-www-using-webconfig-in-iis/`,
       },
       {
-        f: `redirect-http-to-https-using-webconfig-in-iis/`
+        f: `redirect-http-to-https-using-webconfig-in-iis/`,
       },
       {
-        f: `redirect-https-requests-to-http-using-iis-rewrite-rule-in-webconfig/`
+        f: `redirect-https-requests-to-http-using-iis-rewrite-rule-in-webconfig/`,
       },
 
       {
-        f: `hunting-security-bugs-in-an-old-web-application/`
+        f: `hunting-security-bugs-in-an-old-web-application/`,
       },
       {
-        f: `git-branch-not-showing-in-visual-studio-team-explorer/`
+        f: `git-branch-not-showing-in-visual-studio-team-explorer/`,
       },
       {
-        f: `sitefinity-rookie-guide-get-users-in-a-custom-role/`
+        f: `sitefinity-rookie-guide-get-users-in-a-custom-role/`,
       },
       {
-        f: `remove-specific-class-from-all-elements-jquery/`
+        f: `remove-specific-class-from-all-elements-jquery/`,
       },
       {
-        f: `javascript-determine-if-user-is-on-mobile-device/`
+        f: `javascript-determine-if-user-is-on-mobile-device/`,
       },
       {
-        f: `markdown-link-within-document/`
+        f: `markdown-link-within-document/`,
       },
       {
-        f: `visual-studio-keeps-crashing-first-aid/`
+        f: `visual-studio-keeps-crashing-first-aid/`,
       },
       {
-        f: `sitefinity-read-localized-resource-labels-in-mvc-widget/`
+        f: `sitefinity-read-localized-resource-labels-in-mvc-widget/`,
       },
       {
-        f: `sitefinity-caching-issue-for-pages-with-no-caching-profile/`
+        f: `sitefinity-caching-issue-for-pages-with-no-caching-profile/`,
       },
 
       { f: `2017-year-in-review/` },
 
       {
-        f: `best-font-for-visual-studio/`
+        f: `best-font-for-visual-studio/`,
       },
       {
-        f: `aspnet-web-forms-manually-trigger-client-side-validation/`
-      },
-
-      {
-        f: `download-file-using-wcf-rest-service/`
-      },
-      {
-        f: `fetch-row-count-for-all-tables-in-a-sql-server/`
+        f: `aspnet-web-forms-manually-trigger-client-side-validation/`,
       },
 
       {
-        f: `enable-click-jacking-protection-umbraco/`
+        f: `download-file-using-wcf-rest-service/`,
+      },
+      {
+        f: `fetch-row-count-for-all-tables-in-a-sql-server/`,
+      },
+
+      {
+        f: `enable-click-jacking-protection-umbraco/`,
       },
       { f: `react-native-build-apk/` },
 
       {
-        f: `iis-options-requests-returns-404/`
+        f: `iis-options-requests-returns-404/`,
       },
       { f: `flutter-cookbook/` },
       {
-        f: `the-best-extensions-for-visual-studio-2010/`
+        f: `the-best-extensions-for-visual-studio-2010/`,
       },
       {
-        f: `pad-a-number-with-leading-zeros-in-sql-to-make-uniform-char-length/`
+        f: `pad-a-number-with-leading-zeros-in-sql-to-make-uniform-char-length/`,
       },
       { f: `docker-cookbook/` },
       {
-        f: `netstandard20-project-docfx-msbuild-error/`
+        f: `netstandard20-project-docfx-msbuild-error/`,
       },
       {
-        f: `filtering-paging-and-sorting-in-sql-server-2008/`
+        f: `filtering-paging-and-sorting-in-sql-server-2008/`,
       },
       {
-        f: `gitlab-clone-a-repository-when-2fa-enabled/`
+        f: `gitlab-clone-a-repository-when-2fa-enabled/`,
       },
       {
-        f: `project-management-organize-issues-using-labels/`
+        f: `project-management-organize-issues-using-labels/`,
       },
       {
-        f: `best-visual-studio-code-extensions/`
-      }
+        f: `best-visual-studio-code-extensions/`,
+      },
     ];
 
     // Then we can loop through the array of object literals to create
@@ -512,48 +515,48 @@ module.exports = async ({ graphql, actions, reporter }) => {
         fromPath: `/post/${slug}`,
         isPermanent: true,
         redirectInBrowser: true,
-        toPath: `/blog/${slug}`
+        toPath: `/blog/${slug}`,
       });
 
       let redirectBatch2 = [
         {
           f: `check-if-string-is-arabic-c/`,
-          t: `check-if-string-is-arabic-csharp/`
+          t: `check-if-string-is-arabic-csharp/`,
         },
         {
           f: `determine-total-number-of-openactive-connections-in-ms-sql-server/`,
-          t: `determine-total-number-of-open-active-connections-in-ms-sql-server/`
+          t: `determine-total-number-of-open-active-connections-in-ms-sql-server/`,
         },
 
         {
           f: `getset-hidden-field-value-using-jquery/`,
-          t: `get-set-hidden-field-value-using-jquery/`
+          t: `get-set-hidden-field-value-using-jquery/`,
         },
         {
           f: `sitefinity-development-problems-and-solutions/`,
-          t: `sitefinity-development-problems-solutions/`
+          t: `sitefinity-development-problems-solutions/`,
         },
         {
           f: `ip-security-configure-ip-address-restrictions-in-webconfig-on-iis/`,
-          t: `ip-security-configure-ip-address-restrictions-in-web-config-on-iis/`
+          t: `ip-security-configure-ip-address-restrictions-in-web-config-on-iis/`,
         },
         {
           f: `vuejs-list-rendering-limit-items-in-v-for/`,
-          t: `vue-js-list-rendering-limit-items-in-v-for/`
+          t: `vue-js-list-rendering-limit-items-in-v-for/`,
         },
 
         {
           f: `dotnet-interview-questions-and-answers/`,
-          t: `dot-net-interview-questions-and-answers/`
+          t: `dot-net-interview-questions-and-answers/`,
         },
         {
           f: `fix-web-deploy-could-not-verify-the-server-s-certificate/`,
-          t: `fix-web-deploy-could-not-verify-the-server-certificate/`
+          t: `fix-web-deploy-could-not-verify-the-server-certificate/`,
         },
         {
           f: `aspnet-core-starting-the-web-server-is-taking-longer-than-expected/`,
-          t: `asp-net-core-starting-the-web-server-is-taking-longer-than-expected/`
-        }
+          t: `asp-net-core-starting-the-web-server-is-taking-longer-than-expected/`,
+        },
       ];
 
       for (var { f, t } of redirectBatch2) {
@@ -561,7 +564,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           fromPath: `/post/${f}`,
           isPermanent: true,
           redirectInBrowser: true,
-          toPath: `/blog/${t}`
+          toPath: `/blog/${t}`,
         });
         // Uncomment next line to see loop in action during build
         // console.log('\nRedirecting:\n' + f + '\nTo:\n' + t + '\n');

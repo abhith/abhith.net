@@ -1,7 +1,13 @@
 import { Link } from "gatsby";
 import React from "react";
 
-function TopicCloud({ topics }) {
+function TopicCloud({ topics, section }) {
+  if (section) {
+    section = `${section}/`;
+  } else {
+    section = "";
+  }
+
   return (
     <div className="column is-3 is-2-widescreen is-hidden-mobile">
       <div className="tags-widget">
@@ -9,8 +15,8 @@ function TopicCloud({ topics }) {
           <span>All Topics</span>
         </h4>
         <div className="tags">
-          {topics.map(topic => (
-            <Link to={`/topics/${topic.slug}/`} key={topic.slug}>
+          {topics.map((topic) => (
+            <Link to={`/topics/${topic.slug}/${section}`} key={topic.slug}>
               <span className="tag">{topic.title}</span>
             </Link>
           ))}

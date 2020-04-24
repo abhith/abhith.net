@@ -23,7 +23,7 @@ function StoriesPage({ pageContext, data }) {
           <div className="columns">
             <div className="column is-9 is-10-widescreen main-loop">
               <h4 className="title is-4 spanborder has-text-weight-bold">
-                <span>All Recommended Developer Stories</span>
+                <span>Recommended Developer Stories</span>
               </h4>
               <div className="ar-breadcrumb is-hidden-mobile">
                 <nav className="breadcrumb" aria-label="breadcrumbs">
