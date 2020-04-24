@@ -362,7 +362,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       pathPrefix: "/blog",
       component: templates.blog,
       context: {
-        topics,
+        topics: topics.filter((topic) => topic.totalPosts > 0),
       },
     });
 
