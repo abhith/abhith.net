@@ -49,16 +49,16 @@ function Footer() {
                       <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <Link to="/about">About</Link>
+                      <Link to="/about/">About</Link>
                     </li>
                     <li>
-                      <Link to="/blog">Blog</Link>
+                      <Link to="/blog/">Blog</Link>
                     </li>
                     <li>
-                      <Link to="/topics">Topics</Link>
+                      <Link to="/topics/">Topics</Link>
                     </li>
                     <li>
-                      <Link to="/privacy-policy">Privacy Policy</Link>
+                      <Link to="/privacy-policy/">Privacy Policy</Link>
                     </li>
                   </ul>
                 </div>
@@ -68,13 +68,13 @@ function Footer() {
                   <p className="menu-label">Recommended</p>
                   <ul className="menu-list">
                     <li>
-                      <Link to="/recommended/stories">Stories</Link>
+                      <Link to="/recommended/stories/">Stories</Link>
                     </li>
                     <li>
-                      <Link to="/recommended/videos">Videos</Link>
+                      <Link to="/recommended/videos/">Videos</Link>
                     </li>
                     <li>
-                      <Link to="/recommended/services">Services</Link>
+                      <Link to="/recommended/services/">Services</Link>
                     </li>
                   </ul>
                 </div>

@@ -8,7 +8,7 @@ import {
   FaHome,
   FaInfoCircle,
   FaBullhorn,
-  FaShieldAlt
+  FaShieldAlt,
 } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
@@ -21,7 +21,7 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: "",
-      hamburgerMenuClass: ""
+      hamburgerMenuClass: "",
     };
   }
 
@@ -29,7 +29,7 @@ const Navbar = class extends React.Component {
     // toggle the active boolean in the state
     this.setState(
       {
-        active: !this.state.active
+        active: !this.state.active,
       },
       // after state has been updated,
       () => {
@@ -37,11 +37,11 @@ const Navbar = class extends React.Component {
         this.state.active
           ? this.setState({
               navBarActiveClass: "is-active",
-              hamburgerMenuClass: "is-active"
+              hamburgerMenuClass: "is-active",
             })
           : this.setState({
               navBarActiveClass: "",
-              hamburgerMenuClass: ""
+              hamburgerMenuClass: "",
             });
       }
     );
@@ -102,19 +102,19 @@ const Navbar = class extends React.Component {
               <Link to="/" className="navbar-item">
                 <FaHome color="green" /> <span> &nbsp;Home</span>
               </Link>
-              <Link to="/about" className="navbar-item">
+              <Link to="/about/" className="navbar-item">
                 <FaInfoCircle color="cyan" /> <span> &nbsp;About</span>
               </Link>
-              <Link to="/blog" className="navbar-item">
+              <Link to="/blog/" className="navbar-item">
                 <span className="icon">
                   <FaRss color={"orange"}></FaRss>
                 </span>
                 <span>Blog</span>
               </Link>
-              <Link to="/recommended" className="navbar-item">
+              <Link to="/recommended/" className="navbar-item">
                 <FaHeart color="red" /> <span> &nbsp;Recommended</span>
               </Link>
-              <Link to="/topics" className="navbar-item">
+              <Link to="/topics/" className="navbar-item">
                 <FaBullhorn color="turquoise" />
                 <span> &nbsp;Topics</span>
               </Link>
@@ -154,7 +154,7 @@ const Navbar = class extends React.Component {
                 <div className="field is-grouped">
                   <p className="control">
                     <Link
-                      to="/donate"
+                      to="/donate/"
                       className="button k-button k-primary raised has-gradient slanted"
                     >
                       <span>
@@ -185,6 +185,6 @@ export default () => (
         }
       }
     `}
-    render={data => <Navbar logo={data.logo} />}
+    render={(data) => <Navbar logo={data.logo} />}
   />
 );
