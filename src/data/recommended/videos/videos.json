@@ -1,5 +1,14 @@
 [
   {
+    "title": "An Introduction to CQRS and Event Sourcing Patterns - Mathew McLoughlin",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=9a1PqwFrMP0",
+    "date": "2020-04-27T19:20:21.638Z",
+    "type": "youtube",
+    "tags": ["cqrs", "design-patterns", "event-sourcing"]
+  },
+  {
     "title": "Validation using MediatR's Pipeline Behaviors and FluentValidation | Clean .NET Core",
     "description": "",
     "image": "",
