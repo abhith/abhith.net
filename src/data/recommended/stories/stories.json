@@ -1,5 +1,26 @@
 [
   {
+    "title": "Serilog Logging Best Practices",
+    "url": "https://benfoster.io/blog/serilog-logging-best-practices",
+    "description": "This article presents some tips and best practices in order to get the most out of your application logging.",
+    "date": "2020-04-27T10:31:28.263Z",
+    "tags": ["logging"]
+  },
+  {
+    "title": "Implementing event sourcing with Azure Functions",
+    "url": "https://medium.com/tech-effectory/implementing-event-sourcing-with-azure-functions-9b1922f82b78",
+    "description": "In this article I’ll describe an implementation of the event sourcing pattern using Azure storage and Azure Functions.",
+    "date": "2020-04-27T09:31:28.263Z",
+    "tags": ["event-sourcing"]
+  },
+  {
+    "title": "A crypto-mining botnet has been hijacking MSSQL servers for almost two years | ZDNet",
+    "url": "https://www.zdnet.com/article/a-crypto-mining-botnet-has-been-hijacking-mssql-servers-for-almost-two-years/",
+    "description": "Vollgar botnet launches brute-force attacks against MSSQL databases to take over servers and install Monero and Vollar cryptocurrency miners.",
+    "date": "2020-04-27T08:31:28.263Z",
+    "tags": ["security"]
+  },
+  {
     "title": "Svelte vs. React: A Comparison",
     "url": "https://medium.com/swlh/svelte-vs-react-a-comparison-4ddf3448e4a4",
     "description": "The fruit bowl of frontend frameworks is full and React is the fat melon taking up all the space. Do we really need another technology to learn? Rich Harris of the New York Times says yes, and…",
