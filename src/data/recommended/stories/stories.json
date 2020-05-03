@@ -1,5 +1,12 @@
 [
   {
+    "title": "Eclipse Theia Offers a ‘True Open Source Alternative to Visual Studio Code’ – The New Stack",
+    "url": "https://thenewstack.io/eclipse-theia-offers-a-true-open-source-alternative-to-visual-studio-code/",
+    "description": "The Eclipse Foundation has released the first production-ready version of the Eclipse Theia code editor, calling it a true open source alternative to Visual Studio Code.",
+    "date": "2020-05-03T10:31:28.263Z",
+    "tags": ["vscode"]
+  },
+  {
     "title": "6 Code Smells with your CQRS Events – and How to Avoid Them | Learn CQRS and Event Sourcing",
     "url": "https://danielwhittaker.me/2014/10/18/6-code-smells-cqrs-events-avoid/",
     "description": "Designing your 'Events' in a CQRS ES system can be tricky. Use these 6 rules of thumb to guide you into avoiding common pitfalls and creating clean code.",
