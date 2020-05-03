@@ -1,5 +1,14 @@
 [
   {
+    "title": "Azure Messaging: When to use what and why",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=82akIKoX09A",
+    "date": "2020-05-03T19:20:21.638Z",
+    "type": "youtube",
+    "tags": ["messaging", "azure"]
+  },
+  {
     "title": "An Introduction to CQRS and Event Sourcing Patterns - Mathew McLoughlin",
     "description": "",
     "image": "",
