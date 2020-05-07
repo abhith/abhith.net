@@ -7363,10 +7363,10 @@ gatsby-remark-copy-linked-files@^2.2.4:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embed-video@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.0.0.tgz#2a0c9d55b223a6ede4283f5c8e77b922b03a38f1"
-  integrity sha512-Y28j40IM3xpQ990ftbpPC7gDcL1VCZkVRaw3SmPRfxU5z/OPdtoK17IuczhQfXPQe/am/SE8oRfIAdOZ1/ZXjw==
+gatsby-remark-embed-video@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.0.10.tgz#2813199338d27e731783a6f8663477f877e72b73"
+  integrity sha512-3dQgw0g3nndspiXkz7pKOXZs67I1Cz/sefyjXQ2bq6gtdX3qBdBurMuAeIlk0TgueMJCbR8SyFjMyVdI0LAJDg==
   dependencies:
     get-video-id "^3.1.4"
     remark-burger "^1.0.1"
