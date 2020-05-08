@@ -1254,10 +1254,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@fastly/performance-observer-polyfill@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@fastly/performance-observer-polyfill/-/performance-observer-polyfill-1.1.0.tgz#5b7aef95d92e994bd4676d36c409788eef8ed11a"
-  integrity sha512-Fao+nIoldaXTDwt81Q7RIWiL32drcVXZEUpEp3kiCObjsv2TI5Ca4SRb9+cvrQIMeox9rw3ZSVELOlNviL/JvA==
+"@fastly/performance-observer-polyfill@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@fastly/performance-observer-polyfill/-/performance-observer-polyfill-1.1.1.tgz#2e64762fa2e43f32c01dcb2ac68421aded55bbb8"
+  integrity sha512-hmXJBYhIs77KPyg/IcPM5sDeQSPLrTzD6DqGfSUUtvEUoQxbW6nxHYCYJE8CP+Ay+OUqLZlTpW+w1OEOZWckzQ==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
