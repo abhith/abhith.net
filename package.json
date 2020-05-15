@@ -47,7 +47,7 @@
     "intersection-observer": "^0.10.0",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.5",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.0",
     "parcel-bundler": "^1.12.3",
     "polished": "^3.5.2",
     "prism-react-renderer": "^1.0.1",
