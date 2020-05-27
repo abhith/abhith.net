@@ -13,7 +13,7 @@
     "bulma": "^0.8.2",
     "bulma-timeline": "^3.0.4",
     "gatsby": "^2.22.11",
-    "gatsby-awesome-pagination": "^0.3.5",
+    "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-image": "^2.3.3",
     "gatsby-plugin-catch-links": "^2.2.4",
     "gatsby-plugin-emotion": "^4.3.0",
