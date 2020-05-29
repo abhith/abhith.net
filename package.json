@@ -68,8 +68,7 @@
     "remark-emoji": "^2.1.0",
     "smooth-scroll": "^16.1.3",
     "theme-ui": "^0.3.1",
-    "typeface-lora": "^0.0.72",
-    "snyk": "^1.332.1"
+    "typeface-lora": "^0.0.72"
   },
   "keywords": [
     "gatsby"
@@ -83,9 +82,7 @@
     "build:app": "npm run clean && gatsby build",
     "build": "run-p build:**",
     "dev": "gatsby develop",
-    "serve": "gatsby serve",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
+    "serve": "gatsby serve"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
@@ -101,6 +98,5 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "snyk": true
+  }
 }
