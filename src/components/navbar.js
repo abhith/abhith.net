@@ -10,6 +10,7 @@ import {
   FaBullhorn,
   FaShieldAlt,
 } from "react-icons/fa";
+import { FcContacts } from "react-icons/fc";
 import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { StaticQuery, graphql } from "gatsby";
@@ -117,6 +118,9 @@ const Navbar = class extends React.Component {
               <Link to="/topics/" className="navbar-item">
                 <FaBullhorn color="turquoise" />
                 <span> &nbsp;Topics</span>
+              </Link>
+              <Link to="/contact/" className="navbar-item">
+                <FcContacts /> <span> &nbsp;Contact</span>
               </Link>
               <OutboundLink
                 className="is-bold button k-button k-secondary raised has-gradient"

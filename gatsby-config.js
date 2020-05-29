@@ -213,6 +213,7 @@ module.exports = {
         showSpinner: false,
       },
     },
+    `gatsby-plugin-recaptcha`,
     `gatsby-plugin-offline`, // make sure to keep it last in the array
   ],
 };
