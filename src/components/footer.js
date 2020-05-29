@@ -58,6 +58,9 @@ function Footer() {
                       <Link to="/topics/">Topics</Link>
                     </li>
                     <li>
+                      <Link to="/contact/">Contact</Link>
+                    </li>
+                    <li>
                       <Link to="/privacy-policy/">Privacy Policy</Link>
                     </li>
                   </ul>
