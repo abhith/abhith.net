@@ -1,16 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
+import { FaCoffee, FaTwitter, FaShieldAlt } from "react-icons/fa";
 import {
-  FaCoffee,
-  FaRss,
-  FaHeart,
-  FaTwitter,
-  FaHome,
-  FaInfoCircle,
-  FaBullhorn,
-  FaShieldAlt,
-} from "react-icons/fa";
-import { FcContacts } from "react-icons/fc";
+  FcContacts,
+  FcHome,
+  FcPortraitMode,
+  FcReading,
+  FcLike,
+  FcTimeline,
+} from "react-icons/fc";
 import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { StaticQuery, graphql } from "gatsby";
@@ -101,26 +99,40 @@ const Navbar = class extends React.Component {
           >
             <div className="navbar-start">
               <Link to="/" className="navbar-item">
-                <FaHome color="green" /> <span> &nbsp;Home</span>
+                <span class="icon has-text-primary">
+                  <FcHome />
+                </span>
+                <span>Home</span>
               </Link>
               <Link to="/about/" className="navbar-item">
-                <FaInfoCircle color="cyan" /> <span> &nbsp;About</span>
+                <span class="icon has-text-primary">
+                  <FcPortraitMode />
+                </span>
+                <span>About</span>
               </Link>
               <Link to="/blog/" className="navbar-item">
-                <span className="icon">
-                  <FaRss color={"orange"}></FaRss>
+                <span className="icon has-text-primary">
+                  <FcReading></FcReading>
                 </span>
                 <span>Blog</span>
               </Link>
               <Link to="/recommended/" className="navbar-item">
-                <FaHeart color="red" /> <span> &nbsp;Recommended</span>
+                <span className="icon has-text-primary">
+                  <FcLike />
+                </span>
+                <span> Recommended</span>
               </Link>
               <Link to="/topics/" className="navbar-item">
-                <FaBullhorn color="turquoise" />
-                <span> &nbsp;Topics</span>
+                <span className="icon has-text-primary">
+                  <FcTimeline />
+                </span>
+                <span>Topics</span>
               </Link>
               <Link to="/contact/" className="navbar-item">
-                <FcContacts /> <span> &nbsp;Contact</span>
+                <span className="icon has-text-primary">
+                  <FcContacts />
+                </span>
+                <span>Contact</span>
               </Link>
               <OutboundLink
                 className="is-bold button k-button k-secondary raised has-gradient"
