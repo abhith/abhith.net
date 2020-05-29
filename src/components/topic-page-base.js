@@ -2,6 +2,8 @@ import Layout from "@components/layout";
 import PageHero from "@components/page-hero";
 import SEO from "@components/seo/seo";
 import TopicsSideNav from "@components/topic-side-nav";
+import Utterances from "@components/utterances";
+
 import { Link } from "gatsby";
 import React from "react";
 
@@ -128,6 +130,7 @@ const TopicPageBase = ({ activeTab, topic, topics, children }) => {
                 </ul>
               </div>
               {children}
+              <Utterances repo={`Abhith/abhith.net`} />
             </div>
           </div>
         </div>
