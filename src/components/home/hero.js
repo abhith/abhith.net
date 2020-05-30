@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <StaticQuery
       query={query}
-      render={data => {
+      render={(data) => {
         const page = data.markdownRemark;
         return (
           <div className="hero-wrapper">
@@ -19,85 +19,119 @@ export default function Hero() {
                   params={{
                     particles: {
                       number: {
-                        value: 8,
+                        value: 15,
                         density: {
                           enable: true,
-                          value_area: 800
-                        }
+                          value_area: 800,
+                        },
                       },
                       line_linked: {
-                        enable: false
+                        enable: true,
                       },
                       move: {
                         speed: 1,
-                        out_mode: "out"
+                        out_mode: "out",
                       },
                       shape: {
                         type: ["images"],
                         images: [
                           {
-                            src: "/img/site/particles/react.svg",
+                            src: "/img/topics/angular-icon-1.svg",
                             height: 20,
-                            width: 23
+                            width: 23,
                           },
                           {
-                            src: "/img/site/particles/nuxt-emoji.png",
+                            src: "/img/topics/aspnet-core.png",
                             height: 20,
-                            width: 23
+                            width: 20,
                           },
                           {
-                            src: "/img/site/particles/k8s.svg",
+                            src: "/img/topics/dot-net-core-7.svg",
                             height: 20,
-                            width: 20
+                            width: 20,
                           },
                           {
-                            src: "/img/site/particles/code.png",
+                            src: "/img/topics/flutter.svg",
                             height: 20,
-                            width: 20
+                            width: 20,
+                          },
+                          {
+                            src: "/img/topics/gatsby.svg",
+                            height: 20,
+                            width: 20,
                           },
                           {
                             src: "/img/site/particles/github.png",
                             height: 20,
-                            width: 20
+                            width: 20,
                           },
-
+                          {
+                            src: "/img/topics/gitlab.svg",
+                            height: 20,
+                            width: 20,
+                          },
                           {
                             src: "/img/site/particles/javascript.png",
                             height: 20,
-                            width: 20
+                            width: 20,
                           },
                           {
                             src: "/img/site/particles/microsoft-azure-3.png",
                             height: 20,
-                            width: 20
+                            width: 20,
                           },
                           {
-                            src: "/img/site/particles/vue-9.png",
+                            src: "/img/topics/microsoft-sql-server.svg",
                             height: 20,
-                            width: 20
-                          }
-                        ]
+                            width: 20,
+                          },
+                          {
+                            src: "/img/topics/nuxt-emoji.png",
+                            height: 20,
+                            width: 23,
+                          },
+                          {
+                            src: "/img/topics/oauth.svg",
+                            height: 20,
+                            width: 20,
+                          },
+                          {
+                            src: "/img/topics/react.svg",
+                            height: 20,
+                            width: 23,
+                          },
+                          {
+                            src: "/img/site/particles/code.png",
+                            height: 20,
+                            width: 20,
+                          },
+                          {
+                            src: "/img/topics/vue-9.png",
+                            height: 20,
+                            width: 20,
+                          },
+                        ],
                       },
                       color: {
-                        value: "#CCC"
+                        value: "#ccc",
                       },
                       size: {
-                        value: 30,
+                        value: 24,
                         random: false,
                         anim: {
                           enable: true,
-                          speed: 4,
+                          speed: 3,
                           size_min: 10,
-                          sync: false
-                        }
-                      }
+                          sync: false,
+                        },
+                      },
                     },
-                    retina_detect: true
+                    retina_detect: true,
                   }}
                   style={{
                     position: "absolute",
                     width: "100%",
-                    height: "100%"
+                    height: "100%",
                   }}
                 />
               </div>
@@ -134,7 +168,7 @@ export default function Hero() {
                         <PreviewCompatibleImage
                           imageInfo={{
                             image: page.frontmatter.image,
-                            alt: `${page.frontmatter.heading}`
+                            alt: `${page.frontmatter.heading}`,
                           }}
                         />
                       </figure>
