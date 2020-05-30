@@ -99,37 +99,37 @@ const Navbar = class extends React.Component {
           >
             <div className="navbar-start">
               <Link to="/" className="navbar-item">
-                <span class="icon has-text-primary">
+                <span className="icon">
                   <FcHome />
                 </span>
                 <span>Home</span>
               </Link>
               <Link to="/about/" className="navbar-item">
-                <span class="icon has-text-primary">
+                <span className="icon">
                   <FcPortraitMode />
                 </span>
                 <span>About</span>
               </Link>
               <Link to="/blog/" className="navbar-item">
-                <span className="icon has-text-primary">
+                <span className="icon">
                   <FcReading></FcReading>
                 </span>
                 <span>Blog</span>
               </Link>
               <Link to="/recommended/" className="navbar-item">
-                <span className="icon has-text-primary">
+                <span className="icon">
                   <FcLike />
                 </span>
                 <span> Recommended</span>
               </Link>
               <Link to="/topics/" className="navbar-item">
-                <span className="icon has-text-primary">
+                <span className="icon">
                   <FcTimeline />
                 </span>
                 <span>Topics</span>
               </Link>
               <Link to="/contact/" className="navbar-item">
-                <span className="icon has-text-primary">
+                <span className="icon">
                   <FcContacts />
                 </span>
                 <span>Contact</span>
