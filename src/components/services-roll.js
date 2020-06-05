@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicsBar from "./topics-bar";
 
-const ServicesRoll = props => {
-  const { services } = props;
+const ServicesRoll = (props) => {
+  const { services, hideDescription } = props;
 
   return (
     <>
@@ -23,7 +23,10 @@ const ServicesRoll = props => {
                   </OutboundLink>
                 </h4>
 
-                <div className="subtitle">{service.description}</div>
+                {!hideDescription && (
+                  <div className="subtitle">{service.description}</div>
+                )}
+
                 <TopicsBar topics={service.tags} />
               </div>
             </div>
@@ -33,7 +36,12 @@ const ServicesRoll = props => {
   );
 };
 ServicesRoll.propTypes = {
-  services: PropTypes.array.isRequired
+  services: PropTypes.array.isRequired,
+  hideDescription: PropTypes.bool,
+};
+
+ServicesRoll.default = {
+  hideDescription: false,
 };
 
 export default ServicesRoll;

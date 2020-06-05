@@ -5,7 +5,8 @@ import VideosRoll from "../../components/videos-roll";
 import { graphql, Link } from "gatsby";
 
 import Img from "gatsby-image";
-import StoriesRoll from "../../components/stories-roll";
+import StoriesRoll from "@components/stories-roll";
+import ServicesRoll from "@components/services-roll";
 
 export default class RecommendedIndexPage extends React.Component {
   render() {
@@ -15,6 +16,7 @@ export default class RecommendedIndexPage extends React.Component {
     const storiesImgData = data.storiesImg.childImageSharp.fluid;
     const videos = data.recommendedVideos.edges;
     const stories = data.recommendedStories.edges;
+    const services = data.services.edges;
     return (
       <Layout>
         <div className="container">
@@ -131,6 +133,9 @@ export default class RecommendedIndexPage extends React.Component {
                   </div>
                 </div>
               </div>
+              <div className="column">
+                <ServicesRoll services={services} hideDescription={true} />
+              </div>
             </div>
           </div>
         </div>
@@ -176,6 +181,8 @@ export const pageQuery = graphql`
           id
           tags
           url
+          description
+          image
         }
       }
     }
