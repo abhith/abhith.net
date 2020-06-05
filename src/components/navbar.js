@@ -140,8 +140,8 @@ const Navbar = class extends React.Component {
                 target="_blank"
               >
                 <FaShieldAlt color="black" size={24} />
-                <span role="img" aria-label="heart" className="ml-1">
-                  Break The Chain | STAY SAFE
+                <span className="ml-1">
+                  Corona is UNBIASED | Break The Chain
                 </span>
               </OutboundLink>
             </div>
