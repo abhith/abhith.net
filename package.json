@@ -39,7 +39,7 @@
     "gatsby-remark-images-medium-zoom": "^1.7.0",
     "gatsby-remark-numbered-footnotes": "^1.0.1",
     "gatsby-remark-relative-images": "^0.3.0",
-    "gatsby-remark-responsive-iframe": "^2.3.4",
+    "gatsby-remark-responsive-iframe": "^2.4.5",
     "gatsby-remark-smartypants": "^2.2.4",
     "gatsby-source-filesystem": "^2.3.3",
     "gatsby-transformer-json": "^2.3.4",
