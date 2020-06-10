@@ -1015,10 +1015,10 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
-  version "7.10.1"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.1.tgz#b6eb75cac279588d3100baecd1b9894ea2840822"
-  integrity sha512-nQbbCbQc9u/rpg1XCxoMYQTbSMVZjCDxErQ1ClCn9Pvcmv1lGads19ep0a2VsEiIJeHqjZley6EQGEC3Yo1xMA==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
+  version "7.10.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
+  integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -7556,12 +7556,12 @@ gatsby-plugin-mdx@^1.2.14:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-nprogress@^2.3.0:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.3.1.tgz#36fe27e5cca3dda9a1555e2cb75070157f8cebf4"
-  integrity sha512-K9msO/oK0AMQ8pM/++FNey8QwZL+tlwB03cdhxNXumMHwiqqHF28DT5MB6XWgql7SBFMYwvZUA7e8wH+jhKKVg==
+gatsby-plugin-nprogress@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.3.4.tgz#5100b62add8aa72ea37cb721b1e450dc84f94c70"
+  integrity sha512-aQPFdpKk2dTiCZaM594cMk1YrBDPG3FRm19JrVrJujhoN3FKAw7ad7Qntutpxe2MF2CDLFDIjeFAB3HRJQQVHw==
   dependencies:
-    "@babel/runtime" "^7.9.6"
+    "@babel/runtime" "^7.10.2"
     nprogress "^0.2.0"
 
 gatsby-plugin-offline@^3.2.1:
