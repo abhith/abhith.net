@@ -9,7 +9,7 @@ function LatestPosts() {
   return (
     <StaticQuery
       query={query}
-      render={data => {
+      render={(data) => {
         const totalArticlesCount = data.posts.totalCount;
         const latestArticles = data.latestArticles.edges.map(
           normalize.local.articles
@@ -20,8 +20,8 @@ function LatestPosts() {
         );
 
         //* In order to skip the latest posts repeating in last updated one, we are fetching last four updated posts and selecting the one which is not in the latest posts.
-        const lastUpdatedPost = lastUpdatedPosts.find(u =>
-          latestArticles.every(a => a.id !== u.id)
+        const lastUpdatedPost = lastUpdatedPosts.find((u) =>
+          latestArticles.every((a) => a.id !== u.id)
         );
 
         return (
@@ -30,7 +30,7 @@ function LatestPosts() {
               <div className="columns">
                 <BlogCard post={latestArticles[0]}></BlogCard>
                 <div className="column">
-                  {latestArticles.slice(1, 3).map(node => {
+                  {latestArticles.slice(1, 3).map((node) => {
                     return <BlogRollItem post={node} key={node.slug} />;
                   })}
                 </div>
@@ -41,7 +41,7 @@ function LatestPosts() {
               </div>
               <Button
                 text={`View All ${totalArticlesCount} Articles`}
-                path="/blog"
+                path="/blog/"
               ></Button>
             </div>
           </section>
