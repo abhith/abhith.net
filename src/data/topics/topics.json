@@ -456,6 +456,12 @@
     "image": ""
   },
   {
+    "title": "Umbraco",
+    "slug": "umbraco",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Visual Studio",
     "slug": "visual-studio",
     "description": "I always loved to work with the latest and the greatest versions of Visual Studio. I started on VS 2008, now most of the time working with VS 2019.",
@@ -474,6 +480,12 @@
     "image": "vue-9.png"
   },
   {
+    "title": "WCF",
+    "slug": "wcf",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Web.config",
     "slug": "web-config",
     "description": "",
@@ -482,6 +494,12 @@
   {
     "title": "Website Benchmark",
     "slug": "website-benchmark",
+    "description": "",
+    "image": ""
+  },
+  {
+    "title": "Xamarin Forms",
+    "slug": "xamarin-forms",
     "description": "",
     "image": ""
   }
