@@ -91,9 +91,11 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          tags
+          title
           url
           type
+          id
         }
       }
     }

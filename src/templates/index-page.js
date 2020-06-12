@@ -16,7 +16,7 @@ export const IndexPageTemplate = ({
   videos,
   totalStories,
   totalVideos,
-  totalServices
+  totalServices,
 }) => (
   <>
     <SEO />
@@ -89,7 +89,7 @@ IndexPageTemplate.propTypes = {
   featured: PropTypes.array,
   totalStories: PropTypes.number,
   totalVideos: PropTypes.number,
-  totalServices: PropTypes.number
+  totalServices: PropTypes.number,
 };
 
 const IndexPage = ({ data }) => {
@@ -111,8 +111,8 @@ IndexPage.propTypes = {
   data: PropTypes.shape({
     recommendedStories: PropTypes.object,
     recommendedVideos: PropTypes.object,
-    featured: PropTypes.object
-  })
+    featured: PropTypes.object,
+  }),
 };
 
 export default IndexPage;
@@ -142,9 +142,11 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          tags
+          title
           url
           type
+          id
         }
       }
     }
