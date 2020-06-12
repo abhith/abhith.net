@@ -1,5 +1,23 @@
 [
   {
+    "title": "Kubernetes - Services Explained in 15 Minutes!",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=5lzUpDtmWgM",
+    "date": "2020-06-12T11:20:21.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Visual Studio 2019 Launch: Uniting all containers and Kubernetes fans",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=gzc-SpnVa5I",
+    "date": "2020-06-12T10:20:21.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio", "kubernetes"]
+  },
+  {
     "title": "Azure SQL Game Changers for Developers | BDL112",
     "description": "",
     "image": "",

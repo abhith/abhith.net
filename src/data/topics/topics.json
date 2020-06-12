@@ -318,6 +318,12 @@
     "image": ""
   },
   {
+    "title": "Kubernetes",
+    "slug": "kubernetes",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Logging",
     "slug": "logging",
     "description": "",
