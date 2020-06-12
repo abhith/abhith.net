@@ -25,9 +25,8 @@ export default ({ pageContext, location }) => {
     relatedVideos,
     relatedTools,
     next,
-    previous
+    previous,
   } = pageContext;
-
   const githubURL = `https://github.com/Abhith/abhith.net/blob/master/content${article.slug.substring(
     0,
     article.slug.length - 1
@@ -118,7 +117,7 @@ export default ({ pageContext, location }) => {
                       <Link to={`/`}>Home</Link>
                     </li>
                     <li>
-                      <Link to={`/blog`}>Blog</Link>
+                      <Link to={`/blog/`}>Blog</Link>
                     </li>
                     <li className="is-active">
                       <Link to={article.slug}>{article.title}</Link>
