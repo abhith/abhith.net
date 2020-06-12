@@ -71,6 +71,7 @@ module.exports.local = {
         url
         type
         tags
+        title
       }
     }
   }
@@ -101,5 +102,5 @@ module.exports.local = {
         }
       }
     }
-  }`
+  }`,
 };

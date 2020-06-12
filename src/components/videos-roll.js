@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ResponsiveReactPlayer from "./responsive-react-player";
 
-const VideosRoll = props => {
+const VideosRoll = (props) => {
   const { videos, itemsPerRow } = props;
 
   if (itemsPerRow === 1) {
@@ -11,7 +11,11 @@ const VideosRoll = props => {
         {videos &&
           videos.map(({ node: video }) => (
             <div className="mb-3" key={video.url}>
-              <ResponsiveReactPlayer url={video.url} />
+              <ResponsiveReactPlayer
+                url={video.url}
+                title={video.title}
+                topics={video.tags}
+              />
             </div>
           ))}
       </>
@@ -37,7 +41,11 @@ const VideosRoll = props => {
       {videos &&
         videos.map(({ node: video }) => (
           <div className={itemClassName} key={video.url}>
-            <ResponsiveReactPlayer url={video.url} />
+            <ResponsiveReactPlayer
+              url={video.url}
+              title={video.title}
+              topics={video.tags}
+            />
           </div>
         ))}
     </div>
@@ -46,11 +54,11 @@ const VideosRoll = props => {
 
 VideosRoll.propTypes = {
   videos: PropTypes.array.isRequired,
-  itemsPerRow: PropTypes.number
+  itemsPerRow: PropTypes.number,
 };
 
 VideosRoll.defaultProps = {
-  itemsPerRow: 1
+  itemsPerRow: 1,
 };
 
 export default VideosRoll;

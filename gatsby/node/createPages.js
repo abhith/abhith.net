@@ -80,10 +80,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: article.slug,
-      // This component will wrap our MDX content
       component: templates.article,
-      // You can use the values in this context in
-      // our page layout component
       context: {
         article,
         relatedArticles,
