@@ -3,18 +3,38 @@ function normalizeHero(article) {
     full: {},
     regular: {},
     narrow: {},
-    seo: {}
+    seo: {},
   };
 
   if (article.hero) {
     hero = {
-      full: article.hero.full.fluid
+      full: article.hero.full.fluid,
     };
   } else {
     console.log("\u001B[33m", `Missing hero for "${article.title}"`);
   }
 
   return hero;
+}
+
+function normalizeAvatar(author) {
+  let avatar = {
+    small: {},
+    medium: {},
+    large: {},
+  };
+
+  if (author.avatar) {
+    avatar = {
+      small: author.avatar.small.fluid,
+      medium: author.avatar.medium.fluid,
+      large: author.avatar.large.fluid,
+    };
+  } else {
+    console.log("\u001B[33m", `Missing avatar for "${author.name}"`);
+  }
+
+  return avatar;
 }
 
 module.exports.local = {
@@ -35,7 +55,13 @@ module.exports.local = {
       dateModifiedSeoFormat: article.dateModifiedSeoFormat,
       datePublishedSeoFormat: article.datePublishedSeoFormat,
       commentId: article.commentId === null ? article.slug : article.commentId,
-      tableOfContents: article.tableOfContents
+      tableOfContents: article.tableOfContents,
     };
-  }
+  },
+  authors: ({ node: author }) => {
+    return {
+      ...author,
+      avatar: normalizeAvatar(author),
+    };
+  },
 };

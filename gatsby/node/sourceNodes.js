@@ -5,6 +5,7 @@ module.exports = ({ actions }) => {
         slug: String!
         title: String!
         date: Date! @dateformat
+        author: String!
         excerpt: String
         body: String!
         hero: File @fileByRelativePath

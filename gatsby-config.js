@@ -7,6 +7,7 @@ const {
 const isNetlifyProduction = NETLIFY_ENV === "production";
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 const contentPosts = "content/blog";
+const contentAuthors = "content/authors";
 const path = require("path");
 
 const templatesDirectory = path.resolve(__dirname, "src/templates");
@@ -34,11 +35,38 @@ module.exports = {
       fbAppID: "",
     },
   },
+  mapping: {
+    "Mdx.frontmatter.author": `AuthorsYaml`,
+  },
   plugins: [
     `gatsby-image`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml`,
+    `gatsby-transformer-json`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              quality: 90,
+              withWebp: true,
+              maxWidth: 1920,
+              showCaptions: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`,
+          },
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-external-links`,
+        ],
+      },
+    },
     `gatsby-plugin-twitter`,
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-catch-links`,
@@ -72,27 +100,13 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: "gatsby-source-filesystem",
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              linkImagesToOriginal: false,
-              quality: 90,
-              withWebp: true,
-              maxWidth: 1920,
-              showCaptions: true,
-            },
-          },
-          {
-            resolve: `gatsby-remark-images-medium-zoom`,
-          },
-          `gatsby-remark-autolink-headers`,
-          `gatsby-remark-external-links`,
-        ],
+        path: contentAuthors,
+        name: contentAuthors,
       },
     },
+
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -158,7 +172,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    "gatsby-transformer-json",
+
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

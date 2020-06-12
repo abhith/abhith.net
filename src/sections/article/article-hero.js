@@ -2,7 +2,8 @@ import Image from "@components/image";
 import { Link } from "gatsby";
 import React from "react";
 
-const ArticleHero = ({ article }) => {
+const ArticleHero = ({ article, authors }) => {
+  console.log(authors);
   return (
     <section className="hero is-primary is-bold position-relative">
       <div className="hero-body">
@@ -12,7 +13,7 @@ const ArticleHero = ({ article }) => {
               {article.tags && article.tags.length ? (
                 <span className="taglist">
                   {article.tags
-                    .map(tag => (
+                    .map((tag) => (
                       <Link
                         key={tag}
                         className="has-text-warning has-text-weight-bold is-uppercase"
@@ -30,7 +31,7 @@ const ArticleHero = ({ article }) => {
                         {" "}
                         |{" "}
                       </span>,
-                      curr
+                      curr,
                     ])}
                 </span>
               ) : null}
@@ -39,31 +40,35 @@ const ArticleHero = ({ article }) => {
             <h1 className="title is-2 is-light is-semibold is-spaced main-title">
               {article.title}
             </h1>
-
-            <div className="author-block">
-              <div className="image is-64x64">
-                <img src="/img/abhith.jpg" alt="" />
+            {authors && authors.length === 1 ? (
+              <div className="author-block">
+                <div className="image is-64x64">
+                  <Image src={authors[0].avatar.small} alt={authors[0].name} />
+                </div>
+                <div className="author-name">
+                  <span>
+                    <a
+                      className="twitter-follow-button"
+                      href={
+                        "https://twitter.com/" +
+                        authors[0].twitter.replace("@", "")
+                      }
+                      data-show-screen-name="false"
+                    >
+                      Follow {authors[0].twitter}
+                    </a>
+                  </span>
+                  <span>by {authors[0].name}</span>
+                  <span>
+                    {article.date} &middot; {article.timeToRead} &middot; Last
+                    Updated:{" "}
+                    <time dateTime={article.lastModifiedTime}>
+                      {article.lastModifiedTimeString}
+                    </time>
+                  </span>
+                </div>
               </div>
-              <div className="author-name">
-                <span>
-                  <a
-                    className="twitter-follow-button"
-                    href="https://twitter.com/abhithrajan"
-                    data-show-screen-name="false"
-                  >
-                    Follow @AbhithRajan
-                  </a>
-                </span>
-                <span>by Abhith Rajan</span>
-                <span>
-                  {article.date} &middot; {article.timeToRead} &middot; Last
-                  Updated:{" "}
-                  <time dateTime={article.lastModifiedTime}>
-                    {article.lastModifiedTimeString}
-                  </time>
-                </span>
-              </div>
-            </div>
+            ) : null}
           </div>
           <div className="column is-5">
             <figure className="image">

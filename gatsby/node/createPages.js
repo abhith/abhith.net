@@ -54,9 +54,31 @@ module.exports = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "allTopics" query');
   }
 
+  const localAuthors = await graphql(query.local.authors);
+  const authors = localAuthors.data.authors.edges.map(normalize.local.authors);
   log(`Creating`, "articles");
 
   articles.forEach((article, index) => {
+    // Match the Author to the one specified in the article
+    let authorsThatWroteTheArticle;
+    try {
+      authorsThatWroteTheArticle = authors.filter((author) => {
+        const allAuthors = article.author
+          .split(",")
+          .map((a) => a.trim().toLowerCase());
+
+        return allAuthors.some((a) => a === author.name.toLowerCase());
+      });
+    } catch (error) {
+      throw new Error(`
+    We could not find the Author for: "${article.title}".
+    Double check the author field is specified in your post and the name
+    matches a specified author.
+    Provided author: ${article.author}
+    ${error}
+  `);
+    }
+
     // related articles
     let relatedArticles = articles
       .filter(
@@ -83,6 +105,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       component: templates.article,
       context: {
         article,
+        authors: authorsThatWroteTheArticle,
         relatedArticles,
         relatedStories,
         relatedVideos,

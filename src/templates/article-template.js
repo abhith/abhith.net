@@ -1,6 +1,7 @@
+import React from "react";
+import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import React from "react";
 import GitHubButton from "react-github-btn";
 
 import Layout from "@components/layout";
@@ -10,6 +11,8 @@ import SEO from "@components/seo/seo";
 import TableOfContents from "@components/table-of-contents";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
+import Image from "@components/image";
+
 import ArticleHero from "../sections/article/article-hero";
 import RelatedArticles from "../sections/article/article-related-articles";
 import RelatedStories from "../sections/article/article-related-stories";
@@ -20,6 +23,7 @@ import ArticleShare from "../sections/article/article-share";
 export default ({ pageContext, location }) => {
   const {
     article,
+    authors,
     relatedArticles,
     relatedStories,
     relatedVideos,
@@ -104,7 +108,7 @@ export default ({ pageContext, location }) => {
         dateModified={article.dateModifiedSeoFormat}
         datePublished={article.datePublishedSeoFormat}
       />
-      <ArticleHero article={article} />
+      <ArticleHero article={article} authors={authors} />
       <div className="ar-main">
         <div className="ar-side-background" />
         <div className="ar-main-container container">
@@ -144,52 +148,54 @@ export default ({ pageContext, location }) => {
               <MDXRenderer content={article.body}>
                 <TopicsBar topics={article.tags} />
               </MDXRenderer>
-              <div className="container mt-5 mb-3">
-                <div className="media">
-                  <figure className="media-left">
-                    <p className="image is-128x128">
-                      <img
-                        className="is-rounded"
-                        src={`https://www.abhith.net/img/abhith.jpg`}
-                        alt={`Abhith Rajan`}
-                      />
-                    </p>
-                  </figure>
-                  <div className="media-content">
-                    <div className="content">
-                      <p>
-                        <strong className="title is-4">
-                          Written by {`Abhith Rajan`}
-                        </strong>{" "}
-                        <span>
-                          <a
-                            className="twitter-follow-button"
-                            href="https://twitter.com/abhithrajan"
-                            data-show-screen-name="false"
-                          >
-                            Follow @AbhithRajan
-                          </a>
-                        </span>
-                        <br />
-                        {/* TODO: Make dynamic */}
-                        {`
-        Abhith Rajan is an aspiring software engineer with more than 7 years of experience and proven successful track record of delivering technology-based products and services.
-      `}
-                        <br />
-                        <Link
-                          to="/donate"
-                          className="button k-button k-primary raised has-gradient rounded"
-                        >
-                          Buy me a coffee{" "}
-                          <span role="img" aria-label="coffee">
-                            ☕
-                          </span>
-                        </Link>
+
+              {authors && authors.length === 1 ? (
+                <div className="container mt-5 mb-3">
+                  <div className="media">
+                    <figure className="media-left">
+                      <p className="image is-128x128">
+                        <RoundedImage
+                          src={authors[0].avatar.medium}
+                          alt={authors[0].name}
+                        />
                       </p>
+                    </figure>
+                    <div className="media-content">
+                      <div className="content">
+                        <p>
+                          <strong className="title is-4">
+                            Written by {authors[0].name}
+                          </strong>{" "}
+                          <span>
+                            <a
+                              className="twitter-follow-button"
+                              href={
+                                "https://twitter.com/" +
+                                authors[0].twitter.replace("@", "")
+                              }
+                              data-show-screen-name="false"
+                            >
+                              Follow {authors[0].twitter}
+                            </a>
+                          </span>
+                          <br />
+                          {authors[0].bio}
+                          <br />
+                          <Link
+                            to="/donate/"
+                            className="button k-button k-primary raised has-gradient rounded"
+                          >
+                            Buy me a coffee{" "}
+                            <span role="img" aria-label="coffee">
+                              ☕
+                            </span>
+                          </Link>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ) : null}
               <LiveEdit code={askForCommentsCode} noInline={false} />
               <div id="typo" className="ar-typo">
                 <p className="has-text-grey">
@@ -243,3 +249,7 @@ export default ({ pageContext, location }) => {
     </Layout>
   );
 };
+
+const RoundedImage = styled(Image)`
+  border-radius: 50%;
+`;

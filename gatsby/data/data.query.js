@@ -16,6 +16,7 @@ module.exports.local = {
         edges {
           node {
             id
+            author
             body
             slug
             timeToRead
@@ -44,6 +45,37 @@ module.exports.local = {
           }
         }
       }      
+    }`,
+  authors: `{
+      authors: allAuthor {
+        edges {
+          node {
+            bio
+            id
+            name
+            featured
+            twitter
+            slug
+            avatar {
+              small: childImageSharp {
+                fluid(maxWidth: 64, quality: 100) {
+                  ${GatsbyFluid_withWebp}
+                }
+              }
+              medium: childImageSharp {
+                fluid(maxWidth: 128, quality: 100) {
+                  ${GatsbyFluid_withWebp}
+                }
+              }
+              large: childImageSharp {
+                fluid(maxWidth: 328, quality: 100) {
+                  ${GatsbyFluid_withWebp}
+                }
+              }
+            }
+          }
+        }
+      }
     }`,
   stories: `{
     stories: allStoriesJson(

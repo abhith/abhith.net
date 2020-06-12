@@ -12,18 +12,45 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
   const fileNode = getNode(node.parent);
   const source = fileNode && fileNode.sourceInstanceName;
 
+  if (node.internal.type === `AuthorsYaml`) {
+    const fieldData = {
+      ...node,
+    };
+
+    createNode({
+      ...fieldData,
+      // Required fields.
+      id: createNodeId(`${node.id} >>> Author`),
+      parent: node.id,
+      children: [],
+      internal: {
+        type: `Author`,
+        contentDigest: crypto
+          .createHash(`md5`)
+          .update(JSON.stringify(fieldData))
+          .digest(`hex`),
+        content: JSON.stringify(fieldData),
+        description: `Author`,
+      },
+    });
+
+    createParentChildLink({ parent: fileNode, child: node });
+
+    return;
+  }
+
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
   if (node.internal.type === `Mdx` && source === contentPath) {
     const value = createFilePath({ node, getNode });
     const fieldData = {
-      // author: node.frontmatter.author,
+      author: node.frontmatter.author,
       date: node.frontmatter.date,
       hero: node.frontmatter.image,
       draft: node.frontmatter.draft || false,
@@ -33,7 +60,7 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
       tags: node.frontmatter.tags,
       lastModificationTime: node.frontmatter.lastModificationTime,
       commentId: node.frontmatter.commentId,
-      timeToRead: readingTime(node.rawBody).text
+      timeToRead: readingTime(node.rawBody).text,
     };
 
     createNode({
@@ -49,8 +76,8 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
           .update(JSON.stringify(fieldData))
           .digest(`hex`),
         content: JSON.stringify(fieldData),
-        description: `Article Posts`
-      }
+        description: `Article Posts`,
+      },
     });
 
     createParentChildLink({ parent: fileNode, child: node });
