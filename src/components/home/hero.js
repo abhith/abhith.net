@@ -71,6 +71,11 @@ export default function Hero() {
                             width: 20,
                           },
                           {
+                            src: "/img/topics/k8s.svg",
+                            height: 20,
+                            width: 20,
+                          },
+                          {
                             src: "/img/site/particles/javascript.png",
                             height: 20,
                             width: 20,

@@ -1,5 +1,47 @@
 [
   {
+    "title": "Kubernetes NodePort vs LoadBalancer vs Ingress? When should I use what?",
+    "url": "https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0",
+    "description": "Recently, someone asked me what the difference between NodePorts, LoadBalancers, and Ingress were. They are all different ways to get external traffic into your cluster, and they all do it in…",
+    "date": "2020-06-13T08:31:28.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Installation Guide - NGINX Ingress Controller",
+    "url": "https://kubernetes.github.io/ingress-nginx/deploy/",
+    "description": "",
+    "date": "2020-06-13T08:30:30.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "10 Most Used Nginx Commands Every Linux User Must Know",
+    "url": "https://www.tecmint.com/useful-nginx-command-examples/",
+    "description": "This article explains, some of the most commonly used Nginx service management commands that, as a developer or system administrator, should keep at fingertips.",
+    "date": "2020-06-13T08:30:29.265Z",
+    "tags": ["nginx"]
+  },
+  {
+    "title": "Install and Configure Nginx on Ubuntu Linux 18.04 LTS - nixCraft",
+    "url": "https://www.cyberciti.biz/faq/install-and-configure-nginx-on-ubuntu-linux-18-04-lts/",
+    "description": "This page explains how to install and configure Nginx on Ubuntu Linux 18.04 to serve static or dynamic web pages with the help of PHP and MySQL/MariaDB.",
+    "date": "2020-06-13T08:30:29.264Z",
+    "tags": ["nginx"]
+  },
+  {
+    "title": "Changing Nginx Settings - SpinupWP",
+    "url": "https://spinupwp.com/doc/changing-nginx-settings/",
+    "description": "",
+    "date": "2020-06-13T08:30:29.263Z",
+    "tags": ["nginx"]
+  },
+  {
+    "title": "How to Edit Config Files in Ubuntu",
+    "url": "https://vitux.com/how-to-edit-config-files-in-ubuntu/",
+    "description": "In this article, I will describe how to edit config files in Ubuntu 18.04 LTS using Gedit, Nano, Vim, Gvim, and Emacs Editor.",
+    "date": "2020-06-13T08:30:28.263Z",
+    "tags": ["ubuntu"]
+  },
+  {
     "title": "Orleans Health Checks using ASP.NET Core - CodeOpinion",
     "url": "https://codeopinion.com/orleans-health-checks-using-asp-net-core/",
     "description": "Learn how to create Orleans Health Checks by implementing ASP.NET Core Health Checks to verify the health of your Orleans Silo.",

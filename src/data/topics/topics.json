@@ -321,7 +321,7 @@
     "title": "Kubernetes",
     "slug": "kubernetes",
     "description": "",
-    "image": ""
+    "image": "k8s.svg"
   },
   {
     "title": "Logging",
@@ -358,6 +358,12 @@
     "slug": "microservices",
     "description": "",
     "image": ""
+  },
+  {
+    "title": "NGINX",
+    "slug": "nginx",
+    "description": "",
+    "image": "nginx-1.svg"
   },
   {
     "title": "NoSQL",
@@ -452,6 +458,12 @@
   {
     "title": "Testing",
     "slug": "testing",
+    "description": "",
+    "image": ""
+  },
+  {
+    "title": "Ubuntu",
+    "slug": "ubuntu",
     "description": "",
     "image": ""
   },
