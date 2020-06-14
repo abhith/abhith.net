@@ -1,5 +1,14 @@
 [
   {
+    "title": "An Introduction to Helm - Matt Farina, Samsung SDS & Josh Dolitsky, Blood Orange",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=Zzwq9FmZdsU",
+    "date": "2020-06-14T11:20:21.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "Kubernetes - Services Explained in 15 Minutes!",
     "description": "",
     "image": "",
