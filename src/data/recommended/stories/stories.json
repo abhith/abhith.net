@@ -1,5 +1,12 @@
 [
   {
+    "title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+    "url": "https://semver.org/",
+    "description": "Semantic Versioning spec and website",
+    "date": "2020-06-14T08:31:28.263Z",
+    "tags": ["style-guide"]
+  },
+  {
     "title": "Kubernetes NodePort vs LoadBalancer vs Ingress? When should I use what?",
     "url": "https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0",
     "description": "Recently, someone asked me what the difference between NodePorts, LoadBalancers, and Ingress were. They are all different ways to get external traffic into your cluster, and they all do it in…",
