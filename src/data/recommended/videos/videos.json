@@ -1,5 +1,32 @@
 [
   {
+    "title": "Lyft's Envoy: Embracing a Service Mesh",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=55yi4MMVBi4",
+    "date": "2020-06-19T12:20:21.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "How Kubernetes deployments work",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=mNK14yXIZF4",
+    "date": "2020-06-19T11:20:21.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "A conversation with Brendan Burns: Career Development",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=dCQzrnUYR-c",
+    "date": "2020-06-19T10:20:21.638Z",
+    "type": "youtube",
+    "tags": ["career"]
+  },
+  {
     "title": "An Introduction to Helm - Matt Farina, Samsung SDS & Josh Dolitsky, Blood Orange",
     "description": "",
     "image": "",

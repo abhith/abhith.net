@@ -90,6 +90,12 @@
     "image": ""
   },
   {
+    "title": "Career",
+    "slug": "career",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Cache",
     "slug": "cache",
     "description": "One area to check for performance.",
