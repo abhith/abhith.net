@@ -1,5 +1,23 @@
 [
   {
+    "title": "Keynote: Getting to Know Helm 3 - Matt Farina, Senior Staff Engineer, Samsung SDS",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=-uZ25iO1Z1k",
+    "date": "2020-06-21T04:21:21.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Helm 3: Navigating To Distant Shores - Bridget Kromhout & Jessica Deen, Microsoft",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=lYzrhzLAxUI",
+    "date": "2020-06-21T04:20:21.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "Lyft's Envoy: Embracing a Service Mesh",
     "description": "",
     "image": "",
