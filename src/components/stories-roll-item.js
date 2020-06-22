@@ -4,10 +4,32 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicImage from "./topic-image";
 import { domainFromURL } from "../utils/common";
 import TopicsBar from "./topics-bar";
-
+import styled from "@emotion/styled";
+const StoryStyled = styled("div")`
+  a {
+    color: #333;
+  }
+  p {
+    color: #999;
+    font-size: 0.9rem;
+  }
+  .post-title {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 1;
+    box-shadow: 0 15px 45px -5px rgba(7, 10, 25, 0.25);
+    -webkit-filter: brightness(1.07);
+    filter: brightness(1.07);
+    transform: translate(0, -2px);
+  }
+`;
 const StoriesRollItem = ({ post, showDescription }) => {
   return (
-    <div className="box ar-story">
+    <StoryStyled className="box">
       <OutboundLink className="media" target="_blank" href={post.url}>
         <div className="media-left">
           <figure className="image is-64x64">
@@ -29,7 +51,7 @@ const StoriesRollItem = ({ post, showDescription }) => {
         </div>
       </OutboundLink>
       <TopicsBar topics={post.tags} />
-    </div>
+    </StoryStyled>
   );
 };
 StoriesRollItem.propTypes = {

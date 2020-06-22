@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicsBar from "./topics-bar";
+import Box from "@components/box";
 
 const ServicesRoll = (props) => {
   const { services, hideDescription } = props;
@@ -10,7 +11,7 @@ const ServicesRoll = (props) => {
     <>
       {services &&
         services.map(({ node: service }) => (
-          <div className="box" key={service.id}>
+          <Box className="box" key={service.id}>
             <div className="columns">
               <div className="column">
                 <h4 className="title is-4">
@@ -30,7 +31,7 @@ const ServicesRoll = (props) => {
                 <TopicsBar topics={service.tags} />
               </div>
             </div>
-          </div>
+          </Box>
         ))}
     </>
   );
