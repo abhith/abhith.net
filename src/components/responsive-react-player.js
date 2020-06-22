@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactPlayer from "react-player";
 import TopicsBar from "./topics-bar";
-
+import Hoverable from "@components/hoverable";
 const ResponsiveReactPlayer = (props) => {
   return (
-    <div className="card">
+    <Hoverable className="card">
       <div className="card-image">
         <div className="player-wrapper">
           <ReactPlayer
@@ -23,7 +23,7 @@ const ResponsiveReactPlayer = (props) => {
           <TopicsBar topics={props.topics} />
         </div>
       </div>
-    </div>
+    </Hoverable>
   );
 };
 
