@@ -2,10 +2,7 @@ import styled from "@emotion/styled";
 const Box = styled("div")`
   transition: all 0.3s ease;
   &:hover {
-    opacity: 1;
     box-shadow: 0 15px 45px -5px rgba(7, 10, 25, 0.25);
-    -webkit-filter: brightness(1.07);
-    filter: brightness(1.07);
     transform: translate(0, -2px);
   }
 `;
