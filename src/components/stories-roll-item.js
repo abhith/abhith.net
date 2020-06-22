@@ -34,11 +34,11 @@ const StoriesRollItem = ({ post, showDescription }) => {
 };
 StoriesRollItem.propTypes = {
   post: PropTypes.object.isRequired,
-  showDescription: PropTypes.bool
+  showDescription: PropTypes.bool,
 };
 
 StoriesRollItem.defaultProps = {
-  showDescription: true
+  showDescription: true,
 };
 
 export default StoriesRollItem;
