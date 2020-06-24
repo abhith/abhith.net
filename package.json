@@ -87,7 +87,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/config-conventional": "^9.0.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-preset-gatsby": "^0.4.0",
     "husky": "^4.2.5",
