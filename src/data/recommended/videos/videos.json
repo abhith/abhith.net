@@ -1,5 +1,23 @@
 [
   {
+    "title": "Load balancing and HTTP Routing with Envoy Proxy",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=D0cuv1AEftE",
+    "date": "2020-06-25T04:22:21.638Z",
+    "type": "youtube",
+    "tags": ["envoy", "kubernetes"]
+  },
+  {
+    "title": "The Evolution of Distributed Systems on Kubernetes",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=8age_72M_NE",
+    "date": "2020-06-25T04:21:21.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "Keynote: Getting to Know Helm 3 - Matt Farina, Senior Staff Engineer, Samsung SDS",
     "description": "",
     "image": "",

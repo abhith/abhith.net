@@ -210,6 +210,12 @@
     "image": ""
   },
   {
+    "title": "Envoy",
+    "slug": "envoy",
+    "description": "",
+    "image": ""
+  },
+  {
     "title": "Event Sourcing pattern",
     "slug": "event-sourcing",
     "description": "",
@@ -248,6 +254,12 @@
   {
     "title": "Google",
     "slug": "google",
+    "description": "",
+    "image": ""
+  },
+  {
+    "title": "Helm",
+    "slug": "helm",
     "description": "",
     "image": ""
   },
