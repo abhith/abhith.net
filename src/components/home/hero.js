@@ -160,7 +160,7 @@ export default function Hero() {
                       </h2>
                       <p>
                         <Link
-                          to="/about"
+                          to="/about/"
                           className="button k-button k-primary raised has-gradient is-fat is-bold"
                         >
                           <span className="text"> Read More</span>
