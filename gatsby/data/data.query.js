@@ -125,7 +125,7 @@ module.exports.local = {
   }
   }`,
   topics: `{
-    topics: allTopicsJson {
+    topics: allTopic {
       edges {
         node {
           slug

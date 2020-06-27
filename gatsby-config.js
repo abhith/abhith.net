@@ -8,6 +8,7 @@ const isNetlifyProduction = NETLIFY_ENV === "production";
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 const contentPosts = "content/blog";
 const contentAuthors = "content/authors";
+const contentTopics = "content/topics";
 const path = require("path");
 
 const templatesDirectory = path.resolve(__dirname, "src/templates");
@@ -106,7 +107,13 @@ module.exports = {
         name: contentAuthors,
       },
     },
-
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: contentTopics,
+        name: contentTopics,
+      },
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

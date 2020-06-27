@@ -5,7 +5,7 @@ const TopicImage = ({ slug }) => (
   <StaticQuery
     query={graphql`
       query {
-        allTopicsJson {
+        allTopic {
           edges {
             node {
               slug
@@ -16,9 +16,9 @@ const TopicImage = ({ slug }) => (
         }
       }
     `}
-    render={data => {
-      const tagNode = data.allTopicsJson.edges.find(
-        edge => edge.node.slug === slug
+    render={(data) => {
+      const tagNode = data.allTopic.edges.find(
+        (edge) => edge.node.slug === slug
       );
 
       const noImageName = "no_image_available.svg";
