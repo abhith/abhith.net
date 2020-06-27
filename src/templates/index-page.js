@@ -152,7 +152,7 @@ export const pageQuery = graphql`
     }
     featured: allServicesJson(
       limit: 9
-      sort: { fields: [isAffiliate, date], order: [ASC, DESC] }
+      sort: { fields: [date], order: [DESC] }
     ) {
       totalCount
       edges {
