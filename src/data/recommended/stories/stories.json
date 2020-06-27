@@ -1,5 +1,26 @@
 [
   {
+    "title": "Tutorial: Using Azure DevOps to setup a CI/CD pipeline and deploy to Kubernetes",
+    "url": "https://cloudblogs.microsoft.com/opensource/2018/11/27/tutorial-azure-devops-setup-cicd-pipeline-kubernetes-docker-helm/",
+    "description": "Learn how to setup a CI/CD pipeline to deploy your apps on a Kubernetes cluster with Azure DevOps by leveraging a Linux agent, Docker and Helm.",
+    "date": "2020-06-27T10:33:28.263Z",
+    "tags": ["azure-devops", "kubernetes", "helm"]
+  },
+  {
+    "title": "Announcing General Availability of YAML CD features in Azure Pipelines | Azure DevOps Blog",
+    "url": "https://devblogs.microsoft.com/devops/announcing-general-availability-of-azure-pipelines-yaml-cd/",
+    "description": "We now offer a unified Azure Pipelines YAML experience, so you can configure pipelines to do CI, CD, or CI and CD together.",
+    "date": "2020-06-27T10:33:27.263Z",
+    "tags": ["azure-devops"]
+  },
+  {
+    "title": "Recommended naming and tagging conventions - Cloud Adoption Framework | Microsoft Docs",
+    "url": "https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging",
+    "description": "Learn detailed resource naming and tagging recommendations aimed specifically at supporting enterprise cloud adoption efforts.",
+    "date": "2020-06-27T10:33:26.263Z",
+    "tags": ["azure", "style-guide"]
+  },
+  {
     "title": "Conditional Middleware based on request in ASP.NET Core",
     "url": "https://www.devtrends.co.uk/blog/conditional-middleware-based-on-request-in-asp.net-core",
     "description": "This post looks at how to configure ASP.NET Core middleware in a way that allows you to have different middleware for different types of request.",
