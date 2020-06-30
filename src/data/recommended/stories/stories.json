@@ -1,5 +1,19 @@
 [
   {
+    "title": "ASP.NET Core Exploring Custom Middleware",
+    "url": "https://adamstorr.azurewebsites.net/blog/aspnetcore-exploring-custom-middleware",
+    "description": "Exploring creating and consuming custom middleware in ASP.NET core and it's configuration",
+    "date": "2020-06-30T10:33:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Architecting Kubernetes clusters — choosing a worker node size",
+    "url": "https://learnk8s.io/kubernetes-node-size",
+    "description": "What type of worker nodes should I use for my Kubernetes cluster? And how many of them?. This article looks at the pros and cons of either.",
+    "date": "2020-06-30T10:33:28.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "Tutorial: Using Azure DevOps to setup a CI/CD pipeline and deploy to Kubernetes",
     "url": "https://cloudblogs.microsoft.com/opensource/2018/11/27/tutorial-azure-devops-setup-cicd-pipeline-kubernetes-docker-helm/",
     "description": "Learn how to setup a CI/CD pipeline to deploy your apps on a Kubernetes cluster with Azure DevOps by leveraging a Linux agent, Docker and Helm.",
