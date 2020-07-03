@@ -1,5 +1,12 @@
 [
   {
+    "title": "Using Kubernetes Helm to push ConfigMap changes to your Deployments - Sander Knape",
+    "url": "https://sanderknape.com/2019/03/kubernetes-helm-configmaps-changes-deployments/",
+    "description": "",
+    "date": "2020-07-03T10:33:29.263Z",
+    "tags": ["helm"]
+  },
+  {
     "title": "ASP.NET Core Exploring Custom Middleware",
     "url": "https://adamstorr.azurewebsites.net/blog/aspnetcore-exploring-custom-middleware",
     "description": "Exploring creating and consuming custom middleware in ASP.NET core and it's configuration",
