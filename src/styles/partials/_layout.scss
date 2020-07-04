@@ -464,3 +464,49 @@ article h6 {
   font-size: 12px;
   padding: 1rem 0;
 }
+
+// Navbar
+.ar-navbar-item:hover span.icon {
+  display: none;
+}
+.ar-navbar-item:hover span.cd-cursor {
+  display: block;
+}
+.ar-navbar-item:hover:before {
+  content: "$ cd /";
+}
+
+.ar-navbar-item:hover {
+  text-transform: lowercase;
+}
+
+.cd-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1rem;
+  background: #008f11;
+  margin-left: 5px;
+  border-radius: 1px;
+  animation: cursor 1s infinite;
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cd-cursor {
+    animation: none;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

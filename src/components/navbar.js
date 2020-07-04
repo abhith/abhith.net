@@ -13,7 +13,7 @@ import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-
+import NavbarItem from "@components/navbar-item";
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props);
@@ -96,42 +96,24 @@ const Navbar = class extends React.Component {
           className={`navbar-menu ${this.state.navBarActiveClass}`}
         >
           <div className="navbar-start">
-            <Link to="/" className="navbar-item">
-              <span className="icon">
-                <FcHome />
-              </span>
-              <span>Home</span>
-            </Link>
-            <Link to="/about/" className="navbar-item">
-              <span className="icon">
-                <FcPortraitMode />
-              </span>
-              <span>About</span>
-            </Link>
-            <Link to="/blog/" className="navbar-item">
-              <span className="icon">
-                <FcReading></FcReading>
-              </span>
-              <span>Blog</span>
-            </Link>
-            <Link to="/recommended/" className="navbar-item">
-              <span className="icon">
-                <FcLike />
-              </span>
-              <span>Recommended</span>
-            </Link>
-            <Link to="/topics/" className="navbar-item">
-              <span className="icon">
-                <FcTimeline />
-              </span>
-              <span>Topics</span>
-            </Link>
-            <Link to="/contact/" className="navbar-item">
-              <span className="icon">
-                <FcContacts />
-              </span>
-              <span>Contact</span>
-            </Link>
+            <NavbarItem to="/" title="Home">
+              <FcHome />
+            </NavbarItem>
+            <NavbarItem to="/about/" title="About">
+              <FcPortraitMode />
+            </NavbarItem>
+            <NavbarItem to="/blog/" title="Blog">
+              <FcReading />
+            </NavbarItem>
+            <NavbarItem to="/recommended/" title="Recommended">
+              <FcLike />
+            </NavbarItem>
+            <NavbarItem to="/topics/" title="Topics">
+              <FcTimeline />
+            </NavbarItem>
+            <NavbarItem to="/contact/" title="Contact">
+              <FcContacts />
+            </NavbarItem>
           </div>
           <div className="navbar-end">
             <div className="navbar-item">
