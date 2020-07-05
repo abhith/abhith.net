@@ -1,5 +1,12 @@
 [
   {
+    "title": "Simple Management of Prometheus Monitoring Pipeline with the Prometheus Operator",
+    "url": "https://medium.com/kubernetes-tutorials/simple-management-of-prometheus-monitoring-pipeline-with-the-prometheus-operator-b445da0e0d1a",
+    "description": "Prometheus is an open source monitoring and alerting toolkit originally developed by SoundCloud in 2012. Since then, the platform has attracted a vibrant developer and user community. Prometheus is…",
+    "date": "2020-07-05T10:33:29.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "Using Kubernetes Helm to push ConfigMap changes to your Deployments - Sander Knape",
     "url": "https://sanderknape.com/2019/03/kubernetes-helm-configmaps-changes-deployments/",
     "description": "",
