@@ -1,5 +1,14 @@
 [
   {
+    "title": "Dynamically enabling features with Feature Flags in .NET Core 3.1",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=6EebLChouDE",
+    "date": "2020-07-09T04:22:22.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Fluent Bit: Solving Logging Challenges for Cloud Native Environments",
     "description": "",
     "image": "",
