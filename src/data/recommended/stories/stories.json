@@ -1,5 +1,26 @@
 [
   {
+    "title": "Multiple post-deployment scripts with SQL server project",
+    "url": "https://medium.com/@desmond80in/multiple-post-deployment-scripts-with-sql-server-project-5d3c9e2f52b4",
+    "description": "",
+    "date": "2020-07-14T12:33:29.263Z",
+    "tags": ["visual-studio", "sql-server"]
+  },
+  {
+    "title": "Good Practices for Enterprise Integrations over the Azure Service Bus",
+    "url": "https://saebamini.com/good-practices-for-enterprise-integrations-over-the-azure-service-bus/",
+    "description": "",
+    "date": "2020-07-14T11:33:29.263Z",
+    "tags": ["azure-service-bus"]
+  },
+  {
+    "title": "What PartitionKey and RowKey are for in Windows Azure Table Storage",
+    "url": "https://blog.maartenballiauw.be/post/2012/10/08/what-partitionkey-and-rowkey-are-for-in-windows-azure-table-storage.html",
+    "description": "",
+    "date": "2020-07-14T10:33:29.263Z",
+    "tags": ["azure"]
+  },
+  {
     "title": "Feature Flags for ASP.Net Core Applications using Microsoft.FeatureManagement Library | Kasun Kodagoda",
     "url": "https://kasunkodagoda.com/2020/01/16/implementing-feature-flags-for-asp-net-core-applications-using-microsoft-featuremanagement-library/",
     "description": "Using Microsoft.FeatureManagement libararies implementing feature flags for ASP.Net Core MVC applications has never been easier. Learn how.",
