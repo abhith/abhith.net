@@ -12,7 +12,7 @@ const RelatedTools = ({ relatedServices }) => {
       <div className="container is-fluid">
         <div className="columns">
           <div className="column is-full">
-            <TitleBar title={`Related Services`} />
+            <TitleBar title={`Related Tools & Services`} />
             <ServicesRoll services={relatedServices} />
           </div>
         </div>

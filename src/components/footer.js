@@ -77,7 +77,7 @@ function Footer() {
                       <Link to="/recommended/videos/">Videos</Link>
                     </li>
                     <li>
-                      <Link to="/recommended/services/">Services</Link>
+                      <Link to="/recommended/services/">Tools & Services</Link>
                     </li>
                   </ul>
                 </div>

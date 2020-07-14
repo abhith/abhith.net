@@ -8,7 +8,7 @@ const FeaturedSidebar = ({ items, totalCount }) => {
     <div className="sticky">
       <h4 className="spanborder">
         <span className="title is-4 has-text-weight-bold">
-          Recommended Services
+          Recommended Tools & Services
         </span>
       </h4>
       <ol className="list-featured">
@@ -31,7 +31,7 @@ const FeaturedSidebar = ({ items, totalCount }) => {
           ))}
       </ol>
       <Button
-        text={`View All ${totalCount} Services`}
+        text={`View All ${totalCount} Tools & Services`}
         path="/recommended/services"
         align="left"
       ></Button>
@@ -40,7 +40,7 @@ const FeaturedSidebar = ({ items, totalCount }) => {
 };
 
 FeaturedSidebar.propTypes = {
-  items: PropTypes.array
+  items: PropTypes.array,
 };
 
 export default FeaturedSidebar;

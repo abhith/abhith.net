@@ -111,7 +111,7 @@ export default class RecommendedIndexPage extends React.Component {
                   <div className="">
                     <Link className="text-dark" to="/recommended/services">
                       <h2 className="title is-4 has-text-weight-bold">
-                        Services
+                        Tools & Services
                       </h2>
                     </Link>
                     <p className="excerpt">
@@ -125,7 +125,7 @@ export default class RecommendedIndexPage extends React.Component {
                         className="button k-button k-primary raised has-gradient is-bold"
                       >
                         <span className="text">
-                          View All {data.services.totalCount} Services
+                          View All {data.services.totalCount} Tools & Services
                         </span>
                         <span className="front-gradient"></span>
                       </Link>
