@@ -1,5 +1,13 @@
 [
   {
+    "title": "ScreenToGif - Record your screen, edit and save as a gif or video",
+    "url": "https://www.screentogif.com/",
+    "description": "Free screen recorder tool. Record, edit and save as a gif or video.",
+    "image": "",
+    "date": "2020-07-14T14:30:28.263Z",
+    "tags": ["developer-tools"]
+  },
+  {
     "title": "Lens | The Kubernetes IDE",
     "url": "https://k8slens.dev",
     "description": "Lens IDE for Kubernetes. The only system you’ll ever need to take control of your Kubernetes clusters. It's open source and free. Download it today!",
