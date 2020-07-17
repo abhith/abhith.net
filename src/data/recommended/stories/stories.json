@@ -1,5 +1,12 @@
 [
   {
+    "title": "Using Certificates from Azure Key Vault in ASP.NET Core | Software Engineering",
+    "url": "https://damienbod.com/2020/04/09/using-certificates-from-azure-key-vault-in-asp-net-core/",
+    "description": "This post shows how you can create and use X509 certificates in Azure Key Vault. The certificates are created using Azure CLI and are used inside an ASP.NET Core application. Code: StsServerIdentity/Services/Certificate Setup using Azure CLI Azure CLI can be used to setup the Azure Key Vault and also create certificates for an existing Key…",
+    "date": "2020-07-17T08:33:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "10 Visual Studio Navigation Productivity Tips - NDepend",
     "url": "https://blog.ndepend.com/10-visual-studio-navigation-productivity-tips/",
     "description": "10 Visual Studio search and navigation productivity tips illustrated with some GIFs. Learn those tips now and significantly boost your productivity.",
