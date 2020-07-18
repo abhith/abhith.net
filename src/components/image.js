@@ -34,7 +34,7 @@ function Image({ src, alt, className, ...props }) {
   const imgProps = {
     className,
     alt,
-    ...props
+    ...props,
   };
 
   // TODO : Find where you have src null returns
