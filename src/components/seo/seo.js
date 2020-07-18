@@ -165,6 +165,14 @@ function SEO({
             rel: "me",
             href: "https://github.com/Abhith",
           },
+          {
+            rel: "webmention",
+            href: "https://webmention.io/www.abhith.net/webmention",
+          },
+          {
+            rel: "pingback",
+            href: "https://webmention.io/www.abhith.net/xmlrpc",
+          },
         ]}
       />
       <SchemaOrg
