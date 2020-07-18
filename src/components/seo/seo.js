@@ -3,10 +3,6 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import SchemaOrg from "./schema-org";
-
-// <link rel="canonical" href={url} />
-// <meta property="fb:app_id" content={seo.social.fbAppID} />
-
 function SEO({
   description,
   lang,
@@ -16,7 +12,7 @@ function SEO({
   isBlogPost,
   slug,
   dateModified,
-  datePublished
+  datePublished,
 }) {
   const { site, posts, stories, videos, services } = useStaticQuery(
     graphql`
@@ -74,93 +70,101 @@ function SEO({
     <>
       <Helmet
         htmlAttributes={{
-          lang
+          lang,
         }}
         title={title}
         meta={[
           {
             name: `description`,
-            content: metaDescription
+            content: metaDescription,
           },
           {
             name: `image`,
-            content: seoImage
+            content: seoImage,
           },
           {
             property: `og:title`,
-            content: title
+            content: title,
           },
           {
             property: `og:description`,
-            content: metaDescription
+            content: metaDescription,
           },
           {
             property: `og:type`,
-            content: ogType
+            content: ogType,
           },
           {
             property: `og:url`,
-            content: url
+            content: url,
           },
           {
             property: `og:image`,
-            content: seoImage
+            content: seoImage,
           },
           {
             name: `twitter:card`,
-            content: `summary_large_image`
+            content: `summary_large_image`,
           },
           {
             name: `twitter:creator`,
-            content: site.siteMetadata.social.twitter
+            content: site.siteMetadata.social.twitter,
           },
           {
             name: `twitter:title`,
-            content: title
+            content: title,
           },
           {
             name: `twitter:description`,
-            content: metaDescription
+            content: metaDescription,
           },
           {
             name: `twitter:image`,
-            content: seoImage
+            content: seoImage,
           },
           {
             name: "msapplication-TileImage",
-            content: "/img/mstile-150x150.png"
-          }
+            content: "/img/mstile-150x150.png",
+          },
         ].concat(meta)}
         link={[
           {
             rel: "icon",
             type: "image/png",
             href: "/img/favicon-16x16.png",
-            sizes: "16x16"
+            sizes: "16x16",
           },
           {
             rel: "icon",
             type: "image/png",
             href: "/img/favicon-32x32.png",
-            sizes: "32x32"
+            sizes: "32x32",
           },
           {
             rel: "icon",
             type: "image/png",
             sizes: "144x144",
-            href: "/img/android-chrome-144x144.png"
+            href: "/img/android-chrome-144x144.png",
           },
           {
             rel: "apple-touch-icon",
             type: "image/png",
             sizes: "180x180",
-            href: "/img/apple-touch-icon.png"
+            href: "/img/apple-touch-icon.png",
           },
           {
             rel: "mask-icon",
             href: "/img/safari-pinned-tab.svg",
-            color: "#ff4400"
-          }
+            color: "#ff4400",
+          },
+          {
+            rel: "me",
+            href: "https://twitter.com/abhithrajan",
+          },
+          {
+            rel: "me",
+            href: "https://github.com/Abhith",
+          },
         ]}
       />
       <SchemaOrg
@@ -186,7 +190,7 @@ SEO.defaultProps = {
   image: ``,
   slug: ``,
   datePublished: ``,
-  dateModified: ``
+  dateModified: ``,
 };
 
 SEO.propTypes = {
@@ -198,7 +202,7 @@ SEO.propTypes = {
   image: PropTypes.string,
   slug: PropTypes.string,
   datePublished: PropTypes.string,
-  dateModified: PropTypes.string
+  dateModified: PropTypes.string,
 };
 
 export default SEO;
