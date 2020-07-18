@@ -37,7 +37,7 @@ const ArticleHero = ({ article, authors }) => {
               ) : null}
             </p>
             <div className="divider" />
-            <h1 className="title is-2 is-light is-semibold is-spaced main-title">
+            <h1 className="title is-2 is-light is-semibold is-spaced main-title p-name">
               {article.title}
             </h1>
             {authors && authors.length === 1 ? (
@@ -58,7 +58,7 @@ const ArticleHero = ({ article, authors }) => {
                       Follow {authors[0].twitter}
                     </a>
                   </span>
-                  <span>by {authors[0].name}</span>
+                  <span className="p-name">{authors[0].name}</span>
                   <span>
                     {article.date} &middot; {article.timeToRead} &middot; Last
                     Updated:{" "}

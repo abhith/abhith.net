@@ -7,7 +7,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main role="main">{children}</main>
+      <main role="main" className="h-card">
+        {children}
+      </main>
       <Footer />
     </>
   );
