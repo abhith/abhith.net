@@ -125,7 +125,12 @@ export default ({ pageContext, location }) => {
                         <Link to={`/blog/`}>Blog</Link>
                       </li>
                       <li className="is-active">
-                        <Link to={article.slug}>{article.title}</Link>
+                        <a
+                          className="u-url"
+                          href={"https://www.abhith.net" + article.slug}
+                        >
+                          {article.title}
+                        </a>
                       </li>
                     </ul>
                   </nav>
