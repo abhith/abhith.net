@@ -58,11 +58,14 @@ const ArticleHero = ({ article, authors }) => {
                       Follow {authors[0].twitter}
                     </a>
                   </span>
-                  <span className="p-name">{authors[0].name}</span>
+                  <span className="p-author h-card">{authors[0].name}</span>
                   <span>
                     {article.date} &middot; {article.timeToRead} &middot; Last
                     Updated:{" "}
-                    <time dateTime={article.lastModifiedTime}>
+                    <time
+                      dateTime={article.lastModifiedTime}
+                      className="dt-published"
+                    >
                       {article.lastModifiedTimeString}
                     </time>
                   </span>
