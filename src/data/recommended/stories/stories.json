@@ -1,5 +1,705 @@
 [
   {
+    "title": "Using Certificates from Azure Key Vault in ASP.NET Core | Software Engineering",
+    "url": "https://damienbod.com/2020/04/09/using-certificates-from-azure-key-vault-in-asp-net-core/",
+    "description": "This post shows how you can create and use X509 certificates in Azure Key Vault. The certificates are created using Azure CLI and are used inside an ASP.NET Core application. Code: StsServerIdentity/Services/Certificate Setup using Azure CLI Azure CLI can be used to setup the Azure Key Vault and also create certificates for an existing Key…",
+    "date": "2020-07-17T08:33:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "10 Visual Studio Navigation Productivity Tips - NDepend",
+    "url": "https://blog.ndepend.com/10-visual-studio-navigation-productivity-tips/",
+    "description": "10 Visual Studio search and navigation productivity tips illustrated with some GIFs. Learn those tips now and significantly boost your productivity.",
+    "date": "2020-07-15T08:33:29.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Multiple post-deployment scripts with SQL server project",
+    "url": "https://medium.com/@desmond80in/multiple-post-deployment-scripts-with-sql-server-project-5d3c9e2f52b4",
+    "description": "",
+    "date": "2020-07-14T12:33:29.263Z",
+    "tags": ["visual-studio", "sql-server"]
+  },
+  {
+    "title": "Good Practices for Enterprise Integrations over the Azure Service Bus",
+    "url": "https://saebamini.com/good-practices-for-enterprise-integrations-over-the-azure-service-bus/",
+    "description": "",
+    "date": "2020-07-14T11:33:29.263Z",
+    "tags": ["azure-service-bus"]
+  },
+  {
+    "title": "What PartitionKey and RowKey are for in Windows Azure Table Storage",
+    "url": "https://blog.maartenballiauw.be/post/2012/10/08/what-partitionkey-and-rowkey-are-for-in-windows-azure-table-storage.html",
+    "description": "",
+    "date": "2020-07-14T10:33:29.263Z",
+    "tags": ["azure"]
+  },
+  {
+    "title": "Feature Flags for ASP.Net Core Applications using Microsoft.FeatureManagement Library | Kasun Kodagoda",
+    "url": "https://kasunkodagoda.com/2020/01/16/implementing-feature-flags-for-asp-net-core-applications-using-microsoft-featuremanagement-library/",
+    "description": "Using Microsoft.FeatureManagement libararies implementing feature flags for ASP.Net Core MVC applications has never been easier. Learn how.",
+    "date": "2020-07-13T10:33:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "[DIY] How to Set Up Prometheus and Ingress on Kubernetes",
+    "url": "https://blog.gojekengineering.com/diy-how-to-set-up-prometheus-and-ingress-on-kubernetes-d395248e2ba",
+    "description": "Today let’s take a look at how we can setup Prometheus and use it to monitor Kubernetes cluster and other resources running on the cluster. We will also look in into how to setup NGINX Ingress…",
+    "date": "2020-07-09T10:33:29.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Configuring and Using Swagger UI in ASP.NET Core Web API - Code Maze",
+    "url": "https://code-maze.com/swagger-ui-asp-net-core-web-api/",
+    "description": "In this article, we are going to learn how to integrate the Swagger UI in an ASP.NET Core Web API and extend documentations and customizing UI.",
+    "date": "2020-07-07T10:33:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Getting Value from appsettings.json in .NET Core",
+    "url": "https://www.telerik.com/blogs/how-to-get-values-from-appsettings-json-in-net-core",
+    "description": "Learn how to fetch properties or values from appsettings.json in .NET Core. We’ll cover it using both IConfiguration and Options Pattern.",
+    "date": "2020-07-06T10:33:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "5 best Android parental control apps and other methods! - Android Authority",
+    "url": "https://www.androidauthority.com/best-parental-control-apps-android-1133716",
+    "description": "Parental control is a lot different today than it was years ago. Here are the best parental control apps and some other good ideas too!",
+    "date": "2020-07-06T10:33:28.263Z",
+    "tags": ["android", "awesome-list"]
+  },
+  {
+    "title": "Simple Management of Prometheus Monitoring Pipeline with the Prometheus Operator",
+    "url": "https://medium.com/kubernetes-tutorials/simple-management-of-prometheus-monitoring-pipeline-with-the-prometheus-operator-b445da0e0d1a",
+    "description": "Prometheus is an open source monitoring and alerting toolkit originally developed by SoundCloud in 2012. Since then, the platform has attracted a vibrant developer and user community. Prometheus is…",
+    "date": "2020-07-05T10:33:29.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Using Kubernetes Helm to push ConfigMap changes to your Deployments - Sander Knape",
+    "url": "https://sanderknape.com/2019/03/kubernetes-helm-configmaps-changes-deployments/",
+    "description": "",
+    "date": "2020-07-03T10:33:29.263Z",
+    "tags": ["helm"]
+  },
+  {
+    "title": "ASP.NET Core Exploring Custom Middleware",
+    "url": "https://adamstorr.azurewebsites.net/blog/aspnetcore-exploring-custom-middleware",
+    "description": "Exploring creating and consuming custom middleware in ASP.NET core and it's configuration",
+    "date": "2020-06-30T10:33:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Architecting Kubernetes clusters — choosing a worker node size",
+    "url": "https://learnk8s.io/kubernetes-node-size",
+    "description": "What type of worker nodes should I use for my Kubernetes cluster? And how many of them?. This article looks at the pros and cons of either.",
+    "date": "2020-06-30T10:33:28.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Tutorial: Using Azure DevOps to setup a CI/CD pipeline and deploy to Kubernetes",
+    "url": "https://cloudblogs.microsoft.com/opensource/2018/11/27/tutorial-azure-devops-setup-cicd-pipeline-kubernetes-docker-helm/",
+    "description": "Learn how to setup a CI/CD pipeline to deploy your apps on a Kubernetes cluster with Azure DevOps by leveraging a Linux agent, Docker and Helm.",
+    "date": "2020-06-27T10:33:28.263Z",
+    "tags": ["azure-devops", "kubernetes", "helm"]
+  },
+  {
+    "title": "Announcing General Availability of YAML CD features in Azure Pipelines | Azure DevOps Blog",
+    "url": "https://devblogs.microsoft.com/devops/announcing-general-availability-of-azure-pipelines-yaml-cd/",
+    "description": "We now offer a unified Azure Pipelines YAML experience, so you can configure pipelines to do CI, CD, or CI and CD together.",
+    "date": "2020-06-27T10:33:27.263Z",
+    "tags": ["azure-devops"]
+  },
+  {
+    "title": "Recommended naming and tagging conventions - Cloud Adoption Framework | Microsoft Docs",
+    "url": "https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging",
+    "description": "Learn detailed resource naming and tagging recommendations aimed specifically at supporting enterprise cloud adoption efforts.",
+    "date": "2020-06-27T10:33:26.263Z",
+    "tags": ["azure", "style-guide"]
+  },
+  {
+    "title": "Conditional Middleware based on request in ASP.NET Core",
+    "url": "https://www.devtrends.co.uk/blog/conditional-middleware-based-on-request-in-asp.net-core",
+    "description": "This post looks at how to configure ASP.NET Core middleware in a way that allows you to have different middleware for different types of request.",
+    "date": "2020-06-25T10:33:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Excluding health check endpoints from Serilog request logging: Using Serilog.AspNetCore in ASP.NET Core 3.0 - Part 4",
+    "url": "https://andrewlock.net/using-serilog-aspnetcore-in-asp-net-core-3-excluding-health-check-endpoints-from-serilog-request-logging/",
+    "description": "In this post I show how to skip the summary log for some requests when using Serilog.AspNetCore's request logging middleware",
+    "date": "2020-06-25T10:32:28.263Z",
+    "tags": ["logging", "aspnet-core"]
+  },
+  {
+    "title": "Eliding Async and Await",
+    "url": "https://blog.stephencleary.com/2016/12/eliding-async-await.html",
+    "description": "A discussion about returning tasks directly rather than using async/await..",
+    "date": "2020-06-25T10:31:28.263Z",
+    "tags": ["asynchronous-programming", "c-sharp"]
+  },
+  {
+    "title": "How to use Envoy as a Load Balancer in Kubernetes",
+    "url": "https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/",
+    "description": "An introduction to using Envoy as a load balancer in Kubernetes, and configuring various load balancing algorithms.",
+    "date": "2020-06-23T10:31:28.263Z",
+    "tags": ["envoy", "kubernetes"]
+  },
+  {
+    "title": "Getting Started With Helm 3",
+    "url": "https://thorsten-hans.com/getting-started-with-helm3",
+    "description": "This Helm 3 tutorial helps you to get started with the latest version of the famous Kubernetes package manager. Grow fast and master Helm 3.",
+    "date": "2020-06-21T04:31:28.263Z",
+    "tags": ["helm", "kubernetes"]
+  },
+  {
+    "title": "Istio vs. Linkerd vs. Envoy: A Comparison of Service Meshes | Logz.io",
+    "url": "https://logz.io/blog/istio-linkerd-envoy-comparison-service-meshes/",
+    "description": "With the rise of Kubernetes, service meshes have become a critical part of the DevOps pipeline. This post compares the big 3: Istio vs. Linkerd vs. Envoy.",
+    "date": "2020-06-19T08:31:28.263Z",
+    "tags": ["helm", "kubernetes"]
+  },
+  {
+    "title": "Breaking Changes in Helm 3 (and How to Fix Them)",
+    "url": "https://itnext.io/breaking-changes-in-helm-3-and-how-to-fix-them-39fea23e06ff",
+    "description": "",
+    "date": "2020-06-18T08:31:28.263Z",
+    "tags": ["helm", "kubernetes"]
+  },
+  {
+    "title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+    "url": "https://semver.org/",
+    "description": "Semantic Versioning spec and website",
+    "date": "2020-06-14T08:31:28.263Z",
+    "tags": ["style-guide"]
+  },
+  {
+    "title": "Kubernetes NodePort vs LoadBalancer vs Ingress? When should I use what?",
+    "url": "https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0",
+    "description": "Recently, someone asked me what the difference between NodePorts, LoadBalancers, and Ingress were. They are all different ways to get external traffic into your cluster, and they all do it in…",
+    "date": "2020-06-13T08:31:28.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Installation Guide - NGINX Ingress Controller",
+    "url": "https://kubernetes.github.io/ingress-nginx/deploy/",
+    "description": "",
+    "date": "2020-06-13T08:30:30.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "10 Most Used Nginx Commands Every Linux User Must Know",
+    "url": "https://www.tecmint.com/useful-nginx-command-examples/",
+    "description": "This article explains, some of the most commonly used Nginx service management commands that, as a developer or system administrator, should keep at fingertips.",
+    "date": "2020-06-13T08:30:29.265Z",
+    "tags": ["nginx"]
+  },
+  {
+    "title": "Install and Configure Nginx on Ubuntu Linux 18.04 LTS - nixCraft",
+    "url": "https://www.cyberciti.biz/faq/install-and-configure-nginx-on-ubuntu-linux-18-04-lts/",
+    "description": "This page explains how to install and configure Nginx on Ubuntu Linux 18.04 to serve static or dynamic web pages with the help of PHP and MySQL/MariaDB.",
+    "date": "2020-06-13T08:30:29.264Z",
+    "tags": ["nginx"]
+  },
+  {
+    "title": "Changing Nginx Settings - SpinupWP",
+    "url": "https://spinupwp.com/doc/changing-nginx-settings/",
+    "description": "",
+    "date": "2020-06-13T08:30:29.263Z",
+    "tags": ["nginx"]
+  },
+  {
+    "title": "How to Edit Config Files in Ubuntu",
+    "url": "https://vitux.com/how-to-edit-config-files-in-ubuntu/",
+    "description": "In this article, I will describe how to edit config files in Ubuntu 18.04 LTS using Gedit, Nano, Vim, Gvim, and Emacs Editor.",
+    "date": "2020-06-13T08:30:28.263Z",
+    "tags": ["ubuntu"]
+  },
+  {
+    "title": "Orleans Health Checks using ASP.NET Core - CodeOpinion",
+    "url": "https://codeopinion.com/orleans-health-checks-using-asp-net-core/",
+    "description": "Learn how to create Orleans Health Checks by implementing ASP.NET Core Health Checks to verify the health of your Orleans Silo.",
+    "date": "2020-05-17T10:31:28.263Z",
+    "tags": ["microsoft-orleans"]
+  },
+  {
+    "title": "Eclipse Theia Offers a ‘True Open Source Alternative to Visual Studio Code’ – The New Stack",
+    "url": "https://thenewstack.io/eclipse-theia-offers-a-true-open-source-alternative-to-visual-studio-code/",
+    "description": "The Eclipse Foundation has released the first production-ready version of the Eclipse Theia code editor, calling it a true open source alternative to Visual Studio Code.",
+    "date": "2020-05-03T10:31:28.263Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "6 Code Smells with your CQRS Events – and How to Avoid Them | Learn CQRS and Event Sourcing",
+    "url": "https://danielwhittaker.me/2014/10/18/6-code-smells-cqrs-events-avoid/",
+    "description": "Designing your 'Events' in a CQRS ES system can be tricky. Use these 6 rules of thumb to guide you into avoiding common pitfalls and creating clean code.",
+    "date": "2020-04-28T10:31:28.263Z",
+    "tags": ["event-sourcing", "cqrs"]
+  },
+  {
+    "title": "Serilog Logging Best Practices",
+    "url": "https://benfoster.io/blog/serilog-logging-best-practices",
+    "description": "This article presents some tips and best practices in order to get the most out of your application logging.",
+    "date": "2020-04-27T10:31:28.263Z",
+    "tags": ["logging"]
+  },
+  {
+    "title": "Implementing event sourcing with Azure Functions",
+    "url": "https://medium.com/tech-effectory/implementing-event-sourcing-with-azure-functions-9b1922f82b78",
+    "description": "In this article I’ll describe an implementation of the event sourcing pattern using Azure storage and Azure Functions.",
+    "date": "2020-04-27T09:31:28.263Z",
+    "tags": ["event-sourcing"]
+  },
+  {
+    "title": "A crypto-mining botnet has been hijacking MSSQL servers for almost two years | ZDNet",
+    "url": "https://www.zdnet.com/article/a-crypto-mining-botnet-has-been-hijacking-mssql-servers-for-almost-two-years/",
+    "description": "Vollgar botnet launches brute-force attacks against MSSQL databases to take over servers and install Monero and Vollar cryptocurrency miners.",
+    "date": "2020-04-27T08:31:28.263Z",
+    "tags": ["security"]
+  },
+  {
+    "title": "Svelte vs. React: A Comparison",
+    "url": "https://medium.com/swlh/svelte-vs-react-a-comparison-4ddf3448e4a4",
+    "description": "The fruit bowl of frontend frameworks is full and React is the fat melon taking up all the space. Do we really need another technology to learn? Rich Harris of the New York Times says yes, and…",
+    "date": "2020-04-13T09:31:28.263Z",
+    "tags": ["svelte", "react"]
+  },
+  {
+    "title": "Logging with ILogger in .NET: Recommendations and best practices",
+    "url": "https://blog.rsuter.com/logging-with-ilogger-recommendations-and-best-practices/",
+    "description": "This blog describes and outlines some best practices for using new the logging system which has been introduced with .NET Core but is also available in all .NET Standard 2.0 supporting .NET frameworks.",
+    "date": "2020-04-10T20:31:28.263Z",
+    "tags": ["dotnet-core"]
+  },
+  {
+    "title": "HTTP API Problem Details in ASP.NET Core - CodeOpinion",
+    "url": "https://codeopinion.com/http-api-problem-details-in-asp-net-core/",
+    "description": "Writing HTTP API's in ASP.NET Core? Here's how to use RFC 7807 Problem Details in ASP.NET Core when creating HTTP API's.",
+    "date": "2020-04-10T19:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Building Gatsby with GitHub Actions and deploying to Netlify‎",
+    "url": "https://sung.codes/blog/2019/12/25/building-gatsby-with-git-hub-actions-and-deploying-to-netlify/",
+    "description": "",
+    "date": "2020-04-10T18:31:28.263Z",
+    "tags": ["gatsby", "github", "devops"]
+  },
+  {
+    "title": "4 Common Mistakes with the Repository Pattern - Programming with Mosh‎",
+    "url": "https://programmingwithmosh.com/net/common-mistakes-with-the-repository-pattern/",
+    "description": "",
+    "date": "2020-04-07T10:31:28.263Z",
+    "tags": ["design-patterns"]
+  },
+  {
+    "title": "Why you need to start using Svelte Js for web development projects if you still don't",
+    "url": "https://dev.to/vaniukov/why-you-need-to-start-using-svelte-js-for-web-development-projects-if-you-still-don-t-40dh",
+    "description": "If you are in web development, you have probably heard about Svelte Js. But you asked, why it is beco... Tagged with svelte, webdev, framework.",
+    "date": "2020-03-28T10:31:28.263Z",
+    "tags": ["svelte"]
+  },
+  {
+    "title": "What Is The Difference Between A URI And A URL?",
+    "url": "https://dev.to/flippedcoding/what-is-the-difference-between-a-uri-and-a-url-4455",
+    "description": "Yes, there is actually a slight difference. Tagged with webdev, beginners, internet.",
+    "date": "2020-03-28T10:30:28.263Z",
+    "tags": ["internet"]
+  },
+  {
+    "title": "Logging the selected Endpoint Name with Serilog: Using Serilog.AspNetCore in ASP.NET Core 3.0 - Part 2",
+    "url": "https://andrewlock.net/using-serilog-aspnetcore-in-asp-net-core-3-logging-the-selected-endpoint-name-with-serilog/",
+    "description": "In this post I show how to add extra details to Serilog.AspNetCore's request logging middleware, such as the host name or the selected Endpoint name.",
+    "date": "2020-03-28T10:29:28.263Z",
+    "tags": ["aspnet-core", "logging"]
+  },
+  {
+    "title": "Centralized exception handling and request validation in ASP.NET Core | StrathWeb. A free flowing web tech monologue.",
+    "url": "https://www.strathweb.com/2018/07/centralized-exception-handling-and-request-validation-in-asp-net-core/",
+    "description": "",
+    "date": "2020-03-27T10:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "5 tips to improve your productivity in C# 8.0",
+    "url": "https://blog.miguelbernard.com/5-tips-to-improve-your-productivity-in-c-8-0/",
+    "description": "Microsoft added a lot of new syntax goodies in their latest release of C#, namely: index from the end, range operator, null coalescing operator, using variables, verbatim string with interpolation",
+    "date": "2020-03-22T10:31:28.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Gatsby React Scroll toTop",
+    "url": "https://publiuslogic.com/blog/gatsby-react-scroll-toTop/",
+    "description": "Gatsby React Scroll toTop. Built with React Hooks, Styled Components and Love",
+    "date": "2020-03-18T21:31:28.263Z",
+    "tags": ["gatsby"]
+  },
+  {
+    "title": "GitHub Mobile for Android and iOS stable is now available - gHacks Tech News",
+    "url": "https://www.ghacks.net/2020/03/18/github-mobile-for-android-and-ios-stable-is-now-available/",
+    "description": "GitHub announced yesterday that the company's new mobile application for Google Android and Apple iOS has been released as a stable version for both operating systems.",
+    "date": "2020-03-18T12:31:28.263Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "blowdart/AspNetAuthorizationWorkshop",
+    "url": "https://github.com/blowdart/AspNetAuthorizationWorkshop",
+    "description": "A workshop for moving through the various new pieces in ASP.NET Core Authorization - blowdart/AspNetAuthorizationWorkshop",
+    "date": "2020-03-16T12:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Switch From Google Authenticator to a More Secure 2FA App",
+    "url": "https://lifehacker.com/switch-from-google-authenticator-to-a-more-secure-2fa-a-1842212483",
+    "description": "According to a recent report from Nightwatch Cybersecurity, Google’s Authenticator app for Android comes with an unfixed issue that can create a big security nightmare if you have any malware or otherwise shifty apps installed on your device. (The Microsoft Authenticator app for Android also shares the same issue, so don’t switch to that app either, for now.)",
+    "date": "2020-03-11T12:31:28.263Z",
+    "tags": ["android"]
+  },
+  {
+    "title": "At Least 20 VPN and Ad-Blocking Apps With 35 Million Downloads Actually Monitored Users' Phones",
+    "url": "https://gizmodo.com/at-least-20-vpn-and-ad-blocking-apps-with-35-million-do-1842228757",
+    "description": "At least 20 ad-blocking and virtual private network (VPN) apps owned by analytics firm Sensor Tower may have been secretly spying on users’ phones, according to a BuzzFeed News investigation on Monday.",
+    "date": "2020-03-10T12:31:28.263Z",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "ASP.NET Core MVC 3.x – AddMvc(), AddMvcCore(), AddControllers() and other bootstrapping approaches | StrathWeb. A free flowing web tech monologue.",
+    "url": "https://www.strathweb.com/2020/02/asp-net-core-mvc-3-x-addmvc-addmvccore-addcontrollers-and-other-bootstrapping-approaches/",
+    "description": "There are several ways of bootstrapping your MVC applications on top of ASP.NET Core 3.x...",
+    "date": "2020-03-10T11:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "New WhatsApp Alternative",
+    "url": "https://fossbytes.com/open-source-messenger-session-doesnt-even-need-your-phone-number/",
+    "description": "Session is a new open-source messenger app that addresses this issue and doesn't require your phone number to work. Session is technically a fork of another quite popular private messenger Signal. It is available for Android, iOS as well as PC.",
+    "date": "2020-03-09T12:31:28.263Z",
+    "tags": ["android", "privacy"]
+  },
+  {
+    "title": "DEFECT CLUSTERING AND PESTICIDE PARADOX: - PITS Blog",
+    "url": "https://www.pitsolutions.ch/blog/defect-clustering-and-pesticide-paradox/",
+    "description": "Defect Clustering and Pesticide paradox are among the two important principles of testing. Definitions: Defect Clustering: When a small number of modules contains most of the bugs detected or show …",
+    "date": "2020-02-18T12:31:28.263Z",
+    "tags": ["testing"]
+  },
+  {
+    "title": "Object Oriented Tricks: #2 Law of Demeter",
+    "url": "https://hackernoon.com/object-oriented-tricks-2-law-of-demeter-4ecc9becad85",
+    "description": "Each unit should have only limited knowledge about other units: only units “closely” related to the current unit. Each unit should only talk to its friends; don’t talk to strangers.",
+    "date": "2020-02-18T11:31:28.263Z",
+    "tags": ["style-guide"]
+  },
+  {
+    "title": "Understand and Analyze Summary Report in Jmeter | Testing Journals",
+    "url": "https://www.testingjournals.com/understand-summary-report-jmeter/",
+    "description": "In this article we will discuss about Summary Report Listener. It contains a table where a row is created for each request from your test.",
+    "date": "2020-02-17T11:31:28.263Z",
+    "tags": ["jmeter"]
+  },
+  {
+    "title": "Using Regular Expressions to Extract Tokens and Session IDs to Variables | BlazeMeter",
+    "url": "https://www.blazemeter.com/blog/using-regular-expressions-to-extract-tokens-and-session-ids-to-variables/",
+    "description": "Tokens and session IDs are sent in the request header. This post will review how to extract them in JMeter scripts with the Regular Expression Extractor.",
+    "date": "2020-02-17T10:31:28.263Z",
+    "tags": ["jmeter"]
+  },
+  {
+    "title": "How to Smooth Scroll Links in Gatsby",
+    "url": "https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558",
+    "description": "In this article you will learn how to create smooth scrolling links in GatsbyJS",
+    "date": "2020-02-15T10:31:28.263Z",
+    "tags": ["gatsby"]
+  },
+  {
+    "title": "position: sticky problem",
+    "url": "https://blog.cloud66.com/position-sticky-problem/",
+    "description": "This article describes a few gotchas you might encounter if you're trying to integrate sticky positioning into an existing layout. If position sticky is not working for you read on!",
+    "date": "2020-02-15T09:31:28.263Z",
+    "tags": ["css"]
+  },
+  {
+    "title": "Smaller Docker Images for ASP.NET Core Apps",
+    "url": "https://itnext.io/smaller-docker-images-for-asp-net-core-apps-bee4a8fd1277",
+    "description": "In this article, I will keep efficiency in mind to describe several ways of .NET Core deployment on Docker. To start deploying on Docker we need a sample project. I will use the default ASP.NET Core…",
+    "date": "2020-02-11T09:31:28.263Z",
+    "tags": ["aspnet-core", "docker"]
+  },
+  {
+    "title": "String Case Styles: Camel, Pascal, Snake, and Kebab Case",
+    "url": "https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841",
+    "description": "In programming, we often remove the spaces between words because programs of different sorts reserve the space (‘ ’) character for special purposes. Because the space character is reserved, we…",
+    "date": "2020-02-11T08:31:28.263Z",
+    "tags": ["style-guide"]
+  },
+  {
+    "title": "Setting Cloud Role Name in Application Insights",
+    "url": "https://www.davepaquette.com/archive/2020/02/05/setting-cloud-role-name-in-application-insights.aspx",
+    "description": "This post is a continuation of my series about using Application Insights in ASP.NET Core. Today we will explore the concept of Cloud Role and why it’s an important thing to get right for your app",
+    "date": "2020-02-09T08:31:28.263Z",
+    "tags": ["azure", "app-insights"]
+  },
+  {
+    "title": "Best Practices When Versioning a Release - via @codeship",
+    "url": "https://blog.codeship.com/best-practices-when-versioning-a-release/",
+    "description": "The way you version your software impacts how people use it and what they think about it; let's talk about semantic versioning for a release.",
+    "date": "2020-02-06T08:31:28.263Z",
+    "tags": ["devops"]
+  },
+  {
+    "title": "Getting the Web Root Path and the Content Root Path in ASP.NET Core",
+    "url": "https://mariusschulz.com/blog/getting-the-web-root-path-and-the-content-root-path-in-asp-net-core",
+    "description": "ASP.NET Core exposes an application's web and content root paths through the IWebHostEnvironment service, which is available via the built-in dependency injection system.",
+    "date": "2020-02-05T08:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Jira: Using Epics vs Components vs Labels - Modus Create",
+    "url": "https://moduscreate.com/blog/jira-using-epics-vs-components-vs-labels/",
+    "description": "We’re going to compare Epics, Components, and Labels as they are used in Atlassian’s tool, Jira.",
+    "date": "2020-02-02T08:31:28.263Z",
+    "tags": ["jira", "project-management"]
+  },
+  {
+    "title": "Becoming an Angular Environmentalist",
+    "url": "https://medium.com/angular-in-depth/becoming-an-angular-environmentalist-45a48f7c20d8",
+    "description": "This article explains how to add configuration information to your Angular Application.",
+    "date": "2020-01-29T08:31:28.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Discord - GITHUB WEBHOOK INTEGRATION",
+    "url": "https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks",
+    "description": "Discord's built in Webhooks function as an easy way to get automated messages and data updates sent to a text channel in your server....",
+    "date": "2020-01-27T08:31:28.263Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "Getting Started With Visual Studio Online - Cloud IDE | Build5Nines",
+    "url": "https://build5nines.com/getting-started-visual-studio-online-cloud-ide/",
+    "description": "The Visual Studio Online (VS Online) web-based IDE is now available to be used. Based on the popular Visual Studio Code editor, it offers a familiar feel and workspace for writing and working with source code..",
+    "date": "2020-01-26T08:31:28.263Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "Getting the Most Out of Application Insights for .NET (Core) Apps",
+    "url": "https://aspnetmonsters.com/2020/01/2020-01-20-getting-the-most-out-of-application-insights-for-net-core-apps/",
+    "description": "Application Insights is a powerful and surprisingly flexible application performance monitoring (APM) service hosted in Azure. Every time I’ve used Application Insights on a project, it has opened the",
+    "date": "2020-01-26T07:31:28.263Z",
+    "tags": ["azure"]
+  },
+  {
+    "title": "Introducing `npm ci` for faster, more reliable builds",
+    "url": "https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable",
+    "description": "",
+    "date": "2020-01-22T07:31:28.263Z",
+    "tags": ["javascript", "azure-devops"]
+  },
+  {
+    "title": "So Many Ways to Learn .NET in 2020",
+    "url": "https://tattoocoder.com/so-many-ways-to-learn-net-in-2020/",
+    "description": "It's a new year and sure to be on your list, as well as mine, is learning. Here is a quick list of some .NET learning resources for you to check off that resolution for 2020.",
+    "date": "2020-01-21T07:31:28.263Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "10 Important Git Commands that Every Developer Should Know",
+    "url": "https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/",
+    "description": "Git is an important part of daily programming (especially if you’re working with a team) and is widely used in the software industry.",
+    "date": "2020-01-21T06:31:28.263Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "JavaScript equivalents of some common C# LINQ methods",
+    "url": "https://gist.github.com/DanDiplo/30528387da41332ff22b",
+    "description": "",
+    "date": "2020-01-20T06:31:28.263Z",
+    "tags": ["javascript", "linq", "c-sharp"]
+  },
+  {
+    "title": "ASP.Net Core 3 – Dependency Injection – Michał Białecki Blog",
+    "url": "https://www.michalbialecki.com/2020/01/17/asp-net-core-3-dependency-injection/",
+    "description": "",
+    "date": "2020-01-20T05:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Selective Projects Loading using Solution Filter in Visual Studio - Daily .NET Tips",
+    "url": "https://dailydotnettips.com/selective-projects-loading-using-solution-filter-in-visual-studio/",
+    "description": "Solution Filter in Visual Studio allows a faster load of the solution with selective projects. Solution Filter in Visual Studio allows us to select only the required projects and help in faster load and build.",
+    "date": "2020-01-20T04:31:28.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Website Load Time Statistics [INFOGRAPHIC]",
+    "url": "https://www.top10-websitehosting.co.uk/load-time-statistics",
+    "description": "If a website visitor doesn’t have their needs met, they will abandon the site and move onto the next. For business owners, this is a space that must be prioritised, as losing customers to the competition should not be part of their marketing strategy. […]",
+    "date": "2020-01-19T06:31:28.263Z",
+    "tags": ["seo", "website-benchmark"]
+  },
+  {
+    "title": "Nine Performance Tips for Azure App Services",
+    "url": "https://odetocode.com/blogs/scott/archive/2020/01/14/nine-performance-tips-for-azure-app-services.aspx",
+    "description": "",
+    "date": "2020-01-15T06:31:28.263Z",
+    "tags": ["azure"]
+  },
+  {
+    "title": "Adding HATEOAS to an ASP.NET Core API",
+    "url": "https://baldbeardedbuilder.com/posts/adding-hateoas-to-an-aspnetcore-rest-api/",
+    "description": "Implement simple JSON HATEOAS support to an ASP.NET Core web API",
+    "date": "2020-01-09T06:31:28.263Z",
+    "tags": ["aspnet-core", "api"]
+  },
+  {
+    "title": "Reducing log verbosity with Serilog RequestLogging: Using Serilog.AspNetCore in ASP.NET Core 3.0 - Part 1",
+    "url": "https://andrewlock.net/using-serilog-aspnetcore-in-asp-net-core-3-reducing-log-verbosity/",
+    "description": "In this post I describe how you can use Serilog.AspNetCore to reduce the number of logs generated by every request in ASP.NET Core 3.0",
+    "date": "2020-01-06T06:31:28.263Z",
+    "tags": ["aspnet-core", "logging"]
+  },
+  {
+    "title": "Handling Failed HTTP Responses With fetch()",
+    "url": "https://www.tjvantoll.com/2015/09/13/fetch-and-errors/",
+    "description": "",
+    "date": "2020-01-02T06:31:28.263Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "OTP Login with .NET Core for Mobile-Friendly Web Apps",
+    "url": "https://codeburst.io/otp-login-with-net-core-for-mobile-friendly-web-apps-36b721592821",
+    "description": "When we build web applications, implementing authentication plays a vital role in providing personalized and secure services to users. But as we all know, typical authentication mechanisms like…",
+    "date": "2020-01-02T05:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Tools To Monitor and Work with Oracle on Azure",
+    "url": "https://dbakevlar.com/2019/12/tools-to-monitor-and-work-with-oracle-on-azure/",
+    "description": "",
+    "date": "2019-12-29T05:31:28.263Z",
+    "tags": ["oracle-database", "azure"]
+  },
+  {
+    "title": "How to Validate Angular Template-Driven Forms",
+    "url": "https://www.freecodecamp.org/news/how-to-validate-angular-template-driven-forms/",
+    "description": "Learn about validations in Angular template-driven forms.",
+    "date": "2019-12-24T05:31:28.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "It Seemed Like a Popular Chat App. It’s Secretly a Spy Tool.",
+    "url": "https://www.nytimes.com/2019/12/22/us/politics/totok-app-uae.html",
+    "description": "ToTok, an Emirati messaging app that has been downloaded to millions of phones, is the latest escalation of a digital arms race.",
+    "date": "2019-12-23T05:31:28.263Z",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "Implement the OAuth 2.0 Authorization Code with PKCE Flow",
+    "url": "https://developer.okta.com/blog/2019/08/22/okta-authjs-pkce",
+    "description": "This tutorial shows you how to migrate from the OAuth 2.0 Implicit flow to the more secure Authorization Code with PKCE flow.",
+    "date": "2019-12-19T05:31:28.263Z",
+    "tags": ["oauth2"]
+  },
+  {
+    "title": "User Authentication and Identity with Angular, Asp.Net Core and IdentityServer",
+    "url": "https://fullstackmark.com/post/21/user-authentication-and-identity-with-angular-aspnet-core-and-identityserver",
+    "description": "In this post, we'll build an authentication and authorization flow based on the implicit grant type using OAuth2 and OpenID Connect protocols to authenticate an Angular SPA client against IdentityServer4 with the ultimate goal of making authorized requests against a protected ASP.NET Core Web API.",
+    "date": "2019-12-19T04:31:28.263Z",
+    "tags": ["angular", "identityserver", "aspnet-core"]
+  },
+  {
+    "title": "Stop Using Avast and AVG Plugins Right Now",
+    "url": "https://gizmodo.com/stop-using-avast-and-avg-plugins-right-now-1840213548",
+    "description": "Two browsers have yanked Avast and AVG online security extensions from their web stores after a report revealed that they were unnecessarily sucking up a ton of data about users’ browsing history.",
+    "date": "2019-12-05T11:31:28.263Z",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "Announcing .NET Core 3.1 – .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/",
+    "description": "We’re excited to announce the release of .NET Core 3.1. It’s really just a small set of fixes and refinements over .NET Core 3.0,...",
+    "date": "2019-12-05T10:31:28.263Z",
+    "tags": ["dotnet-core"]
+  },
+  {
+    "title": "Angular Currency Pipe & Formatting Currency In Angular | Angular Wiki",
+    "url": "https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/",
+    "description": "Angular Currency Pipe is one of the bulit in pipe in Angular used to format currency value according to given country code,currency,decimal,locale information.",
+    "date": "2019-11-28T10:31:28.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Understanding Numerical Data Types in SQL",
+    "url": "https://academy.vertabelo.com/blog/understanding-numerical-data-types-sql/",
+    "description": "Want to know how cover the numeric and decimal data types of ANSI SQL and examine some functions that convert data from one type to another? Find out!",
+    "date": "2019-11-19T10:31:28.263Z",
+    "tags": ["sql-server"]
+  },
+  {
+    "title": "Dapper vs. EF Core - Which is Faster?",
+    "url": "https://exceptionnotfound.net/dapper-vs-entity-framework-core-query-performance-benchmarking-2019/",
+    "description": "Let's find out if EF Core has gotten any better in the performance department, or if Dapper is still king of the ORM jungle.  Sample project included!",
+    "date": "2019-11-17T10:31:28.263Z",
+    "tags": ["dapper", "ef-core"]
+  },
+  {
+    "title": "Setting up Serilog in ASP.NET Core 3",
+    "url": "https://nblumhardt.com/2019/10/serilog-in-aspnetcore-3/",
+    "description": "TL; DR: I’ve put down everything I can think of about getting set up for successful production diagnostics using Serilog and ASP.NET Core.",
+    "date": "2019-11-10T10:31:28.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Untrack files already added to git repository based on .gitignore",
+    "url": "https://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/",
+    "description": "Let’s say you have already added/committed some files to your git repository and you then add them to your .gitignore; these files will still be present in your repository index. This article we will see how to get rid of them.",
+    "date": "2019-11-09T16:31:28.263Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "Build a Svelte App (That Magic Framework You Heard About)",
+    "url": "https://snipcart.com/blog/svelte-js-framework-tutorial",
+    "description": "SvelteJS rethinks reactivity and frameworks—but how? This simple Svelte 3 tutorial has the answers. Have a look!",
+    "date": "2019-11-05T10:31:28.263Z",
+    "tags": ["svelte"]
+  },
+  {
+    "title": "Introducing Orleans 3.0 | .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/orleans-3-0/",
+    "description": "This is a guest post from the Orleans team. Orleans is a cross-platform framework for building distributed applications with .NET. For more information, see https://github.com/dotnet/orleans. We are excited to announce the Orleans 3.0 release. A great number of improvements and fixes went in,",
+    "date": "2019-11-04T04:31:28.263Z",
+    "tags": ["microsoft-orleans"]
+  },
+  {
+    "title": "Code Cleanup: 7 Simple Daily Steps That Pay off in the End",
+    "url": "https://blog.submain.com/code-cleanup-7-simple-daily-steps-that-pay-off-in-the-end/",
+    "description": "Code cleanup doesn't have to be an arduous job. Learn seven simple steps you can perform daily to keep your codebase in great shape.",
+    "date": "2019-10-30T13:27:28.263Z",
+    "tags": ["style-guide"]
+  },
+  {
+    "title": "Using React Error Boundaries With AppInsights",
+    "url": "https://www.aaron-powell.com/posts/2019-10-24-using-react-error-boundaries-with-appinsights/",
+    "description": "Combining React Error Boundaries with AppInsights for automatic error logging",
+    "date": "2019-10-27T08:27:28.263Z",
+    "tags": ["react", "azure"]
+  },
+  {
+    "title": "IIS URL Redirect HTTP to HTTPS excluding one or more folders",
+    "url": "https://www.ryadel.com/en/iis-url-redirect-http-https-exclude-folder-subfolder-rewrite-web-config/",
+    "description": "How to configure IIS to rewrite or redirect all HTTP requests to HTTPS except the files in a specific subfolder (or more) with a web.config rewrite rule",
+    "date": "2018-10-17T17:27:28.263Z",
+    "tags": ["rewrite-rule"]
+  },
+  {
+    "title": "overflow-wrap | CSS-Tricks",
+    "url": "https://css-tricks.com/almanac/properties/o/overflow-wrap/",
+    "description": "The overflow-wrap property in CSS allows you to specify that the browser can break a line of text inside the targeted element onto multiple lines in an...",
+    "date": "2019-10-26T17:27:28.263Z",
+    "tags": ["css"]
+  },
+  {
     "title": "New in ASP.NET Core 3.0: Worker Services",
     "url": "https://asp.net-hacker.rocks/2019/10/02/aspnetcore30-workerservice.html",
     "description": "In this post I'm giving a quick introduction into the Worker Services and what you can do with it. I'm also introducing a small project that shows the usage of Worker Services, gRPC and many more cool new ASP.NET Core 3.0 stuff.",
@@ -368,7 +1068,7 @@
     "url": "https://michaelnthiessen.com/paradox-of-abstraction",
     "description": "By Michael Thiessen",
     "date": "2019-06-10T18:30:28.263Z",
-    "tags": ["code"]
+    "tags": ["style-guide"]
   },
   {
     "title": "SHA 256 and SHA 512 hash examples",

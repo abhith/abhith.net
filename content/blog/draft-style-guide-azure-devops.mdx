@@ -1,0 +1,47 @@
+---
+title: Style Guide - Azure DevOps
+description: >-
+  The style guide I follow for Azure DevOps which include Azure Pipelines.
+author: Abhith Rajan
+authorURL: "https://twitter.com/abhithrajan"
+date: 2020-01-29T19:26:00.000Z
+image: /img/blog/c-sharp-get-last-n-characters-from-a-string.png
+draft: true
+tags:
+  - c-sharp
+---
+
+## Monorepo
+
+In case of monorepo which contains many Pipelines, we keep the build Pipelines yml files under,
+
+repo > build\azure-devops\{project-name}\azure-pipelines.yml
+
+## Naming Convention
+
+### Build Pipelines
+
+#### Pipeline Name
+
+Project Name-CI
+
+### Release Pipelines
+
+#### Pipeline Name
+
+Project Name-CD
+
+#### Release name format
+
+$(Build.DefinitionName)-Release-$(rev:r)
+
+#### Archive file to create
+
+E:\Backups\{webiste-name}-$(Build.BuildId)-$(System.JobId).zip
+
+#### Stages
+
+- Dev
+- Test
+- Production
+- Sandbox

@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import LatestPosts from "../components/home/LatestPosts";
-import Hero from "../components/home/Hero";
-import StoriesRoll from "../components/StoriesRoll";
-import FeaturedSidebar from "../components/FeaturedSidebar";
-import SEO from "../components/seo/SEO";
-import VideosRoll from "../components/VideosRoll";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import LatestPosts from "../components/home/latest-posts";
+import Hero from "../components/home/hero";
+import StoriesRoll from "../components/stories-roll";
+import FeaturedSidebar from "../components/featured-sidebar";
+import SEO from "../components/seo/seo";
+import VideosRoll from "../components/videos-roll";
+import Button from "../components/button";
 
 export const IndexPageTemplate = ({
   stories,
@@ -15,7 +16,7 @@ export const IndexPageTemplate = ({
   videos,
   totalStories,
   totalVideos,
-  totalServices
+  totalServices,
 }) => (
   <>
     <SEO />
@@ -35,9 +36,9 @@ export const IndexPageTemplate = ({
                     Recommended{" "}
                   </div>
                   <div className="subtitle has-numbers">
-                    <span className="tag">{totalStories}</span> Developer stories,{" "}
-                    <span className="tag">{totalVideos}</span> Videos and{" "}
-                    <span className="tag">{totalServices}</span> Services
+                    <span className="tag">{totalStories}</span> Developer
+                    stories, <span className="tag">{totalVideos}</span> Videos
+                    and <span className="tag">{totalServices}</span> Services
                   </div>
                 </div>
               </div>
@@ -55,16 +56,11 @@ export const IndexPageTemplate = ({
                 Recommended Stories
               </span>
             </h4>
-            <StoriesRoll posts={stories} mode={`compact`} />
-            <div className="cta-wrapper has-text-centered">
-              <Link
-                to="/recommended/stories"
-                className="button k-button k-primary raised has-gradient is-bold"
-              >
-                <span className="text">View More Stories</span>
-                <span className="front-gradient"></span>
-              </Link>
-            </div>
+            <StoriesRoll posts={stories} />
+            <Button
+              text={`View All ${totalStories} Stories`}
+              path="/recommended/stories"
+            ></Button>
           </div>
           <div className="column is-one-third">
             <h4 className="spanborder">
@@ -73,18 +69,13 @@ export const IndexPageTemplate = ({
               </span>
             </h4>
             <VideosRoll videos={videos} />
-            <div className="cta-wrapper has-text-centered">
-              <Link
-                to="/recommended/videos"
-                className="button k-button k-primary raised has-gradient is-bold"
-              >
-                <span className="text">View More Videos</span>
-                <span className="front-gradient"></span>
-              </Link>
-            </div>
+            <Button
+              text={`View All ${totalVideos} Videos`}
+              path="/recommended/videos"
+            ></Button>
           </div>
           <div className="column is-one-third">
-            <FeaturedSidebar items={featured} />
+            <FeaturedSidebar items={featured} totalCount={totalServices} />
           </div>
         </div>
       </div>
@@ -98,7 +89,7 @@ IndexPageTemplate.propTypes = {
   featured: PropTypes.array,
   totalStories: PropTypes.number,
   totalVideos: PropTypes.number,
-  totalServices: PropTypes.number
+  totalServices: PropTypes.number,
 };
 
 const IndexPage = ({ data }) => {
@@ -120,8 +111,8 @@ IndexPage.propTypes = {
   data: PropTypes.shape({
     recommendedStories: PropTypes.object,
     recommendedVideos: PropTypes.object,
-    featured: PropTypes.object
-  })
+    featured: PropTypes.object,
+  }),
 };
 
 export default IndexPage;
@@ -151,15 +142,17 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          tags
+          title
           url
           type
+          id
         }
       }
     }
     featured: allServicesJson(
-      limit: 10
-      sort: { fields: [isAffiliate, date], order: [ASC, DESC] }
+      limit: 9
+      sort: { fields: [date], order: [DESC] }
     ) {
       totalCount
       edges {

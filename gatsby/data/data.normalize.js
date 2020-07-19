@@ -3,49 +3,65 @@ function normalizeHero(article) {
     full: {},
     regular: {},
     narrow: {},
-    seo: {}
+    seo: {},
   };
 
-  if (article.frontmatter.image) {
+  if (article.hero) {
     hero = {
-      full: article.frontmatter.image.full.fluid
+      full: article.hero.full.fluid,
     };
   } else {
-    console.log(
-      "\u001B[33m",
-      `Missing hero for "${article.frontmatter.title}"`
-    );
+    console.log("\u001B[33m", `Missing hero for "${article.title}"`);
   }
 
   return hero;
 }
 
+function normalizeAvatar(author) {
+  let avatar = {
+    small: {},
+    medium: {},
+    large: {},
+  };
+
+  if (author.avatar) {
+    avatar = {
+      small: author.avatar.small.fluid,
+      medium: author.avatar.medium.fluid,
+      large: author.avatar.large.fluid,
+    };
+  } else {
+    console.log("\u001B[33m", `Missing avatar for "${author.name}"`);
+  }
+
+  return avatar;
+}
+
 module.exports.local = {
   articles: ({ node: article }) => {
     return {
-      id: article.id,
-      title: article.frontmatter.title,
-      body: article.body,
-      slug: article.fields.slug,
-      excerpt: article.frontmatter.description,
-      tags: article.frontmatter.tags,
+      ...article,
       hero: normalizeHero(article),
-      date: article.frontmatter.dateString,
-      timeToRead: article.fields.readingTime.text,
+      date: article.dateString,
+      timeToRead: article.timeToRead,
       lastModifiedTime:
-        article.frontmatter.lastModificationTime === null
-          ? article.frontmatter.date
-          : article.frontmatter.lastModificationTime,
+        article.lastModificationTime === null
+          ? article.date
+          : article.lastModificationTime,
       lastModifiedTimeString:
-        article.frontmatter.lastModificationTime === null
-          ? article.frontmatter.dateString
-          : article.frontmatter.lastModificationTimeString,
-      dateModifiedSeoFormat: article.frontmatter.dateModifiedSeoFormat,
-      datePublishedSeoFormat: article.frontmatter.datePublishedSeoFormat,
-      commentId:
-        article.frontmatter.commentId === null
-          ? article.fields.slug
-          : article.frontmatter.commentId
+        article.lastModificationTime === null
+          ? article.dateString
+          : article.lastModificationTimeString,
+      dateModifiedSeoFormat: article.dateModifiedSeoFormat,
+      datePublishedSeoFormat: article.datePublishedSeoFormat,
+      commentId: article.commentId === null ? article.slug : article.commentId,
+      tableOfContents: article.tableOfContents,
     };
-  }
+  },
+  authors: ({ node: author }) => {
+    return {
+      ...author,
+      avatar: normalizeAvatar(author),
+    };
+  },
 };

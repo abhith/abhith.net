@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
-import SEO from "../components/seo/SEO";
-import Timeline from "../components/about/Timeline";
+import Layout from "../components/layout";
+import Content, { HTMLContent } from "../components/content";
+import SEO from "../components/seo/seo";
+import Timeline from "../components/about/timeline";
 
 export const AboutPageTemplate = ({
   title,

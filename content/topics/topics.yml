@@ -1,0 +1,385 @@
+---
+- title: ABP Framework
+  slug: abp
+  description: ABP is an open source application framework focused on AspNet Core based web application development.
+  image: ""
+- title: Analytics
+  slug: analytics
+  description:
+    Google Analytics (GA) is the one which we used in almost all the public
+    facing websites.
+  image: analytics.png
+- title: Android
+  slug: android
+  description: ""
+  image: android.svg
+- title: Angular
+  slug: angular
+  description: ""
+  image: angular-icon-1.svg
+- title: API
+  slug: api
+  description: ""
+  image: ""
+- title: API Gateway
+  slug: api-gateway
+  description: ""
+  image: ""
+- title: Application Insights
+  slug: app-insights
+  description: ""
+  image: ""
+- title: ASP.NET
+  slug: aspnet
+  description: Open-source web framework for .NET
+  image: ""
+- title: ASP.NET Core
+  slug: aspnet-core
+  description:
+    ASP.NET Core is a cross-platform, high-performance, open-source framework
+    for building modern, cloud-based, Internet-connected applications.
+  image: aspnet-core.png
+- title: ASP.NET Web Forms
+  slug: aspnet-web-forms
+  description:
+    ASP.NET Web Forms is a web application framework and one of several
+    programming models supported by the Microsoft ASP.NET technology
+  image: ""
+- title: Asynchronous Programming
+  slug: asynchronous-programming
+  description:
+    I tend to use Async - Await every where possible. Not just in C#, now
+    a days in the JavaScript instead of the promises.
+  image: ""
+- title: Awesome Lists
+  slug: awesome-list
+  description: An awesome list is a list of awesome things curated by the community.
+  image: awesome.svg
+- title: Microsoft Azure
+  slug: azure
+  description: ""
+  image: microsoft-azure-3.svg
+- title: Azure DevOps
+  slug: azure-devops
+  description: ""
+  image: microsoft-azure-3.svg
+- title: Azure Pipelines
+  slug: azure-pipelines
+  description: ""
+  image: ""
+- title: Azure Service Bus
+  slug: azure-service-bus
+  description: ""
+  image: ""
+- title: C#
+  slug: c-sharp
+  description: One of my favorite language.
+  image: ""
+- title: Career
+  slug: career
+  description: ""
+  image: ""
+- title: Cache
+  slug: cache
+  description: One area to check for performance.
+  image: ""
+- title: Cloudflare
+  slug: cloudflare
+  description: Offering CDN, DNS, DDoS protection and security.
+  image: ""
+- title: CMS
+  slug: cms
+  description: Best in classess listed under this tag
+  image: ""
+- title: Content Writing
+  slug: content-writing
+  description: ""
+  image: ""
+- title: Cookbook
+  slug: cookbook
+  description: ""
+  image: ""
+- title: Courses
+  slug: courses
+  description: ""
+  image: ""
+- title: CSS
+  slug: css
+  description: ""
+  image: ""
+- title: CQRS
+  slug: cqrs
+  description: ""
+  image: ""
+- title: Dapper
+  slug: dapper
+  description: ""
+  image: ""
+- title: Dapr
+  slug: dapr
+  description:
+    Dapr is a portable, event-driven runtime that makes it easy for developers
+    to build resilient, microservice stateless and stateful applications that run
+    on the cloud
+  image: dapr.png
+- title: Database
+  slug: database
+  description: ""
+  image: ""
+- title: Debug
+  slug: debug
+  description: ""
+  image: ""
+- title: Design Patterns
+  slug: design-patterns
+  description: ""
+  image: ""
+- title: Developer Tools
+  slug: developer-tools
+  description: ""
+  image: ""
+- title: DevOps
+  slug: devops
+  description: ""
+  image: ""
+- title: ".NET"
+  slug: dotnet
+  description: ""
+  image: ""
+- title: ".NET Core"
+  slug: dotnet-core
+  description: ".NET is an Open Source Developer Platform for Building Apps."
+  image: dot-net-core-7.svg
+- title: Download Site
+  slug: download-site
+  description: ""
+  image: ""
+- title: Drawing
+  slug: drawing
+  description: ""
+  image: ""
+- title: Entity Framework Core
+  slug: ef-core
+  description: ""
+  image: ""
+- title: Envoy
+  slug: envoy
+  description: ""
+  image: ""
+- title: Event Sourcing pattern
+  slug: event-sourcing
+  description: ""
+  image: ""
+- title: Flutter
+  slug: flutter
+  description: ""
+  image: flutter.svg
+- title: Gatsby
+  slug: gatsby
+  description: One of my favorite language.
+  image: gatsby.svg
+- title: Git
+  slug: git
+  description: ""
+  image: ""
+- title: GitHub
+  slug: github
+  description: ""
+  image: github-1.svg
+- title: GitLab
+  slug: gitlab
+  description: ""
+  image: ""
+- title: Google
+  slug: google
+  description: ""
+  image: ""
+- title: Helm
+  slug: helm
+  description: ""
+  image: ""
+- title: Hosting
+  slug: hosting
+  description: ""
+  image: ""
+- title: IDE
+  slug: ide
+  description: ""
+  image: ""
+- title: IdentityServer
+  slug: identityserver
+  description: ""
+  image: ""
+- title: Internet
+  slug: internet
+  description: ""
+  image: ""
+- title: Internet Information Services
+  slug: iis
+  description: ""
+  image: ""
+- title: JavaScript
+  slug: javascript
+  description: ""
+  image: javascript.svg
+- title: Jira
+  slug: jira
+  description: ""
+  image: ""
+- title: JMeter
+  slug: jmeter
+  description: ""
+  image: ""
+- title: Jobs
+  slug: jobs
+  description: jobs related
+  image: ""
+- title: jQuery
+  slug: jquery
+  description: ""
+  image: ""
+- title: JSON
+  slug: json
+  description: ""
+  image: ""
+- title: JAMstack
+  slug: jamstack
+  description: ""
+  image: ""
+- title: Kubernetes
+  slug: kubernetes
+  description: ""
+  image: k8s.svg
+- title: Logging
+  slug: logging
+  description: ""
+  image: ""
+- title: LINQ
+  slug: linq
+  description: ""
+  image: ""
+- title: MediatR
+  slug: mediatr
+  description: Simple, unambitious mediator implementation in .NET
+  image: ""
+- title: Messaging
+  slug: messaging
+  description: ""
+  image: ""
+- title: Microsoft Orleans
+  slug: microsoft-orleans
+  description:
+    Orleans is a framework that provides a straightforward approach to
+    building distributed high-scale computing applications, without the need to learn
+    and apply complex concurrency or other scaling patterns.
+  image: microsoft-orleans.png
+- title: Microservices
+  slug: microservices
+  description: ""
+  image: ""
+- title: NGINX
+  slug: nginx
+  description: ""
+  image: nginx-1.svg
+- title: NoSQL
+  slug: nosql
+  description: ""
+  image: ""
+- title: Nuxt.js
+  slug: nuxtjs
+  description: ""
+  image: nuxt-emoji.png
+- title: OAuth 2.0
+  slug: oauth2
+  description: ""
+  image: oauth.svg
+- title: Oracle Database
+  slug: oracle-database
+  description: ""
+  image: oracle-6.svg
+- title: ORM
+  slug: orm
+  description: ""
+  image: ""
+- title: React
+  slug: react
+  description: ""
+  image: react.svg
+- title: Productivity
+  slug: productivity
+  description: ""
+  image: productivity.jpg
+- title: Privacy
+  slug: privacy
+  description: ""
+  image: privacy.svg
+- title: Project Management
+  slug: project-management
+  description: ""
+  image: ""
+- title: Security
+  slug: security
+  description: ""
+  image: ""
+- title: Search Engine Optimization
+  slug: seo
+  description: ""
+  image: ""
+- title: Shopping Guide
+  slug: shopping-guide
+  description: ""
+  image: ""
+- title: SQL Server
+  slug: sql-server
+  description: ""
+  image: microsoft-sql-server.svg
+- title: Style Guide
+  slug: style-guide
+  description: ""
+  image: ""
+- title: Svelte
+  slug: svelte
+  description: ""
+  image: ""
+- title: Testing
+  slug: testing
+  description: ""
+  image: ""
+- title: Ubuntu
+  slug: ubuntu
+  description: ""
+  image: ubuntu-1.svg
+- title: Umbraco
+  slug: umbraco
+  description: ""
+  image: ""
+- title: Visual Studio
+  slug: visual-studio
+  description:
+    I always loved to work with the latest and the greatest versions of
+    Visual Studio. I started on VS 2008, now most of the time working with VS 2019.
+  image: visual-studio-2013.svg
+- title: Visual Studio Code
+  slug: vscode
+  description: ""
+  image: visual-studio-code-1.svg
+- title: Vue.js
+  slug: vue
+  description: ""
+  image: vue-9.png
+- title: WCF
+  slug: wcf
+  description: ""
+  image: ""
+- title: Web.config
+  slug: web-config
+  description: ""
+  image: ""
+- title: Website Benchmark
+  slug: website-benchmark
+  description: ""
+  image: ""
+- title: Xamarin Forms
+  slug: xamarin-forms
+  description: ""
+  image: ""

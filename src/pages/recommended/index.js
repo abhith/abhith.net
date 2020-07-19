@@ -1,11 +1,12 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import SEO from "../../components/seo/SEO";
-import VideosRoll from "../../components/VideosRoll";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo/seo";
+import VideosRoll from "../../components/videos-roll";
 import { graphql, Link } from "gatsby";
 
 import Img from "gatsby-image";
-import StoriesRoll from "../../components/StoriesRoll";
+import StoriesRoll from "@components/stories-roll";
+import ServicesRoll from "@components/services-roll";
 
 export default class RecommendedIndexPage extends React.Component {
   render() {
@@ -15,6 +16,7 @@ export default class RecommendedIndexPage extends React.Component {
     const storiesImgData = data.storiesImg.childImageSharp.fluid;
     const videos = data.recommendedVideos.edges;
     const stories = data.recommendedStories.edges;
+    const services = data.services.edges;
     return (
       <Layout>
         <div className="container">
@@ -59,7 +61,10 @@ export default class RecommendedIndexPage extends React.Component {
                 </div>
               </div>
               <div className="column">
-                <StoriesRoll posts={stories} mode={`compact`} showDescription={false}></StoriesRoll>
+                <StoriesRoll
+                  posts={stories}
+                  showDescription={false}
+                ></StoriesRoll>
               </div>
             </div>
 
@@ -106,7 +111,7 @@ export default class RecommendedIndexPage extends React.Component {
                   <div className="">
                     <Link className="text-dark" to="/recommended/services">
                       <h2 className="title is-4 has-text-weight-bold">
-                        Services
+                        Tools & Services
                       </h2>
                     </Link>
                     <p className="excerpt">
@@ -120,13 +125,16 @@ export default class RecommendedIndexPage extends React.Component {
                         className="button k-button k-primary raised has-gradient is-bold"
                       >
                         <span className="text">
-                          View All {data.services.totalCount} Services
+                          View All {data.services.totalCount} Tools & Services
                         </span>
                         <span className="front-gradient"></span>
                       </Link>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="column">
+                <ServicesRoll services={services} hideDescription={true} />
               </div>
             </div>
           </div>
@@ -152,9 +160,11 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          id
+          tags
+          title
           url
           type
+          id
         }
       }
     }
@@ -173,6 +183,8 @@ export const pageQuery = graphql`
           id
           tags
           url
+          description
+          image
         }
       }
     }

@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import SEO from "../components/seo/SEO";
-import ServicesRoll from "../components/ServicesRoll";
-import Pagination from "../components/Pagination";
+import Layout from "../components/layout";
+import SEO from "../components/seo/seo";
+import ServicesRoll from "../components/services-roll";
+import Pagination from "../components/pagination";
 
 export default class RecommendedServicesIndexPage extends React.Component {
   render() {
@@ -14,8 +14,8 @@ export default class RecommendedServicesIndexPage extends React.Component {
       <Layout>
         <div className="container">
           <SEO
-            title="Recommended Services"
-            description="Service/Service providers which Abhith recommends."
+            title="Recommended Tools & Services"
+            description="Tools and services which Abhith recommends."
             slug="\recommended\services"
           />
           <div className="section">
@@ -23,7 +23,7 @@ export default class RecommendedServicesIndexPage extends React.Component {
               <span>Recommended</span>
             </h1>
             <h4 className="title is-4 has-text-weight-bold spanborder">
-              <span>Services</span>
+              <span>Tools & Services</span>
             </h4>
             <div className="columns">
               <div className="column is-two-thirds">

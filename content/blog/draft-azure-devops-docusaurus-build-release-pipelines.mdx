@@ -1,0 +1,61 @@
+---
+title: Azure DevOps - Docusaurus Build & Release Pipelines
+description: >-
+  A simple C# extension method which use Substring to get the last N characters in a string.
+author: Abhith Rajan
+authorURL: "https://twitter.com/abhithrajan"
+date: 2019-09-22T19:26:00.000Z
+image: /img/blog/c-sharp-get-last-n-characters-from-a-string.png
+draft: true
+tags:
+  - c-sharp
+---
+
+## Build Pipeline
+
+In this pipeline, we will build the docusaurus website and publish the artifact so that we can use that in the Release pipeline.
+And the azure-pipelines.yml for the pipeline given below.
+
+```yml
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - src/path/to/docusaurus/*
+
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+  - script: |
+      yarn
+    displayName: "install dependencies"
+    workingDirectory: "$(Build.SourcesDirectory)/src/path/to/docusaurus/"
+
+  - script: |
+      yarn build
+    displayName: "docusaurus build"
+    workingDirectory: "$(Build.SourcesDirectory)/src/path/to/docusaurus/"
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: "$(Build.SourcesDirectory)/src/path/to/docusaurus/build/"
+      contents: "**"
+      targetFolder: "$(Build.ArtifactStagingDirectory)"
+      cleanTargetFolder: true
+    displayName: "copy built site"
+
+  - task: PublishBuildArtifacts@1
+    displayName: "Upload Artifacts"
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      ArtifactName: "docusaurus"
+```
+
+In the above, the path to docusaurus website on my repo is `src/path/to/docusaurus`. We are having a monorepo which contains source code for many of the related services, that's why we specified the correct path in each step.
+
+Each step in the build pipeline is self explanatory. Once you run the pipeline, it may look like,
+
+[pic]

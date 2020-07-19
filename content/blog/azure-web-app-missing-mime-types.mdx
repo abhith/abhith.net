@@ -4,9 +4,10 @@ title: Azure Web App - Missing MIME types
 description: >-
   If you are seeing "404 Not Found" for .woff, .woff2 or for .json files even if they exist on your azure web app, this is the post for you.
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2019-07-11T12:59:27.975Z
-image: /img/blog-azure-web-app-missing-mime-types.png
+lastModificationTime: 2019-12-26T16:02:00.000Z
+image: /img/blog/azure-web-app-missing-mime-types.png
 tags:
   - azure
   - web-config
@@ -36,7 +37,7 @@ And if you want to know why it is causing the 404, read [this](https://docs.ples
 ### Json
 
 ```xml
- <mimeMap fileExtension=".json" mimeType="application/json" />
+  <mimeMap fileExtension=".json" mimeType="application/json" />
 ```
 
 ### SVG
@@ -44,6 +45,13 @@ And if you want to know why it is causing the 404, read [this](https://docs.ples
 ```xml
   <remove fileExtension=".svg"/>
   <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
+```
+
+### More
+
+```xml
+  <mimeMap fileExtension=".webmanifest" mimeType="application/manifest+json" />
+  <mimeMap fileExtension=".webp" mimeType="image/webp" /> <!-- Not all browser supports webp />
 ```
 
 ## Sample web.config file

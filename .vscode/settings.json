@@ -1,0 +1,17 @@
+{
+    "cSpell.words": [
+        "mediaqueries"
+    ],
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#bf3dd3",
+        "titleBar.inactiveBackground": "#bf3dd399",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "statusBar.background": "#bf3dd3",
+        "statusBarItem.hoverBackground": "#cd67dc",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBar.border": "#bf3dd3",
+        "titleBar.border": "#bf3dd3"
+    },
+    "peacock.color": "#bf3dd3"
+}

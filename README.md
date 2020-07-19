@@ -1,20 +1,24 @@
 # WWW.ABHITH.NET
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ceb3b988-acb1-4f96-9024-62ea791176bc/deploy-status)](https://app.netlify.com/sites/abhith/deploys)
 [![DeepScan grade](https://deepscan.io/api/teams/5261/projects/7035/branches/64959/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5261&pid=7035&bid=64959)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=bugs)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=code_smells)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=ncloc)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=alert_status)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=security_rating)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=sqale_index)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Abhith/abhith.net/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Abhith/abhith.net/context:javascript)
+![Discord](https://img.shields.io/discord/671364953487310854)
 
-This repo serves the source code for [www.abhith.net](https://www.abhith.net/). Designed using [Bulma](https://bulma.io) and is deployed via [Netlify](https://www.netlify.com/).
+![website](./static/img/repo/banner.png)
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
-
-## Design
-
-The CSS framework used in this project is [Bulma](https://bulma.io). And the design inspiration came from the following,
-
-- [wowthemesnet/mundana-theme-jekyll](https://github.com/wowthemesnet/mundana-theme-jekyll)
-- [cssninjaStudio/krypton](https://github.com/cssninjaStudio/krypton)
-
-Since I am not a designer by profession, copy paste is what I do in most cases plus do some tweaks according to my likes.
+This repo serves the source code for [www.abhith.net](https://www.abhith.net/).
+It follows the [JAMstack architecture](https://jamstack.org). Designed using [Bulma](https://bulma.io), and using [Render](https://render.com/) for continuous deployment.
 
 ## Main Sections
 
@@ -26,11 +30,11 @@ I read a lot, and that's how I stay updated about what's going on around. Here I
 
 ### Videos
 
-Similar to Developer Stories, here I am listing videos which worth sharing. Watch them [here](https://www.abhith.net/recommended/videos/)
+Here I am listing videos which worth sharing. Watch them [here](https://www.abhith.net/recommended/videos/)
 
-### Services
+### Tools and Services
 
-There are plenty of online services available nowadays. Here I am sharing some of the useful ones which I explored yet.
+Here I am sharing some tools and services which I find useful.
 
 ## CONTRIBUTING
 

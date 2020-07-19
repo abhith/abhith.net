@@ -1,0 +1,129 @@
+---
+title: ASP.NET Core - Using Mutliple Authentication Schemes
+description: >-
+  One endpoint, authorize using Identity Server or using a Custom AuthenticationHandler.
+author: Abhith Rajan
+authorURL: "https://twitter.com/abhithrajan"
+date: 2019-09-22T19:26:00.000Z
+image: /img/blog/c-sharp-get-last-n-characters-from-a-string.png
+draft: true
+tags:
+  - c-sharp
+---
+
+### ASP.NET CORE
+
+```cs
+public class Program
+    {
+public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+
+                public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+    }
+```
+
+To
+
+```cs
+using Serilog;
+using Code.Library.AspNetCore;
+public class Program
+    {
+            public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                })
+            .UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration.WithSimpleConfiguration(hostingContext.Configuration));
+                public static int Main(string[] args)
+        {
+            try
+            {
+                CreateHostBuilder(args).Build().Run();
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Host terminated unexpectedly");
+                Console.Write(ex.ToString());
+                return 1;
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
+        }
+
+    }
+```
+
+#### Startup.cs
+
+configure swagger
+
+https://github.com/microsoft/aspnet-api-versioning
+
+add health checks
+
+```cs
+public class Startup
+    {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+        app.UseRequestLogging();
+            app.UseApiExceptionHandler();
+
+            // before routing
+        }
+    }
+
+    public void ConfigureServices(IServiceCollection services)
+        {
+            services
+               .AddAppInsight(Configuration, "Ordering API")
+               .AddApiExceptionHandler()
+
+            services.AddControllers();
+        }
+```
+
+```json
+"Serilog": {
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning",
+        "IdentityServer4": "Information",
+        "Orleans": "Warning"
+      }
+    }
+  }
+```
+
+```xml
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="3.0.2" />
+    <PackageReference Include="Code.Library.AspNetCore" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.1" />
+  </ItemGroup>
+```

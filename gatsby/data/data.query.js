@@ -10,39 +10,68 @@ const GatsbyFluid_withWebp = `
 
 module.exports.local = {
   articles: `{
-      articles: allMdx {
+      articles: allArticle(
+        filter: {draft: {eq: false}}
+      ) {
         edges {
           node {
             id
+            author
             body
-            fields {
-              slug
-              readingTime {
-                text
-              }
-            }
-            frontmatter {
-              date
-              dateString: date(formatString: "MMMM DD, YYYY")
-              datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-              title
-              description
-              tags
-              lastModificationTime
-              lastModificationTimeString: lastModificationTime(
-                formatString: "MMMM DD, YYYY"
-              )
-              dateModifiedSeoFormat: lastModificationTime(
-                formatString: "YYYY-MM-DD"
-              )
-              image {
-                full: childImageSharp {
-                  fluid(maxWidth: 2048, quality: 100) {
-                    ${GatsbyFluid_withWebp}
-                  }
+            slug
+            timeToRead
+            date
+            dateString: date(formatString: "MMMM DD, YYYY")
+            datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+            title
+            excerpt
+            tags
+            lastModificationTime
+            lastModificationTimeString: lastModificationTime(
+              formatString: "MMMM DD, YYYY"
+            )
+            dateModifiedSeoFormat: lastModificationTime(
+              formatString: "YYYY-MM-DD"
+            )
+            hero {
+              full: childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ${GatsbyFluid_withWebp}
                 }
               }
-              commentId
+            }
+            commentId
+            tableOfContents
+          }
+        }
+      }      
+    }`,
+  authors: `{
+      authors: allAuthor {
+        edges {
+          node {
+            bio
+            id
+            name
+            featured
+            twitter
+            slug
+            avatar {
+              small: childImageSharp {
+                fluid(maxWidth: 64, quality: 100) {
+                  ${GatsbyFluid_withWebp}
+                }
+              }
+              medium: childImageSharp {
+                fluid(maxWidth: 128, quality: 100) {
+                  ${GatsbyFluid_withWebp}
+                }
+              }
+              large: childImageSharp {
+                fluid(maxWidth: 328, quality: 100) {
+                  ${GatsbyFluid_withWebp}
+                }
+              }
             }
           }
         }
@@ -74,6 +103,7 @@ module.exports.local = {
         url
         type
         tags
+        title
       }
     }
   }
@@ -95,7 +125,7 @@ module.exports.local = {
   }
   }`,
   topics: `{
-    topics: allTopicsJson {
+    topics: allTopic {
       edges {
         node {
           slug
@@ -104,5 +134,5 @@ module.exports.local = {
         }
       }
     }
-  }`
+  }`,
 };

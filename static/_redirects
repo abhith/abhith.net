@@ -1,7 +1,0 @@
-http://abhith.netlify.com/* https://www.abhith.net/:splat 301!
-https://abhith.netlify.com/* https://www.abhith.net/:splat 301!
-http://abhith.net/* https://www.abhith.net/:splat 301!
-https://abhith.net/* https://www.abhith.net/:splat 301!
-/blog/categories/* /topics/:splat 301!
-/blog/tags/* /topics/:splat 301!
-/tags/* /topics/:splat 301!

@@ -1,0 +1,7 @@
+- name: Abhith Rajan
+  slug: abhith
+  bio: |
+    Abhith Rajan is an aspiring software engineer with more than 7 years of experience and proven successful track record of delivering technology-based products and services.
+  avatar: ./avatars/abhith.jpg
+  twitter: "@AbhithRajan"
+  featured: true
