@@ -270,7 +270,7 @@
     "url": "https://blog.rsuter.com/logging-with-ilogger-recommendations-and-best-practices/",
     "description": "This blog describes and outlines some best practices for using new the logging system which has been introduced with .NET Core but is also available in all .NET Standard 2.0 supporting .NET frameworks.",
     "date": "2020-04-10T20:31:28.263Z",
-    "tags": ["dotnet-core"]
+    "tags": ["dotnet-core", "logging"]
   },
   {
     "title": "HTTP API Problem Details in ASP.NET Core - CodeOpinion",
