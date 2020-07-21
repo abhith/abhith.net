@@ -1,5 +1,12 @@
 [
   {
+    "title": "Indieweb pt2: Using Webmentions in Eleventy | Max Böck",
+    "url": "https://mxb.dev/blog/using-webmentions-on-static-sites/",
+    "description": "How to pull interactions from social media platforms like Twitter back to your own site, using Webmentions, webmention.io and Bridgy.",
+    "date": "2020-07-21T09:35:29.263Z",
+    "tags": ["webmention"]
+  },
+  {
     "title": "Kubernetes Resource Management in Production",
     "url": "https://itnext.io/kubernetes-resource-management-in-production-d5382c904ed1",
     "description": "Before we go into production with a Kubernetes application we should understand K8s resource management. The core is to understand how the Kubernetes scheduler handles resource requests and limits…",

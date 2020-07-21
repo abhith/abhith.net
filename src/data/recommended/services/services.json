@@ -1,5 +1,29 @@
 [
   {
+    "title": "Bridgy",
+    "url": "https://brid.gy/",
+    "description": "Bridgy connects your web site to social media.Likes, retweets, mentions, cross-posting, and more...",
+    "image": "",
+    "date": "2020-07-21T15:30:28.263Z",
+    "tags": ["webmention"]
+  },
+  {
+    "title": "Automate your outgoing webmentions",
+    "url": "https://webmention.app/",
+    "description": "Platform agnostic outgoing webmention service",
+    "image": "",
+    "date": "2020-07-21T14:30:28.263Z",
+    "tags": ["webmention"]
+  },
+  {
+    "title": "Webmention.io",
+    "url": "https://webmention.io/",
+    "description": "Webmention.io is a hosted service created to easily receive webmentions on any web page.",
+    "image": "",
+    "date": "2020-07-21T14:31:28.263Z",
+    "tags": ["webmention"]
+  },
+  {
     "title": "ScreenToGif - Record your screen, edit and save as a gif or video",
     "url": "https://www.screentogif.com/",
     "description": "Free screen recorder tool. Record, edit and save as a gif or video.",
