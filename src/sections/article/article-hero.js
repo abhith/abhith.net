@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import React from "react";
 
 const ArticleHero = ({ article, authors }) => {
-  console.log(authors);
   return (
     <section className="hero is-primary is-bold position-relative">
       <div className="hero-body">
@@ -16,7 +15,7 @@ const ArticleHero = ({ article, authors }) => {
                     .map((tag) => (
                       <Link
                         key={tag}
-                        className="has-text-warning has-text-weight-bold is-uppercase"
+                        className="has-text-warning has-text-weight-bold is-uppercase p-category"
                         to={`/topics/${tag}/`}
                       >
                         {tag}
@@ -40,6 +39,7 @@ const ArticleHero = ({ article, authors }) => {
             <h1 className="title is-2 is-light is-semibold is-spaced main-title p-name">
               {article.title}
             </h1>
+            <h2 className="subtitle p-summary">{article.excerpt}</h2>
             {authors && authors.length === 1 ? (
               <div className="author-block">
                 <div className="image is-64x64">
@@ -58,11 +58,14 @@ const ArticleHero = ({ article, authors }) => {
                       Follow {authors[0].twitter}
                     </a>
                   </span>
-                  <span className="p-name">{authors[0].name}</span>
+                  <span className="p-author h-card">{authors[0].name}</span>
                   <span>
                     {article.date} &middot; {article.timeToRead} &middot; Last
                     Updated:{" "}
-                    <time dateTime={article.lastModifiedTime}>
+                    <time
+                      dateTime={article.lastModifiedTime}
+                      className="dt-published"
+                    >
                       {article.lastModifiedTimeString}
                     </time>
                   </span>
