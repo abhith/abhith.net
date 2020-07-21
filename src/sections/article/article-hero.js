@@ -39,7 +39,7 @@ const ArticleHero = ({ article, authors }) => {
             <h1 className="title is-2 is-light is-semibold is-spaced main-title p-name">
               {article.title}
             </h1>
-            <h2 class="subtitle p-summary">{article.excerpt}</h2>
+            <h2 className="subtitle p-summary">{article.excerpt}</h2>
             {authors && authors.length === 1 ? (
               <div className="author-block">
                 <div className="image is-64x64">

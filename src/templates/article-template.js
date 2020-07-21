@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import GitHubButton from "react-github-btn";
 
@@ -12,6 +12,7 @@ import TableOfContents from "@components/table-of-contents";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
 import Image from "@components/image";
+import Webmentions from "@components/webmentions";
 
 import ArticleHero from "../sections/article/article-hero";
 import RelatedArticles from "../sections/article/article-related-articles";
@@ -20,7 +21,8 @@ import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
 import ArticleShare from "../sections/article/article-share";
 
-export default ({ pageContext, location }) => {
+export default ({ pageContext, data, location }) => {
+  const { allWebMentionEntry } = data;
   const {
     article,
     authors,
@@ -154,7 +156,6 @@ export default ({ pageContext, location }) => {
                 <MDXRenderer content={article.body}>
                   <TopicsBar topics={article.tags} />
                 </MDXRenderer>
-
                 {authors && authors.length === 1 ? (
                   <div className="container mt-5 mb-3">
                     <div className="media">
@@ -218,6 +219,7 @@ export default ({ pageContext, location }) => {
                     </OutboundLink>
                   </p>
                 </div>
+                <Webmentions {...allWebMentionEntry} />
                 <Utterances repo={`Abhith/abhith.net`} />
               </div>
               <aside className="ar-side">
@@ -259,4 +261,31 @@ export default ({ pageContext, location }) => {
 
 const RoundedImage = styled(Image)`
   border-radius: 50%;
+`;
+
+export const pageQuery = graphql`
+  query ArticleQuery($permalink: String!) {
+    allWebMentionEntry(filter: { wmTarget: { eq: $permalink } }) {
+      edges {
+        node {
+          wmTarget
+          wmSource
+          wmProperty
+          wmId
+          type
+          url
+          likeOf
+          author {
+            url
+            type
+            photo
+            name
+          }
+          content {
+            text
+          }
+        }
+      }
+    }
+  }
 `;
