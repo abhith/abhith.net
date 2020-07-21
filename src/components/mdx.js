@@ -8,47 +8,21 @@ import mediaqueries from "@styles/media";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 
-// import { useColorMode } from "theme-ui";
-
-// import Anchor from "@components/Anchor";
-
-// import Headings from "@components/Headings";
-// import HorizontalRule from "@components/HorizontalRule";
-// import Lists from "@components/Lists";
-// import Paragraph from "@components/Paragraph";
-// import { ImageZoom } from "@components/Image";
-
-// import { toKebabCase } from "@utils";
-
 const components = {
-  //   img: ImageZoom,
-  //   a: Anchor,
   blockquote: Blockquote,
-  //   h1: Headings.h2, // h1 reserved article title
-  //   h2: Headings.h2,
-  //   h3: Headings.h3,
-  //   h4: Headings.h4,
-  //   h5: Headings.h5,
-  //   h6: Headings.h6,
-  //   hr: HorizontalRule,
-  //   ul: Lists.ul,
-  //   ol: Lists.ol,
-  //   p: Paragraph,
   code: CodePrism,
   pre: CodePre,
   table: Table,
   thead: TableHead,
   th: TableHeadCell,
-  td: TableCell
+  td: TableCell,
 };
 
 function MDX({ content, children, ...props }) {
-  // const [colorMode] = useColorMode();
-
   return (
     <MDXProvider components={components}>
       <MDXBody>
-        <article className="content post-body">
+        <article className="content post-body e-content">
           <MDXRenderer {...props}>{content}</MDXRenderer>
         </article>
       </MDXBody>
@@ -59,65 +33,7 @@ function MDX({ content, children, ...props }) {
 
 export default MDX;
 
-// const IMAGE_WIDTHS = {
-//   regular: "680px",
-//   large: "1004px",
-//   full: "100vw"
-// };
-
-// const ARTICLE_WIDTH = css`
-//   width: 100%;
-//   max-width: 680px;
-
-//   ${mediaqueries.desktop`
-//     max-width: 507px;
-//   `}
-
-//   ${mediaqueries.tablet`
-//     max-width: 486px;
-//   `};
-
-//   ${mediaqueries.phablet`
-//     padding: 0 20px;
-//   `};
-// `;
-
-// const HeadingsCSS = css`
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6 {
-//     margin: 0 auto;
-//   }
-
-//   h1,
-//   h1 *,
-//   h2,
-//   h2 * {
-//     margin: 25px auto 18px;
-
-//     ${mediaqueries.tablet`
-//       margin: 30px auto 18px;
-//     `};
-//   }
-
-//   h3,
-//   h3 * {
-//     margin: 20px auto 10px;
-//   }
-
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6 {
-//     ${ARTICLE_WIDTH};
-//   }
-// `;
-const PrismCSS = p => css`
+const PrismCSS = (p) => css`
   .prism-code {
     width: 100%;
     margin: 0 auto;
@@ -185,109 +101,6 @@ const PrismCSS = p => css`
     `};
   }
 `;
-
-// const ImageCSS = css`
-//   .gatsby-resp-image-background-image {
-//     display: none !important;
-//   }
-
-//   img {
-//     display: inline-block;
-//     position: relative;
-//     max-width: 100%;
-//     height: auto;
-//     z-index: 0;
-//     margin: 15px auto 50px;
-//     border-radius: 5px;
-
-//     ${mediaqueries.tablet`
-//       margin: 10px auto 45px;
-//     `};
-//   }
-
-//   div.Image__Small {
-//     display: inline-block;
-//     position: relative;
-//     max-width: 100%;
-//     height: auto;
-//     z-index: 0;
-//     margin: 15px auto 50px;
-//     border-radius: 5px;
-//     width: 100%;
-//     max-width: 680px;
-
-//     ${mediaqueries.tablet`
-//       margin: 10px auto 45px;
-//     `};
-
-//     ${mediaqueries.desktop`
-//       max-width: 507px;
-//     `}
-
-//     ${mediaqueries.tablet`
-//       max-width: 486px;
-//       margin: 0 auto 25px;
-//     `};
-
-//     ${mediaqueries.phablet`
-//       padding: 0 20px;
-//     `};
-//   }
-
-//   .Image__Container {
-//     text-align: center;
-//   }
-
-//   img.Image__With-Shadow {
-//     box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.15);
-//   }
-
-//   div.Image__Medium {
-//     position: relative;
-//     margin: 15px auto 50px;
-//     width: 100%;
-//     max-width: ${IMAGE_WIDTHS.large};
-
-//     ${mediaqueries.desktop_medium`
-//       left: -34px;
-//     `};
-
-//     ${mediaqueries.desktop`
-//       left: -26px;
-//     `};
-
-//     ${mediaqueries.tablet`
-//       border-radius: 0;
-//       left: 0;
-//       margin: 0 auto 25px;
-
-//       img {
-//         border-radius: 0;
-//       }
-//     `};
-//   }
-
-//   div.Image__Large {
-//     position: relative;
-//     left: -68px;
-//     width: ${IMAGE_WIDTHS.full};
-//     margin: 25px auto 60px;
-//     pointer-events: none;
-
-//     img {
-//       border-radius: 0;
-//     }
-
-//     ${mediaqueries.desktop`
-//       left: -53px;
-//     `};
-
-//     ${mediaqueries.tablet`
-//       left: 0;
-//       margin: 0 auto 25px;
-//     `};
-//   }
-// `;
 
 /**
  * MDXBody

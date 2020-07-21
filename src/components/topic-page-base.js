@@ -3,11 +3,18 @@ import PageHero from "@components/page-hero";
 import SEO from "@components/seo/seo";
 import TopicsSideNav from "@components/topic-side-nav";
 import Utterances from "@components/utterances";
+import Webmentions from "@components/webmentions";
 
 import { Link } from "gatsby";
 import React from "react";
 
-const TopicPageBase = ({ activeTab, topic, topics, children }) => {
+const TopicPageBase = ({
+  activeTab,
+  topic,
+  topics,
+  allWebMentionEntry,
+  children,
+}) => {
   const summary = [];
 
   let pageTitle;
@@ -130,6 +137,7 @@ const TopicPageBase = ({ activeTab, topic, topics, children }) => {
                 </ul>
               </div>
               {children}
+              <Webmentions {...allWebMentionEntry} />
               <Utterances repo={`Abhith/abhith.net`} />
             </div>
           </div>

@@ -30,7 +30,7 @@ const ResponsiveReactPlayer = (props) => {
 ResponsiveReactPlayer.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  topics: PropTypes.object.isRequired,
+  topics: PropTypes.array.isRequired,
 };
 
 export default ResponsiveReactPlayer;

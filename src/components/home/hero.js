@@ -9,7 +9,7 @@ export default function Hero() {
       render={(data) => {
         const page = data.markdownRemark;
         return (
-          <div className="hero-wrapper">
+          <div className="hero-wrapper h-card">
             <section className="hero is-primary is-bold position-relative">
               <div className="hero-head"></div>
               <div id="particles-js">
@@ -145,17 +145,16 @@ export default function Hero() {
                   <div className="columns is-vcentered">
                     <div className="column is-5 landing-caption">
                       <figure className="image">
-                        {/* TODO: load image from site meta */}
                         <img
-                          className="is-rounded hero-avatar"
-                          src="/img/abhith.jpg"
+                          className="is-rounded hero-avatar u-photo"
+                          src="https://www.abhith.net/img/abhith.jpg"
                           alt=""
                         />
                       </figure>
-                      <h1 className="title is-1 is-light is-semibold is-spaced main-title">
+                      <h1 className="title is-1 is-light is-semibold is-spaced main-title p-name">
                         {page.frontmatter.heading}
                       </h1>
-                      <h2 className="subtitle is-light is-thin">
+                      <h2 className="subtitle is-light is-thin p-note">
                         {page.frontmatter.subheading}
                       </h2>
                       <p>
@@ -163,19 +162,24 @@ export default function Hero() {
                           to="/about/"
                           className="button k-button k-primary raised has-gradient is-fat is-bold"
                         >
-                          <span className="text"> Read More</span>
+                          <span className="text">Read More</span>
                           <span className="front-gradient"></span>
                         </Link>
                       </p>
                     </div>
                     <div className="column is-7">
                       <figure className="image">
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: page.frontmatter.image,
-                            alt: `${page.frontmatter.heading}`,
-                          }}
-                        />
+                        <a
+                          href="https://www.abhith.net"
+                          className="u-url u-uid"
+                        >
+                          <PreviewCompatibleImage
+                            imageInfo={{
+                              image: page.frontmatter.image,
+                              alt: `${page.frontmatter.heading}`,
+                            }}
+                          />
+                        </a>
                       </figure>
                     </div>
                   </div>

@@ -235,6 +235,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-recaptcha`,
+    {
+      resolve: `gatsby-plugin-webmention`,
+      options: {
+        username: "www.abhith.net",
+        identity: {
+          github: "Abhith",
+          twitter: "AbhithRajan",
+        },
+        mentions: true,
+        pingbacks: false,
+        domain: "www.abhith.net",
+        fetchLimit: 10000,
+        token: process.env.WEBMENTIONS_TOKEN,
+      },
+    },
     `gatsby-plugin-offline`, // make sure to keep it last in the array
   ],
 };
