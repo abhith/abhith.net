@@ -1,5 +1,12 @@
 [
   {
+    "title": "Indieweb pt2: Using Webmentions in Eleventy | Max Böck",
+    "url": "https://mxb.dev/blog/using-webmentions-on-static-sites/",
+    "description": "How to pull interactions from social media platforms like Twitter back to your own site, using Webmentions, webmention.io and Bridgy.",
+    "date": "2020-07-21T09:35:29.263Z",
+    "tags": ["webmention"]
+  },
+  {
     "title": "How to Create a Quick Poll in Microsoft Teams",
     "url": "https://www.howtogeek.com/675710/how-to-create-a-quick-poll-in-microsoft-teams/",
     "description": "Perhaps you want to know your team’s opinion on something. Or, maybe you need your coworker to come to a majority decision and settle a (hopefully friendly) dispute. Whatever the reason, a poll within Microsoft Teams is usually the best way to get the answer.",

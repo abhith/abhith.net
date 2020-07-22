@@ -244,7 +244,7 @@ module.exports = {
           twitter: "AbhithRajan",
         },
         mentions: true,
-        pingbacks: false,
+        pingbacks: true,
         domain: "www.abhith.net",
         fetchLimit: 10000,
         token: process.env.WEBMENTIONS_TOKEN,
