@@ -1,5 +1,14 @@
 [
   {
+    "title": "How to Build Observable Distributed Systems",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=ACL_YVPD3gw",
+    "date": "2020-07-22T04:22:22.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "ASP.NET Core Series: High performance requests with gRPC",
     "description": "",
     "image": "",
