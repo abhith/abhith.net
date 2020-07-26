@@ -1,5 +1,12 @@
 [
   {
+    "title": "Integrate GitHub and Discord with Webhooks",
+    "url": "https://ardalis.com/integrate-github-and-discord-with-webhooks/",
+    "description": "I've started using Discord more and more for things like my private group coaching program focused on software developers. ",
+    "date": "2020-07-26T09:35:29.263Z",
+    "tags": ["github"]
+  },
+  {
     "title": "Indieweb pt2: Using Webmentions in Eleventy | Max Böck",
     "url": "https://mxb.dev/blog/using-webmentions-on-static-sites/",
     "description": "How to pull interactions from social media platforms like Twitter back to your own site, using Webmentions, webmention.io and Bridgy.",
