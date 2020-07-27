@@ -1,5 +1,23 @@
 [
   {
+    "title": ".NET Core Data Security : Hope is not a Strategy - Stephen Haunts",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=1rb0wHB_jBY",
+    "date": "2020-07-27T04:22:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet-core"]
+  },
+  {
+    "title": "Monitoring Kubernetes with Prometheus – Tom Wilkie",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=kG9p417sC3I",
+    "date": "2020-07-27T03:22:22.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "How to Build Observable Distributed Systems",
     "description": "",
     "image": "",
