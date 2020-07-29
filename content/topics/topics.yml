@@ -293,6 +293,10 @@
   slug: oauth2
   description: ""
   image: oauth.svg
+- title: Open Source
+  slug: open-source
+  description: ""
+  image: ""
 - title: Oracle Database
   slug: oracle-database
   description: ""
