@@ -1,5 +1,14 @@
 [
   {
+    "title": "Single Page Architectures with VueJS and ASP.NET Core - Kevin Griffin",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=DH2yUVQDB0I",
+    "date": "2020-08-03T04:22:22.638Z",
+    "type": "youtube",
+    "tags": ["vue", "aspnet-core"]
+  },
+  {
     "title": ".NET Core Data Security : Hope is not a Strategy - Stephen Haunts",
     "description": "",
     "image": "",

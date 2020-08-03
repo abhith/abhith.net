@@ -1,5 +1,19 @@
 [
   {
+    "title": "Four Reasons React Renders (and three ways to stop it) – Cory House",
+    "url": "https://www.bitnative.com/2020/07/16/four-reasons-react-renders-and-three-ways-to-stop-it/",
+    "description": "",
+    "date": "2020-08-03T09:35:29.263Z",
+    "tags": ["react"]
+  },
+  {
+    "title": "Building Real-time Streaming Applications Using .NET Core and Kafka",
+    "url": "https://medium.com/@srigumm/building-realtime-streaming-applications-using-net-core-and-kafka-ad45ed081b31",
+    "description": "In the world of MicroServices, .NET core gained more popularity because of its powerful original .NET Framework and ability to run in any platform.The purpose of writing this post is to illustrate…",
+    "date": "2020-08-03T08:35:29.263Z",
+    "tags": ["microservices", "dotnet-core"]
+  },
+  {
     "title": "Asynchronous messaging with Azure Service Bus",
     "url": "https://daniel-krzyczkowski.github.io/Asynchronous-Messaging-With-Azure-Service-Bus/",
     "description": "This article presents how to implement asynchronous communication between microservices using Azure Service Bus",
