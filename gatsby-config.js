@@ -1,11 +1,4 @@
-const {
-  NODE_ENV,
-  URL: NETLIFY_SITE_URL = "https://www.abhith.net",
-  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV,
-} = process.env;
-const isNetlifyProduction = NETLIFY_ENV === "production";
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+const siteUrl = `https://www.abhith.net`;
 const contentPosts = "content/blog";
 const contentAuthors = "content/authors";
 const contentTopics = "content/topics";
@@ -15,6 +8,10 @@ const templatesDirectory = path.resolve(__dirname, "src/templates");
 const templates = {
   page: path.resolve(templatesDirectory, "page-template.js"),
 };
+
+// robots.txt generates based on hosting environment
+const { IS_PULL_REQUEST } = process.env;
+const HOSTING_ENV = IS_PULL_REQUEST ? "development" : "production";
 
 module.exports = {
   siteMetadata: {
@@ -205,19 +202,14 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
-        resolveEnv: () => NETLIFY_ENV,
+        resolveEnv: () => HOSTING_ENV,
         env: {
           production: {
             policy: [{ userAgent: "*" }],
           },
-          "branch-deploy": {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
-            sitemap: null,
-            host: null,
-          },
-          "deploy-preview": {
+          development: {
             policy: [{ userAgent: "*", disallow: ["/"] }],
             sitemap: null,
             host: null,
