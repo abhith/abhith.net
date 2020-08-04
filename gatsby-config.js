@@ -11,7 +11,10 @@ const templates = {
 
 // robots.txt generates based on hosting environment
 const { IS_PULL_REQUEST } = process.env;
-const HOSTING_ENV = IS_PULL_REQUEST ? "development" : "production";
+let HOSTING_ENV = "production";
+if (IS_PULL_REQUEST === true) {
+  HOSTING_ENV = "development";
+}
 
 module.exports = {
   siteMetadata: {
