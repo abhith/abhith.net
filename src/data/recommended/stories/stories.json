@@ -1,5 +1,19 @@
 [
   {
+    "title": "Kubernetes Autoscaling in Production: Best Practices for Cluster Autoscaler, HPA and VPA",
+    "url": "https://www.replex.io/blog/kubernetes-in-production-best-practices-for-cluster-autoscaler-hpa-and-vpa",
+    "description": "In this article we will take a deep dive into Kubernetes autoscaling tools including the cluster autoscaler, the horizontal pod autoscaler and the vertical pod autoscaler. We will also identify best practices that developers, DevOps and Kubernetes administrators should follow when configuring these tools.",
+    "date": "2020-08-04T09:36:29.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Adding Observability to .NET Core Apps ASP.NET Blog",
+    "url": "https://devblogs.microsoft.com/aspnet/observability-asp-net-core-apps/",
+    "description": "Based on customers using .NET Core in different environments, this article explores options for adding observability to .NET Core apps.",
+    "date": "2020-08-04T09:35:29.263Z",
+    "tags": ["aspnet-core", "app-insights"]
+  },
+  {
     "title": "Four Reasons React Renders (and three ways to stop it) – Cory House",
     "url": "https://www.bitnative.com/2020/07/16/four-reasons-react-renders-and-three-ways-to-stop-it/",
     "description": "",

@@ -1,5 +1,23 @@
 [
   {
+    "title": "Event Driven Architecture: Enabling Microservices by Bradley Irby @ .NET Conf UY v2018",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=LgfmyoyVSLg",
+    "date": "2020-08-04T05:22:22.638Z",
+    "type": "youtube",
+    "tags": ["microservices", "event-sourcing"]
+  },
+  {
+    "title": "How to perform usage analysis with Azure Monitor Application Insights",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=-5e0sexdyc0",
+    "date": "2020-08-04T04:22:22.638Z",
+    "type": "youtube",
+    "tags": ["app-insights"]
+  },
+  {
     "title": "Single Page Architectures with VueJS and ASP.NET Core - Kevin Griffin",
     "description": "",
     "image": "",
