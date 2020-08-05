@@ -21,8 +21,8 @@
   slug: api
   description: ""
   image: ""
-- title: API Gateway
-  slug: api-gateway
+- title: API Management
+  slug: api-management
   description: ""
   image: ""
 - title: Application Insights
@@ -86,6 +86,10 @@
 - title: Cloudflare
   slug: cloudflare
   description: Offering CDN, DNS, DDoS protection and security.
+  image: ""
+- title: Cloud Native
+  slug: cloud-native
+  description: ""
   image: ""
 - title: CMS
   slug: cms

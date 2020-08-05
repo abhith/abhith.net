@@ -1,5 +1,12 @@
 [
   {
+    "title": "APISIX: An Open Source API Gateway for Microservices – The New Stack",
+    "url": "https://thenewstack.io/apisix-an-open-source-api-gateway-for-microservices/",
+    "description": "APISIX is designed to handle a large number of requests, and to have a low threshold for secondary development.",
+    "date": "2020-08-05T04:36:29.263Z",
+    "tags": ["api-management", "cloud-native", "microservices"]
+  },
+  {
     "title": "Kubernetes Autoscaling in Production: Best Practices for Cluster Autoscaler, HPA and VPA",
     "url": "https://www.replex.io/blog/kubernetes-in-production-best-practices-for-cluster-autoscaler-hpa-and-vpa",
     "description": "In this article we will take a deep dive into Kubernetes autoscaling tools including the cluster autoscaler, the horizontal pod autoscaler and the vertical pod autoscaler. We will also identify best practices that developers, DevOps and Kubernetes administrators should follow when configuring these tools.",
