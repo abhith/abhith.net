@@ -1,5 +1,19 @@
 [
   {
+    "title": "10 Tools You Should Know As A Cybersecurity Engineer",
+    "url": "https://www.freecodecamp.org/news/10-tools-you-should-know-as-a-cybersecurity-engineer/",
+    "description": "From scanning to post-exploitation, there are numerous tools that help you accomplish your goal as a penetration tester. Here are ten tools you must know if you are into cybersecurity.",
+    "date": "2020-08-07T05:36:29.263Z",
+    "tags": ["security"]
+  },
+  {
+    "title": "IBM creates an open source tool to simplify API documentation - TechRepublic",
+    "url": "https://www.techrepublic.com/article/ibm-creates-an-open-source-tool-to-simplify-api-documentation/",
+    "description": "OpenAPI Comment Parser for developers aims to make good API documentation easy to write and read.",
+    "date": "2020-08-07T04:36:29.263Z",
+    "tags": ["api-management", "api"]
+  },
+  {
     "title": "APISIX: An Open Source API Gateway for Microservices – The New Stack",
     "url": "https://thenewstack.io/apisix-an-open-source-api-gateway-for-microservices/",
     "description": "APISIX is designed to handle a large number of requests, and to have a low threshold for secondary development.",
