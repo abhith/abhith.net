@@ -59,7 +59,7 @@ export const IndexPageTemplate = ({
             <StoriesRoll posts={stories} />
             <Button
               text={`View All ${totalStories} Stories`}
-              path="/recommended/stories"
+              path="/recommended/stories/"
             ></Button>
           </div>
           <div className="column is-one-third">
@@ -71,7 +71,7 @@ export const IndexPageTemplate = ({
             <VideosRoll videos={videos} />
             <Button
               text={`View All ${totalVideos} Videos`}
-              path="/recommended/videos"
+              path="/recommended/videos/"
             ></Button>
           </div>
           <div className="column is-one-third">

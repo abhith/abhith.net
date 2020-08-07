@@ -32,11 +32,11 @@ export default class RecommendedIndexPage extends React.Component {
             <div className="columns">
               <div className="column">
                 <div>
-                  <Link to="/recommended/stories">
+                  <Link to="/recommended/stories/">
                     <Img fluid={storiesImgData} />
                   </Link>
                   <div className="mt-1">
-                    <Link to="/recommended/stories">
+                    <Link to="/recommended/stories/">
                       <h2 className="title is-4 has-text-weight-bold">
                         Developer Stories
                       </h2>
@@ -48,7 +48,7 @@ export default class RecommendedIndexPage extends React.Component {
                     </p>
                     <div className="cta-wrapper has-text-centered">
                       <Link
-                        to="/recommended/stories"
+                        to="/recommended/stories/"
                         className="button k-button k-primary raised has-gradient is-bold"
                       >
                         <span className="text">
@@ -71,11 +71,11 @@ export default class RecommendedIndexPage extends React.Component {
             <div className="columns">
               <div className="column">
                 <div>
-                  <Link to="/recommended/videos">
+                  <Link to="/recommended/videos/">
                     <Img fluid={videoImgData} />
                   </Link>
                   <div className="mt-1">
-                    <Link className="text-dark" to="/recommended/videos">
+                    <Link className="text-dark" to="/recommended/videos/">
                       <h2 className="title is-4 has-text-weight-bold">
                         VIDEOS
                       </h2>
@@ -86,7 +86,7 @@ export default class RecommendedIndexPage extends React.Component {
                     </p>
                     <div className="cta-wrapper has-text-centered">
                       <Link
-                        to="/recommended/videos"
+                        to="/recommended/videos/"
                         className="button k-button k-primary raised has-gradient is-bold"
                       >
                         <span className="text">
@@ -105,11 +105,11 @@ export default class RecommendedIndexPage extends React.Component {
             <div className="columns">
               <div className="column is-half">
                 <div className="">
-                  <Link to="/recommended/services">
+                  <Link to="/recommended/services/">
                     <Img fluid={serviceImgData} />
                   </Link>
                   <div className="">
-                    <Link className="text-dark" to="/recommended/services">
+                    <Link className="text-dark" to="/recommended/services/">
                       <h2 className="title is-4 has-text-weight-bold">
                         Tools & Services
                       </h2>
@@ -121,7 +121,7 @@ export default class RecommendedIndexPage extends React.Component {
                     </p>
                     <div className="cta-wrapper has-text-centered">
                       <Link
-                        to="/recommended/services"
+                        to="/recommended/services/"
                         className="button k-button k-primary raised has-gradient is-bold"
                       >
                         <span className="text">

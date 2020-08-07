@@ -32,7 +32,7 @@ const FeaturedSidebar = ({ items, totalCount }) => {
       </ol>
       <Button
         text={`View All ${totalCount} Tools & Services`}
-        path="/recommended/services"
+        path="/recommended/services/"
         align="left"
       ></Button>
     </div>

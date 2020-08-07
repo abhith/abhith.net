@@ -15,7 +15,7 @@ const RelatedVideos = ({ relatedVideos }) => {
         <VideosRoll videos={relatedVideos} itemsPerRow={3} />
         <div className="cta-wrapper has-text-centered">
           <Link
-            to="/recommended/videos"
+            to="/recommended/videos/"
             className="button k-button k-primary raised has-gradient is-bold"
           >
             <span className="text">View More Videos</span>
