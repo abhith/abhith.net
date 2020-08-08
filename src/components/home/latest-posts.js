@@ -134,7 +134,7 @@ export const query = graphql`
 `;
 
 const LatestPostsCss = (p) => css`
-  @media screen and (max-width: 1344px) and (min-width: 767px) {
+  @media screen and (max-width: 1980px) and (min-width: 767px) {
     .blog-post {
       margin: auto;
       a {
