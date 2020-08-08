@@ -20,12 +20,12 @@ module.exports = {
   siteMetadata: {
     title: "Abhith Rajan",
     description:
-      "An aspiring software engineer with more than 7 years of experience.",
+      "An aspiring software engineer with more than 8 years of experience.",
     siteUrl,
     author: {
       name: "Abhith Rajan",
       minibio: `
-        Abhith Rajan is an aspiring software engineer with more than 6 years of experience and proven successful track record of delivering technology-based products and services.
+        Abhith Rajan is an aspiring software engineer with more than 8 years of experience and proven successful track record of delivering technology-based products and services.
       `,
       url: `https://twitter.com/abhithrajan`,
       image: `https://www.abhith.net/img/abhith.jpg`,
