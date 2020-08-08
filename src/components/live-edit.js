@@ -8,14 +8,6 @@ import prismTheme from "prism-react-renderer/themes/shadesOfPurple";
 const foreground = "#f8f8f2";
 const red = "#ff5555";
 const lightGrey = "#42374a";
-// tslint:disable-next-line: no-submodule-imports
-
-// const StyledProvider = styled(LiveProvider)`
-//   border-radius: ${polished.rem(3)};
-//   box-shadow: 1px 1px 20px rgba(20, 20, 20, 0.27);
-//   overflow: hidden;
-//   margin-bottom: ${polished.rem(100)};
-// `;
 
 const LiveWrapper = styled.div`
   display: flex;
