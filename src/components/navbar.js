@@ -116,7 +116,7 @@ const Navbar = class extends React.Component {
             </NavbarItem>
           </div>
           <div className="navbar-end">
-            <div className="navbar-item">
+            <div className="navbar-item is-hidden-desktop-only is-hidden-widescreen-only">
               <div className="field is-grouped">
                 <OutboundLink
                   className="is-bold button k-button k-secondary raised has-gradient"
