@@ -160,28 +160,6 @@
   }
 }
 
-@media screen and (max-width: 1344px) and (min-width: 767px) {
-  .ar-latest .blog-post {
-    margin: auto;
-    a {
-      display: block;
-      padding: 10px;
-    }
-    .content {
-      width: 100%;
-      .post-title {
-        font-size: 18px;
-        .blog-date {
-          margin: 0;
-        }
-      }
-    }
-    .featured-image {
-      display: none;
-    }
-  }
-}
-
 //Specific Media queries for blog posts
 @media screen and (max-width: 768px) {
   .blog-post {

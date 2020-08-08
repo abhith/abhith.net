@@ -3,6 +3,8 @@ import { graphql, StaticQuery } from "gatsby";
 import BlogRollItem from "../blog-roll-item";
 import BlogCard from "../blog-card";
 import Button from "../button";
+import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 const normalize = require("../../../gatsby/data/data.normalize");
 
 function LatestPosts() {
@@ -25,7 +27,7 @@ function LatestPosts() {
         );
 
         return (
-          <section className="section ar-latest">
+          <LatestPostsBody className="section">
             <div className="container">
               <div className="columns">
                 <BlogCard post={latestArticles[0]}></BlogCard>
@@ -44,7 +46,7 @@ function LatestPosts() {
                 path="/blog/"
               ></Button>
             </div>
-          </section>
+          </LatestPostsBody>
         );
       }}
     />
@@ -129,4 +131,32 @@ export const query = graphql`
       totalCount
     }
   }
+`;
+
+const LatestPostsCss = (p) => css`
+  @media screen and (max-width: 1344px) and (min-width: 767px) {
+    .blog-post {
+      margin: auto;
+      a {
+        display: block;
+        padding: 10px;
+      }
+      .content {
+        width: 100%;
+        .post-title {
+          font-size: 18px;
+          .blog-date {
+            margin: 0;
+          }
+        }
+      }
+      .featured-image {
+        display: none;
+      }
+    }
+  }
+`;
+
+const LatestPostsBody = styled.section`
+  ${LatestPostsCss}
 `;
