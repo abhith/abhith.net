@@ -16038,6 +16038,11 @@ typeface-lora@^0.0.72:
   resolved "https://registry.yarnpkg.com/typeface-lora/-/typeface-lora-0.0.72.tgz#850c211ef51167d8b71b610c93a9b1ca0f17863c"
   integrity sha512-6Q029hpZAJOU2K0V3JM0xColUa/u/0xpzgN5nv1aKe019lNYp9u+6u+BF3zK7n+gwGAjrz75qdFxhM34fheSAA==
 
+typeface-open-sans@^0.0.75:
+  version "0.0.75"
+  resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.75.tgz#20d0c330f14c0c40463c334adbedd6005389abe4"
+  integrity sha512-0lLmB7pfj113OP4T78SbpSmC4OCdFQ0vUxdSXQccsSb6qF76F92iEuC/DghFgmPswTyidk8+Hwf+PS/htiJoRQ==
+
 ua-parser-js@^0.7.18:
   version "0.7.21"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"

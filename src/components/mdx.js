@@ -7,6 +7,7 @@ import { MDXProvider } from "@mdx-js/react";
 import mediaqueries from "@styles/media";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
+import Headings from "@components/Headings";
 
 const components = {
   blockquote: Blockquote,
@@ -16,6 +17,12 @@ const components = {
   thead: TableHead,
   th: TableHeadCell,
   td: TableCell,
+  h1: Headings.h2, // h1 reserved article title
+  h2: Headings.h2,
+  h3: Headings.h3,
+  h4: Headings.h4,
+  h5: Headings.h5,
+  h6: Headings.h6,
 };
 
 function MDX({ content, children, ...props }) {
