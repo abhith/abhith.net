@@ -4,7 +4,7 @@ import SEO from "../components/seo/seo";
 import VideosRoll from "../components/videos-roll";
 import { graphql, Link } from "gatsby";
 import Pagination from "../components/pagination";
-import TopicsCloud from "@components/topics-cloud";
+import TopicsCloud from "@components/topic-cloud";
 
 function VideosPage({ pageContext, data }) {
   const { previousPagePath, nextPagePath, topics } = pageContext;

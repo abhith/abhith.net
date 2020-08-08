@@ -1,6 +1,6 @@
 import React from "react";
 
-function ColorPreview({ fill, textColorIsWhite, children }) {
+function Badge({ fill, textColorIsWhite, children }) {
   if (textColorIsWhite) {
     return (
       <span className="tag" style={{ backgroundColor: fill, color: "#fff" }}>
@@ -15,4 +15,4 @@ function ColorPreview({ fill, textColorIsWhite, children }) {
   );
 }
 
-export default ColorPreview;
+export default Badge;

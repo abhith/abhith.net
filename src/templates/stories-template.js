@@ -2,7 +2,7 @@ import Layout from "@components/layout";
 import Pagination from "@components/pagination";
 import SEO from "@components/seo/seo";
 import StoriesRoll from "@components/stories-roll";
-import TopicsCloud from "@components/topics-cloud";
+import TopicsCloud from "@components/topic-cloud";
 
 import { graphql, Link } from "gatsby";
 import React from "react";

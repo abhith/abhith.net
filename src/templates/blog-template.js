@@ -2,7 +2,7 @@ import BlogRoll from "@components/blog-roll";
 import Layout from "@components/layout";
 import Pagination from "@components/pagination";
 import SEO from "@components/seo/seo";
-import TopicsCloud from "@components/topics-cloud";
+import TopicsCloud from "@components/topic-cloud";
 import { graphql } from "gatsby";
 import React from "react";
 import normalize from "../../gatsby/data/data.normalize";
