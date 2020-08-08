@@ -9,7 +9,7 @@ const RelatedTools = ({ relatedServices }) => {
 
   return (
     <section className="section">
-      <div className="container is-fluid">
+      <div className="container">
         <div className="columns">
           <div className="column is-full">
             <TitleBar title={`Related Tools & Services`} />

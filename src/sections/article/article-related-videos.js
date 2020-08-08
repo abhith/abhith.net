@@ -10,7 +10,7 @@ const RelatedVideos = ({ relatedVideos }) => {
 
   return (
     <section className="section">
-      <div className="container is-fluid">
+      <div className="container">
         <TitleBar title={`Related Videos`} />
         <VideosRoll videos={relatedVideos} itemsPerRow={3} />
         <div className="cta-wrapper has-text-centered">

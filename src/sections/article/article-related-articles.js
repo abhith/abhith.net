@@ -14,9 +14,12 @@ const RelatedArticles = ({ articles }) => {
 
   let rowItemsCollection = [];
   if (articles.length > 3) {
-    [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(articles, i => {
-      return articles.indexOf(i) % 2 === 0;
-    });
+    [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(
+      articles,
+      (i) => {
+        return articles.indexOf(i) % 2 === 0;
+      }
+    );
     rowItemsCollection = [relatedPostsFirstHalf, relatedPostsSecondHalf];
   } else {
     rowItemsCollection = [articles];
@@ -25,7 +28,7 @@ const RelatedArticles = ({ articles }) => {
   rowItemsCollection.forEach((rowItems, index) => {
     rowElements.push(
       <div className="columns" key={index}>
-        {rowItems.map(article => {
+        {rowItems.map((article) => {
           return <BlogCard post={article} key={article.id} />;
         })}
       </div>
@@ -34,7 +37,7 @@ const RelatedArticles = ({ articles }) => {
 
   return (
     <section className="section">
-      <div className="container is-fluid">
+      <div className="container">
         <TitleBar title={`Related Posts`} />
         {rowElements}
       </div>

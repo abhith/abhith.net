@@ -24,7 +24,7 @@ export const IndexPageTemplate = ({
     <LatestPosts />
     <div className="hero is-primary is-bold">
       <div className="hero-body">
-        <div className="container is-fluid">
+        <div className="container">
           <div className="columns is-centered">
             <div className="column is-12">
               <div className="columns is-vcentered">
@@ -48,7 +48,7 @@ export const IndexPageTemplate = ({
       </div>
     </div>
     <div className="section">
-      <div className="container is-fluid">
+      <div className="container">
         <div className="columns">
           <div className="column is-one-third">
             <h4 className="spanborder">

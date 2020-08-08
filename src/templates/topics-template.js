@@ -23,11 +23,11 @@ function TopicsPage({ pageContext }) {
         className={`position-relative page-hero`}
       />
       <section className="section">
-        <div className="container is-fluid" id="topics-block">
+        <div className="container" id="topics-block">
           <div className="columns is-centered">
             <div className="column is-9">
               <div className="columns is-centered is-multiline">
-                {topics.map(topic => (
+                {topics.map((topic) => (
                   <div
                     className="column is-full-mobile
                     is-half-tablet

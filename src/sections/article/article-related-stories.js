@@ -13,7 +13,7 @@ const RelatedStories = ({ relatedStories }) => {
 
   [relatedStoriesFirstHalf, relatedStoriesSecondHalf] = partition(
     relatedStories,
-    i => {
+    (i) => {
       return relatedStories.indexOf(i) % 2 === 0;
     }
   );
@@ -32,7 +32,7 @@ const RelatedStories = ({ relatedStories }) => {
 
   return (
     <section className="section">
-      <div className="container is-fluid">
+      <div className="container">
         <TitleBar title={`Related Stories`} />
         <div className="columns">{columnElements}</div>
       </div>
