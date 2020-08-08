@@ -1,5 +1,13 @@
 [
   {
+    "title": "gitignore.io",
+    "url": "https://www.toptal.com/developers/gitignore",
+    "description": "Create useful .gitignore files for your project by selecting from 509 Operating System, IDE, and Programming Language .gitignore templates",
+    "image": "",
+    "date": "2020-08-08T15:30:28.263Z",
+    "tags": ["git", "github", "gitlab"]
+  },
+  {
     "title": "Bridgy",
     "url": "https://brid.gy/",
     "description": "Bridgy connects your web site to social media.Likes, retweets, mentions, cross-posting, and more...",
