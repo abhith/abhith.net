@@ -7,7 +7,7 @@ import { MDXProvider } from "@mdx-js/react";
 import mediaqueries from "@styles/media";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
-import Headings from "@components/Headings";
+import Headings from "@components/headings";
 
 const components = {
   blockquote: Blockquote,

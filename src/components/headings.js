@@ -9,9 +9,8 @@ import mediaqueries from "@styles/media";
  */
 
 const commonStyles = (p) => css`
-  font-weight: bold;
-  color: ${p.theme.colors.primary};
-  font-family: ${p.theme.fonts.sansSerif};
+  font-weight: bold !important;
+  font-family: ${p.theme.fonts.sansSerif} !important;
 `;
 
 const h1 = styled.h1`
@@ -32,70 +31,70 @@ const h1 = styled.h1`
 `;
 
 const h2 = styled.h2`
-  word-break: keep-all;
-  font-size: 32px;
-  line-height: 1.333;
+  word-break: keep-all !important;
+  font-size: 32px !important;
+  line-height: 1.333 !important;
   ${commonStyles};
 
   ${mediaqueries.desktop`
-    font-size: 21px;
+    font-size: 21px !important;
   `};
 
   ${mediaqueries.tablet`
-    font-size: 24px;
-    line-height: 1.45;
+    font-size: 24px !important;
+    line-height: 1.45 !important;
   `};
 
   ${mediaqueries.phablet`
-    font-size: 22px;
+    font-size: 22px !important;
   `};
 `;
 
 const h3 = styled.h3`
-  word-break: keep-all;
-  font-size: 24px;
-  line-height: 1.45;
+  word-break: keep-all !important;
+  font-size: 24px !important;
+  line-height: 1.45 !important;
   ${commonStyles};
 
   ${mediaqueries.tablet`
-    font-size: 22px;
+    font-size: 22px !important;
   `};
 
   ${mediaqueries.phablet`
-    font-size: 20px;
+    font-size: 20px !important;
   `};
 `;
 
 const h4 = styled.h4`
-  word-break: keep-all;
-  font-size: 18px;
-  line-height: 1.45;
+  word-break: keep-all !important;
+  font-size: 18px !important;
+  line-height: 1.45 !important;
   ${commonStyles};
 
   ${mediaqueries.phablet`
-    font-size: 16px;
+    font-size: 16px !important;
   `};
 `;
 
 const h5 = styled.h5`
-  word-break: keep-all;
-  font-size: 18px;
-  line-height: 1.45;
+  word-break: keep-all !important;
+  font-size: 18px !important;
+  line-height: 1.45 !important;
   ${commonStyles};
 
   ${mediaqueries.phablet`
-    font-size: 16px;
+    font-size: 16px !important;
   `};
 `;
 
 const h6 = styled.h6`
-  word-break: keep-all;
-  font-size: 16px;
-  line-height: 1.45;
+  word-break: keep-all !important;
+  font-size: 16px !important;
+  line-height: 1.45 !important;
   ${commonStyles};
 
   ${mediaqueries.phablet`
-    font-size: 14px;
+    font-size: 14px !important;
   `};
 `;
 
