@@ -1,6 +1,4 @@
-//Post item
 .blog-post {
-  //featured image
   img {
     display: block;
     width: 100%;
@@ -14,14 +12,12 @@
     overflow: hidden;
     box-shadow: 0 15px 26px rgba(0, 0, 0, 0.4);
   }
-  //Link style
   a {
     display: flex;
     padding: 50px;
     overflow: hidden;
     align-items: center;
     color: #333;
-    // font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -34,22 +30,15 @@
       transition: all 0.3s ease;
     }
   }
-  //Content
   .content {
     width: 65%;
-    //Post title
     .post-title {
       font-size: 1.2rem;
       text-transform: capitalize;
-      // color:$white;
       font-weight: 500;
-      // font-family: 'Cabin', sans-serif;
-      //Date
       .blog-date {
         font-size: 12px;
         margin-left: 20px;
-        // color: $white;
-        // font-family: 'Cabin', sans-serif;
         &:before {
           content: "|";
           color: #2bb673;
@@ -60,7 +49,6 @@
         }
       }
     }
-    //Separator
     .rounded {
       width: 70px;
       height: 3px;
@@ -70,12 +58,10 @@
       margin-top: 10px;
       margin-bottom: 10px;
     }
-    //Post meta
     .post-meta {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      //Author
       .author-block {
         display: flex;
         justify-content: flex-start;
@@ -85,8 +71,6 @@
         }
         .author-name {
           font-size: 0.75rem;
-          // font-family: 'Cabin', sans-serif;
-          // color: $white;
           padding: 0 10px;
           span {
             display: block;
@@ -99,7 +83,6 @@
           }
         }
       }
-      //Comments and likes count
       .stats-block {
         margin-left: auto;
         display: flex;
@@ -140,7 +123,6 @@
   }
 }
 
-//
 .post-caption {
   .author-block {
     display: flex;
@@ -160,7 +142,6 @@
   }
 }
 
-//Specific Media queries for blog posts
 @media screen and (max-width: 768px) {
   .blog-post {
     margin: auto;
@@ -189,31 +170,26 @@
   }
 }
 
-//Post item
 .card-post {
   margin: auto;
-  //featured image
   img {
     display: block;
     width: 100%;
     height: 100%;
-    vertical-align: middle;
   }
   .featured-image {
-    // width: 35%;
     width: 100%;
     object-fit: cover;
     margin-right: 50px;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 15px 26px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
     img {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
   }
-  //Link style
   a {
     display: block;
     padding: 10px;
@@ -222,7 +198,6 @@
     max-width: 1000px;
     margin: auto;
     color: #333;
-    // font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -235,24 +210,16 @@
       transition: all 0.3s ease;
     }
   }
-  //Content
   .content {
-    // width: 65%;
     width: 100%;
     margin-top: 35px;
-    //Post title
     .post-title {
       font-size: 18px;
       text-transform: capitalize;
-      // color:$white;
       font-weight: 500;
-      // font-family: 'Cabin', sans-serif;
-      //Date
       .blog-date {
         font-size: 12px;
         margin: 0;
-        // color: $white;
-        // font-family: 'Cabin', sans-serif;
         &:before {
           content: "|";
           color: #2bb673;
@@ -263,7 +230,6 @@
         }
       }
     }
-    //Separator
     .rounded {
       width: 70px;
       height: 3px;
@@ -273,12 +239,10 @@
       margin-top: 10px;
       margin-bottom: 10px;
     }
-    //Post meta
     .post-meta {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      //Author
       .author-block {
         display: flex;
         justify-content: flex-start;
@@ -288,8 +252,6 @@
         }
         .author-name {
           font-size: 0.75rem;
-          // font-family: 'Cabin', sans-serif;
-          // color: $white;
           padding: 0 10px;
           span {
             display: block;
@@ -302,7 +264,6 @@
           }
         }
       }
-      //Comments and likes count
       .stats-block {
         margin-left: auto;
         display: flex;
@@ -343,7 +304,6 @@
   }
 }
 
-//Single post
 .blog-featured {
   width: 100%;
   height: auto;
@@ -365,7 +325,6 @@
   }
 }
 
-// Link to GitHub
 .ar-typo {
   text-align: center;
 }
@@ -379,9 +338,7 @@
   justify-content: space-between;
 }
 
-// template
 .ar-main {
-  // overflow: hidden;
   position: relative;
 }
 
@@ -570,7 +527,6 @@
 
 .ar-webmention-avatar {
   position: relative;
-  // border: 4px solid #fff;
   border-radius: 50%;
   overflow: hidden;
   width: 32px;
