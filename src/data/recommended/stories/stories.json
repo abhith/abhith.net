@@ -1,5 +1,12 @@
 [
   {
+    "title": "Message Naming Conventions",
+    "url": "https://jimmybogard.com/message-naming-conventions/",
+    "description": "",
+    "date": "2020-08-10T06:36:29.263Z",
+    "tags": ["event-sourcing"]
+  },
+  {
     "title": "It's time to stop using SMS for two-factor authentication and it's time for services to stop offering it | Android Central",
     "url": "https://www.androidcentral.com/its-time-stop-using-sms-two-factor-authentication-and-its-time-services-stop-offering-it",
     "description": "Not all 2FA is equal. Using SMS to get a code might not be better than nothing after all.",
