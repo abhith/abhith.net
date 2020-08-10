@@ -1,5 +1,19 @@
 [
   {
+    "title": "It's time to stop using SMS for two-factor authentication and it's time for services to stop offering it | Android Central",
+    "url": "https://www.androidcentral.com/its-time-stop-using-sms-two-factor-authentication-and-its-time-services-stop-offering-it",
+    "description": "Not all 2FA is equal. Using SMS to get a code might not be better than nothing after all.",
+    "date": "2020-08-10T05:36:29.263Z",
+    "tags": ["security"]
+  },
+  {
+    "title": "Azure Repos default branch name | Azure DevOps Blog",
+    "url": "https://devblogs.microsoft.com/devops/azure-repos-default-branch-name/",
+    "description": "Many communities are considering renaming the default branch of their repository away from master. Azure DevOps customers are no exception. We’re committed to making the renaming process as seamless as possible for project owners and contributors. We’re joining the Git project (statement,",
+    "date": "2020-08-09T05:36:29.263Z",
+    "tags": ["azure-devops"]
+  },
+  {
     "title": "Dear Staging: We’re Done - DevOps.com",
     "url": "https://devops.com/dear-staging-were-done/",
     "description": "Dear Staging, I’ve been thinking a lot lately, and I’ve come to the decision that it’s time for us to go our separate ways. Our time of working together",
