@@ -25,15 +25,11 @@ function TopicsPage({ pageContext }) {
       <section className="section">
         <div className="container" id="topics-block">
           <div className="columns is-centered">
-            <div className="column is-9">
+            <div className="column">
               <div className="columns is-centered is-multiline">
                 {topics.map((topic) => (
                   <div
-                    className="column is-full-mobile
-                    is-half-tablet
-                    is-half-desktop
-                    is-one-third-widescreen
-                    is-one-quarter-fullhd"
+                    className="column is-full-mobile is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
                     key={topic.slug}
                   >
                     <div className="block">
