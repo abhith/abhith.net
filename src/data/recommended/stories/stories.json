@@ -1019,7 +1019,7 @@
     "url": "https://www.softwaremeadows.com/posts/memstate-_the_practical_argument_for_big_in-memory_data/",
     "description": "Appeared in Software Meadows",
     "date": "2019-07-02T08:22:28.263Z",
-    "tags": ["database"]
+    "tags": ["databases"]
   },
   {
     "title": "Access your local ASP.NET Core web application from the public web",
@@ -1173,7 +1173,7 @@
     "url": "https://blogs.msdn.microsoft.com/mssmallbiz/2017/07/11/largest-free-microsoft-ebook-giveaway-im-giving-away-millions-of-free-microsoft-ebooks-again-including-windows-10-office-365-office-2016-power-bi-azure-windows-8-1-office-2013-sharepo/",
     "description": "By Eric Ligman, Microsoft Director of Business & Sales Operations Blog",
     "date": "2019-06-13T16:16:28.263Z",
-    "tags": ["microsoft", "downloads", "ebooks"]
+    "tags": ["microsoft", "ebooks"]
   },
   {
     "title": "Angular Tutorial For Beginners - Part Seven - Using Pipes In Angular",
@@ -1369,7 +1369,7 @@
     "description": "By Robert C. Martin (Uncle Bob)",
     "url": "http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html",
     "date": "2012-08-13T16:42:21.638Z",
-    "tags": ["architecture"]
+    "tags": ["design-patterns"]
   },
   {
     "title": "Docker but no declaration was found in the volumes",

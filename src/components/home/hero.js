@@ -19,7 +19,7 @@ export default function Hero() {
                   params={{
                     particles: {
                       number: {
-                        value: 15,
+                        value: 16,
                         density: {
                           enable: true,
                           value_area: 800,
@@ -36,7 +36,22 @@ export default function Hero() {
                         type: ["images"],
                         images: [
                           {
+                            src: "/img/topics/c--4.svg",
+                            height: 20,
+                            width: 23,
+                          },
+                          {
                             src: "/img/topics/angular-icon-1.svg",
+                            height: 20,
+                            width: 23,
+                          },
+                          {
+                            src: "/img/topics/graphql.svg",
+                            height: 20,
+                            width: 23,
+                          },
+                          {
+                            src: "/img/topics/dotnet.svg",
                             height: 20,
                             width: 23,
                           },
@@ -102,6 +117,11 @@ export default function Hero() {
                           },
                           {
                             src: "/img/topics/react.svg",
+                            height: 20,
+                            width: 23,
+                          },
+                          {
+                            src: "/img/topics/docker.svg",
                             height: 20,
                             width: 23,
                           },

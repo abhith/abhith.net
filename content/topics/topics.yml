@@ -58,7 +58,7 @@
 - title: Microsoft Azure
   slug: azure
   description: ""
-  image: microsoft-azure-3.svg
+  image: azure-1.svg
 - title: Azure DevOps
   slug: azure-devops
   description: ""
@@ -74,7 +74,7 @@
 - title: C#
   slug: c-sharp
   description: One of my favorite language.
-  image: ""
+  image: "c--4.svg"
 - title: Career
   slug: career
   description: ""
@@ -110,7 +110,7 @@
 - title: CSS
   slug: css
   description: ""
-  image: ""
+  image: "css-3.svg"
 - title: CQRS
   slug: cqrs
   description: ""
@@ -126,8 +126,8 @@
     to build resilient, microservice stateless and stateful applications that run
     on the cloud
   image: dapr.png
-- title: Database
-  slug: database
+- title: Databases
+  slug: databases
   description: ""
   image: ""
 - title: Debug
@@ -149,11 +149,15 @@
 - title: ".NET"
   slug: dotnet
   description: ""
-  image: ""
+  image: "dotnet.svg"
 - title: ".NET Core"
   slug: dotnet-core
   description: ".NET is an Open Source Developer Platform for Building Apps."
   image: dot-net-core-7.svg
+- title: Docker
+  slug: docker
+  description: ""
+  image: "docker.svg"
 - title: Download Site
   slug: download-site
   description: ""
@@ -193,11 +197,15 @@
 - title: GitLab
   slug: gitlab
   description: ""
-  image: ""
+  image: "gitlab.svg"
 - title: Google
   slug: google
   description: ""
-  image: ""
+  image: "google-icon.svg"
+- title: GraphQL
+  slug: graphql
+  description: ""
+  image: "graphql.svg"
 - title: Helm
   slug: helm
   description: ""
