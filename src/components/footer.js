@@ -71,13 +71,13 @@ function Footer() {
                   <p className="menu-label">Recommended</p>
                   <ul className="menu-list">
                     <li>
-                      <Link to="/recommended/stories/">Stories</Link>
-                    </li>
-                    <li>
-                      <Link to="/recommended/videos/">Videos</Link>
+                      <Link to="/recommended/stories/">Developer Stories</Link>
                     </li>
                     <li>
                       <Link to="/recommended/services/">Tools & Services</Link>
+                    </li>
+                    <li>
+                      <Link to="/recommended/videos/">Videos</Link>
                     </li>
                   </ul>
                 </div>
