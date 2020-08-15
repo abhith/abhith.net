@@ -123,6 +123,10 @@ function SEO({
             content: seoImage,
           },
           {
+            name: `twitter:site`,
+            content: site.siteMetadata.social.twitter,
+          },
+          {
             name: "msapplication-TileImage",
             content: "/img/mstile-150x150.png",
           },
