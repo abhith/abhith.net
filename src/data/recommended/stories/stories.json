@@ -1,5 +1,19 @@
 [
   {
+    "title": "Mads Kristensen Unveils 'The Essentials' Visual Studio Extension Pack for All Devs -- Visual Studio Magazine",
+    "url": "https://visualstudiomagazine.com/articles/2020/07/09/essentials-extensions.aspx",
+    "description": "Visual Studio senior program manager Mads Kristensen has created a new extension pack for the IDE to ease the acquisition of the basic tools that would benefit all developers.",
+    "date": "2020-08-12T06:36:29.263Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Database Profiling with Visual Studio | Visual Studio Blog",
+    "url": "https://devblogs.microsoft.com/visualstudio/database-profiling-with-visual-studio/",
+    "description": "Have you ever been tasked with diagnosing a slow performing web application and suspected the database was to blame? Looking into your database tier requires specific tools, now you can quickly and easily investigate using the database profiling tool in Visual Studio’s Performance Explorer!",
+    "date": "2020-08-12T05:36:29.263Z",
+    "tags": ["visual-studio", "sql-server", "databases"]
+  },
+  {
     "title": "Message Naming Conventions",
     "url": "https://jimmybogard.com/message-naming-conventions/",
     "description": "",
