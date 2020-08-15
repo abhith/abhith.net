@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicsBar from "./topics-bar";
 import Button from "./button";
+import { domainFromURL } from "../utils/common";
+
 const FeaturedSidebar = ({ items, totalCount }) => {
   return (
     <div className="sticky">
@@ -25,6 +27,7 @@ const FeaturedSidebar = ({ items, totalCount }) => {
                     {item.title}
                   </OutboundLink>
                 </h6>
+                <small>{domainFromURL(item.url)}</small>
                 <TopicsBar topics={item.tags} />
               </span>
             </li>

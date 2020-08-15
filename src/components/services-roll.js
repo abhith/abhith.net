@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicsBar from "./topics-bar";
 import Hoverable from "@components/hoverable";
+import { domainFromURL } from "../utils/common";
 
 const ServicesRoll = (props) => {
   const { services, hideDescription } = props;
@@ -14,6 +15,7 @@ const ServicesRoll = (props) => {
           <Hoverable className="box" key={service.id}>
             <div className="columns">
               <div className="column">
+                <small>{domainFromURL(service.url)}</small>
                 <h4 className="title is-4">
                   <OutboundLink
                     className="has-text-dark"
@@ -23,11 +25,9 @@ const ServicesRoll = (props) => {
                     {service.title}{" "}
                   </OutboundLink>
                 </h4>
-
                 {!hideDescription && (
                   <div className="subtitle">{service.description}</div>
                 )}
-
                 <TopicsBar topics={service.tags} />
               </div>
             </div>
