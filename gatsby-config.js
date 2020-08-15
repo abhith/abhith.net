@@ -31,7 +31,7 @@ module.exports = {
       url: `https://twitter.com/abhithrajan`,
       image: `https://www.abhith.net/img/abhith.jpg`,
     },
-    image: `https://www.abhith.net/img/abhith.jpg`,
+    image: `https://www.abhith.net/img/site/mindmap.png`,
     social: {
       twitter: "@AbhithRajan",
       fbAppID: "",
