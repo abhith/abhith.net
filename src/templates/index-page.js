@@ -150,7 +150,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    featured: allServicesJson(
+    featured: allRecommendedService(
       limit: 9
       sort: { fields: [date], order: [DESC] }
     ) {

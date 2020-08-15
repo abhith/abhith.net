@@ -66,6 +66,33 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
     return;
   }
 
+  if (node.internal.type === `ServicesYaml`) {
+    const fieldData = {
+      ...node,
+    };
+
+    createNode({
+      ...fieldData,
+      // Required fields.
+      id: createNodeId(`${node.id} >>> RecommendedService`),
+      parent: node.id,
+      children: [],
+      internal: {
+        type: `RecommendedService`,
+        contentDigest: crypto
+          .createHash(`md5`)
+          .update(JSON.stringify(fieldData))
+          .digest(`hex`),
+        content: JSON.stringify(fieldData),
+        description: `RecommendedService`,
+      },
+    });
+
+    createParentChildLink({ parent: fileNode, child: node });
+
+    return;
+  }
+
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
     createNodeField({

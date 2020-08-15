@@ -44,7 +44,7 @@ export default class RecommendedServicesIndexPage extends React.Component {
 
 export const pageQuery = graphql`
   query RecommendedServicesIndexPageQuery($skip: Int!, $limit: Int!) {
-    recommendedServices: allServicesJson(
+    recommendedServices: allRecommendedService(
       sort: { fields: [date], order: DESC }
       skip: $skip
       limit: $limit

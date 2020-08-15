@@ -175,7 +175,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    services: allServicesJson(limit: 3, sort: { fields: [date], order: DESC }) {
+    services: allRecommendedService(
+      limit: 3
+      sort: { fields: [date], order: DESC }
+    ) {
       totalCount
       edges {
         node {

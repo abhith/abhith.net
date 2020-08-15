@@ -160,7 +160,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           totalCount
         }
       }
-      allServicesJson {
+      allRecommendedService {
         edges {
           node {
             tags
@@ -181,12 +181,12 @@ module.exports = async ({ graphql, actions, reporter }) => {
     const pages = result.data.allMarkdownRemark.edges;
     const stories = result.data.allStoriesJson.edges;
     const videos = result.data.allVideosJson.edges;
-    const services = result.data.allServicesJson.edges;
+    const services = result.data.allRecommendedService.edges;
 
     const postsGroup = result.data.articleTagsGroup.group;
     const storiesGroup = result.data.allStoriesJson.group;
     const videosGroup = result.data.allVideosJson.group;
-    const servicesGroup = result.data.allServicesJson.group;
+    const servicesGroup = result.data.allRecommendedService.group;
 
     let topics = [];
 

@@ -2,6 +2,7 @@ const siteUrl = `https://www.abhith.net`;
 const contentPosts = "content/blog";
 const contentAuthors = "content/authors";
 const contentTopics = "content/topics";
+const contentRecommendedServices = "content/recommended/services";
 const path = require("path");
 
 const templatesDirectory = path.resolve(__dirname, "src/templates");
@@ -112,6 +113,13 @@ module.exports = {
       options: {
         path: contentTopics,
         name: contentTopics,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: contentRecommendedServices,
+        name: contentRecommendedServices,
       },
     },
     {

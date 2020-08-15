@@ -109,7 +109,7 @@ module.exports.local = {
   }
   }`,
   tools: `{
-    tools:allServicesJson(
+    tools:allRecommendedService(
     sort: { fields: [date], order: DESC }
   ) {
     edges {
