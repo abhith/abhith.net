@@ -1,5 +1,14 @@
 [
   {
+    "title": "Azure Kubernetes Service Networking Deep Dive",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=6TZsd4toIbg",
+    "date": "2020-08-16T05:22:22.638Z",
+    "type": "youtube",
+    "tags": ["aks"]
+  },
+  {
     "title": "Document APIs with open source OpenAPI Comment Parser",
     "description": "",
     "image": "",
