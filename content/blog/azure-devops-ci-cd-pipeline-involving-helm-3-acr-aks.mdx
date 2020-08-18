@@ -1,7 +1,7 @@
 ---
 title: Azure DevOps - CI/CD Pipeline involving Helm 3, ACR & AKS
 description: >-
-  Setup Continuous Integration in Azure DevOps which push Docker image, Helm 3 chart to ACR and Continuous Deployment pipeline that deploys the chart to AKS.
+  Setup Continuous Integration in Azure DevOps which push Docker image, Helm 3 chart to ACR, and Continuous Deployment pipeline that deploys the chart to AKS.
 author: Abhith Rajan
 date: 2020-08-18T15:11:27.975Z
 image: /img/blog/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks-cover.png
@@ -11,12 +11,12 @@ tags:
   - helm
 ---
 
-Azure is my favorite cloud provider. We kind of relying Azure for most of the services.
-Our code goes to Azure DevOps, we use Azure Container Registry (ACR) to host our docker container images and our kubernetes clusters running in Azure Kubernetes Service (AKS).
+Azure is my favorite cloud provider. We kind of relying upon Azure for most of the services.
+Our code goes to Azure DevOps, we use Azure Container Registry (ACR) to host our docker container images and our Kubernetes clusters running in Azure Kubernetes Service (AKS).
 
-We configured the the CI/CD pipelines in Azure DevOps.
-In my case we have a monorepo which contains several ASP.NET Core microservices and the folder structure is inherited from [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
-The folder structure look like below,
+We configured the CI/CD pipelines in Azure DevOps.
+In my case, we have a monorepo that contains several ASP.NET Core microservices and the folder structure is inherited from [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
+The folder structure looks like below,
 
 ```
 - build
@@ -48,24 +48,25 @@ The folder structure look like below,
     - Project-Two
 ```
 
-One of the great article that helped me to initially setup the CI/CD is given below.
+One of the great articles that helped me to initial setup the CI/CD is given below.
 Its kind of outdated now since it is using `az acr helm` commands which were deprecated later.
-But it is still worth reading. So defenetily check it out.
+But it is still worth reading. So definitely check it out.
 
 :point_right: [Tutorial: Using Azure DevOps to setup a CI/CD pipeline and deploy to Kubernetes](https://cloudblogs.microsoft.com/opensource/2018/11/27/tutorial-azure-devops-setup-cicd-pipeline-kubernetes-docker-helm/)
 
 ## CI Pipeline
 
-- Build Docker image and push to ACR
+- Build a Docker image and push to ACR
 - Build Helm chart and push to ACR
 
 The Helm chart template for each project is located under `deploy > k8s > helm`
 
 ### Prerequisites
 
-- ACR service connection from Azure DevOps (acr-name-connection is the name of the connection). You can add it under `Azure DevOps > Project > Project Settings > Service Connections`.
+- ACR service connection in Azure DevOps (acr-name-connection is the name of the connection). You can add it under `Azure DevOps > Project > Project Settings > Service Connections`.
 - A variable group `acr-name-variable-group` which contains the ACR related variables (registryName, registryLogin and registryPassword).
-  ![Variable group definition](../../static/img/blog/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks/azure-devops-library.jpg)
+
+![Variable group definition](../../static/img/blog/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks/azure-devops-library.jpg)
 
 ### Common
 
@@ -93,7 +94,7 @@ variables:
   helmto: $(Build.ArtifactStagingDirectory)/deploy/k8s/helm
 ```
 
-##### Notes
+Notes
 
 - `HELM_EXPERIMENTAL_OCI` is to enable OCI support in the Helm 3 client. Currently, this support is experimental.
 - `build.sourceBranchName` as the image tag and chart version is handy if you are following **Gitflow** or similar branching convention, so each release (eg, refs/tags/project-one/2.2.6) will generate Docker image and Helm chart with the same version.
@@ -135,7 +136,7 @@ steps:
 
 The steps in the CI pipeline we moved to a common template file `ci-steps-template.yml` so that we can reuse it on other pipelines as well, and the steps include,
 
-1. Build and push docker image
+1. Build and push the docker image
 2. Installs Helm client
 3. A series of script which does
 
@@ -176,12 +177,12 @@ steps:
 
 If everything went well, you will have two repositories under your ACR.
 
-- project-one which contains the Docker image
-- chart/project-one for the Helm chart
+- **project-one** which contains the Docker image
+- **chart/project-one** for the Helm chart
 
 ## CD Pipeline
 
-Once the CI completed successfully, we can setup CD. Which will install the Helm chart to AKS.
+The CD pipeline will install the Helm chart on AKS.
 
 Before we do this, we need
 
@@ -223,7 +224,7 @@ az acr show -n acr-name -g acr-resource-group-name --query id -o tsv
   - aksSpTenantId - Tenant Id
   - aksSpId and aksSpSecret .
 
-In the example below, `aks-test-name` varibale group has my AKS cluster values for TEST environment.
+In the example below, `aks-test-name` variable group has my AKS cluster values for the TEST environment.
 
 To get tenantId (aksSpTenantId),
 
@@ -354,9 +355,9 @@ stages:
                 - template: ../common/cd-steps-template-prod.yml
 ```
 
-In the CD pipeline, I have defined two stage, one for TEST and one for PROD. The main difference between them is in the variable group used.
-`aks-test-name` varibale group have the TEST cluster values and you guessed right, `aks-prod-name` has the PROD cluster values.
-And difference between `cd-steps-template.yml` and `cd-steps-template-prod.yml` is the prod file has some additional chart value overrides with values for PROD environment.
+In the CD pipeline, I have defined two stages, one for TEST and one for PROD. The main difference between them is in the variable group used.
+`aks-test-name` variable group has the TEST cluster values and you guessed right, `aks-prod-name` has the PROD cluster values.
+And the difference between `cd-steps-template.yml` and `cd-steps-template-prod.yml` is the prod file has some additional chart value overrides with values for the PROD environment.
 
 ### cd-steps-template-prod.yml
 
@@ -402,10 +403,9 @@ steps:
 Few more Notes
 
 - CD pipeline is also YAML based (You gonna like it), hence create it like a regular pipeline (Not RELEASE) in the Azure DevOps, and choose the `cd-pipeline.yml` after choosing to create pipeline based on "Existing Azure Pipelines YAML file".
-- Once you create the CD pipeline, check the "Environments" under Azure DevOps Pipelines. There will be two environments as per the above example, test-project-one and production-project-one. Inside each you can configure the approvals and more for the respective CD stages.
+- Once you create the CD pipeline, check the "Environments" under Azure DevOps Pipelines. There will be two environments as per the above example, test-project-one and production-project-one. Inside each, you can configure the approvals and more for the respective CD stages.
 
 A sample reference source code is also pushed to [here](https://github.com/Abhith/abhith.net/tree/master/samples/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks).
 
 If you have any grey area in this article, feel free to ask me in the comments below :point_down:.
-
 Suggestions for improvements are always welcome, send me a PR, this article itself is opensource :heart:

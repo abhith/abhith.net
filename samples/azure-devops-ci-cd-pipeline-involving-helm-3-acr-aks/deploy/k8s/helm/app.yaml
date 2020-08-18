@@ -6,4 +6,4 @@ app: # app global settings
     projectone: project-one # service name for project one api
     projecttwo: project-two # other projects
   namespace:
-    projectone: teama
+    projectone: myteam
