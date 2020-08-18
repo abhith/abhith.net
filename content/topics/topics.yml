@@ -5,7 +5,7 @@
   image: ""
 - title: Azure Kubernetes Service
   slug: aks
-  description:""
+  description: ""
   image: ""
 - title: Analytics
   slug: analytics
