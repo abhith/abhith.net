@@ -1,0 +1,6 @@
+# This helm values file defines all infrastructure.
+# It is used on all charts, so ** MUST BE INCLUDED ** on every deployment
+
+inf:
+  appinsights:
+    key: "12345-abcd-1234-abcsd-abcddefgabcd8" # App insights to use

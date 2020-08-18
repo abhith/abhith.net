@@ -1,0 +1,8 @@
+parameters:
+  projectName: ''
+
+variables:
+  helmVersion: 3.2.3
+  HELM_EXPERIMENTAL_OCI: 1
+  registryServerName: '$(registryName).azurecr.io'
+  projectName: ${{ parameters.projectName }}

@@ -1,0 +1,30 @@
+steps:
+  - task: Docker@2
+    displayName: Build and push an image to container registry
+    inputs:
+      command: buildAndPush
+      repository: $(imageName)
+      dockerfile: $(dockerfile)
+      containerRegistry: $(dockerRegistryServiceConnectionName)
+      buildContext: $(buildContext)
+      tags: |
+        $(imageTag)
+
+  - task: HelmInstaller@1
+    displayName: 'install helm'
+    inputs:
+      helmVersionToInstall: $(helmVersion)
+  - bash: |
+      echo $(registryPassword) | helm registry login $(registryName).azurecr.io --username $(registryLogin) --password-stdin
+      cd deploy/k8s/helm/
+      helm chart save $(helm package --app-version $(imageTag) --version $(helmChartVersion) ./$(projectName) | grep -o '/.*.tgz') $(registryName).azurecr.io/charts/$(projectName):$(imageTag)
+      helm chart push $(registryName).azurecr.io/charts/$(projectName):$(imageTag)
+      echo $(jq -n --arg version "$(helmChartVersion)" '{helmChartVersion: $version}') > $(build.artifactStagingDirectory)/variables.json
+    failOnStderr: true
+    displayName: 'helm package'
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: $(helmfrom)
+      targetFolder: $(helmto)
+  - publish: $(build.artifactStagingDirectory)
+    artifact: build-artifact
