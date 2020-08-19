@@ -8,8 +8,10 @@ import mediaqueries from "@styles/media";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import Headings from "@components/headings";
+import Anchor from "@components/anchor";
 
 const components = {
+  a: Anchor,
   blockquote: Blockquote,
   code: CodePrism,
   pre: CodePre,
@@ -29,7 +31,7 @@ function MDX({ content, children, ...props }) {
   return (
     <MDXProvider components={components}>
       <MDXBody>
-        <article className="content post-body e-content">
+        <article className="content post-body">
           <MDXRenderer {...props}>{content}</MDXRenderer>
         </article>
       </MDXBody>
