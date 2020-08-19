@@ -17,11 +17,11 @@ pool:
   vmImage: "ubuntu-latest"
 
 variables:
-  - group: acr-name-variable-group
+  - group: acr-variable-group
   - template: ../common/ci-vars-template.yml
     parameters:
       projectName: "project-one"
-      dockerRegistryServiceConnectionName: "acr-name-connection"
+      dockerRegistryServiceConnectionName: "acr-connection-name"
       dockerfile: "src/Services/ProjectOne/ProjectOne.API/Dockerfile"
       buildContext: "$(System.DefaultWorkingDirectory)"
 

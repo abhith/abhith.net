@@ -11,12 +11,11 @@ tags:
   - helm
 ---
 
-Azure is my favorite cloud provider. We kind of relying upon Azure for most of the services.
-Our code goes to Azure DevOps, we use Azure Container Registry (ACR) to host our docker container images and our Kubernetes clusters running in Azure Kubernetes Service (AKS).
+Azure is my favorite cloud provider. We kind of relying upon Azure for most of the infra & services.
+Our code goes to [Azure DevOps](/topics/azure-devops/), we use **Azure Container Registry (ACR)** to host our docker container images and our Kubernetes clusters running in [Azure Kubernetes Service (AKS)](/topics/aks/).
 
 We configured the CI/CD pipelines in Azure DevOps.
-In my case, we have a monorepo that contains several ASP.NET Core microservices and the folder structure is inherited from [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
-The folder structure looks like below,
+In my case, we have a **monorepo** that contains several [ASP.NET Core](/topics/aspnet-core/) [microservices](/topics/microservices/) and the folder structure looks like below, which we inherited from [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
 
 ```
 - build
@@ -56,15 +55,23 @@ But it is still worth reading. So definitely check it out.
 
 ## CI Pipeline
 
+The CI pipeline does the following,
+
 - Build a Docker image and push to ACR
 - Build Helm chart and push to ACR
 
-The Helm chart template for each project is located under `deploy > k8s > helm`
-
 ### Prerequisites
 
-- ACR service connection in Azure DevOps (acr-name-connection is the name of the connection). You can add it under `Azure DevOps > Project > Project Settings > Service Connections`.
-- A variable group `acr-name-variable-group` which contains the ACR related variables (registryName, registryLogin and registryPassword).
+- [Helm](/topics/helm/) chart for your project. Here my chart directory is located at `deploy > k8s > helm`. To create a new chart for your project, refer [Helm Create](https://helm.sh/docs/helm/helm_create/).
+- **acr-connection-name**: ACR service connection in Azure DevOps. You can add it under `Azure DevOps > Project > Project Settings > Service Connections`.
+
+The ACR credentials I stored in the Azure DevOps **Variable Groups** (acr-variable-group).
+
+| Name             | Value         |
+| ---------------- | ------------- |
+| registryName     | Your ACR name |
+| registryLogin    | ACR login     |
+| registryPassword | ACR password  |
 
 ![Variable group definition](../../static/img/blog/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks/azure-devops-library.jpg)
 
@@ -94,10 +101,10 @@ variables:
   helmto: $(Build.ArtifactStagingDirectory)/deploy/k8s/helm
 ```
 
-Notes
+Few things to note here,
 
 - `HELM_EXPERIMENTAL_OCI` is to enable OCI support in the Helm 3 client. Currently, this support is experimental.
-- `build.sourceBranchName` as the image tag and chart version is handy if you are following **Gitflow** or similar branching convention, so each release (eg, refs/tags/project-one/2.2.6) will generate Docker image and Helm chart with the same version.
+- `build.sourceBranchName` as the image tag and chart version is handy if you are following **Gitflow** (which we follow) or similar [git](/topics/git/) branching convention, so each release (eg, refs/tags/project-one/2.2.6) will generate [Docker](/topics/docker/) image and Helm chart with the same version.
 
 #### ci-steps-template.yml
 
@@ -144,7 +151,7 @@ The steps in the CI pipeline we moved to a common template file `ci-steps-templa
    - Creates and push Helm chart to ACR.
    - Creates `variables.json` which contain the newly created Helm chart version. Which we will use to fetch the right chart version during CD.
 
-4. Copy some additional files. Which we can use to override Helm chart values.
+4. Copy some additional files to the artifact. Which we can use to override Helm chart values.
 
 ### ci-pipeline.yml
 
@@ -163,11 +170,11 @@ pool:
   vmImage: "ubuntu-latest"
 
 variables:
-  - group: acr-name-variable-group
+  - group: acr-variable-group
   - template: ../common/ci-vars-template.yml
     parameters:
       projectName: "project-one"
-      dockerRegistryServiceConnectionName: "acr-name-connection"
+      dockerRegistryServiceConnectionName: "acr-connection-name"
       dockerfile: "src/Services/Project-One/Dockerfile"
       buildContext: "$(System.DefaultWorkingDirectory)"
 
@@ -183,56 +190,65 @@ If everything went well, you will have two repositories under your ACR.
 ## CD Pipeline
 
 The CD pipeline will install the Helm chart on AKS.
+The CD pipeline stage requires following details,
 
-Before we do this, we need
+| Name          | Value                      |
+| ------------- | -------------------------- |
+| aks           | AKS name                   |
+| rg            | AKS resource group         |
+| aksSpTenantId | Subscription tenant id     |
+| aksSpId       | Service principal Id       |
+| aksSpSecret   | Service principal password |
 
-- Service principal credentials (aksSpId, aksSpSecret)
+These credentials I stored in another varible group named `aks-variable-group`.
+
+### Helpful commands
+
+#### Service principal credentials
+
+Create new service principal `aks-name-deploy` by
 
 ```bash
 az ad sp create-for-rbac -n aks-name-deploy --scopes aks-resource-id --role "Azure Kubernetes Service Cluster User Role" --query password -o tsv
 ```
 
-You can get the `aks-resource-id` by,
+Where `aks-resource-id` is,
 
 ```shell
-az aks show -n aks-name -g aks-resource-group-name --query id -o tsv
+az aks show -n $aks -g $rg --query id -o tsv
 ```
 
-The above command will output `aksSpSecret`.
+The above command will output service principal password `aksSpSecret`.
 
-To get `aksSpId`,
+To get service principal id `aksSpId`,
 
 ```bash
 az ad sp show --id http://aks-name-deploy --query appId -o tsv
 ```
 
-- Need to attach ACR with AKS
+Also we need to attach ACR with AKS so that AKS can pull our private docker images from our ACR.
+
+#### Attach ACR with AKS
 
 ```bash
-az aks update -g aks-resource-group-name -n aks-name --attach-acr acr-resource-id
+az aks update -g $rg -n $aks --attach-acr acr-resource-id
 ```
 
-To get acr-resource-id,
+Where `acr-resource-id` is the output of,
 
 ```bash
-az acr show -n acr-name -g acr-resource-group-name --query id -o tsv
+az acr show -n $registryName -g acr-resource-group-name --query id -o tsv
 ```
 
-- Another varible group(s) which has following AKS details
-  - aks - AKS name
-  - rg - AKS resource group
-  - aksSpTenantId - Tenant Id
-  - aksSpId and aksSpSecret .
+#### Get Azure Tenant Id
 
-In the example below, `aks-test-name` variable group has my AKS cluster values for the TEST environment.
-
-To get tenantId (aksSpTenantId),
+To get tenantId `aksSpTenantId`,
 
 ```bash
 az account show --query tenantId -o tsv
 ```
 
-Now lets explore the files.
+Now lets explore the pipeline YAML files.
 
 ### Common
 
@@ -290,9 +306,9 @@ steps:
 
 The common CD steps include a series of script which does,
 
-- Authenticate to Azure using the service principal
+- Authenticate to Azure using the service principal credentials
 - Set the specified AKS cluster as the context.
-- Authenticate ACR with the ACR credentials (The same credentials we used in CI pipeline)
+- Authenticate ACR with the ACR credentials (The same credentials we used in CI pipeline defined in the `acr-variable-group`)
 - Extract the Helm chart version that need to install
 - Pulls the Helm chart and installs (or upgrade) it. Here we are overriding the chart image repository to our ACR repository and some additional common values (app.yaml & inf.yaml).
 
@@ -304,7 +320,7 @@ pr: none
 
 # define variables: registryName, registryLogin and registryPassword in the Azure pipeline UI definition
 variables:
-  - group: acr-name-variable-group
+  - group: acr-variable-group
   - template: ../common/cd-vars-template.yml
     parameters:
       projectName: "project-one"
@@ -328,7 +344,7 @@ stages:
     jobs:
       - deployment: test
         variables:
-          - group: aks-test-name
+          - group: aks-variable-group
         displayName: deploy helm chart into AKS
         pool:
           vmImage: ubuntu-latest
@@ -343,7 +359,7 @@ stages:
     jobs:
       - deployment: production
         variables:
-          - group: aks-prod-name
+          - group: aks-prod-variable-group
         displayName: deploy helm chart into AKS
         pool:
           vmImage: ubuntu-latest
@@ -355,9 +371,10 @@ stages:
                 - template: ../common/cd-steps-template-prod.yml
 ```
 
-In the CD pipeline, I have defined two stages, one for TEST and one for PROD. The main difference between them is in the variable group used.
-`aks-test-name` variable group has the TEST cluster values and you guessed right, `aks-prod-name` has the PROD cluster values.
-And the difference between `cd-steps-template.yml` and `cd-steps-template-prod.yml` is the prod file has some additional chart value overrides with values for the PROD environment.
+In the CD pipeline above, I have defined two stages, one for TEST and one for PROD.
+The main difference between them is in the variable group used.
+`aks-variable-group` has the TEST cluster values and you guessed right, `aks-prod-variable-group` has the PROD cluster values.
+And the difference between `cd-steps-template.yml` and `cd-steps-template-prod.yml` is that prod file has some additional chart value overrides with respect to our PRODUCTION environment.
 
 ### cd-steps-template-prod.yml
 
@@ -402,10 +419,9 @@ steps:
 
 Few more Notes
 
-- CD pipeline is also YAML based (You gonna like it), hence create it like a regular pipeline (Not RELEASE) in the Azure DevOps, and choose the `cd-pipeline.yml` after choosing to create pipeline based on "Existing Azure Pipelines YAML file".
-- Once you create the CD pipeline, check the "Environments" under Azure DevOps Pipelines. There will be two environments as per the above example, test-project-one and production-project-one. Inside each, you can configure the approvals and more for the respective CD stages.
+- CD pipeline is also **YAML** based (You gonna like it), hence create it like a regular pipeline (Not as RELEASE) in the Azure DevOps, and choose the `cd-pipeline.yml` after choosing to create pipeline based on **Existing Azure Pipelines YAML file**.
+- Once you create the CD pipeline, check the **Environments** under Azure DevOps Pipelines. There will be two environments as per the above example, test-project-one and production-project-one. Inside each, you can configure the approvals and more for the respective CD stages.
 
 A sample reference source code is also pushed to [here](https://github.com/Abhith/abhith.net/tree/master/samples/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks).
 
-If you have any grey area in this article, feel free to ask me in the comments below :point_down:.
-Suggestions for improvements are always welcome, send me a PR, this article itself is opensource :heart:
+If you have any grey area in this article, feel free to shoot it in the comments below :point_down:, I will try to shed some light on that part.
