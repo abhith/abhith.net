@@ -4,7 +4,7 @@ import { FcHighPriority, FcIdea, FcInfo } from "react-icons/fc";
 import { capitalize } from "lodash";
 
 const kindsBackgroundColor = {
-  info: "#5352ED",
+  info: "#eef6fc",
   positive: "#2ED573",
   negative: "#FF4757",
   warning: "#fffbeb",
@@ -12,7 +12,7 @@ const kindsBackgroundColor = {
 };
 
 const kindsColor = {
-  info: "#5352ED",
+  info: "#1d72aa",
   positive: "#2ED573",
   negative: "#FF4757",
   warning: "#947600",
