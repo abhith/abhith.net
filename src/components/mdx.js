@@ -9,11 +9,13 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import Headings from "@components/headings";
 import Anchor from "@components/anchor";
+import HorizontalRule from "@components/horizontal-rule";
 
 const components = {
   a: Anchor,
   blockquote: Blockquote,
   code: CodePrism,
+  hr: HorizontalRule,
   pre: CodePre,
   table: Table,
   thead: TableHead,
