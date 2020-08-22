@@ -15,7 +15,7 @@ function TopicsPage({ pageContext }) {
       <SEO
         title="Topics"
         description={`Summary of all the ${topics.length} topics in abhith.net`}
-        slug="/topics"
+        slug="/topics/"
       />
       <PageHero
         title={`All Topics`}

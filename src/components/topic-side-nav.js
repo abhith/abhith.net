@@ -7,9 +7,9 @@ function TopicSideNav({ topics, activeTopic }) {
       <p className="menu-label"> Filter by topic </p>
       <ul className="menu-list">
         <li>
-          <Link to={`/topics`}>All</Link>
+          <Link to={`/topics/`}>All</Link>
         </li>
-        {topics.map(topic => (
+        {topics.map((topic) => (
           <li key={topic.slug}>
             <Link
               className={topic.slug === activeTopic ? "is-active" : ""}
