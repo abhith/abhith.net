@@ -16,10 +16,10 @@ export const AboutPageTemplate = ({
 
   return (
     <div className="container">
-      <SEO title={title} description={description} slug="/about" />
+      <SEO title={title} description={description} slug="/about/" />
       <section className="section">
         <h1 className="title spanborder has-text-weight-bold">
-          <span> {title}</span>
+          <span>{title}</span>
         </h1>
         <div className="page-content">
           <PageContent className="content is-medium" content={content} />
