@@ -2,11 +2,11 @@
 - title: ABP Framework
   slug: abp
   description: ABP is an open source application framework focused on AspNet Core based web application development.
-  image: ""
+  image: "abp-logo-long.png"
 - title: Azure Kubernetes Service
   slug: aks
   description: ""
-  image: ""
+  image: "aks.png"
 - title: Analytics
   slug: analytics
   description:
@@ -90,14 +90,14 @@
 - title: Cloudflare
   slug: cloudflare
   description: Offering CDN, DNS, DDoS protection and security.
-  image: ""
+  image: "cloudflare-1.svg"
 - title: Cloud Native
   slug: cloud-native
   description: ""
   image: ""
 - title: CMS
   slug: cms
-  description: Best in classess listed under this tag
+  description: Best in class listed under this tag
   image: ""
 - title: Content Writing
   slug: content-writing
@@ -130,6 +130,10 @@
     to build resilient, microservice stateless and stateful applications that run
     on the cloud
   image: dapr.png
+- title: Dart
+  slug: dart
+  description: ""
+  image: dart.svg
 - title: Databases
   slug: databases
   description: ""
@@ -174,10 +178,10 @@
   slug: ef-core
   description: ""
   image: ""
-- title: Envoy
+- title: Envoy Proxy
   slug: envoy
   description: ""
-  image: ""
+  image: "envoy-logo.svg"
 - title: Event Sourcing pattern
   slug: event-sourcing
   description: ""
@@ -193,7 +197,7 @@
 - title: Git
   slug: git
   description: ""
-  image: ""
+  image: "git-icon.svg"
 - title: GitHub
   slug: github
   description: ""
@@ -293,6 +297,10 @@
   slug: microservices
   description: ""
   image: ""
+- title: ML.NET
+  slug: ml-net
+  description: "An open source and cross-platform machine learning framework"
+  image: "mlnet-icon.png"
 - title: NGINX
   slug: nginx
   description: ""
