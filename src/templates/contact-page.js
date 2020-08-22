@@ -24,7 +24,7 @@ export const ContactPageTemplate = ({
         <div className="columns">
           <div className="column is-5">
             <div className="page-content">
-              <PageContent className="content" content={content} />
+              <PageContent className="content is-medium" content={content} />
             </div>
           </div>
           <div className="column is-offset-1 is-6">

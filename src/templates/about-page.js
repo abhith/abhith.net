@@ -10,7 +10,7 @@ export const AboutPageTemplate = ({
   title,
   content,
   description,
-  contentComponent
+  contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -22,7 +22,7 @@ export const AboutPageTemplate = ({
           <span> {title}</span>
         </h1>
         <div className="page-content">
-          <PageContent className="content" content={content} />
+          <PageContent className="content is-medium" content={content} />
         </div>
       </section>
       <Timeline></Timeline>
@@ -34,7 +34,7 @@ AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
 };
 
 const AboutPage = ({ data }) => {
@@ -53,7 +53,7 @@ const AboutPage = ({ data }) => {
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default AboutPage;

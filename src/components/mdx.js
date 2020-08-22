@@ -121,5 +121,4 @@ const PrismCSS = (p) => css`
  */
 const MDXBody = styled.div`
   ${PrismCSS}
-  font-family: Lora, sans-serif;
 `;

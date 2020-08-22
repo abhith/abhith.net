@@ -9,7 +9,7 @@ export const PrivacyPolicyPageTemplate = ({
   title,
   content,
   description,
-  contentComponent
+  contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -21,7 +21,7 @@ export const PrivacyPolicyPageTemplate = ({
           <span className="has-text-weight-bold"> {title}</span>
         </h1>
         <div className="page-content">
-          <PageContent className="content" content={content} />
+          <PageContent className="content is-medium" content={content} />
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@ PrivacyPolicyPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
 };
 
 const PrivacyPolicyPage = ({ data }) => {
@@ -51,7 +51,7 @@ const PrivacyPolicyPage = ({ data }) => {
 };
 
 PrivacyPolicyPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default PrivacyPolicyPage;
