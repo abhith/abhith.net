@@ -15,7 +15,7 @@ function VideosPage({ pageContext, data }) {
       <SEO
         title="Recommended Videos"
         description="Videos which Abhith recommends."
-        slug="\recommended\videos"
+        slug="/recommended/videos/"
       />
       <div className="section">
         <div className="container">
@@ -31,7 +31,7 @@ function VideosPage({ pageContext, data }) {
                       <Link to={`/`}>Home</Link>
                     </li>
                     <li>
-                      <Link to={`/recommended`}>Recommended</Link>
+                      <Link to={`/recommended/`}>Recommended</Link>
                     </li>
                     <li className="is-active">
                       <a href="#" aria-current="page">

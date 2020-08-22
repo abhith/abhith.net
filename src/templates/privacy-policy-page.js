@@ -15,7 +15,7 @@ export const PrivacyPolicyPageTemplate = ({
 
   return (
     <div className="container">
-      <SEO title={title} description={description} slug="/privacy-policy" />
+      <SEO title={title} description={description} slug="/privacy-policy/" />
       <div className="section">
         <h1 className="title spanborder has-text-weight-bold">
           <span className="has-text-weight-bold"> {title}</span>

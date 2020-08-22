@@ -10,7 +10,7 @@ const PageTemplate = (props) => {
   return (
     <Layout>
       {/* TODO(abhith): remove hard coded slug */}
-      <SEO title={title} description={description} slug="/donate" />
+      <SEO title={title} description={description} slug="/donate/" />
       <section className="section is-medium">
         <div className="container">
           <h1 className="title spanborder has-text-weight-bold">

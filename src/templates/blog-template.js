@@ -16,7 +16,7 @@ function BlogPage({ pageContext, data }) {
       <SEO
         title="Blog"
         description="Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More"
-        slug="\blog"
+        slug="/blog/"
       />
 
       <div className="section">

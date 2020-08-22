@@ -16,7 +16,7 @@ export const ContactPageTemplate = ({
 
   return (
     <section className="section is-medium">
-      <SEO title={title} description={description} slug="/contact" />
+      <SEO title={title} description={description} slug="/contact/" />
       <div className="container">
         <h1 className="title spanborder has-text-weight-bold">
           <span> {title}</span>

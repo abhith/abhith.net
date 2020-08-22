@@ -16,7 +16,7 @@ function StoriesPage({ pageContext, data }) {
       <SEO
         title="Recommended Developer Stories"
         description="Developer stories which Abhith recommends."
-        slug="\recommended\stories"
+        slug="/recommended/stories/"
       />
       <div className="section">
         <div className="container">
@@ -32,7 +32,7 @@ function StoriesPage({ pageContext, data }) {
                       <Link to={`/`}>Home</Link>
                     </li>
                     <li>
-                      <Link to={`/recommended`}>Recommended</Link>
+                      <Link to={`/recommended/`}>Recommended</Link>
                     </li>
                     <li className="is-active">
                       <a href="#" aria-current="page">
