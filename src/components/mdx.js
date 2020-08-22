@@ -33,7 +33,7 @@ function MDX({ content, children, ...props }) {
   return (
     <MDXProvider components={components}>
       <MDXBody>
-        <article className="content post-body">
+        <article className="content is-medium post-body">
           <MDXRenderer {...props}>{content}</MDXRenderer>
         </article>
       </MDXBody>
@@ -121,4 +121,5 @@ const PrismCSS = (p) => css`
  */
 const MDXBody = styled.div`
   ${PrismCSS}
+  font-family: Lora, sans-serif;
 `;
