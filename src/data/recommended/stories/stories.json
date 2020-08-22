@@ -1,5 +1,12 @@
 [
   {
+    "title": "August ML.NET API and Tooling Updates | .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/august-ml-net-api-and-tooling-updates/",
+    "description": "ML.NET is an open-source, cross-platform machine learning framework for .NET developers. It enables integrating machine learning into your .NET apps without requiring you to leave the .NET ecosystem or even have a background in ML or data science. ML.NET provides tooling (Model Builder UI in Visual Studio and the cross platform ML.NET CLI) that automatically trains custom machine learning models for you based on your scenario and data.",
+    "date": "2020-08-22T06:36:29.263Z",
+    "tags": ["ml-net"]
+  },
+  {
     "title": "Kubernetes best practices: Organizing with Namespaces",
     "url": "https://cloud.google.com/blog/products/gcp/kubernetes-best-practices-organizing-with-namespaces",
     "description": "",
