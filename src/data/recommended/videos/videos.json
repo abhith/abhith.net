@@ -1,5 +1,14 @@
 [
   {
+    "title": "Common API Security Pitfalls - Philippe De Ryck",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=dDZNDVO5EFQ",
+    "date": "2020-08-23T05:22:22.638Z",
+    "type": "youtube",
+    "tags": ["api", "security"]
+  },
+  {
     "title": "Git MERGE vs REBASE",
     "description": "",
     "image": "",
