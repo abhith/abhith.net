@@ -301,6 +301,10 @@
   slug: ml-net
   description: "An open source and cross-platform machine learning framework"
   image: "mlnet-icon.png"
+- title: Monitoring
+  slug: monitoring
+  description: ""
+  image: ""
 - title: NGINX
   slug: nginx
   description: ""
