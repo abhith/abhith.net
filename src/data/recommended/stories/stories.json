@@ -1,5 +1,12 @@
 [
   {
+    "title": "Publishing to Multiple Topics in Azure Service Bus",
+    "url": "https://underscorehao.net/2020/01/publishing-to-multiple-topics-in-azure-service-bus/",
+    "description": "",
+    "date": "2020-08-26T06:36:29.263Z",
+    "tags": ["azure-service-bus", "aspnet-core"]
+  },
+  {
     "title": "August ML.NET API and Tooling Updates | .NET Blog",
     "url": "https://devblogs.microsoft.com/dotnet/august-ml-net-api-and-tooling-updates/",
     "description": "ML.NET is an open-source, cross-platform machine learning framework for .NET developers. It enables integrating machine learning into your .NET apps without requiring you to leave the .NET ecosystem or even have a background in ML or data science. ML.NET provides tooling (Model Builder UI in Visual Studio and the cross platform ML.NET CLI) that automatically trains custom machine learning models for you based on your scenario and data.",
