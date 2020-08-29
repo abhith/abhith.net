@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import ReactPlayer from "react-player";
 import TopicsBar from "./topics-bar";
 import Hoverable from "@components/hoverable";
+import { trackCustomEvent } from "gatsby-plugin-google-analytics";
+
 const ResponsiveReactPlayer = (props) => {
   return (
     <Hoverable className="card">
@@ -14,6 +16,17 @@ const ResponsiveReactPlayer = (props) => {
             url={props.url}
             width="100%"
             height="100%"
+            onStart={() => {
+              try {
+                trackCustomEvent({
+                  category: "video",
+                  action: "play",
+                  label: `${props.title}`,
+                });
+              } catch (err) {
+                console.error(`failed to track event`, err);
+              }
+            }}
           />
         </div>
       </div>

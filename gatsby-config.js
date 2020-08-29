@@ -41,6 +41,12 @@ module.exports = {
     "Mdx.frontmatter.author": `AuthorsYaml`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-104139048-1",
+      },
+    },
     `gatsby-image`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
@@ -188,12 +194,6 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
 
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-104139048-1",
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
