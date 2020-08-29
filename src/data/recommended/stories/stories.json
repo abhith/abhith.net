@@ -1,5 +1,12 @@
 [
   {
+    "title": "Going open-source in monitoring, part III: 10 most useful Grafana dashboards to monitor Kubernetes and services",
+    "url": "https://blog.lwolf.org/post/going-open-source-in-monitoring-part-iii-10-most-useful-grafana-dashboards-to-monitor-kubernetes-and-services/",
+    "description": "",
+    "date": "2020-08-29T06:36:29.263Z",
+    "tags": ["kubernetes", "monitoring"]
+  },
+  {
     "title": "Domain Events vs. Integration Events in Domain-Driven Design and microservices architectures | Cesar de la Torre",
     "url": "https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/",
     "description": "This blog post is about comparing several approaches of Domain Events vs. Integration Events patterns already published by the community.",
