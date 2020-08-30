@@ -3,6 +3,10 @@
   slug: abp
   description: ABP is an open source application framework focused on AspNet Core based web application development.
   image: "abp-logo-long.png"
+- title: AI
+  slug: ai
+  description: ""
+  image: ""
 - title: Azure Kubernetes Service
   slug: aks
   description: ""
@@ -276,6 +280,10 @@
   image: ""
 - title: LINQ
   slug: linq
+  description: ""
+  image: ""
+- title: Machine Learning
+  slug: machine-learning
   description: ""
   image: ""
 - title: MediatR
