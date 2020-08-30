@@ -8,7 +8,7 @@ const BlogCard = ({ post, tag }) => {
     <div className="column card-post">
       <Link to={post.slug}>
         <div className="featured-image card-image">
-          <Image src={post.hero.full} />
+          <Image src={post.hero.full} alt={post.title} />
           {tag && (
             <div className="card-content is-overlay is-clipped">
               <span className="tag is-primary">{tag}</span>
