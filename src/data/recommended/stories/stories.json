@@ -1,5 +1,12 @@
 [
   {
+    "title": "Largest Contentful Paint (LCP)",
+    "url": "https://web.dev/lcp/",
+    "description": "This post introduces the Largest Contentful Paint (LCP) metric and explains how to measure it ",
+    "date": "2020-08-30T06:36:29.263Z",
+    "tags": ["website-benchmark"]
+  },
+  {
     "title": "Going open-source in monitoring, part III: 10 most useful Grafana dashboards to monitor Kubernetes and services",
     "url": "https://blog.lwolf.org/post/going-open-source-in-monitoring-part-iii-10-most-useful-grafana-dashboards-to-monitor-kubernetes-and-services/",
     "description": "",
