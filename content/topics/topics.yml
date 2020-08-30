@@ -373,6 +373,10 @@
   slug: shopping-guide
   description: ""
   image: ""
+- title: SignalR
+  slug: signalr
+  description: ""
+  image: ""
 - title: SQL Server
   slug: sql-server
   description: ""
