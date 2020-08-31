@@ -1,4 +1,10 @@
 ---
+- title: Aspect Ratio Calculator (ARC)
+  url: https://andrew.hedges.name/experiments/aspect_ratio/
+  description: Calculate the missing value for a particular aspect ratio.
+  date: "2020-08-31T15:30:28.263Z"
+  tags:
+    - developer-tools
 - title: UptimeRobot | Free Website Monitoring
   url: https://uptimerobot.com/
   description: Get up to 50 website, port or heartbeat monitors for free. When something happens, we'll notify you via email, SMS, Telegram, Slack or many more ways.
