@@ -4,7 +4,6 @@ const contentAuthors = "content/authors";
 const contentTopics = "content/topics";
 const contentRecommendedServices = "content/recommended/services";
 const path = require("path");
-
 const templatesDirectory = path.resolve(__dirname, "src/templates");
 const templates = {
   page: path.resolve(templatesDirectory, "page-template.js"),
@@ -251,6 +250,115 @@ module.exports = {
         domain: "www.abhith.net",
         fetchLimit: 10000,
         token: process.env.WEBMENTIONS_TOKEN,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        setup: ({
+          query: {
+            site: { siteMetadata },
+          },
+          ...rest
+        }) => {
+          siteMetadata.feed_url = siteMetadata.siteUrl + "/blog/rss.xml";
+          siteMetadata.image_url =
+            siteMetadata.siteUrl + "/img/site/brand/icon.png";
+          const siteMetadataModified = siteMetadata;
+          siteMetadataModified.feed_url = `${siteMetadata.siteUrl}/blog/rss.xml`;
+          siteMetadataModified.image_url = `${siteMetadata.siteUrl}/img/site/brand/icon.png`;
+
+          return {
+            ...siteMetadataModified,
+            ...rest,
+          };
+        },
+        feeds: [
+          {
+            serialize: ({ query: { site, allArticle } }) => {
+              return allArticle.edges
+                .filter((edge) => !edge.node.draft)
+                .map((edge) => {
+                  return {
+                    ...edge.node,
+                    description: edge.node.excerpt,
+                    date: edge.node.date,
+                    url: site.siteMetadata.siteUrl + edge.node.slug,
+                    guid: site.siteMetadata.siteUrl + edge.node.slug,
+                    // body is raw JS and MDX; will need to be processed before it can be used
+                    // custom_elements: [{ "content:encoded": edge.node.body }],
+                    author: edge.node.author,
+                  };
+                });
+            },
+            query: `
+              {
+                allArticle(sort: {order: DESC, fields: date}) {
+                  edges {
+                    node {
+                      body
+                      excerpt
+                      date
+                      slug
+                      title
+                      author
+                      draft
+                    }
+                  }
+                }
+              }
+              `,
+            output: "/blog/rss.xml",
+            title: "Blog posts RSS Feed",
+          },
+          {
+            serialize: ({ query: { site, allStoriesJson } }) => {
+              return allStoriesJson.edges.map((edge) => {
+                return {
+                  ...edge.node,
+                  description: edge.node.description,
+                  date: edge.node.date,
+                  url: `${site.siteMetadata.siteUrl}/topics/${edge.node.tags[0]}/stories/`,
+                  guid: edge.node.url,
+                  // body is raw JS and MDX; will need to be processed before it can be used
+                  // custom_elements: [{ "content:encoded": edge.node.body }],
+                  author: edge.node.url,
+                };
+              });
+            },
+            query: `
+              {
+                allStoriesJson(
+                  sort: { fields: [date], order: DESC }
+                ) {
+                  edges {
+                    node {
+                      title
+                      date
+                      description
+                      id
+                      tags
+                      url
+                    }
+                  }
+                }
+              }
+              `,
+            output: "/recommended/stories/rss.xml",
+            title: "Recommended stories RSS Feed",
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`, // make sure to keep it last in the array
