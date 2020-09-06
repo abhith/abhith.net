@@ -1,5 +1,12 @@
 [
   {
+    "title": "Keep tabs on your tabs in Google Chrome",
+    "url": "https://blog.google/products/chrome/manage-tabs-with-google-chrome/",
+    "description": "Tab grouping feature coming to Google Chrome",
+    "date": "2020-09-06T06:39:29.263Z",
+    "tags": ["chrome"]
+  },
+  {
     "title": "Extract .crt and .key files from .pfx file",
     "url": "https://www.ibm.com/support/knowledgecenter/SSVP8U_9.7.0/com.ibm.drlive.doc/topics/r_extratsslcert.html",
     "description": "The .pfx file, which is in a PKCS#12 format, contains the SSL certificate (public keys) and the corresponding private keys. Sometimes, you might have to import the certificate and private keys separately in an unencrypted plain text format to use it on another system. This topic provides instructions on how to convert the .pfx file to .crt and .key files.",
