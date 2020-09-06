@@ -1,5 +1,26 @@
 [
   {
+    "title": "Extract .crt and .key files from .pfx file",
+    "url": "https://www.ibm.com/support/knowledgecenter/SSVP8U_9.7.0/com.ibm.drlive.doc/topics/r_extratsslcert.html",
+    "description": "The .pfx file, which is in a PKCS#12 format, contains the SSL certificate (public keys) and the corresponding private keys. Sometimes, you might have to import the certificate and private keys separately in an unencrypted plain text format to use it on another system. This topic provides instructions on how to convert the .pfx file to .crt and .key files.",
+    "date": "2020-09-06T06:38:29.263Z",
+    "tags": ["ssl-certificates"]
+  },
+  {
+    "title": "Monitoring Application Gateway with Azure Log Analytics",
+    "url": "https://docs.microsoft.com/en-us/archive/blogs/robdavies/monitoring-application-gateway-with-azure-log-analytics",
+    "description": "This article documenting each of the Log Analytics queries used for monitoring Azure Application Gateway.",
+    "date": "2020-09-06T06:37:29.263Z",
+    "tags": ["azure-application-gateway", "monitoring"]
+  },
+  {
+    "title": "Azure Application Gateway: monitoring with Log Analytics",
+    "url": "https://francescomolfese.it/en/2018/07/azure-application-gateway-come-monitorarlo-con-log-analytics/",
+    "description": "Azure Application Gateway is an application load balancer (OSI layer 7) for web traffic, available in Azure environment, that manages HTTP and HTTPS traffic of the applications. This article is discussed how to monitor of Azure Application Gateway using Log Analytics provides.",
+    "date": "2020-09-06T06:36:29.263Z",
+    "tags": ["azure-application-gateway", "monitoring"]
+  },
+  {
     "title": "Unable to launch the IIS Express Web server error - How to fix it",
     "url": "https://www.ryadel.com/en/unable-launch-iis-express-web-server-error-visual-studio-2015-fix/",
     "description": "A series of workaround that might help fixing the 'Unable to launch the IIS Express Web server' error when debugging a Web Application on Visual Studio",

@@ -75,6 +75,10 @@
   slug: azure-pipelines
   description: ""
   image: ""
+- title: Azure Application Gateway
+  slug: azure-application-gateway
+  description: ""
+  image: ""
 - title: Azure Service Bus
   slug: azure-service-bus
   description: ""
@@ -381,6 +385,10 @@
   slug: sql-server
   description: ""
   image: microsoft-sql-server.svg
+- title: SSL Certificates
+  slug: ssl-certificates
+  description: ""
+  image: ""
 - title: Style Guide
   slug: style-guide
   description: ""
