@@ -20,7 +20,7 @@
     "gatsby-plugin-feed": "^2.5.11",
     "gatsby-plugin-google-analytics": "^2.3.12",
     "gatsby-plugin-manifest": "^2.4.21",
-    "gatsby-plugin-mdx": "^1.2.14",
+    "gatsby-plugin-mdx": "^1.2.38",
     "gatsby-plugin-nprogress": "^2.3.0",
     "gatsby-plugin-offline": "^3.2.20",
     "gatsby-plugin-polyfill-io": "^1.1.0",
