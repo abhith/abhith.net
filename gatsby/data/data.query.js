@@ -46,6 +46,34 @@ module.exports.local = {
         }
       }      
     }`,
+  snippets: `{
+    snippets: allSnippet(
+      filter: {draft: {eq: false}}
+    ) {
+      edges {
+        node {
+          id
+          author
+          body
+          slug
+          timeToRead
+          date
+          dateString: date(formatString: "MMMM DD, YYYY")
+          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+          title
+          excerpt
+          topics
+          lastModificationTime
+          lastModificationTimeString: lastModificationTime(
+            formatString: "MMMM DD, YYYY"
+          )
+          dateModifiedSeoFormat: lastModificationTime(
+            formatString: "YYYY-MM-DD"
+          )
+        }
+      }
+    }      
+  }`,
   authors: `{
       authors: allAuthor {
         edges {

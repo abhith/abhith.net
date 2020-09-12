@@ -64,4 +64,21 @@ module.exports.local = {
       avatar: normalizeAvatar(author),
     };
   },
+  snippets: ({ node: snippet }) => {
+    return {
+      ...snippet,
+      date: snippet.dateString,
+      timeToRead: snippet.timeToRead,
+      lastModifiedTime:
+        snippet.lastModificationTime === null
+          ? snippet.date
+          : snippet.lastModificationTime,
+      lastModifiedTimeString:
+        snippet.lastModificationTime === null
+          ? snippet.dateString
+          : snippet.lastModificationTimeString,
+      dateModifiedSeoFormat: snippet.dateModifiedSeoFormat,
+      datePublishedSeoFormat: snippet.datePublishedSeoFormat,
+    };
+  },
 };

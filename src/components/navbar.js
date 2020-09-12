@@ -8,6 +8,7 @@ import {
   FcReading,
   FcLike,
   FcTimeline,
+  FcPuzzle,
 } from "react-icons/fc";
 import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
@@ -104,6 +105,9 @@ const Navbar = class extends React.Component {
             </NavbarItem>
             <NavbarItem to="/blog/" title="Blog">
               <FcReading />
+            </NavbarItem>
+            <NavbarItem to="/snippets/" title="Snippets">
+              <FcPuzzle />
             </NavbarItem>
             <NavbarItem to="/recommended/" title="Recommended">
               <FcLike />

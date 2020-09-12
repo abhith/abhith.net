@@ -12,6 +12,8 @@ const templates = {
   blog: path.resolve(templatesDirectory, "blog-template.js"),
   stories: path.resolve(templatesDirectory, "stories-template.js"),
   topics: path.resolve(templatesDirectory, "topics-template.js"),
+  snippet: path.resolve(templatesDirectory, "snippet-template.js"),
+  snippets: path.resolve(templatesDirectory, "snippets-template.js"),
 };
 
 const log = (message, section) =>
@@ -56,6 +58,77 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
   const localAuthors = await graphql(query.local.authors);
   const authors = localAuthors.data.authors.edges.map(normalize.local.authors);
+
+  const snippetsResult = await graphql(query.local.snippets);
+  const snippets = snippetsResult.data.snippets.edges.map(
+    normalize.local.snippets
+  );
+
+  log(`Creating`, "snippets");
+  snippets.forEach((snippet, index) => {
+    // Match the Author to the one specified in the article
+    let authorsThatWroteTheSnippet;
+    try {
+      authorsThatWroteTheSnippet = authors.filter((author) => {
+        const allAuthors = snippet.author
+          .split(",")
+          .map((a) => a.trim().toLowerCase());
+
+        return allAuthors.some((a) => a === author.name.toLowerCase());
+      });
+    } catch (error) {
+      throw new Error(`
+    We could not find the Author for: "${snippet.title}".
+    Double check the author field is specified in your post and the name
+    matches a specified author.
+    Provided author: ${snippet.author}
+    ${error}
+  `);
+    }
+
+    // related items
+    let snippetRelatedArticles = articles
+      .filter((item) => snippet.topics.some((t) => item.tags.includes(t)))
+      .slice(0, 6);
+
+    let snippetRelatedSnippets = snippets
+      .filter(
+        (item) =>
+          snippet.id !== item.id &&
+          snippet.topics.some((t) => item.topics.includes(t))
+      )
+      .slice(0, 6);
+
+    let snippetRelatedStories = allStories.data.stories.edges
+      .filter((item) => snippet.topics.some((t) => item.node.tags.includes(t)))
+      .slice(0, 6);
+
+    let snippetRelatedVideos = allVideos.data.videos.edges
+      .filter((item) => snippet.topics.some((t) => item.node.tags.includes(t)))
+      .slice(0, 3);
+
+    let snippetRelatedTools = allTools.data.tools.edges
+      .filter((item) => snippet.topics.some((t) => item.node.tags.includes(t)))
+      .slice(0, 2);
+
+    createPage({
+      path: snippet.slug,
+      component: templates.snippet,
+      context: {
+        snippet,
+        authors: authorsThatWroteTheSnippet,
+        relatedArticles: snippetRelatedArticles,
+        relatedStories: snippetRelatedStories,
+        relatedVideos: snippetRelatedVideos,
+        relatedTools: snippetRelatedTools,
+        relatedSnippets: snippetRelatedSnippets,
+        // next: articles[index - 1],
+        // previous: articles[index + 1],
+        permalink: `https://www.abhith.net${snippet.slug}`,
+      },
+    });
+  });
+
   log(`Creating`, "articles");
 
   articles.forEach((article, index) => {
@@ -390,6 +463,18 @@ module.exports = async ({ graphql, actions, reporter }) => {
       },
     });
 
+    log(`Creating`, "paginated snippets");
+    paginate({
+      createPage,
+      items: snippets,
+      itemsPerPage: 10,
+      pathPrefix: "/snippets",
+      component: templates.snippets,
+      context: {
+        topics: topics.filter((topic) => topic.totalPosts > 0),
+      },
+    });
+
     log(`Creating`, "paginated stories");
     paginate({
       createPage,
@@ -402,7 +487,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       },
     });
 
-    // Create your paginated videos
+    log(`Creating`, "paginated videos");
     paginate({
       createPage, // The Gatsby `createPage` function
       items: videos, // An array of objects
@@ -414,7 +499,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       },
     });
 
-    // Create your paginated tools
+    log(`Creating`, "paginated tools");
     paginate({
       createPage, // The Gatsby `createPage` function
       items: services, // An array of objects

@@ -1,5 +1,6 @@
 const siteUrl = `https://www.abhith.net`;
 const contentPosts = "content/blog";
+const contentSnippets = "content/snippets";
 const contentAuthors = "content/authors";
 const contentTopics = "content/topics";
 const contentRecommendedServices = "content/recommended/services";
@@ -104,6 +105,13 @@ module.exports = {
       options: {
         path: contentPosts,
         name: contentPosts,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: contentSnippets,
+        name: contentSnippets,
       },
     },
     {

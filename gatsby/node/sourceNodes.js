@@ -16,4 +16,19 @@ module.exports = ({ actions }) => {
         tableOfContents: JSON @link
       }
     `);
+
+  actions.createTypes(`
+      type Snippet implements Node {
+        id: ID!
+        slug: String!
+        title: String!
+        date: Date! @dateformat
+        author: String!
+        excerpt: String
+        body: String!
+        timeToRead: String
+        topics: [String]
+        lastModificationTime: Date @dateformat
+      }
+    `);
 };
