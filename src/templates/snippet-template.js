@@ -20,7 +20,6 @@ import RelatedVideos from "../sections/article/article-related-videos";
 import GitHubTypo from "../sections/common/github-typo";
 
 export default ({ pageContext, data, location }) => {
-  console.log(pageContext);
   const { allWebMentionEntry } = data;
   const {
     snippet,
