@@ -14,6 +14,10 @@ const templates = {
   topics: path.resolve(templatesDirectory, "topics-template.js"),
   snippet: path.resolve(templatesDirectory, "snippet-template.js"),
   snippets: path.resolve(templatesDirectory, "snippets-template.js"),
+  snippetsCategoryWise: path.resolve(
+    templatesDirectory,
+    "snippets-category-wise-template.js"
+  ),
 };
 
 const log = (message, section) =>
@@ -465,6 +469,24 @@ module.exports = async ({ graphql, actions, reporter }) => {
             tools: relatedTools,
             topics,
             permalink: `https://www.abhith.net${topicToolsPath}`,
+          },
+        });
+      }
+
+      log(`Creating`, "paginated snippets category-wise");
+      if (topic.totalSnippets > 0) {
+        paginate({
+          createPage,
+          items: snippets.filter((snippet) =>
+            snippet.topics.includes(topic.slug)
+          ),
+          itemsPerPage: 10,
+          pathPrefix: `/snippets/${topic.slug}`,
+          component: templates.snippetsCategoryWise,
+          context: {
+            category: topic,
+            categorySlug: topic.slug,
+            topics: topics.filter((topic) => topic.totalSnippets > 0),
           },
         });
       }

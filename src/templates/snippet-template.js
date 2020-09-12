@@ -128,6 +128,11 @@ export default ({ pageContext, data, location }) => {
                       <li>
                         <Link to={`/snippets/`}>Snippets</Link>
                       </li>
+                      <li>
+                        <Link to={`/snippets/${category.slug}/`}>
+                          {category.title}
+                        </Link>
+                      </li>
                       <li className="is-active">
                         <a
                           className="u-url"

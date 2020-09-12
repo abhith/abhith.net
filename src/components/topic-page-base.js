@@ -104,6 +104,16 @@ const TopicPageBase = ({
                       </Link>
                     </li>
                   )}
+                  {topic.totalSnippets > 0 && (
+                    <li className={activeTab === "Snippets" ? "is-active" : ""}>
+                      <Link to={`/snippets/${topic.slug}/`}>
+                        <div className="has-numbers">
+                          Snippets{" "}
+                          <span className="tag">{topic.totalSnippets}</span>{" "}
+                        </div>
+                      </Link>
+                    </li>
+                  )}
                   {topic.totalStories > 0 && (
                     <li className={activeTab === "Stories" ? "is-active" : ""}>
                       <Link to={`/topics/${topic.slug}/stories/`}>
