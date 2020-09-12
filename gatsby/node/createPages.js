@@ -211,6 +211,12 @@ module.exports = async ({ graphql, actions, reporter }) => {
           totalCount
         }
       }
+      snippetsGroupByTopic: allSnippet(filter: { draft: { eq: false } }) {
+        group(field: topics) {
+          fieldValue
+          totalCount
+        }
+      }
       allStoriesJson {
         edges {
           node {
@@ -257,6 +263,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     const services = result.data.allRecommendedService.edges;
 
     const postsGroup = result.data.articleTagsGroup.group;
+    const snippetsGroupByTopic = result.data.snippetsGroupByTopic.group;
     const storiesGroup = result.data.allStoriesJson.group;
     const videosGroup = result.data.allVideosJson.group;
     const servicesGroup = result.data.allRecommendedService.group;
@@ -270,7 +277,24 @@ module.exports = async ({ graphql, actions, reporter }) => {
         totalVideos: 0,
         totalStories: 0,
         totalServices: 0,
+        totalSnippets: 0,
       });
+    });
+
+    snippetsGroupByTopic.forEach((node) => {
+      let snippetTopic = topics.find((topic) => topic.slug === node.fieldValue);
+      if (snippetTopic) {
+        snippetTopic.totalSnippets = node.totalCount;
+      } else {
+        topics.push({
+          slug: node.fieldValue,
+          totalPosts: 0,
+          totalVideos: 0,
+          totalStories: 0,
+          totalServices: 0,
+          totalSnippets: node.totalCount,
+        });
+      }
     });
 
     storiesGroup.forEach((node) => {
@@ -284,6 +308,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           totalVideos: 0,
           totalStories: node.totalCount,
           totalServices: 0,
+          totalSnippets: 0,
         });
       }
     });
@@ -299,6 +324,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           totalVideos: node.totalCount,
           totalStories: 0,
           totalServices: 0,
+          totalSnippets: 0,
         });
       }
     });
@@ -314,6 +340,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           totalVideos: 0,
           totalStories: 0,
           totalServices: node.totalCount,
+          totalSnippets: 0,
         });
       }
     });
@@ -471,7 +498,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       pathPrefix: "/snippets",
       component: templates.snippets,
       context: {
-        topics: topics.filter((topic) => topic.totalPosts > 0),
+        topics: topics.filter((topic) => topic.totalSnippets > 0),
       },
     });
 

@@ -13,7 +13,11 @@ function SnippetsPage({ pageContext, data }) {
 
   return (
     <Layout>
-      <SEO title="Snippets" description="Code snippets" slug="/snippets/" />
+      <SEO
+        title="Snippets"
+        description="No story telling, straight to code."
+        slug="/snippets/"
+      />
 
       <div className="section">
         <div className="container">

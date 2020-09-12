@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
-import Hoverable from "@components/hoverable";
+import SnippetRollItem from "@components/snippet-roll-item";
 const SnippetRoll = (props) => {
   const { snippets } = props;
 
@@ -9,19 +8,7 @@ const SnippetRoll = (props) => {
     <>
       {snippets &&
         snippets.map((snippet) => (
-          <Hoverable className="box" key={snippet.id}>
-            <div className="columns">
-              <div className="column">
-                <small>{snippet.topics[0]}</small>
-                <Link to={snippet.slug} className="has-text-dark">
-                  <h4 className="title is-4">{snippet.title} </h4>
-                  <div className="subtitle">{snippet.excerpt}</div>
-                </Link>
-
-                {/* <TopicsBar topics={snippet.tags} /> */}
-              </div>
-            </div>
-          </Hoverable>
+          <SnippetRollItem snippet={snippet} key={snippet.id}></SnippetRollItem>
         ))}
     </>
   );
