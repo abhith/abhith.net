@@ -64,73 +64,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     normalize.local.snippets
   );
 
-  log(`Creating`, "snippets");
-  snippets.forEach((snippet, index) => {
-    // Match the Author to the one specified in the article
-    let authorsThatWroteTheSnippet;
-    try {
-      authorsThatWroteTheSnippet = authors.filter((author) => {
-        const allAuthors = snippet.author
-          .split(",")
-          .map((a) => a.trim().toLowerCase());
-
-        return allAuthors.some((a) => a === author.name.toLowerCase());
-      });
-    } catch (error) {
-      throw new Error(`
-    We could not find the Author for: "${snippet.title}".
-    Double check the author field is specified in your post and the name
-    matches a specified author.
-    Provided author: ${snippet.author}
-    ${error}
-  `);
-    }
-
-    // related items
-    let snippetRelatedArticles = articles
-      .filter((item) => snippet.topics.some((t) => item.tags.includes(t)))
-      .slice(0, 6);
-
-    let snippetRelatedSnippets = snippets
-      .filter(
-        (item) =>
-          snippet.id !== item.id &&
-          snippet.topics.some((t) => item.topics.includes(t))
-      )
-      .slice(0, 6);
-
-    let snippetRelatedStories = allStories.data.stories.edges
-      .filter((item) => snippet.topics.some((t) => item.node.tags.includes(t)))
-      .slice(0, 6);
-
-    let snippetRelatedVideos = allVideos.data.videos.edges
-      .filter((item) => snippet.topics.some((t) => item.node.tags.includes(t)))
-      .slice(0, 3);
-
-    let snippetRelatedTools = allTools.data.tools.edges
-      .filter((item) => snippet.topics.some((t) => item.node.tags.includes(t)))
-      .slice(0, 2);
-
-    createPage({
-      path: snippet.slug,
-      component: templates.snippet,
-      context: {
-        snippet,
-        authors: authorsThatWroteTheSnippet,
-        relatedArticles: snippetRelatedArticles,
-        relatedStories: snippetRelatedStories,
-        relatedVideos: snippetRelatedVideos,
-        relatedTools: snippetRelatedTools,
-        relatedSnippets: snippetRelatedSnippets,
-        // next: articles[index - 1],
-        // previous: articles[index + 1],
-        permalink: `https://www.abhith.net${snippet.slug}`,
-      },
-    });
-  });
-
   log(`Creating`, "articles");
-
   articles.forEach((article, index) => {
     // Match the Author to the one specified in the article
     let authorsThatWroteTheArticle;
@@ -360,7 +294,79 @@ module.exports = async ({ graphql, actions, reporter }) => {
       }
     });
 
-    topics = _.sortBy(topics, (topic) => topic.title); // you'll call `createPage` for each result
+    topics = _.sortBy(topics, (topic) => topic.title);
+
+    log(`Creating`, "snippets");
+    snippets.forEach((snippet, index) => {
+      // Match the Author to the one specified in the article
+      let authorsThatWroteTheSnippet;
+      try {
+        authorsThatWroteTheSnippet = authors.filter((author) => {
+          const allAuthors = snippet.author
+            .split(",")
+            .map((a) => a.trim().toLowerCase());
+
+          return allAuthors.some((a) => a === author.name.toLowerCase());
+        });
+      } catch (error) {
+        throw new Error(`
+    We could not find the Author for: "${snippet.title}".
+    Double check the author field is specified in your post and the name
+    matches a specified author.
+    Provided author: ${snippet.author}
+    ${error}
+  `);
+      }
+
+      // related items
+      let snippetRelatedArticles = articles
+        .filter((item) => snippet.topics.some((t) => item.tags.includes(t)))
+        .slice(0, 6);
+
+      let snippetRelatedSnippets = snippets
+        .filter(
+          (item) =>
+            snippet.id !== item.id &&
+            snippet.topics.some((t) => item.topics.includes(t))
+        )
+        .slice(0, 6);
+
+      let snippetRelatedStories = allStories.data.stories.edges
+        .filter((item) =>
+          snippet.topics.some((t) => item.node.tags.includes(t))
+        )
+        .slice(0, 6);
+
+      let snippetRelatedVideos = allVideos.data.videos.edges
+        .filter((item) =>
+          snippet.topics.some((t) => item.node.tags.includes(t))
+        )
+        .slice(0, 3);
+
+      let snippetRelatedTools = allTools.data.tools.edges
+        .filter((item) =>
+          snippet.topics.some((t) => item.node.tags.includes(t))
+        )
+        .slice(0, 2);
+
+      createPage({
+        path: snippet.slug,
+        component: templates.snippet,
+        context: {
+          snippet,
+          authors: authorsThatWroteTheSnippet,
+          relatedArticles: snippetRelatedArticles,
+          relatedStories: snippetRelatedStories,
+          relatedVideos: snippetRelatedVideos,
+          relatedTools: snippetRelatedTools,
+          relatedSnippets: snippetRelatedSnippets,
+          category: topics.find((topic) => topic.slug === snippet.topics[0]),
+          next: snippets[index - 1],
+          previous: snippets[index + 1],
+          permalink: `https://www.abhith.net${snippet.slug}`,
+        },
+      });
+    });
 
     log(`Creating`, "topic index");
     createPage({

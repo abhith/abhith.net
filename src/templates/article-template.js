@@ -20,6 +20,7 @@ import RelatedStories from "../sections/article/article-related-stories";
 import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
 import ArticleShare from "../sections/article/article-share";
+import GitHubTypo from "../sections/common/github-typo";
 
 export default ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
@@ -204,21 +205,7 @@ export default ({ pageContext, data, location }) => {
                   </div>
                 ) : null}
                 <LiveEdit code={askForCommentsCode} noInline={false} />
-                <div id="typo" className="ar-typo">
-                  <p className="has-text-grey">
-                    This page is{" "}
-                    <strong className="has-text-grey">open source</strong>.
-                    Noticed a typo? Or something unclear?
-                    <br />
-                    <OutboundLink
-                      href={githubURL}
-                      target="_blank"
-                      className="has-text-grey"
-                    >
-                      Improve this page on GitHub
-                    </OutboundLink>
-                  </p>
-                </div>
+                <GitHubTypo githubURL={githubURL}></GitHubTypo>
                 <Webmentions {...allWebMentionEntry} />
                 <Utterances repo={`Abhith/abhith.net`} />
               </div>

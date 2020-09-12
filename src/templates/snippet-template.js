@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
 import GitHubButton from "react-github-btn";
 
 import Layout from "@components/layout";
 import LiveEdit from "@components/live-edit";
 import MDXRenderer from "@components/mdx";
 import SEO from "@components/seo/seo";
-import TableOfContents from "@components/table-of-contents";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
 import Image from "@components/image";
@@ -19,7 +17,7 @@ import RelatedArticles from "../sections/article/article-related-articles";
 import RelatedStories from "../sections/article/article-related-stories";
 import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
-import ArticleShare from "../sections/article/article-share";
+import GitHubTypo from "../sections/common/github-typo";
 
 export default ({ pageContext, data, location }) => {
   console.log(pageContext);
@@ -33,7 +31,11 @@ export default ({ pageContext, data, location }) => {
     relatedTools,
     next,
     previous,
+    category,
   } = pageContext;
+
+  const pageTitle = `${category.title} - ${snippet.title}`;
+
   const githubURL = `https://github.com/Abhith/abhith.net/blob/master/content${snippet.slug.substring(
     0,
     snippet.slug.length - 1
@@ -73,13 +75,13 @@ export default ({ pageContext, data, location }) => {
       note = (
         <>
           <h4>Your opinion matters</h4>
-          <p>Please share your thought about this article </p>
+          <p>Please share your thought about this snippet </p>
         </>
       );
     }
     return (
       <div className="content">
-        <h3>Was this article helpful?</h3>
+        <h3>Was this snippet helpful?</h3>
         <div className="buttons is-centered">
           <button
             className="button is-success is-light"
@@ -103,9 +105,8 @@ export default ({ pageContext, data, location }) => {
   return (
     <Layout>
       <SEO
-        title={snippet.title}
+        title={pageTitle}
         description={snippet.excerpt}
-        // image={article.hero.full.src}
         isBlogPost={false}
         slug={snippet.slug}
         dateModified={snippet.dateModifiedSeoFormat}
@@ -119,25 +120,25 @@ export default ({ pageContext, data, location }) => {
             <div className="ar-duo">
               <div className="ar-lead">
                 <div className="ar-breadcrumb is-hidden-mobile">
-                  {/* <nav className="breadcrumb" aria-label="breadcrumbs">
+                  <nav className="breadcrumb" aria-label="breadcrumbs">
                     <ul>
                       <li>
                         <Link to={`/`}>Home</Link>
                       </li>
                       <li>
-                        <Link to={`/blog/`}>Blog</Link>
+                        <Link to={`/snippets/`}>Snippets</Link>
                       </li>
                       <li className="is-active">
                         <a
                           className="u-url"
-                          href={"https://www.abhith.net" + article.slug}
+                          href={"https://www.abhith.net" + snippet.slug}
                         >
-                          {article.title}
+                          {snippet.title}
                         </a>
                       </li>
                     </ul>
-                  </nav> */}
-                  {/* <nav className="bd-prev-next">
+                  </nav>
+                  <nav className="bd-prev-next">
                     {next ? (
                       <Link to={next.slug} title={next.title}>
                         ←
@@ -152,12 +153,12 @@ export default ({ pageContext, data, location }) => {
                     ) : (
                       <span>→</span>
                     )}
-                  </nav> */}
+                  </nav>
                 </div>
                 <MDXRenderer content={snippet.body}>
                   <TopicsBar topics={snippet.topics} />
                 </MDXRenderer>
-                {/* {authors && authors.length === 1 ? (
+                {authors && authors.length === 1 ? (
                   <div className="container mt-5 mb-3">
                     <div className="media">
                       <figure className="media-left">
@@ -203,29 +204,14 @@ export default ({ pageContext, data, location }) => {
                       </div>
                     </div>
                   </div>
-                ) : null} */}
-                {/* <LiveEdit code={askForCommentsCode} noInline={false} />
-                <div id="typo" className="ar-typo">
-                  <p className="has-text-grey">
-                    This page is{" "}
-                    <strong className="has-text-grey">open source</strong>.
-                    Noticed a typo? Or something unclear?
-                    <br />
-                    <OutboundLink
-                      href={githubURL}
-                      target="_blank"
-                      className="has-text-grey"
-                    >
-                      Improve this page on GitHub
-                    </OutboundLink>
-                  </p>
-                </div>
-                <Webmentions {...allWebMentionEntry} /> */}
+                ) : null}
+                <LiveEdit code={askForCommentsCode} noInline={false} />
+                <GitHubTypo githubURL={githubURL}></GitHubTypo>
+                <Webmentions {...allWebMentionEntry} />
                 <Utterances repo={`Abhith/abhith.net`} />
               </div>
-              {/* <aside className="ar-side">
+              <aside className="ar-side">
                 <div className="sticky">
-                  <ArticleShare article={article} location={location} />
                   <div className="has-text-centered mt-3">
                     <div className="text-muted mb-1">
                       <span role="img" aria-label="star">
@@ -245,9 +231,8 @@ export default ({ pageContext, data, location }) => {
                       </GitHubButton>
                     </div>
                   </div>
-                  <TableOfContents page={article} location={location} />
                 </div>
-              </aside> */}
+              </aside>
             </div>
           </div>
         </div>
