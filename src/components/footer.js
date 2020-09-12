@@ -55,6 +55,9 @@ function Footer() {
                       <Link to="/blog/">Blog</Link>
                     </li>
                     <li>
+                      <Link to="/snippets/">Snippets</Link>
+                    </li>
+                    <li>
                       <Link to="/topics/">Topics</Link>
                     </li>
                     <li>
