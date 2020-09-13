@@ -7,7 +7,7 @@ import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 
 const ResponsiveReactPlayer = (props) => {
   return (
-    <Hoverable className="card">
+    <Hoverable className="card mb-5">
       <div className="card-image">
         <div className="player-wrapper">
           <ReactPlayer

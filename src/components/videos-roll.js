@@ -10,13 +10,12 @@ const VideosRoll = (props) => {
       <>
         {videos &&
           videos.map(({ node: video }) => (
-            <div className="mb-3" key={video.url}>
-              <ResponsiveReactPlayer
-                url={video.url}
-                title={video.title}
-                topics={video.tags}
-              />
-            </div>
+            <ResponsiveReactPlayer
+              url={video.url}
+              title={video.title}
+              topics={video.tags}
+              key={video.url}
+            />
           ))}
       </>
     );

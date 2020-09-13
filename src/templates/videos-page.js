@@ -1,17 +1,49 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo/seo";
-import VideosRoll from "../components/videos-roll";
 import { graphql, Link } from "gatsby";
 import Pagination from "../components/pagination";
 import TopicCloud from "@components/topic-cloud";
 import PageHero from "@components/page-hero";
+import { partition } from "lodash";
+import ResponsiveReactPlayer from "@components/responsive-react-player";
 
 function VideosPage({ pageContext, data }) {
   const { previousPagePath, nextPagePath, topics } = pageContext;
   const videos = data.recommendedVideos.edges;
   const pageTitle = `Recommended Videos`;
   const subTitle = `Videos which Abhith recommends.`;
+  let videosFirstHalf = [];
+  let videosSecondHalf = [];
+  const rowElements = [];
+  let rowItemsCollection = [];
+
+  if (videos.length > 2) {
+    [videosFirstHalf, videosSecondHalf] = partition(videos, (i) => {
+      return videos.indexOf(i) % 2 === 0;
+    });
+    rowItemsCollection = [videosFirstHalf, videosSecondHalf];
+  } else {
+    rowItemsCollection = [videos];
+  }
+
+  rowItemsCollection.forEach((rowItems, index) => {
+    rowElements.push(
+      <div className="column" key={index}>
+        {rowItems.map(({ node: video }) => {
+          return (
+            <ResponsiveReactPlayer
+              url={video.url}
+              title={video.title}
+              topics={video.tags}
+              key={video.id}
+            />
+          );
+        })}
+      </div>
+    );
+  });
+
   return (
     <Layout>
       <SEO
@@ -58,7 +90,7 @@ function VideosPage({ pageContext, data }) {
                   )}
                 </nav>
               </div>
-              <VideosRoll videos={videos} />
+              <div className="columns">{rowElements}</div>
               <Pagination
                 previousPagePath={previousPagePath}
                 nextPagePath={nextPagePath}
