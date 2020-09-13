@@ -1,5 +1,12 @@
 [
   {
+    "title": "Microsoft Announces the General Availability of Azure Spring Cloud",
+    "url": "https://www.infoq.com/news/2020/09/azure-spring-cloud-ga/",
+    "description": "Recently Microsoft and VMWare both announced the general availability of Azure Spring Cloud, a fully-managed service for Spring Boot apps. The service allows enterprises to deploy JARs or code to it.",
+    "date": "2020-09-13T06:39:29.263Z",
+    "tags": ["azure"]
+  },
+  {
     "title": "Keep tabs on your tabs in Google Chrome",
     "url": "https://blog.google/products/chrome/manage-tabs-with-google-chrome/",
     "description": "Tab grouping feature coming to Google Chrome",
