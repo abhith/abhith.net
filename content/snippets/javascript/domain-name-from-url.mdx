@@ -1,0 +1,18 @@
+---
+title: Domain Name From URL
+description: Get domain name from URL using JavaScript
+author: Abhith Rajan
+date: 2020-09-13T09:26:00.000Z
+topics:
+  - javascript
+---
+
+```js
+export const domainFromURL = (url) => {
+  return url
+    .replace("http://", "")
+    .replace("https://", "")
+    .replace("www.", "")
+    .split(/[/?#]/)[0];
+};
+```
