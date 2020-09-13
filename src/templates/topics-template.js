@@ -5,8 +5,13 @@ import TopicImage from "@components/topic-image";
 import { Link } from "gatsby";
 import React from "react";
 // tslint:disable-next-line: no-submodule-imports
-import { FiBookOpen, FiGlobe, FiVideo } from "react-icons/fi";
-import { FcReading, FcPuzzle } from "react-icons/fc";
+import {
+  FcReading,
+  FcPuzzle,
+  FcVideoCall,
+  FcReadingEbook,
+  FcSupport,
+} from "react-icons/fc";
 
 function TopicsPage({ pageContext }) {
   const { topics } = pageContext;
@@ -46,6 +51,7 @@ function TopicsPage({ pageContext }) {
                             <Link
                               className="button is-outlined"
                               to={`/topics/${topic.slug}/`}
+                              title={`Articles on topic ${topic.title}`}
                             >
                               <span className="icon">
                                 <FcReading />
@@ -57,6 +63,7 @@ function TopicsPage({ pageContext }) {
                             <Link
                               className="button is-outlined"
                               to={`/snippets/${topic.slug}/`}
+                              title={`Snippets on topic ${topic.title}`}
                             >
                               <span className="icon">
                                 <FcPuzzle />
@@ -66,33 +73,36 @@ function TopicsPage({ pageContext }) {
                           )}
                           {topic.totalVideos > 0 && (
                             <Link
-                              className="button is-primary is-outlined"
+                              className="button is-outlined"
                               to={`/topics/${topic.slug}/videos/`}
+                              title={`Recommended videos on topic ${topic.title}`}
                             >
                               <span className="icon">
-                                <FiVideo />
+                                <FcVideoCall />
                               </span>
                               <span>{topic.totalVideos}</span>
                             </Link>
                           )}
                           {topic.totalStories > 0 && (
                             <Link
-                              className="button is-link is-outlined"
+                              className="button is-outlined"
                               to={`/topics/${topic.slug}/stories/`}
+                              title={`Recommended developer stories on topic ${topic.title}`}
                             >
                               <span className="icon">
-                                <FiBookOpen />
+                                <FcReadingEbook />
                               </span>
                               <span>{topic.totalStories}</span>
                             </Link>
                           )}
                           {topic.totalServices > 0 && (
                             <Link
-                              className="button is-success is-outlined"
+                              className="button is-outlined"
                               to={`/topics/${topic.slug}/tools/`}
+                              title={`Tools & services on topic ${topic.title}`}
                             >
                               <span className="icon">
-                                <FiGlobe />
+                                <FcSupport />
                               </span>
                               <span>{topic.totalServices}</span>
                             </Link>
