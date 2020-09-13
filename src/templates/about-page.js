@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import Content, { HTMLContent } from "../components/content";
 import SEO from "../components/seo/seo";
 import Timeline from "../components/about/timeline";
+import PageHero from "@components/page-hero";
 
 export const AboutPageTemplate = ({
   title,
@@ -15,18 +16,18 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div className="container">
+    <>
       <SEO title={title} description={description} slug="/about/" />
+      <PageHero title={title} subtitle={description} />
       <section className="section">
-        <h1 className="title spanborder has-text-weight-bold">
-          <span>{title}</span>
-        </h1>
-        <div className="page-content">
-          <PageContent className="content is-medium" content={content} />
+        <div className="container">
+          <div className="page-content">
+            <PageContent className="content is-medium" content={content} />
+          </div>
         </div>
       </section>
       <Timeline></Timeline>
-    </div>
+    </>
   );
 };
 

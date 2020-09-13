@@ -2,7 +2,8 @@ import Layout from "@components/layout";
 import Pagination from "@components/pagination";
 import SEO from "@components/seo/seo";
 import StoriesRoll from "@components/stories-roll";
-import TopicsCloud from "@components/topic-cloud";
+import TopicCloud from "@components/topic-cloud";
+import PageHero from "@components/page-hero";
 
 import { graphql, Link } from "gatsby";
 import React from "react";
@@ -10,21 +11,20 @@ import React from "react";
 function StoriesPage({ pageContext, data }) {
   const { previousPagePath, nextPagePath, topics } = pageContext;
   const stories = data.recommendedStories.edges;
-
+  const pageTitle = `Recommended Developer Stories`;
+  const subTitle = `Developer stories which Abhith recommends.`;
   return (
     <Layout>
       <SEO
-        title="Recommended Developer Stories"
-        description="Developer stories which Abhith recommends."
+        title={pageTitle}
+        description={subTitle}
         slug="/recommended/stories/"
       />
+      <PageHero title={pageTitle} subtitle={subTitle} />
       <div className="section">
         <div className="container">
           <div className="columns">
             <div className="column is-9 is-10-widescreen main-loop">
-              <h4 className="title is-4 spanborder has-text-weight-bold">
-                <span>Recommended Developer Stories</span>
-              </h4>
               <div className="ar-breadcrumb is-hidden-mobile">
                 <nav className="breadcrumb" aria-label="breadcrumbs">
                   <ul>
@@ -65,7 +65,11 @@ function StoriesPage({ pageContext, data }) {
                 nextPagePath={nextPagePath}
               />
             </div>
-            <TopicsCloud topics={topics} section="stories" />
+            <TopicCloud
+              topics={topics}
+              section="stories"
+              title="Story Topics"
+            />
           </div>
         </div>
       </div>

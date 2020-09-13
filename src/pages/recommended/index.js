@@ -7,6 +7,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import StoriesRoll from "@components/stories-roll";
 import ServicesRoll from "@components/services-roll";
+import PageHero from "@components/page-hero";
 
 export default class RecommendedIndexPage extends React.Component {
   render() {
@@ -17,18 +18,16 @@ export default class RecommendedIndexPage extends React.Component {
     const videos = data.recommendedVideos.edges;
     const stories = data.recommendedStories.edges;
     const services = data.services.edges;
+
+    const pageTitle = `Recommended`;
+    const subTitle = `Developer stories, videos, and services which Abhith recommends.`;
+
     return (
       <Layout>
-        <div className="container">
-          <SEO
-            title="Recommended"
-            description="Developer stories, videos, and services which Abhith recommends."
-            slug="/recommended/"
-          />
-          <div className="section">
-            <h1 className="title is-4 has-text-weight-bold mb-4">
-              Recommended
-            </h1>
+        <SEO title={pageTitle} description={subTitle} slug="/recommended/" />
+        <PageHero title={pageTitle} subtitle={subTitle} />
+        <div className="section">
+          <div className="container">
             <div className="columns">
               <div className="column">
                 <div>

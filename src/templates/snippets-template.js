@@ -2,7 +2,7 @@ import SnippetRoll from "@components/snippet-roll";
 import Layout from "@components/layout";
 import Pagination from "@components/pagination";
 import SEO from "@components/seo/seo";
-import TopicsCloud from "@components/topic-cloud";
+import TopicCloud from "@components/topic-cloud";
 import { graphql, Link } from "gatsby";
 import React from "react";
 import normalize from "../../gatsby/data/data.normalize";
@@ -11,8 +11,8 @@ import PageHero from "@components/page-hero";
 function SnippetsPage({ pageContext, data }) {
   const snippets = data.snippets.edges.map(normalize.local.snippets);
   const { previousPagePath, nextPagePath, topics } = pageContext;
-  const subTitle = `No story telling, dive straight into code.`;
   const pageTitle = `Snippets`;
+  const subTitle = `No story telling, dive straight into code.`;
   return (
     <Layout>
       <SEO title={pageTitle} description={subTitle} slug="/snippets/" />
@@ -44,7 +44,7 @@ function SnippetsPage({ pageContext, data }) {
                 nextPagePath={nextPagePath}
               />
             </div>
-            <TopicsCloud topics={topics} />
+            <TopicCloud topics={topics} title="Snippet Topics" />
           </div>
         </div>
       </div>
