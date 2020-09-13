@@ -20,6 +20,12 @@ const TopicPageBase = ({
   let pageTitle;
   let pageSubtitle;
 
+  if (topic.totalSnippets > 0) {
+    summary.push(
+      `${topic.totalSnippets} snippet${topic.totalSnippets === 1 ? "" : "s"}`
+    );
+  }
+
   if (activeTab === "Videos") {
     pageTitle = `Recommended videos about ${topic.title}`;
     pageSubtitle = `Watch the ${topic.totalVideos} video${

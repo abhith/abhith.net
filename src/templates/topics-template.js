@@ -5,7 +5,8 @@ import TopicImage from "@components/topic-image";
 import { Link } from "gatsby";
 import React from "react";
 // tslint:disable-next-line: no-submodule-imports
-import { FiBookOpen, FiFileText, FiGlobe, FiVideo } from "react-icons/fi";
+import { FiBookOpen, FiGlobe, FiVideo } from "react-icons/fi";
+import { FcReading, FcPuzzle } from "react-icons/fc";
 
 function TopicsPage({ pageContext }) {
   const { topics } = pageContext;
@@ -46,10 +47,21 @@ function TopicsPage({ pageContext }) {
                               className="button is-outlined"
                               to={`/topics/${topic.slug}/`}
                             >
-                              <span className="icon is-small">
-                                <FiFileText />
+                              <span className="icon">
+                                <FcReading />
                               </span>
                               <span>{topic.totalPosts}</span>
+                            </Link>
+                          )}
+                          {topic.totalSnippets > 0 && (
+                            <Link
+                              className="button is-outlined"
+                              to={`/snippets/${topic.slug}/`}
+                            >
+                              <span className="icon">
+                                <FcPuzzle />
+                              </span>
+                              <span>{topic.totalSnippets}</span>
                             </Link>
                           )}
                           {topic.totalVideos > 0 && (
@@ -57,7 +69,7 @@ function TopicsPage({ pageContext }) {
                               className="button is-primary is-outlined"
                               to={`/topics/${topic.slug}/videos/`}
                             >
-                              <span className="icon is-small">
+                              <span className="icon">
                                 <FiVideo />
                               </span>
                               <span>{topic.totalVideos}</span>
@@ -68,7 +80,7 @@ function TopicsPage({ pageContext }) {
                               className="button is-link is-outlined"
                               to={`/topics/${topic.slug}/stories/`}
                             >
-                              <span className="icon is-small">
+                              <span className="icon">
                                 <FiBookOpen />
                               </span>
                               <span>{topic.totalStories}</span>
@@ -79,7 +91,7 @@ function TopicsPage({ pageContext }) {
                               className="button is-success is-outlined"
                               to={`/topics/${topic.slug}/tools/`}
                             >
-                              <span className="icon is-small">
+                              <span className="icon">
                                 <FiGlobe />
                               </span>
                               <span>{topic.totalServices}</span>
