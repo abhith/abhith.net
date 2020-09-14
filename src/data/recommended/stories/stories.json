@@ -1,5 +1,19 @@
 [
   {
+    "title": "Web API Error Handling: How To Make Debugging Easier",
+    "url": "https://stackify.com/web-api-error-handling/",
+    "description": "Understand the problem of error handling from two angles: the what and the how. Make debugging easier with web API error handling best practices.",
+    "date": "2020-09-13T08:39:29.263Z",
+    "tags": ["api"]
+  },
+  {
+    "title": "3 Years of Kubernetes in Production–Here’s What We Learned",
+    "url": "https://medium.com/better-programming/3-years-of-kubernetes-in-production-heres-what-we-learned-44e77e1749c8",
+    "description": "We started out building our first Kubernetes cluster in 2017, version 1.9.4. We had two clusters, one that ran on bare-metal RHEL VMs, and another that ran on AWS EC2. Today, our Kubernetes…",
+    "date": "2020-09-13T07:39:29.263Z",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "Microsoft Announces the General Availability of Azure Spring Cloud",
     "url": "https://www.infoq.com/news/2020/09/azure-spring-cloud-ga/",
     "description": "Recently Microsoft and VMWare both announced the general availability of Azure Spring Cloud, a fully-managed service for Spring Boot apps. The service allows enterprises to deploy JARs or code to it.",
