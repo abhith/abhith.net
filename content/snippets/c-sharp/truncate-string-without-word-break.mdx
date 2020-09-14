@@ -1,0 +1,46 @@
+---
+title: Truncate String Without Word Break
+description: Truncate string at a word near to the limit specified. Avoid word split.
+author: Abhith Rajan
+date: 2020-09-14T09:26:00.000Z
+topics:
+  - c-sharp
+---
+
+```cs
+/// <summary>
+/// Truncate string at a word near to the limit specified. Avoid word split.
+/// </summary>
+/// <param name="input">string</param>
+/// <param name="length"></param>
+/// <param name="appendDots"></param>
+/// <returns></returns>
+public static string TruncateAtWord(this string input, int length, bool appendDots = false)
+{
+    if (input == null || input.Length < length)
+        return input;
+    var iNextSpace = input.LastIndexOf(" ", length, StringComparison.Ordinal);
+    var trimmedInput = string.Format("{0}", input.Substring(0, (iNextSpace > 0) ? iNextSpace : length).Trim());
+
+    if (appendDots)
+    {
+        return trimmedInput + "...";
+    }
+    return trimmedInput;
+}
+```
+
+## Tests
+
+```cs
+[Fact]
+public void TruncateAtWordTests()
+{
+    "This is a long sentence".TruncateAtWord(6).Should().Be("This");
+    "This is a long sentence".TruncateAtWord(7).Should().Be("This is");
+}
+```
+
+## Reference
+
+- [Code.Library](https://github.com/Abhith/Code.Library/blob/master/src/Code.Library/Extensions/StringExtensions.cs/#L511)
