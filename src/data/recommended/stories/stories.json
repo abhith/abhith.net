@@ -1,5 +1,12 @@
 [
   {
+    "title": "Is Entity Framework Core Quicker than Dapper? ORM Speed Test",
+    "url": "https://www.roundthecode.com/dotnet/entity-framework/is-entity-framework-core-quicker-than-dapper",
+    "description": "Testing the ORM's Entity Framework Core over Dapper using a .NET Core Console Application to see the speed differences.",
+    "date": "2020-09-14T08:39:29.263Z",
+    "tags": ["ef-core", "dapper"]
+  },
+  {
     "title": "Web API Error Handling: How To Make Debugging Easier",
     "url": "https://stackify.com/web-api-error-handling/",
     "description": "Understand the problem of error handling from two angles: the what and the how. Make debugging easier with web API error handling best practices.",
