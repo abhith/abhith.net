@@ -1,5 +1,5 @@
 import React from "react";
-import { FcLike, FcSms } from "react-icons/fc";
+import { FcLike, FcStatistics } from "react-icons/fc";
 import TitleBar from "@components/title-bar";
 
 export default function Webmentions({ edges }) {
@@ -29,7 +29,7 @@ export default function Webmentions({ edges }) {
             </span>
             <span aria-label={`${mentions} Mentions`}>
               <span className="icon">
-                <FcSms />
+                <FcStatistics />
               </span>
               {mentions}
             </span>
