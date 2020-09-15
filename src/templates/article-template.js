@@ -18,6 +18,7 @@ import RelatedStories from "../sections/article/article-related-stories";
 import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
 import ArticleShare from "../sections/article/article-share";
+import ArticleRelatedSnippets from "../sections/article/article-related-snippets";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
 
@@ -30,6 +31,7 @@ export default ({ pageContext, data, location }) => {
     relatedStories,
     relatedVideos,
     relatedTools,
+    relatedSnippets,
     next,
     previous,
   } = pageContext;
@@ -158,6 +160,7 @@ export default ({ pageContext, data, location }) => {
           </div>
         </div>
       </div>
+      <ArticleRelatedSnippets snippets={relatedSnippets} />
       <RelatedArticles articles={relatedArticles} />
       <RelatedVideos relatedVideos={relatedVideos} />
       <RelatedStories relatedStories={relatedStories} />
