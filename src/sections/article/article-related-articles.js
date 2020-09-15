@@ -28,7 +28,7 @@ const RelatedArticles = ({ articles }) => {
   return (
     <section className="section">
       <div className="container">
-        <TitleBar title={`Related Posts`} />
+        <TitleBar title={`Related Articles`} linkTo={`/blog/`} />
         {rowElements}
       </div>
     </section>

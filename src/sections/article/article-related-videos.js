@@ -1,6 +1,5 @@
 import TitleBar from "@components/title-bar";
 import VideosRoll from "@components/videos-roll";
-import { Link } from "gatsby";
 import React from "react";
 
 const RelatedVideos = ({ relatedVideos }) => {
@@ -11,17 +10,8 @@ const RelatedVideos = ({ relatedVideos }) => {
   return (
     <section className="section">
       <div className="container">
-        <TitleBar title={`Related Videos`} />
+        <TitleBar title={`Related Videos`} linkTo={`/recommended/videos/`} />
         <VideosRoll videos={relatedVideos} itemsPerRow={3} />
-        <div className="cta-wrapper has-text-centered">
-          <Link
-            to="/recommended/videos/"
-            className="button k-button k-primary raised has-gradient is-bold"
-          >
-            <span className="text">View More Videos</span>
-            <span className="front-gradient" />
-          </Link>
-        </div>
       </div>
     </section>
   );

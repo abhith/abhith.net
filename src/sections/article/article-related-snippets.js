@@ -31,7 +31,7 @@ const ArticleRelatedSnippets = ({ snippets }) => {
   return (
     <section className="section">
       <div className="container">
-        <TitleBar title={`Related Snippets`} />
+        <TitleBar title={`Related Snippets`} linkTo={`/snippets/`} />
         {rowElements}
       </div>
     </section>

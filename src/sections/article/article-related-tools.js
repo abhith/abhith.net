@@ -12,7 +12,10 @@ const RelatedTools = ({ relatedServices }) => {
       <div className="container">
         <div className="columns">
           <div className="column is-full">
-            <TitleBar title={`Related Tools & Services`} />
+            <TitleBar
+              title={`Related Tools & Services`}
+              linkTo={`/recommended/services/`}
+            />
             <ServicesRoll services={relatedServices} />
           </div>
         </div>
