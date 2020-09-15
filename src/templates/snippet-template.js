@@ -16,8 +16,8 @@ import RelatedArticles from "../sections/article/article-related-articles";
 import RelatedStories from "../sections/article/article-related-stories";
 import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
-import GitHubTypo from "../sections/common/github-typo";
-import AskFeedback from "../sections/common/ask-feedback";
+import GitHubTypo from "@components/github-typo";
+import AskFeedback from "@components/ask-feedback";
 
 export default ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
