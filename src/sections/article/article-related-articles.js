@@ -1,6 +1,6 @@
 import BlogCard from "@components/blog-card";
 import TitleBar from "@components/title-bar";
-import { partition } from "lodash";
+import { chunk } from "lodash";
 import React from "react";
 
 const RelatedArticles = ({ articles }) => {
@@ -8,28 +8,18 @@ const RelatedArticles = ({ articles }) => {
     return null;
   }
 
-  let relatedPostsFirstHalf = [];
-  let relatedPostsSecondHalf = [];
   const rowElements = [];
-
   let rowItemsCollection = [];
-  if (articles.length > 3) {
-    [relatedPostsFirstHalf, relatedPostsSecondHalf] = partition(
-      articles,
-      (i) => {
-        return articles.indexOf(i) % 2 === 0;
-      }
-    );
-    rowItemsCollection = [relatedPostsFirstHalf, relatedPostsSecondHalf];
-  } else {
-    rowItemsCollection = [articles];
-  }
-
+  rowItemsCollection = chunk(articles, 3);
   rowItemsCollection.forEach((rowItems, index) => {
     rowElements.push(
       <div className="columns" key={index}>
         {rowItems.map((article) => {
-          return <BlogCard post={article} key={article.id} />;
+          return (
+            <div className="column is-one-third" key={article.id}>
+              <BlogCard post={article} key={article.id} />
+            </div>
+          );
         })}
       </div>
     );
