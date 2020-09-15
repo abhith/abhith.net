@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
-import GitHubButton from "react-github-btn";
-
 import Layout from "@components/layout";
 import MDXRenderer from "@components/mdx";
 import SEO from "@components/seo/seo";
@@ -10,6 +8,7 @@ import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
 import Image from "@components/image";
 import Webmentions from "@components/webmentions";
+import GitHubStar from "@components/github-star";
 
 import SnippetHero from "../sections/snippet/snippet-hero";
 import RelatedArticles from "../sections/article/article-related-articles";
@@ -155,25 +154,7 @@ export default ({ pageContext, data, location }) => {
               </div>
               <aside className="ar-side">
                 <div className="sticky">
-                  <div className="has-text-centered mt-3">
-                    <div className="text-muted mb-1">
-                      <span role="img" aria-label="star">
-                        ⭐
-                      </span>{" "}
-                      On GitHub
-                    </div>
-                    <div className="buttons is-centered">
-                      <GitHubButton
-                        href="https://github.com/Abhith/abhith.net"
-                        data-icon="octicon-star"
-                        data-size="large"
-                        data-show-count="true"
-                        aria-label="Star Abhith/abhith.net on GitHub"
-                      >
-                        Star
-                      </GitHubButton>
-                    </div>
-                  </div>
+                  <GitHubStar />
                 </div>
               </aside>
             </div>

@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
-import GitHubButton from "react-github-btn";
 
+import GitHubStar from "@components/github-star";
 import Layout from "@components/layout";
-import LiveEdit from "@components/live-edit";
 import MDXRenderer from "@components/mdx";
 import SEO from "@components/seo/seo";
 import TableOfContents from "@components/table-of-contents";
@@ -152,25 +150,7 @@ export default ({ pageContext, data, location }) => {
               <aside className="ar-side">
                 <div className="sticky">
                   <ArticleShare article={article} location={location} />
-                  <div className="has-text-centered mt-3">
-                    <div className="text-muted mb-1">
-                      <span role="img" aria-label="star">
-                        ⭐
-                      </span>{" "}
-                      On GitHub
-                    </div>
-                    <div className="buttons is-centered">
-                      <GitHubButton
-                        href="https://github.com/Abhith/abhith.net"
-                        data-icon="octicon-star"
-                        data-size="large"
-                        data-show-count="true"
-                        aria-label="Star Abhith/abhith.net on GitHub"
-                      >
-                        Star
-                      </GitHubButton>
-                    </div>
-                  </div>
+                  <GitHubStar />
                   <TableOfContents page={article} location={location} />
                 </div>
               </aside>
