@@ -33,7 +33,7 @@ const RelatedStories = ({ relatedStories }) => {
   return (
     <section className="section">
       <div className="container">
-        <TitleBar title={`Related Stories`} linkTo={`/recommended/stories/`} />
+        <TitleBar title="Related Stories" linkTo="/recommended/stories/" />
         <div className="columns">{columnElements}</div>
       </div>
     </section>
