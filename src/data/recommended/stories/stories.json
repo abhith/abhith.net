@@ -1,5 +1,12 @@
 [
   {
+    "title": "Four Reasons Why Your ASP.NET Core Application is Not Working in IIS",
+    "url": "https://www.roundthecode.com/dotnet/four-reasons-why-your-asp-net-core-application-is-not-working-in-iis",
+    "description": "ASP.NET Core Application Not Working in IIS? We fix Interval Server Errors 500.19 & 500.21, plus 500.30 ANCM In-Process Start Failure",
+    "date": "2020-09-16T08:39:29.263Z",
+    "tags": ["aspnet-core", "iis"]
+  },
+  {
     "title": "Is Entity Framework Core Quicker than Dapper? ORM Speed Test",
     "url": "https://www.roundthecode.com/dotnet/entity-framework/is-entity-framework-core-quicker-than-dapper",
     "description": "Testing the ORM's Entity Framework Core over Dapper using a .NET Core Console Application to see the speed differences.",
