@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import BlogRollItem from "../blog-roll-item";
 import BlogCard from "../blog-card";
-import Button from "../button";
+import TitleBar from "@components/title-bar";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 const normalize = require("../../../gatsby/data/data.normalize");
@@ -29,6 +29,11 @@ function LatestPosts() {
         return (
           <LatestPostsBody className="section">
             <div className="container">
+              <TitleBar
+                title="Latest Articles"
+                linkTo="/blog/"
+                linkText={`View All ${totalArticlesCount} Articles`}
+              />
               <div className="columns">
                 <div className="column">
                   <BlogCard post={latestArticles[0]}></BlogCard>
@@ -45,10 +50,6 @@ function LatestPosts() {
                   ></BlogCard>
                 </div>
               </div>
-              <Button
-                text={`View All ${totalArticlesCount} Articles`}
-                path="/blog/"
-              ></Button>
             </div>
           </LatestPostsBody>
         );
