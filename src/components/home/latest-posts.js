@@ -30,16 +30,20 @@ function LatestPosts() {
           <LatestPostsBody className="section">
             <div className="container">
               <div className="columns">
-                <BlogCard post={latestArticles[0]}></BlogCard>
+                <div className="column">
+                  <BlogCard post={latestArticles[0]}></BlogCard>
+                </div>
                 <div className="column">
                   {latestArticles.slice(1, 3).map((node) => {
                     return <BlogRollItem post={node} key={node.slug} />;
                   })}
                 </div>
-                <BlogCard
-                  post={lastUpdatedPost}
-                  tag={`Recently Updated`}
-                ></BlogCard>
+                <div className="column">
+                  <BlogCard
+                    post={lastUpdatedPost}
+                    tag={`Recently Updated`}
+                  ></BlogCard>
+                </div>
               </div>
               <Button
                 text={`View All ${totalArticlesCount} Articles`}

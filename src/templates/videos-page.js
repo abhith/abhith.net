@@ -15,7 +15,6 @@ function VideosPage({ pageContext, data }) {
   const subTitle = `Videos which Abhith recommends.`;
   const rowElements = [];
   let rowItemsCollection = [];
-
   rowItemsCollection = chunk(videos, 2);
   rowItemsCollection.forEach((rowItems, index) => {
     rowElements.push(

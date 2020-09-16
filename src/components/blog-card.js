@@ -5,7 +5,7 @@ import Image from "@components/image";
 
 const BlogCard = ({ post, tag }) => {
   return (
-    <div className="column card-post">
+    <div className="card-post">
       <Link to={post.slug}>
         <div className="featured-image card-image">
           <Image src={post.hero.full} alt={post.title} />

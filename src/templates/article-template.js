@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
-import GitHubButton from "react-github-btn";
 
+import GitHubStar from "@components/github-star";
 import Layout from "@components/layout";
-import LiveEdit from "@components/live-edit";
 import MDXRenderer from "@components/mdx";
 import SEO from "@components/seo/seo";
 import TableOfContents from "@components/table-of-contents";
@@ -20,8 +18,9 @@ import RelatedStories from "../sections/article/article-related-stories";
 import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
 import ArticleShare from "../sections/article/article-share";
-import GitHubTypo from "../sections/common/github-typo";
-import AskFeedback from "../sections/common/ask-feedback";
+import ArticleRelatedSnippets from "../sections/article/article-related-snippets";
+import GitHubTypo from "@components/github-typo";
+import AskFeedback from "@components/ask-feedback";
 
 export default ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
@@ -32,6 +31,7 @@ export default ({ pageContext, data, location }) => {
     relatedStories,
     relatedVideos,
     relatedTools,
+    relatedSnippets,
     next,
     previous,
   } = pageContext;
@@ -152,25 +152,7 @@ export default ({ pageContext, data, location }) => {
               <aside className="ar-side">
                 <div className="sticky">
                   <ArticleShare article={article} location={location} />
-                  <div className="has-text-centered mt-3">
-                    <div className="text-muted mb-1">
-                      <span role="img" aria-label="star">
-                        ⭐
-                      </span>{" "}
-                      On GitHub
-                    </div>
-                    <div className="buttons is-centered">
-                      <GitHubButton
-                        href="https://github.com/Abhith/abhith.net"
-                        data-icon="octicon-star"
-                        data-size="large"
-                        data-show-count="true"
-                        aria-label="Star Abhith/abhith.net on GitHub"
-                      >
-                        Star
-                      </GitHubButton>
-                    </div>
-                  </div>
+                  <GitHubStar />
                   <TableOfContents page={article} location={location} />
                 </div>
               </aside>
@@ -178,6 +160,7 @@ export default ({ pageContext, data, location }) => {
           </div>
         </div>
       </div>
+      <ArticleRelatedSnippets snippets={relatedSnippets} />
       <RelatedArticles articles={relatedArticles} />
       <RelatedVideos relatedVideos={relatedVideos} />
       <RelatedStories relatedStories={relatedStories} />

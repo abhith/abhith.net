@@ -111,6 +111,10 @@ module.exports = async ({ graphql, actions, reporter }) => {
       .filter((item) => article.tags.some((t) => item.node.tags.includes(t)))
       .slice(0, 2);
 
+    let relatedSnippets = snippets
+      .filter((snippet) => article.tags.some((t) => snippet.topics.includes(t)))
+      .slice(0, 6);
+
     createPage({
       path: article.slug,
       component: templates.article,
@@ -121,6 +125,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
         relatedStories,
         relatedVideos,
         relatedTools,
+        relatedSnippets,
         next: articles[index - 1],
         previous: articles[index + 1],
         permalink: `https://www.abhith.net${article.slug}`,
