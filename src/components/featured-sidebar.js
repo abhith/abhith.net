@@ -3,16 +3,13 @@ import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import TopicsBar from "./topics-bar";
 import Button from "./button";
+import TitleBar from "@components/title-bar";
 import { domainFromURL } from "../utils/common";
 
 const FeaturedSidebar = ({ items, totalCount }) => {
   return (
     <div className="sticky">
-      <h4 className="spanborder">
-        <span className="title is-4 has-text-weight-bold">
-          Tools & Services
-        </span>
-      </h4>
+      <TitleBar title="Tools & Services" />
       <ol className="list-featured">
         {items &&
           items.map(({ node: item }) => (

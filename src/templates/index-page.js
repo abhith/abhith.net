@@ -9,6 +9,7 @@ import FeaturedSidebar from "../components/featured-sidebar";
 import SEO from "../components/seo/seo";
 import VideosRoll from "../components/videos-roll";
 import Button from "../components/button";
+import TitleBar from "@components/title-bar";
 import HomeSnippets from "../sections/home/home-snippets";
 const normalize = require("../../gatsby/data/data.normalize");
 
@@ -55,11 +56,7 @@ export const IndexPageTemplate = ({
       <div className="container">
         <div className="columns">
           <div className="column is-one-third">
-            <h4 className="spanborder">
-              <span className="title is-4 has-text-weight-bold">
-                Developer Stories
-              </span>
-            </h4>
+            <TitleBar title="Developer Stories" />
             <StoriesRoll posts={stories} />
             <Button
               text={`View All ${totalStories} Stories`}
@@ -67,9 +64,7 @@ export const IndexPageTemplate = ({
             ></Button>
           </div>
           <div className="column is-one-third">
-            <h4 className="spanborder">
-              <span className="title is-4 has-text-weight-bold">Videos</span>
-            </h4>
+            <TitleBar title="Videos" />
             <VideosRoll videos={videos} />
             <Button
               text={`View All ${totalVideos} Videos`}
