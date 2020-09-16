@@ -11,6 +11,7 @@ import VideosRoll from "../components/videos-roll";
 import Button from "../components/button";
 import TitleBar from "@components/title-bar";
 import HomeSnippets from "../sections/home/home-snippets";
+import { FcLike } from "react-icons/fc";
 const normalize = require("../../gatsby/data/data.normalize");
 
 export const IndexPageTemplate = ({
@@ -35,15 +36,14 @@ export const IndexPageTemplate = ({
               <div className="columns is-vcentered">
                 <div className="column has-text-centered">
                   <div className="title">
-                    <span role="img" aria-label="inbox">
-                      📬
-                    </span>{" "}
-                    Recommended{" "}
+                    <FcLike size={30} />
+                    <span className="ml-1">Recommended</span>
                   </div>
                   <div className="subtitle has-numbers">
                     <span className="tag">{totalStories}</span> Developer
-                    stories, <span className="tag">{totalVideos}</span> Videos
-                    and <span className="tag">{totalServices}</span> Services
+                    stories <span className="tag">{totalVideos}</span> Videos{" "}
+                    <span className="tag">{totalServices}</span> Tools and
+                    Services
                   </div>
                 </div>
               </div>
