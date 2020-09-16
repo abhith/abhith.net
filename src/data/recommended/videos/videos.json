@@ -1,5 +1,14 @@
 [
   {
+    "title": "Autonomous microservices don't share data. Period - Dennis van der Stelt",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=0TYbHVc2yWI",
+    "date": "2020-09-16T05:22:22.638Z",
+    "type": "youtube",
+    "tags": ["microservices"]
+  },
+  {
     "title": "Creating event-driven microservices: the why, how and what by Andrew Schofield",
     "description": "",
     "image": "",
