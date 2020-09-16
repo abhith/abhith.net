@@ -1,5 +1,12 @@
 [
   {
+    "title": "Best Practices for REST API Error Handling | Baeldung",
+    "url": "https://www.baeldung.com/rest-api-error-handling-best-practices",
+    "description": "Learn about some of the best practices for handling REST API errors, including useful approaches for providing users with additional relevant information",
+    "date": "2020-09-16T09:39:29.263Z",
+    "tags": ["api"]
+  },
+  {
     "title": "Four Reasons Why Your ASP.NET Core Application is Not Working in IIS",
     "url": "https://www.roundthecode.com/dotnet/four-reasons-why-your-asp-net-core-application-is-not-working-in-iis",
     "description": "ASP.NET Core Application Not Working in IIS? We fix Interval Server Errors 500.19 & 500.21, plus 500.30 ANCM In-Process Start Failure",
