@@ -10,7 +10,7 @@ const FeaturedSidebar = ({ items, totalCount }) => {
     <div className="sticky">
       <h4 className="spanborder">
         <span className="title is-4 has-text-weight-bold">
-          Recommended Tools & Services
+          Tools & Services
         </span>
       </h4>
       <ol className="list-featured">

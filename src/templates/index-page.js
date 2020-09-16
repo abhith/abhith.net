@@ -57,7 +57,7 @@ export const IndexPageTemplate = ({
           <div className="column is-one-third">
             <h4 className="spanborder">
               <span className="title is-4 has-text-weight-bold">
-                Recommended Stories
+                Developer Stories
               </span>
             </h4>
             <StoriesRoll posts={stories} />
@@ -68,9 +68,7 @@ export const IndexPageTemplate = ({
           </div>
           <div className="column is-one-third">
             <h4 className="spanborder">
-              <span className="title is-4 has-text-weight-bold">
-                Recommended Videos
-              </span>
+              <span className="title is-4 has-text-weight-bold">Videos</span>
             </h4>
             <VideosRoll videos={videos} />
             <Button
