@@ -9,6 +9,8 @@ import FeaturedSidebar from "../components/featured-sidebar";
 import SEO from "../components/seo/seo";
 import VideosRoll from "../components/videos-roll";
 import Button from "../components/button";
+import HomeSnippets from "../sections/home/home-snippets";
+const normalize = require("../../gatsby/data/data.normalize");
 
 export const IndexPageTemplate = ({
   stories,
@@ -17,11 +19,13 @@ export const IndexPageTemplate = ({
   totalStories,
   totalVideos,
   totalServices,
+  snippets,
 }) => (
   <>
     <SEO />
     <Hero />
     <LatestPosts />
+    <HomeSnippets snippets={snippets} />
     <div className="hero is-primary is-bold">
       <div className="hero-body">
         <div className="container">
@@ -87,6 +91,7 @@ IndexPageTemplate.propTypes = {
   stories: PropTypes.array,
   videos: PropTypes.array,
   featured: PropTypes.array,
+  snippets: PropTypes.array,
   totalStories: PropTypes.number,
   totalVideos: PropTypes.number,
   totalServices: PropTypes.number,
@@ -102,6 +107,7 @@ const IndexPage = ({ data }) => {
         totalStories={data.recommendedStories.totalCount}
         totalVideos={data.recommendedVideos.totalCount}
         totalServices={data.featured.totalCount}
+        snippets={data.snippets.edges.map(normalize.local.snippets)}
       />
     </Layout>
   );
@@ -161,6 +167,33 @@ export const pageQuery = graphql`
           id
           tags
           url
+        }
+      }
+    }
+    snippets: allSnippet(
+      filter: { draft: { eq: false } }
+      sort: { order: DESC, fields: [date] }
+      limit: 3
+    ) {
+      edges {
+        node {
+          id
+          body
+          slug
+          timeToRead
+          date
+          dateString: date(formatString: "MMMM DD, YYYY")
+          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+          title
+          excerpt
+          topics
+          lastModificationTime
+          lastModificationTimeString: lastModificationTime(
+            formatString: "MMMM DD, YYYY"
+          )
+          dateModifiedSeoFormat: lastModificationTime(
+            formatString: "YYYY-MM-DD"
+          )
         }
       }
     }
