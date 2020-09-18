@@ -10,7 +10,6 @@ const StoryStyled = styled("div")`
     color: #333;
   }
   p {
-    color: #999;
     font-size: 0.9rem;
   }
   .post-title {
@@ -43,7 +42,9 @@ const StoriesRollItem = ({ post, showDescription }) => {
               </small>
               <br />
             </div>
-            <p>{showDescription && post.description}</p>
+            {showDescription && (
+              <p className="ar-subtitle"> {post.description}</p>
+            )}
           </div>
         </div>
       </OutboundLink>

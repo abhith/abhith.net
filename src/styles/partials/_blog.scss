@@ -118,7 +118,6 @@
     }
   }
   p {
-    color: $muted-grey;
     font-size: 0.9rem;
   }
 }
@@ -299,7 +298,6 @@
     }
   }
   p {
-    color: $muted-grey;
     font-size: 0.9rem;
   }
 }
@@ -536,4 +534,8 @@
 .ar-webmention-avatar img {
   width: 100%;
   display: block;
+}
+
+.ar-subtitle {
+  color: $text-light;
 }

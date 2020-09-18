@@ -8,9 +8,6 @@ const StoryStyled = styled("div")`
   a {
     color: #333;
   }
-  p {
-    color: #999;
-  }
   .post-title {
     font-size: 1.2rem;
     text-transform: capitalize;
@@ -34,7 +31,7 @@ const SnippetsRollItem = ({ snippet, showDescription }) => {
         <div className="media-content">
           <div className="content">
             <strong className="post-title">{snippet.title}</strong>
-            <p>{showDescription && snippet.excerpt}</p>
+            <p className="ar-subtitle">{showDescription && snippet.excerpt}</p>
             <small>Last Updated &middot; {snippet.date}</small>
           </div>
         </div>
