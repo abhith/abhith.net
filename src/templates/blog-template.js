@@ -3,7 +3,7 @@ import Layout from "@components/layout";
 import Pagination from "@components/pagination";
 import SEO from "@components/seo/seo";
 import TopicCloud from "@components/topic-cloud";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react";
 import normalize from "../../gatsby/data/data.normalize";
 import PageHero from "@components/page-hero";
@@ -11,16 +11,34 @@ import PageHero from "@components/page-hero";
 function BlogPage({ pageContext, data }) {
   const articles = data.articles.edges.map(normalize.local.articles);
   const { previousPagePath, nextPagePath, topics } = pageContext;
+  const pageTitle = `Blog`;
   const subTitle = `Abhith Rajan on Programming, The Web, Open Source, .NET, The Cloud and More.`;
 
   return (
     <Layout>
-      <SEO title="Blog" description={subTitle} slug="/blog/" />
+      <SEO title={pageTitle} description={subTitle} slug="/blog/" />
       <PageHero title={`All Articles`} subtitle={subTitle} />
       <div className="section">
         <div className="container">
           <div className="columns">
             <div className="column is-9 is-10-widescreen">
+              <div className="ar-breadcrumb is-hidden-mobile pb-5">
+                <nav className="breadcrumb" aria-label="breadcrumbs">
+                  <ul>
+                    <li>
+                      <Link to={`/`}>Home</Link>
+                    </li>
+                    <li className="is-active">
+                      <a
+                        className="u-url"
+                        href={`https://www.abhith.net/blog/`}
+                      >
+                        {pageTitle}
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
               <BlogRoll posts={articles} />
               <Pagination
                 previousPagePath={previousPagePath}
