@@ -7,7 +7,7 @@ const TitleBar = ({ title, linkTo, linkText }) => {
     linkText = "View All";
   }
   return (
-    <h4 className="spanborder title is-4">
+    <h4 className="spanborder title is-4 has-text-primary">
       <span className="has-text-weight-bold">{title}</span>
       {linkTo && (
         <Link
