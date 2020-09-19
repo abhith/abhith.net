@@ -9,9 +9,7 @@
         "titleBar.inactiveForeground": "#e7e7e799",
         "statusBar.background": "#bf3dd3",
         "statusBarItem.hoverBackground": "#cd67dc",
-        "statusBar.foreground": "#e7e7e7",
-        "statusBar.border": "#bf3dd3",
-        "titleBar.border": "#bf3dd3"
+        "statusBar.foreground": "#e7e7e7"
     },
     "peacock.color": "#bf3dd3"
 }
