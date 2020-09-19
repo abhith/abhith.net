@@ -107,6 +107,10 @@
   slug: cms
   description: Best in class listed under this tag
   image: ""
+- title: Content Creation Tools
+  slug: content-creation-tools
+  description: ""
+  image: ""
 - title: Content Writing
   slug: content-writing
   description: ""
