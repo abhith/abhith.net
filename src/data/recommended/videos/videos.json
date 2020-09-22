@@ -1,5 +1,32 @@
 [
   {
+    "title": "A Journey into .NET Microservices with Steeltoe",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=3meYereHHtM",
+    "date": "2020-09-22T06:22:22.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core", "microservices"]
+  },
+  {
+    "title": "Kubernetes DNS Horror Stories (And How to Avoid Them) - Laurent Bernaille, Datadog",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=Yq-SVNa_W5E",
+    "date": "2020-09-22T05:22:22.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": ".NET Microservices with Steeltoe",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=QLRi6iPapVg",
+    "date": "2020-09-22T04:22:22.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core", "microservices"]
+  },
+  {
     "title": "Autonomous microservices don't share data. Period - Dennis van der Stelt",
     "description": "",
     "image": "",
