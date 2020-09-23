@@ -1,5 +1,12 @@
 [
   {
+    "title": "Performance Buckets in Application Insights",
+    "url": "https://azure.microsoft.com/en-us/blog/performance-buckets-in-application-insights/",
+    "description": "Minimize MTTD: mean time to detect, triage, asses issue impact, and finally diagnose the issue using Performance Buckets to help make the detect-triage-diagnose process more efficient.",
+    "date": "2020-09-23T09:39:29.263Z",
+    "tags": ["app-insights"]
+  },
+  {
     "title": "How to use Application Insights Custom Properties in Azure Monitor Log (Kusto) Queries – Cameron Dwyer",
     "url": "https://camerondwyer.com/2020/05/26/how-to-use-application-insights-custom-properties-in-azure-monitor-log-kusto-queries/",
     "description": "",
