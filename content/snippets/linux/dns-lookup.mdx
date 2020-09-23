@@ -1,0 +1,36 @@
+---
+title: DNS Lookup
+description: Uses curl to get a response from the specified domain. Useful for identifying the intermittent DNS timeout as well.
+author: Abhith Rajan
+date: 2020-09-23T09:26:00.000Z
+topics:
+  - linux
+---
+
+```bash
+for i in {1..10}; do curl -k -o /dev/null -s -w "DNS-Lookup [%{time_namelookup}] Time-Connect [%{time_connect}] Time-PreTransfer [%{time_pretransfer}] Time-StartTransfer [%{time_starttransfer}] Total-Time [%{time_total}] Response-Code [%{http_code}]\n" https://www.abhith.net; done
+```
+
+## Sample Output
+
+```bash
+root@pod-name-69d96c5494-bd97v:/app# for i in {1..10}; do curl -k -o /dev/null -s -w "DNS-Lookup [%{time_namelookup}] Time-Connect [%{time_connect}] Time-PreTransfer [%{time_pretransfer}] Time-StartTransfer [%{time_s
+tarttransfer}] Total-Time [%{time_total}] Response-Code [%{http_code}]\n" https://www.abhith.net; done
+DNS-Lookup [5.465393] Time-Connect [5.542967] Time-PreTransfer [5.626041] Time-StartTransfer [6.024135] Total-Time [6.261565] Response-Code [200]
+DNS-Lookup [0.458571] Time-Connect [0.536812] Time-PreTransfer [0.619370] Time-StartTransfer [0.960386] Total-Time [1.199219] Response-Code [200]
+DNS-Lookup [0.005218] Time-Connect [0.083305] Time-PreTransfer [0.167227] Time-StartTransfer [0.505865] Total-Time [0.745717] Response-Code [200]
+DNS-Lookup [5.066491] Time-Connect [5.144106] Time-PreTransfer [5.227078] Time-StartTransfer [5.585845] Total-Time [5.825170] Response-Code [200]
+DNS-Lookup [0.004125] Time-Connect [0.081587] Time-PreTransfer [0.165687] Time-StartTransfer [0.246201] Total-Time [0.481887] Response-Code [200]
+DNS-Lookup [0.005214] Time-Connect [0.083619] Time-PreTransfer [0.168375] Time-StartTransfer [0.510846] Total-Time [0.823167] Response-Code [200]
+DNS-Lookup [0.016983] Time-Connect [0.094932] Time-PreTransfer [0.177621] Time-StartTransfer [0.522677] Total-Time [0.758300] Response-Code [200]
+DNS-Lookup [0.005210] Time-Connect [0.083526] Time-PreTransfer [0.166203] Time-StartTransfer [0.246943] Total-Time [0.481547] Response-Code [200]
+DNS-Lookup [0.010488] Time-Connect [0.088643] Time-PreTransfer [0.172099] Time-StartTransfer [0.517206] Total-Time [0.829188] Response-Code [200]
+DNS-Lookup [0.005282] Time-Connect [0.083156] Time-PreTransfer [0.167259] Time-StartTransfer [0.499211] Total-Time [0.734148] Response-Code [200]
+root@pod-name-69d96c5494-bd97v:/app#
+```
+
+Noticed the 5sec+ responses above?
+Explore more about the intermittent delay in Kubernetes in these articles,
+
+- [DNS intermittent delays of 5s · Issue #56903 · kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/issues/56903)
+- [5 – 15s DNS lookups on Kubernetes? - Quentin](https://blog.quentin-machu.fr/2018/06/24/5-15s-dns-lookups-on-kubernetes/)

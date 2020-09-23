@@ -294,6 +294,10 @@
   slug: linq
   description: ""
   image: ""
+- title: Linux
+  slug: linux
+  description: ""
+  image: linux-tux.svg
 - title: Machine Learning
   slug: machine-learning
   description: ""
