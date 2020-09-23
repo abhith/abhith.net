@@ -1,5 +1,12 @@
 [
   {
+    "title": "Injecting services into Serilog filters, enrichers, and sinks",
+    "url": "https://nblumhardt.com/2020/09/serilog-inject-dependencies/",
+    "description": "",
+    "date": "2020-09-23T11:39:29.263Z",
+    "tags": ["serilog"]
+  },
+  {
     "title": "VSCode Tips for Power Users",
     "url": "https://www.toptal.com/visual-studio/vscode-tips-power-users",
     "description": "Visual Studio Code tips and techniques to help you become a power user and make the most of VSCode.",
