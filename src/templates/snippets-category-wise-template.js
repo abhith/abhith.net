@@ -54,7 +54,11 @@ function SnippetsPage({ pageContext, data }) {
                 nextPagePath={nextPagePath}
               />
             </div>
-            <TopicsCloud topics={topics} />
+            <TopicsCloud
+              title="Snippet Topics"
+              topics={topics}
+              section="snippets"
+            />
           </div>
         </div>
       </div>
