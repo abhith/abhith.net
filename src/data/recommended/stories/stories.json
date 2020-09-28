@@ -1,5 +1,12 @@
 [
   {
+    "title": "CQRS and MediatR in ASP.NET Core - Code Maze",
+    "url": "https://code-maze.com/cqrs-mediatr-in-aspnet-core/",
+    "description": "How to use the MediatR NuGet library in ASP.NET Core, and working with the CQRS and Mediator architectural patterns.",
+    "date": "2020-09-28T11:39:29.263Z",
+    "tags": ["aspnet-core", "cqrs"]
+  },
+  {
     "title": "Injecting services into Serilog filters, enrichers, and sinks",
     "url": "https://nblumhardt.com/2020/09/serilog-inject-dependencies/",
     "description": "",
