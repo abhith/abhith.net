@@ -1,5 +1,12 @@
 [
   {
+    "title": "REST API Versioning Using ASP.NET Core",
+    "url": "https://www.jasongaylord.com/blog/2020/09/18/versioning-rest-api-using-aspnet-core",
+    "description": "",
+    "date": "2020-09-28T12:39:29.263Z",
+    "tags": ["aspnet-core", "api"]
+  },
+  {
     "title": "CQRS and MediatR in ASP.NET Core - Code Maze",
     "url": "https://code-maze.com/cqrs-mediatr-in-aspnet-core/",
     "description": "How to use the MediatR NuGet library in ASP.NET Core, and working with the CQRS and Mediator architectural patterns.",
