@@ -7612,12 +7612,12 @@ gatsby-page-utils@^0.2.25:
     lodash "^4.17.20"
     micromatch "^3.1.10"
 
-gatsby-plugin-catch-links@^2.2.4:
-  version "2.3.11"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.3.11.tgz#6a61a126a2ffcc3b155a1647123eb069a0b9e5d6"
-  integrity sha512-30oNCe85evOmyEQ4THwfV0Uokv0GVQv+VpR6ztabLDF78J3p3yFQNQhtcyXPjHrLU2EeuWutSZYk3v1etdh9Hw==
+gatsby-plugin-catch-links@^2.3.13:
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.3.13.tgz#8bf149ff481fbc972b597423eb84cf37a0cb7af3"
+  integrity sha512-hrVhIR1zjkQk1PMbgG7TPEybju9GfqLa1f0vyZxeZXcwxP3I5db3vgxftui8GMISI829o42FpF10ADrgEbRg7w==
   dependencies:
-    "@babel/runtime" "^7.10.3"
+    "@babel/runtime" "^7.11.2"
     escape-string-regexp "^1.0.5"
 
 gatsby-plugin-emotion@^4.3.0:
