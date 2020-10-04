@@ -1,5 +1,32 @@
 [
   {
+    "title": "C# Channels Explained (System.Threading.Channels)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=E0Ld7ZgE4oY",
+    "date": "2020-10-04T07:22:22.638Z",
+    "type": "youtube",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Introduction to gRPC",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=ru5x_hDZ9Qw",
+    "date": "2020-10-04T06:23:22.638Z",
+    "type": "youtube",
+    "tags": ["grpc", "dotnet-core"]
+  },
+  {
+    "title": "Semaphore Explained C#",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=GKjM4AX8NME",
+    "date": "2020-10-04T06:22:22.638Z",
+    "type": "youtube",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "The Social Dilemma | Official Trailer | Netflix",
     "description": "",
     "image": "",

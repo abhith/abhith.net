@@ -230,6 +230,10 @@
   slug: graphql
   description: ""
   image: "graphql.svg"
+- title: gRPC
+  slug: grpc
+  description: ""
+  image: ""
 - title: Helm
   slug: helm
   description: ""
