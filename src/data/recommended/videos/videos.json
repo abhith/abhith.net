@@ -1,5 +1,23 @@
 [
   {
+    "title": "Bringing Kubernetes best practices to everyone | BOD121",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=MgYqmtLoI6w",
+    "date": "2020-10-05T08:22:22.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Serving election results to an entire nation - Hallstein Brøtan - NDC Oslo 2020",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=vVEmElZdjPU",
+    "date": "2020-10-05T07:22:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet-core"]
+  },
+  {
     "title": "C# Channels Explained (System.Threading.Channels)",
     "description": "",
     "image": "",
