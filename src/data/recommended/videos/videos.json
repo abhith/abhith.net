@@ -1,5 +1,32 @@
 [
   {
+    "title": "Orleans at Microsoft",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=KhgYlvGLv9c",
+    "date": "2020-10-06T09:23:22.638Z",
+    "type": "youtube",
+    "tags": ["microsoft-orleans"]
+  },
+  {
+    "title": "Bringing Kubernetes best practices to everyone | Part 2",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=cHpmypOk8tA",
+    "date": "2020-10-06T09:22:22.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Bringing Kubernetes best practices to everyone | Part 1",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=PKkDr7Hh53s",
+    "date": "2020-10-06T08:22:22.638Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "Bringing Kubernetes best practices to everyone | BOD121",
     "description": "",
     "image": "",
