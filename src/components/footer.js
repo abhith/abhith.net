@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import GitHubButton from "react-github-btn";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 function Footer() {
   const { site } = useStaticQuery(
