@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import { Link } from "gatsby";
 import { GoMarkGithub } from "react-icons/go";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 const NotFoundPage = () => (
   <Layout>

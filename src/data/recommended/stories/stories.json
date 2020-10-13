@@ -1,5 +1,19 @@
 [
   {
+    "title": "NET Core Releases and Support | .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/net-core-releases-and-support/",
+    "description": "",
+    "date": "2020-10-05T13:39:29.263Z",
+    "tags": ["dotnet-core"]
+  },
+  {
+    "title": "Cloudflare's privacy-first Web Analytics service to take on Google Analytics",
+    "url": "https://news.thewindowsclub.com/cloudflares-privacy-first-web-analytics-service-103400/",
+    "description": "",
+    "date": "2020-10-05T12:39:29.263Z",
+    "tags": ["cloudflare", "analytics"]
+  },
+  {
     "title": "Hacktoberfest 2020 and .NET OSS – .NET Tools Blog | JetBrains",
     "url": "https://blog.jetbrains.com/dotnet/2020/09/30/hacktoberfest-2020-and-net-oss/",
     "description": "",

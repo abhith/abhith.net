@@ -11,7 +11,7 @@ import {
   FcPuzzle,
 } from "react-icons/fc";
 import { GoMarkGithub } from "react-icons/go";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import NavbarItem from "@components/navbar-item";

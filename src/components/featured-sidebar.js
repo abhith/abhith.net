@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import TopicsBar from "./topics-bar";
 import Button from "./button";
 import TitleBar from "@components/title-bar";
