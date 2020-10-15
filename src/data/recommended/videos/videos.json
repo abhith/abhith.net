@@ -1,5 +1,23 @@
 [
   {
+    "title": "Azure App Configuration - Making Centralized Configuration Easy",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=zRstfC3Nn7M",
+    "date": "2020-10-15T09:25:22.638Z",
+    "type": "youtube",
+    "tags": ["azure"]
+  },
+  {
+    "title": "Orleans Smart Cache Pattern (Virtual Actor Model)",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=qNVCACxypFw",
+    "date": "2020-10-15T09:24:22.638Z",
+    "type": "youtube",
+    "tags": ["microsoft-orleans"]
+  },
+  {
     "title": ".NET Core Debugging with WSL 2 in Visual Studio 2019",
     "description": "",
     "image": "",
