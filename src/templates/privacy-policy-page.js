@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo/seo";
+import PageHero from "@components/page-hero";
 import Content, { HTMLContent } from "../components/content";
 
 export const PrivacyPolicyPageTemplate = ({
@@ -14,17 +15,15 @@ export const PrivacyPolicyPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div className="container">
+    <>
       <SEO title={title} description={description} slug="/privacy-policy/" />
+      <PageHero title={title} subtitle={description} />
       <div className="section">
-        <h1 className="title spanborder has-text-weight-bold">
-          <span className="has-text-weight-bold"> {title}</span>
-        </h1>
-        <div className="page-content">
+        <div className="container">
           <PageContent className="content is-medium" content={content} />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
