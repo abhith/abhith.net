@@ -21,9 +21,7 @@ export const AboutPageTemplate = ({
       <PageHero title={title} subtitle={description} />
       <section className="section">
         <div className="container">
-          <div className="page-content">
-            <PageContent className="content is-medium" content={content} />
-          </div>
+          <PageContent className="content is-medium" content={content} />
         </div>
       </section>
       <Timeline></Timeline>
