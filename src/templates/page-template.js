@@ -1,22 +1,25 @@
+import React from "react";
+
 import Layout from "@components/layout";
 import SEO from "@components/seo/seo";
-import React from "react";
+import PageHero from "@components/page-hero";
+import Content, { HTMLContent } from "../components/content";
 
 const PageTemplate = (props) => {
   const {
     frontmatter: { title, description },
   } = props.pageContext;
 
+  const PageContent = HTMLContent || Content;
+
   return (
     <Layout>
       {/* TODO(abhith): remove hard coded slug */}
       <SEO title={title} description={description} slug="/donate/" />
-      <section className="section is-medium">
+      <PageHero title={title} subtitle={description} />
+      <section className="section">
         <div className="container">
-          <h1 className="title spanborder has-text-weight-bold">
-            <span> {title}</span>
-          </h1>
-          <div className="page-content content">{props.children}</div>
+          <article className="content is-medium">{props.children}</article>
         </div>
       </section>
     </Layout>
