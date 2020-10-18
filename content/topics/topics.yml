@@ -123,6 +123,10 @@
   slug: courses
   description: ""
   image: ""
+- title: Cryptography
+  slug: cryptography
+  description: ""
+  image: ""
 - title: CSS
   slug: css
   description: ""

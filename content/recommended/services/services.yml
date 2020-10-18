@@ -1,4 +1,10 @@
 ---
+- title: SHA256 Hash Generator Online
+  url: https://passwordsgenerator.net/sha256-hash-generator/
+  description: Generate the SHA256 hash of any string.
+  date: "2020-10-18T15:30:28.263Z"
+  tags:
+    - cryptography
 - title: Facepixelizer | Pixelate - Blur - Anonymize
   url: https://www.facepixelizer.com/
   description:
