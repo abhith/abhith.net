@@ -1,5 +1,14 @@
 [
   {
+    "title": "Distributed .NET Core (DShop) - Episode 4 [Asynchronous microservices integration via events]",
+    "description": "",
+    "image": "",
+    "url": "https://www.youtube.com/watch?v=KiIetmswEos",
+    "date": "2020-10-18T09:25:22.638Z",
+    "type": "youtube",
+    "tags": ["microservices", "dotnet-core"]
+  },
+  {
     "title": "Azure App Configuration - Making Centralized Configuration Easy",
     "description": "",
     "image": "",
