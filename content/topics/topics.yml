@@ -369,6 +369,10 @@
   slug: react
   description: ""
   image: react.svg
+- title: ReSharper
+  slug: resharper
+  description: ""
+  image: ""
 - title: Productivity
   slug: productivity
   description: ""
