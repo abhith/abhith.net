@@ -1,5 +1,26 @@
 [
   {
+    "title": "How To Use Query Parameters in Angular | DigitalOcean",
+    "url": "https://www.digitalocean.com/community/tutorials/angular-query-parameters",
+    "description": "",
+    "date": "2020-10-25T10:40:29.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Component events with EventEmitter and @Output in Angular - Ultimate Courses",
+    "url": "https://ultimatecourses.com/blog/component-events-event-emitter-output-angular-2",
+    "description": "",
+    "date": "2020-10-25T09:40:29.263Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Bill Gates Answers: 'Why Should We Hire You?'",
+    "url": "https://fossbytes.com/bill-gates-why-should-we-hire-you/",
+    "description": "",
+    "date": "2020-10-25T08:40:29.263Z",
+    "tags": ["career"]
+  },
+  {
     "title": "Uploading Files to Azure Blob Storage with Angular and ASP.NET Core",
     "url": "https://offering.solutions/blog/articles/2020/08/09/uploading-files-to-azure-blob-storage-with-angular-and-asp.net-core/",
     "description": "",
