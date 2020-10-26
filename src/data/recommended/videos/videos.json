@@ -1,5 +1,26 @@
 [
   {
+    "title": "Which tool when: Microsoft To Do, Microsoft Planner, Microsoft Lists, or Tasks in Microsoft Teams",
+    "url": "https://www.youtube.com/watch?v=0gIt21Pby3Y",
+    "date": "2020-10-25T09:27:22.638Z",
+    "type": "youtube",
+    "tags": ["project-management"]
+  },
+  {
+    "title": "Working with Channels in .NET",
+    "url": "https://www.youtube.com/watch?v=gT06qvQLtJ0",
+    "date": "2020-10-25T09:26:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Profiling and Dynamic Program Analysis in Rider",
+    "url": "https://www.youtube.com/watch?v=Kv35XmR4SG8",
+    "date": "2020-10-25T09:25:22.638Z",
+    "type": "youtube",
+    "tags": ["ide"]
+  },
+  {
     "title": "Distributed .NET Core (DShop) - Episode 4 [Asynchronous microservices integration via events]",
     "description": "",
     "image": "",

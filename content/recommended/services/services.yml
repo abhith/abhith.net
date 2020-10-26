@@ -1,4 +1,10 @@
 ---
+- title: sequel fumpt
+  url: https://sqlfum.pt/
+  description: sqlfmt is an online SQL formatter. It is pronounced sequel fumpt. Its purpose is to beautifully format SQL statements.
+  date: "2020-10-25T15:30:28.263Z"
+  tags:
+    - sql-server
 - title: SHA256 Hash Generator Online
   url: https://passwordsgenerator.net/sha256-hash-generator/
   description: Generate the SHA256 hash of any string.
