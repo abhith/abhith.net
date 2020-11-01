@@ -1,5 +1,19 @@
 [
   {
+    "title": "AIShow | Azure Cognitive Search Overview",
+    "url": "https://www.youtube.com/watch?v=kOJU0YZodVk",
+    "date": "2020-11-01T09:27:22.638Z",
+    "type": "youtube",
+    "tags": ["azure-cognitive-search"]
+  },
+  {
+    "title": "AI Show | Similarity and Scoring in Azure Cognitive Search",
+    "url": "https://www.youtube.com/watch?v=Y_X6USgvB1g",
+    "date": "2020-11-01T09:27:21.638Z",
+    "type": "youtube",
+    "tags": ["azure-cognitive-search"]
+  },
+  {
     "title": "Which tool when: Microsoft To Do, Microsoft Planner, Microsoft Lists, or Tasks in Microsoft Teams",
     "url": "https://www.youtube.com/watch?v=0gIt21Pby3Y",
     "date": "2020-10-25T09:27:22.638Z",
