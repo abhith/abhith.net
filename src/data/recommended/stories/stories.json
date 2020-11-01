@@ -1,5 +1,12 @@
 [
   {
+    "title": "Auto-Detect Memory Issues in your App with Dynamic Program Analysis – Rider 2020.1 – .NET Tools Blog | JetBrains",
+    "url": "https://blog.jetbrains.com/dotnet/2020/03/31/auto-detect-memory-issues-app-dynamic-program-analysis-rider-2020-1/",
+    "description": "",
+    "date": "2020-11-01T11:40:29.263Z",
+    "tags": ["resharper"]
+  },
+  {
     "title": "GitHub took down popular YouTube downloader — so devs made more copies",
     "url": "https://thenextweb.com/dd/2020/10/27/github-took-down-youtube-dl-so-devs-made-more-copies/",
     "description": "",
@@ -18,7 +25,7 @@
     "url": "https://damienbod.com/2020/10/19/implement-a-full-text-search-using-azure-cognitive-search-in-asp-net-core/",
     "description": "",
     "date": "2020-10-26T10:40:29.263Z",
-    "tags": ["azure"]
+    "tags": ["azure-cognitive-search"]
   },
   {
     "title": "How To Use Query Parameters in Angular | DigitalOcean",

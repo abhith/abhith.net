@@ -67,6 +67,10 @@
   slug: azure
   description: ""
   image: azure-1.svg
+- title: Azure Cognitive Search
+  slug: azure-cognitive-search
+  description: ""
+  image: ""
 - title: Azure DevOps
   slug: azure-devops
   description: ""
