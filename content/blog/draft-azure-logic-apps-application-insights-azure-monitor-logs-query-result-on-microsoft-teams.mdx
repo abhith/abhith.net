@@ -1,0 +1,208 @@
+---
+title: Azure Logic Apps - Application Insights/Azure Monitor Logs Query Result on Microsoft Teams
+description: >-
+  Setup Continuous Integration in Azure DevOps which push Docker image, Helm 3 chart to ACR, and Continuous Deployment pipeline that deploys the chart to AKS.
+author: Abhith Rajan
+draft: true
+date: 2020-08-18T15:11:27.975Z
+image: /img/blog/azure-logic-apps-application-insights-azure-monitor-logs-query-result-on-microsoft-teams/azure-logic-apps-application-insights-azure-monitor-logs-query-result-on-microsoft-teams-cover.png
+tags:
+  - logic-apps
+  - app-insights
+---
+
+I love to monitor things. Application Insights is my favorite tool on this category. Checking "Failures" and "Performance" tabs on the Application Insights is my first in the morning job and is a routine now. Since some apps especially built by third parties lacks Application Insights integration so we check Application Gateway logs too.
+
+Instead of manually checking everyday, to ease the process what I did is configured logic apps to send message on Teams channel with list of results from Application Insights and Azure Monitor Logs.
+
+Some of the configured daily reports are,
+
+- Application Insights - Performance
+- Application Insights - Failures
+- Application Gateway - Failures
+
+The steps involve in configuring these are almost similar, in brief they are,
+
+First you need to define the query, in the logs section try out your query and see if the expected results coming.
+Then we need to design an Adaptive card for teams. This can be done on []().
+
+1. Recurrence trigger - configured it to trigger daily.
+2. Getting query result - For Application Insights query results, use the Application Insights connector and action "Run Analytics Query"
+3. Initialize an array variable - Since we are expecting a list of rows from the above query, to map it to rows in the Teams card message,we use this.
+4. For each rows in the query result we map the result item to Adaptive card row.
+5. Append the rows to the rest of the Adaptive card schema in the Teams connector channel.
+
+## Application Insights - Performance
+
+![Application Insights - Performance](../../static/img/blog/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks/azure-devops-library.jpg)
+
+```json
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "size": "Large",
+                                    "weight": "Bolder",
+                                    "text": "**Performance (App Insights)**"
+                                }
+                            ],
+                            "width": "stretch"
+                        }
+                    ]
+                }
+            ],
+            "bleed": true
+        },
+        {
+            "type": "Container",
+            "spacing": "Large",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "spacing": "Large",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "text": "Operation Name"
+                                }
+                            ],
+                            "width": "stretch"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "text": "Count"
+                                }
+                            ],
+                            "width": "auto"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "text": "Avg",
+                                    "horizontalAlignment": "Right"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Percentiles 50 / 99",
+                                    "horizontalAlignment": "Right"
+                                }
+                            ],
+                            "width": "stretch",
+                            "horizontalAlignment": "Right"
+                        }
+                    ]
+                }
+            ],
+            "bleed": true
+        },
+        {
+            "type": "Container",
+            "items": @{variables('rows')},
+            "separator": true
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "fallbackText": "This card requires Adaptive Cards v1.2 support to be rendered properly."
+}
+```
+
+```json
+@{string(variables('rows'))}
+
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "size": "Large",
+                                    "weight": "Bolder",
+                                    "text": "**Failed Requests Summary (App Insights)**"
+                                }
+                            ],
+                            "width": "stretch"
+                        }
+                    ]
+                }
+            ],
+            "bleed": true
+        },
+        {
+            "type": "Container",
+            "spacing": "Large",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "spacing": "Large",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "text": "Operation Name"
+                                }
+                            ],
+                            "width": "stretch"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "text": "Failed Count / Total Count"
+                                }
+                            ],
+                            "width": "auto"
+                        }
+                    ]
+                }
+            ],
+            "bleed": true
+        },
+        {
+            "type": "Container",
+            "items": @{variables('rows')}
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "fallbackText": "This card requires Adaptive Cards v1.2 support to be rendered properly."
+}
+```
