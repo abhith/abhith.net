@@ -1,5 +1,19 @@
 [
   {
+    "title": "Microsoft Clarity to rival Google Analytics: How to get started",
+    "url": "https://news.thewindowsclub.com/microsoft-clarity-103896/",
+    "description": "",
+    "date": "2020-11-03T12:40:29.263Z",
+    "tags": ["analytics"]
+  },
+  {
+    "title": "Scripts: async, defer",
+    "url": "https://javascript.info/script-async-defer",
+    "description": "",
+    "date": "2020-11-03T11:40:29.263Z",
+    "tags": ["javascript"]
+  },
+  {
     "title": "Auto-Detect Memory Issues in your App with Dynamic Program Analysis – Rider 2020.1 – .NET Tools Blog | JetBrains",
     "url": "https://blog.jetbrains.com/dotnet/2020/03/31/auto-detect-memory-issues-app-dynamic-program-analysis-rider-2020-1/",
     "description": "",
