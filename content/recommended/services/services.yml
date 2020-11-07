@@ -1,4 +1,11 @@
 ---
+- title: ShareX - Screen capture, file sharing and productivity tool
+  url: https://getsharex.com/
+  description: 
+    ShareX is a free and open source program that lets you capture or record any area of your screen and share it with a single press of a key. It also allows uploading images, text or other types of files to many supported destinations you can choose from.
+  date: "2020-11-07T15:30:28.263Z"
+  tags:
+    - content-creation-tools
 - title: sequel fumpt
   url: https://sqlfum.pt/
   description: sqlfmt is an online SQL formatter. It is pronounced sequel fumpt. Its purpose is to beautifully format SQL statements.
@@ -85,7 +92,7 @@
   image: ""
   date: "2020-07-14T14:30:28.263Z"
   tags:
-    - developer-tools
+    - content-creation-tools
 - title: Lens | The Kubernetes IDE
   url: https://k8slens.dev
   description:
