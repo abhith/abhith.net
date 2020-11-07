@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import GitHubButton from "react-github-btn";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 function Footer() {
@@ -126,25 +125,24 @@ function Footer() {
                       </a>
                     </li>
                     <li className="has-margin">
-                      <GitHubButton
-                        href="https://github.com/Abhith"
-                        data-size="large"
-                        data-show-count="true"
-                        aria-label="Follow @Abhith on GitHub"
-                      >
-                        Follow @Abhith
-                      </GitHubButton>
+                      <iframe
+                        src="https://ghbtns.com/github-btn.html?user=Abhith&type=follow&count=true&size=large"
+                        frameborder="0"
+                        scrolling="0"
+                        width="230"
+                        height="30"
+                        title="Follow @Abhith on GitHub"
+                      ></iframe>
                     </li>
                     <li className="has-margin">
-                      <GitHubButton
-                        href="https://github.com/Abhith/abhith.net"
-                        data-icon="octicon-star"
-                        data-size="large"
-                        data-show-count="true"
-                        aria-label="Star Abhith/abhith.net on GitHub"
-                      >
-                        Star
-                      </GitHubButton>
+                      <iframe
+                        src="https://ghbtns.com/github-btn.html?user=Abhith&repo=abhith.net&type=star&count=true&size=large"
+                        frameborder="0"
+                        scrolling="0"
+                        width="170"
+                        height="30"
+                        title="Star Abhith/abhith.net on GitHub"
+                      ></iframe>
                     </li>
                   </ul>
                 </div>
