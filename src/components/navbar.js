@@ -122,16 +122,14 @@ const Navbar = class extends React.Component {
           <div className="navbar-end">
             <div className="navbar-item is-hidden-desktop-only is-hidden-widescreen-only">
               <div className="field is-grouped">
-                <OutboundLink
-                  className="is-bold button k-button k-secondary raised has-gradient"
-                  href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
-                  target="_blank"
-                >
-                  <FaShieldAlt color="black" size={24} />
-                  <span className="ml-1">
-                    Corona is UNBIASED | Break The Chain
-                  </span>
-                </OutboundLink>
+                <iframe
+                  src="https://ghbtns.com/github-btn.html?user=Abhith&repo=abhith.net&type=star&count=true&size=large"
+                  frameborder="0"
+                  scrolling="0"
+                  width="170"
+                  height="30"
+                  title="Star Abhith/abhith.net on GitHub"
+                ></iframe>
               </div>
             </div>
             <OutboundLink
