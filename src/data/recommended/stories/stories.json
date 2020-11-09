@@ -1,5 +1,26 @@
 [
   {
+    "title": "Why I joined Temporal | Temporal",
+    "url": "https://docs.temporal.io/blog/sergey-why-i-joined-temporal/",
+    "description": "",
+    "date": "2020-11-09T11:40:29.263Z",
+    "tags": ["microsoft-orleans"]
+  },
+  {
+    "title": "How to send push notifications to a browser in ASP.NET Core | elmah.io",
+    "url": "https://blog.elmah.io/how-to-send-push-notifications-to-a-browser-in-asp-net-core/",
+    "description": "In this article, we will show how you can subscribe to Push Notifications using ASP.NET Core and how you can send Push Notifications from .NET as well.",
+    "date": "2020-11-09T10:44:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "New updates make Microsoft Edge your daily dashboard for work - Microsoft Edge Blog",
+    "url": "https://blogs.windows.com/msedgedev/2020/10/29/enterprise-new-tab-page-my-feed/",
+    "description": "",
+    "date": "2020-11-09T10:40:29.263Z",
+    "tags": ["productivity"]
+  },
+  {
     "title": "How to Write Efficient Query? – Interview Question of the Week #300",
     "url": "https://blog.sqlauthority.com/2020/11/01/how-to-write-efficient-query-interview-question-of-the-week-300/",
     "description": "Question: How to Write Efficient Query?  Answer: There is no right or wrong answer to this question. Let us learn about it today.",
