@@ -13985,13 +13985,13 @@ react-live@^2.2.2:
     react-simple-code-editor "^0.10.0"
     unescape "^1.0.1"
 
-react-particles-js@^3.0.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-3.3.0.tgz#ecedd5b5c6b853bbf29a7e03ea2af898b8048091"
-  integrity sha512-pc9oJWEHH3UR1sJurL98TPrEWr0Yf2E8j+f8PLDpgbnQirTRqfwEvTRNJ/Ibvt6233WycCrndn6ImfL0PDEr7A==
+react-particles-js@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-3.4.1.tgz#e0f17ae1ddb07d01ce911448db76cd59726fe666"
+  integrity sha512-c3+vITUMN9RlgbERZYd9Kzvjmf49ENp07+9+NDLvE1Jf9euabrJi/q6gCCcv5foxGHBYjHnGs47Tusmrl0/+GQ==
   dependencies:
     lodash "^4.17.11"
-    tsparticles "^1.17.1"
+    tsparticles "^1.18.10"
 
 react-player@^2.6.2:
   version "2.6.2"
@@ -16643,13 +16643,12 @@ tslib@^2, tslib@^2.0.0, tslib@~2.0.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
   integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
 
-tsparticles@^1.17.1:
-  version "1.17.9"
-  resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.17.9.tgz#91893cb3e53b7a29518f347ab2c0421071ce6d83"
-  integrity sha512-jRu7OWAGqXPhFVb8ZW8NmEpEmEdSnN9dZ/xalg1izv8VwynqgMPTVYEQH2Nh1BYmVjbTyBvKnk0kiLHgDzn3Hw==
-  dependencies:
+tsparticles@^1.18.10:
+  version "1.18.11"
+  resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.18.11.tgz#924d74cf40656727f5df047b53c4761463a4f6e7"
+  integrity sha512-F5czk8foRoywWHDYDT0eZhQwCXOHz7OGhJCsoybThTUIT+nwc1Eclltm/TMrnnxZZghF3Fo0VL8nN4inf+pQbA==
+  optionalDependencies:
     pathseg "^1.2.0"
-    tslib "^2.0.0"
 
 tsutils@^3.17.1:
   version "3.17.1"
