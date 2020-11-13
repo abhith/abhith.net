@@ -98,7 +98,7 @@ export default ({ pageContext, data, location }) => {
                   <TopicsBar topics={article.tags} />
                 </MDXRenderer>
                 {authors && authors.length === 1 ? (
-                  <div className="container mt-5 mb-3">
+                  <div className="container mt-6 mb-3">
                     <div className="media">
                       <figure className="media-left">
                         <p className="image is-128x128">
@@ -144,9 +144,9 @@ export default ({ pageContext, data, location }) => {
                     </div>
                   </div>
                 ) : null}
+                <Webmentions {...allWebMentionEntry} />
                 <AskFeedback />
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>
-                <Webmentions {...allWebMentionEntry} />
                 <Utterances repo={`Abhith/abhith.net`} />
               </div>
               <aside className="ar-side">
