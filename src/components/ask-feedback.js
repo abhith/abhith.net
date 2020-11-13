@@ -34,9 +34,10 @@ const AskFeedback = () => {
       );
     } else {
       note = (
-        <>
-          <p>👈 This is a live react editor. </p>
-        </>
+        <div className="notification is-info is-light">
+          <h4>Show some ❤️</h4>
+          <p>Share this page on Twitter to appear on the webmentions* 💡</p>
+        </div>
       );
     }
     return (
