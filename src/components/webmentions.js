@@ -1,38 +1,55 @@
 import React from "react";
-import { FcLike, FcStatistics } from "react-icons/fc";
+import { FcLike, FcStatistics, FcRefresh } from "react-icons/fc";
 import TitleBar from "@components/title-bar";
+import styled from "@emotion/styled";
+
+const CounterStyled = styled("span")`
+  padding-left: 0.25rem;
+  text-align: center;
+  vertical-align: super;
+  font-weight: 600;
+`;
 
 export default function Webmentions({ edges }) {
   if (!edges) {
     return null;
   }
+
   const mentions = edges.length;
-  const likes = edges.filter(({ node }) => node.wmProperty === "like-of");
-  const likeAuthors = likes.map(
-    ({ node }) => node.author && { wmId: node.wmId, ...node.author }
-  );
 
   if (mentions == 0) {
     return null;
   }
+
+  const likes = edges.filter(({ node }) => node.wmProperty === "like-of");
+  const repost = edges.filter(({ node }) => node.wmProperty === "repost-of");
+
+  const likeAuthors = likes.map(
+    ({ node }) => node.author && { wmId: node.wmId, ...node.author }
+  );
+
   return (
-    <div className="columns">
+    <div className="columns mt-5 mb-3">
       <div className="column is-full">
         <TitleBar title={`Webmentions`} />
         <div className="columns">
           <div className="column is-one-quarter">
-            <span aria-label={`${likes.length} likes`}>
-              <span className="icon">
-                <FcLike />
-              </span>
-              {likes.length}
-            </span>
-            <span aria-label={`${mentions} Mentions`}>
-              <span className="icon">
-                <FcStatistics />
-              </span>
-              {mentions}
-            </span>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <div class="level-item">
+                  <span aria-label={`${likes.length} likes`}>
+                    <FcLike className="icon" />
+                    <CounterStyled>{likes.length}</CounterStyled>
+                  </span>
+                </div>
+                <div class="level-item">
+                  <span aria-label={`${repost.length} reposts`}>
+                    <FcRefresh className="icon" />
+                    <CounterStyled>{repost.length}</CounterStyled>
+                  </span>
+                </div>
+              </div>
+            </nav>
           </div>
           <div className="column">
             <div>
