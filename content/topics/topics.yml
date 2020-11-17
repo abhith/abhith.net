@@ -75,6 +75,10 @@
   slug: azure-devops
   description: ""
   image: microsoft-azure-3.svg
+- title: Azure Logic Apps
+  slug: azure-logic-apps
+  description: ""
+  image: ""
 - title: Azure Pipelines
   slug: azure-pipelines
   description: ""
