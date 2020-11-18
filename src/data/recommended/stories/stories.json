@@ -1,5 +1,12 @@
 [
   {
+    "title": "ASP.NET Core Data Protection with Azure Key Vault and Azure Storage - Joonas W's blog",
+    "url": "https://joonasw.net/view/aspnet-core-data-protection-with-azure-key-vault-and-azure-storage",
+    "description": "How to configure and use the combination of Azure Storage and Azure Key Vault for data protection in ASP.NET Core with the new Azure integration packages",
+    "date": "2020-11-18T11:40:29.263Z",
+    "tags": ["azure", "security"]
+  },
+  {
     "title": "Azure Storage Blobs .Net SDK v12 upgrade guide and tips",
     "url": "https://elcamino.cloud/articles/2020-03-30-azure-storage-blobs-net-sdk-v12-upgrade-guide-and-tips.html",
     "description": "Updated 5/1/2020 - Let's take advantage of the v12 SDK for Azure Blob Storage's 227% improvement in downloading 1GB blobs over the prior versions. Here is the upgrade guide for a few common scenarios.",
