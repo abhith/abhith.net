@@ -1027,7 +1027,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -7572,12 +7572,12 @@ gatsby-plugin-mdx@^1.4.0:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-nprogress@^2.3.0:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.3.10.tgz#58d8134550d4940b8ffa87445e1dd6a8dca67e56"
-  integrity sha512-iB20T8gLp4l1Zi+/ji6WDttIIvw160jwJmlQNYKxxPCe3+koBzQ9TZgxMJqI4uT5gXACpRIQx7c9Sg1YMJ3Mzg==
+gatsby-plugin-nprogress@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.5.0.tgz#dfc55c9073013c595cda44b36671c0db3ed630f0"
+  integrity sha512-HExR99yKWZG3qQXc1CeLdVfAeuKjp+kkX/IZKtA3lU141fkyEQDkS4ZchDTZd/p4EFLOTIT0NJQubs+DFLfjmQ==
   dependencies:
-    "@babel/runtime" "^7.10.3"
+    "@babel/runtime" "^7.12.5"
     nprogress "^0.2.0"
 
 gatsby-plugin-offline@^3.3.3:
