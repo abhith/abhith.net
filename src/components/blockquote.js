@@ -11,7 +11,6 @@ const Blockquote = styled.blockquote`
 
   & > p {
     max-width: 95% !important;
-    padding-right: 100px;
     padding-bottom: 0;
     width: 100%;
     margin: 0 auto;
@@ -21,12 +20,6 @@ const Blockquote = styled.blockquote`
 
     ${mediaqueries.tablet`
       font-size: 26px;
-      padding: 0 180px;
-    `};
-
-    ${mediaqueries.phablet`
-      font-size: 36px;
-      padding: 0 20px 0 40px;
     `};
   }
 `;
