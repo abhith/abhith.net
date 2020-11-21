@@ -1,5 +1,19 @@
 [
   {
+    "title": "Notify App Center Crashes To Microsoft Teams Channel - Daily .NET Tips",
+    "url": "https://dailydotnettips.com/notify-app-center-crashes-to-microsoft-teams-channel/",
+    "description": "",
+    "date": "2020-11-21T11:41:29.263Z",
+    "tags": ["microsoft-teams"]
+  },
+  {
+    "title": "Dependency Injection in .NET: A way to work around missing named registrations - Rico Suter's blog.",
+    "url": "https://blog.rsuter.com/dotnet-dependency-injection-way-to-work-around-missing-named-registrations/",
+    "description": "The default .NET dependency injection container does not provide a way to register named services. This article shows a technique to solve this by adding a generic marker parameter to the service interface so that it can be registered multiple times and resolved with the marker type.",
+    "date": "2020-11-21T11:40:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Simple Messaging Between Microservices with Rebus and Azure Storage Queues",
     "url": "https://markheath.net/post/rebus-azure-storage-queues",
     "description": "",
