@@ -421,6 +421,10 @@
   slug: ssl-certificates
   description: ""
   image: ""
+- title: Storage
+  slug: storage
+  description: ""
+  image: ""
 - title: Style Guide
   slug: style-guide
   description: ""
