@@ -1,5 +1,19 @@
 [
   {
+    "title": "The state of the art of microservices in 2020",
+    "url": "https://www.linux.com/news/the-state-of-the-art-of-microservices-in-2020/",
+    "description": "",
+    "date": "2020-11-23T12:41:29.263Z",
+    "tags": ["microservices"]
+  },
+  {
+    "title": "Standing up for developers: youtube-dl is back - The GitHub Blog",
+    "url": "https://github.blog/2020-11-16-standing-up-for-developers-youtube-dl-is-back/",
+    "description": "Today we reinstated youtube-dl, a popular project on GitHub, after we received additional information about the project that enabled us to reverse a Digital Millennium Copyright Act (DMCA) takedown. ",
+    "date": "2020-11-23T11:41:29.263Z",
+    "tags": ["github"]
+  },
+  {
     "title": "Notify App Center Crashes To Microsoft Teams Channel - Daily .NET Tips",
     "url": "https://dailydotnettips.com/notify-app-center-crashes-to-microsoft-teams-channel/",
     "description": "",
