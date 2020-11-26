@@ -1,5 +1,19 @@
 [
   {
+    "title": "Tips, tricks, and edge cases: Deploying ASP.NET Core applications to Kubernetes - Part 12",
+    "url": "https://andrewlock.net/deploying-asp-net-core-applications-to-kubernetes-part-12-tips-tricks-and-edge-cases/",
+    "description": "In this post I describe some of the smaller pieces of advice, tips, and info I found when running applications on Kubernetes",
+    "date": "2020-11-25T13:41:29.263Z",
+    "tags": ["kubernetes", "aspnet-core"]
+  },
+  {
+    "title": "Your dotnet outdated is outdated! Update and help keep your .NET projects up to date",
+    "url": "https://www.hanselman.com/blog/your-dotnet-outdated-is-outdated-update-and-help-keep-your-net-projects-up-to-date",
+    "description": "",
+    "date": "2020-11-25T12:41:29.263Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "The state of the art of microservices in 2020",
     "url": "https://www.linux.com/news/the-state-of-the-art-of-microservices-in-2020/",
     "description": "",
