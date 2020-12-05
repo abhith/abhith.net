@@ -17,7 +17,11 @@ function BlogPage({ pageContext, data }) {
   return (
     <Layout>
       <SEO title={pageTitle} description={subTitle} slug="/blog/" />
-      <PageHero title={`All Articles`} subtitle={subTitle} />
+      <PageHero
+        title={`All Articles`}
+        subtitle={subTitle}
+        subscribeUrl={`https://www.abhith.net/blog/rss.xml`}
+      />
       <div className="section">
         <div className="container">
           <div className="columns">
