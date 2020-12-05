@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { FaCoffee, FaTwitter, FaShieldAlt } from "react-icons/fa";
+import { FaCoffee, FaTwitter } from "react-icons/fa";
 import {
   FcContacts,
   FcHome,
@@ -124,7 +124,7 @@ const Navbar = class extends React.Component {
               <div className="field is-grouped">
                 <iframe
                   src="https://ghbtns.com/github-btn.html?user=Abhith&repo=abhith.net&type=star&count=true&size=large"
-                  frameborder="0"
+                  frameBorder="0"
                   scrolling="0"
                   width="170"
                   height="30"

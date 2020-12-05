@@ -127,7 +127,7 @@ function Footer() {
                     <li className="has-margin">
                       <iframe
                         src="https://ghbtns.com/github-btn.html?user=Abhith&type=follow&count=true&size=large"
-                        frameborder="0"
+                        frameBorder="0"
                         scrolling="0"
                         width="230"
                         height="30"
@@ -137,7 +137,7 @@ function Footer() {
                     <li className="has-margin">
                       <iframe
                         src="https://ghbtns.com/github-btn.html?user=Abhith&repo=abhith.net&type=star&count=true&size=large"
-                        frameborder="0"
+                        frameBorder="0"
                         scrolling="0"
                         width="170"
                         height="30"
