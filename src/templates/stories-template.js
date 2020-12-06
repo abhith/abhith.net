@@ -20,7 +20,11 @@ function StoriesPage({ pageContext, data }) {
         description={subTitle}
         slug="/recommended/stories/"
       />
-      <PageHero title={pageTitle} subtitle={subTitle} />
+      <PageHero
+        title={pageTitle}
+        subtitle={subTitle}
+        subscribeUrl={`https://www.abhith.net/recommended/stories/rss.xml`}
+      />
       <div className="section">
         <div className="container">
           <div className="columns">
