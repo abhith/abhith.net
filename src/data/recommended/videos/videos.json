@@ -1,5 +1,26 @@
 [
   {
+    "title": "High-performance Services with gRPC: What's new in .NET 5",
+    "url": "https://www.youtube.com/watch?v=EJ8M2Em5Zzc",
+    "date": "2020-12-09T11:27:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Does the Brave Browser Really Beat Fingerprinting? Let's Test!",
+    "url": "https://www.youtube.com/watch?v=dsu9b5FqK_0",
+    "date": "2020-12-09T10:27:22.638Z",
+    "type": "youtube",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "Azure Synapse Analytics - Introduction to Azure Purview",
+    "url": "https://www.youtube.com/watch?v=xgABjnuPMWM",
+    "date": "2020-12-09T09:27:22.638Z",
+    "type": "youtube",
+    "tags": ["azure"]
+  },
+  {
     "title": "What's Wrong with Signal, Whatsapp, Telegram, Protonmail, Tutanota?",
     "url": "https://www.youtube.com/watch?v=IWMZ17Iyu3o",
     "date": "2020-11-23T09:27:22.638Z",
