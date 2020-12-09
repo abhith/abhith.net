@@ -8,7 +8,7 @@ description: Future wiki page about Abhith Rajan.
 I'm Abhith Rajan, a [Software Engineer](https://github.com/abhith) from India.
 I work for the Product Team at [Emcredit](https://www.emcredit.com/). At the moment my desk is located in **DIFC Dubai**, the leading financial centre in the Middle East, Africa, and South Asia region.
 
-My role involves prototyping, developing backend as well as front end apps with the modern workflows, frameworks.
+My role involves prototyping, developing backend as well as front end apps with modern workflows, frameworks.
 Keeping an eye on the patterns and organized code. And deploy them to [Azure](/topics/azure/) using [Azure DevOps](/topics/azure-devops/) pipelines and monitor everything running in there.
 For the backend apps including [Microservices](/topics/microservices/) am a .NET guy.
 For the front-end apps, I have choices, and my decision engine is given below,
