@@ -1,5 +1,26 @@
 [
   {
+    "title": "What developers need to know about Docker, Docker Engine, and Kubernetes v1.20 - Docker Blog",
+    "url": "https://www.docker.com/blog/what-developers-need-to-know-about-docker-docker-engine-and-kubernetes-v1-20/",
+    "description": "",
+    "date": "2020-12-09T15:41:29.263Z",
+    "tags": ["docker", "kubernetes"]
+  },
+  {
+    "title": "8 Must-Know NuGet Packages for an ASP.NET Core Application - Ozcode",
+    "url": "https://oz-code.com/blog/net-c-tips/8-must-know-nuget-packages-asp-net-core-application",
+    "description": "",
+    "date": "2020-12-09T14:41:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Zero-Click Wormable RCE Vulnerability Reported in Microsoft Teams",
+    "url": "https://thehackernews.com/2020/12/zero-click-wormable-rce-vulnerability.html",
+    "description": "",
+    "date": "2020-12-09T13:41:29.263Z",
+    "tags": ["security"]
+  },
+  {
     "title": "Pluralsight celebrates 25 years of JavaScript – a good opportunity to spruce up your knowledge | Christian Heilmann",
     "url": "https://christianheilmann.com/2020/12/03/pluralsight-celebrates-25-years-of-javascript-a-good-opportunity-to-spruce-up-your-knowledge/",
     "description": "",
