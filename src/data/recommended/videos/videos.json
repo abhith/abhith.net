@@ -1,5 +1,19 @@
 [
   {
+    "title": "Anomaly Detection Transform in ML.NET",
+    "url": "https://www.youtube.com/watch?v=Nu9lz5jNkGs",
+    "date": "2020-12-20T12:27:22.638Z",
+    "type": "youtube",
+    "tags": ["ml-net"]
+  },
+  {
+    "title": "Read in Database Data with the Database Loader in ML.NET",
+    "url": "https://www.youtube.com/watch?v=ZEHr7W2Bzfo",
+    "date": "2020-12-20T11:27:22.638Z",
+    "type": "youtube",
+    "tags": ["ml-net"]
+  },
+  {
     "title": "High-performance Services with gRPC: What's new in .NET 5",
     "url": "https://www.youtube.com/watch?v=EJ8M2Em5Zzc",
     "date": "2020-12-09T11:27:22.638Z",
