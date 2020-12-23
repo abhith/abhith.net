@@ -1,5 +1,12 @@
 [
   {
+    "title": "C# - Case sensitivity in JSON deserialization | MAKOLYTE",
+    "url": "https://makolyte.com/csharp-case-sensitivity-in-json-deserialization/",
+    "description": "Shows how to case insensitive and case sensitive JSON deserialization using Newtonsoft and System.Text.Json",
+    "date": "2020-12-23T16:41:29.263Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "Download All Pictures and Videos from Google Photos",
     "url": "https://www.online-tech-tips.com/google-softwaretips/download-google-photos-pictures-videos/",
     "description": "",
