@@ -1,4 +1,11 @@
 ---
+- title: Cover Your Tracks
+  url: https://coveryourtracks.eff.org/
+  description: 
+    Want to learn more about tracking? Read up on how it works with our guide. Learn More About Fingerprinting
+  date: "2020-12-28T15:30:28.263Z"
+  tags:
+    - privacy
 - title: Syncthing
   url: https://syncthing.net/
   description: 
