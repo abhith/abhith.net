@@ -19,7 +19,7 @@
     "gatsby-plugin-emotion": "^4.3.0",
     "gatsby-plugin-feed": "^2.6.0",
     "gatsby-plugin-google-gtag": "^2.5.0",
-    "gatsby-plugin-manifest": "^2.8.0",
+    "gatsby-plugin-manifest": "^2.10.0",
     "gatsby-plugin-mdx": "^1.6.0",
     "gatsby-plugin-nprogress": "^2.5.0",
     "gatsby-plugin-offline": "^3.6.0",
