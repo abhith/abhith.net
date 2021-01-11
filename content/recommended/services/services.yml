@@ -1,8 +1,15 @@
 ---
+- title: Privacy Badger
+  url: https://privacybadger.org/
+  description: 
+    Privacy Badger is a browser add-on that stops advertisers and other third-party trackers from secretly tracking where you go and what pages.
+  date: "2021-01-11T15:30:28.263Z"
+  tags:
+    - privacy
 - title: Cover Your Tracks
   url: https://coveryourtracks.eff.org/
   description: 
-    Want to learn more about tracking? Read up on how it works with our guide. Learn More About Fingerprinting
+    Want to learn more about tracking? Read up on how it works with our guide. Learn More About Fingerprinting.
   date: "2020-12-28T15:30:28.263Z"
   tags:
     - privacy
