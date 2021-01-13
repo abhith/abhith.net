@@ -1,5 +1,12 @@
 [
   {
+    "title": "What is Signal? The basics of the most secure messaging app.",
+    "url": "https://mashable.com/article/what-is-signal-app/",
+    "description": "With end-to-end encryption, disappearing messages, and no data collection, there's a lot to love about this privacy-oriented messaging app.",
+    "date": "2021-01-13T16:41:29.263Z",
+    "tags": ["privacy"]
+  },
+  {
     "title": "Splitting up a Monolith into Microservices - CodeOpinion",
     "url": "https://codeopinion.com/splitting-up-a-monolith-into-microservices/",
     "description": "",
