@@ -1,5 +1,12 @@
 [
   {
+    "title": "How do I handle incoming intents from external applications in Flutter?",
+    "url": "https://flutter.dev/docs/get-started/flutter-for/android-devs#how-do-i-handle-incoming-intents-from-external-applications-in-flutter",
+    "description": "",
+    "date": "2021-01-27T17:41:29.263Z",
+    "tags": ["flutter"]
+  },
+  {
     "title": "How can I change the author (name / email) of a commit?",
     "url": "https://www.git-tower.com/learn/git/faq/change-author-name-email/",
     "description": "",
