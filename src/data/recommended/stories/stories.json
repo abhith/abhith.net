@@ -1,5 +1,26 @@
 [
   {
+    "title": "Consider Chesterton's Fence Principle Before Changing That Code | Joseph Woodward, Software Developer",
+    "url": "http://josephwoodward.co.uk/2020/04/software-the-chestertons-fence-principle",
+    "description": "",
+    "date": "2021-02-08T17:42:29.263Z",
+    "tags": ["design-patterns"]
+  },
+  {
+    "title": "How to Disable HSTS in Chrome & Firefox | InfoSec Insights",
+    "url": "https://sectigostore.com/blog/how-to-disable-hsts-in-chrome-firefox/",
+    "description": "Not sure how to disable HSTS in Chrome or Firefox? We'll walk you through the process that will clear HSTS settings in these two browsers.",
+    "date": "2021-02-08T17:41:29.263Z",
+    "tags": ["debug"]
+  },
+  {
+    "title": "How to easily implement QRCoder in ASP.NET Core using C#",
+    "url": "https://www.freecodecamp.org/news/how-to-easily-implement-qrcoder-in-asp-net-core-using-c-10c4aa857e84/",
+    "description": "",
+    "date": "2021-01-19T17:41:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "How can I change the author (name / email) of a commit?",
     "url": "https://www.git-tower.com/learn/git/faq/change-author-name-email/",
     "description": "",
