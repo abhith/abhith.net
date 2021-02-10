@@ -1,5 +1,26 @@
 [
   {
+    "title": "Netflix CEO: why you shouldn't try to please your boss | The Economist Podcast",
+    "url": "https://www.youtube.com/watch?v=J81SmQIokhY",
+    "date": "2021-02-10T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["career"]
+  },
+  {
+    "title": "Make ML.NET Predictions with Streaming Data in Azure Event Hub",
+    "url": "https://www.youtube.com/watch?v=rIEDMU_kt-g",
+    "date": "2021-02-10T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["ml-net"]
+  },
+  {
+    "title": "CloudEvents - Intro, Deep-Dive a... Doug Davis, Clemens Vasters, Klaus Deissner & Vladimir Bacvanski",
+    "url": "https://www.youtube.com/watch?v=yg7RuDWHwV8",
+    "date": "2021-02-10T12:28:21.638Z",
+    "type": "youtube",
+    "tags": ["event-sourcing"]
+  },
+  {
     "title": "Introduction to Microsoft Orleans - CodeWithStu",
     "url": "https://www.youtube.com/watch?v=yM-gpuw1uhM",
     "date": "2021-02-08T12:28:22.638Z",
