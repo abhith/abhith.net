@@ -4,6 +4,7 @@ description: >-
   Setup Continuous Integration in Azure DevOps which push Docker image, Helm 3 chart to ACR, and Continuous Deployment pipeline that deploys the chart to AKS.
 author: Abhith Rajan
 date: 2020-08-18T15:11:27.975Z
+lastModificationTime: 2021-02-23T18:02:00.000Z
 image: /img/blog/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks/azure-devops-ci-cd-pipeline-involving-helm-3-acr-aks-cover.png
 tags:
   - azure-devops
@@ -129,7 +130,7 @@ steps:
       echo $(registryPassword) | helm registry login $(registryName).azurecr.io --username $(registryLogin) --password-stdin
       cd deploy/k8s/helm/
       helm chart save $(helm package --app-version $(imageTag) --version $(helmChartVersion) ./$(projectName) | grep -o '/.*.tgz') $(registryName).azurecr.io/charts/$(projectName):$(imageTag)
-      helm chart push $(registryName).azurecr.io/charts/$(projectName):$(imageTag)
+      helm chart push $(registryName).azurecr.io/charts/$(projectName):$(helmChartVersion)
       echo $(jq -n --arg version "$(helmChartVersion)" '{helmChartVersion: $version}') > $(build.artifactStagingDirectory)/variables.json
     failOnStderr: true
     displayName: "helm package"
