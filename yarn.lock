@@ -7725,10 +7725,10 @@ gatsby-plugin-theme-ui@^0.3.5:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.3.5.tgz#3fc86e5e1ede4e628ebf100f724f6e9000cd5148"
   integrity sha512-IPiBtxY8b63XxxKjUQFg4GWvP1r7AvJ3ub7sc3nP0bSOAyGhMV3ijI7gpSF8phtHcB8oLe5Hf6+olpT22ft7Fg==
 
-gatsby-plugin-twitter@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.6.0.tgz#ebbcb5a77ee080cc1a1d4c35434d135ccdd3109b"
-  integrity sha512-ODRS+YsSmlxdZ6MBWGeaBAGuWMe8HPLYQDQGVEX4BFrym63JHc9KgZ/dQ14JaxmOXHDdTiROQprL3JeUaf/hag==
+gatsby-plugin-twitter@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.10.0.tgz#56e88f4e175efbad7f4967f6dd02bc2fd98d072b"
+  integrity sha512-liPVrUjQIapSmYRhJFpm1AFCBqD9jO696M0ly9HLvjnY/uB1WewN484X07a95cRVYVLoc7kIZrMkJjx8GxVxjw==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
