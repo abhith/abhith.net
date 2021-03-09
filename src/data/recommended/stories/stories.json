@@ -1,5 +1,26 @@
 [
   {
+    "title": "Introducing semantic search: Bringing more meaningful results to Azure Cognitive Search",
+    "url": "https://techcommunity.microsoft.com/t5/azure-ai/introducing-semantic-search-bringing-more-meaningful-results-to/ba-p/2175636",
+    "description": "",
+    "date": "2021-03-09T17:42:29.263Z",
+    "tags": ["azure-cognitive-search"]
+  },
+  {
+    "title": "(Micro)services with Event Notifications | by Cengiz Han | hepsiburadatech",
+    "url": "https://medium.com/hepsiburadatech/micro-services-with-event-notifications-c8462792e700",
+    "description": "",
+    "date": "2021-03-09T17:41:29.263Z",
+    "tags": ["microservices", "event-sourcing"]
+  },
+  {
+    "title": ".NET Interactive with SQL!| .NET Notebooks in Visual Studio Code",
+    "url": "https://devblogs.microsoft.com/dotnet/net-interactive-with-sql-net-notebooks-in-visual-studio-code/",
+    "description": "",
+    "date": "2021-03-09T16:42:29.263Z",
+    "tags": ["vscode", "dotnet", "sql-server"]
+  },
+  {
     "title": "Modeling Polymorphic Associations in a Relational Database",
     "url": "https://hashrocket.com/blog/posts/modeling-polymorphic-associations-in-a-relational-database",
     "description": "Polymorphic associations can be difficult to correctly represent in a relational database. In this post I will compare and contrast four different ways to model these challenging relationships.",
