@@ -1,5 +1,26 @@
 [
   {
+    "title": "How to get the most performance out of Azure database for MySQL",
+    "url": "https://www.youtube.com/watch?v=6Rb1HHhAtjQ",
+    "date": "2021-03-09T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "20 Nuget packages that every .NET developer should be familiar with",
+    "url": "https://www.youtube.com/watch?v=qapJwFY9y2Y",
+    "date": "2021-03-09T12:27:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Why Does Cold Weather Kill Your Phone?",
+    "url": "https://www.youtube.com/watch?v=i2nelj3apTI",
+    "date": "2021-03-09T11:27:22.638Z",
+    "type": "youtube",
+    "tags": ["good-to-know"]
+  },
+  {
     "title": "Cleanup Transitive Dependencies in .NET with Snitch",
     "url": "https://www.youtube.com/watch?v=ZdCn6kpGBhI",
     "date": "2021-02-23T12:28:22.638Z",

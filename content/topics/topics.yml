@@ -234,6 +234,10 @@
   slug: gitlab
   description: ""
   image: "gitlab.svg"
+- title: Good To Know
+  slug: good-to-know
+  description: ""
+  image: ""
 - title: Google
   slug: google
   description: ""
@@ -347,6 +351,10 @@
   image: "mlnet-icon.png"
 - title: Monitoring
   slug: monitoring
+  description: ""
+  image: ""
+- title: MySQL
+  slug: mysql
   description: ""
   image: ""
 - title: NGINX
