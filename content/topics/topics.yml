@@ -103,6 +103,10 @@
   slug: cache
   description: One area to check for performance.
   image: ""
+- title: CloudEvents
+  slug: cloudevents
+  description: ""
+  image: ""
 - title: Cloudflare
   slug: cloudflare
   description: Offering CDN, DNS, DDoS protection and security.
@@ -125,6 +129,10 @@
   image: ""
 - title: Cookbook
   slug: cookbook
+  description: ""
+  image: ""
+- title: Azure Cosmos DB
+  slug: cosmos-db
   description: ""
   image: ""
 - title: Courses
@@ -375,6 +383,10 @@
   image: oauth.svg
 - title: Open Source
   slug: open-source
+  description: ""
+  image: ""
+- title: OpenTelemetry
+  slug: opentelemetry
   description: ""
   image: ""
 - title: Oracle Database
