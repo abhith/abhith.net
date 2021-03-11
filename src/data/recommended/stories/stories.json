@@ -1,5 +1,19 @@
 [
   {
+    "title": "Open Telemetry for ASP.NET Core",
+    "url": "https://rehansaeed.com/open-telemetry-for-asp-net-core/",
+    "description": "",
+    "date": "2021-03-11T17:42:29.263Z",
+    "tags": ["aspnet-core", "opentelemetry"]
+  },
+  {
+    "title": "Persisting Cloud Events to Cosmos DB in Azure - Nick's .NET Travels",
+    "url": "https://nicksnettravels.builttoroam.com/cloud-events-to-cosmos/",
+    "description": "",
+    "date": "2021-03-11T16:42:29.263Z",
+    "tags": ["cloudevents", "cosmos-db", "dotnet"]
+  },
+  {
     "title": "Introducing semantic search: Bringing more meaningful results to Azure Cognitive Search",
     "url": "https://techcommunity.microsoft.com/t5/azure-ai/introducing-semantic-search-bringing-more-meaningful-results-to/ba-p/2175636",
     "description": "",
