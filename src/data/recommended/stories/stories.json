@@ -1,5 +1,26 @@
 [
   {
+    "title": "Azure Cosmos DB: Use Cases and Trade-Offs | by Abhishek Gupta | Towards Data Science",
+    "url": "https://towardsdatascience.com/azure-cosmos-db-use-cases-and-trade-offs-5a65727daaa9",
+    "description": "",
+    "date": "2021-03-14T17:42:29.263Z",
+    "tags": ["cosmos-db"]
+  },
+  {
+    "title": "Exporting Open Telemetry Data to Jaeger - Muhammad Rehan Saeed",
+    "url": "https://rehansaeed.com/exporting-open-telemetry-data-to-jaeger/",
+    "description": "",
+    "date": "2021-03-14T16:43:29.263Z",
+    "tags": ["aspnet-core", "opentelemetry"]
+  },
+  {
+    "title": "Hosting Two ASP.NET Core Apps In One Host | Khalid Abuhakmeh",
+    "url": "https://khalidabuhakmeh.com/hosting-two-aspnet-core-apps-in-one-host",
+    "description": "",
+    "date": "2021-03-14T16:42:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Open Telemetry for ASP.NET Core",
     "url": "https://rehansaeed.com/open-telemetry-for-asp-net-core/",
     "description": "",
