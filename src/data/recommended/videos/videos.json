@@ -1,5 +1,26 @@
 [
   {
+    "title": "Machine Learning for .NET Developers Introducing ML NET",
+    "url": "https://www.youtube.com/watch?v=VJTpbZrBAeU",
+    "date": "2021-03-14T04:29:23.638Z",
+    "type": "youtube",
+    "tags": ["ml-net", "dotnet"]
+  },
+  {
+    "title": "Azure Search Tutorial",
+    "url": "https://www.youtube.com/watch?v=Iodh0p1JJVY",
+    "date": "2021-03-14T04:29:22.638Z",
+    "type": "youtube",
+    "tags": ["azure-cognitive-search"]
+  },
+  {
+    "title": "Distributed Tracing Made Easy with .NET Core - Jimmy Bogard",
+    "url": "https://www.youtube.com/watch?v=kfyCHtqk-Ts",
+    "date": "2021-03-14T04:28:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet-core"]
+  },
+  {
     "title": "Azure Cognitive Search | Build semantic search into your apps",
     "url": "https://www.youtube.com/watch?v=d_6ZNyV1MvA",
     "date": "2021-03-11T12:28:22.638Z",
