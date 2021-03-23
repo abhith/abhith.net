@@ -1,5 +1,47 @@
 [
   {
+    "title": "HttpClientFactory in the Azure Cosmos DB .NET SDK | Azure Cosmos DB Blog",
+    "url": "https://devblogs.microsoft.com/cosmosdb/httpclientfactory-cosmos-db-net-sdk/",
+    "description": "Learn to leverage HttpClientFactory in the .NET SDK to improve connection reuse across your applications that rely on HttpClient.",
+    "date": "2021-03-23T17:31:25.638Z",
+    "tags": ["cosmos-db", "aspnet-core"]
+  },
+  {
+    "title": "How to Get HttpContext ASP.NET Core",
+    "url": "https://www.telerik.com/blogs/how-to-get-httpcontext-asp-net-core",
+    "description": "In this article, we will discuss what HttpContext is and how to use it in a controller, plus how to register and use it in service.",
+    "date": "2021-03-23T08:31:25.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Create ZIP files on HTTP request without intermediate files using ASP.NET MVC, Razor Pages, and endpoints",
+    "url": "https://swimburger.net/blog/dotnet/create-zip-files-on-http-request-without-intermediate-files-using-aspdotnet-mvc-razor-pages-and-endpoints",
+    "description": "The ZipArchive wraps any stream to read, create, and update ZIP archives. You can send the result to the client using ASP.NET MVC, Razor Pages, and endpoints.",
+    "date": "2021-03-23T08:30:25.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Hosting SPA + .NET API solution. Caching and environment variables",
+    "url": "https://alex-klaus.com/hosting-spa-in-dotnet/",
+    "description": "",
+    "date": "2021-03-23T08:29:25.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Creating Resilient Microservices in .NET with Polly - Code Maze",
+    "url": "https://code-maze.com/creating-resilient-microservices-in-net-with-polly/",
+    "description": "Resilient microservices can be a challenging endeavour. We look at how the .NET library Polly helps us overcome some of the common problems.",
+    "date": "2021-03-23T08:29:24.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Incremental and Iterative Development – what’s the diff?",
+    "url": "https://wsbctechnicalblog.github.io/incremental-and-iterative-development.html",
+    "description": "",
+    "date": "2021-03-23T05:29:24.638Z",
+    "tags": ["software-development"]
+  },
+  {
     "title": "How we found and fixed a rare race condition in our session handling - The GitHub Blog",
     "url": "https://github.blog/2021-03-18-how-we-found-and-fixed-a-rare-race-condition-in-our-session-handling/",
     "description": "On March 8, out of an abundance of caution, we logged all users out of GitHub.com. In this post we share technical details of the vulnerability and steps we're taking to ensure it doesn't happen again.",
