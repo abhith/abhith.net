@@ -1,5 +1,26 @@
 [
   {
+    "title": "How is Svelte different than React?",
+    "url": "https://dev.to/joshnuss/why-svelte-59a5",
+    "description": "How Svelte makes state management easier.",
+    "date": "2021-03-29T10:31:26.638Z",
+    "tags": ["svelte", "javascript"]
+  },
+  {
+    "title": "A Visual Recap of #FlutterEngage: My 5 Takeaways",
+    "url": "https://dev.to/azure/a-visual-recap-of-flutterengage-my-5-takeaways-3gb1",
+    "description": "#FlutterEngage marked the launch of @FlutterDev v2. Check out this visual recap with 5 key takeaways for application developers. Tagged with surfaceduodev, flutter, dartlang, sketchthedocs.",
+    "date": "2021-03-29T10:31:25.638Z",
+    "tags": ["flutter"]
+  },
+  {
+    "title": "Debugging configuration values in ASP.NET Core",
+    "url": "https://andrewlock.net/debugging-configuration-values-in-aspnetcore/",
+    "description": "In this post I show how to use IConfigurationRoot.GetDebugView(), walk through its implementation, and describe how to expose the data as an API.",
+    "date": "2021-03-29T04:31:25.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "HttpClientFactory in the Azure Cosmos DB .NET SDK | Azure Cosmos DB Blog",
     "url": "https://devblogs.microsoft.com/cosmosdb/httpclientfactory-cosmos-db-net-sdk/",
     "description": "Learn to leverage HttpClientFactory in the .NET SDK to improve connection reuse across your applications that rely on HttpClient.",
