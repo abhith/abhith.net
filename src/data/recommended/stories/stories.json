@@ -1,5 +1,19 @@
 [
   {
+    "title": "Tip 152 - Get the Record Count in Cosmos DB | Azure Tips and Tricks",
+    "url": "https://microsoft.github.io/AzureTipsAndTricks/blog/tip152.html",
+    "description": "",
+    "date": "2021-03-31T04:31:26.638Z",
+    "tags": ["cosmos-db"]
+  },
+  {
+    "title": "Load/stress testing .NET apps with Apache JMeter - Simple Talk",
+    "url": "https://www.red-gate.com/simple-talk/dotnet/software-testing/load-stress-testing-net-apps-with-apache-jmeter/",
+    "description": "Since Microsoft discontinued their cloud-based load testing services, developers need a new way to test applications. Julio Sampaio demonstrates how use one solution, JMeter.",
+    "date": "2021-03-30T10:31:26.638Z",
+    "tags": ["jmeter", "api-management"]
+  },
+  {
     "title": "How is Svelte different than React?",
     "url": "https://dev.to/joshnuss/why-svelte-59a5",
     "description": "How Svelte makes state management easier.",
