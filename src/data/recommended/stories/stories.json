@@ -1,5 +1,33 @@
 [
   {
+    "title": "The Difference Between Values and References in JavaScript",
+    "url": "https://dmitripavlutin.com/value-vs-reference-javascript/",
+    "description": "What is the difference between passing by value and passing by reference in JavaScript.",
+    "date": "2021-04-01T08:34:26.638Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "Developing Api's using Http Endpoints | Gary Woodfine",
+    "url": "https://garywoodfine.com/developing-apis-using-http-endpoints/",
+    "description": "",
+    "date": "2021-04-01T08:33:26.638Z",
+    "tags": ["aspnet-core", "api-management"]
+  },
+  {
+    "title": "Controlling Release Pipelines with Gates and Azure Policy Compliance | Azure DevOps Blog",
+    "url": "https://devblogs.microsoft.com/devops/controlling-release-pipelines-with-gates-and-azure-policy-compliance/",
+    "description": "",
+    "date": "2021-04-01T08:32:26.638Z",
+    "tags": ["azure-devops"]
+  },
+  {
+    "title": "Serilog.Expressions 2.0 update",
+    "url": "https://nblumhardt.com/2021/03/serilog-expressions-2/",
+    "description": "Serilog.Expressions is a little library that implements expression-based filtering and formatting of structured log events.",
+    "date": "2021-04-01T08:31:26.638Z",
+    "tags": ["serilog"]
+  },
+  {
     "title": "Tip 152 - Get the Record Count in Cosmos DB | Azure Tips and Tricks",
     "url": "https://microsoft.github.io/AzureTipsAndTricks/blog/tip152.html",
     "description": "",
