@@ -1,5 +1,103 @@
 [
   {
+    "title": "Machine Learning for .NET Developers Introducing ML NET",
+    "url": "https://www.youtube.com/watch?v=VJTpbZrBAeU",
+    "date": "2021-03-14T04:29:23.638Z",
+    "type": "youtube",
+    "tags": ["ml-net", "dotnet"]
+  },
+  {
+    "title": "Azure Search Tutorial",
+    "url": "https://www.youtube.com/watch?v=Iodh0p1JJVY",
+    "date": "2021-03-14T04:29:22.638Z",
+    "type": "youtube",
+    "tags": ["azure-cognitive-search"]
+  },
+  {
+    "title": "Distributed Tracing Made Easy with .NET Core - Jimmy Bogard",
+    "url": "https://www.youtube.com/watch?v=kfyCHtqk-Ts",
+    "date": "2021-03-14T04:28:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet-core"]
+  },
+  {
+    "title": "Azure Cognitive Search | Build semantic search into your apps",
+    "url": "https://www.youtube.com/watch?v=d_6ZNyV1MvA",
+    "date": "2021-03-11T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["azure-cognitive-search"]
+  },
+  {
+    "title": "How to get the most performance out of Azure database for MySQL",
+    "url": "https://www.youtube.com/watch?v=6Rb1HHhAtjQ",
+    "date": "2021-03-09T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "20 Nuget packages that every .NET developer should be familiar with",
+    "url": "https://www.youtube.com/watch?v=qapJwFY9y2Y",
+    "date": "2021-03-09T12:27:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Why Does Cold Weather Kill Your Phone?",
+    "url": "https://www.youtube.com/watch?v=i2nelj3apTI",
+    "date": "2021-03-09T11:27:22.638Z",
+    "type": "youtube",
+    "tags": ["good-to-know"]
+  },
+  {
+    "title": "Cleanup Transitive Dependencies in .NET with Snitch",
+    "url": "https://www.youtube.com/watch?v=ZdCn6kpGBhI",
+    "date": "2021-02-23T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Netflix CEO: why you shouldn't try to please your boss | The Economist Podcast",
+    "url": "https://www.youtube.com/watch?v=J81SmQIokhY",
+    "date": "2021-02-10T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["career"]
+  },
+  {
+    "title": "Make ML.NET Predictions with Streaming Data in Azure Event Hub",
+    "url": "https://www.youtube.com/watch?v=rIEDMU_kt-g",
+    "date": "2021-02-10T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["ml-net"]
+  },
+  {
+    "title": "CloudEvents - Intro, Deep-Dive a... Doug Davis, Clemens Vasters, Klaus Deissner & Vladimir Bacvanski",
+    "url": "https://www.youtube.com/watch?v=yg7RuDWHwV8",
+    "date": "2021-02-10T12:28:21.638Z",
+    "type": "youtube",
+    "tags": ["event-sourcing"]
+  },
+  {
+    "title": "Introduction to Microsoft Orleans - CodeWithStu",
+    "url": "https://www.youtube.com/watch?v=yM-gpuw1uhM",
+    "date": "2021-02-08T12:28:22.638Z",
+    "type": "youtube",
+    "tags": ["microsoft-orleans"]
+  },
+  {
+    "title": "You should delete your WhatsApp ASAP",
+    "url": "https://www.youtube.com/watch?v=shpiVm1qpnw",
+    "date": "2021-02-08T12:27:22.638Z",
+    "type": "youtube",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "SQL Server 2017 Graph Database",
+    "url": "https://www.youtube.com/watch?v=_KEmK_4ZBYQ",
+    "date": "2021-02-08T12:26:22.638Z",
+    "type": "youtube",
+    "tags": ["sql-server"]
+  },
+  {
     "title": "The real cost of smart speakers",
     "url": "https://www.youtube.com/watch?v=IUEN2TAqlmU",
     "date": "2021-01-11T12:27:22.638Z",

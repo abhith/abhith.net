@@ -1,10 +1,220 @@
 [
   {
-    "title": "How do I handle incoming intents from external applications in Flutter?",
-    "url": "https://flutter.dev/docs/get-started/flutter-for/android-devs#how-do-i-handle-incoming-intents-from-external-applications-in-flutter",
+    "title": "The Difference Between Values and References in JavaScript",
+    "url": "https://dmitripavlutin.com/value-vs-reference-javascript/",
+    "description": "What is the difference between passing by value and passing by reference in JavaScript.",
+    "date": "2021-04-01T08:34:26.638Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "Developing Api's using Http Endpoints | Gary Woodfine",
+    "url": "https://garywoodfine.com/developing-apis-using-http-endpoints/",
     "description": "",
-    "date": "2021-01-27T17:41:29.263Z",
+    "date": "2021-04-01T08:33:26.638Z",
+    "tags": ["aspnet-core", "api-management"]
+  },
+  {
+    "title": "Controlling Release Pipelines with Gates and Azure Policy Compliance | Azure DevOps Blog",
+    "url": "https://devblogs.microsoft.com/devops/controlling-release-pipelines-with-gates-and-azure-policy-compliance/",
+    "description": "",
+    "date": "2021-04-01T08:32:26.638Z",
+    "tags": ["azure-devops"]
+  },
+  {
+    "title": "Serilog.Expressions 2.0 update",
+    "url": "https://nblumhardt.com/2021/03/serilog-expressions-2/",
+    "description": "Serilog.Expressions is a little library that implements expression-based filtering and formatting of structured log events.",
+    "date": "2021-04-01T08:31:26.638Z",
+    "tags": ["serilog"]
+  },
+  {
+    "title": "Tip 152 - Get the Record Count in Cosmos DB | Azure Tips and Tricks",
+    "url": "https://microsoft.github.io/AzureTipsAndTricks/blog/tip152.html",
+    "description": "",
+    "date": "2021-03-31T04:31:26.638Z",
+    "tags": ["cosmos-db"]
+  },
+  {
+    "title": "Load/stress testing .NET apps with Apache JMeter - Simple Talk",
+    "url": "https://www.red-gate.com/simple-talk/dotnet/software-testing/load-stress-testing-net-apps-with-apache-jmeter/",
+    "description": "Since Microsoft discontinued their cloud-based load testing services, developers need a new way to test applications. Julio Sampaio demonstrates how use one solution, JMeter.",
+    "date": "2021-03-30T10:31:26.638Z",
+    "tags": ["jmeter", "api-management"]
+  },
+  {
+    "title": "How is Svelte different than React?",
+    "url": "https://dev.to/joshnuss/why-svelte-59a5",
+    "description": "How Svelte makes state management easier.",
+    "date": "2021-03-29T10:31:26.638Z",
+    "tags": ["svelte", "javascript"]
+  },
+  {
+    "title": "A Visual Recap of #FlutterEngage: My 5 Takeaways",
+    "url": "https://dev.to/azure/a-visual-recap-of-flutterengage-my-5-takeaways-3gb1",
+    "description": "#FlutterEngage marked the launch of @FlutterDev v2. Check out this visual recap with 5 key takeaways for application developers. Tagged with surfaceduodev, flutter, dartlang, sketchthedocs.",
+    "date": "2021-03-29T10:31:25.638Z",
     "tags": ["flutter"]
+  },
+  {
+    "title": "Debugging configuration values in ASP.NET Core",
+    "url": "https://andrewlock.net/debugging-configuration-values-in-aspnetcore/",
+    "description": "In this post I show how to use IConfigurationRoot.GetDebugView(), walk through its implementation, and describe how to expose the data as an API.",
+    "date": "2021-03-29T04:31:25.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "HttpClientFactory in the Azure Cosmos DB .NET SDK | Azure Cosmos DB Blog",
+    "url": "https://devblogs.microsoft.com/cosmosdb/httpclientfactory-cosmos-db-net-sdk/",
+    "description": "Learn to leverage HttpClientFactory in the .NET SDK to improve connection reuse across your applications that rely on HttpClient.",
+    "date": "2021-03-23T17:31:25.638Z",
+    "tags": ["cosmos-db", "aspnet-core"]
+  },
+  {
+    "title": "How to Get HttpContext ASP.NET Core",
+    "url": "https://www.telerik.com/blogs/how-to-get-httpcontext-asp-net-core",
+    "description": "In this article, we will discuss what HttpContext is and how to use it in a controller, plus how to register and use it in service.",
+    "date": "2021-03-23T08:31:25.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Create ZIP files on HTTP request without intermediate files using ASP.NET MVC, Razor Pages, and endpoints",
+    "url": "https://swimburger.net/blog/dotnet/create-zip-files-on-http-request-without-intermediate-files-using-aspdotnet-mvc-razor-pages-and-endpoints",
+    "description": "The ZipArchive wraps any stream to read, create, and update ZIP archives. You can send the result to the client using ASP.NET MVC, Razor Pages, and endpoints.",
+    "date": "2021-03-23T08:30:25.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Hosting SPA + .NET API solution. Caching and environment variables",
+    "url": "https://alex-klaus.com/hosting-spa-in-dotnet/",
+    "description": "",
+    "date": "2021-03-23T08:29:25.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Creating Resilient Microservices in .NET with Polly - Code Maze",
+    "url": "https://code-maze.com/creating-resilient-microservices-in-net-with-polly/",
+    "description": "Resilient microservices can be a challenging endeavour. We look at how the .NET library Polly helps us overcome some of the common problems.",
+    "date": "2021-03-23T08:29:24.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Incremental and Iterative Development – what’s the diff?",
+    "url": "https://wsbctechnicalblog.github.io/incremental-and-iterative-development.html",
+    "description": "",
+    "date": "2021-03-23T05:29:24.638Z",
+    "tags": ["software-development"]
+  },
+  {
+    "title": "How we found and fixed a rare race condition in our session handling - The GitHub Blog",
+    "url": "https://github.blog/2021-03-18-how-we-found-and-fixed-a-rare-race-condition-in-our-session-handling/",
+    "description": "On March 8, out of an abundance of caution, we logged all users out of GitHub.com. In this post we share technical details of the vulnerability and steps we're taking to ensure it doesn't happen again.",
+    "date": "2021-03-22T05:29:24.638Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "REST API versioning with ASP.NET Core",
+    "url": "https://dev.to/99darshan/restful-web-api-versioning-with-asp-net-core-1e8g",
+    "description": "",
+    "date": "2021-03-21T05:29:24.638Z",
+    "tags": ["aspnet-core", "api-management"]
+  },
+  {
+    "title": "Migrating Millions of Concurrent Websockets to Envoy - Slack Engineering",
+    "url": "https://slack.engineering/migrating-millions-of-concurrent-websockets-to-envoy/",
+    "description": "",
+    "date": "2021-03-17T09:29:23.638Z",
+    "tags": ["envoy"]
+  },
+  {
+    "title": "CSS Auditing Tools — Smashing Magazine",
+    "url": "https://www.smashingmagazine.com/2021/03/css-auditing-tools/",
+    "description": "",
+    "date": "2021-03-15T04:29:23.638Z",
+    "tags": ["css"]
+  },
+  {
+    "title": "Azure Cosmos DB: Use Cases and Trade-Offs | by Abhishek Gupta | Towards Data Science",
+    "url": "https://towardsdatascience.com/azure-cosmos-db-use-cases-and-trade-offs-5a65727daaa9",
+    "description": "",
+    "date": "2021-03-14T17:42:29.263Z",
+    "tags": ["cosmos-db"]
+  },
+  {
+    "title": "Exporting Open Telemetry Data to Jaeger - Muhammad Rehan Saeed",
+    "url": "https://rehansaeed.com/exporting-open-telemetry-data-to-jaeger/",
+    "description": "",
+    "date": "2021-03-14T16:43:29.263Z",
+    "tags": ["aspnet-core", "opentelemetry"]
+  },
+  {
+    "title": "Hosting Two ASP.NET Core Apps In One Host | Khalid Abuhakmeh",
+    "url": "https://khalidabuhakmeh.com/hosting-two-aspnet-core-apps-in-one-host",
+    "description": "",
+    "date": "2021-03-14T16:42:29.263Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Open Telemetry for ASP.NET Core",
+    "url": "https://rehansaeed.com/open-telemetry-for-asp-net-core/",
+    "description": "",
+    "date": "2021-03-11T17:42:29.263Z",
+    "tags": ["aspnet-core", "opentelemetry"]
+  },
+  {
+    "title": "Persisting Cloud Events to Cosmos DB in Azure - Nick's .NET Travels",
+    "url": "https://nicksnettravels.builttoroam.com/cloud-events-to-cosmos/",
+    "description": "",
+    "date": "2021-03-11T16:42:29.263Z",
+    "tags": ["cloudevents", "cosmos-db", "dotnet"]
+  },
+  {
+    "title": "Introducing semantic search: Bringing more meaningful results to Azure Cognitive Search",
+    "url": "https://techcommunity.microsoft.com/t5/azure-ai/introducing-semantic-search-bringing-more-meaningful-results-to/ba-p/2175636",
+    "description": "",
+    "date": "2021-03-09T17:42:29.263Z",
+    "tags": ["azure-cognitive-search"]
+  },
+  {
+    "title": "(Micro)services with Event Notifications | by Cengiz Han | hepsiburadatech",
+    "url": "https://medium.com/hepsiburadatech/micro-services-with-event-notifications-c8462792e700",
+    "description": "",
+    "date": "2021-03-09T17:41:29.263Z",
+    "tags": ["microservices", "event-sourcing"]
+  },
+  {
+    "title": ".NET Interactive with SQL!| .NET Notebooks in Visual Studio Code",
+    "url": "https://devblogs.microsoft.com/dotnet/net-interactive-with-sql-net-notebooks-in-visual-studio-code/",
+    "description": "",
+    "date": "2021-03-09T16:42:29.263Z",
+    "tags": ["vscode", "dotnet", "sql-server"]
+  },
+  {
+    "title": "Modeling Polymorphic Associations in a Relational Database",
+    "url": "https://hashrocket.com/blog/posts/modeling-polymorphic-associations-in-a-relational-database",
+    "description": "Polymorphic associations can be difficult to correctly represent in a relational database. In this post I will compare and contrast four different ways to model these challenging relationships.",
+    "date": "2021-02-10T17:42:29.263Z",
+    "tags": ["databases"]
+  },
+  {
+    "title": "Consider Chesterton's Fence Principle Before Changing That Code | Joseph Woodward, Software Developer",
+    "url": "http://josephwoodward.co.uk/2020/04/software-the-chestertons-fence-principle",
+    "description": "",
+    "date": "2021-02-08T17:42:29.263Z",
+    "tags": ["design-patterns"]
+  },
+  {
+    "title": "How to Disable HSTS in Chrome & Firefox | InfoSec Insights",
+    "url": "https://sectigostore.com/blog/how-to-disable-hsts-in-chrome-firefox/",
+    "description": "Not sure how to disable HSTS in Chrome or Firefox? We'll walk you through the process that will clear HSTS settings in these two browsers.",
+    "date": "2021-02-08T17:41:29.263Z",
+    "tags": ["debug"]
+  },
+  {
+    "title": "How to easily implement QRCoder in ASP.NET Core using C#",
+    "url": "https://www.freecodecamp.org/news/how-to-easily-implement-qrcoder-in-asp-net-core-using-c-10c4aa857e84/",
+    "description": "",
+    "date": "2021-01-19T17:41:29.263Z",
+    "tags": ["aspnet-core"]
   },
   {
     "title": "How can I change the author (name / email) of a commit?",
