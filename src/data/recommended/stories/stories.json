@@ -1,5 +1,19 @@
 [
   {
+    "title": "Brave reveals why it is disabling Google's FLoC in the browser - gHacks Tech News",
+    "url": "https://www.ghacks.net/2021/04/13/brave-reveals-why-it-is-disabling-googles-floc-in-the-browser/",
+    "description": "Brave revealed why it is removing FLoC, Google's attempt to replace third-party cookies with something else for advertisers, from the company's Brave browser.",
+    "date": "2021-04-13T08:34:26.638Z",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "How to sort an array by date value in JavaScript",
+    "url": "https://flaviocopes.com/how-to-sort-array-by-date-javascript/",
+    "description": "Find out how to sort an array of items by date value in JavaScript",
+    "date": "2021-04-11T08:34:26.638Z",
+    "tags": ["javascript"]
+  },
+  {
     "title": "How do I handle incoming intents from external applications in Flutter?",
     "url": "https://flutter.dev/docs/get-started/flutter-for/android-devs#how-do-i-handle-incoming-intents-from-external-applications-in-flutter",
     "description": "",
