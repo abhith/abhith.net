@@ -1,5 +1,19 @@
 [
   {
+    "title": "Getting Started with ngx-leaflet - Asymmetrik",
+    "url": "https://asymmetrik.com/ngx-leaflet-tutorial-angular-cli",
+    "description": "Follow this tutorial to learn how to add Leaflet maps to Angular projects using Asymmetrik's open source library @asymmetriik/ngx-leaflet!",
+    "date": "2021-04-28T08:34:26.638Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Signal's CEO Just Hacked the Cops' Favorite Phone Cracking Tool and Became a Legend",
+    "url": "https://gizmodo.com/signals-ceo-just-hacked-the-cops-favorite-phone-crackin-1846733412",
+    "description": "",
+    "date": "2021-04-22T08:34:26.638Z",
+    "tags": ["privacy"]
+  },
+  {
     "title": "Brave reveals why it is disabling Google's FLoC in the browser - gHacks Tech News",
     "url": "https://www.ghacks.net/2021/04/13/brave-reveals-why-it-is-disabling-googles-floc-in-the-browser/",
     "description": "Brave revealed why it is removing FLoC, Google's attempt to replace third-party cookies with something else for advertisers, from the company's Brave browser.",
