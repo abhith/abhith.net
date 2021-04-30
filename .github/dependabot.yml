@@ -1,0 +1,28 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "01:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: polished
+    versions:
+    - 4.1.0
+    - 4.1.1
+  - dependency-name: gatsby-plugin-offline
+    versions:
+    - 3.9.0
+  - dependency-name: gatsby-plugin-google-gtag
+    versions:
+    - 2.7.0
+  - dependency-name: gatsby-remark-copy-linked-files
+    versions:
+    - 2.9.0
+  - dependency-name: gatsby-plugin-react-helmet
+    versions:
+    - 3.9.0
+  - dependency-name: react-share
+    versions:
+    - 4.3.1
