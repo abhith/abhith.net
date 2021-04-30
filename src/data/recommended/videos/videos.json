@@ -1,5 +1,26 @@
 [
   {
+    "title": "Identity management in distributed applications using Dapr",
+    "url": "https://www.youtube.com/watch?v=rjqWeo6qY6U",
+    "date": "2021-04-30T06:29:23.638Z",
+    "type": "youtube",
+    "tags": ["dapr"]
+  },
+  {
+    "title": "Forecasting Demand with Azure Machine Learning",
+    "url": "https://www.youtube.com/watch?v=d2wZPFKAFjc",
+    "date": "2021-04-30T05:29:23.638Z",
+    "type": "youtube",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "How to Measure the Accuracy of a Forecast...",
+    "url": "https://www.youtube.com/watch?v=_gw2cWwq-gI",
+    "date": "2021-04-30T04:29:23.638Z",
+    "type": "youtube",
+    "tags": ["machine-learning"]
+  },
+  {
     "title": "Machine Learning for .NET Developers Introducing ML NET",
     "url": "https://www.youtube.com/watch?v=VJTpbZrBAeU",
     "date": "2021-03-14T04:29:23.638Z",
