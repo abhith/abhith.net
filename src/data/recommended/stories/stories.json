@@ -1,5 +1,19 @@
 [
   {
+    "title": "Visual Studio 2022 | Visual Studio Blog",
+    "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022/",
+    "description": "",
+    "date": "2021-05-19T09:44:26.638Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Best practices for using Azure SDK with ASP.NET Core | Azure SDK Blog",
+    "url": "https://devblogs.microsoft.com/azure-sdk/best-practices-for-using-azure-sdk-with-asp-net-core/",
+    "description": "",
+    "date": "2021-05-19T09:34:26.638Z",
+    "tags": ["aspnet-core", "azure"]
+  },
+  {
     "title": "20 Best Web Analytics Tools to Track Your Website Performance",
     "url": "https://www.guru99.com/web-analytics-tools.html",
     "description": "Web analytics is a process of collecting, analyzing as well as reporting of data to understand and optimize web usage. There is a wide range of web analytics tools that provide a simple report to exam",
