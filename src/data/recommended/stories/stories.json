@@ -1,5 +1,26 @@
 [
   {
+    "title": ".NET Open Source: What Happens When the Free Lunch Ends?",
+    "url": "https://aaronstannard.com/dotnetoss-free-lunch-ends/",
+    "description": "",
+    "date": "2021-06-06T07:44:26.638Z",
+    "tags": ["identityserver"]
+  },
+  {
+    "title": "C# 10.0: Introducing Global Usings",
+    "url": "https://jaliyaudagedara.blogspot.com/2021/05/c-100-introducing-global-usings.html",
+    "description": "",
+    "date": "2021-06-06T07:43:26.638Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Using DateOnly and TimeOnly in .NET 6 - Steve Gordon - Code with Steve",
+    "url": "https://www.stevejgordon.co.uk/using-dateonly-and-timeonly-in-dotnet-6",
+    "description": "In this post, we explore the DateOnly and TimeOnly types introduced in the .NET 6 core library for representing dates and times independently.",
+    "date": "2021-05-26T07:44:26.638Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "Visual Studio 2019 v16.10 and v16.11 Preview 1 are Available Today! | Visual Studio Blog",
     "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2019-v16-10-and-v16-11-preview-1-are-available-today/",
     "description": "",
