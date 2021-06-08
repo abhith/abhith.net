@@ -1,5 +1,19 @@
 [
   {
+    "title": "Clear is Kind – George Stocker",
+    "url": "https://georgestocker.com/2021/05/27/clear-is-kind/",
+    "description": "",
+    "date": "2021-06-08T08:44:26.638Z",
+    "tags": ["documentation"]
+  },
+  {
+    "title": "HTML5 window.postMessage",
+    "url": "https://davidwalsh.name/window-postmessage",
+    "description": "window.postMessage allows for sending data messages between two windows/frames across domains. Essentially window.postMessage acts as cross-domain AJAX between windows/frames.",
+    "date": "2021-06-08T07:44:26.638Z",
+    "tags": ["javascript"]
+  },
+  {
     "title": ".NET Open Source: What Happens When the Free Lunch Ends?",
     "url": "https://aaronstannard.com/dotnetoss-free-lunch-ends/",
     "description": "",
