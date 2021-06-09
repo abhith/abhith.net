@@ -1,5 +1,26 @@
 [
   {
+    "title": "Finding Nearby Users with Entity Framework Core Spatial Data",
+    "url": "https://www.markopapic.com/finding-nearby-users-using-ef-core-spatial-data/",
+    "description": "",
+    "date": "2021-06-09T09:45:26.638Z",
+    "tags": ["ef-core"]
+  },
+  {
+    "title": "Task Manager to get Eco Mode and better Edge process management",
+    "url": "https://news.thewindowsclub.com/task-manager-to-get-eco-mode-and-better-edge-process-management-105592/",
+    "description": "",
+    "date": "2021-06-09T09:44:26.638Z",
+    "tags": ["windows"]
+  },
+  {
+    "title": "Angular NgClass Example – How to Add Conditional CSS Classes",
+    "url": "https://www.freecodecamp.org/news/angular-ngclass-example/",
+    "description": "",
+    "date": "2021-06-09T08:44:26.638Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "Clear is Kind – George Stocker",
     "url": "https://georgestocker.com/2021/05/27/clear-is-kind/",
     "description": "",
