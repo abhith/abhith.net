@@ -1,5 +1,26 @@
 [
   {
+    "title": "eShop on Dapr: build microservice applications the easy way",
+    "url": "https://www.youtube.com/watch?v=ecK6FTp7ra4",
+    "date": "2021-06-09T09:30:23.638Z",
+    "type": "youtube",
+    "tags": ["dapr"]
+  },
+  {
+    "title": "Easy NPM Package Updates with Yarn Upgrade Interactive",
+    "url": "https://www.youtube.com/watch?v=zrX1GUERzXY",
+    "date": "2021-06-09T09:29:23.638Z",
+    "type": "youtube",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "Microservices made easy with Dapr | OD521",
+    "url": "https://www.youtube.com/watch?v=DyKYB76SDx0",
+    "date": "2021-06-09T08:29:23.638Z",
+    "type": "youtube",
+    "tags": ["dapr"]
+  },
+  {
     "title": "Clustering in Orleans",
     "url": "https://www.youtube.com/watch?v=okBWuR5AnBY",
     "date": "2021-06-08T08:29:23.638Z",
