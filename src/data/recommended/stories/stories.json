@@ -1,5 +1,12 @@
 [
   {
+    "title": "C# tip: how to get the index of an item in a foreach loop - Code4IT",
+    "url": "https://www.code4it.dev/csharptips/how-to-get-item-index-in-foreach",
+    "description": "Do you need the index of the current item in a foreach loop with C#? Here you'll see two approaches.",
+    "date": "2021-06-10T09:45:26.638Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "Finding Nearby Users with Entity Framework Core Spatial Data",
     "url": "https://www.markopapic.com/finding-nearby-users-using-ef-core-spatial-data/",
     "description": "",
