@@ -1,5 +1,26 @@
 [
   {
+    "title": "Angular : How to add A fully customizable, one-time password input component in your angular app just in 10 minutes?",
+    "url": "https://dev.to/rajeshkumaryadavdotcom/angular-how-to-add-a-fully-customizable-one-time-password-input-component-in-your-angular-app-just-in-10-minutes-n29",
+    "description": "",
+    "date": "2021-06-16T09:47:26.638Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Service to service invocation with Dapr .NET SDK - Laurent Kempé",
+    "url": "https://laurentkempe.com/2021/03/16/service-to-service-invocation-with-dapr-dotnet-sdk/",
+    "description": "",
+    "date": "2021-06-16T09:46:26.638Z",
+    "tags": ["dapr", "dotnet"]
+  },
+  {
+    "title": "Android's Messages app now has end-to-end encryption. Make sure you enable it.",
+    "url": "https://mashable.com/article/messages-android-end-to-end-encryption",
+    "description": "You can still be exposed for posting filth in the group chat, though.",
+    "date": "2021-06-16T09:45:26.638Z",
+    "tags": ["privacy", "android"]
+  },
+  {
     "title": "C# tip: how to get the index of an item in a foreach loop - Code4IT",
     "url": "https://www.code4it.dev/csharptips/how-to-get-item-index-in-foreach",
     "description": "Do you need the index of the current item in a foreach loop with C#? Here you'll see two approaches.",
