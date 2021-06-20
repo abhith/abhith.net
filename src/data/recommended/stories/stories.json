@@ -1,5 +1,26 @@
 [
   {
+    "title": "Visual Studio 2022 Preview 1 now available!",
+    "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/",
+    "description": "",
+    "date": "2021-06-20T04:48:26.638Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Announcing .NET 6 Preview 5",
+    "url": "https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-5/",
+    "description": "",
+    "date": "2021-06-20T04:47:26.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "What does SET NOCOUNT ON do? - Brent Ozar Unlimited®",
+    "url": "https://www.brentozar.com/archive/2021/06/what-does-set-nocount-on-do/",
+    "description": "",
+    "date": "2021-06-17T04:47:26.638Z",
+    "tags": ["sql-server"]
+  },
+  {
     "title": "Angular : How to add A fully customizable, one-time password input component in your angular app just in 10 minutes?",
     "url": "https://dev.to/rajeshkumaryadavdotcom/angular-how-to-add-a-fully-customizable-one-time-password-input-component-in-your-angular-app-just-in-10-minutes-n29",
     "description": "",
