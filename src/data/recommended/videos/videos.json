@@ -1,5 +1,26 @@
 [
   {
+    "title": "Webinar: Dapr, Lego for microservices",
+    "url": "https://www.youtube.com/watch?v=qntLqifOl7A",
+    "date": "2021-06-20T09:31:23.638Z",
+    "type": "youtube",
+    "tags": ["dapr"]
+  },
+  {
+    "title": "Time Series Forecasting in ML.NET",
+    "url": "https://www.youtube.com/watch?v=D94VdQluNZQ",
+    "date": "2021-06-20T09:30:24.638Z",
+    "type": "youtube",
+    "tags": ["ml-net"]
+  },
+  {
+    "title": "Alex Mang - Developing The Next Big Thing By Streamlining Microservices With DAPR",
+    "url": "https://www.youtube.com/watch?v=a2OZ0VI4JTg",
+    "date": "2021-06-20T09:30:23.638Z",
+    "type": "youtube",
+    "tags": ["dapr"]
+  },
+  {
     "title": "eShop on Dapr: build microservice applications the easy way",
     "url": "https://www.youtube.com/watch?v=ecK6FTp7ra4",
     "date": "2021-06-09T09:30:23.638Z",
