@@ -1,5 +1,33 @@
 [
   {
+    "title": "How to Convert Legacy BIOS to UEFI in Windows 10 - Make Tech Easier",
+    "url": "https://www.maketecheasier.com/convert-legacy-bios-uefi-windows10/",
+    "description": "",
+    "date": "2021-07-05T07:48:26.638Z",
+    "tags": ["windows"]
+  },
+  {
+    "title": "SQL SERVER - SUM(1) vs COUNT(*) - Performance Observation - SQL Authority with Pinal Dave",
+    "url": "https://blog.sqlauthority.com/2021/06/25/sql-server-sum1-vs-count-performance-observation/",
+    "description": "",
+    "date": "2021-07-05T06:48:26.638Z",
+    "tags": ["sql-server"]
+  },
+  {
+    "title": "Integrating Dependabot into your .NET Core project on GitHub | by Nick Fane",
+    "url": "https://medium.com/@nickfane/integrating-dependabot-into-your-net-core-project-on-github-3e3024bd3394",
+    "description": "",
+    "date": "2021-07-05T05:48:26.638Z",
+    "tags": ["github", "dotnet-core"]
+  },
+  {
+    "title": "Microsoft Urges Azure Users to Update PowerShell to Patch RCE Flaw",
+    "url": "https://thehackernews.com/2021/07/microsoft-urges-azure-users-to-update.html",
+    "description": "Azure users are being urged by Microsoft to update PowerShell in order to patch a critical RCE flaw.",
+    "date": "2021-07-05T04:48:26.638Z",
+    "tags": ["security"]
+  },
+  {
     "title": "Visual Studio 2022 Preview 1 now available!",
     "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/",
     "description": "",
