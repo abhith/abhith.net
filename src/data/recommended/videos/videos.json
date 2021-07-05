@@ -1,5 +1,19 @@
 [
   {
+    "title": "Alex Thissen - Logging, tracing and metrics: instrumenting your .NET Core based cloud applications",
+    "url": "https://www.youtube.com/watch?v=IlOCteXbuZY",
+    "date": "2021-07-05T09:33:23.638Z",
+    "type": "youtube",
+    "tags": ["logging", "dotnet-core"]
+  },
+  {
+    "title": "End to End Testing w/ Playwright: Mandy Whaley & Arjun Attam - StaticWebApps: Code to Scale (6 of 6)",
+    "url": "https://www.youtube.com/watch?v=VMl8aV-ddMA",
+    "date": "2021-07-05T09:31:23.638Z",
+    "type": "youtube",
+    "tags": ["testing"]
+  },
+  {
     "title": "Webinar: Dapr, Lego for microservices",
     "url": "https://www.youtube.com/watch?v=qntLqifOl7A",
     "date": "2021-06-20T09:31:23.638Z",
