@@ -1,5 +1,26 @@
 [
   {
+    "title": "Implement resiliency in a cloud-native ASP.NET Core microservice - Learn | Microsoft Docs",
+    "url": "https://docs.microsoft.com/en-us/learn/modules/microservices-resiliency-aspnet-core/",
+    "description": "This module guides you through implementing resiliency in an ASP.NET Core microservices app in Azure Kubernetes Service.",
+    "date": "2021-07-13T07:49:26.638Z",
+    "tags": ["aspnet-core", "learn"]
+  },
+  {
+    "title": "Writing a Good Git Commit Message - Simple Thread",
+    "url": "https://www.simplethread.com/git-commit-message-101/",
+    "description": "A commit message is a love letter to your future self. Here are 8 tips to help make the most of the opportunity.",
+    "date": "2021-07-13T07:48:26.638Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "C# tip: String.IsNullOrEmpty or String.IsNullOrWhiteSpace? - Code4IT",
+    "url": "https://www.code4it.dev/csharptips/string-isnullorempty-isnullorwhitespace",
+    "description": "Is your string really empty, or has it hidden characters? With String.IsNullOrEmpty and String.IsNullOrWhiteSpace you can find it",
+    "date": "2021-07-07T07:48:26.638Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "How to Convert Legacy BIOS to UEFI in Windows 10 - Make Tech Easier",
     "url": "https://www.maketecheasier.com/convert-legacy-bios-uefi-windows10/",
     "description": "",
