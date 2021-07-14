@@ -1,5 +1,12 @@
 [
   {
+    "title": "ASP.NET Core 6 - HttpLogging - log requests/responses",
+    "url": "https://josef.codes/asp-net-core-6-http-logging-log-requests-responses/",
+    "description": "Log http requests/responses using ASP.NET Core HttpLoggingMiddleware.",
+    "date": "2021-07-14T07:49:26.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Implement resiliency in a cloud-native ASP.NET Core microservice - Learn | Microsoft Docs",
     "url": "https://docs.microsoft.com/en-us/learn/modules/microservices-resiliency-aspnet-core/",
     "description": "This module guides you through implementing resiliency in an ASP.NET Core microservices app in Azure Kubernetes Service.",
