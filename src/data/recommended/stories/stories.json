@@ -1,5 +1,19 @@
 [
   {
+    "title": "Dealing with access tokens in dotnet",
+    "url": "https://josef.codes/dealing-with-access-tokens-in-dotnet/",
+    "description": "Dealing with access tokens (including renewal) in dotnet.",
+    "date": "2021-07-14T09:49:26.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Simplify debugging with DebuggerDisplay attribute dotNET - Code4IT",
+    "url": "https://www.code4it.dev/blog/debuggerdisplay-attribute",
+    "description": "Debugging our .NET applications can be cumbersome. With the DebuggerDisplay attribute we can simplify it by displaying custom messages.",
+    "date": "2021-07-14T08:49:26.638Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "ASP.NET Core 6 - HttpLogging - log requests/responses",
     "url": "https://josef.codes/asp-net-core-6-http-logging-log-requests-responses/",
     "description": "Log http requests/responses using ASP.NET Core HttpLoggingMiddleware.",
