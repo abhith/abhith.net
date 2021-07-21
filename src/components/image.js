@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import GatsbyImg from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 /**
  * To soften the blur-up we get from the default configuration of gatbsy image
  * we're adding a CSS blur to the image. This makes it smoother!
  */
-const StyledGatsbyImag = styled(GatsbyImg)`
+const StyledGatsbyImag = styled(GatsbyImage)`
   & > img {
     filter: blur(8px);
   }
@@ -59,7 +59,7 @@ function Image({ src, alt, className, ...props }) {
   imgProps[keyForSrc] = src;
 
   // We don't want to CSS blur tracedSVG images! Only regular blur-ups.
-  const Compontent = src.tracedSVG ? GatsbyImg : StyledGatsbyImag;
+  const Compontent = src.tracedSVG ? GatsbyImage : StyledGatsbyImag;
 
   // Retrun either the GatsbyImg component or a regular img tag with the spread props
   return isGatsby ? <Compontent {...imgProps} /> : <img {...imgProps} />;
