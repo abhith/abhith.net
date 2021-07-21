@@ -43,7 +43,7 @@ const ArticleHero = ({ article, authors }) => {
             {authors && authors.length === 1 ? (
               <div className="author-block">
                 <div className="image is-64x64">
-                  <GatsbyImage image={authors[0].avatar.small} alt={authors[0].name} layout="fixed" width={64} height={64} />
+                  <GatsbyImage image={authors[0].avatar.small} alt={authors[0].name} width={64} />
                 </div>
                 <div className="author-name">
                   <span>

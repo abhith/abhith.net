@@ -102,7 +102,8 @@ const ArticlePage = ({ pageContext, data, location }) => {
                       <figure className="media-left">
                         <p className="image is-128x128">
                           <RoundedImage
-                            src={authors[0].avatar.medium}
+                            image={authors[0].avatar.medium}
+                            width={128}
                             alt={authors[0].name}
                           />
                         </p>

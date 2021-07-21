@@ -55,6 +55,7 @@ const Navbar = class extends React.Component {
             <figure className="image is-vertical-center">
               <GatsbyImage
                 image={this.props.logo.childImageSharp.gatsbyImageData}
+                alt="logo"
                 className="nav-logo" />
             </figure>
           </Link>
