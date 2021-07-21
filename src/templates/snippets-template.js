@@ -1,7 +1,7 @@
 import SnippetRoll from "@components/snippet-roll";
 import Layout from "@components/layout";
 import Pagination from "@components/pagination";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TopicCloud from "@components/topic-cloud";
 import { graphql, Link } from "gatsby";
 import React from "react";
@@ -15,7 +15,7 @@ function SnippetsPage({ pageContext, data }) {
   const subTitle = `No story telling, dive straight into code.`;
   return (
     <Layout>
-      <SEO title={pageTitle} description={subTitle} slug="/snippets/" />
+      <Seo title={pageTitle} description={subTitle} slug="/snippets/" />
       <PageHero title={`All Snippets`} subtitle={subTitle} />
       <div className="section">
         <div className="container">

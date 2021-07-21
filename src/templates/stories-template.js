@@ -1,6 +1,6 @@
 import Layout from "@components/layout";
 import Pagination from "@components/pagination";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import StoriesRoll from "@components/stories-roll";
 import TopicCloud from "@components/topic-cloud";
 import PageHero from "@components/page-hero";
@@ -15,7 +15,7 @@ function StoriesPage({ pageContext, data }) {
   const subTitle = `Developer stories which Abhith recommends.`;
   return (
     <Layout>
-      <SEO
+      <Seo
         title={pageTitle}
         description={subTitle}
         slug="/recommended/stories/"

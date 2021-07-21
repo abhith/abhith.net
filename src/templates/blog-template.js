@@ -1,7 +1,7 @@
 import BlogRoll from "@components/blog-roll";
 import Layout from "@components/layout";
 import Pagination from "@components/pagination";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TopicCloud from "@components/topic-cloud";
 import { graphql, Link } from "gatsby";
 import React from "react";
@@ -16,7 +16,7 @@ function BlogPage({ pageContext, data }) {
 
   return (
     <Layout>
-      <SEO title={pageTitle} description={subTitle} slug="/blog/" />
+      <Seo title={pageTitle} description={subTitle} slug="/blog/" />
       <PageHero
         title={`All Articles`}
         subtitle={subTitle}

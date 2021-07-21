@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import SchemaOrg from "./schema-org";
-function SEO({
+function Seo({
   description,
   lang,
   meta,
@@ -186,7 +186,7 @@ function SEO({
   );
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   isBlogPost: false,
   lang: `en`,
   meta: [],
@@ -197,7 +197,7 @@ SEO.defaultProps = {
   dateModified: ``,
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   isBlogPost: PropTypes.bool,
   description: PropTypes.string,
   lang: PropTypes.string,
@@ -209,4 +209,4 @@ SEO.propTypes = {
   dateModified: PropTypes.string,
 };
 
-export default SEO;
+export default Seo;

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../components/layout";
-import SEO from "../../components/seo/seo";
+import Seo from "../../components/seo/seo";
 import VideosRoll from "../../components/videos-roll";
 import { graphql, Link } from "gatsby";
 
@@ -24,7 +24,7 @@ export default class RecommendedIndexPage extends React.Component {
 
     return (
       <Layout>
-        <SEO title={pageTitle} description={subTitle} slug="/recommended/" />
+        <Seo title={pageTitle} description={subTitle} slug="/recommended/" />
         <PageHero title={pageTitle} subtitle={subTitle} />
         <div className="section">
           <div className="container">

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo/seo";
+import Seo from "../components/seo/seo";
 import { graphql, Link } from "gatsby";
 import Pagination from "../components/pagination";
 import TopicCloud from "@components/topic-cloud";
@@ -36,7 +36,7 @@ function VideosPage({ pageContext, data }) {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={pageTitle}
         description={subTitle}
         slug="/recommended/videos/"

@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
 import Layout from "@components/layout";
 import MDXRenderer from "@components/mdx";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
 import Image from "@components/image";
@@ -41,7 +41,7 @@ export default ({ pageContext, data, location }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={pageTitle}
         description={snippet.excerpt}
         isBlogPost={false}

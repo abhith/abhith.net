@@ -1,7 +1,7 @@
 import React from "react";
 
 import Layout from "@components/layout";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import PageHero from "@components/page-hero";
 import Content, { HTMLContent } from "../components/content";
 
@@ -15,7 +15,7 @@ const PageTemplate = (props) => {
   return (
     <Layout>
       {/* TODO(abhith): remove hard coded slug */}
-      <SEO title={title} description={description} slug="/donate/" />
+      <Seo title={title} description={description} slug="/donate/" />
       <PageHero title={title} subtitle={description} />
       <section className="section">
         <div className="container">

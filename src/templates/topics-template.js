@@ -1,6 +1,6 @@
 import Layout from "@components/layout";
 import PageHero from "@components/page-hero";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TopicImage from "@components/topic-image";
 import { Link } from "gatsby";
 import React from "react";
@@ -18,7 +18,7 @@ function TopicsPage({ pageContext }) {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Topics"
         description={`Summary of all the ${topics.length} topics in abhith.net`}
         slug="/topics/"

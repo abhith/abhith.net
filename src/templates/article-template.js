@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby";
 import GitHubStar from "@components/github-star";
 import Layout from "@components/layout";
 import MDXRenderer from "@components/mdx";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TableOfContents from "@components/table-of-contents";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
@@ -42,7 +42,7 @@ export default ({ pageContext, data, location }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={article.title}
         description={article.excerpt}
         image={article.hero.full.src}
