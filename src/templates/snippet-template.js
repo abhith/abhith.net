@@ -6,10 +6,8 @@ import MDXRenderer from "@components/mdx";
 import Seo from "@components/seo/seo";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
-import Image from "@components/image";
 import Webmentions from "@components/webmentions";
 import GitHubStar from "@components/github-star";
-
 import SnippetHero from "../sections/snippet/snippet-hero";
 import RelatedArticles from "../sections/article/article-related-articles";
 import RelatedStories from "../sections/article/article-related-stories";
@@ -17,6 +15,7 @@ import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const SnippetPage =({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
@@ -170,7 +169,7 @@ const SnippetPage =({ pageContext, data, location }) => {
 };
 export default SnippetPage;
 
-const RoundedImage = styled(Image)`
+const RoundedImage = styled(GatsbyImage)`
   border-radius: 50%;
 `;
 

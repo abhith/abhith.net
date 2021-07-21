@@ -1,13 +1,3 @@
-const GatsbyFluid_withWebp = `
-  base64
-  aspectRatio
-  src
-  srcSet
-  srcWebp
-  srcSetWebp
-  sizes
-`;
-
 module.exports.local = {
   articles: `{
       articles: allArticle(
@@ -35,9 +25,7 @@ module.exports.local = {
             )
             hero {
               full: childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ${GatsbyFluid_withWebp}
-                }
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
               }
             }
             commentId
@@ -86,19 +74,13 @@ module.exports.local = {
             slug
             avatar {
               small: childImageSharp {
-                fluid(maxWidth: 64, quality: 100) {
-                  ${GatsbyFluid_withWebp}
-                }
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
               }
               medium: childImageSharp {
-                fluid(maxWidth: 128, quality: 100) {
-                  ${GatsbyFluid_withWebp}
-                }
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
               }
               large: childImageSharp {
-                fluid(maxWidth: 328, quality: 100) {
-                  ${GatsbyFluid_withWebp}
-                }
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
               }
             }
           }

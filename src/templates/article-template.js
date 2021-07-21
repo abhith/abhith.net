@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
-
 import GitHubStar from "@components/github-star";
 import Layout from "@components/layout";
 import MDXRenderer from "@components/mdx";
@@ -9,9 +8,7 @@ import Seo from "@components/seo/seo";
 import TableOfContents from "@components/table-of-contents";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
-import Image from "@components/image";
 import Webmentions from "@components/webmentions";
-
 import ArticleHero from "../sections/article/article-hero";
 import RelatedArticles from "../sections/article/article-related-articles";
 import RelatedStories from "../sections/article/article-related-stories";
@@ -21,6 +18,8 @@ import ArticleShare from "../sections/article/article-share";
 import ArticleRelatedSnippets from "../sections/article/article-related-snippets";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 const ArticlePage = ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
@@ -169,7 +168,7 @@ const ArticlePage = ({ pageContext, data, location }) => {
   );
 };
 
-const RoundedImage = styled(Image)`
+const RoundedImage = styled(GatsbyImage)`
   border-radius: 50%;
 `;
 

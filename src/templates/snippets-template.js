@@ -7,7 +7,6 @@ import { graphql, Link } from "gatsby";
 import React from "react";
 import normalize from "../../gatsby/data/data.normalize";
 import PageHero from "@components/page-hero";
-
 function SnippetsPage({ pageContext, data }) {
   const snippets = data.snippets.edges.map(normalize.local.snippets);
   const { previousPagePath, nextPagePath, topics } = pageContext;
