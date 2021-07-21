@@ -1,7 +1,7 @@
 import Blockquote from "@components/blockquote";
 import { CodePre, CodePrism } from "@components/code";
 import { Table, TableCell, TableHeadCell, TableHead } from "@components/tables";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { MDXProvider } from "@mdx-js/react";
 import mediaqueries from "@styles/media";

@@ -4,7 +4,7 @@ import BlogRollItem from "../blog-roll-item";
 import BlogCard from "../blog-card";
 import TitleBar from "@components/title-bar";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 const normalize = require("../../../gatsby/data/data.normalize");
 
 function LatestPosts() {
