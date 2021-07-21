@@ -14,7 +14,7 @@ import HomeSnippets from "../sections/home/home-snippets";
 import { FcLike } from "react-icons/fc";
 const normalize = require("../../gatsby/data/data.normalize");
 
-export const IndexPageTemplate = ({
+const IndexPageTemplate = ({
   stories,
   featured,
   videos,

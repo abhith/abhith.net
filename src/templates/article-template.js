@@ -22,7 +22,7 @@ import ArticleRelatedSnippets from "../sections/article/article-related-snippets
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
 
-export default ({ pageContext, data, location }) => {
+const ArticlePage = ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
   const {
     article,
@@ -199,3 +199,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default ArticlePage;

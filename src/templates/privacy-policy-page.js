@@ -6,7 +6,7 @@ import Seo from "../components/seo/seo";
 import PageHero from "@components/page-hero";
 import Content, { HTMLContent } from "../components/content";
 
-export const PrivacyPolicyPageTemplate = ({
+const PrivacyPolicyPageTemplate = ({
   title,
   content,
   description,

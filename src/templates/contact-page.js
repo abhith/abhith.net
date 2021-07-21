@@ -7,7 +7,7 @@ import Seo from "../components/seo/seo";
 import Recaptcha from "react-recaptcha";
 import PageHero from "@components/page-hero";
 
-export const ContactPageTemplate = ({
+const ContactPageTemplate = ({
   title,
   content,
   description,

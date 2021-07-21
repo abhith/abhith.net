@@ -7,7 +7,7 @@ import Seo from "../components/seo/seo";
 import Timeline from "../components/about/timeline";
 import PageHero from "@components/page-hero";
 
-export const AboutPageTemplate = ({
+const AboutPageTemplate = ({
   title,
   content,
   description,

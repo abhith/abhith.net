@@ -18,7 +18,7 @@ import RelatedVideos from "../sections/article/article-related-videos";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
 
-export default ({ pageContext, data, location }) => {
+const SnippetPage =({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
   const {
     snippet,
@@ -168,6 +168,7 @@ export default ({ pageContext, data, location }) => {
     </Layout>
   );
 };
+export default SnippetPage;
 
 const RoundedImage = styled(Image)`
   border-radius: 50%;

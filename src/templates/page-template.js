@@ -3,14 +3,11 @@ import React from "react";
 import Layout from "@components/layout";
 import Seo from "@components/seo/seo";
 import PageHero from "@components/page-hero";
-import Content, { HTMLContent } from "../components/content";
 
 const PageTemplate = (props) => {
   const {
     frontmatter: { title, description },
   } = props.pageContext;
-
-  const PageContent = HTMLContent || Content;
 
   return (
     <Layout>
