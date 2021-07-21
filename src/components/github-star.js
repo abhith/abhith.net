@@ -13,7 +13,7 @@ const GitHubStar = () => {
       <div className="is-centered">
         <iframe
           src="https://ghbtns.com/github-btn.html?user=Abhith&repo=abhith.net&type=star&count=true&size=large"
-          frameborder="0"
+          frameBorder="0"
           scrolling="0"
           width="120"
           height="30"
