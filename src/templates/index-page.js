@@ -6,7 +6,7 @@ import LatestPosts from "../components/home/latest-posts";
 import Hero from "../components/home/hero";
 import StoriesRoll from "../components/stories-roll";
 import FeaturedSidebar from "../components/featured-sidebar";
-import SEO from "../components/seo/seo";
+import Seo from "../components/seo/seo";
 import VideosRoll from "../components/videos-roll";
 import Button from "../components/button";
 import TitleBar from "@components/title-bar";
@@ -14,7 +14,7 @@ import HomeSnippets from "../sections/home/home-snippets";
 import { FcLike } from "react-icons/fc";
 const normalize = require("../../gatsby/data/data.normalize");
 
-export const IndexPageTemplate = ({
+const IndexPageTemplate = ({
   stories,
   featured,
   videos,
@@ -24,7 +24,7 @@ export const IndexPageTemplate = ({
   snippets,
 }) => (
   <>
-    <SEO />
+    <Seo />
     <Hero />
     <LatestPosts />
     <HomeSnippets snippets={snippets} />

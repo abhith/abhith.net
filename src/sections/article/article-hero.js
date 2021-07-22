@@ -1,6 +1,6 @@
-import Image from "@components/image";
 import { Link } from "gatsby";
 import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const ArticleHero = ({ article, authors }) => {
   return (
@@ -43,7 +43,7 @@ const ArticleHero = ({ article, authors }) => {
             {authors && authors.length === 1 ? (
               <div className="author-block">
                 <div className="image is-64x64">
-                  <Image src={authors[0].avatar.small} alt={authors[0].name} />
+                  <GatsbyImage image={authors[0].avatar.small} alt={authors[0].name} width={64} />
                 </div>
                 <div className="author-name">
                   <span>
@@ -75,11 +75,7 @@ const ArticleHero = ({ article, authors }) => {
           </div>
           <div className="column is-5">
             <figure className="image">
-              <Image
-                src={article.hero.full}
-                className={`blog-featured`}
-                alt={article.title}
-              />
+              <GatsbyImage image={article.hero.full} alt={article.title} className={`blog-featured`} />
             </figure>
           </div>
         </div>

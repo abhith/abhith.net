@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo/seo";
+import Seo from "../components/seo/seo";
 import { graphql, Link } from "gatsby";
 import Pagination from "../components/pagination";
 import TopicCloud from "@components/topic-cloud";
@@ -36,7 +36,7 @@ function VideosPage({ pageContext, data }) {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={pageTitle}
         description={subTitle}
         slug="/recommended/videos/"
@@ -96,30 +96,27 @@ function VideosPage({ pageContext, data }) {
 
 export default VideosPage;
 
-export const pageQuery = graphql`
-  query RecommendedVideosIndexPageQuery($skip: Int!, $limit: Int!) {
-    videoImg: file(relativePath: { eq: "recommended-video.png" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 505) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
+export const pageQuery = graphql`query RecommendedVideosIndexPageQuery($skip: Int!, $limit: Int!) {
+  videoImg: file(relativePath: {eq: "recommended-video.png"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
     }
-    recommendedVideos: allVideosJson(
-      sort: { fields: [date], order: DESC }
-      skip: $skip
-      limit: $limit
-    ) {
-      totalCount
-      edges {
-        node {
-          tags
-          title
-          url
-          type
-          id
-        }
+  }
+  recommendedVideos: allVideosJson(
+    sort: {fields: [date], order: DESC}
+    skip: $skip
+    limit: $limit
+  ) {
+    totalCount
+    edges {
+      node {
+        tags
+        title
+        url
+        type
+        id
       }
     }
   }
+}
 `;

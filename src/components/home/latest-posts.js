@@ -4,7 +4,7 @@ import BlogRollItem from "../blog-roll-item";
 import BlogCard from "../blog-card";
 import TitleBar from "@components/title-bar";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 const normalize = require("../../../gatsby/data/data.normalize");
 
 function LatestPosts() {
@@ -60,82 +60,69 @@ function LatestPosts() {
 
 export default LatestPosts;
 
-export const query = graphql`
-  query {
-    lastUpdatedPosts: allArticle(
-      sort: { fields: [lastModificationTime], order: DESC }
-      filter: { lastModificationTime: { ne: null }, draft: { eq: false } }
-      limit: 4
-    ) {
-      edges {
-        node {
-          id
-          body
-          slug
-          timeToRead
-          date
-          dateString: date(formatString: "MMMM DD, YYYY")
-          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-          title
-          excerpt
-          tags
-          lastModificationTime
-          lastModificationTimeString: lastModificationTime(
-            formatString: "MMMM DD, YYYY"
-          )
-          dateModifiedSeoFormat: lastModificationTime(
-            formatString: "YYYY-MM-DD"
-          )
-          hero {
-            full: childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
+export const query = graphql`{
+  lastUpdatedPosts: allArticle(
+    sort: {fields: [lastModificationTime], order: DESC}
+    filter: {lastModificationTime: {ne: null}, draft: {eq: false}}
+    limit: 4
+  ) {
+    edges {
+      node {
+        id
+        body
+        slug
+        timeToRead
+        date
+        dateString: date(formatString: "MMMM DD, YYYY")
+        datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+        title
+        excerpt
+        tags
+        lastModificationTime
+        lastModificationTimeString: lastModificationTime(formatString: "MMMM DD, YYYY")
+        dateModifiedSeoFormat: lastModificationTime(formatString: "YYYY-MM-DD")
+        hero {
+          full: childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
-          commentId
         }
+        commentId
       }
-    }
-    latestArticles: allArticle(
-      sort: { fields: [date], order: DESC }
-      filter: { draft: { eq: false } }
-      limit: 3
-    ) {
-      edges {
-        node {
-          id
-          body
-          slug
-          timeToRead
-          date
-          dateString: date(formatString: "MMMM DD, YYYY")
-          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-          title
-          excerpt
-          tags
-          lastModificationTime
-          lastModificationTimeString: lastModificationTime(
-            formatString: "MMMM DD, YYYY"
-          )
-          dateModifiedSeoFormat: lastModificationTime(
-            formatString: "YYYY-MM-DD"
-          )
-          hero {
-            full: childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          commentId
-        }
-      }
-    }
-    posts: allArticle(filter: { draft: { eq: false } }) {
-      totalCount
     }
   }
+  latestArticles: allArticle(
+    sort: {fields: [date], order: DESC}
+    filter: {draft: {eq: false}}
+    limit: 3
+  ) {
+    edges {
+      node {
+        id
+        body
+        slug
+        timeToRead
+        date
+        dateString: date(formatString: "MMMM DD, YYYY")
+        datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+        title
+        excerpt
+        tags
+        lastModificationTime
+        lastModificationTimeString: lastModificationTime(formatString: "MMMM DD, YYYY")
+        dateModifiedSeoFormat: lastModificationTime(formatString: "YYYY-MM-DD")
+        hero {
+          full: childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        commentId
+      }
+    }
+  }
+  posts: allArticle(filter: {draft: {eq: false}}) {
+    totalCount
+  }
+}
 `;
 
 const LatestPostsCss = (p) => css`

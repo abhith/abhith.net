@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../../components/layout";
-import SEO from "../../components/seo/seo";
+import Seo from "../../components/seo/seo";
 import VideosRoll from "../../components/videos-roll";
 import { graphql, Link } from "gatsby";
 
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import StoriesRoll from "@components/stories-roll";
 import ServicesRoll from "@components/services-roll";
 import PageHero from "@components/page-hero";
@@ -12,9 +12,9 @@ import PageHero from "@components/page-hero";
 export default class RecommendedIndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const videoImgData = data.videoImg.childImageSharp.fluid;
-    const serviceImgData = data.serviceImg.childImageSharp.fluid;
-    const storiesImgData = data.storiesImg.childImageSharp.fluid;
+    const videoImgData = data.videoImg.childImageSharp.gatsbyImageData;
+    const serviceImgData = data.serviceImg.childImageSharp.gatsbyImageData;
+    const storiesImgData = data.storiesImg.childImageSharp.gatsbyImageData;
     const videos = data.recommendedVideos.edges;
     const stories = data.recommendedStories.edges;
     const services = data.services.edges;
@@ -24,7 +24,7 @@ export default class RecommendedIndexPage extends React.Component {
 
     return (
       <Layout>
-        <SEO title={pageTitle} description={subTitle} slug="/recommended/" />
+        <Seo title={pageTitle} description={subTitle} slug="/recommended/" />
         <PageHero title={pageTitle} subtitle={subTitle} />
         <div className="section">
           <div className="container">
@@ -32,7 +32,7 @@ export default class RecommendedIndexPage extends React.Component {
               <div className="column">
                 <div>
                   <Link to="/recommended/stories/">
-                    <Img fluid={storiesImgData} />
+                    <GatsbyImage image={storiesImgData} />
                   </Link>
                   <div className="mt-1">
                     <Link to="/recommended/stories/">
@@ -71,7 +71,7 @@ export default class RecommendedIndexPage extends React.Component {
               <div className="column">
                 <div>
                   <Link to="/recommended/videos/">
-                    <Img fluid={videoImgData} />
+                    <GatsbyImage image={videoImgData} />
                   </Link>
                   <div className="mt-1">
                     <Link className="text-dark" to="/recommended/videos/">
@@ -105,7 +105,7 @@ export default class RecommendedIndexPage extends React.Component {
               <div className="column is-half">
                 <div className="">
                   <Link to="/recommended/services/">
-                    <Img fluid={serviceImgData} />
+                    <GatsbyImage image={serviceImgData} />
                   </Link>
                   <div className="">
                     <Link className="text-dark" to="/recommended/services/">
@@ -143,75 +143,62 @@ export default class RecommendedIndexPage extends React.Component {
   }
 }
 
-export const pageQuery = graphql`
-  query RecommendedIndexPageQuery {
-    videoImg: file(relativePath: { eq: "recommended-video.png" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 505) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
+export const pageQuery = graphql`query RecommendedIndexPageQuery {
+  videoImg: file(relativePath: {eq: "recommended-video.png"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
     }
-    recommendedVideos: allVideosJson(
-      limit: 1
-      sort: { fields: [date], order: DESC }
-    ) {
-      totalCount
-      edges {
-        node {
-          tags
-          title
-          url
-          type
-          id
-        }
-      }
-    }
-    serviceImg: file(relativePath: { eq: "recommended-services.png" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 505) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    services: allRecommendedService(
-      limit: 3
-      sort: { fields: [date], order: DESC }
-    ) {
-      totalCount
-      edges {
-        node {
-          title
-          id
-          tags
-          url
-          description
-          image
-        }
-      }
-    }
-    storiesImg: file(relativePath: { eq: "recommended-stories.png" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 505) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    recommendedStories: allStoriesJson(
-      limit: 3
-      sort: { fields: [date], order: DESC }
-    ) {
-      totalCount
-      edges {
-        node {
-          title
-          date(formatString: "MMM DD, YYYY")
-          description
-          id
-          tags
-          url
-        }
+  }
+  recommendedVideos: allVideosJson(limit: 1, sort: {fields: [date], order: DESC}) {
+    totalCount
+    edges {
+      node {
+        tags
+        title
+        url
+        type
+        id
       }
     }
   }
+  serviceImg: file(relativePath: {eq: "recommended-services.png"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
+    }
+  }
+  services: allRecommendedService(limit: 3, sort: {fields: [date], order: DESC}) {
+    totalCount
+    edges {
+      node {
+        title
+        id
+        tags
+        url
+        description
+        image
+      }
+    }
+  }
+  storiesImg: file(relativePath: {eq: "recommended-stories.png"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
+    }
+  }
+  recommendedStories: allStoriesJson(
+    limit: 3
+    sort: {fields: [date], order: DESC}
+  ) {
+    totalCount
+    edges {
+      node {
+        title
+        date(formatString: "MMM DD, YYYY")
+        description
+        id
+        tags
+        url
+      }
+    }
+  }
+}
 `;

@@ -17,7 +17,7 @@ function TopicCloud({ topics, section, title }) {
           {topics.map((topic) => {
             if (section) {
               topicLink =
-                section == "snippets"
+                section === "snippets"
                   ? `/snippets/${topic.slug}/`
                   : `/topics/${topic.slug}/${section}/`;
             } else {

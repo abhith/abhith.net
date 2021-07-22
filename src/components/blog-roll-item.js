@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import Image from "@components/image";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const BlogRollItem = ({ post }) => {
   return (
     <div className="blog-post">
       <Link to={post.slug}>
         <div className="featured-image">
-          <Image src={post.hero.full} alt={post.title} />
+          <GatsbyImage image={post.hero.full} alt={post.title} />
         </div>
         <div className="content">
           <div className="post-title">{post.title}</div>

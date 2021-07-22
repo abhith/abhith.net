@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Content, { HTMLContent } from "../components/content";
-import SEO from "../components/seo/seo";
+import Seo from "../components/seo/seo";
 import Recaptcha from "react-recaptcha";
 import PageHero from "@components/page-hero";
 
-export const ContactPageTemplate = ({
+const ContactPageTemplate = ({
   title,
   content,
   description,
@@ -17,7 +17,7 @@ export const ContactPageTemplate = ({
 
   return (
     <>
-      <SEO title={title} description={description} slug="/contact/" />
+      <Seo title={title} description={description} slug="/contact/" />
       <PageHero title={title} subtitle={description} />
       <section className="section">
         <div className="container">

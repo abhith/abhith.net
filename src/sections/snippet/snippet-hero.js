@@ -1,6 +1,6 @@
-import Image from "@components/image";
 import { Link } from "gatsby";
 import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const SnippetHero = ({ snippet, authors }) => {
   return (
@@ -43,7 +43,7 @@ const SnippetHero = ({ snippet, authors }) => {
             {authors && authors.length === 1 ? (
               <div className="author-block">
                 <div className="image is-64x64">
-                  <Image src={authors[0].avatar.small} alt={authors[0].name} />
+                  <GatsbyImage image={authors[0].avatar.small} alt={authors[0].name} />
                 </div>
                 <div className="author-name">
                   <span>

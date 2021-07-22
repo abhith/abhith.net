@@ -22,7 +22,7 @@ function createItems(items, location, depth) {
   );
 }
 
-export default ({ page, location }) => {
+const TableOfContents = ({ page, location }) => {
   return (
     <nav id="anchors" className="ar-anchors is-active">
       <p className="ar-anchors-title">On this page</p>
@@ -38,3 +38,4 @@ export default ({ page, location }) => {
     </nav>
   );
 };
+export default TableOfContents;

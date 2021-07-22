@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import SEO from "../components/seo/seo";
+import Seo from "../components/seo/seo";
 import ServicesRoll from "../components/services-roll";
 import Pagination from "../components/pagination";
 import PageHero from "@components/page-hero";
@@ -15,7 +15,7 @@ export default class RecommendedServicesIndexPage extends React.Component {
     const subTitle = `Tools and services which Abhith recommends.`;
     return (
       <Layout>
-        <SEO
+        <Seo
           title={pageTitle}
           description={subTitle}
           slug="/recommended/services/"

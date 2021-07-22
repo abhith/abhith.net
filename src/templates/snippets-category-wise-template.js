@@ -1,7 +1,7 @@
 import SnippetRoll from "@components/snippet-roll";
 import Layout from "@components/layout";
 import Pagination from "@components/pagination";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TopicsCloud from "@components/topic-cloud";
 import { graphql, Link } from "gatsby";
 import React from "react";
@@ -18,7 +18,7 @@ function SnippetsPage({ pageContext, data }) {
   const title = `${category.title} Snippets`;
   return (
     <Layout>
-      <SEO
+      <Seo
         title={title}
         description={subTitle}
         slug={`/snippets/${category.slug}/`}

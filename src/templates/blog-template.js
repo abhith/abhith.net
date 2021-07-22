@@ -1,7 +1,7 @@
 import BlogRoll from "@components/blog-roll";
 import Layout from "@components/layout";
 import Pagination from "@components/pagination";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TopicCloud from "@components/topic-cloud";
 import { graphql, Link } from "gatsby";
 import React from "react";
@@ -16,7 +16,7 @@ function BlogPage({ pageContext, data }) {
 
   return (
     <Layout>
-      <SEO title={pageTitle} description={subTitle} slug="/blog/" />
+      <Seo title={pageTitle} description={subTitle} slug="/blog/" />
       <PageHero
         title={`All Articles`}
         subtitle={subTitle}
@@ -59,43 +59,36 @@ function BlogPage({ pageContext, data }) {
 
 export default BlogPage;
 
-export const pageQuery = graphql`
-  query BlogRollQuery($skip: Int!, $limit: Int!) {
-    articles: allArticle(
-      filter: { draft: { eq: false } }
-      sort: { order: DESC, fields: [date] }
-      skip: $skip
-      limit: $limit
-    ) {
-      edges {
-        node {
-          id
-          body
-          slug
-          timeToRead
-          date
-          dateString: date(formatString: "MMMM DD, YYYY")
-          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-          title
-          excerpt
-          tags
-          lastModificationTime
-          lastModificationTimeString: lastModificationTime(
-            formatString: "MMMM DD, YYYY"
-          )
-          dateModifiedSeoFormat: lastModificationTime(
-            formatString: "YYYY-MM-DD"
-          )
-          hero {
-            full: childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
+export const pageQuery = graphql`query BlogRollQuery($skip: Int!, $limit: Int!) {
+  articles: allArticle(
+    filter: {draft: {eq: false}}
+    sort: {order: DESC, fields: [date]}
+    skip: $skip
+    limit: $limit
+  ) {
+    edges {
+      node {
+        id
+        body
+        slug
+        timeToRead
+        date
+        dateString: date(formatString: "MMMM DD, YYYY")
+        datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+        title
+        excerpt
+        tags
+        lastModificationTime
+        lastModificationTimeString: lastModificationTime(formatString: "MMMM DD, YYYY")
+        dateModifiedSeoFormat: lastModificationTime(formatString: "YYYY-MM-DD")
+        hero {
+          full: childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
-          commentId
         }
+        commentId
       }
     }
   }
+}
 `;

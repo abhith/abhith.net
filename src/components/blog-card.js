@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import Image from "@components/image";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const BlogCard = ({ post, tag }) => {
   return (
     <div className="card-post">
       <Link to={post.slug}>
         <div className="featured-image card-image">
-          <Image src={post.hero.full} alt={post.title} />
+          <GatsbyImage image={post.hero.full} alt={post.title} />
           {tag && (
             <div className="card-content is-overlay is-clipped">
               <span className="tag is-primary">{tag}</span>

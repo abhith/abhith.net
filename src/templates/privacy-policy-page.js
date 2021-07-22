@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import SEO from "../components/seo/seo";
+import Seo from "../components/seo/seo";
 import PageHero from "@components/page-hero";
 import Content, { HTMLContent } from "../components/content";
 
-export const PrivacyPolicyPageTemplate = ({
+const PrivacyPolicyPageTemplate = ({
   title,
   content,
   description,
@@ -16,7 +16,7 @@ export const PrivacyPolicyPageTemplate = ({
 
   return (
     <>
-      <SEO title={title} description={description} slug="/privacy-policy/" />
+      <Seo title={title} description={description} slug="/privacy-policy/" />
       <PageHero title={title} subtitle={description} />
       <div className="section">
         <div className="container">

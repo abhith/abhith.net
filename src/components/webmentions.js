@@ -1,5 +1,5 @@
 import React from "react";
-import { FcLike, FcStatistics, FcRefresh } from "react-icons/fc";
+import { FcLike, FcRefresh } from "react-icons/fc";
 import TitleBar from "@components/title-bar";
 import styled from "@emotion/styled";
 
@@ -17,7 +17,7 @@ export default function Webmentions({ edges }) {
 
   const mentions = edges.length;
 
-  if (mentions == 0) {
+  if (mentions === 0) {
     return null;
   }
 

@@ -3,13 +3,11 @@ import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
 import Layout from "@components/layout";
 import MDXRenderer from "@components/mdx";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
-import Image from "@components/image";
 import Webmentions from "@components/webmentions";
 import GitHubStar from "@components/github-star";
-
 import SnippetHero from "../sections/snippet/snippet-hero";
 import RelatedArticles from "../sections/article/article-related-articles";
 import RelatedStories from "../sections/article/article-related-stories";
@@ -17,8 +15,9 @@ import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
+import { GatsbyImage } from "gatsby-plugin-image"
 
-export default ({ pageContext, data, location }) => {
+const SnippetPage =({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
   const {
     snippet,
@@ -41,7 +40,7 @@ export default ({ pageContext, data, location }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={pageTitle}
         description={snippet.excerpt}
         isBlogPost={false}
@@ -168,8 +167,9 @@ export default ({ pageContext, data, location }) => {
     </Layout>
   );
 };
+export default SnippetPage;
 
-const RoundedImage = styled(Image)`
+const RoundedImage = styled(GatsbyImage)`
   border-radius: 50%;
 `;
 

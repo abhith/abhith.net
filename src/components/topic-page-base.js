@@ -1,6 +1,6 @@
 import Layout from "@components/layout";
 import PageHero from "@components/page-hero";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TopicsSideNav from "@components/topic-side-nav";
 import Utterances from "@components/utterances";
 import Webmentions from "@components/webmentions";
@@ -85,7 +85,7 @@ const TopicPageBase = ({
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={pageTitle}
         description={pageSubtitle}
         slug={`/topics/${topic.slug}`}

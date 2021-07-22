@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
-
 import GitHubStar from "@components/github-star";
 import Layout from "@components/layout";
 import MDXRenderer from "@components/mdx";
-import SEO from "@components/seo/seo";
+import Seo from "@components/seo/seo";
 import TableOfContents from "@components/table-of-contents";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
-import Image from "@components/image";
 import Webmentions from "@components/webmentions";
-
 import ArticleHero from "../sections/article/article-hero";
 import RelatedArticles from "../sections/article/article-related-articles";
 import RelatedStories from "../sections/article/article-related-stories";
@@ -21,8 +18,10 @@ import ArticleShare from "../sections/article/article-share";
 import ArticleRelatedSnippets from "../sections/article/article-related-snippets";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
+import { GatsbyImage } from "gatsby-plugin-image"
 
-export default ({ pageContext, data, location }) => {
+
+const ArticlePage = ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
   const {
     article,
@@ -39,13 +38,13 @@ export default ({ pageContext, data, location }) => {
     0,
     article.slug.length - 1
   )}.mdx`;
-
+  
   return (
     <Layout>
-      <SEO
+      <Seo
         title={article.title}
         description={article.excerpt}
-        image={article.hero.full.src}
+        image={article.hero.seo}
         isBlogPost={true}
         slug={article.slug}
         dateModified={article.dateModifiedSeoFormat}
@@ -103,7 +102,8 @@ export default ({ pageContext, data, location }) => {
                       <figure className="media-left">
                         <p className="image is-128x128">
                           <RoundedImage
-                            src={authors[0].avatar.medium}
+                            image={authors[0].avatar.medium}
+                            width={128}
                             alt={authors[0].name}
                           />
                         </p>
@@ -169,7 +169,7 @@ export default ({ pageContext, data, location }) => {
   );
 };
 
-const RoundedImage = styled(Image)`
+const RoundedImage = styled(GatsbyImage)`
   border-radius: 50%;
 `;
 
@@ -199,3 +199,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default ArticlePage;

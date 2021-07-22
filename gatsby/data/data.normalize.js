@@ -8,7 +8,8 @@ function normalizeHero(article) {
 
   if (article.hero) {
     hero = {
-      full: article.hero.full.fluid,
+      full: article.hero.full.gatsbyImageData,
+      seo: article.hero.seo
     };
   } else {
     console.log("\u001B[33m", `Missing hero for "${article.title}"`);
@@ -26,9 +27,9 @@ function normalizeAvatar(author) {
 
   if (author.avatar) {
     avatar = {
-      small: author.avatar.small.fluid,
-      medium: author.avatar.medium.fluid,
-      large: author.avatar.large.fluid,
+      small: author.avatar.small.gatsbyImageData,
+      medium: author.avatar.medium.gatsbyImageData,
+      large: author.avatar.large.gatsbyImageData,
     };
   } else {
     console.log("\u001B[33m", `Missing avatar for "${author.name}"`);

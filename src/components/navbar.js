@@ -13,7 +13,7 @@ import {
 import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import NavbarItem from "@components/navbar-item";
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -53,10 +53,10 @@ const Navbar = class extends React.Component {
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
             <figure className="image is-vertical-center">
-              <Img
-                fluid={this.props.logo.childImageSharp.fluid}
-                className="nav-logo"
-              />
+              <GatsbyImage
+                image={this.props.logo.childImageSharp.gatsbyImageData}
+                alt="logo"
+                className="nav-logo" />
             </figure>
           </Link>
           <OutboundLink
@@ -171,17 +171,14 @@ const Navbar = class extends React.Component {
 
 export default () => (
   <StaticQuery
-    query={graphql`
-      query {
-        logo: file(relativePath: { eq: "abhith-logo-lg.png" }) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `}
+    query={graphql`{
+  logo: file(relativePath: {eq: "abhith-logo-lg.png"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
+    }
+  }
+}
+`}
     render={(data) => <Navbar logo={data.logo} />}
   />
 );
