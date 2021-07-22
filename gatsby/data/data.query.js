@@ -26,7 +26,8 @@ module.exports.local = {
             hero {
               full: childImageSharp {
                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-              }
+              },
+              seo: publicURL
             }
             commentId
             tableOfContents

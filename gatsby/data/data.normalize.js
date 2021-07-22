@@ -9,6 +9,7 @@ function normalizeHero(article) {
   if (article.hero) {
     hero = {
       full: article.hero.full.gatsbyImageData,
+      seo: article.hero.seo
     };
   } else {
     console.log("\u001B[33m", `Missing hero for "${article.title}"`);

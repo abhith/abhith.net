@@ -38,13 +38,13 @@ const ArticlePage = ({ pageContext, data, location }) => {
     0,
     article.slug.length - 1
   )}.mdx`;
-
+  
   return (
     <Layout>
       <Seo
         title={article.title}
         description={article.excerpt}
-        image={article.hero.full.src}
+        image={article.hero.seo}
         isBlogPost={true}
         slug={article.slug}
         dateModified={article.dateModifiedSeoFormat}
