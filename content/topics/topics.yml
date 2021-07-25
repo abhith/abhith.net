@@ -461,6 +461,10 @@
   slug: svelte
   description: ""
   image: ""
+- title: Synology
+  slug: synology
+  description: ""
+  image: ""
 - title: Testing
   slug: testing
   description: ""

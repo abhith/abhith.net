@@ -1,5 +1,26 @@
 [
   {
+    "title": "How Microsoft develops modern software with DevOps - Azure DevOps | Microsoft Docs",
+    "url": "https://docs.microsoft.com/en-us/devops/develop/how-microsoft-develops-devops",
+    "description": "",
+    "date": "2021-07-25T09:51:26.638Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "Git branching guidance - Azure Repos | Microsoft Docs",
+    "url": "https://docs.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance?view=azure-devops",
+    "description": "",
+    "date": "2021-07-25T09:50:26.638Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "Synology: 30 Second Portainer Install Using Task Scheduler & Docker – Marius Hosting",
+    "url": "https://mariushosting.com/synology-30-second-portainer-install-using-task-scheduler-docker/",
+    "description": "",
+    "date": "2021-07-25T09:49:26.638Z",
+    "tags": ["synology"]
+  },
+  {
     "title": "Dealing with access tokens in dotnet",
     "url": "https://josef.codes/dealing-with-access-tokens-in-dotnet/",
     "description": "Dealing with access tokens (including renewal) in dotnet.",
