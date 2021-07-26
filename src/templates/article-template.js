@@ -18,8 +18,7 @@ import ArticleShare from "../sections/article/article-share";
 import ArticleRelatedSnippets from "../sections/article/article-related-snippets";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
-import { GatsbyImage } from "gatsby-plugin-image"
-
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const ArticlePage = ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
@@ -38,7 +37,7 @@ const ArticlePage = ({ pageContext, data, location }) => {
     0,
     article.slug.length - 1
   )}.mdx`;
-  
+
   return (
     <Layout>
       <Seo
@@ -130,13 +129,10 @@ const ArticlePage = ({ pageContext, data, location }) => {
                             {authors[0].bio}
                             <br />
                             <Link
-                              to="/donate/"
-                              className="button k-button k-primary raised has-gradient rounded"
+                              to="/contact/"
+                              className="mt-2 button k-button k-secondary raised has-gradient rounded"
                             >
-                              Buy me a coffee{" "}
-                              <span role="img" aria-label="coffee">
-                                ☕
-                              </span>
+                              Connect
                             </Link>
                           </p>
                         </div>

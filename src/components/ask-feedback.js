@@ -29,14 +29,21 @@ const AskFeedback = () => {
       note = (
         <div className="notification is-warning is-light">
           <h4>Sorry about that!</h4>
-          <p> TODO(abhith): let me know how can I improve it?</p>
+          <p> TODO(abhith): Please let me know how can I improve it?</p>
         </div>
       );
     } else {
       note = (
         <div className="notification is-info is-light">
-          <h4>Show some ❤️</h4>
-          <p>Share this page on Twitter to appear on the webmentions* 💡</p>
+          <a
+            href="/donate/"
+            className="button k-button k-primary raised has-gradient rounded"
+          >
+            Buy me a coffee{" "}
+            <span role="img" aria-label="coffee">
+              ☕
+            </span>
+          </a>
         </div>
       );
     }
