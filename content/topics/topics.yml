@@ -464,7 +464,7 @@
 - title: Synology
   slug: synology
   description: ""
-  image: ""
+  image: "synology.svg"
 - title: Testing
   slug: testing
   description: ""
