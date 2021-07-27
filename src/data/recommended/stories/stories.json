@@ -1,5 +1,26 @@
 [
   {
+    "title": "Azure DevOps Pull Request build validation pipeline for .Net 5 project",
+    "url": "https://kumarashwinhubert.com/azure-devops-pull-request-build-validation-pipeline-for-net-5-project",
+    "description": "",
+    "date": "2021-07-27T09:52:26.638Z",
+    "tags": ["azure-devops"]
+  },
+  {
+    "title": "11 Git Commands I Use Every Day",
+    "url": "https://dev.to/domagojvidovic/11-git-commands-i-use-every-day-43eo",
+    "description": "",
+    "date": "2021-07-26T09:52:26.638Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "Domain-Driven Refactoring: Long Methods",
+    "url": "https://jimmybogard.com/domain-driven-refactoring-long-methods/",
+    "description": "",
+    "date": "2021-07-26T09:51:26.638Z",
+    "tags": ["style-guide"]
+  },
+  {
     "title": "How Microsoft develops modern software with DevOps - Azure DevOps | Microsoft Docs",
     "url": "https://docs.microsoft.com/en-us/devops/develop/how-microsoft-develops-devops",
     "description": "",
