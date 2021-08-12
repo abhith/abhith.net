@@ -20,7 +20,7 @@
     "gatsby-plugin-google-gtag": "^3.10.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-manifest": "^3.10.0",
-    "gatsby-plugin-mdx": "^2.10.0",
+    "gatsby-plugin-mdx": "^2.11.0",
     "gatsby-plugin-nprogress": "^3.10.0",
     "gatsby-plugin-offline": "^4.10.0",
     "gatsby-plugin-polyfill-io": "^1.1.0",
