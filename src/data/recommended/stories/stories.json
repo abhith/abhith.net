@@ -1,5 +1,19 @@
 [
   {
+    "title": ".NET Core 2.1 container images will be deleted from Docker Hub",
+    "url": "https://devblogs.microsoft.com/dotnet/net-core-2-1-container-images-will-be-deleted-from-docker-hub/",
+    "description": "",
+    "date": "2021-08-17T09:52:26.638Z",
+    "tags": ["dotnet-core", "docker"]
+  },
+  {
+    "title": "How to check if a string contains a substring in JavaScript",
+    "url": "https://flaviocopes.com/how-to-string-contains-substring-javascript/",
+    "description": "JavaScript offers many ways to check if a string contains a substring. Learn the canonical way, and also find out all the options you have, using plain JavaScript",
+    "date": "2021-07-28T09:52:26.638Z",
+    "tags": ["javascript"]
+  },
+  {
     "title": "Azure DevOps Pull Request build validation pipeline for .Net 5 project",
     "url": "https://kumarashwinhubert.com/azure-devops-pull-request-build-validation-pipeline-for-net-5-project",
     "description": "",
