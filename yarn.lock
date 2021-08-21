@@ -8096,12 +8096,12 @@ gatsby-plugin-robots-txt@^1.6.8:
     "@babel/runtime" "^7.14.0"
     generate-robotstxt "^8.0.3"
 
-gatsby-plugin-sass@^4.10.0:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-4.10.0.tgz#d0b6c088a261bf1ff1dcd6f5329962f2aa247890"
-  integrity sha512-BgAfcVAWOwbKCH+jyi34iMgAj7f6Jcwg+oK0TIpkJk6ARBewdtz8fGC0I/3pW21Z+fpFBgKzknC49FJl1vw0ug==
+gatsby-plugin-sass@^4.12.0:
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-4.12.0.tgz#a476a509cbfbf2f06b3a4678cbf4f801ff532c84"
+  integrity sha512-RGiyXoK9Y2nsfwedT7vTEkk6jqP66LrjY07vWPwI30DVBqiZw1Bno6V+GkMdfi3cSB0nOR9HwD33tiwwVIP9Lw==
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.14.8"
     resolve-url-loader "^3.1.2"
     sass-loader "^10.1.1"
 
