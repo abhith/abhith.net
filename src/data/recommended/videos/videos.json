@@ -1,5 +1,26 @@
 [
   {
+    "title": "Customize the toolbars in Visual Studio",
+    "url": "https://www.youtube.com/watch?v=hIIfjCw1JKc",
+    "date": "2021-07-22T09:35:23.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Data Backup: The 3-2-1 Rule",
+    "url": "https://www.youtube.com/watch?v=rFO6NyLIP7M",
+    "date": "2021-07-22T09:34:23.638Z",
+    "type": "youtube",
+    "tags": ["storage"]
+  },
+  {
+    "title": "Visual Studio 2022 Preview 3 - What's New!",
+    "url": "https://www.youtube.com/watch?v=WCTkZ1M_A3I",
+    "date": "2021-07-22T09:33:23.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio"]
+  },
+  {
     "title": "Alex Thissen - Logging, tracing and metrics: instrumenting your .NET Core based cloud applications",
     "url": "https://www.youtube.com/watch?v=IlOCteXbuZY",
     "date": "2021-07-05T09:33:23.638Z",
