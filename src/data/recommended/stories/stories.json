@@ -1,5 +1,26 @@
 [
   {
+    "title": "How to Update GitHub Topic Icon and Description",
+    "url": "https://blog.jongallant.com/2021/07/update-github-topic-icon-description/",
+    "description": "",
+    "date": "2021-08-22T09:54:26.638Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "Bite-Size C# 10 - Anonymous 'with' Expressions",
+    "url": "https://exceptionnotfound.net/bite-size-csharp-10-anonymous-with-expressions/",
+    "description": "Let's make our anonymous objects easier to copy using the with expression!",
+    "date": "2021-08-22T09:53:26.638Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Asp.Net Core MVC: a common base controller",
+    "url": "https://www.linkedin.com/pulse/aspnet-core-mvc-common-base-controller-fabio-mariano",
+    "description": "",
+    "date": "2021-08-22T09:52:26.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": ".NET Core 2.1 container images will be deleted from Docker Hub",
     "url": "https://devblogs.microsoft.com/dotnet/net-core-2-1-container-images-will-be-deleted-from-docker-hub/",
     "description": "",
