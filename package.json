@@ -17,7 +17,7 @@
     "gatsby-plugin-catch-links": "^3.10.0",
     "gatsby-plugin-emotion": "^6.10.0",
     "gatsby-plugin-feed": "^3.10.0",
-    "gatsby-plugin-google-gtag": "^3.10.0",
+    "gatsby-plugin-google-gtag": "^3.13.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-manifest": "^3.10.0",
     "gatsby-plugin-mdx": "^2.12.0",
