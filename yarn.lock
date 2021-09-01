@@ -8031,12 +8031,12 @@ gatsby-plugin-mdx@^2.12.0:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-nprogress@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-3.10.0.tgz#e4e03fb5f9edf3c164a39503e2f7a421b26084f8"
-  integrity sha512-5E/aoN7Qh6aiCViu/CUNLonajheenj7UeIzXAHBT/acP9f/knkc+9OU2TCvD9m/kUA5CqNSM5AxpJXG7XRmBKA==
+gatsby-plugin-nprogress@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-3.13.0.tgz#e3d0550f907be96406b49edc647c4776410d1c33"
+  integrity sha512-L6hMuecoDkJY1U8b+6Ojjs4MaXQq9pDA832EVbTITV51qbkkjNDw0qCeuwuBI4fVv8Oni7lc2+IkSWJvEaJvWw==
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.14.8"
     nprogress "^0.2.0"
 
 gatsby-plugin-offline@^4.10.0:
