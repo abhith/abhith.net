@@ -28,7 +28,7 @@
     "gatsby-plugin-recaptcha": "^1.0.5",
     "gatsby-plugin-robots-txt": "^1.6.8",
     "gatsby-plugin-sass": "^4.10.0",
-    "gatsby-plugin-sharp": "^3.10.2",
+    "gatsby-plugin-sharp": "^3.13.0",
     "gatsby-plugin-sitemap": "^4.6.0",
     "gatsby-plugin-theme-ui": "^0.10.1",
     "gatsby-plugin-twitter": "^3.10.0",
