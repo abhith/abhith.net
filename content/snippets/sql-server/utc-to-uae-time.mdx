@@ -1,0 +1,15 @@
+---
+title: UTC to UAE Time (Arabian Standard Time)
+description: Convert UTC time to Arabian Standard Time in SQL Server
+author: Abhith Rajan
+date: 2021-09-07T09:26:00.000Z
+topics:
+  - sql-server
+---
+
+```sql
+SELECT CONVERT(datetime, SWITCHOFFSET(GETUTCDATE(), DATEPART(TZOFFSET,
+GETUTCDATE() AT TIME ZONE 'Arabian Standard Time'))) AS CreationTime
+```
+
+Replace `GETUTCDATE()` with your table column that has the UTC time.
