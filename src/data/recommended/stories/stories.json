@@ -1,5 +1,33 @@
 [
   {
+    "title": "C# Is Dying",
+    "url": "https://medium.com/codex/c-is-dying-fa21a96107c5",
+    "description": "",
+    "date": "2021-09-13T09:56:26.638Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Service Blueprint Guide – With Examples | Miro",
+    "url": "https://miro.com/guides/service-blueprints/",
+    "description": "Wondering what a service blueprint is and how you can make one? Check out this expert guide and look at real life examples..",
+    "date": "2021-09-13T09:55:26.638Z",
+    "tags": ["documentation"]
+  },
+  {
+    "title": "Azure Pipelines: Loops",
+    "url": "https://operatingops.com/2021/03/04/azure-pipelines-loops/",
+    "description": "Five patterns for programming loops in Azure Pipelines that dynamically create jobs, steps, and other objects.",
+    "date": "2021-09-13T09:55:25.638Z",
+    "tags": ["azure-devops"]
+  },
+  {
+    "title": "Diátaxis Framework- A SYSTEMATIC FRAMEWORK FOR TECHNICAL DOCUMENTATION AUTHORING.",
+    "url": "https://diataxis.fr/",
+    "description": "The Diátaxis framework solves the problem of structure in technical documentation, making it easier to create, maintain and use.",
+    "date": "2021-09-13T09:54:26.638Z",
+    "tags": ["documentation"]
+  },
+  {
     "title": "How to Update GitHub Topic Icon and Description",
     "url": "https://blog.jongallant.com/2021/07/update-github-topic-icon-description/",
     "description": "",
