@@ -1,5 +1,26 @@
 [
   {
+    "title": "Cascadia Code Font",
+    "url": "https://devblogs.microsoft.com/math-in-office/cascadia-code-font/",
+    "description": "",
+    "date": "2021-09-19T09:56:28.638Z",
+    "tags": ["ide"]
+  },
+  {
+    "title": "Announcing PSReadLine 2.1+ with Predictive IntelliSense",
+    "url": "https://devblogs.microsoft.com/powershell/announcing-psreadline-2-1-with-predictive-intellisense/",
+    "description": "",
+    "date": "2021-09-19T09:56:27.638Z",
+    "tags": ["powershell"]
+  },
+  {
+    "title": "Run Chrome browser without CORS",
+    "url": "https://alfilatov.com/posts/run-chrome-without-cors/",
+    "description": "",
+    "date": "2021-09-19T09:56:26.638Z",
+    "tags": ["chrome"]
+  },
+  {
     "title": "C# Is Dying",
     "url": "https://medium.com/codex/c-is-dying-fa21a96107c5",
     "description": "",
