@@ -1,5 +1,19 @@
 [
   {
+    "title": "Integration testing | ASP.NET Core 5 REST API Tutorial 15",
+    "url": "https://www.youtube.com/watch?v=7roqteWLw4s",
+    "date": "2021-09-19T09:35:24.638Z",
+    "type": "youtube",
+    "tags": ["testing"]
+  },
+  {
+    "title": "Quality at Speed, How JIRA Does QA - Webinar",
+    "url": "https://www.youtube.com/watch?v=yRP29wFqu20",
+    "date": "2021-09-19T09:35:23.638Z",
+    "type": "youtube",
+    "tags": ["testing"]
+  },
+  {
     "title": "Verifying Microservice Integrations with Contract Testing - Atlassian Summit 2016",
     "url": "https://www.youtube.com/watch?v=-6x6XBDf9sQ",
     "date": "2021-09-18T09:35:23.638Z",

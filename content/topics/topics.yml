@@ -405,6 +405,10 @@
   slug: resharper
   description: ""
   image: ""
+- title: PowerShell
+  slug: powershell
+  description: ""
+  image: ""
 - title: Productivity
   slug: productivity
   description: ""
