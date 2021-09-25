@@ -1,5 +1,26 @@
 [
   {
+    "title": "Release Flow: How We Do Branching on the VSTS Team",
+    "url": "https://devblogs.microsoft.com/devops/release-flow-how-we-do-branching-on-the-vsts-team/",
+    "description": "",
+    "date": "2021-09-25T09:57:29.638Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "Minimal APIs in .NET 6 but where are the Unit Tests?",
+    "url": "https://www.hanselman.com/blog/minimal-apis-in-net-6-but-where-are-the-unit-tests",
+    "description": "",
+    "date": "2021-09-25T09:56:29.638Z",
+    "tags": ["aspnet-core", "testing"]
+  },
+  {
+    "title": "Automatic Unit Testing in .NET Core plus Code Coverage in Visual Studio Code",
+    "url": "https://www.hanselman.com/blog/automatic-unit-testing-in-net-core-plus-code-coverage-in-visual-studio-code",
+    "description": "",
+    "date": "2021-09-25T09:56:28.638Z",
+    "tags": ["vscode"]
+  },
+  {
     "title": "Cascadia Code Font",
     "url": "https://devblogs.microsoft.com/math-in-office/cascadia-code-font/",
     "description": "",
