@@ -1,5 +1,26 @@
 [
   {
+    "title": "How to Create a UUID in JavaScript",
+    "url": "https://davidwalsh.name/javascript-uuid",
+    "description": "",
+    "date": "2021-10-05T09:58:29.638Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "Sorting JavaScript Arrays By Nested Properties",
+    "url": "https://elijahmanor.com/byte/js-array-sort-nest",
+    "description": "",
+    "date": "2021-10-05T09:57:29.638Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "How to unit test private methods in .NET Core applications? (even if it’s bad) – Anthony Giretti's .NET blog",
+    "url": "https://anthonygiretti.com/2018/08/26/how-to-unit-test-private-methods-in-net-core-applications-even-if-its-bad/",
+    "description": "",
+    "date": "2021-09-27T09:57:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "Release Flow: How We Do Branching on the VSTS Team",
     "url": "https://devblogs.microsoft.com/devops/release-flow-how-we-do-branching-on-the-vsts-team/",
     "description": "",
