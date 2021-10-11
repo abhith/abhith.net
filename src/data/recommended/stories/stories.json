@@ -1,5 +1,26 @@
 [
   {
+    "title": "Deployed vs Released - Beyond Agility",
+    "url": "https://beyond-agility.com/deployment-vs-release/",
+    "description": "",
+    "date": "2021-10-11T10:59:29.638Z",
+    "tags": ["software-development"]
+  },
+  {
+    "title": "Boost your productivity with Productivity Power Tools Extensions in Visual Studio 2022!",
+    "url": "https://devblogs.microsoft.com/visualstudio/boost-your-productivity-with-productivity-power-tools-extensions-in-visual-studio-2022/",
+    "description": "One of the most popular and anticipated sets of extensions is now available to download for VS 2022 today: Productivity Power Tools!",
+    "date": "2021-10-11T09:59:29.638Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Differences between Hashtable vs Dictonary vs ConcurrentDictionary vs ImmutableDictionary",
+    "url": "https://www.hanselman.com/blog/differences-between-hashtable-vs-dictonary-vs-concurrentdictionary-vs-immutabledictionary",
+    "description": "",
+    "date": "2021-10-11T09:58:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "How to Create a UUID in JavaScript",
     "url": "https://davidwalsh.name/javascript-uuid",
     "description": "",
