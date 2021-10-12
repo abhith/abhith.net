@@ -1,5 +1,19 @@
 [
   {
+    "title": "Understanding How Facebook Disappeared from the Internet",
+    "url": "https://blog.cloudflare.com/october-2021-facebook-outage/",
+    "description": "",
+    "date": "2021-10-12T11:03:29.638Z",
+    "tags": ["post-mortems"]
+  },
+  {
+    "title": "SQL Server Hidden “Load Evil” (Performance Issue)With Dapper",
+    "url": "https://jithilmt.medium.com/sql-server-hidden-load-evil-performance-issue-with-dapper-465a08f922f6",
+    "description": "Article explains about the importance of DbString params",
+    "date": "2021-10-12T10:59:29.638Z",
+    "tags": ["dapper", "sql-server"]
+  },
+  {
     "title": "Deployed vs Released - Beyond Agility",
     "url": "https://beyond-agility.com/deployment-vs-release/",
     "description": "",
