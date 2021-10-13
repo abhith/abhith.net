@@ -1,5 +1,19 @@
 [
   {
+    "title": "What is Span in C# and why you should be using it",
+    "url": "https://www.youtube.com/watch?v=FM5dpxJMULY",
+    "date": "2021-10-13T09:37:24.638Z",
+    "type": "youtube",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Process vs Thread",
+    "url": "https://www.youtube.com/watch?v=Dhf-DYO1K78",
+    "date": "2021-10-13T09:36:24.638Z",
+    "type": "youtube",
+    "tags": ["software-development"]
+  },
+  {
     "title": "Backstage.io: Spotify's platform developer experience - Stefan Ålund",
     "url": "https://www.youtube.com/watch?v=3FR0G0XRDMA",
     "date": "2021-10-12T09:36:24.638Z",
