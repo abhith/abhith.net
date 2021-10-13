@@ -1,5 +1,19 @@
 [
   {
+    "title": "Announcing .NET 6 Release Candidate 2",
+    "url": "https://devblogs.microsoft.com/dotnet/announcing-net-6-release-candidate-2/",
+    "description": ".NET 6 Release Candidate 2 is now available.",
+    "date": "2021-10-13T11:03:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "C# Foreach",
+    "url": "https://www.csharp-examples.net/foreach/",
+    "description": "Online debuggable examples of foreach loop, continue/break statement, custom IEnumerable implementation. ➤ foreach (var name in names) {...}",
+    "date": "2021-10-13T10:03:29.638Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "Understanding How Facebook Disappeared from the Internet",
     "url": "https://blog.cloudflare.com/october-2021-facebook-outage/",
     "description": "",
