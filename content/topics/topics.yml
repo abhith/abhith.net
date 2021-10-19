@@ -334,6 +334,10 @@
   slug: machine-learning
   description: ""
   image: ""
+- title: Markdown
+  slug: markdown
+  description: "Markdown is a lightweight markup language for creating formatted text using a plain-text editor"
+  image: ""
 - title: MediatR
   slug: mediatr
   description: Simple, unambitious mediator implementation in .NET

@@ -1,4 +1,11 @@
 ---
+- title: Table to Markdown
+  url: https://tabletomarkdown.com/
+  description: 
+    "Table to Markdown is a simple Markdown table generator that converts tables from spreadsheet applications and websites into well-formatted Markdown tables."
+  date: "2021-10-19T08:30:28.263Z"
+  tags:
+    - markdown
 - title: Robots.txt generator - Create a robots.txt file instantly
   url: https://en.ryte.com/free-tools/robots-txt-generator
   description: 
