@@ -8004,10 +8004,10 @@ gatsby-plugin-recaptcha@^1.0.5:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-robots-txt@^1.6.8:
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-robots-txt/-/gatsby-plugin-robots-txt-1.6.8.tgz#28968ca767ac4e45bf71b18eb1d363abb55aa6cd"
-  integrity sha512-Lw/r+gBbjvCiVnqJaO24aBUFO0VMZMHgKupy/LLzxxVE8OuEbTpwUv2aYZvtOZIXnKJfdbf/Znu43t7qAp5sdw==
+gatsby-plugin-robots-txt@^1.6.13:
+  version "1.6.13"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-robots-txt/-/gatsby-plugin-robots-txt-1.6.13.tgz#01e1ce68e3f4e07f957ac9a20cd2a9e12fdd3f79"
+  integrity sha512-MUPJsvkALwSmfRb1L3IVNmzIqwV35fol1RVot425ZYXvtD+s0OtZli5VnhLNxsX0beodyavzFl0SRJCCQZz0/g==
   dependencies:
     "@babel/runtime" "^7.14.0"
     generate-robotstxt "^8.0.3"
