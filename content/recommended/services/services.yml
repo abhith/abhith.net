@@ -1,4 +1,12 @@
 ---
+- title: Visual Studio Code for the Web
+  url: https://vscode.dev/
+  description: 
+    "Build with Visual Studio Code, anywhere, anytime, entirely in your browser."
+  date: "2021-10-24T08:30:28.263Z"
+  tags:
+    - vscode
+    - ide
 - title: Table to Markdown
   url: https://tabletomarkdown.com/
   description: 
