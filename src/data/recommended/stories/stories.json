@@ -1,5 +1,26 @@
 [
   {
+    "title": "Microsoft VS Code is now available in the web browser",
+    "url": "https://news.thewindowsclub.com/microsoft-vs-code-is-now-available-in-the-web-browser-106383/",
+    "description": "VS Code, also known as Visual Studio Code, is now available as a lightweight tool on the web, supported by modern web browsers.",
+    "date": "2021-10-24T11:03:29.638Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "JSON in SQL Server: The Ultimate Guide",
+    "url": "https://www.databasestar.com/json-sql-server/",
+    "description": "JSON is a popular format for storing data. Learn how to store JSON in SQL Server and how to use related functions in this guide.",
+    "date": "2021-10-24T11:03:28.638Z",
+    "tags": ["sql-server"]
+  },
+  {
+    "title": "SQL Concatenation for comma seperated list using XML PATH() without COALESCE",
+    "url": "https://www.kodyaz.com/articles/concatenate-using-xml-path.aspx",
+    "description": "Get column values as comma seperated list using XML PATH() instead of UDF's using COALESCE",
+    "date": "2021-10-24T11:03:27.638Z",
+    "tags": ["sql-server"]
+  },
+  {
     "title": "Announcing .NET 6 Release Candidate 2",
     "url": "https://devblogs.microsoft.com/dotnet/announcing-net-6-release-candidate-2/",
     "description": ".NET 6 Release Candidate 2 is now available.",
