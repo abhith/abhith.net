@@ -1,5 +1,26 @@
 [
   {
+    "title": "Setting up Azure DevOps CI/CD for a .NET Core 3.1 Web App hosted in Azure App Service for Linux",
+    "url": "https://www.hanselman.com/blog/setting-up-azure-devops-cicd-for-a-net-core-31-web-app-hosted-in-azure-app-service-for-linux",
+    "description": "",
+    "date": "2021-10-31T12:04:29.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Should you unit-test API/MVC controllers in ASP.NET Core?",
+    "url": "https://andrewlock.net/should-you-unit-test-controllers-in-aspnetcore/",
+    "description": "In this post I discuss unit testing of API/MVC controllers in ASP.NET Core and some of the difficulties you face.",
+    "date": "2021-10-31T11:04:29.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "title": "Creating the Perfect Commit in Git",
+    "url": "https://css-tricks.com/creating-the-perfect-commit-in-git/",
+    "description": "A commit can be something that helps us stay on top of things. It can be a container for related changes that belong to one and only one topic, and thereby make it easier for us to understand what happened. In this post, we’re talking about what it takes to produce the perfect commit.",
+    "date": "2021-10-31T11:03:29.638Z",
+    "tags": ["git"]
+  },
+  {
     "title": "Microsoft VS Code is now available in the web browser",
     "url": "https://news.thewindowsclub.com/microsoft-vs-code-is-now-available-in-the-web-browser-106383/",
     "description": "VS Code, also known as Visual Studio Code, is now available as a lightweight tool on the web, supported by modern web browsers.",
