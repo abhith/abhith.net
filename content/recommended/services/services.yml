@@ -1,4 +1,25 @@
 ---
+- title: Try .NET | Runnable .NET code on your site
+  url: https://dotnet.microsoft.com/platform/try-dotnet
+  description: 
+    "Try .NET is a service that allows you to embed runnable .NET code snippets into your website, blog, or documentation. Go beyond copy and paste samples to live snippets."
+  date: "2021-10-31T09:31:28.263Z"
+  tags:
+    - dotnet
+- title: ASCIIFlow
+  url: https://asciiflow.com/
+  description: 
+    "Infinite ASCII diagrams, save to Google Drive, resize, freeform draw, and export straight to text/html."
+  date: "2021-10-31T09:30:28.263Z"
+  tags:
+    - developer-tools
+- title: mindmaps
+  url: https://www.mindmaps.app
+  description: 
+    "mindmaps is an HTML5 based mind mapping app. It lets you create neat looking mind maps in the browser."
+  date: "2021-10-31T08:30:28.263Z"
+  tags:
+    - developer-tools
 - title: Visual Studio Code for the Web
   url: https://vscode.dev/
   description: 
@@ -268,7 +289,7 @@
   tags:
     - identityserver
 - title: Unix Time Stamp - Epoch Converter
-  url: https://www.unixtimestamp.com/index.php
+  url: https://www.unixtimestamp.com
   description:
     Epoch and unix timestamp converter for developers. Date and time function
     syntax reference for various programming languages.
