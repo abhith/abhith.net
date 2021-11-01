@@ -1,5 +1,26 @@
 [
   {
+    "title": "Exploring C# 10: Global Using Declarations",
+    "url": "https://www.daveabrock.com/2021/10/21/csharp-10-global-usings/",
+    "description": "Let's explore global using directives in C# 10, a nice way to make your namespaces available throughout your project.",
+    "date": "2021-11-01T11:03:29.638Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "How to send disappearing messages in every damn chat app",
+    "url": "https://thenextweb.com/news/how-to-use-disappearing-messages-in-whatsapp-telegram-signal-messenger-instagram",
+    "description": "Wanna hide your chats from prying eyes? Here's how to use disappearing messages in WhatsApp, Signal, Telegram, Messenger, and Instagram.",
+    "date": "2021-11-01T11:02:29.638Z",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "More details about the Facebook October 4 outage",
+    "url": "https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/",
+    "description": "Now that our platforms are up and running after yesterday’s outage, we are sharing more detail on what happened and what we've learned.",
+    "date": "2021-11-01T11:01:29.638Z",
+    "tags": ["post-mortems"]
+  },
+  {
     "title": "Setting up Azure DevOps CI/CD for a .NET Core 3.1 Web App hosted in Azure App Service for Linux",
     "url": "https://www.hanselman.com/blog/setting-up-azure-devops-cicd-for-a-net-core-31-web-app-hosted-in-azure-app-service-for-linux",
     "description": "",
