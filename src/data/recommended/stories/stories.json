@@ -1,5 +1,12 @@
 [
   {
+    "title": "What’s New in Angular 13",
+    "url": "https://www.telerik.com/blogs/whats-new-angular-13",
+    "description": "We have another great version of Angular released to us. Here are the highlights of version 13!",
+    "date": "2021-11-07T11:03:29.638Z",
+    "tags": ["angular"]
+  },
+  {
     "title": "Exploring C# 10: Global Using Declarations",
     "url": "https://www.daveabrock.com/2021/10/21/csharp-10-global-usings/",
     "description": "Let's explore global using directives in C# 10, a nice way to make your namespaces available throughout your project.",
