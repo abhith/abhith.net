@@ -1,5 +1,26 @@
 [
   {
+    "title": "Supercharge refactoring with IntelliCode in Visual Studio 2022",
+    "url": "https://www.youtube.com/watch?v=WX8Rgqjny5A",
+    "date": "2021-11-09T09:39:24.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "New debugger features in Visual Studio 2022",
+    "url": "https://www.youtube.com/watch?v=yIVIj6ENRFA",
+    "date": "2021-11-09T09:38:24.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio", "debug"]
+  },
+  {
+    "title": "Fixing sync over async issues in .NET / C# with Visual Studio 2022",
+    "url": "https://www.youtube.com/watch?v=Yvt83lPRCys",
+    "date": "2021-11-09T09:37:24.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio", "dotnet"]
+  },
+  {
     "title": "OpenVPN Server on Synology NAS! Full Setup Tutorial to Security Connect Back Remotely on Mac or PC!",
     "url": "https://www.youtube.com/watch?v=HF_VgvS90KA",
     "date": "2021-10-31T09:37:24.638Z",
