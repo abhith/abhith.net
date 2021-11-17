@@ -1,5 +1,26 @@
 [
   {
+    "title": "What the Heck is Backstage Anyway?",
+    "url": "https://engineering.atspotify.com/2020/03/17/what-the-heck-is-backstage-anyway/",
+    "description": "",
+    "date": "2021-11-17T12:03:29.638Z",
+    "tags": ["backstage"]
+  },
+  {
+    "title": "Microsoft’s GitHub CEO Nat Friedman is stepping down, product chief Thomas Dohmke will replace him",
+    "url": "https://www.cnbc.com/2021/11/03/microsoft-github-ceo-nat-friedman-replaced-by-thomas-dohmke.html",
+    "description": "The announcement comes weeks after one of GitHub's most prominent competitors, GitLab, went public. GitLab was worth twice what Microsoft paid for GitHub.",
+    "date": "2021-11-17T11:03:29.638Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "Announcing .NET 6 -- The Fastest .NET Yet",
+    "url": "https://devblogs.microsoft.com/dotnet/announcing-net-6/",
+    "description": ".NET 6 is now available. It is easier to use, runs faster, and has many new features.",
+    "date": "2021-11-09T11:03:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "What’s New in Angular 13",
     "url": "https://www.telerik.com/blogs/whats-new-angular-13",
     "description": "We have another great version of Angular released to us. Here are the highlights of version 13!",
