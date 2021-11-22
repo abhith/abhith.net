@@ -1,5 +1,19 @@
 [
   {
+    "title": "The Many Faces of VS Code in the Browser",
+    "url": "https://css-tricks.com/the-many-faces-of-vs-code-in-the-browser/",
+    "description": "VS Code is built from web technologies (HTML, CSS, and JavaScript), but dare I say today it's mostly used a local app that's installed on your machine.",
+    "date": "2021-11-21T13:03:29.638Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "How to give constructive design feedback",
+    "url": "https://www.sketch.com/blog/2021/11/18/how-to-give-constructive-design-feedback/",
+    "description": "Learn how to put your thoughts into words and make sure your feedback is getting the love it needs by communicating effectively and constructively",
+    "date": "2021-11-21T12:03:29.638Z",
+    "tags": ["guides"]
+  },
+  {
     "title": "What the Heck is Backstage Anyway?",
     "url": "https://engineering.atspotify.com/2020/03/17/what-the-heck-is-backstage-anyway/",
     "description": "",
