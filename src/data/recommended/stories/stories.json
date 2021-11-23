@@ -1,5 +1,19 @@
 [
   {
+    "title": "Updating your project to use File Scoped Namespaces - Gérald Barré",
+    "url": "https://www.meziantou.net/updating-your-project-to-use-file-scoped-namespaces.htm",
+    "description": "In this post, I describe how to automatically update all of the files to use File Scoped Namespaces (C# 10 feature).",
+    "date": "2021-11-23T04:03:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "A Lifecycle Approach to API Versioning | Nordic APIs |",
+    "url": "https://nordicapis.com/a-lifecycle-approach-to-api-versioning/",
+    "description": "APIs changes are inevitable. So, how do we manage this change? In this post, Matthias presents a lifecycle approach to API versioning.",
+    "date": "2021-11-22T04:03:29.638Z",
+    "tags": ["api-management"]
+  },
+  {
     "title": "The Many Faces of VS Code in the Browser",
     "url": "https://css-tricks.com/the-many-faces-of-vs-code-in-the-browser/",
     "description": "VS Code is built from web technologies (HTML, CSS, and JavaScript), but dare I say today it's mostly used a local app that's installed on your machine.",
