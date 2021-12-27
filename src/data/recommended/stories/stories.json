@@ -1,5 +1,26 @@
 [
   {
+    "title": "Microsoft .NET History - Linha do tempo",
+    "url": "https://time.graphics/pt/line/593132",
+    "description": "",
+    "date": "2021-12-27T05:03:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "SQL Server Profiler Extension for Azure Data Studio",
+    "url": "https://www.mssqltips.com/sqlservertip/7080/sql-server-profiler-extension-azure-data-studio/",
+    "description": "Learn how to install and use the SQL Server Profiler extension for Azure Data Studio to use against on-premises and cloud databases.",
+    "date": "2021-12-26T05:03:29.638Z",
+    "tags": ["sql-server", "ide"]
+  },
+  {
+    "title": "How to message unsaved WhatsApp numbers on Android",
+    "url": "https://www.xda-developers.com/how-to-message-unsaved-whatsapp-numbers-android/",
+    "description": "If you want to message unsaved numbers on WhatsApp, here's how you can do it in two simple and quick ways using your Android smartphone.",
+    "date": "2021-12-26T04:03:29.638Z",
+    "tags": ["android"]
+  },
+  {
     "title": "Updating your project to use File Scoped Namespaces - Gérald Barré",
     "url": "https://www.meziantou.net/updating-your-project-to-use-file-scoped-namespaces.htm",
     "description": "In this post, I describe how to automatically update all of the files to use File Scoped Namespaces (C# 10 feature).",
