@@ -1,5 +1,19 @@
 [
   {
+    "title": "Fixing .NET Core tool update issues",
+    "url": "https://devopsjournal.io/blog/2020/09/18/fixing-dotnet-core-update-issues",
+    "description": "",
+    "date": "2022-01-01T06:03:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "11 great apps for your new Windows 11 PC",
+    "url": "https://www.theverge.com/22837232/windows-11-pc-best-apps-microsoft-2021",
+    "description": "This year marked the launch of Windows 11, and while the updated Microsoft Store fills out with apps, we figured we’d put together a list of our 11 favorite apps for a new Windows 11 PC.",
+    "date": "2022-01-01T05:03:29.638Z",
+    "tags": ["windows"]
+  },
+  {
     "title": "Microsoft .NET History - Linha do tempo",
     "url": "https://time.graphics/pt/line/593132",
     "description": "",
