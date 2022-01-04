@@ -1,5 +1,19 @@
 [
   {
+    "title": "Native Bracket Pair Colourization in VS Code",
+    "url": "https://dev.to/nickytonline/native-bracket-pair-colourization-in-vs-code-3f1n",
+    "description": "",
+    "date": "2022-01-04T07:03:29.638Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "Upgrading from .NET Core 2.1 to .NET 6.0",
+    "url": "https://jason.sultana.net.au/dotnet/2021/12/30/upgrade-net2.1-net6.html",
+    "description": "",
+    "date": "2022-01-04T06:03:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "Fixing .NET Core tool update issues",
     "url": "https://devopsjournal.io/blog/2020/09/18/fixing-dotnet-core-update-issues",
     "description": "",
