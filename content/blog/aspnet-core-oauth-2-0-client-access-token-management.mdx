@@ -11,15 +11,15 @@ tags:
   - identityserver
 ---
 
-In a **microservice** world, the machine (microservice A) to machine (microservice B) communications can be secured using an an **OAuth 2.0** compatible token service, **IdentityServer** in our case. i.e In order to successfully call microservice B, the microservice A need to get an access token first via client credentials grant type from the IdentityServer with the right scope for the operation.
+In a **microservice** world, the machine (microservice A) to machine (microservice B) communications can be secured using an **OAuth 2.0** compatible token service, **IdentityServer** in our case. i.e To successfully call microservice B, microservice A needs to get an access token first via client credentials grant type from the IdentityServer with the right scope for the operation.
 
 - microservice A calls IdentityServer to get an `access token`.
-- microservice A then calls microservice B with access token in the authorization header (bearer token).
-- microservice B validates the access token, responds back to microservice A with valid response.
+- microservice A then calls microservice B with the access token in the authorization header (bearer token).
+- microservice B validates the access token, responds to microservice A with a valid response.
 
-The above steps are fine for a single call, but in case of multiple calls from A to B, A doesn't need to get IdentityServer token everytime since each token has its own validity, so bacically A can reuse the token until it expires.
+The above steps are fine for a single call, but in case of multiple calls from A to B, A doesn't need to get an IdentityServer token every time since each token has its validity, so basically, A can reuse the token until it expires.
 
-For the token reusing, you don't need to implement the caching and refreshing token logic anywhere since some good people who are maintaining [IdentityModel.AspNetCore](https://github.com/IdentityModel/IdentityModel.AspNetCore) already done that. All we need to do is setup it, and consume.
+For the token reusing, you don't need to implement the caching and refreshing token logic anywhere since some good people who are maintaining [IdentityModel.AspNetCore](https://github.com/IdentityModel/IdentityModel.AspNetCore) already done that. All we need to do is set up it, and consume it.
 
 The library will take care of the following,
 
@@ -31,7 +31,7 @@ let's jump into the setup. Following are our assumptions,
 
 - microservice B has endpoints,
   - `POST /orders` and it requires IdentityServer token with `orders.write` scope to create new orders,
-  - and to fetch the orders `GET /orders` endpoint, scope for that one is `orders.read`.
+  - and to fetch the orders `GET /orders` endpoint, the scope for that one is `orders.read`.
 - microservice A has valid client credentials configured on the IdentityServer with the above scopes added to the allowed scopes. i.e microservice A is allowed to call the microservice B.
 
 So let's configure microservice A,
@@ -58,11 +58,10 @@ services.AddClientAccessTokenClient(AppConsts.StsClientName, AppConsts.StsClient
 ```
 
 Here we setup the token management service and a named HttpClient that uses the same.
-
 Also you can observe, we moved the static string params to a `AppConsts.cs` file,
 
 ```cs
-public class CampaignAppConsts
+public class AppConsts
 {
     public const string OrdersWriteScope = "orders.write";
     public static string OrdersReadScope = "orders.read";
@@ -70,7 +69,7 @@ public class CampaignAppConsts
 }
 ```
 
-And the configurations like client credentials, token service endpoint and rest are kept in the `appsettings.json` or somewhere more private like Azure App Configuration, keyvault and loaded to the aspnetcore configurations.
+And the configurations like client credentials, token service endpoint, and rest are kept in the `appsettings.json` or somewhere more private like Azure App Configuration, keyvault, and loaded to the aspnetcore configurations.
 
 ```json
   "ApiBaseUrl": "https://microservice-b.com",
@@ -83,8 +82,8 @@ And the configurations like client credentials, token service endpoint and rest 
   },
 ```
 
-Configuration done, now lets consume the `HttpClient`.
-Here I'm using `Flurl` to make the HTTP request, if you prefer direct HttpClient usage, you can do that way, basically you don't need to do anything special to get the access token since it is already taken care of.
+Configuration is done, now let's consume the `HttpClient`.
+Here I'm using `Flurl` to make the HTTP request, if you prefer direct HttpClient usage, you can do that way. You don't need to do anything special to get the access token since it is already taken care of.
 
 ```cs
 using Flurl.Http;
@@ -110,7 +109,7 @@ public class GetOrdersQueryHandler : IRequestHandler<SomeInput, SomeOutput>
 ```
 
 As you can see, we use the named httpClient, and that client is already configured to have the access token with the scopes.
-That's it. You can use the same way to call the create order endpoint since the client has access token with both scopes.
+That's it. You can use the same way to call the create order endpoint since the client has an access token with both scopes.
 
 ## Additional Resources
 
