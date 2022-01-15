@@ -8236,12 +8236,12 @@ gatsby-recipes@^0.25.0:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
-gatsby-remark-autolink-headers@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-4.7.0.tgz#d9ec2b106d88dfdf350f5019da62c1b8959baacc"
-  integrity sha512-afBTKEoBUBakmS48QKrjSuTWUrmx5KDXGexIbbl3sP8ty3/dsAe2XWs8HJPKSrSqa/KOSF3R6WQ6Iis7l7q5Ew==
+gatsby-remark-autolink-headers@^4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-4.11.0.tgz#829d51672a033a765017c439ce80d991c075e7af"
+  integrity sha512-wklhIRpVQfv9xMPoSVKDl/DRLBzxKWr13PRQgw602zVmj/IdMzgVarJgU8aCzlyb3+JztlptnKE1U/htFs8HGQ==
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.15.4"
     github-slugger "^1.3.0"
     lodash "^4.17.21"
     mdast-util-to-string "^2.0.0"
