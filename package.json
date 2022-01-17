@@ -45,7 +45,7 @@
     "gatsby-remark-smartypants": "^4.11.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-json": "^3.14.0",
-    "gatsby-transformer-remark": "^4.7.0",
+    "gatsby-transformer-remark": "^4.11.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "gatsby-transformer-yaml": "^3.14.0",
     "intersection-observer": "^0.12.0",
