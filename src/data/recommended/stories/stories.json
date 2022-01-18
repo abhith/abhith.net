@@ -1,5 +1,19 @@
 [
   {
+    "title": "Fix Error, You cannot visit site right now because the website uses HSTS - VirtuallyWired",
+    "url": "https://virtuallywired.io/2020/01/02/fix-error-you-cannot-visit-site-right-now-because-the-website-uses-hsts/",
+    "description": "Fix Error, You cannot visit site right now because the website uses HSTS by deleting that URL from the Delete Domain Security Policies.",
+    "date": "2022-01-13T07:03:29.638Z",
+    "tags": ["chrome"]
+  },
+  {
+    "title": "Use Azure Cache For Redis In AspNetCore Application Using Distributed Cache Technique[.NET6]",
+    "url": "https://www.learmoreseekmore.com/2021/12/dotnet6-use-azure-cache-for-redis-in-aspnetcore-app-using-idistributed-cache-technique.html",
+    "description": "In this article, we are going to do a small demo on integrating Azure Redis Cache into the AspNetCore Application using Distributed cache",
+    "date": "2022-01-11T07:03:29.638Z",
+    "tags": ["dotnet", "aspnet-core"]
+  },
+  {
     "title": "Native Bracket Pair Colourization in VS Code",
     "url": "https://dev.to/nickytonline/native-bracket-pair-colourization-in-vs-code-3f1n",
     "description": "",
