@@ -1,5 +1,26 @@
 [
   {
+    "title": "HTTP Logging in ASP.NET Core 6.0",
+    "url": "https://www.youtube.com/watch?v=DvYGodosnOs",
+    "date": "2022-01-19T09:49:24.638Z",
+    "type": "youtube",
+    "tags": ["aspnet-core", "c-sharp", "logging"]
+  },
+  {
+    "title": "Speed up your .NET app with the .NET memory profilers in Visual Studio 2022",
+    "url": "https://www.youtube.com/watch?v=x8mRttvzJBs",
+    "date": "2022-01-19T09:48:24.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "High-performance logging in .NET, the proper way",
+    "url": "https://www.youtube.com/watch?v=a26zu-pyEyg",
+    "date": "2022-01-19T09:39:24.638Z",
+    "type": "youtube",
+    "tags": ["dotnet", "c-sharp", "logging"]
+  },
+  {
     "title": "Supercharge refactoring with IntelliCode in Visual Studio 2022",
     "url": "https://www.youtube.com/watch?v=WX8Rgqjny5A",
     "date": "2021-11-09T09:39:24.638Z",
