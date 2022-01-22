@@ -5,7 +5,7 @@
   "author": "Abhith Rajan",
   "dependencies": {
     "@emotion/core": "^11.0.0",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/styled": "^11.6.0",
     "@fastly/performance-observer-polyfill": "^2.0.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
