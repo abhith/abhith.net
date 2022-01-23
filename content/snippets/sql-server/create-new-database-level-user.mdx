@@ -1,0 +1,43 @@
+---
+title: Create New Database Level User
+description: Create a database-level user in SQL Server/Azure SQL.
+author: Abhith Rajan
+date: 2022-01-23T09:26:00.000Z
+topics:
+  - sql-server
+  - security
+---
+
+Connect to your SQL-Server using privileged account credentials (eg. sa) in your favorite IDE.
+I still use **SSMS** together with **Azure Data Studio**.
+
+Set the query target database, In most IDE, right click on the DB, then new query.
+
+```sql
+CREATE USER [username]
+WITH PASSWORD = 'password'
+-- add user to role(s) in db
+ALTER ROLE [db_datareader] ADD MEMBER [username];
+ALTER ROLE [db_datawriter] ADD MEMBER [username];
+ALTER ROLE [db_ddladmin] ADD MEMBER [username];
+GRANT EXECUTE TO [username]
+```
+
+Execute the above statement after replacing the `username` and `password` according to your choice.
+You can also manage the roles as per your needs.
+
+Some of the `Fixed-database` roles are,
+
+| Fixed-Database role name | Description                                                                                                                                                                                                                                                                                                 |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| db_owner                 | Members of the db_owner fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in SQL Server. (In SQL Database and Azure Synapse, some maintenance activities require server-level permissions and cannot be performed by db_owners.) |
+| db_ddladmin              | Members of the db_ddladmin fixed database role can run any Data Definition Language (DDL) command in a database.                                                                                                                                                                                            |
+| db_datawriter            | Members of the db_datawriter fixed database role can add, delete, or change data in all user tables.                                                                                                                                                                                                        |
+| db_datareader            | Members of the db_datareader fixed database role can read all data from all user tables and views. User objects can exist in any schema except sys and INFORMATION_SCHEMA.                                                                                                                                  |
+
+**_Note_**: In order to connect to the DB using the new credentials, **you need to specify the database name** in the advanced options from your IDE since the above credentials don't have the privilege to list the DB's in the server.
+
+## Additional Resources
+
+- [Database-Level Roles - SQL Server](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles)
+- [GRANT Object Permissions (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/statements/grant-object-permissions-transact-sql)
