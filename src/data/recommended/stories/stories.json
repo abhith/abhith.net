@@ -1,5 +1,26 @@
 [
   {
+    "title": "Announcing the GitHub integration with Microsoft Teams | The GitHub Blog",
+    "url": "https://github.blog/2020-09-10-announcing-the-github-integration-with-microsoft-teams/",
+    "description": "",
+    "date": "2022-01-26T09:03:29.638Z",
+    "tags": ["github", "microsoft-teams"]
+  },
+  {
+    "title": "GitHub: Import an Azure DevOps Repo | by Eric Anderson | ITNEXT",
+    "url": "https://itnext.io/github-import-an-azure-devops-repo-1a3eb27ab06a",
+    "description": "",
+    "date": "2022-01-26T08:03:29.638Z",
+    "tags": ["azure-devops", "github"]
+  },
+  {
+    "title": "Azure DevOps – Failed to delete branch. Force push permission is required to delete branches – Praveen Kumar Sreeram's Blog",
+    "url": "https://praveenkumarsreeram.com/2020/06/24/azure-devops-failed-to-delete-branch-force-push-permission-is-required-to-delete-branches/",
+    "description": "",
+    "date": "2022-01-26T07:03:29.638Z",
+    "tags": ["azure-devops"]
+  },
+  {
     "title": "Troy Hunt: How I Got Pwned by My Cloud Costs",
     "url": "https://www.troyhunt.com/how-i-got-pwned-by-my-cloud-costs/",
     "description": "",
