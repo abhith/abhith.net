@@ -1,5 +1,12 @@
 [
   {
+    "title": "[ GitHub Tutorial ] Continuous code analysis with CodeQL",
+    "url": "https://www.youtube.com/watch?v=KEPiDz2oO-I",
+    "date": "2022-01-30T09:49:24.638Z",
+    "type": "youtube",
+    "tags": ["github"]
+  },
+  {
     "title": "HTTP Logging in ASP.NET Core 6.0",
     "url": "https://www.youtube.com/watch?v=DvYGodosnOs",
     "date": "2022-01-19T09:49:24.638Z",
