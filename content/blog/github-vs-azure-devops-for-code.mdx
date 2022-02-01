@@ -1,0 +1,117 @@
+---
+title: GitHub vs Azure DevOps - For Code
+description: Comparing GitHub and Azure DevOps for code management and related features. Hopefully, this post will encourage you to switch to GitHub.
+author: Abhith Rajan
+date: 2022-02-01T09:26:00.000Z
+image: /img/blog/github-vs-azure-devops-for-code/github-vs-azure-devops-for-code.png
+tags:
+  - github
+  - azure-devops
+---
+
+I have been using [Azure DevOps][2] as well as [GitHub][1] for many years now. All open-source stuff is on GitHub (some private repositories too.), and all work stuff is on Azure DevOps. I love [Azure DevOps][2], but for **code** management, I prefer using [GitHub][1] instead.
+
+Since both are owned by **Microsoft**, and seeing the recent developments and features all happening on the GitHub side compared to Azure DevOps, my mind is pretty clear on which to choose for the future.
+It's not just me, but many people agree on the same. Jump to the [40:20](https://www.youtube.com/watch?v=K5aO97x2208&t=2420s) on the below video and hear yourself.
+
+`youtube: https://www.youtube.com/watch?v=K5aO97x2208&start=2420s`
+
+So, I would like to see this change (move all our repo to GitHub) in my organization.
+Currently, we use Azure DevOps for both code & CI/CD pipelines.
+
+Since it is an organization-wide change, I cannot just go and tell my manager about this change. Instead, I have to present what benefits we are getting through this change.
+
+For that, I thought of creating an internal presentation and side-by-side this public blog.
+
+So in this post, I will try to list out things that attract me towards GitHub for code management.
+
+## Dependabot
+
+_Automated dependency updates built into GitHub._
+
+One of the main attracting factors towards GitHub.
+Since we have many projects and tracking all the dependencies manually is not possible at all.
+
+:point_right: [Keep all your packages up to date with Dependabot](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/)
+
+**Dependabot**'s automated PRs with updated packages/dependencies help a lot.
+
+![Dependabot PRs](../../static/img/blog/github-vs-azure-devops-for-code/dependabot-prs.png)
+
+And the security alerts,
+
+![Dependabot Alerts](../../static/img/blog/github-vs-azure-devops-for-code/dependabot-alerts.png)
+
+## Code Scanning
+
+[Code scanning](https://resources.github.com/code-scanning/) is GitHub’s native SAST (Static Application Security Testing) tool, a developer-first approach to SAST that enables vulnerabilities to be found and remediated effortlessly before they reach production.
+
+Here’s what GitHub code scanning can help you do:
+
+- Find, triage, and prioritize vulnerabilities in your code.
+- See security issues in your pull requests as part of your review process.
+- Prevent new vulnerabilities from making it to production.
+- Schedule scans for specific days and times, or trigger scans when a specific event occurs in the repository, such as a push.
+
+The [CodeQL](https://codeql.github.com/) action part of the code scanning features of GitHub is good even though comes at a price (of course free for open source).
+And I prefer the `security-and-quality` query suite for the `CodeQL`.
+
+![Code Scanning Alerts](../../static/img/blog/github-vs-azure-devops-for-code/code-scanning-alerts.png)
+
+## Marketplace and integrations
+
+Both Azure DevOps and GitHub have many integrations available. But IMHO, GitHub has a better collection, growing too.
+
+### JIRA
+
+We manage our work items through [Jira][3]. One of the main things we are missing in Azure DevOps is the Jira integration whereas there's an official integration available between JIRA and GitHub.
+
+Linking work items to code have many benefits.
+
+![Development links in the Jira issue details](../../static/img/blog/github-vs-azure-devops-for-code/jira-development.png)
+![GitHub Branches](../../static/img/blog/github-vs-azure-devops-for-code/jira-branches.png)
+![GitHub Commits](../../static/img/blog/github-vs-azure-devops-for-code/jira-commits.png)
+![GitHub PRs](../../static/img/blog/github-vs-azure-devops-for-code/jira-prs.png)
+
+GitHub issues, boards all are awesome but JIRA is a bit more advanced as well as customizable for software project management, so can't ask to switch to GitHub at this time (still I prefer GitHub).
+
+## Azure Pipelines vs GitHub Actions
+
+Yes, a complete switch to GitHub from Azure DevOps might be possible by replacing Azure DevOps pipelines with GitHub actions. But people mostly hate change when things are working fine with the current setup. So one step at a time in terms of change.
+
+i.e First code migration, then slowly pipelines. The first candidate for that can be PR builds as part of GitHub actions.
+
+## Pricing
+
+Looks complicated on GitHub. In most places, it is like `Contact Sales`.
+The change would be an easier task if the billing can be done through an Azure Subscription but looks like it is not possible at the moment.
+
+## Code Migration From Azure DevOps to GitHub
+
+The code repository migration from Azure DevOps to GitHub is pretty easy.
+
+- Import repository
+  ![Import repository](../../static/img/blog/github-vs-azure-devops-for-code/import-repo.png)
+- Give your Azure DevOps Repo URL, and fill in the rest.
+- And on the next screen, it will ask for credentials to access your DevOps repo. `Git credentials` for the Azure DevOps repo will work fine. You can generate that one on the clone window on Azure DevOps as shown below.
+  ![Azure DevOps > Git Credentials](../../static/img/blog/github-vs-azure-devops-for-code/git-credentials.png)
+
+That's it. You will not miss any code history after migration.
+
+## Final Notes
+
+After reading this,
+
+- Are you convinced that GitHub is better compared to Azure DevOps for code?
+- If you are a GitHub pro, did I miss any goodness of GitHub over Azure DevOps in terms of code management?
+
+Let me know in the comments below :point_down:
+
+## Additional Resources
+
+- [Azure DevOps vs GitHub: Comparing Microsoft's DevOps Tools](https://acloudguru.com/blog/engineering/azure-devops-vs-github-comparing-microsofts-devops-twins)
+- [Azure DevOps vs GitHub | UpGuard](https://www.upguard.com/blog/microsoft-visual-studio-team-services-vs-github)
+
+[1]: /topics/github/
+[2]: /topics/azure-devops/
+[3]: /topics/jira/
