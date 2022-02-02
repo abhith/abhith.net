@@ -9,17 +9,21 @@ tags:
   - azure-devops
 ---
 
-I have been using [Azure DevOps][2] as well as [GitHub][1] for many years now. All open-source stuff is on GitHub (some private repositories too.), and all work stuff is on Azure DevOps. I love [Azure DevOps][2], but for **code** management, I prefer using [GitHub][1] instead.
+I have been using [Azure DevOps][2] as well as [GitHub][1] for many years now.
+All open-source stuff is on GitHub (some private repositories too.), and all work stuff is on Azure DevOps.
+I love [Azure DevOps][2], but for **code** management, I prefer using [GitHub][1] instead.
 
 Since both are owned by **Microsoft**, and seeing the recent developments and features all happening on the GitHub side compared to Azure DevOps, my mind is pretty clear on which to choose for the future.
-It's not just me, but many people agree on the same. Jump to the [40:20](https://www.youtube.com/watch?v=K5aO97x2208&t=2420s) on the below video and hear yourself.
+It's not just me, but many people agree on the same.
+Jump to the [40:20](https://www.youtube.com/watch?v=K5aO97x2208&t=2420s) on the below video and hear yourself.
 
 `youtube: https://www.youtube.com/watch?v=K5aO97x2208&start=2420s`
 
 So, I would like to see this change (move all our repo to GitHub) in my organization.
 Currently, we use Azure DevOps for both code & CI/CD pipelines.
 
-Since it is an organization-wide change, I cannot just go and tell my manager about this change. Instead, I have to present what benefits we are getting through this change.
+Since it is an organization-wide change, I cannot just go and tell my manager about this change.
+Instead, I have to present what benefits we are getting through this change.
 
 For that, I thought of creating an internal presentation and side-by-side this public blog.
 
@@ -60,7 +64,8 @@ And I prefer the `security-and-quality` query suite for the `CodeQL`.
 
 ## Marketplace and integrations
 
-Both Azure DevOps and GitHub have many integrations available. But IMHO, GitHub has a better collection, growing too.
+Both Azure DevOps and GitHub have many integrations available.
+But IMHO, GitHub has a better collection, growing too.
 
 ### JIRA
 
@@ -75,16 +80,32 @@ Linking work items to code have many benefits.
 
 GitHub issues, boards all are awesome but JIRA is a bit more advanced as well as customizable for software project management, so can't ask to switch to GitHub at this time (still I prefer GitHub).
 
+## GitHub Checks
+
+There are several GitHub apps which is capable of running powerful checks against the code changes in the repository.
+Apps that perform continuous integration, code linting, or code scanning services and provide detailed feedback on commits.
+
+![GitHub Checks](../../static/img/blog/github-vs-azure-devops-for-code/checks.png)
+
 ## Azure Pipelines vs GitHub Actions
 
-Yes, a complete switch to GitHub from Azure DevOps might be possible by replacing Azure DevOps pipelines with GitHub actions. But people mostly hate change when things are working fine with the current setup. So one step at a time in terms of change.
+Azure Pipelines are way matured compared to GitHub Actions.
 
-i.e First code migration, then slowly pipelines. The first candidate for that can be PR builds as part of GitHub actions.
+But yes, a complete switch to GitHub from Azure DevOps might be possible by replacing Azure DevOps pipelines with GitHub actions.
+But people mostly hate change when things are working fine with the current setup.
+So one step at a time in terms of change.
+
+i.e First code migration, then slowly pipelines.
+The first candidate for GitHub Actions can be PR builds.
 
 ## Pricing
 
 Looks complicated on GitHub. In most places, it is like `Contact Sales`.
 The change would be an easier task if the billing can be done through an Azure Subscription but looks like it is not possible at the moment.
+
+---
+
+If you plan to migrate to GitHub, the following sections will help you.
 
 ## Code Migration From Azure DevOps to GitHub
 
@@ -97,6 +118,23 @@ The code repository migration from Azure DevOps to GitHub is pretty easy.
   ![Azure DevOps > Git Credentials](../../static/img/blog/github-vs-azure-devops-for-code/git-credentials.png)
 
 That's it. You will not miss any code history after migration.
+
+## Change Azure Pipeline Repository From Azure DevOps to GitHub
+
+Since in our case, we have all pipelines already configured in the DevOps.
+And don't want to change any of them other than the repository location.
+This can be done by following the below steps.
+
+- Edit the existing pipeline
+- In the upper right corner open the ... menu
+- Pick the ⚡ Triggers option
+- Click the YAML tab
+- Click the Get Sources option
+- Reconfigure the source repo to GitHub.
+
+You might need to choose a `GitHub connection` to pick the repo.
+For that, better to install the [Azure Pipelines](https://github.com/marketplace/azure-pipelines) GitHub app and give it access to the repository.
+Which will create a connection back to your Azure DevOps account.
 
 ## Final Notes
 
