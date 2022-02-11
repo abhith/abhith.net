@@ -1,5 +1,26 @@
 [
   {
+    "title": "Calling REST APIs From the IDE",
+    "url": "https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/calling-rest-apis-from-the-ide/ba-p/3145949?WT.mc_id=DOP-MVP-4025064",
+    "description": "",
+    "date": "2022-02-11T09:06:29.638Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "Showing and hiding content in Adaptive Cards",
+    "url": "https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/showing-and-hiding-content-in-adaptive-cards/ba-p/3142385?WT.mc_id=DOP-MVP-4025064",
+    "description": "Possible ways of showing and hiding content in Adaptive Cards, learn about all possible methods.",
+    "date": "2022-02-11T09:05:29.638Z",
+    "tags": ["microsoft-teams"]
+  },
+  {
+    "title": "Different Ways to Initialize Arrays in C# - Code Maze",
+    "url": "https://code-maze.com/csharp-initialize-arrays/",
+    "description": "In this article, we are going to talk about different techniques that we can use to initialize arrays in C#.",
+    "date": "2022-02-11T09:04:29.638Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "Bringing Code Cleanup on Save To Visual Studio 2022 17.1 Preview 2 - Visual Studio Blog",
     "url": "https://devblogs.microsoft.com/visualstudio/bringing-code-cleanup-on-save-to-visual-studio-2022-17-1-preview-2/",
     "description": "",
