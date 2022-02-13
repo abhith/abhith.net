@@ -1,5 +1,12 @@
 [
   {
+    "title": "Override appsettings.json connection strings by setting them directly in the portal when using Azure App Service",
+    "url": "https://davecallan.com/override-appsettings-json-connection-strings-portal-azure-app-service/",
+    "description": "",
+    "date": "2022-02-13T09:04:29.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "Calling REST APIs From the IDE",
     "url": "https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/calling-rest-apis-from-the-ide/ba-p/3145949?WT.mc_id=DOP-MVP-4025064",
     "description": "",
