@@ -11,7 +11,7 @@
     "@mdx-js/react": "^1.6.22",
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "bulma": "^0.9.3",
-    "bulma-timeline": "^3.0.4",
+    "bulma-timeline": "^3.0.5",
     "gatsby": "^3.14.6",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-catch-links": "^3.14.0",
