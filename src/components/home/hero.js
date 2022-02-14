@@ -35,12 +35,9 @@ export default function Hero() {
                         enable: true,
                       },
                       move: {
-                        direction: "none",
-                        enable: true,
-                        outMode: "bounce",
-                        random: false,
+                        outMode: "out",
                         speed: 1,
-                        straight: false,
+                        enable: true,
                       },
                       number: {
                         value: 16,
@@ -157,6 +154,21 @@ export default function Hero() {
                       size: {
                         value: 24,
                         random: false,
+                        animation: {
+                          enable: true,
+                          speed: 3,
+                          minimumValue: 10,
+                          sync: false,
+                        },
+                      },
+                      opacity: {
+                        animation: {
+                          enable: true,
+                          startValue: "random",
+                          minimumValue: 0.1,
+                          speed: 1,
+                          sync: false,
+                        },
                       },
                     },
                     detectRetina: true,
