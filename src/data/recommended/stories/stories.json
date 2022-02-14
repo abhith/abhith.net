@@ -1,5 +1,19 @@
 [
   {
+    "title": "Measuring Performance After Migration from .NET5 to .NET 6 | HackerNoon",
+    "url": "https://hackernoon.com/measuring-performance-after-migration-from-net5-to-net-6",
+    "description": "An article about benchmarks of the open-source eCommerce platform after migrating to the latest Microsoft technology, .NET 6.",
+    "date": "2022-02-14T09:06:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Google just surrendered its update authority to Samsung - Android Authority",
+    "url": "https://www.androidauthority.com/samsung-vs-google-updates-3104089/",
+    "description": "With four years of OS updates versus Google's three, Samsung's Galaxy S22 long-term support promise is now the best in the business.",
+    "date": "2022-02-14T09:06:29.638Z",
+    "tags": ["android"]
+  },
+  {
     "title": "Override appsettings.json connection strings by setting them directly in the portal when using Azure App Service",
     "url": "https://davecallan.com/override-appsettings-json-connection-strings-portal-azure-app-service/",
     "description": "",
