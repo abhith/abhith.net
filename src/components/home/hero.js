@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
 import PreviewCompatibleImage from "../preview-compatible-image";
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
 export default function Hero() {
   return (
     <StaticQuery
@@ -14,23 +14,40 @@ export default function Hero() {
               <div className="hero-head"></div>
               <div id="particles-js">
                 <Particles
-                  width="100%"
-                  height="100%"
-                  params={{
+                  id="tsparticles"
+                  options={{
+                    fullScreen: {
+                      enable: false,
+                      zIndex: 1,
+                    },
                     particles: {
+                      color: {
+                        value: "#ccc",
+                      },
+                      links: {
+                        color: "#ffffff",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.5,
+                        width: 1,
+                      },
+                      collisions: {
+                        enable: true,
+                      },
+                      move: {
+                        direction: "none",
+                        enable: true,
+                        outMode: "bounce",
+                        random: false,
+                        speed: 1,
+                        straight: false,
+                      },
                       number: {
                         value: 16,
                         density: {
                           enable: true,
-                          value_area: 800,
+                          area: 800,
                         },
-                      },
-                      line_linked: {
-                        enable: true,
-                      },
-                      move: {
-                        speed: 1,
-                        out_mode: "out",
                       },
                       shape: {
                         type: ["images"],
@@ -137,21 +154,12 @@ export default function Hero() {
                           },
                         ],
                       },
-                      color: {
-                        value: "#ccc",
-                      },
                       size: {
                         value: 24,
                         random: false,
-                        anim: {
-                          enable: true,
-                          speed: 3,
-                          size_min: 10,
-                          sync: false,
-                        },
                       },
                     },
-                    retina_detect: true,
+                    detectRetina: true,
                   }}
                   style={{
                     position: "absolute",
@@ -213,17 +221,18 @@ export default function Hero() {
   );
 }
 
-export const query = graphql`{
-  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
-    frontmatter {
-      heading
-      subheading
-      image {
-        childImageSharp {
-          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+export const query = graphql`
+  {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        heading
+        subheading
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
         }
       }
     }
   }
-}
 `;
