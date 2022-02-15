@@ -1,4 +1,11 @@
 ---
+- title: Time.is - exact time, any time zone
+  url: https://time.is/
+  description: 
+    "7 million locations, 53 languages, synchronized with atomic clock time."
+  date: "2022-02-15T09:31:28.263Z"
+  tags:
+    - developer-tools
 - title: Meta Tags — Preview, Edit and Generate
   url: https://metatags.io/
   description: 
