@@ -1,5 +1,19 @@
 [
   {
+    "title": "How to configure Dependabot with Gradle - My Personal Space 🛰️",
+    "url": "https://www.sameerkulkarni.de/posts/dependabot-with-gradle/",
+    "description": "",
+    "date": "2022-02-15T09:07:29.638Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "New Chrome 0-Day Bug Under Active Attack – Update Your Browser ASAP!",
+    "url": "https://thehackernews.com/2022/02/new-chrome-0-day-bug-under-active.html",
+    "description": "Google has released an update for its Chrome web browser that patches a new actively exploited zero-day flaw.",
+    "date": "2022-02-15T09:06:29.638Z",
+    "tags": ["chrome"]
+  },
+  {
     "title": "Measuring Performance After Migration from .NET5 to .NET 6 | HackerNoon",
     "url": "https://hackernoon.com/measuring-performance-after-migration-from-net5-to-net-6",
     "description": "An article about benchmarks of the open-source eCommerce platform after migrating to the latest Microsoft technology, .NET 6.",
