@@ -13,7 +13,7 @@
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "bulma": "^0.9.3",
     "bulma-timeline": "^3.0.5",
-    "gatsby": "^4.7.1",
+    "gatsby": "^4.7.2",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-catch-links": "^4.7.0",
     "gatsby-plugin-emotion": "^7.7.0",
