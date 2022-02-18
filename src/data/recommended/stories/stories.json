@@ -1,5 +1,19 @@
 [
   {
+    "title": "Announcing .NET 7 Preview 1 - .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/announcing-net-7-preview-1/",
+    "description": "Announcing .NET 7 Preview 1, the first preview of a major .NET version that will focus on app modernization, cloud native, containers and more.",
+    "date": "2022-02-18T09:08:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "ASP.NET Core updates in .NET 7 Preview 1 - .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-net-7-preview-1/",
+    "description": "",
+    "date": "2022-02-18T09:07:29.638Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "title": "How to configure Dependabot with Gradle - My Personal Space 🛰️",
     "url": "https://www.sameerkulkarni.de/posts/dependabot-with-gradle/",
     "description": "",
