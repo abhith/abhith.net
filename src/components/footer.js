@@ -101,19 +101,6 @@ function Footer() {
                         LinkedIn
                       </OutboundLink>
                     </li>
-                    <li>
-                      <OutboundLink
-                        target="_blank"
-                        href={`https://gitlab.com/abhith`}
-                      >
-                        <img
-                          role="presentation"
-                          src="/img/site/icons/social/gitlab.svg"
-                          alt="gitlab-logo"
-                        />{" "}
-                        GitLab
-                      </OutboundLink>
-                    </li>
                     <li className="has-margin">
                       <a
                         className="twitter-follow-button"
