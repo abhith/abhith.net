@@ -110,8 +110,9 @@ const ArticlePage = ({ pageContext, data, location }) => {
                       <div className="media-content">
                         <div className="content">
                           <p>
+                            <span className="subtitle mr-1">Written by</span>
                             <strong className="title is-4">
-                              Written by {authors[0].name}
+                              {authors[0].name}
                             </strong>{" "}
                             <span>
                               <a
