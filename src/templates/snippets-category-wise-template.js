@@ -52,6 +52,7 @@ function SnippetsPage({ pageContext, data }) {
               <Pagination
                 previousPagePath={previousPagePath}
                 nextPagePath={nextPagePath}
+                kind={`snippets`}
               />
             </div>
             <TopicsCloud

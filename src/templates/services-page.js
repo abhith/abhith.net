@@ -29,6 +29,7 @@ export default class RecommendedServicesIndexPage extends React.Component {
                 <Pagination
                   previousPagePath={previousPagePath}
                   nextPagePath={nextPagePath}
+                  kind={`services`}
                 ></Pagination>
               </div>
               <div className="column"></div>

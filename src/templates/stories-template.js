@@ -67,6 +67,7 @@ function StoriesPage({ pageContext, data }) {
               <Pagination
                 previousPagePath={previousPagePath}
                 nextPagePath={nextPagePath}
+                kind={`stories`}
               />
             </div>
             <TopicCloud

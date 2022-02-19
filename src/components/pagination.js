@@ -5,30 +5,41 @@ import { Link } from "gatsby";
 export default class Pagination extends Component {
   static propTypes = {
     previousPagePath: PropTypes.string,
-    nextPagePath: PropTypes.string
+    nextPagePath: PropTypes.string,
+    kind: PropTypes.string,
   };
 
   render() {
     return (
       <nav
-        className="pagination is-rounded is-medium"
+        className="pagination ar-pagination ar-pagination-links"
         role="navigation"
         aria-label="pagination"
       >
         <Link
-          className="pagination-previous"
+          className="pagination-previous button ar-fat-button is-primary is-light ar-pagination-prev"
           to={this.props.previousPagePath}
           disabled={!this.props.previousPagePath}
+          title="Previous"
         >
-          Previous
+          <i>←</i>
+          <span>
+            <em>{this.props.kind}:</em>
+            <strong>Previous</strong>
+          </span>
         </Link>
 
         <Link
-          className="pagination-next"
+          className="pagination-next button ar-fat-button is-primary is-light ar-pagination-next"
           to={this.props.nextPagePath}
           disabled={!this.props.nextPagePath}
+          title="Next"
         >
-          Next
+          <span>
+            <em>{this.props.kind}:</em>
+            <strong>Next</strong>
+          </span>
+          <i>→</i>
         </Link>
       </nav>
     );
