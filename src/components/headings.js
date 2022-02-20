@@ -99,7 +99,7 @@ const h6 = styled.h6`
   `};
 `;
 
-export default {
+const Heading = {
   h1,
   h2,
   h3,
@@ -107,3 +107,5 @@ export default {
   h5,
   h6,
 };
+
+export default Heading;
