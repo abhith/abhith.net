@@ -329,32 +329,34 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
       // related items
       let snippetRelatedArticles = articles
-        .filter((item) => snippet.topics.some((t) => item.tags.includes(t)))
+        .filter((item) =>
+          snippet.topics.some((topic) => item.tags.includes(topic))
+        )
         .slice(0, 6);
 
       let snippetRelatedSnippets = snippets
         .filter(
           (item) =>
             snippet.id !== item.id &&
-            snippet.topics.some((t) => item.topics.includes(t))
+            snippet.topics.some((topic) => item.topics.includes(topic))
         )
         .slice(0, 6);
 
       let snippetRelatedStories = allStories.data.stories.edges
         .filter((item) =>
-          snippet.topics.some((t) => item.node.tags.includes(t))
+          snippet.topics.some((topic) => item.node.tags.includes(topic))
         )
         .slice(0, 6);
 
       let snippetRelatedVideos = allVideos.data.videos.edges
         .filter((item) =>
-          snippet.topics.some((t) => item.node.tags.includes(t))
+          snippet.topics.some((topic) => item.node.tags.includes(topic))
         )
         .slice(0, 3);
 
       let snippetRelatedTools = allTools.data.tools.edges
         .filter((item) =>
-          snippet.topics.some((t) => item.node.tags.includes(t))
+          snippet.topics.some((topic) => item.node.tags.includes(topic))
         )
         .slice(0, 2);
 
@@ -491,7 +493,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
           context: {
             category: topic,
             categorySlug: topic.slug,
-            topics: topics.filter((topic) => topic.totalSnippets > 0),
+            topics: topics.filter((topicItem) => topicItem.totalSnippets > 0),
           },
         });
       }
