@@ -1,5 +1,26 @@
 [
   {
+    "title": "Optimizing msbuild (C#/.NET/C++) build performance with Visual Studio 2022",
+    "url": "https://www.youtube.com/watch?v=WpB8rFQrB74",
+    "date": "2022-02-20T09:59:25.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Welcome to Visual Studio 2022 – by Scott Hanselman and friends",
+    "url": "https://www.youtube.com/watch?v=f8jXO946eDw",
+    "date": "2022-02-20T09:59:24.638Z",
+    "type": "youtube",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Azure Synapse Fraud Detection Using Big Data Analytics | Clearsale's Practical Use Case",
+    "url": "https://www.youtube.com/watch?v=4TQBB4qW43M",
+    "date": "2022-02-20T09:49:24.638Z",
+    "type": "youtube",
+    "tags": ["azure"]
+  },
+  {
     "title": "How to automate across Jira & Gitlab (Cloud)",
     "url": "https://www.youtube.com/watch?v=vYlXRl7vIsQ",
     "date": "2022-02-06T09:49:24.638Z",
