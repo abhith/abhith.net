@@ -28,7 +28,7 @@
     "gatsby-plugin-react-helmet": "^5.7.0",
     "gatsby-plugin-recaptcha": "^1.0.5",
     "gatsby-plugin-robots-txt": "^1.7.0",
-    "gatsby-plugin-sass": "^5.7.0",
+    "gatsby-plugin-sass": "^5.8.0",
     "gatsby-plugin-sharp": "^4.7.0",
     "gatsby-plugin-sitemap": "^5.7.0",
     "gatsby-plugin-theme-ui": "^0.13.1",
