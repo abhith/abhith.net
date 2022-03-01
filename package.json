@@ -5,7 +5,7 @@
   "author": "Abhith Rajan",
   "dependencies": {
     "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.7.1",
+    "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.6.0",
     "@fastly/performance-observer-polyfill": "^2.0.0",
     "@mdx-js/mdx": "^1.6.22",
@@ -21,7 +21,7 @@
     "gatsby-plugin-google-gtag": "^4.7.0",
     "gatsby-plugin-image": "^2.7.0",
     "gatsby-plugin-manifest": "^4.7.0",
-    "gatsby-plugin-mdx": "^3.7.1",
+    "gatsby-plugin-mdx": "^3.9.0",
     "gatsby-plugin-nprogress": "^4.7.0",
     "gatsby-plugin-offline": "^5.7.0",
     "gatsby-plugin-polyfill-io": "^1.1.0",
