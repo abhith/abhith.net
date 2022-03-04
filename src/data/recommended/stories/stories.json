@@ -1,5 +1,19 @@
 [
   {
+    "title": "Samsung is artificially slowing down your Galaxy smartphone - SamMobile",
+    "url": "https://www.sammobile.com/news/samsung-is-artificially-slowing-down-your-galaxy-smartphone/",
+    "description": "",
+    "date": "2022-03-03T09:08:29.638Z",
+    "tags": ["samsung"]
+  },
+  {
+    "title": "7 Improvements You Might Have Missed in .NET 6 | by Matthew MacDonald | Young Coder | Feb, 2022 | Medium",
+    "url": "https://medium.com/young-coder/7-improvements-you-might-have-missed-in-net-6-a7cda9df88f1",
+    "description": "",
+    "date": "2022-02-21T09:08:29.638Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "Announcing .NET 7 Preview 1 - .NET Blog",
     "url": "https://devblogs.microsoft.com/dotnet/announcing-net-7-preview-1/",
     "description": "Announcing .NET 7 Preview 1, the first preview of a major .NET version that will focus on app modernization, cloud native, containers and more.",
