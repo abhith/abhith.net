@@ -1,5 +1,26 @@
 [
   {
+    "title": "C# Language Highlights: Properties",
+    "url": "https://www.youtube.com/watch?v=o-EtDWOm56Y",
+    "date": "2022-03-09T09:59:45.638Z",
+    "type": "youtube",
+    "tags": ["dotnet", "c-sharp"]
+  },
+  {
+    "title": "Exploring Source Generation for Logging",
+    "url": "https://www.youtube.com/watch?v=Otm8tH0Vrp0",
+    "date": "2022-03-09T09:59:35.638Z",
+    "type": "youtube",
+    "tags": ["dotnet", "logging", "aspnet-core"]
+  },
+  {
+    "title": "How to use Windows Sandbox - a lightweight virtual machine",
+    "url": "https://www.youtube.com/watch?v=UywHb0rOHVI",
+    "date": "2022-03-09T09:59:25.638Z",
+    "type": "youtube",
+    "tags": ["windows"]
+  },
+  {
     "title": "Optimizing msbuild (C#/.NET/C++) build performance with Visual Studio 2022",
     "url": "https://www.youtube.com/watch?v=WpB8rFQrB74",
     "date": "2022-02-20T09:59:25.638Z",
