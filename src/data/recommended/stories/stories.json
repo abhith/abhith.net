@@ -1,5 +1,19 @@
 [
   {
+    "title": "Deploy More Often | Blog",
+    "url": "https://ardalis.com/deploy-more-often/",
+    "description": "If you're not already practicing continuous deployment, odds are your team and company would benefit from more frequent deployments.",
+    "date": "2022-03-10T09:09:29.638Z",
+    "tags": ["devops"]
+  },
+  {
+    "title": "Automate code metrics and class diagrams with GitHub Actions - .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/automate-code-metrics-and-class-diagrams-with-github-actions/",
+    "description": "Let's take a look at how you can add code metrics and diagrams for your open-source .NET repositories with GitHub Actions.",
+    "date": "2022-03-10T09:08:29.638Z",
+    "tags": ["dotnet", "github"]
+  },
+  {
     "title": "Geekbench just banned the last four years of Samsung flagships over throttling debacle",
     "url": "https://www.androidpolice.com/geekbench-banned-four-years-samsung-flagships-throttling-debacle/",
     "description": "Mess with benchmarks, and your phones get benched",
