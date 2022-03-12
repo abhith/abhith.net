@@ -7538,16 +7538,16 @@ gatsby-plugin-image@^2.7.0:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
-gatsby-plugin-manifest@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.7.0.tgz#8ee8fcddec51154c04ccfab1e36f78e7880e3438"
-  integrity sha512-jZsR7sqvJsxTm2J01ymPsCXlEoYw9duVQUR3oNy9VxHyuPOXctk2Cnp/vnWDZpQ6g+i7ha1RhyJEQgQEj1jhcQ==
+gatsby-plugin-manifest@^4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.9.1.tgz#20513c7d942b424795b802506893c0f909c69b7a"
+  integrity sha512-Fye2vr7ioc7ETVKdCfpbc5ByU28+EB7ocqSORbazPgAT8OiPazpaBAYm98BONceuK3WaxGoEXMsmwmNBIIPjRA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.7.0"
-    gatsby-plugin-utils "^3.1.0"
+    gatsby-core-utils "^3.9.1"
+    gatsby-plugin-utils "^3.3.0"
     semver "^7.3.5"
-    sharp "^0.29.3"
+    sharp "^0.30.1"
 
 gatsby-plugin-mdx@^3.9.1:
   version "3.9.1"
@@ -7593,10 +7593,10 @@ gatsby-plugin-mdx@^3.9.1:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-nprogress@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-4.7.0.tgz#314557f50e8bbac7ba199d0d45bb9dee2ed9c212"
-  integrity sha512-Zrvcvt4cgUK456GRQ7Yjj185oGPvBU56DGJqYgFKX4pUlvAfCPCsTSPcYrl6oiXOYftO1dVk36037XR5Fxi0NQ==
+gatsby-plugin-nprogress@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-4.9.0.tgz#6c73130616a55964c37589d2042503341fc3f102"
+  integrity sha512-GZd31Tfsp6vjFfZjjX2Zmlw4s6rWODg2TAJHN9FNHzZHDz+sqw1R++QVePnxBaFF5XzCpxiIkQiHr6vhzAJziA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     accessible-nprogress "^2.1.2"
