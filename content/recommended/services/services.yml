@@ -1,4 +1,39 @@
 ---
+- title: Process Hacker
+  url: https://processhacker.sourceforge.io/
+  description: 
+    "Process Hacker, A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware."
+  date: "2022-03-09T09:35:28.263Z"
+  tags:
+    - windows
+- title: Consumer Reports Security Planner - Improve your online safety with tools for your needs.
+  url: https://securityplanner.consumerreports.org/
+  description: 
+    "Improve your online safety with tools for your needs. Answer a few simple questions to get personalized recommendations of free and open-source software. It's confidential -- no personal information is stored, and we won't access any of your online accounts."
+  date: "2022-03-09T09:34:28.263Z"
+  tags:
+    - privacy
+- title: Pages to PDF - Convert your PAGES to PDF for Free Online
+  url: https://www.zamzar.com/convert/pages-to-pdf/
+  description: 
+    "Do you want to convert a PAGES file to a PDF file ? Don't download software - use Zamzar to convert it for free online. Click to convert your PAGES file now."
+  date: "2022-03-09T09:33:28.263Z"
+  tags:
+    - developer-tools
+- title: iRuler.net - Online ruler
+  url: https://iruler.net/
+  description: 
+    "This website measures the size of your screen and creates the image of a ruler that is the actual size."
+  date: "2022-03-09T09:32:28.263Z"
+  tags:
+    - developer-tools
+- title: Blur Busters TestUFO Motion Tests. Benchmark for monitors & displays.
+  url: https://www.testufo.com/
+  description: 
+    "Blur Busters UFO Motion Tests with ghosting test, 30fps vs 60fps, 120hz vs 144hz vs 240hz, PWM test, motion blur test, judder test, benchmarks, and more."
+  date: "2022-03-09T09:31:28.263Z"
+  tags:
+    - developer-tools
 - title: Time.is - exact time, any time zone
   url: https://time.is/
   description: 
