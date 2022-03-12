@@ -1,5 +1,26 @@
 [
   {
+    "title": "Plan and track projects closer to your code #DemoDays",
+    "url": "https://www.youtube.com/watch?v=SI1ra-XHWHM",
+    "date": "2022-03-12T09:59:56.638Z",
+    "type": "youtube",
+    "tags": ["github", "project-management"]
+  },
+  {
+    "title": "The new GitHub Issues",
+    "url": "https://www.youtube.com/watch?v=64xO030aneI",
+    "date": "2022-03-12T09:59:55.638Z",
+    "type": "youtube",
+    "tags": ["github"]
+  },
+  {
+    "title": "DevOps Series - Introduction to Azure DevOps S1 E1",
+    "url": "https://www.youtube.com/watch?v=K5aO97x2208",
+    "date": "2022-03-09T09:59:55.638Z",
+    "type": "youtube",
+    "tags": ["azure-devops"]
+  },
+  {
     "title": "C# Language Highlights: Properties",
     "url": "https://www.youtube.com/watch?v=o-EtDWOm56Y",
     "date": "2022-03-09T09:59:45.638Z",
