@@ -152,6 +152,7 @@ module.exports = {
       options: {
         defaultLayouts: { default: templates.page },
         gatsbyRemarkPlugins: [
+          { resolve: "gatsby-remark-mermaid" },
           {
             resolve: `gatsby-remark-images`,
             options: {
