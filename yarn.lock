@@ -8029,10 +8029,10 @@ gatsby-plugin-catch-links@^4.9.0:
     "@babel/runtime" "^7.15.4"
     escape-string-regexp "^1.0.5"
 
-gatsby-plugin-emotion@^7.9.0:
-  version "7.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-7.9.0.tgz#ed031ac43b4ee3ce070bf3ccb58563fb92b75586"
-  integrity sha512-Zg0WzefNjA5iL9BNX5YCdlPOIZoODVSlrZ+AAUHvhx5XkxKcApW0oznkCi9k2HsSyDrv20BiaT82A4PJfHFSkQ==
+gatsby-plugin-emotion@^7.10.0:
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-7.10.0.tgz#ed32682fd59bfcaa67b09d4cca3c90b19e864d61"
+  integrity sha512-IhcFx//D+7pYbRxVrJCB3H3ert8cmzz3CS0H74pblcQBbJuBqS3gL4JJQ0dOqTsayCyNxW/MVEKxIv03lp8CVw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@emotion/babel-preset-css-prop" "^11.2.0"
