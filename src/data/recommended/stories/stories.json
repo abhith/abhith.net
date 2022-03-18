@@ -1,5 +1,19 @@
 [
   {
+    "title": "Fun Things You Can Do With github.dev 😎 - DEV Community",
+    "url": "https://dev.to/lostintangent/10-awesome-things-you-can-do-with-github-dev-5fm7",
+    "description": "GitHub recently released github.dev, which allows you to press . on any repo in order to open it in...",
+    "date": "2022-03-18T09:09:29.638Z",
+    "tags": [ "github", "vscode"]
+  },
+  {
+    "title": "The problem with tutorials",
+    "url": "https://code.visualstudio.com/blogs/2022/03/08/the-tutorial-problem",
+    "description": "How Laravel uses containerized dev environments to make a better tutorial",
+    "date": "2022-03-14T09:09:29.638Z",
+    "tags": ["vscode"]
+  },
+  {
     "title": "Deploy More Often | Blog",
     "url": "https://ardalis.com/deploy-more-often/",
     "description": "If you're not already practicing continuous deployment, odds are your team and company would benefit from more frequent deployments.",
