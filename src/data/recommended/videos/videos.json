@@ -1,5 +1,12 @@
 [
   {
+    "title": "Null safety in Dart - Introduction",
+    "url": "https://www.youtube.com/watch?v=iYhOU9AuaFs",
+    "date": "2022-03-18T09:59:58.638Z",
+    "type": "youtube",
+    "tags": ["flutter", "dart"]
+  },
+  {
     "title": "Introduction to Time Series Databases",
     "url": "https://www.youtube.com/watch?v=Z6pghPlZ1vQ",
     "date": "2022-03-13T09:59:58.638Z",
