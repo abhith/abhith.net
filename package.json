@@ -5,7 +5,7 @@
   "author": "Abhith Rajan",
   "dependencies": {
     "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.8.1",
+    "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@fastly/performance-observer-polyfill": "^2.0.0",
     "@mdx-js/mdx": "^1.6.22",
@@ -13,7 +13,7 @@
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "bulma": "^0.9.3",
     "bulma-timeline": "^3.0.5",
-    "gatsby": "^4.9.3",
+    "gatsby": "^4.10.0",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-catch-links": "^4.9.0",
     "gatsby-plugin-emotion": "^7.9.0",
