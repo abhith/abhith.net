@@ -1,5 +1,26 @@
 [
   {
+    "title": "Cloud Native Series - Graph of Thrones, Cosmos DB vs. The Seven Kingdoms",
+    "url": "https://www.youtube.com/watch?v=QT-pz7ZIdpg",
+    "date": "2022-03-24T10:01:58Z",
+    "type": "youtube",
+    "tags": ["cosmos-db"]
+  },
+  {
+    "title": "Break issues into actionable tasks - GitHub Checkout",
+    "url": "https://www.youtube.com/watch?v=BplF7vHXewA",
+    "date": "2022-03-24T10:00:58Z",
+    "type": "youtube",
+    "tags": ["github"]
+  },
+  {
+    "title": "Get Started Quick with the .NET Coding Pack for VS Code",
+    "url": "https://www.youtube.com/watch?v=gmMCAyNcB3Q",
+    "date": "2022-03-24T09:59:58.638Z",
+    "type": "youtube",
+    "tags": ["vscode", "dotnet"]
+  },
+  {
     "title": "Null safety in Dart - Introduction",
     "url": "https://www.youtube.com/watch?v=iYhOU9AuaFs",
     "date": "2022-03-18T09:59:58.638Z",
