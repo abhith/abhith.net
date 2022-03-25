@@ -1,5 +1,26 @@
 [
   {
+    "title": "Fair Trade Software License | Duende Software Blog",
+    "url": "https://blog.duendesoftware.com/posts/20220111_fair_trade",
+    "description": "",
+    "date": "2022-03-25T09:11:29Z",
+    "tags": [ "open-source"]
+  },
+  {
+    "title": "SharkBot Banking Malware Spreading via Fake Android Antivirus App on Google Play Store",
+    "url": "https://thehackernews.com/2022/03/sharkbot-banking-malware-spreading-via.html",
+    "description": "",
+    "date": "2022-03-25T09:10:29.638Z",
+    "tags": [ "android"]
+  },
+  {
+    "title": "How to Enable Dark Mode in Windows 11? | Gear up Windows 11 & 10",
+    "url": "https://gearupwindows.com/how-to-enable-dark-mode-in-windows-11/",
+    "description": "",
+    "date": "2022-03-25T09:09:29.638Z",
+    "tags": [ "windows"]
+  },
+  {
     "title": "Fun Things You Can Do With github.dev 😎 - DEV Community",
     "url": "https://dev.to/lostintangent/10-awesome-things-you-can-do-with-github-dev-5fm7",
     "description": "GitHub recently released github.dev, which allows you to press . on any repo in order to open it in...",
