@@ -1,5 +1,26 @@
 [
   {
+    "title": "Shifting Spotify Engineering from Spreadsheets to Backstage - Johan Haals & Patrik Oldsberg, Spotify",
+    "url": "https://www.youtube.com/watch?v=lCgDiusuixM",
+    "date": "2022-04-03T10:03:58Z",
+    "type": "youtube",
+    "tags": ["backstage"]
+  },
+  {
+    "title": "New Features in Synology Drive in DSM 7.0 - Ready to replace Google Drive?",
+    "url": "https://www.youtube.com/watch?v=QozPDdgwvFc",
+    "date": "2022-04-03T10:02:58Z",
+    "type": "youtube",
+    "tags": ["synology"]
+  },
+  {
+    "title": "What is Backstage? (Explainer Video)",
+    "url": "https://www.youtube.com/watch?v=85TQEpNCaU0",
+    "date": "2022-04-03T10:01:58Z",
+    "type": "youtube",
+    "tags": ["backstage"]
+  },
+  {
     "title": "Cloud Native Series - Graph of Thrones, Cosmos DB vs. The Seven Kingdoms",
     "url": "https://www.youtube.com/watch?v=QT-pz7ZIdpg",
     "date": "2022-03-24T10:01:58Z",
