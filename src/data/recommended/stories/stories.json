@@ -1,5 +1,26 @@
 [
   {
+    "title": "Spotify Backstage | Coming next year from Spotify: paid plugins for Backstage",
+    "url": "https://backstage.spotify.com/blog/paid-plugins-announcement/",
+    "description": "In addition to the open source plugins that we’ll continue to release for Backstage, we’re going to begin offering Spotify-built paid plugins.",
+    "date": "2022-04-03T09:15:29Z",
+    "tags": [ "backstage"]
+  },
+  {
+    "title": "List of YouTube channels for .NET C# developers – Shreyas Jejurkar Blog",
+    "url": "https://mccshreyas.com/2022/01/24/list-of-youtube-channels-for-net-csharp-developers/",
+    "description": "",
+    "date": "2022-04-03T09:14:29Z",
+    "tags": [ "c-sharp", "awesome-list"]
+  },
+  {
+    "title": "New release: Backstage 1.0 · Backstage Software Catalog and Developer Platform",
+    "url": "https://backstage.io/blog/2022/03/17/backstage-1.0",
+    "description": "_TL;DR:_ If you’ve been waiting for Backstage to come out of beta, we’re excited to announce that Backstage 1.0 is here!",
+    "date": "2022-04-03T09:13:29Z",
+    "tags": [ "backstage"]
+  },
+  {
     "title": "Don’t start your Sprint on Mondays | by Max Sather | Medium",
     "url": "https://medium.com/@max.sather/dont-start-your-sprint-on-mondays-308fcc982e0c",
     "description": "",
