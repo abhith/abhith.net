@@ -1,5 +1,12 @@
 [
   {
+    "title": "Solved - An attempt was made to access a socket in a way forbidden | Blog",
+    "url": "https://ardalis.com/attempt-made-to-access-socket/",
+    "description": "If you're seeing an error that says 'An attempt was made to access a socket in a way forbidden by its access permissions.' this may fix it.",
+    "date": "2022-04-04T09:15:29Z",
+    "tags": [ "aspnet-core"]
+  },
+  {
     "title": "Spotify Backstage | Coming next year from Spotify: paid plugins for Backstage",
     "url": "https://backstage.spotify.com/blog/paid-plugins-announcement/",
     "description": "In addition to the open source plugins that we’ll continue to release for Backstage, we’re going to begin offering Spotify-built paid plugins.",
