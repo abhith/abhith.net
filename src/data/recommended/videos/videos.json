@@ -1,5 +1,12 @@
 [
   {
+    "title": "How to monitor your services on Kubernetes with Backstage (Demo)",
+    "url": "https://www.youtube.com/watch?v=VivuOxn3VQ8",
+    "date": "2022-04-06T10:03:58Z",
+    "type": "youtube",
+    "tags": ["backstage", "kubernetes"]
+  },
+  {
     "title": "Shifting Spotify Engineering from Spreadsheets to Backstage - Johan Haals & Patrik Oldsberg, Spotify",
     "url": "https://www.youtube.com/watch?v=lCgDiusuixM",
     "date": "2022-04-03T10:03:58Z",
