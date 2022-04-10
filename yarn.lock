@@ -8216,10 +8216,10 @@ gatsby-plugin-sitemap@^5.9.0:
     minimatch "^3.0.4"
     sitemap "^7.0.0"
 
-gatsby-plugin-theme-ui@^0.13.1:
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.13.1.tgz#c8f104bc5cf36b6fa340638c3a7811cdab77a11f"
-  integrity sha512-kU+J+ap7xypidoEOl5BZLFVQLMJqvZGWtPhQrPzezqj+nqZ3Sn+eYiyaw+FXJvLgV4iJIH4RMDDNoxPinjnVOQ==
+gatsby-plugin-theme-ui@^0.14.2:
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.14.2.tgz#e26aad165a69d40042c21b70efb21efdd818c2ac"
+  integrity sha512-egjLaOnZgti3qK0fjIEOTvfMN3yPYvTbYZJDO8pK/iPpK4wSrK7HpUNVLU29boDKFoa7jX6QZZIdJ1A9UXTSnw==
 
 gatsby-plugin-twitter@^4.9.0:
   version "4.9.0"
