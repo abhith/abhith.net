@@ -1,5 +1,26 @@
 [
   {
+    "title": "SwitchListTile (Flutter Widget of the Week)",
+    "url": "https://www.youtube.com/watch?v=0igIjvtEWNU",
+    "date": "2022-04-12T10:05:58Z",
+    "type": "youtube",
+    "tags": ["flutter"]
+  },
+  {
+    "title": "I passed AZ-204!!! | A Cloud Engineer’s journey to certification",
+    "url": "https://www.youtube.com/watch?v=aqGaneNRpqE",
+    "date": "2022-04-12T10:04:58Z",
+    "type": "youtube",
+    "tags": ["azure"]
+  },
+  {
+    "title": "How to Connect Windows File Explorer Directly to Synology (Mapping SMB drive)",
+    "url": "https://www.youtube.com/watch?v=mwo1dpYkq6U",
+    "date": "2022-04-12T10:03:58Z",
+    "type": "youtube",
+    "tags": ["synology"]
+  },
+  {
     "title": "ToggleButtons (Flutter Widget of the Week)",
     "url": "https://www.youtube.com/watch?v=kVEguaQWGAY",
     "date": "2022-04-11T10:03:58Z",
