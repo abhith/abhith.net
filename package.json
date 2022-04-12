@@ -13,7 +13,7 @@
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "bulma": "^0.9.3",
     "bulma-timeline": "^3.0.5",
-    "gatsby": "^4.11.2",
+    "gatsby": "^4.11.3",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-catch-links": "^4.9.0",
     "gatsby-plugin-emotion": "^7.9.0",
@@ -90,7 +90,7 @@
     "serve": "gatsby serve"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
+    "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "husky": "^7.0.4",
     "npm-run-all": "^4.1.5",
