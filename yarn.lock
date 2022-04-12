@@ -1085,14 +1085,14 @@
   resolved "https://registry.yarnpkg.com/@braintree/sanitize-url/-/sanitize-url-3.1.0.tgz#8ff71d51053cd5ee4981e5a501d80a536244f7fd"
   integrity sha512-GcIY79elgB+azP74j8vqkiXz8xLFfIzbQJdlwOPisgbKT00tviJQuEghOXSMVxJ00HoYJbGswr4kcllUc4xCcg==
 
-"@commitlint/cli@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-16.2.1.tgz#ca4e557829a2755f0e1f0cd69b56b83ce2510173"
-  integrity sha512-zfKf+B9osuiDbxGMJ7bWFv7XFCW8wlQYPtCffNp7Ukdb7mdrep5R9e03vPUZysnwp8NX6hg05kPEvnD/wRIGWw==
+"@commitlint/cli@^16.2.3":
+  version "16.2.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-16.2.3.tgz#6c250ce7a660a08a3ac35dd2ec5039421fb831df"
+  integrity sha512-VsJBQLvhhlOgEfxs/Z5liYuK0dXqLE5hz1VJzLBxiOxG31kL/X5Q4OvK292BmO7IGZcm1yJE3XQPWSiFaEHbWA==
   dependencies:
     "@commitlint/format" "^16.2.1"
     "@commitlint/lint" "^16.2.1"
-    "@commitlint/load" "^16.2.1"
+    "@commitlint/load" "^16.2.3"
     "@commitlint/read" "^16.2.1"
     "@commitlint/types" "^16.2.1"
     lodash "^4.17.19"
@@ -1154,10 +1154,10 @@
     "@commitlint/rules" "^16.2.1"
     "@commitlint/types" "^16.2.1"
 
-"@commitlint/load@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-16.2.1.tgz#301bda1bff66b3e40a85819f854eda72538d8e24"
-  integrity sha512-oSpz0jTyVI/A1AIImxJINTLDOMB8YF7lWGm+Jg5wVWM0r7ucpuhyViVvpSRTgvL0z09oIxlctyFGWUQQpI42uw==
+"@commitlint/load@^16.2.3":
+  version "16.2.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-16.2.3.tgz#7b2e85af25a6f736f080ba08e7165738cedf8c8f"
+  integrity sha512-Hb4OUlMnBUK6UxJEZ/VJ5k0LocIS7PtEMbRXEAA7eSpOgORIFexC4K/RaRpVd5UTtu3M0ST3ddPPijF9rdW6nw==
   dependencies:
     "@commitlint/config-validator" "^16.2.1"
     "@commitlint/execute-rule" "^16.2.1"
@@ -8061,10 +8061,10 @@ gatsby-plugin-manifest@^4.10.1:
     semver "^7.3.5"
     sharp "^0.30.1"
 
-gatsby-plugin-mdx@^3.9.1:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.9.1.tgz#2603b8fd19c5835b9a60a9de4f3236c1e843cff2"
-  integrity sha512-oDm+KJ1VSD1dlPWrT0WLQdvtMYDDAcDMmKcTGDxfKxQGM+uktRgRdj4DevZjY6aFr50LWG3Lm+tM0/1Sj+BgZA==
+gatsby-plugin-mdx@^3.11.1:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.11.1.tgz#49e604841ded1387c095cb6a2c12730726b730c6"
+  integrity sha512-YP1Y83rusbNKXFiD6bfWri/ga/z5JuvuCEcT8+eiOXUtmmMHuiS1/wAz2+YM8+OdZKnP25ccI+TOG2Jd+gKR/g==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/generator" "^7.15.4"
@@ -8082,7 +8082,7 @@ gatsby-plugin-mdx@^3.9.1:
     escape-string-regexp "^1.0.5"
     eval "^0.1.4"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.9.1"
+    gatsby-core-utils "^3.11.1"
     gray-matter "^4.0.2"
     json5 "^2.1.3"
     loader-utils "^1.4.0"
