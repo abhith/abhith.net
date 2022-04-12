@@ -31,7 +31,7 @@
     "gatsby-plugin-sass": "^5.11.1",
     "gatsby-plugin-sharp": "^4.10.1",
     "gatsby-plugin-sitemap": "^5.9.0",
-    "gatsby-plugin-theme-ui": "^0.13.1",
+    "gatsby-plugin-theme-ui": "^0.14.2",
     "gatsby-plugin-twitter": "^4.9.0",
     "gatsby-plugin-webmention": "^0.2.0",
     "gatsby-remark-autolink-headers": "^5.11.1",
