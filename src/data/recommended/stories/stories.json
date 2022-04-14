@@ -1,5 +1,12 @@
 [
   {
+    "title": ".NET 5.0 API - Allow CORS requests from any origin and with credentials | Jason Watmore's Blog",
+    "url": "https://jasonwatmore.com/post/2021/05/26/net-5-api-allow-cors-requests-from-any-origin-and-with-credentials",
+    "description": "This is a quick post to show how to configure a .NET 5.0 API to allow CORS requests from any origin as well as with credentials.",
+    "date": "2022-04-13T09:16:29Z",
+    "tags": [ "dotnet"]
+  },
+  {
     "title": "Understanding Kubernetes pod evicted and scheduling problems",
     "url": "https://sysdig.com/blog/kubernetes-pod-evicted/",
     "description": "Pod evicted and pod pending issues are side effects of K8s quotas,caused by a lack of planning. Learn how to mitigate this problem with your pod setup.",
