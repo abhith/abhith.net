@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "./footer";
 import Navbar from "./navbar";
-import "typeface-lora";
-import "typeface-open-sans";
+import "fontsource-open-sans/latin.css";
+import "fontsource-lora/latin.css";
 
 const Layout = ({ children }) => {
   return (
