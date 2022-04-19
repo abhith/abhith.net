@@ -1,3 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+
 import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
@@ -52,10 +55,20 @@ const ArticlePage = ({ pageContext, data, location }) => {
       <div className="h-entry">
         <ArticleHero article={article} authors={authors} />
         <div className="ar-main">
-          <div className="ar-side-background" />
+          <div
+            className="ar-side-background"
+            sx={{
+              backgroundColor: "sideBackground",
+            }}
+          />
           <div className="ar-main-container container">
             <div className="ar-duo">
-              <div className="ar-lead">
+              <div
+                className="ar-lead"
+                sx={{
+                  backgroundColor: "background",
+                }}
+              >
                 <div className="ar-breadcrumb is-hidden-mobile">
                   <nav className="breadcrumb" aria-label="breadcrumbs">
                     <ul>

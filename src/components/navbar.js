@@ -14,28 +14,12 @@ import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { useColorMode } from "theme-ui";
 
 import NavbarItem from "@components/navbar-item";
 
 function Navbar({ logo }) {
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active",
-              hamburgerMenuClass: "is-active",
-            })
-          : this.setState({
-              navBarActiveClass: "",
-              hamburgerMenuClass: "",
-            });
+  const [colorMode, setColorMode] = useColorMode();
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   function toggleHamburger() {
@@ -145,6 +129,15 @@ function Navbar({ logo }) {
               <FaTwitter size={24} />
             </span>
           </OutboundLink>
+          <div className="navbar-item">
+            <button
+              onClick={(e) => {
+                setColorMode(colorMode === "default" ? "dark" : "default");
+              }}
+            >
+              Toggle {colorMode === "default" ? "Dark" : "Light"}
+            </button>
+          </div>
           <div className="navbar-item">
             <div className="field is-grouped">
               <Link
