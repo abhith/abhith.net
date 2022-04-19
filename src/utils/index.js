@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import throttle from "lodash/throttle";
 
-// import theme from "../gatsby-plugin-theme-ui";
-
 /**
  * Clamp a number between min and max
  *
@@ -48,7 +46,7 @@ export const range = (start, len, step = 1) =>
 export const debounce = (fn, time = 100) => {
   let timeout;
 
-  return function() {
+  return function () {
     const functionCall = () => fn.apply(this, arguments);
 
     clearTimeout(timeout);
@@ -65,8 +63,6 @@ export const debounce = (fn, time = 100) => {
  * @example
  *    getBreakpointFromTheme('tablet') 768
  */
-// export const getBreakpointFromTheme: (arg0: string) => number = name =>
-//   theme.breakpoints.find(([label, _]) => label === name)![1];
 
 export const getWindowDimensions = () => {
   if (typeof window !== "undefined") {
@@ -82,13 +78,13 @@ export const getWindowDimensions = () => {
 
     return {
       height,
-      width
+      width,
     };
   }
 
   return {
     width: 0,
-    height: 0
+    height: 0,
   };
 };
 
@@ -118,7 +114,7 @@ export function useResize() {
  *    scrollable('enable') Will allow the user to scroll again
  *    scrollable('disable') Will freeze the screen
  */
-export const scrollable = action => {
+export const scrollable = (action) => {
   if (action.toLowerCase() === "enable") {
     document.body.style.cssText = null;
   } else {
@@ -224,7 +220,7 @@ export const getHighlightedTextPositioning = () => {
 export function toKebabCase(str) {
   return str
     .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-    .map(x => x.toLowerCase())
+    .map((x) => x.toLowerCase())
     .join("-");
 }
 
