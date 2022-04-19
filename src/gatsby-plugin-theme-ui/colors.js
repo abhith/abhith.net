@@ -23,7 +23,7 @@ export default {
       grey: "#73737D",
       primary: "#fff",
       secondary: "#fff",
-      accent: "#E9DAAC",
+      accent: "#6166DC",
       background: "#111216",
       hover: "rgba(255, 255, 255, 0.07)",
       gradient:
@@ -36,7 +36,7 @@ export default {
       success: "#46B17B",
       errorBackground: "rgba(238, 86, 91, 0.1)",
       horizontalRule: "rgba(255, 255, 255, 0.15)",
-      inputBackground: "rgba(255, 255, 255, 0.07)"
-    }
-  }
+      inputBackground: "rgba(255, 255, 255, 0.07)",
+    },
+  },
 };
