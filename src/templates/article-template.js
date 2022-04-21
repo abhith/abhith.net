@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-import React from "react";
 import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
 import GitHubStar from "@components/github-star";
@@ -22,7 +21,27 @@ import ArticleRelatedSnippets from "../sections/article/article-related-snippets
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { css } from "@emotion/react";
 
+const ActiveBreadcrumbCSS = (p) => css`
+  a {
+    color: ${p.theme.colors.strongText} !important;
+  }
+`;
+const ActiveBreadcrumb = styled.div`
+  ${ActiveBreadcrumbCSS}
+`;
+
+const StrongTextCSS = (p) => css`
+  color: ${p.theme.colors.strongText} !important;
+`;
+const ArticleWrittenBySubtitle = styled.span`
+  ${StrongTextCSS}
+`;
+
+const ArticleWrittenByText = styled.strong`
+  ${StrongTextCSS}
+`;
 const ArticlePage = ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
   const {
@@ -79,12 +98,17 @@ const ArticlePage = ({ pageContext, data, location }) => {
                         <Link to={`/blog/`}>Blog</Link>
                       </li>
                       <li className="is-active">
-                        <a
-                          className="u-url"
-                          href={"https://www.abhith.net" + article.slug}
-                        >
-                          {article.title}
-                        </a>
+                        <ActiveBreadcrumb>
+                          <a
+                            className="u-url"
+                            href={"https://www.abhith.net" + article.slug}
+                            sx={{
+                              color: "strongText",
+                            }}
+                          >
+                            {article.title}
+                          </a>
+                        </ActiveBreadcrumb>
                       </li>
                     </ul>
                   </nav>
@@ -123,10 +147,12 @@ const ArticlePage = ({ pageContext, data, location }) => {
                       <div className="media-content">
                         <div className="content">
                           <p>
-                            <span className="subtitle mr-1">Written by</span>
-                            <strong className="title is-4">
+                            <ArticleWrittenBySubtitle className="subtitle mr-1">
+                              Written by
+                            </ArticleWrittenBySubtitle>
+                            <ArticleWrittenByText className="title is-4">
                               {authors[0].name}
-                            </strong>{" "}
+                            </ArticleWrittenByText>{" "}
                             <span>
                               <a
                                 className="twitter-follow-button"

@@ -5,6 +5,8 @@ export default {
   sideBackground: "#fafafa",
   accent: "#6166DC",
   articleText: "#4a4a4a",
+  strongText: "#363636",
+
   gradient: "linear-gradient(180deg, rgba(217, 219, 224, 0) 0%, #D9DBE0 100%)",
   grey: "#73737D",
   hover: "rgba(0, 0, 0, 0.07)",
@@ -22,12 +24,14 @@ export default {
   modes: {
     dark: {
       background: "#1c1c21",
-      articleText: "#bfbfbf",
       sideBackground: "#1f1f1f",
+      accent: "#6166DC",
+      articleText: "#bfbfbf",
+      strongText: "#bfbfbf",
+
       grey: "#73737D",
       primary: "#fff",
       secondary: "#fff",
-      accent: "#6166DC",
       hover: "rgba(255, 255, 255, 0.07)",
       gradient:
         "linear-gradient(180deg, #111216 0%, rgba(66, 81, 98, 0.36) 100%)",
