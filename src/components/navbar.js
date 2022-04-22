@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { useState } from "react";
 import { Link } from "gatsby";
 import { FaCoffee, FaTwitter } from "react-icons/fa";
 import {
@@ -15,6 +17,7 @@ import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useColorMode } from "theme-ui";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 import NavbarItem from "@components/navbar-item";
 
@@ -56,6 +59,20 @@ function Navbar({ logo }) {
             <FaTwitter size={24} />
           </span>
         </OutboundLink>
+        <div
+          className="navbar-item is-hidden-desktop"
+          sx={themeStyles.modeOption}
+        >
+          <button
+            onClick={(e) => {
+              setColorMode(colorMode === "default" ? "dark" : "default");
+            }}
+          >
+            <div sx={themeStyles.modeIcons}>
+              <div>{colorMode === "default" ? <FiMoon /> : <FiSun />}</div>
+            </div>
+          </button>
+        </div>
         <div
           role="button"
           className={`navbar-burger burger ${navbarOpen ? " is-active" : ""}`}
@@ -99,7 +116,7 @@ function Navbar({ logo }) {
           </NavbarItem>
         </div>
         <div className="navbar-end">
-          <div className="navbar-item is-hidden-desktop-only is-hidden-widescreen-only">
+          <div className="navbar-item is-hidden-touch">
             <div className="field is-grouped">
               <iframe
                 src="https://ghbtns.com/github-btn.html?user=Abhith&repo=abhith.net&type=star&count=true&size=large"
@@ -112,7 +129,7 @@ function Navbar({ logo }) {
             </div>
           </div>
           <OutboundLink
-            className="navbar-item is-hidden-desktop-only"
+            className="navbar-item is-hidden-touch"
             href="https://github.com/Abhith/abhith.net"
             target="_blank"
           >
@@ -121,7 +138,7 @@ function Navbar({ logo }) {
             </span>
           </OutboundLink>
           <OutboundLink
-            className="navbar-item is-hidden-desktop-only"
+            className="navbar-item is-hidden-touch"
             href="https://twitter.com/AbhithRajan"
             target="_blank"
           >
@@ -129,13 +146,18 @@ function Navbar({ logo }) {
               <FaTwitter size={24} />
             </span>
           </OutboundLink>
-          <div className="navbar-item">
+          <div
+            className="navbar-item is-hidden-touch"
+            sx={themeStyles.modeOption}
+          >
             <button
               onClick={(e) => {
                 setColorMode(colorMode === "default" ? "dark" : "default");
               }}
             >
-              Toggle {colorMode === "default" ? "Dark" : "Light"}
+              <div sx={themeStyles.modeIcons}>
+                <div>{colorMode === "default" ? <FiMoon /> : <FiSun />}</div>
+              </div>
             </button>
           </div>
           <div className="navbar-item">
@@ -155,6 +177,28 @@ function Navbar({ logo }) {
     </nav>
   );
 }
+
+const themeStyles = {
+  modeOption: {
+    button: {
+      fontSize: "25px",
+      bg: "transparent",
+      border: "none",
+      cursor: "pointer",
+      mt: "-5px",
+      p: "0 20px 0 0",
+      "&:hover": {
+        color: "#bea9b3",
+      },
+    },
+  },
+  modeIcons: {
+    display: "flex",
+    alignItems: "center",
+    color: "#fff",
+    mt: "10px",
+  },
+};
 
 export default () => (
   <StaticQuery
