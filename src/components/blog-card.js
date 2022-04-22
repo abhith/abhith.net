@@ -1,12 +1,19 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const BlogCard = ({ post, tag }) => {
   return (
     <div className="card-post">
-      <Link to={post.slug}>
+      <Link
+        to={post.slug}
+        sx={{
+          color: "strongText",
+        }}
+      >
         <div className="featured-image card-image">
           <GatsbyImage image={post.hero.full} alt={post.title} />
           {tag && (

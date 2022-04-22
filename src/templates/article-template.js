@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
 import GitHubStar from "@components/github-star";
 import Layout from "@components/layout";
@@ -11,6 +10,8 @@ import TableOfContents from "@components/table-of-contents";
 import TopicsBar from "@components/topics-bar";
 import Utterances from "@components/utterances";
 import Webmentions from "@components/webmentions";
+import Authors from "@components/authors";
+import BreadcrumbActive from "@components/breadcrumb-active";
 import ArticleHero from "../sections/article/article-hero";
 import RelatedArticles from "../sections/article/article-related-articles";
 import RelatedStories from "../sections/article/article-related-stories";
@@ -20,28 +21,7 @@ import ArticleShare from "../sections/article/article-share";
 import ArticleRelatedSnippets from "../sections/article/article-related-snippets";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { css } from "@emotion/react";
 
-const ActiveBreadcrumbCSS = (p) => css`
-  a {
-    color: ${p.theme.colors.strongText} !important;
-  }
-`;
-const ActiveBreadcrumb = styled.div`
-  ${ActiveBreadcrumbCSS}
-`;
-
-const StrongTextCSS = (p) => css`
-  color: ${p.theme.colors.strongText} !important;
-`;
-const ArticleWrittenBySubtitle = styled.span`
-  ${StrongTextCSS}
-`;
-
-const ArticleWrittenByText = styled.strong`
-  ${StrongTextCSS}
-`;
 const ArticlePage = ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
   const {
@@ -98,7 +78,7 @@ const ArticlePage = ({ pageContext, data, location }) => {
                         <Link to={`/blog/`}>Blog</Link>
                       </li>
                       <li className="is-active">
-                        <ActiveBreadcrumb>
+                        <BreadcrumbActive>
                           <a
                             className="u-url"
                             href={"https://www.abhith.net" + article.slug}
@@ -108,7 +88,7 @@ const ArticlePage = ({ pageContext, data, location }) => {
                           >
                             {article.title}
                           </a>
-                        </ActiveBreadcrumb>
+                        </BreadcrumbActive>
                       </li>
                     </ul>
                   </nav>
@@ -132,54 +112,7 @@ const ArticlePage = ({ pageContext, data, location }) => {
                 <MDXRenderer content={article.body}>
                   <TopicsBar topics={article.tags} />
                 </MDXRenderer>
-                {authors && authors.length === 1 ? (
-                  <div className="container mt-6 mb-3">
-                    <div className="media">
-                      <figure className="media-left">
-                        <p className="image is-128x128">
-                          <RoundedImage
-                            image={authors[0].avatar.medium}
-                            width={128}
-                            alt={authors[0].name}
-                          />
-                        </p>
-                      </figure>
-                      <div className="media-content">
-                        <div className="content">
-                          <p>
-                            <ArticleWrittenBySubtitle className="subtitle mr-1">
-                              Written by
-                            </ArticleWrittenBySubtitle>
-                            <ArticleWrittenByText className="title is-4">
-                              {authors[0].name}
-                            </ArticleWrittenByText>{" "}
-                            <span>
-                              <a
-                                className="twitter-follow-button"
-                                href={
-                                  "https://twitter.com/" +
-                                  authors[0].twitter.replace("@", "")
-                                }
-                                data-show-screen-name="false"
-                              >
-                                Follow {authors[0].twitter}
-                              </a>
-                            </span>
-                            <br />
-                            {authors[0].bio}
-                            <br />
-                            <Link
-                              to="/contact/"
-                              className="mt-2 button k-button k-secondary raised has-gradient rounded"
-                            >
-                              Connect
-                            </Link>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
+                <Authors authors={authors} />
                 <Webmentions {...allWebMentionEntry} />
                 <AskFeedback />
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>
@@ -204,10 +137,6 @@ const ArticlePage = ({ pageContext, data, location }) => {
     </Layout>
   );
 };
-
-const RoundedImage = styled(GatsbyImage)`
-  border-radius: 50%;
-`;
 
 export const pageQuery = graphql`
   query ArticleQuery($permalink: String!) {

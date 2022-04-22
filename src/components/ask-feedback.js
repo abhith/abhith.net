@@ -1,4 +1,16 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import React from "react";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+
+const TitleCss = (p) => css`
+  color: ${p.theme.colors.strongText} !important;
+`;
+
+const Title = styled.h3`
+  ${TitleCss}
+`;
 
 const AskFeedback = () => {
   const [isHelpful, setIsHelpful] = React.useState();
@@ -46,7 +58,7 @@ const AskFeedback = () => {
   }
   return (
     <div className="content">
-      <h3 className="has-text-centered">Is this page helpful?</h3>
+      <Title className="has-text-centered">Is this page helpful?</Title>
       <div className="buttons is-centered">
         <button
           className="button is-success is-light"

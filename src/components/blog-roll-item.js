@@ -1,12 +1,18 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const BlogRollItem = ({ post }) => {
   return (
     <div className="blog-post">
-      <Link to={post.slug}>
+      <Link
+        to={post.slug}
+        sx={{
+          color: "strongText",
+        }}
+      >
         <div className="featured-image">
           <GatsbyImage image={post.hero.full} alt={post.title} />
         </div>

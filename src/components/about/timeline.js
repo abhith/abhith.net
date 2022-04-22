@@ -1,18 +1,33 @@
-import React, { Component } from "react";
-import { FaFlag } from "react-icons/fa";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 
+import { Component } from "react";
+import { FaFlag } from "react-icons/fa";
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+
+const TitleCss = (p) => css`
+  color: ${p.theme.colors.strongText} !important;
+`;
+
+const Title = styled.h2`
+  ${TitleCss}
+`;
+const Subtitle = styled.h4`
+  ${TitleCss}
+`;
 export default class Timeline extends Component {
   render() {
     return (
       <section className="section">
         <div className="container">
           <div className="divider is-centered"></div>
-          <h2 className="title is-semibold has-text-centered is-spaced">
+          <Title className="title is-semibold has-text-centered is-spaced">
             Career Path
-          </h2>
-          <h4 className="subtitle is-6 has-text-centered is-compact">
+          </Title>
+          <Subtitle className="subtitle is-6 has-text-centered is-compact">
             An overview of my career timeline shown below.
-          </h4>
+          </Subtitle>
 
           <div className="timeline is-centered mt-3">
             <header className="timeline-header">
