@@ -1,4 +1,6 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import TopicsBar from "./topics-bar";
@@ -18,7 +20,9 @@ const FeaturedSidebar = ({ items, totalCount }) => {
                 <h6 className="has-text-weight-bold">
                   <OutboundLink
                     target="_blank"
-                    className="has-text-dark"
+                    sx={{
+                      color: "strongText",
+                    }}
                     href={item.url}
                   >
                     {item.title}

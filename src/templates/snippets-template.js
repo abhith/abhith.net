@@ -7,6 +7,8 @@ import { graphql, Link } from "gatsby";
 import React from "react";
 import normalize from "../../gatsby/data/data.normalize";
 import PageHero from "@components/page-hero";
+import BreadcrumbActive from "@components/breadcrumb-active";
+
 function SnippetsPage({ pageContext, data }) {
   const snippets = data.snippets.edges.map(normalize.local.snippets);
   const { previousPagePath, nextPagePath, topics } = pageContext;
@@ -27,12 +29,14 @@ function SnippetsPage({ pageContext, data }) {
                       <Link to={`/`}>Home</Link>
                     </li>
                     <li className="is-active">
-                      <a
-                        className="u-url"
-                        href={`https://www.abhith.net/snippets/`}
-                      >
-                        {pageTitle}
-                      </a>
+                      <BreadcrumbActive>
+                        <a
+                          className="u-url"
+                          href={`https://www.abhith.net/snippets/`}
+                        >
+                          {pageTitle}
+                        </a>
+                      </BreadcrumbActive>
                     </li>
                   </ul>
                 </nav>

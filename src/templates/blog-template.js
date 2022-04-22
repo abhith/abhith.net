@@ -7,6 +7,7 @@ import { graphql, Link } from "gatsby";
 import React from "react";
 import normalize from "../../gatsby/data/data.normalize";
 import PageHero from "@components/page-hero";
+import BreadcrumbActive from "@components/breadcrumb-active";
 
 function BlogPage({ pageContext, data }) {
   const articles = data.articles.edges.map(normalize.local.articles);
@@ -33,12 +34,14 @@ function BlogPage({ pageContext, data }) {
                       <Link to={`/`}>Home</Link>
                     </li>
                     <li className="is-active">
-                      <a
-                        className="u-url"
-                        href={`https://www.abhith.net/blog/`}
-                      >
-                        {pageTitle}
-                      </a>
+                      <BreadcrumbActive>
+                        <a
+                          className="u-url"
+                          href={`https://www.abhith.net/blog/`}
+                        >
+                          {pageTitle}
+                        </a>
+                      </BreadcrumbActive>
                     </li>
                   </ul>
                 </nav>

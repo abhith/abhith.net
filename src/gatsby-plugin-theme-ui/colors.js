@@ -1,9 +1,12 @@
 import prism from "./prism";
 
 export default {
-  accent: "#6166DC",
-  articleText: "#08080B",
   background: "#fff",
+  sideBackground: "#fafafa",
+  accent: "#6166DC",
+  articleText: "#4a4a4a",
+  strongText: "#363636",
+
   gradient: "linear-gradient(180deg, rgba(217, 219, 224, 0) 0%, #D9DBE0 100%)",
   grey: "#73737D",
   hover: "rgba(0, 0, 0, 0.07)",
@@ -20,15 +23,18 @@ export default {
   inputBackground: "rgba(0, 0, 0, 0.05)",
   modes: {
     dark: {
+      background: "#1c1c21",
+      sideBackground: "#1f1f1f",
+      accent: "#6166DC",
+      articleText: "#bfbfbf",
+      strongText: "#bfbfbf",
+
       grey: "#73737D",
       primary: "#fff",
       secondary: "#fff",
-      accent: "#6166DC",
-      background: "#111216",
       hover: "rgba(255, 255, 255, 0.07)",
       gradient:
         "linear-gradient(180deg, #111216 0%, rgba(66, 81, 98, 0.36) 100%)",
-      articleText: "#fff",
       track: "rgba(255, 255, 255, 0.3)",
       progress: "#fff",
       card: "#1D2128",

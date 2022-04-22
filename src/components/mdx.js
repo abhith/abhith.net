@@ -1,3 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+
 import Blockquote from "@components/blockquote";
 import { CodePre, CodePrism } from "@components/code";
 import { Table, TableCell, TableHeadCell, TableHead } from "@components/tables";
@@ -6,10 +9,13 @@ import styled from "@emotion/styled";
 import { MDXProvider } from "@mdx-js/react";
 import mediaqueries from "@styles/media";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import React from "react";
 import Headings from "@components/headings";
 import Anchor from "@components/anchor";
 import HorizontalRule from "@components/horizontal-rule";
+
+const ArticleStrong = (props) => (
+  <strong sx={{ color: "strongText" }} {...props} />
+);
 
 const components = {
   a: Anchor,
@@ -27,6 +33,7 @@ const components = {
   h4: Headings.h4,
   h5: Headings.h5,
   h6: Headings.h6,
+  strong: ArticleStrong,
 };
 
 function MDX({ content, children, ...props }) {

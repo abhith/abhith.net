@@ -1,17 +1,24 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
-const BlogRoll = props => {
+const BlogRoll = (props) => {
   const { posts } = props;
 
   return (
     <>
       {posts &&
-        posts.map(post => (
+        posts.map((post) => (
           <div className="blog-post" key={post.id}>
-            <Link to={post.slug}>
+            <Link
+              to={post.slug}
+              sx={{
+                color: "strongText",
+              }}
+            >
               <div className="featured-image">
                 <GatsbyImage image={post.hero.full} alt={post.title} />
               </div>
@@ -33,16 +40,6 @@ const BlogRoll = props => {
                       </span>
                     </div>
                   </div>
-                  {/* <div className="stats-block">
-                    <div className="comments">
-                      <i data-feather="message-circle"></i>
-                      <span>0</span>
-                    </div>
-                    <div className="likes">
-                      <i data-feather="heart"></i>
-                      <span>39</span>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </Link>
@@ -52,7 +49,7 @@ const BlogRoll = props => {
   );
 };
 BlogRoll.propTypes = {
-  posts: PropTypes.array.isRequired
+  posts: PropTypes.array.isRequired,
 };
 
 export default BlogRoll;

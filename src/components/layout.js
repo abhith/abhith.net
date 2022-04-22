@@ -1,3 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+
 import React from "react";
 import Footer from "./footer";
 import Navbar from "./navbar";
@@ -8,7 +11,15 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main role="main">{children}</main>
+      <main
+        sx={{
+          backgroundColor: "background",
+          color: "articleText",
+        }}
+        role="main"
+      >
+        {children}
+      </main>
       <Footer />
     </>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "@emotion/styled";
 import { Link, graphql } from "gatsby";
 import Layout from "@components/layout";
 import MDXRenderer from "@components/mdx";
@@ -15,9 +14,10 @@ import RelatedTools from "../sections/article/article-related-tools";
 import RelatedVideos from "../sections/article/article-related-videos";
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
-import { GatsbyImage } from "gatsby-plugin-image"
+import BreadcrumbActive from "@components/breadcrumb-active";
+import Authors from "@components/authors";
 
-const SnippetPage =({ pageContext, data, location }) => {
+const SnippetPage = ({ pageContext, data, location }) => {
   const { allWebMentionEntry } = data;
   const {
     snippet,
@@ -70,12 +70,14 @@ const SnippetPage =({ pageContext, data, location }) => {
                         </Link>
                       </li>
                       <li className="is-active">
-                        <a
-                          className="u-url"
-                          href={"https://www.abhith.net" + snippet.slug}
-                        >
-                          {snippet.title}
-                        </a>
+                        <BreadcrumbActive>
+                          <a
+                            className="u-url"
+                            href={"https://www.abhith.net" + snippet.slug}
+                          >
+                            {snippet.title}
+                          </a>
+                        </BreadcrumbActive>
                       </li>
                     </ul>
                   </nav>
@@ -99,53 +101,7 @@ const SnippetPage =({ pageContext, data, location }) => {
                 <MDXRenderer content={snippet.body}>
                   <TopicsBar topics={snippet.topics} />
                 </MDXRenderer>
-                {authors && authors.length === 1 ? (
-                  <div className="container mt-5 mb-3">
-                    <div className="media">
-                      <figure className="media-left">
-                        <p className="image is-128x128">
-                          <RoundedImage
-                            src={authors[0].avatar.medium}
-                            alt={authors[0].name}
-                          />
-                        </p>
-                      </figure>
-                      <div className="media-content">
-                        <div className="content">
-                          <p>
-                            <strong className="title is-4">
-                              Written by {authors[0].name}
-                            </strong>{" "}
-                            <span>
-                              <a
-                                className="twitter-follow-button"
-                                href={
-                                  "https://twitter.com/" +
-                                  authors[0].twitter.replace("@", "")
-                                }
-                                data-show-screen-name="false"
-                              >
-                                Follow {authors[0].twitter}
-                              </a>
-                            </span>
-                            <br />
-                            {authors[0].bio}
-                            <br />
-                            <Link
-                              to="/donate/"
-                              className="button k-button k-primary raised has-gradient rounded"
-                            >
-                              Buy me a coffee{" "}
-                              <span role="img" aria-label="coffee">
-                                ☕
-                              </span>
-                            </Link>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
+                <Authors authors={authors} />
                 <AskFeedback />
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>
                 <Webmentions {...allWebMentionEntry} />
@@ -168,10 +124,6 @@ const SnippetPage =({ pageContext, data, location }) => {
   );
 };
 export default SnippetPage;
-
-const RoundedImage = styled(GatsbyImage)`
-  border-radius: 50%;
-`;
 
 export const pageQuery = graphql`
   query SnippetQuery($permalink: String!) {

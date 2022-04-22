@@ -17,7 +17,6 @@
     padding: 50px;
     overflow: hidden;
     align-items: center;
-    color: #333;
     font-size: 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -194,7 +193,6 @@
     align-items: center;
     max-width: 1000px;
     margin: auto;
-    color: #333;
     font-size: 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -335,11 +333,6 @@
   position: relative;
 }
 
-.ar-side,
-.ar-side-background {
-  background-color: #fafafa;
-}
-
 .ar-side {
   position: relative;
 }
@@ -456,7 +449,6 @@
   }
 
   .ar-lead {
-    background-color: #fff;
     overflow: hidden;
     flex-grow: 1;
     flex-shrink: 1;
