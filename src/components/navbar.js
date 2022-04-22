@@ -65,11 +65,11 @@ function Navbar({ logo }) {
         >
           <button
             onClick={(e) => {
-              setColorMode(colorMode === "default" ? "dark" : "default");
+              setColorMode(colorMode === "light" ? "dark" : "light");
             }}
           >
             <div sx={themeStyles.modeIcons}>
-              <div>{colorMode === "default" ? <FiMoon /> : <FiSun />}</div>
+              <div>{colorMode === "light" ? <FiMoon /> : <FiSun />}</div>
             </div>
           </button>
         </div>
@@ -152,11 +152,11 @@ function Navbar({ logo }) {
           >
             <button
               onClick={(e) => {
-                setColorMode(colorMode === "default" ? "dark" : "default");
+                setColorMode(colorMode === "light" ? "dark" : "light");
               }}
             >
               <div sx={themeStyles.modeIcons}>
-                <div>{colorMode === "default" ? <FiMoon /> : <FiSun />}</div>
+                <div>{colorMode === "light" ? <FiMoon /> : <FiSun />}</div>
               </div>
             </button>
           </div>
