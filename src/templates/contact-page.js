@@ -6,6 +6,17 @@ import Content, { HTMLContent } from "../components/content";
 import Seo from "../components/seo/seo";
 import Recaptcha from "react-recaptcha";
 import PageHero from "@components/page-hero";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+
+const SectionStyle = (p) => css`
+  label {
+    color: ${p.theme.colors.strongText};
+  }
+`;
+const SectionStyled = styled.section`
+  ${SectionStyle}
+`;
 
 const ContactPageTemplate = ({
   title,
@@ -19,7 +30,7 @@ const ContactPageTemplate = ({
     <>
       <Seo title={title} description={description} slug="/contact/" />
       <PageHero title={title} subtitle={description} />
-      <section className="section">
+      <SectionStyled className="section">
         <div className="container">
           <div className="columns">
             <div className="column is-5">
@@ -63,7 +74,7 @@ const ContactPageTemplate = ({
             </div>
           </div>
         </div>
-      </section>
+      </SectionStyled>
     </>
   );
 };
