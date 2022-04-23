@@ -3,6 +3,7 @@ import { jsx } from "theme-ui";
 import React from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import { useColorMode } from "theme-ui";
 
 const TitleCss = (p) => css`
   color: ${p.theme.colors.strongText} !important;
@@ -13,6 +14,8 @@ const Title = styled.h3`
 `;
 
 const AskFeedback = () => {
+  const [colorMode] = useColorMode();
+
   const [isHelpful, setIsHelpful] = React.useState();
   let note;
   if (isHelpful === "yes") {
@@ -43,7 +46,11 @@ const AskFeedback = () => {
     );
   } else {
     note = (
-      <div className="notification is-info is-light has-text-centered">
+      <div
+        className={`notification is-info has-text-centered ${
+          colorMode === "light" ? "is-light" : "has-background-dark"
+        }`}
+      >
         <a
           href="/donate/"
           className="button k-button k-primary raised has-gradient rounded"
