@@ -1,9 +1,14 @@
 import React, { useEffect } from "react";
+import { useColorMode } from "theme-ui";
 
 const src = "https://utteranc.es/client.js";
 const branch = "master";
 
 const Utterances = ({ repo }) => {
+  const [colorMode] = useColorMode();
+
+  const theme = colorMode === "light" ? "github-light" : "github-dark";
+
   const rootElm = React.createRef();
 
   useEffect(() => {
@@ -15,10 +20,11 @@ const Utterances = ({ repo }) => {
       async: true,
       "issue-term": "pathname",
       label: "type:comment",
-      crossorigin: "anonymous"
+      crossorigin: "anonymous",
+      theme,
     };
 
-    Object.keys(utterancesConfig).forEach(configKey => {
+    Object.keys(utterancesConfig).forEach((configKey) => {
       utterances.setAttribute(configKey, utterancesConfig[configKey]);
     });
     rootElm.current.appendChild(utterances);
