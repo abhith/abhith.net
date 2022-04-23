@@ -6,6 +6,8 @@ export default {
   accent: "#6166DC",
   articleText: "#4a4a4a",
   strongText: "#363636",
+  border: "#dedede",
+  guideBackground: "#f2f7fc",
 
   gradient: "linear-gradient(180deg, rgba(217, 219, 224, 0) 0%, #D9DBE0 100%)",
   grey: "#73737D",
@@ -28,6 +30,8 @@ export default {
       accent: "#6166DC",
       articleText: "#bfbfbf",
       strongText: "#bfbfbf",
+      border: "#3b3b3b",
+      guideBackground: "#0d2135",
 
       grey: "#73737D",
       primary: "#fff",

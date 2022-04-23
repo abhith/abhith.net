@@ -4,28 +4,11 @@ import { OutboundLink } from "gatsby-plugin-google-gtag";
 import TopicImage from "./topic-image";
 import { domainFromURL } from "../utils/common";
 import TopicsBar from "./topics-bar";
-import styled from "@emotion/styled";
-const StoryStyled = styled("div")`
-  a {
-    color: #333;
-  }
-  p {
-    font-size: 0.9rem;
-  }
-  .post-title {
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    font-weight: 500;
-  }
-  transition: all 0.3s ease;
-  &:hover {
-    box-shadow: 0 15px 45px -5px rgba(7, 10, 25, 0.25);
-    transform: translate(0, -2px);
-  }
-`;
+import BoxStyled from "./box-styled";
+
 const StoriesRollItem = ({ post, showDescription }) => {
   return (
-    <StoryStyled className="box">
+    <BoxStyled>
       <OutboundLink className="media" target="_blank" href={post.url}>
         <div className="media-left">
           <figure className="image is-64x64">
@@ -49,7 +32,7 @@ const StoriesRollItem = ({ post, showDescription }) => {
         </div>
       </OutboundLink>
       <TopicsBar topics={post.tags} />
-    </StoryStyled>
+    </BoxStyled>
   );
 };
 StoriesRollItem.propTypes = {

@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import TopicsBar from "./topics-bar";
-import Hoverable from "@components/hoverable";
+import BoxStyled from "@components/box-styled";
+
 import { domainFromURL } from "../utils/common";
 
 const ServicesRoll = (props) => {
@@ -12,16 +13,12 @@ const ServicesRoll = (props) => {
     <>
       {services &&
         services.map(({ node: service }) => (
-          <Hoverable className="box" key={service.id}>
+          <BoxStyled key={service.id}>
             <div className="columns">
               <div className="column">
                 <small>{domainFromURL(service.url)}</small>
                 <h4 className="title is-4">
-                  <OutboundLink
-                    className="has-text-dark"
-                    target="_blank"
-                    href={service.url}
-                  >
+                  <OutboundLink target="_blank" href={service.url}>
                     {service.title}{" "}
                   </OutboundLink>
                 </h4>
@@ -31,7 +28,7 @@ const ServicesRoll = (props) => {
                 <TopicsBar topics={service.tags} />
               </div>
             </div>
-          </Hoverable>
+          </BoxStyled>
         ))}
     </>
   );

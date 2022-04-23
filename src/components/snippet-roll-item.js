@@ -1,27 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TopicImage from "./topic-image";
-import styled from "@emotion/styled";
 import { Link } from "gatsby";
+import BoxStyled from "./box-styled";
 
-const StoryStyled = styled("div")`
-  a {
-    color: #333;
-  }
-  .post-title {
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    font-weight: 500;
-  }
-  transition: all 0.3s ease;
-  &:hover {
-    box-shadow: 0 15px 45px -5px rgba(7, 10, 25, 0.25);
-    transform: translate(0, -2px);
-  }
-`;
 const SnippetsRollItem = ({ snippet, showDescription }) => {
   return (
-    <StoryStyled className="box">
+    <BoxStyled>
       <Link to={snippet.slug} className="media">
         <div className="media-left">
           <figure className="image is-64x64">
@@ -36,7 +21,7 @@ const SnippetsRollItem = ({ snippet, showDescription }) => {
           </div>
         </div>
       </Link>
-    </StoryStyled>
+    </BoxStyled>
   );
 };
 SnippetsRollItem.propTypes = {

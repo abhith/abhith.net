@@ -4,7 +4,8 @@ import Seo from "@components/seo/seo";
 import TopicImage from "@components/topic-image";
 import { Link } from "gatsby";
 import React from "react";
-// tslint:disable-next-line: no-submodule-imports
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import {
   FcReading,
   FcPuzzle,
@@ -13,6 +14,22 @@ import {
   FcSupport,
 } from "react-icons/fc";
 
+const BoxCss = (p) => css`
+  .inner-block {
+    background-color: ${p.theme.colors.background};
+    border: 1px solid ${p.theme.colors.border};
+  }
+  .inner-block .guide {
+    background-color: ${p.theme.colors.guideBackground};
+  }
+  .title {
+    color: ${p.theme.colors.articleText} !important;
+  }
+`;
+
+const StyledDiv = styled("div")`
+  ${BoxCss}
+`;
 function TopicsPage({ pageContext }) {
   const { topics } = pageContext;
 
@@ -38,7 +55,7 @@ function TopicsPage({ pageContext }) {
                     className="column is-full-mobile is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
                     key={topic.slug}
                   >
-                    <div className="block">
+                    <StyledDiv className="block">
                       <div className="inner-block position-relative">
                         <div className="media-left">
                           <figure className="image is-64x64">
@@ -128,7 +145,7 @@ function TopicsPage({ pageContext }) {
                           </Link>
                         </p>
                       </div>
-                    </div>
+                    </StyledDiv>
                   </div>
                 ))}
               </div>
