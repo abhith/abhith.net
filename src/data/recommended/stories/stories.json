@@ -1,5 +1,19 @@
 [
   {
+    "title": "Update on the Atlassian outage affecting some customers",
+    "url": "https://www.atlassian.com/engineering/april-2022-outage-update",
+    "description": "This incident remains the top priority for my engineering team and for our entire company.",
+    "date": "2022-04-25T09:18:29Z",
+    "tags": ["post-mortems", "jira"]
+  },
+  {
+    "title": "Resize an AKS Deployment Persistent Volume Claim (PVC) – Learn IT And DevOps Daily",
+    "url": "https://www.ntweekly.com/2020/11/22/resize-an-aks-deployment-persistent-volume-claim-pvc/",
+    "description": "",
+    "date": "2022-04-21T09:18:29Z",
+    "tags": ["kubernetes", "azure"]
+  },
+  {
     "title": "The Scoop: Inside the Longest Atlassian Outage of All Time",
     "url": "https://newsletter.pragmaticengineer.com/p/scoop-atlassian?s=r",
     "description": "Hundreds of companies have no access to JIRA, Confluence and Atlassian Cloud. What can engineering teams learn from the poor handling of this outage?",
