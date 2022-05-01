@@ -49,7 +49,7 @@
     "gatsby-source-filesystem": "^4.12.1",
     "gatsby-transformer-json": "^4.12.1",
     "gatsby-transformer-remark": "^5.13.0",
-    "gatsby-transformer-sharp": "^4.12.1",
+    "gatsby-transformer-sharp": "^4.13.0",
     "gatsby-transformer-yaml": "^4.12.1",
     "intersection-observer": "^0.12.0",
     "lodash": "^4.17.21",
