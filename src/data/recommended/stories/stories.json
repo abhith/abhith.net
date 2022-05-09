@@ -1,5 +1,26 @@
 [
   {
+    "title": "Styling `select` elements for real - Microsoft Edge Blog",
+    "url": "https://blogs.windows.com/msedgedev/2022/05/05/styling-select-elements-for-real/",
+    "description": "",
+    "date": "2022-05-09T09:20:29Z",
+    "tags": ["css"]
+  },
+  {
+    "title": "Auto-Regenerating API Client for Your Open API Project - Microsoft Tech Community",
+    "url": "https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/auto-regenerating-api-client-for-your-open-api-project/ba-p/3302390",
+    "description": "",
+    "date": "2022-05-09T09:19:29Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Challenge: Spot the optimization–solution - Ayende @ Rahien",
+    "url": "https://ayende.com/blog/197218-B/challenge-spot-the-optimization-solution",
+    "description": "",
+    "date": "2022-05-09T09:18:29Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "title": "Update on the Atlassian outage affecting some customers",
     "url": "https://www.atlassian.com/engineering/april-2022-outage-update",
     "description": "This incident remains the top priority for my engineering team and for our entire company.",
