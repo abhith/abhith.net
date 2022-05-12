@@ -1,5 +1,26 @@
 [
   {
+    "title": "How to implement Hamburger Menu in React | Ibaslogic",
+    "url": "https://ibaslogic.com/how-to-add-hamburger-menu-in-react/",
+    "description": "",
+    "date": "2022-05-12T09:22:29Z",
+    "tags": ["react"]
+  },
+  {
+    "title": "GitOps Directory Structure - Speaker Deck",
+    "url": "https://speakerdeck.com/redhatlivestreaming/gitops-directory-structure",
+    "description": "",
+    "date": "2022-05-12T09:21:29Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "Announcing gRPC JSON transcoding for .NET - .NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/announcing-grpc-json-transcoding-for-dotnet/",
+    "description": "gRPC JSON transcoding is a new feature for .NET that allows gRPC services to be called with REST + JSON. Try it now in .NET 7 preview 4.",
+    "date": "2022-05-12T09:20:29Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "Styling `select` elements for real - Microsoft Edge Blog",
     "url": "https://blogs.windows.com/msedgedev/2022/05/05/styling-select-elements-for-real/",
     "description": "",
