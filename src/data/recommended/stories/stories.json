@@ -1,5 +1,26 @@
 [
   {
+    "title": "Line-staging (Interactive Staging) - Visual Studio Blog",
+    "url": "https://devblogs.microsoft.com/visualstudio/line-staging-interactive-staging/",
+    "description": "",
+    "date": "2022-05-17T09:25:29Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Moonlighting - Octopus Handbook",
+    "url": "https://handbook.octopus.com/good-to-know/moonlighting",
+    "description": "",
+    "date": "2022-05-17T09:25:28Z",
+    "tags": ["good-to-know"]
+  },
+  {
+    "title": "Visual Studio 2022 17.2 is now available! - Visual Studio Blog",
+    "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-17-2-is-now-available/",
+    "description": "Read all about the updates to Visual Studio 2022 in this latest release and download the 17.2 release today!",
+    "date": "2022-05-17T09:24:29Z",
+    "tags": ["visual-studio"]
+  },
+  {
     "title": "Microsoft Build Cloud Skills Challenge | May 2022",
     "url": "https://www.microsoft.com/en-us/cloudskillschallenge/build/registration/2022",
     "description": "",
