@@ -1,5 +1,26 @@
 [
   {
+    "title": "Cross-window communication",
+    "url": "https://javascript.info/cross-window-communication",
+    "description": "",
+    "date": "2022-05-19T09:27:29Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "How to debug postMessages - DEV Community",
+    "url": "https://dev.to/arthurdenner/how-to-debug-postmessages-58p7",
+    "description": "Log messages between pages and iframes or pop-ups. Tagged with debugging, debug, webdev.",
+    "date": "2022-05-19T09:26:29Z",
+    "tags": ["debug", "javascript"]
+  },
+  {
+    "title": "Vue.js polling using setInterval() – Renat Galyamov",
+    "url": "https://renatello.com/vue-js-polling-using-setinterval/",
+    "description": "I came up with an easy way to repeat a function in Vue.js. For instance, you want to periodically retrieve data from your database using the backend",
+    "date": "2022-05-19T09:25:29Z",
+    "tags": ["vue"]
+  },
+  {
     "title": "Line-staging (Interactive Staging) - Visual Studio Blog",
     "url": "https://devblogs.microsoft.com/visualstudio/line-staging-interactive-staging/",
     "description": "",
