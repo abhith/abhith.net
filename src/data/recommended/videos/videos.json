@@ -1,5 +1,26 @@
 [
   {
+    "title": "What’s new in Visual Studio 2022 for testing",
+    "url": "https://www.youtube.com/watch?v=D_5cRxJwUcM",
+    "date": "2022-05-19T10:07:58Z",
+    "type": "youtube",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Windows 365, your Cloud PC | What it is, how it works, and how to set it up",
+    "url": "https://www.youtube.com/watch?v=V14Ia2uwrtk",
+    "date": "2022-05-19T10:06:58Z",
+    "type": "youtube",
+    "tags": ["windows"]
+  },
+  {
+    "title": "Dapr community call 50 - 11/16/2021",
+    "url": "https://www.youtube.com/watch?v=7olj9rVlAes",
+    "date": "2022-05-19T10:05:58Z",
+    "type": "youtube",
+    "tags": ["dapr"]
+  },
+  {
     "title": "SwitchListTile (Flutter Widget of the Week)",
     "url": "https://www.youtube.com/watch?v=0igIjvtEWNU",
     "date": "2022-04-12T10:05:58Z",
