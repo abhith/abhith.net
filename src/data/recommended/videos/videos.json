@@ -1,5 +1,26 @@
 [
   {
+    "title": "Using SQL Data Sync for Bidirectional Data Replication in SQL Server & Azure SQL DBs | Data Exposed",
+    "url": "https://www.youtube.com/watch?v=gW4nOXibeWA",
+    "date": "2022-05-23T10:08:58Z",
+    "type": "youtube",
+    "tags": ["sql-server", "azure"]
+  },
+  {
+    "title": "Profiling a Pod in Kubernetes with Kube-flame",
+    "url": "https://www.youtube.com/watch?v=vHTWdkCUAoI",
+    "date": "2022-05-23T10:08:57Z",
+    "type": "youtube",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "Build fast, scalable data system on Azure SQL Database Hyperscale | Clearent",
+    "url": "https://www.youtube.com/watch?v=DUV9wop86Tw",
+    "date": "2022-05-23T10:07:58Z",
+    "type": "youtube",
+    "tags": ["sql-server", "azure"]
+  },
+  {
     "title": "What’s new in Visual Studio 2022 for testing",
     "url": "https://www.youtube.com/watch?v=D_5cRxJwUcM",
     "date": "2022-05-19T10:07:58Z",
