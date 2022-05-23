@@ -1,5 +1,26 @@
 [
   {
+    "title": "#18: Debug Static Web Apps with Edge DevTools - DEV Community",
+    "url": "https://dev.to/azure/18-debug-static-web-apps-with-edge-devtools-34c8",
+    "description": "Join @patrickbrosset on #30DaysOfSWA to explore Debugging, Perf, #Accessibility for @AzureStaticApps using @MSEdgeDev #DevTools on @code. Tagged with staticwebapps, beginners, msedge, javascript.",
+    "date": "2022-05-23T09:28:29Z",
+    "tags": ["vscode"]
+  },
+  {
+    "title": "Sort an Array of Objects by Boolean property in JavaScript | bobbyhadz",
+    "url": "https://bobbyhadz.com/blog/javascript-sort-array-of-objects-by-boolean-property",
+    "description": "To sort an array of objects by a boolean property, call the `sort()` method on the array, passing it a function. In the function, convert the 2 boolean values to numbers and  subtract the first number from the second.",
+    "date": "2022-05-23T09:27:29Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "Edge DevTools for Visual Studio Code V2 - DEV Community",
+    "url": "https://dev.to/codepo8/edge-devtools-for-visual-studio-code-v2-1bp3",
+    "description": "The new full version release of this VS Code extension gives you great new features, including a new browser preview with emulation and source map support. Tagged with vscode, development, browsers.",
+    "date": "2022-05-23T09:26:29Z",
+    "tags": ["vscode"]
+  },
+  {
     "title": "Cross-window communication",
     "url": "https://javascript.info/cross-window-communication",
     "description": "",
