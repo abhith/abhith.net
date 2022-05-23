@@ -4,5 +4,5 @@ title: Full Stack Developer
 image: /img/site/mindmap.png
 heading: Abhith Rajan
 subheading: >-
-  Abhith Rajan is an aspiring software engineer with more than nine years of experience and has a proven successful track record of delivering technology-based products and services.
+  I'm a Software Engineer. I've been coding for almost a decade now. I code 🧑‍💻, write ✍️, learn 📖 and advocate 👍.
 ---

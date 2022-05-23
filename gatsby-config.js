@@ -21,12 +21,10 @@ module.exports = {
   siteMetadata: {
     title: "Abhith Rajan",
     description:
-      "An aspiring software engineer with more than nine years of experience.",
+      "Abhith Rajan is a programmer, writer, technology advocate, and more.",
     siteUrl,
     author: {
       name: "Abhith Rajan",
-      minibio:
-        "Abhith Rajan is an aspiring software engineer with more than nine years of experience and has a proven successful track record of delivering technology-based products and services.",
       url: `https://twitter.com/abhithrajan`,
       image: `https://www.abhith.net/img/abhith.jpg`,
     },

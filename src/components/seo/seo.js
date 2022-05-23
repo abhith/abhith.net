@@ -62,7 +62,7 @@ function Seo({
     ? `${site.siteMetadata.siteUrl}${slug}`
     : site.siteMetadata.siteUrl;
 
-  const defaultTitle = `Abhith Rajan - Coder, Blogger, Biker, Full Stack Developer`;
+  const defaultTitle = `Abhith Rajan - Coder, Blogger, Full Stack Developer, Technology Advocate`;
 
   title = title ? `${title} | ${site.siteMetadata.title}` : defaultTitle;
 
