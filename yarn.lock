@@ -8103,15 +8103,6 @@ fs-extra@^10.0.0, fs-extra@^10.1.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-fs-extra@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
-  integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
-  dependencies:
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^2.0.0"
-
 fs-extra@^4.0.2:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
@@ -8597,10 +8588,10 @@ gatsby-react-router-scroll@^5.12.1:
     "@babel/runtime" "^7.15.4"
     prop-types "^15.8.1"
 
-gatsby-remark-autolink-headers@^5.12.1:
-  version "5.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-5.12.1.tgz#b4943b0a9d7346dd15043bd943c947e003b0070c"
-  integrity sha512-CRu9cZls6j9PiuS77gdf13g8okQNCwV/kstU5DX+EROQ2GeLtDyBUeXgyObXez20H0i6Iyk7wpR3/O8bhboa1A==
+gatsby-remark-autolink-headers@^5.15.0:
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-5.15.0.tgz#382c40f3f0e67cb20f354bf265c16639caf9cd55"
+  integrity sha512-5PZc12b26uVX9J1eBHGF0vM3yi/2WmNopM1Wbe1BOHMfjBEP4jfj8re9S8JhhPvcLnm6M8QYviLtJ9JIzqh0KA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     github-slugger "^1.3.0"
