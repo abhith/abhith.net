@@ -8103,15 +8103,6 @@ fs-extra@^10.0.0, fs-extra@^10.1.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-fs-extra@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
-  integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
-  dependencies:
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^2.0.0"
-
 fs-extra@^4.0.2:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
@@ -8425,10 +8416,10 @@ gatsby-plugin-mdx@^3.13.0:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-nprogress@^4.12.1:
-  version "4.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-4.12.1.tgz#80687e75a2b02f2ebd303943506cd1148e8ab15c"
-  integrity sha512-S1NE9j3j2HWSTIi+w1rHOam+kB4kJ8wHAmVgjUwsRCZDYUCGR0r/1QB3f/G540ttGj76XFqaaalFIVSaWZakmg==
+gatsby-plugin-nprogress@^4.15.0:
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-4.15.0.tgz#926b598f2a5c0da386b914717fe9520865b23c4b"
+  integrity sha512-sJ1HTTnKLo3pIZt4vX5Ylw/qsm6nGKYGOY73Krg+TAO8LthUmNLJjRk2xTMkKZl7eMN3jw31e0/JpkqUzSdqAw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     accessible-nprogress "^2.1.2"
