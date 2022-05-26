@@ -14,7 +14,7 @@
     "bulma-timeline": "^3.0.5",
     "fontsource-lora": "^4.0.0",
     "fontsource-open-sans": "^4.0.0",
-    "gatsby": "^4.12.1",
+    "gatsby": "^4.15.1",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-catch-links": "^4.12.1",
     "gatsby-plugin-emotion": "^7.12.1",
