@@ -1,5 +1,26 @@
 [
   {
+    "title": "Show Reassigned Variables in Visual Studio | Steve Fenton",
+    "url": "https://www.stevefenton.co.uk/2022/01/show-reassigned-variables-in-visual-studio/",
+    "description": "",
+    "date": "2022-05-31T09:29:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Announcing the limited preview of Optimization Insights - Microsoft Tech Community",
+    "url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-the-limited-preview-of-optimization-insights/ba-p/3254582",
+    "description": "",
+    "date": "2022-05-31T09:29:29Z",
+    "tags": ["dotnet", "app-insights"]
+  },
+  {
+    "title": "Round-robin DNS support in .NET HttpClient - Meziantou's blog",
+    "url": "https://www.meziantou.net/round-robin-dns-support-in-dotnet-httpclient.htm",
+    "description": "In this post, I describe how to use round-robin DNS using HttpClient in a .NET application.",
+    "date": "2022-05-31T09:28:29Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "#18: Debug Static Web Apps with Edge DevTools - DEV Community",
     "url": "https://dev.to/azure/18-debug-static-web-apps-with-edge-devtools-34c8",
     "description": "Join @patrickbrosset on #30DaysOfSWA to explore Debugging, Perf, #Accessibility for @AzureStaticApps using @MSEdgeDev #DevTools on @code. Tagged with staticwebapps, beginners, msedge, javascript.",
