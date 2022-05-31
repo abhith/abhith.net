@@ -23,6 +23,7 @@ export default {
   errorBackground: "rgba(238, 86, 91, 0.1)",
   horizontalRule: "rgba(8, 8, 11, 0.15)",
   inputBackground: "rgba(0, 0, 0, 0.05)",
+  link: "",
   modes: {
     dark: {
       background: "#1c1c21",
@@ -47,6 +48,7 @@ export default {
       errorBackground: "rgba(238, 86, 91, 0.1)",
       horizontalRule: "rgba(255, 255, 255, 0.15)",
       inputBackground: "rgba(255, 255, 255, 0.07)",
+      link: "rgb(191, 191, 191)",
     },
   },
 };
