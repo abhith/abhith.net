@@ -1,0 +1,57 @@
+---
+title: Delete All Local/Remote Git Tags
+description: Remove all git tags from your local/origin git repository.
+author: Abhith Rajan
+date: 2022-06-02T09:26:00.000Z
+topics:
+  - git
+  - github
+---
+
+On rare occasions, you may want to remove all local and remote git tags from your repository. For that, you can follow the below [Recommended Steps][1].
+
+In short, first, we are replacing the local tags with the remote tags, then removing all remote tags with reference to the local tags, and finally, removing all local tags.
+
+## Recommended Steps
+
+### 1. Delete all local tags
+
+```bash
+git tag -d $(git tag -l)
+```
+
+### 2. Fetch all remote tags
+
+```bash
+git fetch
+```
+
+Retrieves all remote tags giving you a complete list of remote tags.
+
+### 3. Delete All remote tags
+
+```bash
+git push origin --delete $(git tag -l)
+```
+
+Deletes the remote tags with reference to the local list.
+
+### 4. Delete All local tags
+
+```bash
+git tag -d $(git tag -l)
+```
+
+Once again, deletes all local tags.
+
+## Unnecessary Details
+
+One of the rare occasions to delete all tags in my case was, that we were maintaining a monorepo in Azure DevOps, and wanted to migrate it to GitHub, but in a **repo per component** manner. So,
+
+- First I did import the monorepo by following :point_right: [Code Migration From Azure DevOps to GitHub](https://www.abhith.net/blog/github-vs-azure-devops-for-code/#code-migration-from-azure-devops-to-github),
+- Then removed all other component's code from the repo (git history is still dirty with other component's old commits)
+- Re-configured the existing Azure pipeline triggers, i.e switched to a tag-based trigger. So, on each new release in GitHub, the connected Azure pipelines will run.
+
+Now, the monorepo had so many tags including the tags of the other components. So, I wanted to remove all the tags from the repo before proceeding with the GitHub releases, and I did use the [Recommended Steps][1] above.
+
+[1]: #recommended-steps
