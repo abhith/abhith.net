@@ -1,5 +1,26 @@
 [
   {
+    "title": "Single Element Loaders: The Spinner | CSS-Tricks - CSS-Tricks",
+    "url": "https://css-tricks.com/single-element-loaders-the-spinner/",
+    "description": "This four-part series covers how to create single element loaders with minimal code while using modern CSS techniques.",
+    "date": "2022-06-14T09:59:39Z",
+    "tags": ["css"]
+  },
+  {
+    "title": "What’s New in Angular—v14 Edition",
+    "url": "https://www.telerik.com/blogs/whats-new-angular-v14-edition",
+    "description": "Could this be the biggest upgrade in Angular’s history? Alyssa Nicoll seems to think so (with a few asterisks)—see why!",
+    "date": "2022-06-14T09:49:39Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "Bringing forward the End-of-Life Date for Node.js 16 | Node.js",
+    "url": "https://nodejs.org/en/blog/announcements/nodejs16-eol/",
+    "description": "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+    "date": "2022-06-14T09:39:39Z",
+    "tags": ["javascript"]
+  },
+  {
     "title": "Accelerate web forms using Azure Form Recognizer client library - Azure SDK Blog",
     "url": "https://devblogs.microsoft.com/azure-sdk/accelerate-web-forms-using-azure-form-recognizer-client-library/",
     "description": "This blog post will demonstrate how Azure Form Recognizer client library can be used to eliminate manual tasks for end user when completing web forms. In this example, the user uploads a passport, which is parsed to obtain relevant data that can be used to automatically populates the form fields. This saves the end user time and provides a better user experience.",
