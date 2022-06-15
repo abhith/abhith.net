@@ -1,5 +1,26 @@
 [
   {
+    "title": "How to generate a SHA-256 hash with JavaScript - remarkablemark - Medium",
+    "url": "https://remarkablemark.medium.com/how-to-generate-a-sha-256-hash-with-javascript-d3b2696382fd",
+    "description": "How to generate a SHA-256 hexadecimal hash using Node.js and JavaScript in the browser.",
+    "date": "2022-06-15T09:49:39Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "Angular v14 is now available!. We are excited to announce the release… | by Emma Twersky | Jun, 2022 | Angular Blog",
+    "url": "https://blog.angular.io/angular-v14-is-now-available-391a6db736af?gi=5e64841203af",
+    "description": "We are excited to announce the release of Angular v14! From typed forms and standalone components to new primitives in the Angular CDK (component dev kit), we’re excited to share how each feature…",
+    "date": "2022-06-15T09:39:39Z",
+    "tags": ["angular"]
+  },
+  {
+    "title": "GitHub Team or Free? How to choose the right plan | The GitHub Blog",
+    "url": "https://github.blog/2022-06-01-github-team-or-free-how-to-choose-the-right-plan/",
+    "description": "Read about all the features you may not have known come on the GitHub Free plan, and how to choose the right plan for you.",
+    "date": "2022-06-15T09:29:39Z",
+    "tags": ["github"]
+  },
+  {
     "title": "Single Element Loaders: The Spinner | CSS-Tricks - CSS-Tricks",
     "url": "https://css-tricks.com/single-element-loaders-the-spinner/",
     "description": "This four-part series covers how to create single element loaders with minimal code while using modern CSS techniques.",
