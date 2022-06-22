@@ -1,5 +1,12 @@
 [
   {
+    "title": "How to run Backstage locally and create a new .NET 6 service template",
+    "url": "https://www.youtube.com/watch?v=VIzrTpOHh9w",
+    "date": "2022-06-22T11:09:58Z",
+    "type": "youtube",
+    "tags": ["backstage"]
+  },
+  {
     "title": "Backstage Community Sessions - June 15",
     "url": "https://www.youtube.com/watch?v=aKZnjnE5Wy8",
     "date": "2022-06-15T11:09:58Z",
