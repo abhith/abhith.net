@@ -1,5 +1,26 @@
 [
   {
+    "title": "Clean up some .NET Clutter - JosephGuadagno.net",
+    "url": "https://www.josephguadagno.net/2022/06/15/clean-up-some-dot-net-clutter",
+    "description": "As some of you know, I do a lot of public speaking and blogging,  although the blogging seems to have taken a vacation lately :smile:. One of the side effects of blogging and speaking is that I have a lot of versions of .NET on my machine, along with other software. Today, after installing the latest version of .NET, I took a look at what versions of the SDK and runtime I have on my machine. I was a bit surprised to see that as to how many versions of .NET were on my machine.",
+    "date": "2022-06-22T09:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "Rule of 40: What It Is & How To Calculate It (SaaS)",
+    "url": "https://cofes.com/rule-of-40/",
+    "description": "",
+    "date": "2022-06-22T09:58:39Z",
+    "tags": ["good-to-know"]
+  },
+  {
+    "title": "Mass Assignment - OWASP Cheat Sheet Series",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html",
+    "description": "Website with the collection of all the cheat sheets of the project.",
+    "date": "2022-06-22T09:49:39Z",
+    "tags": ["security", "aspnet-core"]
+  },
+  {
     "title": "How to generate a SHA-256 hash with JavaScript - remarkablemark - Medium",
     "url": "https://remarkablemark.medium.com/how-to-generate-a-sha-256-hash-with-javascript-d3b2696382fd",
     "description": "How to generate a SHA-256 hexadecimal hash using Node.js and JavaScript in the browser.",
