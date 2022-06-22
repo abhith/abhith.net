@@ -1,4 +1,18 @@
 ---
+- title: DevToys - A Swiss Army knife for developers
+  url: https://devtoys.app/
+  description: 
+    "DevToys is a Swiss Army knife for developers for Windows. DevToys helps in daily tasks like formatting JSON, comparing text, testing RegExp. No need to use many untruthful websites to do simple tasks with your data."
+  date: "2022-06-22T09:36:28.263Z"
+  tags:
+    - developer-tools
+- title: Certificate Decoder - Decode certificates to view their contents
+  url: https://www.sslshopper.com/certificate-decoder.html
+  description: 
+    "Use this Certificate Decoder to decode your certificates in PEM format. This certificate viewer tool will decode certificates so you can easily see their contents."
+  date: "2022-06-22T09:35:28.263Z"
+  tags:
+    - developer-tools
 - title: Process Hacker
   url: https://processhacker.sourceforge.io/
   description: 
