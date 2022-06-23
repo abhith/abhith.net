@@ -8565,10 +8565,10 @@ gatsby-plugin-sitemap@^5.12.1:
     minimatch "^3.1.2"
     sitemap "^7.0.0"
 
-gatsby-plugin-theme-ui@^0.14.4:
-  version "0.14.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.14.4.tgz#83eb2021e7b9a5f9eecb8bd7168c0d3771536e2f"
-  integrity sha512-NxXWpSmYySkR4PWKUSHEdAmOlktBVb0r2lHJlYt4C2aGzZvhORKNTvcXmuiNs+4M7bifVm2ivy2W6IEqwiTyTw==
+gatsby-plugin-theme-ui@^0.14.6:
+  version "0.14.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.14.6.tgz#62d8a238c489c70d6bf39af5c48bc433fac3af19"
+  integrity sha512-WqYCkxNdDCS1cAKjJONSmeNJXgTRXUGYmEM5W9VmMppfV3zsKuLaIB8RE33Z+k6XdZ2ZIj7j+MzcgH76aNfCqg==
 
 gatsby-plugin-twitter@^4.12.1:
   version "4.12.1"
