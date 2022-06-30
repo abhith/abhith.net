@@ -1,5 +1,26 @@
 [
   {
+    "title": "Bring your own Service Principal for an Azure Container Registry connection in Azure DevOps - Yannick Reekmans - Building things on Microsoft 365, Dynamics 365, Power Platform and Azure",
+    "url": "https://blog.yannickreekmans.be/bring-your-own-service-principal-for-an-azure-container-registry-connection-in-azure-devops/",
+    "description": "How to use your own Service Principal for a Service Connection (in Azure DevOps) to an Azure Container Registry",
+    "date": "2022-06-30T09:59:39Z",
+    "tags": ["azure-devops"]
+  },
+  {
+    "title": "CodeRush - Visual Studio Productivity Tools Are Available Free-of-Charge in v22.1!",
+    "url": "https://community.devexpress.com/blogs/news/archive/2022/06/21/coderush-visual-studio-productivity-tools-are-available-free-of-charge-in-v22-1.aspx",
+    "description": "",
+    "date": "2022-06-30T09:49:39Z",
+    "tags": ["visual-studio", "c-sharp"]
+  },
+  {
+    "title": "Amazon launches CodeWhisperer, a GitHub Copilot-like AI pair programming tool – TechCrunch",
+    "url": "https://techcrunch.com/2022/06/23/amazon-launches-codewhisperer-its-ai-pair-programming-tool/",
+    "description": "At its re:Mars conference, Amazon today announced the launch of CodeWhisperer, an AI pair programming tool similar to GitHub’s Copilot that can autocomplete entire functions based on only a comment or a few keystrokes. The company trained the system, which currently supports Java, JavaScript and Python, on billions of lines of publicly available open source […]",
+    "date": "2022-06-30T09:39:39Z",
+    "tags": ["developer-tools"]
+  },
+  {
     "title": "Clean up some .NET Clutter - JosephGuadagno.net",
     "url": "https://www.josephguadagno.net/2022/06/15/clean-up-some-dot-net-clutter",
     "description": "As some of you know, I do a lot of public speaking and blogging,  although the blogging seems to have taken a vacation lately :smile:. One of the side effects of blogging and speaking is that I have a lot of versions of .NET on my machine, along with other software. Today, after installing the latest version of .NET, I took a look at what versions of the SDK and runtime I have on my machine. I was a bit surprised to see that as to how many versions of .NET were on my machine.",
