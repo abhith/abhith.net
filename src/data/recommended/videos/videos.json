@@ -1,5 +1,19 @@
 [
   {
+    "title": "Do you need IdentityServer?",
+    "url": "https://www.youtube.com/watch?v=5MAYvA2fAdA",
+    "date": "2022-06-30T11:09:58Z",
+    "type": "youtube",
+    "tags": ["identityserver", "dotnet"]
+  },
+  {
+    "title": "How to use a distributed lock in a .NET application",
+    "url": "https://www.youtube.com/watch?v=5YtAUk7k9bY",
+    "date": "2022-06-30T10:09:58Z",
+    "type": "youtube",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "How to run Backstage locally and create a new .NET 6 service template",
     "url": "https://www.youtube.com/watch?v=VIzrTpOHh9w",
     "date": "2022-06-22T11:09:58Z",
