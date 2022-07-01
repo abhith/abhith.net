@@ -1,6 +1,27 @@
 [
   {
-    "title": "Bring your own Service Principal for an Azure Container Registry connection in Azure DevOps - Yannick Reekmans - Building things on Microsoft 365, Dynamics 365, Power Platform and Azure",
+    "title": "Introducing the Allstar GitHub App - Open Source Security Foundation",
+    "url": "https://openssf.org/blog/2021/08/11/introducing-the-allstar-github-app/",
+    "description": "",
+    "date": "2022-07-01T09:59:39Z",
+    "tags": ["github", "security", "open source"]
+  },
+  {
+    "title": "You Probably Don't Need to Worry About MediatR",
+    "url": "https://jimmybogard.com/you-probably-dont-need-to-worry-about-mediatr/",
+    "description": "",
+    "date": "2022-07-01T09:49:39Z",
+    "tags": ["dotnet", "c-sharp"]
+  },
+  {
+    "title": "You probably don't need MediatR",
+    "url": "https://arialdomartini.github.io/mediatr",
+    "description": "",
+    "date": "2022-07-01T09:39:39Z",
+    "tags": ["dotnet", "c-sharp"]
+  },
+  {
+    "title": "Bring your own Service Principal for an Azure Container Registry connection in Azure DevOps - Yannick Reekmans",
     "url": "https://blog.yannickreekmans.be/bring-your-own-service-principal-for-an-azure-container-registry-connection-in-azure-devops/",
     "description": "How to use your own Service Principal for a Service Connection (in Azure DevOps) to an Azure Container Registry",
     "date": "2022-06-30T09:59:39Z",
