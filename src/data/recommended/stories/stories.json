@@ -1,5 +1,26 @@
 [
   {
+    "title": "Listen Up, Visual Studio has a new feature you need to hear about! - Visual Studio Blog",
+    "url": "https://devblogs.microsoft.com/visualstudio/audio-cues-in-visual-studio-2022-17-3-preview-2/",
+    "description": "In Visual Studio 2022 17.3 Preview 2, Visual Studio now has audio cues to convey information while editing your code documents.",
+    "date": "2022-07-03T09:59:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Azure SQL Database now supports powerful geo-replication features for all service tiers | Azure Blog and Updates | Microsoft Azure",
+    "url": "https://azure.microsoft.com/en-us/blog/azure-sql-database-now-supports-powerful-geo-replication-features-on-all-service-tiers/",
+    "description": "",
+    "date": "2022-07-03T09:49:39Z",
+    "tags": ["azure", "sql-server"]
+  },
+  {
+    "title": "Introducing the private preview of port tunneling in Visual Studio for ASP.NET Core projects - Visual Studio Blog",
+    "url": "https://devblogs.microsoft.com/visualstudio/introducing-private-preview-port-tunneling-visual-studio-for-asp-net-core-projects/",
+    "description": "",
+    "date": "2022-07-03T09:39:39Z",
+    "tags": ["visual-studio", "aspnet-core", "debug"]
+  },
+  {
     "title": "Introducing the Allstar GitHub App - Open Source Security Foundation",
     "url": "https://openssf.org/blog/2021/08/11/introducing-the-allstar-github-app/",
     "description": "",
