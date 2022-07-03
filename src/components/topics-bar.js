@@ -7,10 +7,10 @@ const TopicsBar = ({ topics }) => (
   <small>
     <div className="tags">
       {topics && topics.length
-        ? topics.map(topic => (
+        ? topics.map((topic) => (
             <React.Fragment key={topic}>
               <Link
-                className="text-capitalize smoothscroll"
+                className="text-capitalize smoothscroll p-0 m-0"
                 to={`/topics/${kebabCase(topic)}/`}
               >
                 <span className="tag">{topic}</span>
@@ -23,7 +23,7 @@ const TopicsBar = ({ topics }) => (
 );
 
 TopicsBar.propTypes = {
-  topics: PropTypes.array
+  topics: PropTypes.array,
 };
 
 export default TopicsBar;

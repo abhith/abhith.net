@@ -6,6 +6,7 @@ import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import TopicsBar from "./topics-bar";
 
 const CardPostCss = (p) => css`
   margin: auto;
@@ -87,10 +88,10 @@ const CardPostCss = (p) => css`
           border-radius: 50%;
         }
         .author-name {
-          font-size: 0.75rem;
           padding: 0 10px;
           span {
             display: block;
+            margin-left: 5px;
             &:nth-child(2) {
               color: $primary-accent !important;
               small {
@@ -168,14 +169,12 @@ const BlogCard = ({ post, tag }) => {
           <p className="ar-subtitle">{post.excerpt}</p>
           <div className="post-meta">
             <div className="author-block">
-              <div className="image is-32x32">
+              <div className="image is-48x48">
                 <img src="/img/abhith.jpg" alt="abhith rajan" />
               </div>
               <div className="author-name">
                 <span>by Abhith Rajan</span>
-                <span>
-                  <small>in</small> {post.tags.join()}
-                </span>
+                <TopicsBar topics={post.tags} />
               </div>
             </div>
           </div>
