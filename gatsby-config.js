@@ -198,12 +198,7 @@ module.exports = {
         remarkPlugins: [require("remark-emoji")],
       },
     },
-    {
-      resolve: `gatsby-plugin-emotion`,
-      options: {
-        displayName: process.env.NODE_ENV === `development`,
-      },
-    },
+    `gatsby-plugin-emotion`,
     {
       resolve: "gatsby-plugin-sass",
       options: {
