@@ -26,6 +26,7 @@
 .post-body {
   overflow-wrap: break-word;
   word-wrap: break-word;
+  -webkit-hyphens: auto;
   hyphens: auto;
   .intro {
     font-style: italic;
