@@ -1,5 +1,26 @@
 [
   {
+    "title": "Who should mark PR comments as resolved? - Dan Clarke",
+    "url": "https://www.danclarke.com/resolving-pr-comments",
+    "description": "",
+    "date": "2022-07-04T09:59:39Z",
+    "tags": ["guides", "git"]
+  },
+  {
+    "title": "Viewing .NET configuration values",
+    "url": "https://dunnhq.com/posts/2022/viewing-configuration-values/",
+    "description": "This post looks at viewing configuration values, which is useful when you want to find out where a value came from",
+    "date": "2022-07-04T09:49:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "title": "RCS ads in Google Messages temporarily disabled in India following abuse from businesses | Android Central",
+    "url": "https://www.androidcentral.com/apps-software/google-messages-rcs-ads-temporarily-disabled-india",
+    "description": "Google is working to address the RCS ads in India after users were apparently spammed with messages. The feature is temporarily disabled as the company works to 'improve the experience.'",
+    "date": "2022-07-04T09:39:39Z",
+    "tags": ["android"]
+  },
+  {
     "title": "Listen Up, Visual Studio has a new feature you need to hear about! - Visual Studio Blog",
     "url": "https://devblogs.microsoft.com/visualstudio/audio-cues-in-visual-studio-2022-17-3-preview-2/",
     "description": "In Visual Studio 2022 17.3 Preview 2, Visual Studio now has audio cues to convey information while editing your code documents.",
@@ -25,7 +46,7 @@
     "url": "https://openssf.org/blog/2021/08/11/introducing-the-allstar-github-app/",
     "description": "",
     "date": "2022-07-01T09:59:39Z",
-    "tags": ["github", "security", "open source"]
+    "tags": ["github", "security", "open-source"]
   },
   {
     "title": "You Probably Don't Need to Worry About MediatR",
