@@ -1,5 +1,26 @@
 [
   {
+    "title": "How to use Memoize to cache JavaScript function results and speed up your code",
+    "url": "https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/",
+    "description": "",
+    "date": "2022-07-05T09:59:39Z",
+    "tags": ["javascript"]
+  },
+  {
+    "title": "'Managing Kubernetes without losing your cool' by Marcus Noble",
+    "url": "https://marcusnoble.co.uk/2022-07-04-managing-kubernetes-without-losing-your-cool/",
+    "description": "",
+    "date": "2022-07-05T09:49:39Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "UNION And UNION ALL SQL Operators",
+    "url": "https://www.c-sharpcorner.com/article/union-and-union-all-sql-operators/",
+    "description": "The primary difference between UNION and UNION ALL is union operation eliminates the duplicated rows from the result set, but union all returns all rows after.",
+    "date": "2022-07-05T09:39:39Z",
+    "tags": ["sql-server"]
+  },
+  {
     "title": "Who should mark PR comments as resolved? - Dan Clarke",
     "url": "https://www.danclarke.com/resolving-pr-comments",
     "description": "",
