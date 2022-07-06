@@ -30,7 +30,7 @@
     "gatsby-plugin-recaptcha": "^1.0.5",
     "gatsby-plugin-robots-txt": "^1.7.1",
     "gatsby-plugin-sass": "^5.17.0",
-    "gatsby-plugin-sharp": "^4.17.0",
+    "gatsby-plugin-sharp": "^4.18.0",
     "gatsby-plugin-sitemap": "^5.17.0",
     "gatsby-plugin-theme-ui": "^0.14.6",
     "gatsby-plugin-twitter": "^4.17.0",
