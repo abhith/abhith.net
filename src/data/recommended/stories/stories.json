@@ -1,5 +1,26 @@
 [
   {
+    "title": "Comparing a variable with multiple options in C# ~ Matt Lacey",
+    "url": "https://www.mrlacey.com/2017/10/comparing-variable-with-multiple.html",
+    "description": "",
+    "date": "2022-07-12T09:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "title": "Code in database vs. code in application — brandur.org",
+    "url": "https://brandur.org/fragments/code-database-vs-app",
+    "description": "",
+    "date": "2022-07-12T09:49:39Z",
+    "tags": ["design-patterns"]
+  },
+  {
+    "title": "How to review and edit a pull request | Zell Liew",
+    "url": "https://zellwk.com/blog/edit-pull-request/",
+    "description": "Collaborators can decide whether to accept or reject your pull request. They may also request for some changes. This video shows you what process looks like.",
+    "date": "2022-07-12T09:39:39Z",
+    "tags": ["github"]
+  },
+  {
     "title": "How to use Memoize to cache JavaScript function results and speed up your code",
     "url": "https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/",
     "description": "",
