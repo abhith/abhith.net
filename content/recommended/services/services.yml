@@ -1,4 +1,18 @@
 ---
+- title: Uptime Kuma
+  url: https://github.com/louislam/uptime-kuma
+  description: 
+    "A fancy self-hosted monitoring tool"
+  date: "2022-07-13T09:46:28Z"
+  tags:
+    - monitoring
+- title: Kubecost | Kubernetes cost monitoring and management
+  url: https://www.kubecost.com/
+  description: 
+    "Kubecost provides real-time cost visibility and insights for teams using Kubernetes, helping you continuously reduce your cloud costs."
+  date: "2022-07-13T09:36:28Z"
+  tags:
+    - kubernetes
 - title: DevToys - A Swiss Army knife for developers
   url: https://devtoys.app/
   description: 
