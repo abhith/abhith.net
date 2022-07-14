@@ -1,5 +1,26 @@
 [
   {
+    "title": "How to block ads on iPhone & iPad? Tips that work in 2022",
+    "url": "https://buddinggeek.com/block-ads-on-iphone-ipad-free/",
+    "description": "Learn how to block ads on your iPhone & iPad with these advanced tips & tricks. Block ads on Safari, YouTube, Games or even inside other apps!",
+    "date": "2022-07-14T09:59:39Z",
+    "tags": ["iphone"]
+  },
+  {
+    "title": "Write Better Commits, Build Better Projects | The GitHub Blog",
+    "url": "https://github.blog/2022-06-30-write-better-commits-build-better-projects/",
+    "description": "High-quality Git commits are the key to a maintainable and collaborative open- or closed-source project. Learn strategies to improve and use commits to streamline your development process.",
+    "date": "2022-07-14T09:49:39Z",
+    "tags": ["git", "github"]
+  },
+  {
+    "title": "Build 2022: GitHub Copilot will be Free for Open Source Contributors & Students This Summer - Petri IT Knowledgebase",
+    "url": "https://petri.com/github-copilot-free-open-source-contributors-students-summer/",
+    "description": "GitHub Copilot, an AI-powered coding assistant that launched in preview last year, will become generally available for all developers this summer. Microsoft has announced that the service will be free for Build 2022 attendees, students, and verified open-source contributors. GitHub Copilot is a ...",
+    "date": "2022-07-14T09:39:39Z",
+    "tags": ["github"]
+  },
+  {
     "title": "ASP.NET Core updates in .NET 7 Preview 6 - .NET Blog",
     "url": "https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-7-preview-6/",
     "description": "",
