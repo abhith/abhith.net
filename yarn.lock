@@ -1442,17 +1442,10 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.0":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.18.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.6.tgz#6a1ef59f838debd670421f8c7f2cbb8da9751580"
   integrity sha512-t9wi7/AW6XtKahAe20Yw0/mMljKq0B1r2fPdvaAdV/KPDZewFXdaaa6K7lxmZBZ8FBNpCiAT6iHPmd6QO9bKfQ==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  version "7.17.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
-  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -7230,10 +7223,10 @@ devcert@^1.2.0:
     tmp "^0.0.33"
     tslib "^1.10.0"
 
-devtools-protocol@0.0.981744:
-  version "0.0.981744"
-  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.981744.tgz#9960da0370284577d46c28979a0b32651022bacf"
-  integrity sha512-0cuGS8+jhR67Fy7qG3i3Pc7Aw494sb9yG9QgpG97SFVWwolgYjlhJg7n+UaHxOQT30d1TYu/EYe9k01ivLErIg==
+devtools-protocol@0.0.1011705:
+  version "0.0.1011705"
+  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1011705.tgz#2582ed29f84848df83fba488122015540a744539"
+  integrity sha512-OKvTvu9n3swmgYshvsyVHYX0+aPzCoYUnyXUacfQMmFtBtBKewV/gT4I9jkAbpTqtTi2E4S9MXLlvzBDUlqg0Q==
 
 dicer@0.2.5:
   version "0.2.5"
@@ -8793,10 +8786,10 @@ gatsby-parcel-config@0.8.0:
     "@parcel/transformer-raw" "2.6.0"
     "@parcel/transformer-react-refresh-wrap" "2.6.0"
 
-gatsby-plugin-catch-links@^4.17.0:
-  version "4.17.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-4.17.0.tgz#eb869504626f7fa6373953d0b4613c7f4bb44a17"
-  integrity sha512-hqrNbrmeJ22nhq2W1u+KBFtrH9zpDrum6DQD+TOTOjlA+MX59Nmc4mewUjuMKa9CEv93/k3Y58NIhFcGk6jHWg==
+gatsby-plugin-catch-links@^4.18.0:
+  version "4.18.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-4.18.0.tgz#e0b96b78b7f47c40ce1e4ccbae4f217cae6cb0e3"
+  integrity sha512-BhrK//cvOuBKhKZ+P8GW/PrjQjo2Vx2fiiZbIuV4/tVWMx76vbdR1tzija2OHBts4mq3ngVNJOknLpaxRk6JAg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     escape-string-regexp "^1.0.5"
@@ -14622,14 +14615,14 @@ pupa@^2.1.1:
   dependencies:
     escape-goat "^2.0.0"
 
-puppeteer@^13.7.0:
-  version "13.7.0"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-13.7.0.tgz#18e16f83e397cf02f7a0804c67c1603d381cfb0b"
-  integrity sha512-U1uufzBjz3+PkpCxFrWzh4OrMIdIb2ztzCu0YEPfRHjHswcSwHZswnK+WdsOQJsRV8WeTg3jLhJR4D867+fjsA==
+puppeteer@^15.4.0:
+  version "15.4.0"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-15.4.0.tgz#31f043ee64cc4e1b5cbe99ad900653aab4afb186"
+  integrity sha512-wxJRbofjaycCaQ9fhABlToJobrjxlABiFi6NvdkOPVJMYFblxDlDTjkg+b6bZYi7xN+lEXn84GBZsA5DYb3wfw==
   dependencies:
     cross-fetch "3.1.5"
     debug "4.3.4"
-    devtools-protocol "0.0.981744"
+    devtools-protocol "0.0.1011705"
     extract-zip "2.0.1"
     https-proxy-agent "5.0.1"
     pkg-dir "4.2.0"
@@ -14638,7 +14631,7 @@ puppeteer@^13.7.0:
     rimraf "3.0.2"
     tar-fs "2.1.1"
     unbzip2-stream "1.4.3"
-    ws "8.5.0"
+    ws "8.8.0"
 
 purgecss@^2.3.0:
   version "2.3.0"
@@ -18327,10 +18320,10 @@ ws@7.4.5:
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.5.tgz#a484dd851e9beb6fdb420027e3885e8ce48986c1"
   integrity sha512-xzyu3hFvomRfXKH8vOFMU3OguG6oOvhXMo3xsGy3xWExqaM2dxBbVxuD99O7m3ZUFMvvscsZDqxfgMaRr/Nr1g==
 
-ws@8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-8.5.0.tgz#bfb4be96600757fe5382de12c670dab984a1ed4f"
-  integrity sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==
+ws@8.8.0:
+  version "8.8.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.8.0.tgz#8e71c75e2f6348dbf8d78005107297056cb77769"
+  integrity sha512-JDAgSYQ1ksuwqfChJusw1LSJ8BizJ2e/vVu5Lxjq3YvNJNlROv1ui4i+c/kUUrPheBvQl4c5UbERhTwKa6QBJQ==
 
 ws@^5.1.1:
   version "5.2.3"
