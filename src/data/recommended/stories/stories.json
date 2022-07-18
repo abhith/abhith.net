@@ -1,5 +1,26 @@
 [
   {
+    "title": "Your git log is not a changelog! | agateau.com",
+    "url": "https://agateau.com/2022/your-git-log-is-not-a-changelog/",
+    "description": "",
+    "date": "2022-07-18T09:59:39Z",
+    "tags": ["git"]
+  },
+  {
+    "title": "Samsung One UI tip: Force individual apps to always use mobile data - SamMobile",
+    "url": "https://www.sammobile.com/news/samsung-one-ui-tip-force-individual-apps-to-always-use-mobile-data/",
+    "description": "Are you using your Samsung phone or tablet on a school or work network that restricts access to certain apps? Here's how you can work around it. - SamMobile",
+    "date": "2022-07-18T09:49:39Z",
+    "tags": ["one-ui"]
+  },
+  {
+    "title": "Dissecting Microsoft’s proposed policy to ban commercial open source apps – TechCrunch",
+    "url": "https://techcrunch.com/2022/07/15/dissecting-microsofts-delayed-policy-to-ban-commercial-open-source-apps/",
+    "description": "The language of Microsoft's proposed policy is seemingly preventing anyone -- including the project owners and maintainers -- from charging for their work.",
+    "date": "2022-07-18T09:39:39Z",
+    "tags": ["microsoft", "windows"]
+  },
+  {
     "title": "How to block ads on iPhone & iPad? Tips that work in 2022",
     "url": "https://buddinggeek.com/block-ads-on-iphone-ipad-free/",
     "description": "Learn how to block ads on your iPhone & iPad with these advanced tips & tricks. Block ads on Safari, YouTube, Games or even inside other apps!",
