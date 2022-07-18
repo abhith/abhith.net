@@ -1,5 +1,12 @@
 [
   {
+    "title": "How slow is MediatR really?",
+    "url": "https://www.youtube.com/watch?v=baiH3f_TFfY",
+    "date": "2022-07-18T11:09:58Z",
+    "type": "youtube",
+    "tags": ["dotnet", "c-sharp"]
+  },
+  {
     "title": "Stop choosing the “wrong” .NET version",
     "url": "https://www.youtube.com/watch?v=55UdBNRuQ7k",
     "date": "2022-07-14T11:09:58Z",
