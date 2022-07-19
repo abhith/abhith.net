@@ -1,4 +1,11 @@
 ---
+- title: 'Microsoft PowerToys: Utilities to customize Windows'
+  url: https://docs.microsoft.com/en-us/windows/powertoys/
+  description: 
+    "Microsoft PowerToys is a set of utilities for customizing Windows. Utilities include ColorPicker, FancyZones, File Explorer Add-ons, Image Resizer, Keyboard Manager, PowerRename, PowerToys Run, a Shortcut Guide and more to come."
+  date: "2022-07-19T09:46:28Z"
+  tags:
+    - windows
 - title: Uptime Kuma
   url: https://github.com/louislam/uptime-kuma
   description: 
