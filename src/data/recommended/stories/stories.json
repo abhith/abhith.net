@@ -1,5 +1,26 @@
 [
   {
+    "title": "Uses | Rahul Nath",
+    "url": "https://www.rahulpnath.com/blog/uses/",
+    "description": "My daily drivers, tools, softwares and gadgets that help me do what I do. I do keep changing things often, so plan to keep this page updated as it happens.",
+    "date": "2022-07-19T09:59:39Z",
+    "tags": ["developer-tools"]
+  },
+  {
+    "title": "Working With add-mask and GitHub Actions for dynamic secrets | LINQ to Fail",
+    "url": "https://www.aaron-powell.com/posts/2022-07-14-working-with-add-mask-and-github-actions/",
+    "description": "This took a lot of chasing down to work out, so hopefully I can save you some time",
+    "date": "2022-07-19T09:49:39Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "IEnumerable Debugger Visualizer Improvements - Visual Studio Blog",
+    "url": "https://devblogs.microsoft.com/visualstudio/ienumerable-visualizer-improvements/",
+    "description": "In Visual Studio 17.2 Preview 3, we added a few highly requested improvements in IEnumerable visualizer like Filtering, Theming, and CSV export.",
+    "date": "2022-07-19T09:39:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
     "title": "Your git log is not a changelog! | agateau.com",
     "url": "https://agateau.com/2022/your-git-log-is-not-a-changelog/",
     "description": "",
