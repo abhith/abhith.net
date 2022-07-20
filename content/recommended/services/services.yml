@@ -1,4 +1,12 @@
 ---
+- title: BFG Repo-Cleaner by rtyley
+  url: https://rtyley.github.io/bfg-repo-cleaner/
+  description: 
+    "A simpler, faster alternative to git-filter-branch for deleting big files and removing passwords from Git history."
+  date: "2022-07-20T09:46:28Z"
+  tags:
+    - git
+    - github
 - title: 'Microsoft PowerToys: Utilities to customize Windows'
   url: https://docs.microsoft.com/en-us/windows/powertoys/
   description: 
