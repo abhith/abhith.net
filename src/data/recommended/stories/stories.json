@@ -1,5 +1,26 @@
 [
   {
+    "title": "Microsoft's metaverse rival Meta chooses Azure as strategic cloud provider",
+    "url": "https://www.onmsft.com/news/meta-chooses-azure-as-strategic-cloud-provider",
+    "description": "Meta, formerly known as Facebook, has chosen Microsoft Azure as a strategic cloud provider for A.I. research and development",
+    "date": "2022-07-20T09:59:39Z",
+    "tags": ["azure"]
+  },
+  {
+    "title": "What is a Nonce? - Cryptographic Nonce from SearchSecurity",
+    "url": "https://www.techtarget.com/searchsecurity/definition/nonce",
+    "description": "Nonce is a random or semi-random number that is generated for a specific use. See the full cryptographic nonce definition and more today.",
+    "date": "2022-07-20T09:49:39Z",
+    "tags": ["security"]
+  },
+  {
+    "title": "Structure and Organize .NET Projects with Rider | The .NET Tools Blog",
+    "url": "https://blog.jetbrains.com/dotnet/2022/05/11/structure-and-organize-net-projects-with-rider/",
+    "description": "Whether you’re starting out with a new project or refactoring a mature codebase, good folder and file organization makes your life less stressful.",
+    "date": "2022-07-20T09:39:39Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "Uses | Rahul Nath",
     "url": "https://www.rahulpnath.com/blog/uses/",
     "description": "My daily drivers, tools, softwares and gadgets that help me do what I do. I do keep changing things often, so plan to keep this page updated as it happens.",
