@@ -1,5 +1,26 @@
 [
   {
+    "title": "Muhammad Azeez - Mocking Authentication and Authorization in ASP.NET Core Integration Tests",
+    "url": "https://mazeez.dev/posts/auth-in-integration-tests",
+    "description": "",
+    "date": "2022-07-21T09:59:39Z",
+    "tags": ["aspnet-core", "testing"]
+  },
+  {
+    "title": "Auto Save files in Visual Studio 2022",
+    "url": "https://www.talkingdotnet.com/auto-save-files-in-visual-studio-2022/",
+    "description": "Auto save file in Visual Studio 2022 enables you to save your files automatically in the background when Visual Studio loses focus.",
+    "date": "2022-07-21T09:49:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "title": "Code Review Add-in for Visual Studio - Review Assistant",
+    "url": "https://www.devart.com/review-assistant/code-review-guidelines-net-developers.html",
+    "description": "Read the Code Review Guidelines for .NET Developers, which describes best practices of the peer review process.",
+    "date": "2022-07-21T09:39:39Z",
+    "tags": ["dotnet", "guides"]
+  },
+  {
     "title": "Microsoft's metaverse rival Meta chooses Azure as strategic cloud provider",
     "url": "https://www.onmsft.com/news/meta-chooses-azure-as-strategic-cloud-provider",
     "description": "Meta, formerly known as Facebook, has chosen Microsoft Azure as a strategic cloud provider for A.I. research and development",
