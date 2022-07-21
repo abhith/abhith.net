@@ -1,185 +1,165 @@
 ---
+- title: "containrrr/watchtower"
+  url: https://github.com/containrrr/watchtower
+  description: "A process for automating Docker container base image updates."
+  date: "2022-07-21T09:46:28Z"
+  tags:
+    - docker
 - title: BFG Repo-Cleaner by rtyley
   url: https://rtyley.github.io/bfg-repo-cleaner/
-  description: 
-    "A simpler, faster alternative to git-filter-branch for deleting big files and removing passwords from Git history."
+  description: "A simpler, faster alternative to git-filter-branch for deleting big files and removing passwords from Git history."
   date: "2022-07-20T09:46:28Z"
   tags:
     - git
     - github
-- title: 'Microsoft PowerToys: Utilities to customize Windows'
+- title: "Microsoft PowerToys: Utilities to customize Windows"
   url: https://docs.microsoft.com/en-us/windows/powertoys/
-  description: 
-    "Microsoft PowerToys is a set of utilities for customizing Windows. Utilities include ColorPicker, FancyZones, File Explorer Add-ons, Image Resizer, Keyboard Manager, PowerRename, PowerToys Run, a Shortcut Guide and more to come."
+  description: "Microsoft PowerToys is a set of utilities for customizing Windows. Utilities include ColorPicker, FancyZones, File Explorer Add-ons, Image Resizer, Keyboard Manager, PowerRename, PowerToys Run, a Shortcut Guide and more to come."
   date: "2022-07-19T09:46:28Z"
   tags:
     - windows
 - title: Uptime Kuma
   url: https://github.com/louislam/uptime-kuma
-  description: 
-    "A fancy self-hosted monitoring tool"
+  description: "A fancy self-hosted monitoring tool"
   date: "2022-07-13T09:46:28Z"
   tags:
     - monitoring
 - title: Kubecost | Kubernetes cost monitoring and management
   url: https://www.kubecost.com/
-  description: 
-    "Kubecost provides real-time cost visibility and insights for teams using Kubernetes, helping you continuously reduce your cloud costs."
+  description: "Kubecost provides real-time cost visibility and insights for teams using Kubernetes, helping you continuously reduce your cloud costs."
   date: "2022-07-13T09:36:28Z"
   tags:
     - kubernetes
 - title: DevToys - A Swiss Army knife for developers
   url: https://devtoys.app/
-  description: 
-    "DevToys is a Swiss Army knife for developers for Windows. DevToys helps in daily tasks like formatting JSON, comparing text, testing RegExp. No need to use many untruthful websites to do simple tasks with your data."
+  description: "DevToys is a Swiss Army knife for developers for Windows. DevToys helps in daily tasks like formatting JSON, comparing text, testing RegExp. No need to use many untruthful websites to do simple tasks with your data."
   date: "2022-06-22T09:36:28.263Z"
   tags:
     - developer-tools
 - title: Certificate Decoder - Decode certificates to view their contents
   url: https://www.sslshopper.com/certificate-decoder.html
-  description: 
-    "Use this Certificate Decoder to decode your certificates in PEM format. This certificate viewer tool will decode certificates so you can easily see their contents."
+  description: "Use this Certificate Decoder to decode your certificates in PEM format. This certificate viewer tool will decode certificates so you can easily see their contents."
   date: "2022-06-22T09:35:28.263Z"
   tags:
     - developer-tools
 - title: Process Hacker
   url: https://processhacker.sourceforge.io/
-  description: 
-    "Process Hacker, A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware."
+  description: "Process Hacker, A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware."
   date: "2022-03-09T09:35:28.263Z"
   tags:
     - windows
 - title: Consumer Reports Security Planner - Improve your online safety with tools for your needs.
   url: https://securityplanner.consumerreports.org/
-  description: 
-    "Improve your online safety with tools for your needs. Answer a few simple questions to get personalized recommendations of free and open-source software. It's confidential -- no personal information is stored, and we won't access any of your online accounts."
+  description: "Improve your online safety with tools for your needs. Answer a few simple questions to get personalized recommendations of free and open-source software. It's confidential -- no personal information is stored, and we won't access any of your online accounts."
   date: "2022-03-09T09:34:28.263Z"
   tags:
     - privacy
 - title: Pages to PDF - Convert your PAGES to PDF for Free Online
   url: https://www.zamzar.com/convert/pages-to-pdf/
-  description: 
-    "Do you want to convert a PAGES file to a PDF file ? Don't download software - use Zamzar to convert it for free online. Click to convert your PAGES file now."
+  description: "Do you want to convert a PAGES file to a PDF file ? Don't download software - use Zamzar to convert it for free online. Click to convert your PAGES file now."
   date: "2022-03-09T09:33:28.263Z"
   tags:
     - developer-tools
 - title: iRuler.net - Online ruler
   url: https://iruler.net/
-  description: 
-    "This website measures the size of your screen and creates the image of a ruler that is the actual size."
+  description: "This website measures the size of your screen and creates the image of a ruler that is the actual size."
   date: "2022-03-09T09:32:28.263Z"
   tags:
     - developer-tools
 - title: Blur Busters TestUFO Motion Tests. Benchmark for monitors & displays.
   url: https://www.testufo.com/
-  description: 
-    "Blur Busters UFO Motion Tests with ghosting test, 30fps vs 60fps, 120hz vs 144hz vs 240hz, PWM test, motion blur test, judder test, benchmarks, and more."
+  description: "Blur Busters UFO Motion Tests with ghosting test, 30fps vs 60fps, 120hz vs 144hz vs 240hz, PWM test, motion blur test, judder test, benchmarks, and more."
   date: "2022-03-09T09:31:28.263Z"
   tags:
     - developer-tools
 - title: Time.is - exact time, any time zone
   url: https://time.is/
-  description: 
-    "7 million locations, 53 languages, synchronized with atomic clock time."
+  description: "7 million locations, 53 languages, synchronized with atomic clock time."
   date: "2022-02-15T09:31:28.263Z"
   tags:
     - developer-tools
 - title: Meta Tags — Preview, Edit and Generate
   url: https://metatags.io/
-  description: 
-    "With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!"
+  description: "With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!"
   date: "2022-01-24T09:31:28.263Z"
   tags:
     - seo
 - title: Try .NET | Runnable .NET code on your site
   url: https://dotnet.microsoft.com/platform/try-dotnet
-  description: 
-    "Try .NET is a service that allows you to embed runnable .NET code snippets into your website, blog, or documentation. Go beyond copy and paste samples to live snippets."
+  description: "Try .NET is a service that allows you to embed runnable .NET code snippets into your website, blog, or documentation. Go beyond copy and paste samples to live snippets."
   date: "2021-10-31T09:31:28.263Z"
   tags:
     - dotnet
 - title: ASCIIFlow
   url: https://asciiflow.com/
-  description: 
-    "Infinite ASCII diagrams, save to Google Drive, resize, freeform draw, and export straight to text/html."
+  description: "Infinite ASCII diagrams, save to Google Drive, resize, freeform draw, and export straight to text/html."
   date: "2021-10-31T09:30:28.263Z"
   tags:
     - developer-tools
 - title: mindmaps
   url: https://www.mindmaps.app
-  description: 
-    "mindmaps is an HTML5 based mind mapping app. It lets you create neat looking mind maps in the browser."
+  description: "mindmaps is an HTML5 based mind mapping app. It lets you create neat looking mind maps in the browser."
   date: "2021-10-31T08:30:28.263Z"
   tags:
     - developer-tools
 - title: Visual Studio Code for the Web
   url: https://vscode.dev/
-  description: 
-    "Build with Visual Studio Code, anywhere, anytime, entirely in your browser."
+  description: "Build with Visual Studio Code, anywhere, anytime, entirely in your browser."
   date: "2021-10-24T08:30:28.263Z"
   tags:
     - vscode
     - ide
 - title: Table to Markdown
   url: https://tabletomarkdown.com/
-  description: 
-    "Table to Markdown is a simple Markdown table generator that converts tables from spreadsheet applications and websites into well-formatted Markdown tables."
+  description: "Table to Markdown is a simple Markdown table generator that converts tables from spreadsheet applications and websites into well-formatted Markdown tables."
   date: "2021-10-19T08:30:28.263Z"
   tags:
     - markdown
 - title: Robots.txt generator - Create a robots.txt file instantly
   url: https://en.ryte.com/free-tools/robots-txt-generator
-  description: 
-    "Generate a robots.txt file for free with this easy-to-use tool. Make sure search engine crawlers are crawling and indexing your site."
+  description: "Generate a robots.txt file for free with this easy-to-use tool. Make sure search engine crawlers are crawling and indexing your site."
   date: "2021-09-08T08:30:28.263Z"
   tags:
     - seo
 - title: Unicode Character Table
   url: https://unicode-table.com/en/
-  description: 
-    "Unicode web service for character search. Find, copy and paste your favorite characters: 😎 Emoji, ❤ Hearts, 💲 Currencies, → Arrows, ★ Stars and many others 🚩"
+  description: "Unicode web service for character search. Find, copy and paste your favorite characters: 😎 Emoji, ❤ Hearts, 💲 Currencies, → Arrows, ★ Stars and many others 🚩"
   date: "2021-01-13T15:30:28.263Z"
   tags:
     - content-writing
 - title: Privacy Badger
   url: https://privacybadger.org/
-  description: 
-    Privacy Badger is a browser add-on that stops advertisers and other third-party trackers from secretly tracking where you go and what pages.
+  description: Privacy Badger is a browser add-on that stops advertisers and other third-party trackers from secretly tracking where you go and what pages.
   date: "2021-01-11T15:30:28.263Z"
   tags:
     - privacy
 - title: Cover Your Tracks
   url: https://coveryourtracks.eff.org/
-  description: 
-    Want to learn more about tracking? Read up on how it works with our guide. Learn More About Fingerprinting.
+  description: Want to learn more about tracking? Read up on how it works with our guide. Learn More About Fingerprinting.
   date: "2020-12-28T15:30:28.263Z"
   tags:
     - privacy
 - title: Syncthing
   url: https://syncthing.net/
-  description: 
-    Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes. Your data is your data alone and you deserve to choose where it is stored, whether it is shared with some third party, and how it's transmitted over the internet.
+  description: Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes. Your data is your data alone and you deserve to choose where it is stored, whether it is shared with some third party, and how it's transmitted over the internet.
   date: "2020-11-21T15:30:28.263Z"
   tags:
     - storage
 - title: Have i been pwned?
   url: https://haveibeenpwned.com/
-  description: 
-    Check if you have an account that has been compromised in a data breach
+  description: Check if you have an account that has been compromised in a data breach
   date: "2020-11-19T15:30:28.263Z"
   tags:
     - security
 - title: Free Online Cron Expression Generator and Describer - FreeFormatter.com
   url: https://www.freeformatter.com/cron-expression-generator-quartz.html
-  description: 
-    This free online tool lets you build a Quartz Cron expression or converts one in readable text format
+  description: This free online tool lets you build a Quartz Cron expression or converts one in readable text format
   date: "2020-11-16T15:30:28.263Z"
   tags:
     - developer-tools
 - title: ShareX - Screen capture, file sharing and productivity tool
   url: https://getsharex.com/
-  description: 
-    ShareX is a free and open source program that lets you capture or record any area of your screen and share it with a single press of a key. It also allows uploading images, text or other types of files to many supported destinations you can choose from.
+  description: ShareX is a free and open source program that lets you capture or record any area of your screen and share it with a single press of a key. It also allows uploading images, text or other types of files to many supported destinations you can choose from.
   date: "2020-11-07T15:30:28.263Z"
   tags:
     - content-creation-tools
