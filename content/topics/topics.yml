@@ -286,6 +286,10 @@
   slug: iis
   description: ""
   image: ""
+- title: iOS
+  slug: ios
+  description: ""
+  image: "apple-1.svg"
 - title: iPhone
   slug: iphone
   description: ""

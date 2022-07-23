@@ -1,5 +1,26 @@
 [
   {
+    "title": "You can now officially transfer WhatsApp data from Android to iOS",
+    "url": "https://www.xda-developers.com/whatsapp-data-transfer-from-android-to-ios-official/",
+    "description": "After being in beta, the ability to transfer WhatsApp user data from Android to iOS devices has finally been made official.",
+    "date": "2022-07-23T09:59:39Z",
+    "tags": ["android", "ios"]
+  },
+  {
+    "title": "New DuckDuckGo Chrome Extension Blocks Topics and FLEDGE - Thurrott.com",
+    "url": "https://www.thurrott.com/cloud/web-browsers/266900/new-duckduckgo-chrome-extension-blocks-topics-and-fledge",
+    "description": "",
+    "date": "2022-07-23T09:49:39Z",
+    "tags": ["privacy"]
+  },
+  {
+    "title": "Using Playwright E2E Tests With C# .NET - .NET Core Tutorials",
+    "url": "https://dotnetcoretutorials.com/2022/05/20/using-playwright-e2e-tests-with-c-net/",
+    "description": "",
+    "date": "2022-07-23T09:39:39Z",
+    "tags": ["testing", "c-sharp", "dotnet"]
+  },
+  {
     "title": "Muhammad Azeez - Mocking Authentication and Authorization in ASP.NET Core Integration Tests",
     "url": "https://mazeez.dev/posts/auth-in-integration-tests",
     "description": "",
