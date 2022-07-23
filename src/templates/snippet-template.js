@@ -105,7 +105,7 @@ const SnippetPage = ({ pageContext, data, location }) => {
                 <AskFeedback />
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>
                 <Webmentions {...allWebMentionEntry} />
-                <Utterances repo={`Abhith/abhith.net`} />
+                <Utterances repo={`abhith/abhith.net`} />
               </div>
               <aside className="ar-side">
                 <div className="sticky">

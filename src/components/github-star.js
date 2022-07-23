@@ -17,7 +17,7 @@ const GitHubStar = () => {
           scrolling="0"
           width="120"
           height="30"
-          title="Star Abhith/abhith.net on GitHub"
+          title="Star abhith/abhith.net on GitHub"
         ></iframe>
       </div>
     </div>

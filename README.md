@@ -11,8 +11,8 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=security_rating)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=sqale_index)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Abhith_abhith.net&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=Abhith_abhith.net)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/Abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Abhith/abhith.net/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Abhith/abhith.net/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/abhith/abhith.net/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/abhith/abhith.net.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/abhith/abhith.net/context:javascript)
 ![Discord](https://img.shields.io/discord/671364953487310854)
 
 ![website](./static/img/repo/banner.png)

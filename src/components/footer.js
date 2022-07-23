@@ -128,7 +128,7 @@ function Footer() {
                         scrolling="0"
                         width="170"
                         height="30"
-                        title="Star Abhith/abhith.net on GitHub"
+                        title="Star abhith/abhith.net on GitHub"
                       ></iframe>
                     </li>
                   </ul>
