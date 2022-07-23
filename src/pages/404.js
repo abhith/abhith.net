@@ -23,7 +23,7 @@ const NotFoundPage = () => (
               </Link>
               <OutboundLink
                 className="button is-info is-light"
-                href="https://github.com/Abhith/abhith.net"
+                href="https://github.com/abhith/abhith.net"
                 target="_blank"
               >
                 <span className="icon">

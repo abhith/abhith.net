@@ -22,7 +22,7 @@ import React from "react";
 export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
   const pluginOptions = {
     googleAdClientId: `ca-pub-XXXXXXXXXXXXXX`, //TODO: Replace with your client-Id
-    head: true // Set to false if you prefer to have your adsense script loaded at the end of body instead of head.
+    head: true, // Set to false if you prefer to have your adsense script loaded at the end of body instead of head.
   };
 
   if (process.env.NODE_ENV !== `production`) {
@@ -48,9 +48,9 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             google_ad_client: "${pluginOptions.googleAdClientId}",
             enable_page_level_ads: true
         });
-        `
+        `,
       }}
-    />
+    />,
   ]);
 };
 ```
@@ -63,4 +63,4 @@ Build the project (`gatsby build`) and see whether the AdSense snippet is presen
 
 You can also refer the same used in my repo itself.
 
-:point_right: [Abhith/abhith.net: Personal website running on Gatsby](https://github.com/Abhith/abhith.net/blob/master/gatsby-ssr.js)
+:point_right: [Abhith/abhith.net: Personal website running on Gatsby](https://github.com/abhith/abhith.net/blob/master/gatsby-ssr.js)

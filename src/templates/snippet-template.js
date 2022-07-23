@@ -33,7 +33,7 @@ const SnippetPage = ({ pageContext, data, location }) => {
 
   const pageTitle = `${category.title} - ${snippet.title}`;
 
-  const githubURL = `https://github.com/Abhith/abhith.net/blob/master/content${snippet.slug.substring(
+  const githubURL = `https://github.com/abhith/abhith.net/blob/master/content${snippet.slug.substring(
     0,
     snippet.slug.length - 1
   )}.mdx`;

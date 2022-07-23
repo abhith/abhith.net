@@ -35,7 +35,7 @@ const ArticlePage = ({ pageContext, data, location }) => {
     next,
     previous,
   } = pageContext;
-  const githubURL = `https://github.com/Abhith/abhith.net/blob/master/content${article.slug.substring(
+  const githubURL = `https://github.com/abhith/abhith.net/blob/master/content${article.slug.substring(
     0,
     article.slug.length - 1
   )}.mdx`;

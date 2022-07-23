@@ -24,7 +24,7 @@ const AskFeedback = () => {
         <h5>
           👊 that ⭐️ button on the official{" "}
           <a
-            href="https://github.com/Abhith/abhith.net"
+            href="https://github.com/abhith/abhith.net"
             target="_blank"
             rel="noopener noreferrer"
           >

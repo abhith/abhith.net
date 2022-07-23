@@ -43,7 +43,7 @@ function Navbar({ logo }) {
         </Link>
         <OutboundLink
           className="navbar-item is-hidden-desktop"
-          href="https://github.com/Abhith/abhith.net"
+          href="https://github.com/abhith/abhith.net"
           target="_blank"
         >
           <span className="icon">
@@ -130,7 +130,7 @@ function Navbar({ logo }) {
           </div>
           <OutboundLink
             className="navbar-item is-hidden-touch"
-            href="https://github.com/Abhith/abhith.net"
+            href="https://github.com/abhith/abhith.net"
             target="_blank"
           >
             <span className="icon">
