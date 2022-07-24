@@ -1,5 +1,26 @@
 [
   {
+    "title": "OpenFeature, With Contributions From eBay, Submitted to CNCF's Sandbox Program",
+    "url": "https://tech.ebayinc.com/engineering/openfeature-with-contributions-from-ebay-submitted-to-cncfs-sandbox-program/",
+    "description": "The new open feature flagging standard enables companies to deliver cloud-native applications more effectively.",
+    "date": "2022-07-24T09:59:39Z",
+    "tags": ["cloud-native"]
+  },
+  {
+    "title": "Example: Deploying PHP Guestbook application with Redis | Kubernetes",
+    "url": "https://kubernetes.io/docs/tutorials/stateless-application/guestbook/",
+    "description": "This tutorial shows you how to build and deploy a simple (not production ready), multi-tier web application using Kubernetes and Docker. This example consists of the following components: A single-instance Redis to store guestbook entries Multiple web frontend instances Objectives Start up a Redis leader. Start up two Redis followers. Start up the guestbook frontend. Expose and view the Frontend Service. Clean up. Before you begin You need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.",
+    "date": "2022-07-24T09:49:39Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "title": "I'm getting Microsoft Teams notifications in my smartphone when loggin via desktop. - Oryon Knowledge Base",
+    "url": "https://www.oryon.net/knowledge-base/article/im-getting-microsoft-teams-notifications-in-my-smartphone-when-loggin-via-desktop/",
+    "description": "",
+    "date": "2022-07-24T09:39:39Z",
+    "tags": ["microsoft-teams"]
+  },
+  {
     "title": "You can now officially transfer WhatsApp data from Android to iOS",
     "url": "https://www.xda-developers.com/whatsapp-data-transfer-from-android-to-ios-official/",
     "description": "After being in beta, the ability to transfer WhatsApp user data from Android to iOS devices has finally been made official.",
