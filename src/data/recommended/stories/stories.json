@@ -1,5 +1,26 @@
 [
   {
+    "title": "How we lost 54k GitHub stars – HTTPie blog",
+    "url": "https://httpie.io/blog/stardust",
+    "description": "What we learned from losing a decade of stargazers and watchers, the biggest accidental community loss in open source history.",
+    "date": "2022-07-25T09:59:39Z",
+    "tags": ["github"]
+  },
+  {
+    "title": "Hardening an ASP.NET container running on Kubernetes - Microsoft Tech Community",
+    "url": "https://techcommunity.microsoft.com/t5/azure-developer-community-blog/hardening-an-asp-net-container-running-on-kubernetes/ba-p/2542224",
+    "description": "",
+    "date": "2022-07-25T09:49:39Z",
+    "tags": ["aspnet-core", "kubernetes"]
+  },
+  {
+    "title": "Garbage Collection Types in .Net Core – Chuck Conway",
+    "url": "https://chuckconway.com/garbage-collection-types-in-net-core/",
+    "description": "",
+    "date": "2022-07-25T09:39:39Z",
+    "tags": ["dotnet"]
+  },
+  {
     "title": "OpenFeature, With Contributions From eBay, Submitted to CNCF's Sandbox Program",
     "url": "https://tech.ebayinc.com/engineering/openfeature-with-contributions-from-ebay-submitted-to-cncfs-sandbox-program/",
     "description": "The new open feature flagging standard enables companies to deliver cloud-native applications more effectively.",
