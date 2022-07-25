@@ -289,7 +289,7 @@
 - title: iOS
   slug: ios
   description: ""
-  image: "apple-1.svg"
+  image: "apple-ios.svg"
 - title: iPhone
   slug: iphone
   description: ""
@@ -364,7 +364,7 @@
 - title: Microsoft Teams
   slug: microsoft-teams
   description: ""
-  image: ""
+  image: "microsoft-teams-1.svg"
 - title: Microservices
   slug: microservices
   description: ""
@@ -432,7 +432,7 @@
 - title: PowerShell
   slug: powershell
   description: ""
-  image: ""
+  image: "PowerShell_Core_6.0_icon.png"
 - title: Productivity
   slug: productivity
   description: ""
