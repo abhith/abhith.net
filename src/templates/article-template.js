@@ -8,7 +8,7 @@ import MDXRenderer from "@components/mdx";
 import Seo from "@components/seo/seo";
 import TableOfContents from "@components/table-of-contents";
 import TopicsBar from "@components/topics-bar";
-import Utterances from "@components/utterances";
+import Giscus from "@components/giscus";
 import Webmentions from "@components/webmentions";
 import Authors from "@components/authors";
 import BreadcrumbActive from "@components/breadcrumb-active";
@@ -116,7 +116,7 @@ const ArticlePage = ({ pageContext, data, location }) => {
                 <Webmentions {...allWebMentionEntry} />
                 <AskFeedback />
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>
-                <Utterances repo={`abhith/abhith.net`} />
+                <Giscus />
               </div>
               <aside className="ar-side">
                 <div className="sticky">
