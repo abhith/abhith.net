@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useColorMode } from "theme-ui";
+import HorizontalRule from "@components/horizontal-rule";
 
 const src = "https://giscus.app/client.js";
 
@@ -31,9 +32,14 @@ const Giscus = () => {
       giscus.setAttribute(configKey, giscusConfig[configKey]);
     });
     rootElm.current.appendChild(giscus);
-  }, [colorMode, rootElm]);
+  }, [colorMode]);
 
-  return <div id="ar-comments" className="giscus-comments" ref={rootElm} />;
+  return (
+    <>
+      <HorizontalRule />
+      <div id="ar-comments" className="giscus-comments" ref={rootElm} />
+    </>
+  );
 };
 
 export default Giscus;
