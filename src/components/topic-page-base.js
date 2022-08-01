@@ -2,7 +2,7 @@ import Layout from "@components/layout";
 import PageHero from "@components/page-hero";
 import Seo from "@components/seo/seo";
 import TopicsSideNav from "@components/topic-side-nav";
-import Utterances from "@components/utterances";
+import Giscus from "@components/giscus";
 import Webmentions from "@components/webmentions";
 
 import { Link } from "gatsby";
@@ -154,7 +154,7 @@ const TopicPageBase = ({
               </div>
               {children}
               <Webmentions {...allWebMentionEntry} />
-              <Utterances repo={`abhith/abhith.net`} />
+              <Giscus />
             </div>
           </div>
         </div>

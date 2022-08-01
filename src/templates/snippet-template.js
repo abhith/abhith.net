@@ -4,7 +4,7 @@ import Layout from "@components/layout";
 import MDXRenderer from "@components/mdx";
 import Seo from "@components/seo/seo";
 import TopicsBar from "@components/topics-bar";
-import Utterances from "@components/utterances";
+import Giscus from "@components/giscus";
 import Webmentions from "@components/webmentions";
 import GitHubStar from "@components/github-star";
 import SnippetHero from "../sections/snippet/snippet-hero";
@@ -105,7 +105,7 @@ const SnippetPage = ({ pageContext, data, location }) => {
                 <AskFeedback />
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>
                 <Webmentions {...allWebMentionEntry} />
-                <Utterances repo={`abhith/abhith.net`} />
+                <Giscus />
               </div>
               <aside className="ar-side">
                 <div className="sticky">
