@@ -1,4 +1,16 @@
 ---
+- title: "giscus"
+  url: https://giscus.app
+  description: "A comments widget built on GitHub Discussions."
+  date: "2022-08-02T09:46:28Z"
+  tags:
+    - github
+- title: "BetterViewer"
+  url: https://github.com/Ademking/BetterViewer
+  description: "a replacement for the image viewing mode built into Firefox and Chrome-based web browsers."
+  date: "2022-08-02T09:36:28Z"
+  tags:
+    - chrome
 - title: "containrrr/watchtower"
   url: https://github.com/containrrr/watchtower
   description: "A process for automating Docker container base image updates."
