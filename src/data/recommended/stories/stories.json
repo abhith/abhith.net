@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://medium.com/inside-sumup/are-kubernetes-cpu-limits-bad-a04430bf54e1",
+    "title": "Are Kubernetes CPU limits bad? | Inside SumUp",
+    "description": "Defining or not CPU limits for your pod is a controversial discussion. Let's talk a little bit about this.",
+    "date": "2022-08-02T09:59:39Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "url": "https://www.aaron-powell.com/posts/2022-07-20-taking-a-swa-devops-pipeline-to-the-next-level/",
+    "title": "Taking a SWA DevOps pipeline to the next level | LINQ to Fail",
+    "description": "The default SWA pipeline is a good starting point, but let's look at how to split it up more.",
+    "date": "2022-08-02T09:49:39Z",
+    "tags": ["github"]
+  },
+  {
+    "url": "https://medium.com/k8slens/lens-6-released-vision-for-the-future-new-subscription-model-and-features-available-628ff21fe14a",
+    "title": "Lens 6 Released, Vision for the Future, New Subscription Model and Features Available | by Miska Kaipiainen | k8slens | Jul, 2022 | Medium",
+    "description": "",
+    "date": "2022-08-02T09:39:39Z",
+    "tags": ["kubernetes"]
+  },
+  {
     "title": "How we lost 54k GitHub stars – HTTPie blog",
     "url": "https://httpie.io/blog/stardust",
     "description": "What we learned from losing a decade of stargazers and watchers, the biggest accidental community loss in open source history.",
