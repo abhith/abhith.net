@@ -242,6 +242,10 @@
   slug: github
   description: ""
   image: github-1.svg
+- title: GitHub Actions
+  slug: github-actions
+  description: ""
+  image: github-1.svg
 - title: GitLab
   slug: gitlab
   description: ""
@@ -501,6 +505,10 @@
   slug: testing
   description: ""
   image: ""
+- title: TypeScript
+  slug: typescript
+  description: ""
+  image: "typescript.svg"
 - title: Ubuntu
   slug: ubuntu
   description: ""

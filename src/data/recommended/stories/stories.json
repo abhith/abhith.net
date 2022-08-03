@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://shipit.dev/posts/from-utterances-to-giscus.html",
+    "title": "Moving from utterances to giscus",
+    "description": "Here's how to migrate from utterances to giscus without loosing existing comments on single or multiple pages.",
+    "date": "2022-08-03T09:59:39Z",
+    "tags": ["github"]
+  },
+  {
+    "url": "https://medium.com/@kentcdodds/why-every-new-web-app-at-paypal-starts-with-typescript-9d1acc07c839",
+    "title": "paypal-scripts now supports TypeScript as well as JavaScript | by Kent C. Dodds | Medium",
+    "description": "",
+    "date": "2022-08-03T09:49:39Z",
+    "tags": ["typescript", "javascript"]
+  },
+  {
+    "url": "https://blog.alexi.sh/posts/2022/07/lockdown-jsc/",
+    "title": "The impact of iOS 16 Lockdown mode in Safari",
+    "description": "A look at how the new iOS lockdown mode affects web performances and features.",
+    "date": "2022-08-03T09:39:39Z",
+    "tags": ["ios"]
+  },
+  {
     "url": "https://medium.com/inside-sumup/are-kubernetes-cpu-limits-bad-a04430bf54e1",
     "title": "Are Kubernetes CPU limits bad? | Inside SumUp",
     "description": "Defining or not CPU limits for your pod is a controversial discussion. Let's talk a little bit about this.",
@@ -11,7 +32,7 @@
     "title": "Taking a SWA DevOps pipeline to the next level | LINQ to Fail",
     "description": "The default SWA pipeline is a good starting point, but let's look at how to split it up more.",
     "date": "2022-08-02T09:49:39Z",
-    "tags": ["github"]
+    "tags": ["github-actions"]
   },
   {
     "url": "https://medium.com/k8slens/lens-6-released-vision-for-the-future-new-subscription-model-and-features-available-628ff21fe14a",
