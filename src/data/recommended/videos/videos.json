@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=P9Aka5vVj9w",
+    "title": "Use chat with self in Microsoft Teams",
+    "tags": ["microsoft-teams"],
+    "date": "2022-08-03T11:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=M0VM7GlphAU",
+    "title": "Dapr Community Call 64",
+    "tags": ["dapr"],
+    "date": "2022-08-03T10:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=P-9osuSdGGI",
     "title": "Synology's Best Feature - The COMPLETE BTRFS Snapshot Guide",
     "tags": ["synology"],
