@@ -1,4 +1,11 @@
 ---
+- title: "MegaLinter by OX Security"
+  url: https://oxsecurity.github.io/megalinter/latest/
+  description: "🦙 MegaLinter analyzes 48 languages, 22 formats, 19 tooling formats, excessive copy-pastes and spelling mistakes in your repository sources with a GitHub Action, other CI tools or locally."
+  date: "2022-08-03T09:46:28Z"
+  tags:
+    - github-actions
+    - code-quality
 - title: "giscus"
   url: https://giscus.app
   description: "A comments widget built on GitHub Discussions."
