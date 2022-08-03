@@ -19,7 +19,7 @@
     "gatsby-plugin-catch-links": "^4.19.0",
     "gatsby-plugin-emotion": "^7.19.0",
     "gatsby-plugin-feed": "^4.19.0",
-    "gatsby-plugin-google-gtag": "^4.19.0",
+    "gatsby-plugin-google-gtag": "^4.20.0",
     "gatsby-plugin-image": "^2.19.0",
     "gatsby-plugin-manifest": "^4.19.0",
     "gatsby-plugin-mdx": "^3.19.0",
