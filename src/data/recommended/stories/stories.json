@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+    "title": "About large files on GitHub - GitHub Docs",
+    "description": "GitHub limits the size of files you can track in regular Git repositories. Learn how to track or remove files that are beyond the limit.",
+    "date": "2022-08-04T09:59:39Z",
+    "tags": ["github"]
+  },
+  {
+    "url": "https://opentelemetry.io/blog/2022/dotnet-instrumentation-first-beta/",
+    "title": "OpenTelemetry .NET Automatic Instrumentation Releases its first Beta | OpenTelemetry",
+    "description": "",
+    "date": "2022-08-04T09:49:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/visualstudio/just-in-time-refactoring-intellicode-suggestions/",
+    "title": "Just-in-time refactoring made even easier with IntelliCode auto suggested code for C# - Visual Studio Blog",
+    "description": "",
+    "date": "2022-08-04T09:39:39Z",
+    "tags": ["visual-studio", "c-sharp"]
+  },
+  {
     "url": "https://shipit.dev/posts/from-utterances-to-giscus.html",
     "title": "Moving from utterances to giscus",
     "description": "Here's how to migrate from utterances to giscus without loosing existing comments on single or multiple pages.",
