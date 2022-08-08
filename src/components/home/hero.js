@@ -188,7 +188,7 @@ export default function Hero() {
                         <img
                           className="is-rounded hero-avatar u-photo"
                           src="https://www.abhith.net/img/abhith.jpg"
-                          alt=""
+                          alt="Abhith Rajan"
                         />
                       </figure>
                       <h1 className="title is-1 is-light is-semibold is-spaced main-title p-name">
