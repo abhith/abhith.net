@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://rehansaeed.com/on-the-etiquette-of-pull-request-comments/",
+    "title": "On the Etiquette of Pull Request Comments - Muhammad Rehan Saeed",
+    "description": "Commenting on a pull request is fraught with potential pitfalls. Here is a short guide to the etiquette of writing pull request comments.",
+    "date": "2022-08-09T09:59:39Z",
+    "tags": ["style-guide"]
+  },
+  {
+    "url": "https://planetscale.com/blog/the-slotted-counter-pattern",
+    "title": "The Slotted Counter Pattern",
+    "description": "Handle MySQL increment counter bursts with the Slotted Counter Pattern",
+    "date": "2022-08-09T09:49:39Z",
+    "tags": ["design-patterns"]
+  },
+  {
+    "url": "https://thecodemon.com/resolved-fatal-error-javascript-heap-out-of-memory-during-angular-ng-serve/",
+    "title": "Resolved! | FATAL ERROR: JavaScript heap out of memory During Angular NG Serve - The Code Mon",
+    "description": "",
+    "date": "2022-08-09T09:39:39Z",
+    "tags": ["angular"]
+  },
+  {
     "url": "https://thewebdev.info/2022/03/12/how-to-get-the-v-for-index-in-vue-js/",
     "title": "How to get the v-for index in Vue.js? - The Web Dev",
     "description": "",
