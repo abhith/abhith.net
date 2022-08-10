@@ -101,11 +101,11 @@ const SnippetPage = ({ pageContext, data, location }) => {
                 <MDXRenderer content={snippet.body}>
                   <TopicsBar topics={snippet.topics} />
                 </MDXRenderer>
-                <Authors authors={authors} />
-                <AskFeedback />
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>
-                <Webmentions {...allWebMentionEntry} />
                 <Giscus />
+                <Authors authors={authors} />
+                <Webmentions {...allWebMentionEntry} />
+                <AskFeedback />
               </div>
               <aside className="ar-side">
                 <div className="sticky">

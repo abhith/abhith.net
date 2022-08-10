@@ -112,11 +112,11 @@ const ArticlePage = ({ pageContext, data, location }) => {
                 <MDXRenderer content={article.body}>
                   <TopicsBar topics={article.tags} />
                 </MDXRenderer>
+                <GitHubTypo githubURL={githubURL}></GitHubTypo>
+                <Giscus />
                 <Authors authors={authors} />
                 <Webmentions {...allWebMentionEntry} />
                 <AskFeedback />
-                <GitHubTypo githubURL={githubURL}></GitHubTypo>
-                <Giscus />
               </div>
               <aside className="ar-side">
                 <div className="sticky">

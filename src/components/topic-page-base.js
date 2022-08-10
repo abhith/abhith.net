@@ -153,8 +153,8 @@ const TopicPageBase = ({
                 </ul>
               </div>
               {children}
-              <Webmentions {...allWebMentionEntry} />
               <Giscus />
+              <Webmentions {...allWebMentionEntry} />
             </div>
           </div>
         </div>
