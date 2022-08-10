@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.callicoder.com/deploy-multi-container-go-redis-app-kubernetes/",
+    "title": "Deploying a stateless Go app with Redis on Kubernetes | CalliCoder",
+    "description": "In this article, you'll learn how to deploy a stateless Go web app with Redis on Kubernetes.",
+    "date": "2022-08-10T09:59:39Z",
+    "tags": ["kubernetes"]
+  },
+  {
+    "url": "https://adaptivecards.io/blog/2021/Announcing-1.5/",
+    "title": "🎉 Announcing Adaptive Cards 1.5 | Adaptive Cards",
+    "description": "",
+    "date": "2022-08-10T09:49:39Z",
+    "tags": ["microsoft-teams"]
+  },
+  {
+    "url": "https://code-maze.com/aspnetcore-register-services-for-different-environments/",
+    "title": "How to Register Services for Different Environments in .NET - Code Maze",
+    "description": "In this article, we are going to show you how to register services for different environments in .NET application.",
+    "date": "2022-08-10T09:39:39Z",
+    "tags": ["aspnet-core"]
+  },
+  {
     "url": "https://rehansaeed.com/on-the-etiquette-of-pull-request-comments/",
     "title": "On the Etiquette of Pull Request Comments - Muhammad Rehan Saeed",
     "description": "Commenting on a pull request is fraught with potential pitfalls. Here is a short guide to the etiquette of writing pull request comments.",
