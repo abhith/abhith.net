@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://github.blog/2022-04-15-security-alert-stolen-oauth-user-tokens/",
+    "title": "Security alert: Attack campaign involving stolen OAuth user tokens issued to two third-party integrators | The GitHub Blog",
+    "description": "On April 12, GitHub Security began an investigation that uncovered evidence that an attacker abused stolen OAuth user tokens issued to two third-party OAuth integrators, Heroku and Travis-CI, to download data from dozens of organizations, including npm. Read on to learn more about the impact to GitHub, npm, and our users.",
+    "date": "2022-08-16T09:59:39Z",
+    "tags": ["github"]
+  },
+  {
+    "url": "https://github.blog/2022-04-12-git-security-vulnerability-announced/",
+    "title": "Git security vulnerability announced | The GitHub Blog",
+    "description": "GitHub is unaffected by the vulnerabilities, but users should be aware of them and upgrade their local installation of Git.",
+    "date": "2022-08-16T09:49:39Z",
+    "tags": ["git"]
+  },
+  {
+    "url": "https://nodogmablog.bryanhogan.net/2022/07/using-ioptions-with-net-6-api-endpoints/",
+    "title": "Using IOptions with .NET 6 API Endpoints | no dogma blog",
+    "description": "Here's a quick example using IOptions with .NET 6 API Endpoints.",
+    "date": "2022-08-16T09:39:39Z",
+    "tags": ["dotnet"]
+  },
+  {
     "url": "https://www.callicoder.com/deploy-multi-container-go-redis-app-kubernetes/",
     "title": "Deploying a stateless Go app with Redis on Kubernetes | CalliCoder",
     "description": "In this article, you'll learn how to deploy a stateless Go web app with Redis on Kubernetes.",
