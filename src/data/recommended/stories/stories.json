@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://medium.com/microsoft-design/designing-in-the-open-source-5c62be73a599",
+    "title": "Designing in the Open(Source). Why we’re excited to freely share our… | by Microsoft Design | Microsoft Design | Aug, 2022 | Medium",
+    "description": "🤣😭😍🤬 Whatever the moment calls for, there’s an emoji for that. Overcoming language barriers, communicating nuance or humor, softening feedback that might otherwise sound harsh — if all the…",
+    "date": "2022-08-24T10:59:39Z",
+    "tags": ["open-source"]
+  },
+  {
+    "url": "https://phandroid.com/2022/08/22/this-app-lets-you-know-whenever-your-data-is-sent-to-google/",
+    "title": "This app lets you know whenever your data is sent to Google – Phandroid",
+    "description": "Google controls a large portion of the web, but want to know exactly how much of your data gets sent over? This app will be able to help with that.",
+    "date": "2022-08-24T10:49:39Z",
+    "tags": ["privacy"]
+  },
+  {
+    "url": "https://about.gitlab.com/blog/2022/08/18/the-gitlab-guide-to-modern-software-testing/",
+    "title": "The GitLab guide to modern software testing | GitLab",
+    "description": "If test is your DevOps team's Public Enemy No. 1, it's time to rethink your strategy. Here's what you need to know about modern software testing.",
+    "date": "2022-08-24T10:39:39Z",
+    "tags": ["testing"]
+  },
+  {
     "url": "https://steven-giesel.com/blogPost/09dd41f9-a0ca-497b-90db-19a89b68b8a0",
     "title": "EF7 - Bulk updates and Bulk deletes",
     "description": "Finally the long awaited bulk update and bulk delete feature is heading towards Entity Framework 7. So we will have a look how to use it and what might be some limitations.Also I will have a quick look at the performance aspect, because this was the main driver for that feature.",
