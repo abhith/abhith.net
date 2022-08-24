@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://steven-giesel.com/blogPost/09dd41f9-a0ca-497b-90db-19a89b68b8a0",
+    "title": "EF7 - Bulk updates and Bulk deletes",
+    "description": "Finally the long awaited bulk update and bulk delete feature is heading towards Entity Framework 7. So we will have a look how to use it and what might be some limitations.Also I will have a quick look at the performance aspect, because this was the main driver for that feature.",
+    "date": "2022-08-24T09:59:39Z",
+    "tags": ["ef-core"]
+  },
+  {
+    "url": "https://code-maze.com/add-values-to-csharp-array/",
+    "title": "Different Ways to Add Values to a C# Array - Code Maze",
+    "description": "How do we add values to an array in C#? There are a few ways we can do it and then we'll do a benchmark to see which one is the fastest.",
+    "date": "2022-08-23T09:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "url": "https://github.blog/2022-04-15-security-alert-stolen-oauth-user-tokens/",
     "title": "Security alert: Attack campaign involving stolen OAuth user tokens issued to two third-party integrators | The GitHub Blog",
     "description": "On April 12, GitHub Security began an investigation that uncovered evidence that an attacker abused stolen OAuth user tokens issued to two third-party OAuth integrators, Heroku and Travis-CI, to download data from dozens of organizations, including npm. Read on to learn more about the impact to GitHub, npm, and our users.",
