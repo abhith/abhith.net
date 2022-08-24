@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=kO_GMfC1LHA",
+    "title": "GatsbyJS & Analytics: How to Add Google Analytics 4.0 To a Gatsby Site Using Gtag",
+    "tags": ["gatsby", "analytics"],
+    "date": "2022-08-24T11:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=P9Aka5vVj9w",
     "title": "Use chat with self in Microsoft Teams",
     "tags": ["microsoft-teams"],
