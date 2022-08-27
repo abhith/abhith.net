@@ -4,7 +4,7 @@ description: >-
   Add Microsoft Clarity analytics to the GatsbyJS website in a simple step. Also, a quick look at what Microsoft Clarity offers.
 author: Abhith Rajan
 authorURL: "https://twitter.com/abhithrajan"
-lastModificationTime: 2020-11-07T09:39:53.000Z
+lastModificationTime: 2022-08-27T09:39:53.000Z
 date: 2020-11-04T00:00:00.000Z
 image: /img/blog/microsoft-clarity-setting-up-with-gatsbyjs-and-first-impressions/microsoft-clarity-setting-up-with-gatsbyjs-and-first-impressions-cover.png
 tags:
@@ -22,6 +22,48 @@ Getting started was pretty easy.
 There are already some direct integrations available. In my case, I have opted for the `Install tracking code manually`.
 
 ## Integrating Microsoft Clarity with GatsbyJS website
+
+### Official plugin
+
+**Step 1**
+Navigate to the root of your Gatsby project.
+
+**Step 2**
+Open your preferred command line and run one of the following commands.
+
+```bash
+npm install gatsby-plugin-clarity
+```
+
+or
+
+```bash
+yarn add gatsby-plugin-clarity
+```
+
+**Step 3**
+Navigate to gatsby-config.js.
+
+**Step 4**
+Add the following to your plugins array
+
+```js
+{
+    resolve: `gatsby-plugin-clarity`,
+    options: {
+      // String value for your clarity project ID
+      clarity_project_id: YOUR-CLARITY-PROJECT-ID,
+      // Boolean value for enabling clarity while developing
+      // true will enable clarity tracking code on both development and production environments
+      // false will enable clarity tracking code on production environment only
+      enable_on_dev_env: true
+    },
+}
+```
+
+The Clarity tracking code is now installed.
+
+### Legacy way of installing [DEPRECATED]
 
 It is very similar to adding **Google AdSense** as described in my older post here,
 
