@@ -40,7 +40,10 @@ function MDX({ content, children, ...props }) {
   return (
     <MDXProvider components={components}>
       <MDXBody>
-        <article className="content is-medium post-body">
+        <article
+          className="content is-medium post-body"
+          data-clarity-region="article"
+        >
           <MDXRenderer {...props}>{content}</MDXRenderer>
         </article>
       </MDXBody>
