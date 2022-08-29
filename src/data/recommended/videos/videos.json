@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=eEXdEjZUrXk",
+    "title": "Kubernetes Event-driven Autoscaling (KEDA) | KubeCon 2022",
+    "tags": ["kubernetes"],
+    "date": "2022-08-29T11:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=kO_GMfC1LHA",
     "title": "GatsbyJS & Analytics: How to Add Google Analytics 4.0 To a Gatsby Site Using Gtag",
     "tags": ["gatsby", "analytics"],
