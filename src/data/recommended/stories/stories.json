@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://davidwalsh.name/css-out-of-range",
+    "title": "CSS :out-of-range",
+    "description": "One aspect of web development I've always loathed was working with forms. Form elements have been traditionally difficult to style due to OS and browser",
+    "date": "2022-08-29T10:59:39Z",
+    "tags": ["css"]
+  },
+  {
+    "url": "https://dev.to/dotnetsafer/visual-studio-codes-new-editor-sticky-scroll-feature-never-get-lost-in-the-code-again-1dob",
+    "title": "Visual Studio Code's New Editor Sticky Scroll Feature - Never Get Lost In The Code Again!😍 - DEV Community",
+    "description": "Finally came what many of us were not waiting for but wishing for! (like the song that nobody... Tagged with vscode, beginners, news, programming.",
+    "date": "2022-08-29T10:49:39Z",
+    "tags": ["vscode"]
+  },
+  {
+    "url": "https://portswigger.net/daily-swig/internal-aws-credentials-swiped-by-researcher-via-sql-payload",
+    "title": "Internal AWS credentials swiped by researcher via SQL payload | The Daily Swig",
+    "description": "Amazon cloud service acts quickly to close security hole in RDS",
+    "date": "2022-08-29T10:39:39Z",
+    "tags": ["aws"]
+  },
+  {
     "url": "https://medium.com/microsoft-design/designing-in-the-open-source-5c62be73a599",
     "title": "Designing in the Open(Source). Why we’re excited to freely share our… | by Microsoft Design | Microsoft Design | Aug, 2022 | Medium",
     "description": "🤣😭😍🤬 Whatever the moment calls for, there’s an emoji for that. Overcoming language barriers, communicating nuance or humor, softening feedback that might otherwise sound harsh — if all the…",

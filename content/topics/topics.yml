@@ -63,6 +63,10 @@
   slug: awesome-list
   description: An awesome list is a list of awesome things curated by the community.
   image: awesome.svg
+- title: Amazon Web Services
+  slug: aws
+  description: ""
+  image: ""
 - title: Microsoft Azure
   slug: azure
   description: ""
