@@ -1,0 +1,27 @@
+---
+title: Decode JWT Token
+description: Get JWT token payload using JavaScript Buffer
+author: Abhith Rajan
+date: 2022-08-29T09:26:00Z
+topics:
+  - javascript
+---
+
+## Method
+
+```js
+function decodeJwt(token) {
+  var base64Payload = token.split(".")[1];
+  var payloadBuffer = Buffer.from(base64Payload, "base64");
+  return JSON.parse(payloadBuffer.toString());
+}
+```
+
+## Usage
+
+```js
+var payload = decodeJwt(
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+);
+console.log(payload);
+```
