@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://dev.to/moe23/add-automapper-to-net-6-3fdn",
+    "title": "Add AutoMapper to .Net 6 - DEV Community 👩‍💻👨‍💻",
+    "description": "In this article we will be adding AutoMapper to our AspNetCore 6 application.   You can watch the... Tagged with dotnet, automapper, csharp, aspnetcore.",
+    "date": "2022-08-31T10:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://www.innovensa.co.uk/blog/fluent-assertions-10-top-tips",
+    "title": "Fluent Assertions 10 Top Tips | Innovensa Ltd",
+    "description": "Using Fluent Assertions can greatly improve  .NET unit test code.  This article gives some  .NET developer tips after a re-visit to the docs and a version update.",
+    "date": "2022-08-31T10:49:39Z",
+    "tags": ["c-sharp", "testing"]
+  },
+  {
+    "url": "https://medium.com/@david.nissimoff/next-js-meets-asp-net-core-a-story-of-performance-and-love-at-long-tail-41cf9231b2de",
+    "title": "Next.js meets ASP .NET Core — a story of performance and love at long tail | by David Nissimoff | Medium",
+    "description": "If you are a frontend developer, chances are you have heard of or you actively use Next.js. And if you are a backend developer (or not), surely Node.js more than rings a bell. Afterall, if one wants…",
+    "date": "2022-08-31T10:39:39Z",
+    "tags": ["aspnet-core", "react"]
+  },
+  {
     "url": "https://davidwalsh.name/css-out-of-range",
     "title": "CSS :out-of-range",
     "description": "One aspect of web development I've always loathed was working with forms. Form elements have been traditionally difficult to style due to OS and browser",
