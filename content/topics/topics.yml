@@ -389,6 +389,10 @@
   slug: mysql
   description: ""
   image: ""
+- title: Next.js
+  slug: nextjs
+  description: ""
+  image: ""
 - title: NGINX
   slug: nginx
   description: ""

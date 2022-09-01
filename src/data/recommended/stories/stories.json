@@ -1,5 +1,33 @@
 [
   {
+    "url": "https://medium.com/flutter/announcing-flutter-3-3-at-flutter-vikings-6f213e068793",
+    "title": "Announcing Flutter 3.3 at Flutter Vikings | Flutter",
+    "description": "A new Flutter release, a reference app called Wonderous, work to improve rendering performance with a new engine called Impeller, and a fond farewell.",
+    "date": "2022-09-01T10:59:39Z",
+    "tags": ["flutter"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/microsoft365dev/introducing-microsoft-teams-app-camp/",
+    "title": "Introducing Microsoft Teams App Camp - Microsoft 365 Developer Blog",
+    "description": "Learn how to build applications for Microsoft Teams, and how to sell them in the Microsoft Teams App Store in the Microsoft Teams App Camp.",
+    "date": "2022-09-01T10:49:39Z",
+    "tags": ["microsoft-teams"]
+  },
+  {
+    "url": "https://ardalis.com/rainbow-colorized-brackets-in-visual-studio/",
+    "title": "Rainbow Colorized Brackets in Visual Studio | Blog",
+    "description": "A popular extension and later core feature of VS Code, rainbow bracket colorization is now available as a free extension for Visual Studio.",
+    "date": "2022-09-01T10:39:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "url": "https://theodorusclarence.com/blog/one-stop-starter",
+    "title": "One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects | theodorusclarence.com",
+    "description": "Increase your efficiency by using preconfigured starter repository, with rich development features and automations.",
+    "date": "2022-09-01T10:29:39Z",
+    "tags": ["nextjs"]
+  },
+  {
     "url": "https://dev.to/moe23/add-automapper-to-net-6-3fdn",
     "title": "Add AutoMapper to .Net 6 - DEV Community 👩‍💻👨‍💻",
     "description": "In this article we will be adding AutoMapper to our AspNetCore 6 application.   You can watch the... Tagged with dotnet, automapper, csharp, aspnetcore.",
