@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://meje.dev/blog/image-optimization-error-in-nextjs",
+    "title": "Next.js Image optimization error on Netlify | Caleb's blog",
+    "description": "Next.js has a built-in Image component that comes with a lot of performance optimization features when you are using it.",
+    "date": "2022-09-12T10:59:39Z",
+    "tags": ["nextjs"]
+  },
+  {
+    "url": "https://linguinecode.com/post/how-to-use-react-useref-with-typescript",
+    "title": "How to use React useRef with TypeScript",
+    "description": "Make sure to use the useLayoutEffect whenever you’re doing any work with the DOM reference object.",
+    "date": "2022-09-12T10:49:39Z",
+    "tags": ["react"]
+  },
+  {
+    "url": "https://medium.com/flutter/whats-new-in-flutter-3-3-893c7b9af1ff",
+    "title": "What’s new in Flutter 3.3. Exciting updates for text handling… | by Kevin Jamaul Chisholm | Flutter | Aug, 2022 | Medium",
+    "description": "",
+    "date": "2022-09-05T10:59:39Z",
+    "tags": ["flutter"]
+  },
+  {
     "url": "https://medium.com/flutter/announcing-flutter-3-3-at-flutter-vikings-6f213e068793",
     "title": "Announcing Flutter 3.3 at Flutter Vikings | Flutter",
     "description": "A new Flutter release, a reference app called Wonderous, work to improve rendering performance with a new engine called Impeller, and a fond farewell.",
