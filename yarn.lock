@@ -1442,14 +1442,7 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.18.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  version "7.18.6"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.6.tgz#6a1ef59f838debd670421f8c7f2cbb8da9751580"
-  integrity sha512-t9wi7/AW6XtKahAe20Yw0/mMljKq0B1r2fPdvaAdV/KPDZewFXdaaa6K7lxmZBZ8FBNpCiAT6iHPmd6QO9bKfQ==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.18.3":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.9.tgz#b4fcfce55db3d2e5e080d2490f608a3b9f407f4a"
   integrity sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==
@@ -9192,10 +9185,10 @@ gatsby-plugin-theme-ui@^0.14.7:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.14.7.tgz#3d0cb37adc61e0720ad2c9332fa1d7be57fc9250"
   integrity sha512-Uy33Qnc9ckC9u14uNSD5aBNm+p0jHz4dvfBHBEtQZLlTpvlqXfum3bv0sLogx0tDmYVB4drv1fBTAHZNyIbZ9Q==
 
-gatsby-plugin-twitter@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.20.0.tgz#07dbe494d9948cd34bc7c66c3b54245853f87256"
-  integrity sha512-rN2MJ0qgBDaertuvI1LvzsVvFEqCViAaiDhWngzb1A6Dz+tf4FilZMFX5KtCWGs2vQp3hSukTenrPLtbKDQijw==
+gatsby-plugin-twitter@^4.23.0:
+  version "4.23.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.23.0.tgz#db4109aef11d01329ba735d3f21f9c683ff70b0d"
+  integrity sha512-nQaVdtWmksjjzU5hS4f1nyjiIpXfiX/BHgAzih17SSlAlp8f3V89BI+cBnDYXspBdSe9agooCqtmKiE+MqO8tQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
