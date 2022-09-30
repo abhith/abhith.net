@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://blog.johnnyreilly.com/2022/09/20/react-usesearchparamsstate",
+    "title": "React: storing state in URL with URLSearchParams | I CAN MAKE THIS WORK",
+    "description": "The React useState hook is a great way to persist state inside the context of a component in React. This post demonstrates a simple React hook that stores state in the URL querystring, building on top of React Routers useSearchParams hook.",
+    "date": "2022-09-28T11:59:39Z",
+    "tags": ["react"]
+  },
+  {
+    "url": "https://angular.io/api/forms/EmailValidator",
+    "title": "EmailValidator - Angular",
+    "description": "A directive that adds the email validator to controls marked with the email attribute.",
+    "date": "2022-09-28T10:59:39Z",
+    "tags": ["angular"]
+  },
+  {
+    "url": "https://auth0.com/blog/auth0s-openfga-open-source-fine-grained-authorization-system/",
+    "title": "Announcing OpenFGA - Auth0’s Open Source Fine Grained Authorization System",
+    "description": "Fine grained authorization-at-scale, available for everyone",
+    "date": "2022-09-21T10:59:39Z",
+    "tags": ["open-source"]
+  },
+  {
     "url": "https://meje.dev/blog/image-optimization-error-in-nextjs",
     "title": "Next.js Image optimization error on Netlify | Caleb's blog",
     "description": "Next.js has a built-in Image component that comes with a lot of performance optimization features when you are using it.",
