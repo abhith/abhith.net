@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.infoq.com/news/2022/10/qwik-fast-web-app-resumability/",
+    "title": "New Qwik JavaScript Framework Seeks Faster Web Apps with Unique Approach: Resumability",
+    "description": "Misko Hevery, creator of AngularJS, recently announced the beta availability of Qwik, his new web framework. Qwik claims to build applications that feel fast regardless of application size. In most ca",
+    "date": "2022-10-24T11:59:39Z",
+    "tags": ["javascript"]
+  },
+  {
     "url": "https://blog.johnnyreilly.com/2022/09/20/react-usesearchparamsstate",
     "title": "React: storing state in URL with URLSearchParams | I CAN MAKE THIS WORK",
     "description": "The React useState hook is a great way to persist state inside the context of a component in React. This post demonstrates a simple React hook that stores state in the URL querystring, building on top of React Routers useSearchParams hook.",
