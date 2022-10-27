@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://dotnetfoundation.org/blog/2022/10/20/imagesharpupdate",
+    "title": "Update on ImageSharp",
+    "description": "",
+    "date": "2022-10-27T11:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://bradfrost.com/blog/link/why-were-breaking-up-with-css-in-js/",
+    "title": "Why We’re Breaking Up with CSS-in-JS | Brad Frost",
+    "description": "",
+    "date": "2022-10-27T10:59:39Z",
+    "tags": ["css", "javascript"]
+  },
+  {
+    "url": "https://finance.yahoo.com/news/why-startups-better-off-prioritizing-214117590.html",
+    "title": "Why startups are better off prioritizing growth instead of optimizing cloud costs",
+    "description": "Everybody's talking so much about cost optimization and extending runways that startups across the board are looking at every little expense as they seek ways to navigate the downturn.  According to several investors we surveyed recently, cloud costs are one such area that startups can afford to ignore, at least in the early days.  As Zetta Ventures managing director Jocelyn Goldfein put it, the math needs to make sense if you're prioritizing cost cuts over growth.",
+    "date": "2022-10-25T11:59:39Z",
+    "tags": ["finance"]
+  },
+  {
     "url": "https://www.infoq.com/news/2022/10/qwik-fast-web-app-resumability/",
     "title": "New Qwik JavaScript Framework Seeks Faster Web Apps with Unique Approach: Resumability",
     "description": "Misko Hevery, creator of AngularJS, recently announced the beta availability of Qwik, his new web framework. Qwik claims to build applications that feel fast regardless of application size. In most ca",
