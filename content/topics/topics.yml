@@ -159,6 +159,10 @@
   slug: cqrs
   description: ""
   image: ""
+- title: Crypto
+  slug: crypto
+  description: ""
+  image: ""
 - title: Dapper
   slug: dapper
   description: ""
@@ -546,6 +550,10 @@
 - title: WCF
   slug: wcf
   description: ""
+  image: ""
+- title: Web3
+  slug: web3
+  description: "Web1 was read-only, Web2 is read-write, Web3 will be read-write-own"
   image: ""
 - title: Web.config
   slug: web-config

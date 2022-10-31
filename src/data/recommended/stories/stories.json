@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://ethereum.org/en/web3/",
+    "title": "Introduction to Web3",
+    "description": "An introduction to Web3—the next evolution of the World Wide Web—and why it matters.",
+    "date": "2022-10-31T11:59:39Z",
+    "tags": ["web3"]
+  },
+  {
+    "url": "https://coinwire.com/metamask-vs-trust-wallet/",
+    "title": "MetaMask vs Trust Wallet: Which One is Better?",
+    "description": "MetaMask and Trust Wallet are two of the most popular wallets available today. Here we will compare the two wallets to help you decide which one is right for you.",
+    "date": "2022-10-31T10:59:39Z",
+    "tags": ["crypto"]
+  },
+  {
+    "url": "https://www.mssqltips.com/sqlservertip/7441/sql-server-2022-new-features/",
+    "title": "New and Enhanced Features in SQL Server 2022",
+    "description": "Learn about some of the new features and enhancements in SQL Server 2022 and things you should consider adopting when moving to SQL Server 2022.",
+    "date": "2022-10-28T11:59:39Z",
+    "tags": ["sql-server"]
+  },
+  {
     "url": "https://dotnetfoundation.org/blog/2022/10/20/imagesharpupdate",
     "title": "Update on ImageSharp",
     "description": "",
