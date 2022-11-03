@@ -15071,13 +15071,13 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
 
-react-tsparticles@^1.42.2:
-  version "1.42.2"
-  resolved "https://registry.yarnpkg.com/react-tsparticles/-/react-tsparticles-1.42.2.tgz#5d689a26905b29eb23825318b6191a41dc45f882"
-  integrity sha512-kNOukew71biT95HDsnMEOhgm+f9IeylSSu4HtDwlRQ89s6NpNuIK12n4A1ZQyC3eqXJvsIDQP3peVrWcXh+J7A==
+react-tsparticles@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/react-tsparticles/-/react-tsparticles-2.5.1.tgz#b5e58e79f1efe025afd2475c58ed283d94b07907"
+  integrity sha512-qFp/IOEzyD9yYJ0364ZRjglivPMU4T3ODjhc0kZ8nj3Fhy7ijQqDiPL41G96xqEL0IUmjq4FiqhXh4a+tGgfsw==
   dependencies:
     fast-deep-equal "^3.1.3"
-    tsparticles "^1.42.2"
+    tsparticles-engine "^2.5.0"
 
 react@^18.2.0:
   version "18.2.0"
@@ -17383,10 +17383,10 @@ tslib@~2.2.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
   integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
 
-tsparticles@^1.42.2:
-  version "1.42.2"
-  resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.42.2.tgz#1aefb0eba66530cbc637b15285c1cc26f00b0c37"
-  integrity sha512-PFqpB5WT7TqYVSlcbQfIZfJn/6oViH2++hkD6Qm5pol2RTa/jO3Eisa5g25wIXWcF8EJlYUG79nmIE6wnBayTQ==
+tsparticles-engine@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/tsparticles-engine/-/tsparticles-engine-2.5.0.tgz#e2d95254d9ce23d3e90e89c411289220850f55b7"
+  integrity sha512-eeV1bZmSoPQB8nbEmiOzAsFUSaFzlZoxxeLKgi5gHbhuLTSUEbQA12zStMm49Njg4aOzVo+fg9JyRVnWOLTqBQ==
 
 tsutils@^3.21.0:
   version "3.21.0"
