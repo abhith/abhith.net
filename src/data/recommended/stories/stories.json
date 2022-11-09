@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://medium.com/@liwp.stephen/fix-module-can-only-be-default-imported-using-the-allowsyntheticdefaultimports-flag-issue-a033a361c6bf",
+    "title": "Fix Module can only be default-imported using the ‘allowSyntheticDefaultImports’ flag issue | by Stephen Lee | Medium",
+    "description": "",
+    "date": "2022-11-09T11:59:39Z",
+    "tags": ["angular"]
+  },
+  {
+    "url": "https://coderethinked.com/contextual-feature-filters-in-asp-net-core/",
+    "title": "Contextual Feature Filters in ASP.NET Core - Code Rethinked",
+    "description": "Contextual feature filters are helpful and allow you to enable/disable a feature based on the context supplied.",
+    "date": "2022-11-08T11:59:39Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "url": "https://www.sonicwall.com/support/knowledge-base/how-can-i-convert-a-certificate-file-from-crt-to-cer/170504597576961/",
+    "title": "How can I convert a certificate file from .crt to .cer? | SonicWall",
+    "description": "",
+    "date": "2022-11-08T10:59:39Z",
+    "tags": ["hosting", "azure-application-gateway"]
+  },
+  {
     "url": "https://ethereum.org/en/web3/",
     "title": "Introduction to Web3",
     "description": "An introduction to Web3—the next evolution of the World Wide Web—and why it matters.",
