@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.code4it.dev/cleancodetips/coherent-levels-of-abstraction",
+    "title": "Clean Code Tip: Methods should have a coherent level of abstraction - Code4IT",
+    "description": "Don't let the reader get lost in the code details!",
+    "date": "2022-11-17T12:59:39Z",
+    "tags": ["design-patterns"]
+  },
+  {
+    "url": "https://netbasal.com/angular-2-deal-with-different-form-controls-cheat-sheet-template-vs-model-4c77864cc16b",
+    "title": "Angular 2 — Deal with Different Form Controls Cheat Sheet — Template vs Model | by Netanel Basal | Netanel Basal",
+    "description": "Select box:. “Angular 2 — Deal with Different Form Controls Cheat Sheet — Template vs Model” is published by Netanel Basal in Netanel Basal.",
+    "date": "2022-11-14T12:59:39Z",
+    "tags": ["angular"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/dotnet/whats-new-in-orleans-7/",
+    "title": "What's new in Orleans 7.0 - .NET Blog",
+    "description": "",
+    "date": "2022-11-09T12:59:39Z",
+    "tags": ["microsoft-orleans"]
+  },
+  {
     "url": "https://medium.com/@liwp.stephen/fix-module-can-only-be-default-imported-using-the-allowsyntheticdefaultimports-flag-issue-a033a361c6bf",
     "title": "Fix Module can only be default-imported using the ‘allowSyntheticDefaultImports’ flag issue | by Stephen Lee | Medium",
     "description": "",
