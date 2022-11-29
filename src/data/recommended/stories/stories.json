@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://dzone.com/articles/top-7-less-known-angular-features-for-developers",
+    "title": "Top 7 Less Known Angular Features for Developers - DZone Web Dev",
+    "description": "Angular has many features that make it a great choice for web development. However, there are some less known features that every developer should know about.",
+    "date": "2022-11-29T13:59:39Z",
+    "tags": ["angular"]
+  },
+  {
+    "url": "https://willmendesneto.com/posts/ngx-skeleton-loader-states-animations-performance-and-accessibility-for-your-angular-app",
+    "title": "NGX-Skeleton-Loader — States, Animations, Performance, and Accessibility for your Angular App | Wilson Mendes",
+    "description": "",
+    "date": "2022-11-24T13:59:39Z",
+    "tags": ["angular"]
+  },
+  {
+    "url": "https://bobbyhadz.com/blog/javascript-get-last-n-characters-of-string",
+    "title": "Get the last N characters of a String in JavaScript | bobbyhadz",
+    "description": "To get the last N characters of a string, call the `slice` method on the string, passing in `-n` as a parameter, e.g. `str.slice(-3)` returns a new string containing the last 3 characters of the original string.",
+    "date": "2022-11-17T13:59:39Z",
+    "tags": ["javascript"]
+  },
+  {
     "url": "https://www.code4it.dev/cleancodetips/coherent-levels-of-abstraction",
     "title": "Clean Code Tip: Methods should have a coherent level of abstraction - Code4IT",
     "description": "Don't let the reader get lost in the code details!",
