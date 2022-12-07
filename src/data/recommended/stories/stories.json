@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://blog.unity.com/games/10-mobile-marketing-terms-every-developer-should-know",
+    "title": "10 mobile marketing terms every app developer should know | Unity Blog",
+    "description": "This blog offers a guide to the most common terminology mobile developers need to know when getting apps published and advertised.",
+    "date": "2022-12-07T13:59:39Z",
+    "tags": ["good-to-know"]
+  },
+  {
+    "url": "https://consultwithgriff.com/building-window-services-in-dotnet/",
+    "title": "Building Windows Services in .NET 7 - Kevin W. Griffin",
+    "description": "In preparation for my latest talk on Tactics for Building Background Services in .NET, I've been working on a sample project to demonstrate the concepts. It's amazing how much easier it is to build Window Services today than it used to be!",
+    "date": "2022-12-07T12:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://www.planetgeek.ch/2022/12/02/our-journey-to-f-c-f-interop/",
+    "title": "Our journey to F#: C#-F# Interop – planetgeek.ch",
+    "description": "",
+    "date": "2022-12-07T11:59:39Z",
+    "tags": ["c-sharp", "f-sharp"]
+  },
+  {
     "url": "https://dzone.com/articles/top-7-less-known-angular-features-for-developers",
     "title": "Top 7 Less Known Angular Features for Developers - DZone Web Dev",
     "description": "Angular has many features that make it a great choice for web development. However, there are some less known features that every developer should know about.",
