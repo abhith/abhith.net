@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://code-maze.com/csharp-linkedlist/",
+    "title": "How to Implement a LinkedList in C# - Code Maze",
+    "description": "This article covers the main concepts of linked lists and how to implement LinkedList and custom LinkedList using C#.",
+    "date": "2022-12-08T13:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/visualstudio/get-your-developer-news/",
+    "title": "Get your developer news - Visual Studio Blog",
+    "description": "",
+    "date": "2022-12-08T13:58:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "url": "https://anthonygiretti.com/2022/12/02/introducing-c11-required-properties/",
+    "title": "Introducing C#11: Required properties – Anthony Giretti's .NET blog",
+    "description": "",
+    "date": "2022-12-08T12:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "url": "https://blog.unity.com/games/10-mobile-marketing-terms-every-developer-should-know",
     "title": "10 mobile marketing terms every app developer should know | Unity Blog",
     "description": "This blog offers a guide to the most common terminology mobile developers need to know when getting apps published and advertised.",
