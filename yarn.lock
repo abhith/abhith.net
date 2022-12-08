@@ -3738,6 +3738,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/sharp@^0.30.5":
+  version "0.30.5"
+  resolved "https://registry.yarnpkg.com/@types/sharp/-/sharp-0.30.5.tgz#d75d91f7acf5260525aeae229845046dcff6d17a"
+  integrity sha512-EhO29617AIBqxoVtpd1qdBanWpspk/kD2B6qTFRJ31Q23Rdf+DNU1xlHSwtqvwq1vgOqBwq1i38SX+HGCymIQg==
+  dependencies:
+    "@types/node" "*"
+
 "@types/styled-system@^5.1.13":
   version "5.1.15"
   resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.15.tgz#075f969cc028a895dba916c07708e2fe828d7077"
@@ -8880,6 +8887,27 @@ gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.25.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
+gatsby-core-utils@^3.25.0:
+  version "3.25.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.25.0.tgz#6ebfd2b8c95f3bbc3b52a9619a1ff26c68109c25"
+  integrity sha512-lmMDwbnKpqAi+8WWd7MvCTCx3E0u7j8sbVgydERNCYVxKVpzD/aLCH4WPb4EE9m1H1rSm76w0Z+MaentyB/c/Q==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    ci-info "2.0.0"
+    configstore "^5.0.1"
+    fastq "^1.13.0"
+    file-type "^16.5.3"
+    fs-extra "^10.1.0"
+    got "^11.8.5"
+    import-from "^4.0.0"
+    lmdb "2.5.3"
+    lock "^1.1.0"
+    node-object-hash "^2.3.10"
+    proper-lockfile "^4.1.2"
+    resolve-from "^5.0.0"
+    tmp "^0.2.1"
+    xdg-basedir "^4.0.0"
+
 gatsby-graphiql-explorer@^2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-2.20.0.tgz#b860b27aaa5826a3c9a6f563e852338360059887"
@@ -8973,16 +9001,16 @@ gatsby-plugin-emotion@^7.20.0:
     "@babel/runtime" "^7.15.4"
     "@emotion/babel-preset-css-prop" "^11.2.0"
 
-gatsby-plugin-feed@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-4.20.0.tgz#4bcbf69613e13aae97a2c10c050b7bf06fb3afe0"
-  integrity sha512-N6Kt5fZwmC1f+WmYHe7Vlgy6GFroZnPPnJ0Gnm0DJ0HS+FAHeR00P2C8O7zlZzyO6uIkWGjiZDMojuFcHBOYkQ==
+gatsby-plugin-feed@^4.25.0:
+  version "4.25.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-4.25.0.tgz#f45e01a8c37327b2520e4eb9f2b6191a97947a4d"
+  integrity sha512-9gZxvHtq2lu5pUcXXt0d7L7jpFIJpcmjOb2X8ykzbiHXUYRFvZnmcR95ZdQRKiVy1YawMzv3tt2+pPnBuYxvSw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@hapi/joi" "^15.1.1"
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
-    gatsby-plugin-utils "^3.14.0"
+    gatsby-plugin-utils "^3.19.0"
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
@@ -9205,23 +9233,20 @@ gatsby-plugin-typescript@^4.20.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.20.0"
 
-gatsby-plugin-utils@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.14.0.tgz#d9b730689029d48f0527301b8b18cd9103a71383"
-  integrity sha512-Dj40dEPzkirU28vPNve7QtvPIqFahY8fmQMZH4aZXFI9h5AbMfCgtWGeBBeHvNB2CA8piyPcYrnNOL+oRe/zCg==
+gatsby-plugin-utils@^3.14.0, gatsby-plugin-utils@^3.19.0:
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.19.0.tgz#f464b02cc51dcdc0c0e094b7352ee4bf660126ea"
+  integrity sha512-EZtvgHSU5NPbEn6a4cfSpEGCQ09SfwbhoybHTJKj1clop86HSwOCV2iH8RbCc+X6jbdgHaSZsfsl7zG1h7DBUw==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@gatsbyjs/potrace" "^2.2.0"
     fastq "^1.13.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.20.0"
-    gatsby-sharp "^0.14.0"
+    gatsby-core-utils "^3.25.0"
+    gatsby-sharp "^0.19.0"
     graphql-compose "^9.0.7"
     import-from "^4.0.0"
     joi "^17.4.2"
     mime "^3.0.0"
-    mini-svg-data-uri "^1.4.4"
-    svgo "^2.8.0"
 
 gatsby-plugin-webmention@^0.2.0:
   version "0.2.0"
@@ -9372,6 +9397,14 @@ gatsby-sharp@^0.14.0:
   dependencies:
     "@types/sharp" "^0.30.0"
     sharp "^0.30.3"
+
+gatsby-sharp@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.19.0.tgz#c2c35d885103ebf9d2733737db798312897a716c"
+  integrity sha512-EbI3RNBu2+aaxuMUP/INmoj8vcNAG6BgpFvi1tLeU7/gVTNVQ+7pC/ZYtlVCzSw+faaw7r1ZBMi6F66mNIIz5A==
+  dependencies:
+    "@types/sharp" "^0.30.5"
+    sharp "^0.30.7"
 
 gatsby-source-filesystem@^4.20.0:
   version "4.20.0"
@@ -14613,6 +14646,24 @@ prebuild-install@^7.1.0:
     tar-fs "^2.0.0"
     tunnel-agent "^0.6.0"
 
+prebuild-install@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-7.1.1.tgz#de97d5b34a70a0c81334fd24641f2a1702352e45"
+  integrity sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==
+  dependencies:
+    detect-libc "^2.0.0"
+    expand-template "^2.0.3"
+    github-from-package "0.0.0"
+    minimist "^1.2.3"
+    mkdirp-classic "^0.5.3"
+    napi-build-utils "^1.0.1"
+    node-abi "^3.3.0"
+    pump "^3.0.0"
+    rc "^1.2.7"
+    simple-get "^4.0.0"
+    tar-fs "^2.0.0"
+    tunnel-agent "^0.6.0"
+
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
@@ -16107,6 +16158,20 @@ sharp@^0.30.3:
     tar-fs "^2.1.1"
     tunnel-agent "^0.6.0"
 
+sharp@^0.30.7:
+  version "0.30.7"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.30.7.tgz#7862bda98804fdd1f0d5659c85e3324b90d94c7c"
+  integrity sha512-G+MY2YW33jgflKPTXXptVO28HvNOo9G3j0MybYAHeEmby+QuD2U98dT6ueht9cv/XDqZspSpIhoSW+BAKJ7Hig==
+  dependencies:
+    color "^4.2.3"
+    detect-libc "^2.0.1"
+    node-addon-api "^5.0.0"
+    prebuild-install "^7.1.1"
+    semver "^7.3.7"
+    simple-get "^4.0.1"
+    tar-fs "^2.1.1"
+    tunnel-agent "^0.6.0"
+
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"
@@ -16945,7 +17010,7 @@ svgo@1.3.2, svgo@^1.0.0, svgo@^1.3.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-svgo@^2.7.0, svgo@^2.8.0:
+svgo@^2.7.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-2.8.0.tgz#4ff80cce6710dc2795f0c7c74101e6764cfccd24"
   integrity sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==
