@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://www.mattgerega.com/2022/03/05/tech-tip-turn-on-forwarded-headers-in-nginx/",
+    "title": "Tech Tip – Turn on forwarded headers in Nginx – Matt Gerega",
+    "description": "",
+    "date": "2022-12-13T14:59:39Z",
+    "tags": ["nginx"]
+  },
+  {
+    "url": "https://jeremydmiller.com/2022/11/28/alba-for-effective-asp-net-core-integration-testing/",
+    "title": "Alba for Effective ASP.Net Core Integration Testing – The Shade Tree Developer",
+    "description": "Alba is a small library that enables easy integration testing of ASP.Net Core routes completely in process within an NUnit/xUnit.Net/MSTest project.",
+    "date": "2022-12-08T14:59:39Z",
+    "tags": ["aspnet-core", "testing"]
+  },
+  {
     "url": "https://code-maze.com/csharp-linkedlist/",
     "title": "How to Implement a LinkedList in C# - Code Maze",
     "description": "This article covers the main concepts of linked lists and how to implement LinkedList and custom LinkedList using C#.",
