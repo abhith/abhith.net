@@ -1,4 +1,24 @@
 ---
+- title: SHA-256 Hash Generator - SHA256 Generator
+  url: https://passwords-generator.org/sha256-hash-generator
+  description: SHA-256 Hash Generator is a free tool to generate a SHA256 hash. The SHA256 generator encodes any string or words into non crackable sha256 hash strings.
+  date: "2022-12-14T15:30:28.263Z"
+  tags:
+    - cryptography
+- title: "GitHub - chocolatey/ChocolateyGUI: A delicious GUI for Chocolatey"
+  url: https://github.com/chocolatey/ChocolateyGUI
+  description: Chocolatey GUI is a WPF application that allows the installation, uninstallation, updating, and searching for Chocolatey Packages. It is intended as a replacement for the Chocolatey CLI for those that prefer interacting with an application, rather than with commands.
+  date: "2022-12-14T14:30:28.263Z"
+  tags:
+    - windows
+    - developer-tools
+- title: Wappalyzer - Technology profiler - Chrome Web Store
+  url: https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg
+  description: Identify web technologies
+  date: "2022-12-14T14:30:28.263Z"
+  tags:
+    - chrome
+    - developer-tools
 - title: "MegaLinter by OX Security"
   url: https://oxsecurity.github.io/megalinter/latest/
   description: "🦙 MegaLinter analyzes 48 languages, 22 formats, 19 tooling formats, excessive copy-pastes and spelling mistakes in your repository sources with a GitHub Action, other CI tools or locally."
@@ -188,12 +208,6 @@
   date: "2020-10-25T15:30:28.263Z"
   tags:
     - sql-server
-- title: SHA256 Hash Generator Online
-  url: https://passwordsgenerator.net/sha256-hash-generator/
-  description: Generate the SHA256 hash of any string.
-  date: "2020-10-18T15:30:28.263Z"
-  tags:
-    - cryptography
 - title: Facepixelizer | Pixelate - Blur - Anonymize
   url: https://www.facepixelizer.com/
   description:
