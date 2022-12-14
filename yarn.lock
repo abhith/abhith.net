@@ -8887,27 +8887,6 @@ gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.25.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.25.0:
-  version "3.25.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.25.0.tgz#6ebfd2b8c95f3bbc3b52a9619a1ff26c68109c25"
-  integrity sha512-lmMDwbnKpqAi+8WWd7MvCTCx3E0u7j8sbVgydERNCYVxKVpzD/aLCH4WPb4EE9m1H1rSm76w0Z+MaentyB/c/Q==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.13.0"
-    file-type "^16.5.3"
-    fs-extra "^10.1.0"
-    got "^11.8.5"
-    import-from "^4.0.0"
-    lmdb "2.5.3"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
 gatsby-graphiql-explorer@^2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-2.20.0.tgz#b860b27aaa5826a3c9a6f563e852338360059887"
@@ -9213,10 +9192,10 @@ gatsby-plugin-theme-ui@^0.14.7:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.14.7.tgz#3d0cb37adc61e0720ad2c9332fa1d7be57fc9250"
   integrity sha512-Uy33Qnc9ckC9u14uNSD5aBNm+p0jHz4dvfBHBEtQZLlTpvlqXfum3bv0sLogx0tDmYVB4drv1fBTAHZNyIbZ9Q==
 
-gatsby-plugin-twitter@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.20.0.tgz#07dbe494d9948cd34bc7c66c3b54245853f87256"
-  integrity sha512-rN2MJ0qgBDaertuvI1LvzsVvFEqCViAaiDhWngzb1A6Dz+tf4FilZMFX5KtCWGs2vQp3hSukTenrPLtbKDQijw==
+gatsby-plugin-twitter@^4.25.0:
+  version "4.25.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.25.0.tgz#fa22173615e427c916c0c2f6b06d21fc2f831df8"
+  integrity sha512-LCpg1wAfadcUAMCm9zsSDyMmHY914aJQ7ruMmhhHXB05GCHgQ62AKgEBSm/5Kuib/DxMpBsQWI87esa+odCbJQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
