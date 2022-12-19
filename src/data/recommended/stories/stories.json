@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.businessinsider.com/amazon-saved-the-ukrainian-government-with-suitcase-sized-hard-drives-2022-12",
+    "title": "Amazon helped rescue the Ukrainian government and economy using suitcase-sized hard drives brought in over the Polish border: 'You can't take out the cloud with a cruise missile'",
+    "description": "Additional details have been revealed about the Amazon Web Service initiative that prompted Zelenskyy to award the company the Ukrainian peace prize.",
+    "date": "2022-12-19T14:59:39Z",
+    "tags": ["aws"]
+  },
+  {
+    "url": "https://steven-giesel.com/blogPost/db756623-13af-420e-bf86-a14c5ef85aa0",
+    "title": "Abstraction vs Encapsulation",
+    "description": "Abstraction and Encapsulation are two fundamental concepts in object-oriented programming. So let us have a small look what the difference is between those two.",
+    "date": "2022-12-19T14:58:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "url": "https://steven-giesel.com/blogPost/1a03a998-e428-4a42-9c30-1cfbf6ac5f4c",
+    "title": "A new wave of analyzers in .NET 8",
+    "description": "Analyzers did become an integral part of the .NET ecosystem. Their main responsibility is to find potential code issues and warn you. Often times this comes even with potential fixes you can directly apply. And Microsoft will continue this journey with the upcoming .NET 8 release. This blog post will show you potential candidates, which will make the cut.",
+    "date": "2022-12-19T14:57:39Z",
+    "tags": ["dotnet"]
+  },
+  {
     "url": "https://www.mattgerega.com/2022/03/05/tech-tip-turn-on-forwarded-headers-in-nginx/",
     "title": "Tech Tip – Turn on forwarded headers in Nginx – Matt Gerega",
     "description": "",
