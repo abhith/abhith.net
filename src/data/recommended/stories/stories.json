@@ -1,5 +1,40 @@
 [
   {
+    "url": "https://thehackernews.com/2022/12/hackers-breach-oktas-github.html",
+    "title": "Hackers Breach Okta's GitHub Repositories, Steal Source Code",
+    "description": "Okta recently discovered that some of its source code repositories on GitHub had been compromised earlier in the month.",
+    "date": "2022-12-22T14:59:39Z",
+    "tags": ["security"]
+  },
+  {
+    "url": "https://khalidabuhakmeh.com/aspnet-core-display-description-tag-helper",
+    "title": "ASP.NET Core Display Description Tag Helper | Khalid Abuhakmeh",
+    "description": "An ASP.NET Core Tag Helper to Use the DisplayAttribute Description for HTML UI elements",
+    "date": "2022-12-22T13:59:39Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/visualstudio/adding-new-files-just-got-a-lot-faster/",
+    "title": "Adding new files just got a lot faster - Visual Studio Blog",
+    "description": "",
+    "date": "2022-12-22T12:59:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "url": "https://www.datainfinities.com/20/too-many-re-renders-react-limits-the-number-of-renders-to-prevent-an-infinite-loop",
+    "title": "Too many re-renders. React limits the number of renders to prevent an infinite loop - Datainfinities",
+    "description": "The React error Too many re-renders. React limits the number of renders to prevent an infinite loop happens when you have reached an infinite render loop.",
+    "date": "2022-12-21T14:59:39Z",
+    "tags": ["react"]
+  },
+  {
+    "url": "https://techcrunch.com/2022/11/28/whatsapp-rolls-out-a-feature-that-makes-it-easier-to-message-yourself/",
+    "title": "WhatsApp rolls out a feature that makes it easier to message yourself • TechCrunch",
+    "description": "WhatsApp has started rolling out a feature called 'Message Yourself' to let you chat with yourself and send messages to your own account.",
+    "date": "2022-12-20T14:59:39Z",
+    "tags": ["android"]
+  },
+  {
     "url": "https://www.businessinsider.com/amazon-saved-the-ukrainian-government-with-suitcase-sized-hard-drives-2022-12",
     "title": "Amazon helped rescue the Ukrainian government and economy using suitcase-sized hard drives brought in over the Polish border: 'You can't take out the cloud with a cruise missile'",
     "description": "Additional details have been revealed about the Amazon Web Service initiative that prompted Zelenskyy to award the company the Ukrainian peace prize.",
