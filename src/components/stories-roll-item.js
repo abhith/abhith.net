@@ -2,14 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import TopicImage from "./topic-image";
-import { domainFromURL } from "../utils/common";
+import { domainFromURL, transformURL } from "../utils/common";
 import TopicsBar from "./topics-bar";
 import BoxStyled from "./box-styled";
 
 const StoriesRollItem = ({ post, showDescription }) => {
   return (
     <BoxStyled>
-      <OutboundLink className="media" target="_blank" href={post.url}>
+      <OutboundLink
+        className="media"
+        target="_blank"
+        href={transformURL(post.url)}
+      >
         <div className="media-left">
           <figure className="image is-64x64">
             <TopicImage slug={post.tags[0]} />

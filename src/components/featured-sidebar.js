@@ -6,7 +6,7 @@ import { OutboundLink } from "gatsby-plugin-google-gtag";
 import TopicsBar from "./topics-bar";
 import Button from "./button";
 import TitleBar from "@components/title-bar";
-import { domainFromURL } from "../utils/common";
+import { domainFromURL, transformURL } from "../utils/common";
 
 const FeaturedSidebar = ({ items, totalCount }) => {
   return (
@@ -23,7 +23,7 @@ const FeaturedSidebar = ({ items, totalCount }) => {
                     sx={{
                       color: "strongText",
                     }}
-                    href={item.url}
+                    href={transformURL(item.url)}
                   >
                     {item.title}
                   </OutboundLink>

@@ -4,7 +4,7 @@ import { OutboundLink } from "gatsby-plugin-google-gtag";
 import TopicsBar from "./topics-bar";
 import BoxStyled from "@components/box-styled";
 
-import { domainFromURL } from "../utils/common";
+import { domainFromURL, transformURL } from "../utils/common";
 
 const ServicesRoll = (props) => {
   const { services, hideDescription } = props;
@@ -18,7 +18,10 @@ const ServicesRoll = (props) => {
               <div className="column">
                 <small>{domainFromURL(service.url)}</small>
                 <h4 className="title is-4">
-                  <OutboundLink target="_blank" href={service.url}>
+                  <OutboundLink
+                    target="_blank"
+                    href={transformURL(service.url)}
+                  >
                     {service.title}{" "}
                   </OutboundLink>
                 </h4>
