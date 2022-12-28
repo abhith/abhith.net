@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.dqindia.com/how-aws-enabled-making-avatar-way-of-water/",
+    "title": "How AWS enabled the making of ‘Avatar: The Way of Water?’",
+    "description": "At AWS re:Invent 2022, Jon Landau, the Producer of Avatar stated that they would not have finished Avatar: The Way of Water without AWS",
+    "date": "2022-12-28T14:59:39Z",
+    "tags": ["aws"]
+  },
+  {
+    "url": "https://www.docker.com/blog/reduce-your-image-size-with-the-dive-in-docker-extension/",
+    "title": "Reduce Your Image Size with the Dive-In Docker Extension",
+    "description": "Use the Dive-In Docker Extension to see how to reduce image size in an easy-to-use UI.",
+    "date": "2022-12-27T14:59:39Z",
+    "tags": ["docker"]
+  },
+  {
+    "url": "https://code-maze.com/csharp-bitarray/",
+    "title": "BitArray in C# - Code Maze",
+    "description": "BitArray class in c# is a type that manages an array of bits. BitArray implements ICollection and ICloneable interfaces.",
+    "date": "2022-12-27T13:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "url": "https://thehackernews.com/2022/12/hackers-breach-oktas-github.html",
     "title": "Hackers Breach Okta's GitHub Repositories, Steal Source Code",
     "description": "Okta recently discovered that some of its source code repositories on GitHub had been compromised earlier in the month.",
