@@ -8940,10 +8940,10 @@ gatsby-plugin-catch-links@^4.20.0:
     "@babel/runtime" "^7.15.4"
     escape-string-regexp "^1.0.5"
 
-gatsby-plugin-clarity@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-clarity/-/gatsby-plugin-clarity-1.0.0.tgz#0ef5dd898957c8ac80f6d00d125e9c638b5330fa"
-  integrity sha512-tRr//9Z3mdQl2YltUSb8yyVR7MQGLWjaQTuvKzFxnqhr8B8CsOvLzYoMJ72wtR1P4YSam04wT8CfsYjflFZ2qQ==
+gatsby-plugin-clarity@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-clarity/-/gatsby-plugin-clarity-1.0.1.tgz#8c1120232631ede85177fda229073f7967a4d7b8"
+  integrity sha512-1GKF7GkuScINEDl9Jzhw/8CVABKvVl7NW5PUjOCfwfVQnxX1RP9C4Dj67XD7NSVyBA9ozD8g5Zv04Dzx6/FZwQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
