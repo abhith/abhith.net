@@ -9273,16 +9273,15 @@ gatsby-remark-images-medium-zoom@^1.7.0:
     "@fastly/performance-observer-polyfill" "^1.1.1"
     medium-zoom "^1.0.4"
 
-gatsby-remark-images@^6.20.0:
-  version "6.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.20.0.tgz#d642b196516e8e3aa95e269ce0cc89c0ed9d51d4"
-  integrity sha512-7mTCX6c10RollnCn4obyyk8dbdtTPa9UwsVp1L2jbFgw0XvSR783jM54XLzMz5YAbSiHKPkXbu6LwaqVm4RoeA==
+gatsby-remark-images@^6.25.0:
+  version "6.25.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.25.0.tgz#8132dd0dfa3cf90b52c896cdfa41f573e045dceb"
+  integrity sha512-NNJ17OxA8xPFtTHBfWCxAGqU9ciOielWALUlzY1YdCvYl2rcDmw498tjx77wC995yCBkcwe7yfL1tgky9bxdqQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@gatsbyjs/potrace" "^2.2.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.20.0"
+    gatsby-core-utils "^3.25.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
