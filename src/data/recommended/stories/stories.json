@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/visualstudio/adding-new-files-just-got-a-lot-faster/",
+    "title": "Adding new files just got a lot faster - Visual Studio Blog",
+    "description": "",
+    "date": "2023-02-22T14:59:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "url": "https://stefansch.medium.com/another-set-of-common-async-task-mistakes-and-how-to-avoid-them-23a6af5b1ce8",
+    "title": "Another set of common async / Task pitfalls, and how to avoid them | by Stefan Schranz | Medium",
+    "description": "",
+    "date": "2023-02-22T13:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "url": "https://code-maze.com/csharp-tasks-vs-threads/",
+    "title": "Tasks vs Threads in C# - Code Maze",
+    "description": "Tasks have mostly replaced threads in our projects. Here we analyze the reasons for choosing tasks over threads, along with comparisons.",
+    "date": "2023-02-22T12:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
     "url": "https://thehackernews.com/2022/12/hackers-breach-oktas-github.html",
     "title": "Hackers Breach Okta's GitHub Repositories, Steal Source Code",
     "description": "Okta recently discovered that some of its source code repositories on GitHub had been compromised earlier in the month.",

@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=eaosTGtNLbg",
+    "title": "An Introduction to Virtual Network (VNet) Peering in Azure",
+    "tags": ["azure"],
+    "date": "2023-02-22T11:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=-3BGBfvoUJM",
+    "title": "Don't Use AutoMapper in C#! Do THIS Instead!",
+    "tags": ["c-sharp","aspnet-core"],
+    "date": "2023-02-22T10:19:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=J4S6AxYNDtM",
+    "title": "Complete Overview of Azure Virtual Network Peering",
+    "tags": ["azure"],
+    "date": "2023-02-22T10:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=b2TWOdF2kW0",
     "title": "ts-nextjs-tailwind-starter: Auto Create Branch",
     "tags": ["github"],
