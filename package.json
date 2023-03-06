@@ -63,7 +63,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.8.0",
     "react-player": "^2.10.1",
     "react-recaptcha": "^2.3.10",
     "react-share": "^4.4.0",
