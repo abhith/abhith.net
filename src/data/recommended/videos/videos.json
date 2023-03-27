@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=U8gSdQN2jWI",
+    "title": "The Best .NET Mapper to Use in 2023",
+    "tags": ["dotnet", "c-sharp"],
+    "date": "2023-03-27T05:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=douKdQRgDEQ",
     "title": "Slack's Migrating Millions of Websockets from HAProxy to Envoy, lets discuss",
     "tags": ["envoy"],
