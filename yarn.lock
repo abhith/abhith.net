@@ -9128,29 +9128,23 @@ gatsby-plugin-sass@^5.20.0:
     resolve-url-loader "^3.1.4"
     sass-loader "^10.1.1"
 
-gatsby-plugin-sharp@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.20.0.tgz#f7389bb60917953925c312a8c682e3f7088da296"
-  integrity sha512-OM+3h9Z8LGrpirQ/z38MoP1eytKyvTQDwkZhwkB5VDDqiv21Abloo40Xqyxk2z+Qu6i6MZfIY+ab2VUp1JFPfA==
+gatsby-plugin-sharp@^4.25.1:
+  version "4.25.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.25.1.tgz#dcc31bdc698511501acc9b95ba277844c15a7576"
+  integrity sha512-cGRb8lmwJkzwT1Qze0R+VL+55BIb9weM17m+dUf6gs5Z++lQltqge+L8a1qWWsGL6KfLQN7+bIqjhmTTscIPMQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@gatsbyjs/potrace" "^2.2.0"
     async "^3.2.4"
     bluebird "^3.7.2"
     debug "^4.3.4"
     filenamify "^4.3.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.20.0"
-    gatsby-plugin-utils "^3.14.0"
-    gatsby-telemetry "^3.20.0"
-    got "^11.8.5"
+    gatsby-core-utils "^3.25.0"
+    gatsby-plugin-utils "^3.19.0"
     lodash "^4.17.21"
-    mini-svg-data-uri "^1.4.4"
     probe-image-size "^7.2.3"
-    progress "^2.0.3"
     semver "^7.3.7"
-    sharp "^0.30.3"
-    svgo "1.3.2"
+    sharp "^0.30.7"
 
 gatsby-plugin-sitemap@^5.25.0:
   version "5.25.0"
@@ -12624,11 +12618,6 @@ mini-css-extract-plugin@1.6.2:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
     webpack-sources "^1.1.0"
-
-mini-svg-data-uri@^1.4.4:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz#8ab0aabcdf8c29ad5693ca595af19dd2ead09939"
-  integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
@@ -16869,7 +16858,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svgo@1.3.2, svgo@^1.0.0, svgo@^1.3.2:
+svgo@^1.0.0, svgo@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.3.2.tgz#b6dc511c063346c9e415b81e43401145b96d4167"
   integrity sha512-yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw==
