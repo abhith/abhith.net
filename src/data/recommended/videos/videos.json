@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=9v6RENPk5iM",
+    "title": "What are record types in C# and how they ACTUALLY work",
+    "tags": [ "c-sharp", "dotnet"],
+    "date": "2023-05-01T09:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=D80u__nYYWw",
+    "title": "Learn how to use Project Roadmaps - GitHub Checkout",
+    "tags": [ "github", "project-management"],
+    "date": "2023-05-01T08:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=qNhn2u2LmUw",
+    "title": "Migrate from an Automation Run As account to a managed identity",
+    "tags": [ "azure"],
+    "date": "2023-05-01T07:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=LsFXI6ZwLpc",
     "title": "List vs IList in C#",
     "tags": [ "c-sharp", "dotnet"],
