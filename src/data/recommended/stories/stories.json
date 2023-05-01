@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/dotnet/improvements-auth-identity-aspnetcore-8/",
+    "title": "Improvements to auth and identity in ASP.NET Core 8 - .NET Blog",
+    "description": "",
+    "date": "2023-05-01T14:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/",
+    "title": "C# Heap(ing) Vs Stack(ing) In .NET - Part One",
+    "description": "Even though with the .NET framework we don't have to actively worry about memory management and garbage collection (GC), we still have to keep memory management and GC in mind in order to optimize the performance of our applications.",
+    "date": "2023-05-01T13:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://jesseliberty.com/2022/09/02/a-dozen-utilities-every-net-programmer-needs/?theme_preview=true&iframe=true&frame-nonce=a74495910b",
+    "title": "A Dozen Utilities Every .NET Programmer Needs",
+    "description": "",
+    "date": "2023-05-01T12:59:39Z",
+    "tags": ["dotnet", "developer-tools"]
+  },
+  {
     "url": "https://dev.to/icebeam7/cloning-azure-vms-1889",
     "title": "Cloning Azure VMs - DEV Community",
     "description": "",
