@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=x7Pfdl9wl4Q",
+    "title": "Explore, Test, & Debug API Endpoints in Visual Studio Faster Than Ever!",
+    "tags": ["visual-studio"],
+    "date": "2023-05-05T09:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=aTDUY66tlxk",
+    "title": "NativeAOT for .NET APIs Is Here and It’s INSANE!",
+    "tags": ["dotnet"],
+    "date": "2023-05-05T08:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Egd-BMPCHNc",
+    "title": "Will This New EF Core Feature Be The End Of Dapper?",
+    "tags": ["ef-core"],
+    "date": "2023-05-05T07:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=v0gNo8kv-TI",
     "title": "8 new features in Microsoft Teams for Spring 2023",
     "tags": ["microsoft-teams"],
