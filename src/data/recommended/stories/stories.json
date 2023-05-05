@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.azureblue.io/how-to-start-stop-your-aks-cluster-on-schedule/",
+    "title": "How to start/stop your AKS cluster on schedule",
+    "description": "This article describes how an Azure Automation Account can be used to automatically start and stop an AKS cluster on schedule",
+    "date": "2023-05-05T14:59:39Z",
+    "tags": ["azure"]
+  },
+  {
+    "url": "https://www.c-sharpcorner.com/article/stack-vs-heap-memory-c-sharp/",
+    "title": "Stack Vs Heap Memory - C#",
+    "description": "In this article, you will learn about Stack v/s Heap Memory - C#.",
+    "date": "2023-05-05T13:59:39Z",
+    "tags": ["c-sharp", "dotnet"]
+  },
+  {
+    "url": "https://ericlippert.com/2009/11/12/closing-over-the-loop-variable-considered-harmful-part-one/",
+    "title": "Closing over the loop variable considered harmful, part one | Fabulous adventures in coding",
+    "description": "",
+    "date": "2023-05-05T12:59:39Z",
+    "tags": ["c-sharp", "dotnet"]
+  },
+  {
     "url": "https://devblogs.microsoft.com/dotnet/improvements-auth-identity-aspnetcore-8/",
     "title": "Improvements to auth and identity in ASP.NET Core 8 - .NET Blog",
     "description": "",
