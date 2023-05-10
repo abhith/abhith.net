@@ -34,6 +34,7 @@ module.exports = {
       fbAppID: "",
     },
   },
+  trailingSlash: `always`,
   mapping: {
     "Mdx.frontmatter.author": `AuthorsYaml`,
   },
@@ -209,7 +210,9 @@ module.exports = {
           },
           { resolve: `gatsby-remark-responsive-iframe` },
         ],
-        remarkPlugins: [require("remark-emoji")],
+        mdxOptions: {
+          remarkPlugins: [require("remark-emoji")],
+        },
       },
     },
     `gatsby-plugin-emotion`,
