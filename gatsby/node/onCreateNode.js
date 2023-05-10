@@ -96,7 +96,7 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
-    createNodeField({
+    actions.createNodeField({
       name: `slug`,
       node,
       value,
@@ -120,7 +120,7 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
         timeToRead: readingTime(node.rawBody).text,
       };
 
-      createNode({
+      const articleNode = {
         ...fieldData,
         // Required fields.
         id: createNodeId(`${node.id} >>> Article`),
@@ -135,8 +135,9 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
           content: JSON.stringify(fieldData),
           description: `Article Posts`,
         },
-      });
-      createParentChildLink({ parent: fileNode, child: node });
+      };
+      createNode(articleNode);
+      createParentChildLink({ parent: fileNode, child: articleNode });
     } else if (source === contentSnippets) {
       const fieldData = {
         author: node.frontmatter.author,
