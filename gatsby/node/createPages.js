@@ -133,68 +133,66 @@ module.exports = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  return graphql(`
-    {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              templateKey
-            }
-          }
+  return graphql(`{
+  allMarkdownRemark(limit: 1000) {
+    edges {
+      node {
+        id
+        fields {
+          slug
         }
-      }
-      articleTagsGroup: allArticle(filter: { draft: { eq: false } }) {
-        group(field: tags) {
-          fieldValue
-          totalCount
-        }
-      }
-      snippetsGroupByTopic: allSnippet(filter: { draft: { eq: false } }) {
-        group(field: topics) {
-          fieldValue
-          totalCount
-        }
-      }
-      allStoriesJson {
-        edges {
-          node {
-            tags
-          }
-        }
-        group(field: tags) {
-          fieldValue
-          totalCount
-        }
-      }
-      allVideosJson {
-        edges {
-          node {
-            tags
-          }
-        }
-        group(field: tags) {
-          fieldValue
-          totalCount
-        }
-      }
-      allRecommendedService {
-        edges {
-          node {
-            tags
-          }
-        }
-        group(field: tags) {
-          fieldValue
-          totalCount
+        frontmatter {
+          templateKey
         }
       }
     }
-  `).then((result) => {
+  }
+  articleTagsGroup: allArticle(filter: {draft: {eq: false}}) {
+    group(field: {tags: SELECT}) {
+      fieldValue
+      totalCount
+    }
+  }
+  snippetsGroupByTopic: allSnippet(filter: {draft: {eq: false}}) {
+    group(field: {topics: SELECT}) {
+      fieldValue
+      totalCount
+    }
+  }
+  allStoriesJson {
+    edges {
+      node {
+        tags
+      }
+    }
+    group(field: {tags: SELECT}) {
+      fieldValue
+      totalCount
+    }
+  }
+  allVideosJson {
+    edges {
+      node {
+        tags
+      }
+    }
+    group(field: {tags: SELECT}) {
+      fieldValue
+      totalCount
+    }
+  }
+  allRecommendedService {
+    edges {
+      node {
+        tags
+      }
+    }
+    group(field: {tags: SELECT}) {
+      fieldValue
+      totalCount
+    }
+  }
+}`).then((result) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);

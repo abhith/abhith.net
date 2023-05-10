@@ -330,23 +330,21 @@ module.exports = {
                   };
                 });
             },
-            query: `
-              {
-                allArticle(sort: {order: DESC, fields: date}) {
-                  edges {
-                    node {
-                      body
-                      excerpt
-                      date
-                      slug
-                      title
-                      author
-                      draft
-                    }
-                  }
-                }
-              }
-              `,
+            query: `{
+  allArticle(sort: {date: DESC}) {
+    edges {
+      node {
+        body
+        excerpt
+        date
+        slug
+        title
+        author
+        draft
+      }
+    }
+  }
+}`,
             output: "/blog/rss.xml",
             title: "Blog posts RSS Feed",
           },
@@ -365,24 +363,20 @@ module.exports = {
                 };
               });
             },
-            query: `
-              {
-                allStoriesJson(
-                  sort: { fields: [date], order: DESC }
-                ) {
-                  edges {
-                    node {
-                      title
-                      date
-                      description
-                      id
-                      tags
-                      url
-                    }
-                  }
-                }
-              }
-              `,
+            query: `{
+  allStoriesJson(sort: {date: DESC}) {
+    edges {
+      node {
+        title
+        date
+        description
+        id
+        tags
+        url
+      }
+    }
+  }
+}`,
             output: "/recommended/stories/rss.xml",
             title: "Recommended stories RSS Feed",
           },

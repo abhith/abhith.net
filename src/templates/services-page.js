@@ -41,23 +41,21 @@ export default class RecommendedServicesIndexPage extends React.Component {
   }
 }
 
-export const pageQuery = graphql`
-  query RecommendedServicesIndexPageQuery($skip: Int!, $limit: Int!) {
-    recommendedServices: allRecommendedService(
-      sort: { fields: [date], order: DESC }
-      skip: $skip
-      limit: $limit
-    ) {
-      edges {
-        node {
-          title
-          id
-          tags
-          url
-          description
-          image
-        }
+export const pageQuery = graphql`query RecommendedServicesIndexPageQuery($skip: Int!, $limit: Int!) {
+  recommendedServices: allRecommendedService(
+    sort: {date: DESC}
+    skip: $skip
+    limit: $limit
+  ) {
+    edges {
+      node {
+        title
+        id
+        tags
+        url
+        description
+        image
       }
     }
   }
-`;
+}`;

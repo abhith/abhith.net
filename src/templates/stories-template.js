@@ -84,23 +84,21 @@ function StoriesPage({ pageContext, data }) {
 
 export default StoriesPage;
 
-export const pageQuery = graphql`
-  query RecommendedStoriesIndexPageQuery($skip: Int!, $limit: Int!) {
-    recommendedStories: allStoriesJson(
-      sort: { fields: [date], order: DESC }
-      skip: $skip
-      limit: $limit
-    ) {
-      edges {
-        node {
-          title
-          date(formatString: "MMM DD, YYYY")
-          description
-          id
-          tags
-          url
-        }
+export const pageQuery = graphql`query RecommendedStoriesIndexPageQuery($skip: Int!, $limit: Int!) {
+  recommendedStories: allStoriesJson(
+    sort: {date: DESC}
+    skip: $skip
+    limit: $limit
+  ) {
+    edges {
+      node {
+        title
+        date(formatString: "MMM DD, YYYY")
+        description
+        id
+        tags
+        url
       }
     }
   }
-`;
+}`;
