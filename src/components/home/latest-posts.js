@@ -62,7 +62,7 @@ export default LatestPosts;
 
 export const query = graphql`{
   lastUpdatedPosts: allArticle(
-    sort: {fields: [lastModificationTime], order: DESC}
+    sort: {lastModificationTime: DESC}
     filter: {lastModificationTime: {ne: null}, draft: {eq: false}}
     limit: 4
   ) {
@@ -91,7 +91,7 @@ export const query = graphql`{
     }
   }
   latestArticles: allArticle(
-    sort: {fields: [date], order: DESC}
+    sort: {date: DESC}
     filter: {draft: {eq: false}}
     limit: 3
   ) {
@@ -122,8 +122,7 @@ export const query = graphql`{
   posts: allArticle(filter: {draft: {eq: false}}) {
     totalCount
   }
-}
-`;
+}`;
 
 const LatestPostsCss = (p) => css`
   @media screen and (max-width: 1980px) and (min-width: 767px) {

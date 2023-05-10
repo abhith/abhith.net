@@ -149,7 +149,7 @@ export const pageQuery = graphql`query RecommendedIndexPageQuery {
       gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
     }
   }
-  recommendedVideos: allVideosJson(limit: 1, sort: {fields: [date], order: DESC}) {
+  recommendedVideos: allVideosJson(limit: 1, sort: {date: DESC}) {
     totalCount
     edges {
       node {
@@ -166,7 +166,7 @@ export const pageQuery = graphql`query RecommendedIndexPageQuery {
       gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
     }
   }
-  services: allRecommendedService(limit: 3, sort: {fields: [date], order: DESC}) {
+  services: allRecommendedService(limit: 3, sort: {date: DESC}) {
     totalCount
     edges {
       node {
@@ -184,10 +184,7 @@ export const pageQuery = graphql`query RecommendedIndexPageQuery {
       gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
     }
   }
-  recommendedStories: allStoriesJson(
-    limit: 3
-    sort: {fields: [date], order: DESC}
-  ) {
+  recommendedStories: allStoriesJson(limit: 3, sort: {date: DESC}) {
     totalCount
     edges {
       node {
@@ -200,5 +197,4 @@ export const pageQuery = graphql`query RecommendedIndexPageQuery {
       }
     }
   }
-}
-`;
+}`;

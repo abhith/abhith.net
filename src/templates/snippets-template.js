@@ -62,35 +62,29 @@ function SnippetsPage({ pageContext, data }) {
 
 export default SnippetsPage;
 
-export const pageQuery = graphql`
-  query SnippetRollQuery($skip: Int!, $limit: Int!) {
-    snippets: allSnippet(
-      filter: { draft: { eq: false } }
-      sort: { order: DESC, fields: [date] }
-      skip: $skip
-      limit: $limit
-    ) {
-      edges {
-        node {
-          id
-          body
-          slug
-          timeToRead
-          date
-          dateString: date(formatString: "MMMM DD, YYYY")
-          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-          title
-          excerpt
-          topics
-          lastModificationTime
-          lastModificationTimeString: lastModificationTime(
-            formatString: "MMMM DD, YYYY"
-          )
-          dateModifiedSeoFormat: lastModificationTime(
-            formatString: "YYYY-MM-DD"
-          )
-        }
+export const pageQuery = graphql`query SnippetRollQuery($skip: Int!, $limit: Int!) {
+  snippets: allSnippet(
+    filter: {draft: {eq: false}}
+    sort: {date: DESC}
+    skip: $skip
+    limit: $limit
+  ) {
+    edges {
+      node {
+        id
+        body
+        slug
+        timeToRead
+        date
+        dateString: date(formatString: "MMMM DD, YYYY")
+        datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+        title
+        excerpt
+        topics
+        lastModificationTime
+        lastModificationTimeString: lastModificationTime(formatString: "MMMM DD, YYYY")
+        dateModifiedSeoFormat: lastModificationTime(formatString: "YYYY-MM-DD")
       }
     }
   }
-`;
+}`;
