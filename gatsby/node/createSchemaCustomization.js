@@ -1,5 +1,7 @@
 module.exports = ({ actions }) => {
-  actions.createTypes(`
+  const { createTypes } = actions;
+
+  createTypes(`
       type Article implements Node {
         id: ID!
         slug: String!
@@ -17,7 +19,7 @@ module.exports = ({ actions }) => {
       }
     `);
 
-  actions.createTypes(`
+  createTypes(`
       type Snippet implements Node {
         id: ID!
         slug: String!
