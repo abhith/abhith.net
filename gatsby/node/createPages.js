@@ -480,7 +480,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
         });
       }
 
-      log(`Creating`, "paginated snippets category-wise");
+      // log(`Creating`, "paginated snippets category-wise");
       if (topic.totalSnippets > 0) {
         paginate({
           createPage,
