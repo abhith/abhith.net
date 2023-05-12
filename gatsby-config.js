@@ -82,6 +82,7 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -163,7 +164,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: { default: templates.page },
         gatsbyRemarkPlugins: [
           { resolve: "gatsby-remark-mermaid" },
           {

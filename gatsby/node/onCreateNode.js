@@ -1,12 +1,9 @@
 const readingTime = require("reading-time");
 const { createFilePath } = require("gatsby-source-filesystem");
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 const crypto = require(`crypto`);
 
 module.exports = ({ node, actions, getNode, createNodeId }) => {
   const { createNode, createNodeField, createParentChildLink } = actions;
-
-  fmImagesToRelative(node); // convert image paths for gatsby images
 
   const contentPath = "content/blog";
   const contentSnippets = "content/snippets";
@@ -117,7 +114,7 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
         tags: node.frontmatter.tags,
         lastModificationTime: node.frontmatter.lastModificationTime,
         commentId: node.frontmatter.commentId,
-        timeToRead: readingTime(node.rawBody).text,
+        timeToRead: readingTime(node.body).text,
       };
 
       const articleNode = {
@@ -149,7 +146,7 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
         excerpt: node.frontmatter.description,
         topics: node.frontmatter.topics,
         lastModificationTime: node.frontmatter.lastModificationTime,
-        timeToRead: readingTime(node.rawBody).text,
+        timeToRead: readingTime(node.body).text,
       };
 
       createNode({
