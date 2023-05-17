@@ -47,7 +47,14 @@ restaurant.Location = GeographyPoint.Create(restaurantResult.Value.Latitude, res
 
 You may encounter the following issue,
 
-> {"error":{"code":"","message":"The request is invalid. Details: parameters : Invalid GeoJSON. The 'type' member is required, but was not found.\r\n"}}
+```json
+{
+  "error": {
+    "code": "",
+    "message": "The request is invalid. Details: parameters : Invalid GeoJSON. The 'type' member is required, but was not found.\r\n"
+  }
+}
+```
 
 The way you can fix this is by,
 

@@ -115,6 +115,7 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
         lastModificationTime: node.frontmatter.lastModificationTime,
         commentId: node.frontmatter.commentId,
         timeToRead: readingTime(node.body).text,
+        contentFilePath: node.internal.contentFilePath,
       };
 
       const articleNode = {

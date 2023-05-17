@@ -4,7 +4,7 @@ title: Microsoft SQL Server Guy Trying Oracle Database
 description: >-
   This post contains my personal experiences trying Oracle Database.
 author: Abhith Rajan
-authorURL: 'https://twitter.com/abhithrajan'
+authorURL: "https://twitter.com/abhithrajan"
 date: 2019-05-08T15:11:27.975Z
 lastModificationTime: 2019-08-21T15:11:27.975Z
 image: /img/logo-oracle-database.png
@@ -15,21 +15,6 @@ tags:
 ---
 
 I have worked with **Microsoft SQL Server** for the past 7 years and still enjoying working with **SQL Server**. Now I got a chance to explore **Oracle Database** and here is my experience.
-
-#### Table of Contents <!-- omit in toc -->
-
-- [Noticed Differences](#noticed-differences)
-- [Docs](#docs)
-  - [Tablespaces](#tablespaces)
-  - [VARCHAR vs VARCHAR2](#varchar-vs-varchar2)
-- [Problems](#problems)
-  - [Show Line Numbers in Oracle SQL Developer](#show-line-numbers-in-oracle-sql-developer)
-  - [Create User](#create-user)
-  - [VARCHAR to BLOB](#varchar-to-blob)
-  - [Update BLOB via Query](#update-blob-via-query)
-  - [Oracle localhost connection string for an ASP.NET CORE & Dapper project](#oracle-localhost-connection-string-for-an-aspnet-core--dapper-project)
-  - [ORA-00933: SQL command not properly ended](#ora-00933-sql-command-not-properly-ended)
-- [Conclusion](#conclusion)
 
 ## Noticed Differences
 
@@ -62,7 +47,7 @@ This can be done easily by right clicking the line number section in the IDE, th
 
 ```sql
 CREATE USER <UserName> IDENTIFIED BY <Password>;
-GRANT CONNECT , RESOURCE, DBA TO <UserName>; 
+GRANT CONNECT , RESOURCE, DBA TO <UserName>;
 ```
 
 ### VARCHAR to BLOB

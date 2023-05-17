@@ -31,6 +31,7 @@ module.exports.local = {
             }
             commentId
             tableOfContents
+            contentFilePath
           }
         }
       }      

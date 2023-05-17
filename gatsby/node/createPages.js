@@ -117,7 +117,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: article.slug,
-      component: templates.article,
+      component: `${templates.article}?__contentFilePath=${article.contentFilePath}`,
       context: {
         article,
         authors: authorsThatWroteTheArticle,
@@ -133,66 +133,68 @@ module.exports = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  return graphql(`{
-  allMarkdownRemark(limit: 1000) {
-    edges {
-      node {
-        id
-        fields {
-          slug
+  return graphql(`
+    {
+      allMarkdownRemark(limit: 1000) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              templateKey
+            }
+          }
         }
-        frontmatter {
-          templateKey
+      }
+      articleTagsGroup: allArticle(filter: { draft: { eq: false } }) {
+        group(field: { tags: SELECT }) {
+          fieldValue
+          totalCount
+        }
+      }
+      snippetsGroupByTopic: allSnippet(filter: { draft: { eq: false } }) {
+        group(field: { topics: SELECT }) {
+          fieldValue
+          totalCount
+        }
+      }
+      allStoriesJson {
+        edges {
+          node {
+            tags
+          }
+        }
+        group(field: { tags: SELECT }) {
+          fieldValue
+          totalCount
+        }
+      }
+      allVideosJson {
+        edges {
+          node {
+            tags
+          }
+        }
+        group(field: { tags: SELECT }) {
+          fieldValue
+          totalCount
+        }
+      }
+      allRecommendedService {
+        edges {
+          node {
+            tags
+          }
+        }
+        group(field: { tags: SELECT }) {
+          fieldValue
+          totalCount
         }
       }
     }
-  }
-  articleTagsGroup: allArticle(filter: {draft: {eq: false}}) {
-    group(field: {tags: SELECT}) {
-      fieldValue
-      totalCount
-    }
-  }
-  snippetsGroupByTopic: allSnippet(filter: {draft: {eq: false}}) {
-    group(field: {topics: SELECT}) {
-      fieldValue
-      totalCount
-    }
-  }
-  allStoriesJson {
-    edges {
-      node {
-        tags
-      }
-    }
-    group(field: {tags: SELECT}) {
-      fieldValue
-      totalCount
-    }
-  }
-  allVideosJson {
-    edges {
-      node {
-        tags
-      }
-    }
-    group(field: {tags: SELECT}) {
-      fieldValue
-      totalCount
-    }
-  }
-  allRecommendedService {
-    edges {
-      node {
-        tags
-      }
-    }
-    group(field: {tags: SELECT}) {
-      fieldValue
-      totalCount
-    }
-  }
-}`).then((result) => {
+  `).then((result) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);

@@ -16,6 +16,7 @@ module.exports = ({ actions }) => {
         lastModificationTime: Date @dateformat
         commentId: String
         tableOfContents: JSON @link
+        contentFilePath: String!
       }
     `);
 
