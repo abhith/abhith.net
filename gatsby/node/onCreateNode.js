@@ -3,7 +3,7 @@ const { createFilePath } = require("gatsby-source-filesystem");
 const crypto = require(`crypto`);
 
 module.exports = ({ node, actions, getNode, createNodeId }) => {
-  const { createNode, createNodeField, createParentChildLink } = actions;
+  const { createNode, createParentChildLink } = actions;
 
   const contentPath = "content/blog";
   const contentSnippets = "content/snippets";
@@ -140,7 +140,6 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
       const fieldData = {
         author: node.frontmatter.author,
         date: node.frontmatter.date,
-        // hero: node.frontmatter.image,
         draft: node.frontmatter.draft || false,
         slug: `/snippets${value}`,
         title: node.frontmatter.title,
