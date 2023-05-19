@@ -83,20 +83,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-relative-images`,
-            options: {
-              // [Optional] The root of "media_folder" in your config.yml
-              // Defaults to "static"
-              staticFolderName: "static",
-              // [Optional] Include the following fields, use dot notation for nested fields
-              // All fields are included by default
-              include: ["image"],
-              // [Optional] Exclude the following fields, use dot notation for nested fields
-              // No fields are excluded by default
-              exclude: ["contentFilePath"],
-            },
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               linkImagesToOriginal: false,
@@ -130,6 +116,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: "pages",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images",
       },
     },
     {
