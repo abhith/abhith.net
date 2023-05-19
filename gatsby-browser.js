@@ -1,2 +1,2 @@
 import "./src/styles/all.scss";
-require("prismjs/themes/prism-solarizedlight.css");
+require("prismjs/themes/prism-tomorrow.min.css");
