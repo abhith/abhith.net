@@ -5,6 +5,19 @@ description: If you found anything Abhith shared useful, how about a coffee?
 
 import PayPal from "../components/paypal";
 
+import PageTemplate from "../templates/page-template.js";
+
+export default function Layout({ children }) {
+  const pageContext = {
+    frontmatter: {
+      title: "Support Abhith",
+      description:
+        "If you found anything Abhith shared useful, how about a coffee?",
+    },
+  };
+  return <PageTemplate pageContext={pageContext}>{children}</PageTemplate>;
+}
+
 ## How much I donated
 
 By looking at the [Piggy](https://github.com/piggyvault/piggyvault) reports,
