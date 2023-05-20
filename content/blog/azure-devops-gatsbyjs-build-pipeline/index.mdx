@@ -74,7 +74,7 @@ condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
 And a successfull build looks like,
 
-![Azure DevOps Build Pipeline for Gatsby](../../static/img/blog/azure-devops-gatsbyjs-build-pipeline/gatsby-build.png)
+![Azure DevOps Build Pipeline for Gatsby](./gatsby-build.png)
 
 ## Release Pipeline
 
@@ -86,7 +86,7 @@ Once we configured our build pipeline, created a release pipeline.
 
 For the release pipeline, in case of [SmarterASP.NET][1], the stage contain one job and it has only one task, the **FTP Upload**.
 
-![Release Pipeline for Gatsby](../../static/img/blog/azure-devops-gatsbyjs-build-pipeline/release-pipeline.png)
+![Release Pipeline for Gatsby](./release-pipeline.png)
 
 And the yml for the same look like below,
 

@@ -30,7 +30,7 @@ AzureDiagnostics
 | project httpStatus_d, requestUri_s, TimeGenerated
 ```
 
-![List of failed requests](../../static/img/blog/azure-application-gateway-list-of-failed-requests/azure-application-gateway-list-of-failed-requests_censored.jpg)
+![List of failed requests](./azure-application-gateway-list-of-failed-requests_censored.jpg)
 
 Also, you can include other fields like `host_s` in the query which will be useful if you have multiple domains configured in the Application Gateway.
 
@@ -47,11 +47,11 @@ AzureDiagnostics
 
 And the result looks like (highlighted one),
 
-![Application Gateway Azure Dashboard](../../static/img/blog/azure-application-gateway-list-of-failed-requests/application-gateway-dashboard_censored.jpg)
+![Application Gateway Azure Dashboard](./application-gateway-dashboard_censored.jpg)
 
 In fact, Azure made all this easy. When you navigate to the logs section of application gateway, the example queries by default include a similar query,
 
-![Application Gateway Logs](../../static/img/blog/azure-application-gateway-list-of-failed-requests/application-gateway-logs.png)
+![Application Gateway Logs](./application-gateway-logs.png)
 
 ```sql
 // Errors by URI

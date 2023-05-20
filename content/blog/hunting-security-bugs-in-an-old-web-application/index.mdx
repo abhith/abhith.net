@@ -40,7 +40,7 @@ Code review went okay, the application was built on top of Web forms. And there 
 In which Contact form input didn't touch database since only email alert configured. So for the other two server-side input validation tightened. And we tried some ethical hacking attempts but all of them blocked by **[Sucuri][3]**.
 
 Checked the site security status in the [Asafaweb](https://asafaweb.com/) and the result screenshot is given below,
-![asfaweb-result][4]
+![asfaweb-result](./2017-10-09-hunting-security-bugs-in-an-old-web-application-asafaweb-result.png)
 And did the recommended changes for the **Request Validation**. All the updates deployed but in the same evening, it again happened.
 
 ### Next steps
@@ -79,4 +79,3 @@ Removed the request handler, changed DB password again. After the bug patched, I
 [1]: https://in.godaddy.com/
 [2]: http://www.everleap.com/a/oybnbo
 [3]: http://sucuri.net
-[4]: /img/2017-10-09-hunting-security-bugs-in-an-old-web-application-asafaweb-result.png
