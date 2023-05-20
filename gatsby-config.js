@@ -171,7 +171,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
-          `gatsby-remark-mermaid`,
+          { resolve: "gatsby-remark-mermaid" },
           {
             resolve: `gatsby-remark-images`,
             options: {
