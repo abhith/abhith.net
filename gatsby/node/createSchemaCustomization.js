@@ -16,6 +16,7 @@ module.exports = ({ actions }) => {
         lastModificationTime: Date @dateformat
         commentId: String
         tableOfContents: JSON @link
+        contentFilePath: String!
       }
     `);
 
@@ -31,6 +32,7 @@ module.exports = ({ actions }) => {
         timeToRead: String
         topics: [String]
         lastModificationTime: Date @dateformat
+        contentFilePath: String!
       }
     `);
 };

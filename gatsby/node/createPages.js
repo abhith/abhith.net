@@ -117,7 +117,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: article.slug,
-      component: templates.article,
+      component: `${templates.article}?__contentFilePath=${article.contentFilePath}`,
       context: {
         article,
         authors: authorsThatWroteTheArticle,
@@ -149,13 +149,13 @@ module.exports = async ({ graphql, actions, reporter }) => {
         }
       }
       articleTagsGroup: allArticle(filter: { draft: { eq: false } }) {
-        group(field: tags) {
+        group(field: { tags: SELECT }) {
           fieldValue
           totalCount
         }
       }
       snippetsGroupByTopic: allSnippet(filter: { draft: { eq: false } }) {
-        group(field: topics) {
+        group(field: { topics: SELECT }) {
           fieldValue
           totalCount
         }
@@ -166,7 +166,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
             tags
           }
         }
-        group(field: tags) {
+        group(field: { tags: SELECT }) {
           fieldValue
           totalCount
         }
@@ -177,7 +177,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
             tags
           }
         }
-        group(field: tags) {
+        group(field: { tags: SELECT }) {
           fieldValue
           totalCount
         }
@@ -188,7 +188,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
             tags
           }
         }
-        group(field: tags) {
+        group(field: { tags: SELECT }) {
           fieldValue
           totalCount
         }
@@ -362,7 +362,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: snippet.slug,
-        component: templates.snippet,
+        component: `${templates.snippet}?__contentFilePath=${snippet.contentFilePath}`,
         context: {
           snippet,
           authors: authorsThatWroteTheSnippet,

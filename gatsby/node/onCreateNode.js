@@ -1,12 +1,9 @@
 const readingTime = require("reading-time");
 const { createFilePath } = require("gatsby-source-filesystem");
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 const crypto = require(`crypto`);
 
 module.exports = ({ node, actions, getNode, createNodeId }) => {
-  const { createNode, createNodeField, createParentChildLink } = actions;
-
-  fmImagesToRelative(node); // convert image paths for gatsby images
+  const { createNode, createParentChildLink } = actions;
 
   const contentPath = "content/blog";
   const contentSnippets = "content/snippets";
@@ -96,7 +93,7 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
-    createNodeField({
+    actions.createNodeField({
       name: `slug`,
       node,
       value,
@@ -117,10 +114,11 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
         tags: node.frontmatter.tags,
         lastModificationTime: node.frontmatter.lastModificationTime,
         commentId: node.frontmatter.commentId,
-        timeToRead: readingTime(node.rawBody).text,
+        timeToRead: readingTime(node.body).text,
+        contentFilePath: node.internal.contentFilePath,
       };
 
-      createNode({
+      const articleNode = {
         ...fieldData,
         // Required fields.
         id: createNodeId(`${node.id} >>> Article`),
@@ -135,20 +133,21 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
           content: JSON.stringify(fieldData),
           description: `Article Posts`,
         },
-      });
-      createParentChildLink({ parent: fileNode, child: node });
+      };
+      createNode(articleNode);
+      createParentChildLink({ parent: fileNode, child: articleNode });
     } else if (source === contentSnippets) {
       const fieldData = {
         author: node.frontmatter.author,
         date: node.frontmatter.date,
-        // hero: node.frontmatter.image,
         draft: node.frontmatter.draft || false,
         slug: `/snippets${value}`,
         title: node.frontmatter.title,
         excerpt: node.frontmatter.description,
         topics: node.frontmatter.topics,
         lastModificationTime: node.frontmatter.lastModificationTime,
-        timeToRead: readingTime(node.rawBody).text,
+        timeToRead: readingTime(node.body).text,
+        contentFilePath: node.internal.contentFilePath,
       };
 
       createNode({

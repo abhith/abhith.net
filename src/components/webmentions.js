@@ -34,15 +34,15 @@ export default function Webmentions({ edges }) {
         <TitleBar title={`Webmentions`} />
         <div className="columns">
           <div className="column is-one-quarter">
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <div class="level-item">
+            <nav className="level is-mobile">
+              <div className="level-left">
+                <div className="level-item">
                   <span aria-label={`${likes.length} likes`}>
                     <FcLike className="icon" />
                     <CounterStyled>{likes.length}</CounterStyled>
                   </span>
                 </div>
-                <div class="level-item">
+                <div className="level-item">
                   <span aria-label={`${repost.length} reposts`}>
                     <FcRefresh className="icon" />
                     <CounterStyled>{repost.length}</CounterStyled>

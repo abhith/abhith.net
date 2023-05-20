@@ -2,13 +2,11 @@
 import { jsx } from "theme-ui";
 
 import Blockquote from "@components/blockquote";
-import { CodePre, CodePrism } from "@components/code";
 import { Table, TableCell, TableHeadCell, TableHead } from "@components/tables";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { MDXProvider } from "@mdx-js/react";
 import mediaqueries from "@styles/media";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import Headings from "@components/headings";
 import Anchor from "@components/anchor";
 import HorizontalRule from "@components/horizontal-rule";
@@ -17,12 +15,10 @@ const ArticleStrong = (props) => (
   <strong sx={{ color: "strongText" }} {...props} />
 );
 
-const components = {
+const shortcodes = {
   a: Anchor,
   blockquote: Blockquote,
-  code: CodePrism,
   hr: HorizontalRule,
-  pre: CodePre,
   table: Table,
   thead: TableHead,
   th: TableHeadCell,
@@ -36,15 +32,15 @@ const components = {
   strong: ArticleStrong,
 };
 
-function MDX({ content, children, ...props }) {
+function MDX({ content, children }) {
   return (
-    <MDXProvider components={components}>
+    <MDXProvider components={shortcodes}>
       <MDXBody>
         <article
           className="content is-medium post-body"
           data-clarity-region="article"
         >
-          <MDXRenderer {...props}>{content}</MDXRenderer>
+          {content}
         </article>
       </MDXBody>
       <div className="mt-3">{children}</div>

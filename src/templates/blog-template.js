@@ -63,41 +63,35 @@ function BlogPage({ pageContext, data }) {
 
 export default BlogPage;
 
-export const pageQuery = graphql`
-  query BlogRollQuery($skip: Int!, $limit: Int!) {
-    articles: allArticle(
-      filter: { draft: { eq: false } }
-      sort: { order: DESC, fields: [date] }
-      skip: $skip
-      limit: $limit
-    ) {
-      edges {
-        node {
-          id
-          body
-          slug
-          timeToRead
-          date
-          dateString: date(formatString: "MMMM DD, YYYY")
-          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-          title
-          excerpt
-          tags
-          lastModificationTime
-          lastModificationTimeString: lastModificationTime(
-            formatString: "MMMM DD, YYYY"
-          )
-          dateModifiedSeoFormat: lastModificationTime(
-            formatString: "YYYY-MM-DD"
-          )
-          hero {
-            full: childImageSharp {
-              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-            }
+export const pageQuery = graphql`query BlogRollQuery($skip: Int!, $limit: Int!) {
+  articles: allArticle(
+    filter: {draft: {eq: false}}
+    sort: {date: DESC}
+    skip: $skip
+    limit: $limit
+  ) {
+    edges {
+      node {
+        id
+        body
+        slug
+        timeToRead
+        date
+        dateString: date(formatString: "MMMM DD, YYYY")
+        datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+        title
+        excerpt
+        tags
+        lastModificationTime
+        lastModificationTimeString: lastModificationTime(formatString: "MMMM DD, YYYY")
+        dateModifiedSeoFormat: lastModificationTime(formatString: "YYYY-MM-DD")
+        hero {
+          full: childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
-          commentId
         }
+        commentId
       }
     }
   }
-`;
+}`;
