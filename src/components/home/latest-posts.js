@@ -18,7 +18,6 @@ function LatestPosts() {
         edges {
           node {
             id
-            body
             slug
             timeToRead
             date
@@ -51,7 +50,6 @@ function LatestPosts() {
         edges {
           node {
             id
-            body
             slug
             timeToRead
             date
