@@ -147,6 +147,7 @@ module.exports = ({ node, actions, getNode, createNodeId }) => {
         topics: node.frontmatter.topics,
         lastModificationTime: node.frontmatter.lastModificationTime,
         timeToRead: readingTime(node.body).text,
+        contentFilePath: node.internal.contentFilePath,
       };
 
       createNode({

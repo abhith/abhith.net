@@ -32,6 +32,7 @@ module.exports = ({ actions }) => {
         timeToRead: String
         topics: [String]
         lastModificationTime: Date @dateformat
+        contentFilePath: String!
       }
     `);
 };

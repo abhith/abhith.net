@@ -60,6 +60,7 @@ module.exports.local = {
           dateModifiedSeoFormat: lastModificationTime(
             formatString: "YYYY-MM-DD"
           )
+          contentFilePath
         }
       }
     }      

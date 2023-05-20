@@ -362,7 +362,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: snippet.slug,
-        component: templates.snippet,
+        component: `${templates.snippet}?__contentFilePath=${snippet.contentFilePath}`,
         context: {
           snippet,
           authors: authorsThatWroteTheSnippet,
