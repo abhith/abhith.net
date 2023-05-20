@@ -83,7 +83,7 @@
     "clean": "gatsby clean",
     "start:app": "npm run develop",
     "start": "run-p start:**",
-    "build:app": "npm run clean && gatsby build",
+    "build:app": "npm run clean && npx playwright install --with-deps chromium && gatsby build",
     "build": "run-p build:**",
     "dev": "gatsby develop",
     "serve": "gatsby serve"
