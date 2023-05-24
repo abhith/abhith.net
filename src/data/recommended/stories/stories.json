@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://code-maze.com/improve-performance-sealed-classes-dotnet/",
+    "title": "Boosting Performance With Sealed Classes in .NET - Code Maze",
+    "description": "Classes are one of the core concepts of OOP. Let's see how sealed classes help us in boosting performance in C# projects.",
+    "date": "2023-05-24T14:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "url": "https://requestly.io/blog/comparing-the-best-api-clients",
+    "title": "Comparing The Best API Clients: Postman vs Hoppscotch vs Insomnia vs ThunderClient",
+    "description": "As a developer, you're no stranger to the challenges of working with APIs. Thankfully, HTTP REST API clients simplify the process by enabling you to send and receive HTTP requests to test and interact with APIs. At the same time, Postman has long been the go-to client for many developers. Lately, a lot of developers have expressed interest in finding other alternatives. This is because Postman seems a bit complex after the addition of a lot of new features recently.",
+    "date": "2023-05-24T13:59:39Z",
+    "tags": ["developer-tools"]
+  },
+  {
+    "url": "https://javascript.plainenglish.io/differences-between-vue-2-and-vue-3-ee627e2c83a8",
+    "title": "Differences Between Vue 2 And Vue 3 | by Hoang Minh Bach | JavaScript in Plain English",
+    "description": "Vue 2 vs Vue 3",
+    "date": "2023-05-21T14:59:39Z",
+    "tags": ["vue"]
+  },
+  {
     "url": "https://www.azureblue.io/how-to-start-stop-your-aks-cluster-on-schedule/",
     "title": "How to start/stop your AKS cluster on schedule",
     "description": "This article describes how an Azure Automation Account can be used to automatically start and stop an AKS cluster on schedule",
