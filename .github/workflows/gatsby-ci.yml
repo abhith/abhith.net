@@ -29,4 +29,7 @@ jobs:
         cache: 'yarn'
         cache-dependency-path: '**/yarn.lock'
     - run: yarn install
-    - run: yarn run build
+    - name: "Build Gatsbyjs Website"
+      env:
+        NODE_OPTIONS: "--max_old_space_size=4096"
+      run: yarn run build
