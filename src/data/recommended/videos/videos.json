@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=gIVtrBtR-Yw",
+    "title": "Why I DON'T use MediatR in ASP.NET Core",
+    "tags": ["aspnet-core"],
+    "date": "2023-05-24T09:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=x7Pfdl9wl4Q",
     "title": "Explore, Test, & Debug API Endpoints in Visual Studio Faster Than Ever!",
     "tags": ["visual-studio"],
