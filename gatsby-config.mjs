@@ -1,3 +1,9 @@
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import remarkEmoji from "remark-emoji";
+import remarkGfm from "remark-gfm";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const siteUrl = `https://www.abhith.net`;
 const contentPosts = "content/blog";
 const contentSnippets = "content/snippets";
@@ -11,7 +17,7 @@ if (IS_PULL_REQUEST === true) {
   HOSTING_ENV = "development";
 }
 
-module.exports = {
+const config = {
   siteMetadata: {
     title: "Abhith Rajan",
     description:
@@ -191,12 +197,6 @@ module.exports = {
               rel: "nofollow noopener",
             },
           },
-          {
-            resolve: "@weknow/gatsby-remark-twitter",
-            options: {
-              align: "center",
-            },
-          },
           `gatsby-remark-autolink-headers`,
           {
             resolve: "gatsby-remark-embed-video",
@@ -276,7 +276,7 @@ module.exports = {
           },
         ],
         mdxOptions: {
-          remarkPlugins: [require("remark-emoji")],
+          remarkPlugins: [remarkGfm, remarkEmoji],
         },
       },
     },
@@ -454,3 +454,5 @@ module.exports = {
     `gatsby-plugin-offline`, // make sure to keep it last in the array
   ],
 };
+
+export default config;
