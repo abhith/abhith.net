@@ -4,12 +4,6 @@ const contentSnippets = "content/snippets";
 const contentAuthors = "content/authors";
 const contentTopics = "content/topics";
 const contentRecommendedServices = "content/recommended/services";
-const path = require("path");
-const templatesDirectory = path.resolve(__dirname, "src/templates");
-const templates = {
-  page: path.resolve(templatesDirectory, "page-template.js"),
-};
-
 // robots.txt generates based on hosting environment
 const { IS_PULL_REQUEST } = process.env;
 let HOSTING_ENV = "production";
