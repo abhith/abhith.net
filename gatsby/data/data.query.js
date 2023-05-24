@@ -7,7 +7,6 @@ module.exports.local = {
           node {
             id
             author
-            body
             slug
             timeToRead
             date
@@ -44,7 +43,6 @@ module.exports.local = {
         node {
           id
           author
-          body
           slug
           timeToRead
           date

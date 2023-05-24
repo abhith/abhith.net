@@ -69,29 +69,38 @@ function SnippetsPage({ pageContext, data }) {
 
 export default SnippetsPage;
 
-export const pageQuery = graphql`query SnippetCategoryWiseRollQuery($skip: Int!, $limit: Int!, $categorySlug: String) {
-  snippets: allSnippet(
-    filter: {draft: {eq: false}, topics: {in: [$categorySlug]}}
-    sort: {date: DESC}
-    skip: $skip
-    limit: $limit
+export const pageQuery = graphql`
+  query SnippetCategoryWiseRollQuery(
+    $skip: Int!
+    $limit: Int!
+    $categorySlug: String
   ) {
-    edges {
-      node {
-        id
-        body
-        slug
-        timeToRead
-        date
-        dateString: date(formatString: "MMMM DD, YYYY")
-        datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
-        title
-        excerpt
-        topics
-        lastModificationTime
-        lastModificationTimeString: lastModificationTime(formatString: "MMMM DD, YYYY")
-        dateModifiedSeoFormat: lastModificationTime(formatString: "YYYY-MM-DD")
+    snippets: allSnippet(
+      filter: { draft: { eq: false }, topics: { in: [$categorySlug] } }
+      sort: { date: DESC }
+      skip: $skip
+      limit: $limit
+    ) {
+      edges {
+        node {
+          id
+          slug
+          timeToRead
+          date
+          dateString: date(formatString: "MMMM DD, YYYY")
+          datePublishedSeoFormat: date(formatString: "YYYY-MM-DD")
+          title
+          excerpt
+          topics
+          lastModificationTime
+          lastModificationTimeString: lastModificationTime(
+            formatString: "MMMM DD, YYYY"
+          )
+          dateModifiedSeoFormat: lastModificationTime(
+            formatString: "YYYY-MM-DD"
+          )
+        }
       }
     }
   }
-}`;
+`;
