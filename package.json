@@ -45,6 +45,7 @@
     "gatsby-remark-mermaid": "^2.1.0",
     "gatsby-remark-numbered-footnotes": "^1.0.1",
     "gatsby-remark-prismjs": "^7.10.0",
+    "gatsby-remark-prismjs-copy-button": "^0.4.0",
     "gatsby-remark-responsive-iframe": "^6.9.0",
     "gatsby-remark-smartypants": "^6.9.0",
     "gatsby-source-filesystem": "^5.9.0",

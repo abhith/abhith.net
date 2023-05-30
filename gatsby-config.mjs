@@ -209,6 +209,7 @@ const config = {
             },
           },
           { resolve: `gatsby-remark-responsive-iframe` },
+          `gatsby-remark-prismjs-copy-button`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
