@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=-82puS-htN0",
+    "title": "Visual Studio 2022 17.7 Preview 1",
+    "tags": ["visual-studio"],
+    "date": "2023-06-01T09:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Ku10mIaPhYc",
+    "title": "Microsoft Bookings with Me",
+    "tags": ["microsoft"],
+    "date": "2023-06-01T09:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=yOKjbqbyF4A",
+    "title": "Migrate servers to Azure using Azure Migrate",
+    "tags": ["azure"],
+    "date": "2023-06-01T09:08:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=gIVtrBtR-Yw",
     "title": "Why I DON'T use MediatR in ASP.NET Core",
     "tags": ["aspnet-core"],
