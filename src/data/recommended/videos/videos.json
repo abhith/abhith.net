@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=NrAoYfGQAwI",
+    "title": "New developer experiences in Windows | BRK281H",
+    "tags": ["windows"],
+    "date": "2023-06-04T09:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=07EHsPuKXc0",
+    "title": "Disaster Recovery vs. Backup: What's the difference?",
+    "tags": ["good-to-know"],
+    "date": "2023-06-04T08:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=IgX_kSMHHyc",
+    "title": "Windows 11 Build 23471 - New File Explorer, Taskbar Labels, Dev Drive/Home, Windows Backup + MORE",
+    "tags": ["windows"],
+    "date": "2023-06-04T07:10:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=-82puS-htN0",
     "title": "Visual Studio 2022 17.7 Preview 1",
     "tags": ["visual-studio"],
