@@ -2110,6 +2110,13 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@babel/runtime@^7.22.3":
+  version "7.22.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.3.tgz#0a7fce51d43adbf0f7b517a71f4c3aaca92ebcbb"
+  integrity sha512-XsDuspWKLUsxwCp6r7EhsExHtYfbe5oAGQ19kqngTdCPUoPQzOPdUbD/pB9PJiwb2ptYKQDjSJT3R6dC+EPqfQ==
+  dependencies:
+    regenerator-runtime "^0.13.11"
+
 "@babel/template@^7.16.7", "@babel/template@^7.4.4":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.16.7.tgz#8d126c8701fde4d66b264b3eba3d96f07666d155"
@@ -8823,6 +8830,11 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
+fetch-retry@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/fetch-retry/-/fetch-retry-5.0.6.tgz#17d0bc90423405b7a88b74355bf364acd2a7fa56"
+  integrity sha512-3yurQZ2hD9VISAhJJP9bpYFNQrHHBXE2JxxjY5aLEcDi46RmAzJE2OC9FAde0yis5ElW0jTTzs0zfg/Cca4XqQ==
+
 figures@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
@@ -9628,6 +9640,18 @@ gatsby-remark-embed-video@^3.2.1:
   dependencies:
     get-video-id "^3.6.4"
     remark-burger "^1.0.1"
+    unist-util-visit "^2.0.3"
+
+gatsby-remark-embedder@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embedder/-/gatsby-remark-embedder-7.0.0.tgz#dd0efce30f3e290ce7330ef3f92984aaa9204baa"
+  integrity sha512-b+h5lnzniSsi7dPeGfflKk+fNtJLwmFJE0AeGBB+qGWndrT83ZGFc+k3dY05JyGr1jbXdZpDMsOz9AlqeZ9TRA==
+  dependencies:
+    "@babel/runtime" "^7.22.3"
+    fetch-retry "^5.0.6"
+    hast-util-from-parse5 "^6.0.1"
+    node-fetch "^2.6.11"
+    parse5 "^6.0.1"
     unist-util-visit "^2.0.3"
 
 gatsby-remark-external-links@^0.0.4:
@@ -10523,7 +10547,7 @@ hast-util-excerpt@^1.0.0:
     "@types/hast" "^2.0.0"
     hast-util-truncate "^1.0.0"
 
-hast-util-from-parse5@^6.0.0:
+hast-util-from-parse5@^6.0.0, hast-util-from-parse5@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/hast-util-from-parse5/-/hast-util-from-parse5-6.0.1.tgz#554e34abdeea25ac76f5bd950a1f0180e0b3bc2a"
   integrity sha512-jeJUWiN5pSxW12Rh01smtVkZgZr33wBokLzKLwinYOUfSzm1Nl/c3GUGebDyOKjdsRgMvoVbV0VpAcpjF4NrJA==

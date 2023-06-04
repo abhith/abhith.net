@@ -171,7 +171,8 @@ const config = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
-          { resolve: "gatsby-remark-mermaid" },
+          `gatsby-remark-mermaid`,
+          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-images`,
             options: {
