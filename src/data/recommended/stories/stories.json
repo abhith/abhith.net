@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.diagrid.io/blog/authoring-dapr-workflows-in-dotnet",
+    "title": "Understanding the Dapr Workflow engine & authoring workflows in .NET | Diagrid",
+    "description": "In this post, you'll learn about the latest Dapr building block API, Dapr Workflow. You’ll learn how the workflow engine works, and how to author a basic workflow using C#.",
+    "date": "2023-06-04T14:59:39Z",
+    "tags": ["dapr"]
+  },
+  {
     "url": "https://code-maze.com/improve-performance-sealed-classes-dotnet/",
     "title": "Boosting Performance With Sealed Classes in .NET - Code Maze",
     "description": "Classes are one of the core concepts of OOP. Let's see how sealed classes help us in boosting performance in C# projects.",
