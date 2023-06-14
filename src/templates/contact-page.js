@@ -63,6 +63,11 @@ const ContactPageTemplate = ({
                       required
                     ></textarea>
                   </div>
+                  <input
+                    type="hidden"
+                    name="_gotcha"
+                    style={{ display: "none !important" }}
+                  />
                   <div className="block">
                     <Recaptcha sitekey="6Ldl1v0UAAAAADH7egN2bhDoyLhv5k6hj3H4y2cM" />
                   </div>
