@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=7ZHSkhTcC9U",
+    "title": "Microsoft Windows 11 - Using Multiple Desktops",
+    "tags": ["windows"],
+    "date": "2023-06-14T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=nYCMW3kfTvs",
+    "title": "C# polymorphism 🎭",
+    "tags": ["c-sharp"],
+    "date": "2023-06-14T09:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=bMlkYLX4ZfQ",
+    "title": "Azure Master Class v2 - Module 8 - App Services",
+    "tags": ["azure"],
+    "date": "2023-06-14T08:10:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=NrAoYfGQAwI",
     "title": "New developer experiences in Windows | BRK281H",
     "tags": ["windows"],
