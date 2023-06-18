@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=8xcIy9cV-6g",
+    "title": "C# static 🚫",
+    "tags": ["c-sharp"],
+    "date": "2023-06-18T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8dWVDDqVteU",
+    "title": "How to Configure Autoscaling on Microsoft Azure Virtual Machine Scale Sets (VMSS)",
+    "tags": ["azure"],
+    "date": "2023-06-18T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vx-Lggf2TXc",
+    "title": "New Laptop Brand Shocked Whole Computer Industry - Framework Laptop - Teardown And Repair Assessment",
+    "tags": ["laptops"],
+    "date": "2023-06-18T07:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=7ZHSkhTcC9U",
     "title": "Microsoft Windows 11 - Using Multiple Desktops",
     "tags": ["windows"],
