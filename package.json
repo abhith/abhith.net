@@ -59,7 +59,7 @@
     "parcel-bundler": "^1.12.5",
     "prismjs": "^1.29.0",
     "prop-types": "^15.8.1",
-    "puppeteer": "^20.5.0",
+    "puppeteer": "^20.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
