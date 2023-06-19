@@ -16,7 +16,7 @@
     "gatsby": "^5.9.1",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-codemods": "^4.9.0",
-    "gatsby-plugin-catch-links": "^5.9.0",
+    "gatsby-plugin-catch-links": "^5.11.0",
     "gatsby-plugin-clarity": "^1.0.1",
     "gatsby-plugin-emotion": "^8.9.0",
     "gatsby-plugin-feed": "^5.9.0",
