@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://itnext.io/linq-deferred-execution-explained-2844838f83ef?gi=a3a1672f21ed",
+    "title": "LINQ deferred execution explained | by Stefan Schranz | ITNEXT",
+    "description": "",
+    "date": "2023-06-20T14:59:39Z",
+    "tags": ["linq", "dotnet"]
+  },
+  {
+    "url": "https://www.stickyminds.com/article/rise-and-fall-protractor-and-why-you-should-stop-using-it",
+    "title": "The Rise and Fall of Protractor, and Why You Should Stop Using It | StickyMinds",
+    "description": "Protractor has been a popular choice for writing end-to-end (E2E) browser tests over the past decade. However, Protractor is being removed from the Angular project as of Angular 15 due to a loss of dedicated developers and the rise of better testing frameworks. Based on this state of affairs, what should developers working with Protractor do, and what tool choices do developers have going forward?",
+    "date": "2023-06-20T13:59:39Z",
+    "tags": ["angular"]
+  },
+  {
     "url": "https://www.diagrid.io/blog/authoring-dapr-workflows-in-dotnet",
     "title": "Understanding the Dapr Workflow engine & authoring workflows in .NET | Diagrid",
     "description": "In this post, you'll learn about the latest Dapr building block API, Dapr Workflow. You’ll learn how the workflow engine works, and how to author a basic workflow using C#.",

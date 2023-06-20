@@ -378,6 +378,10 @@
   slug: messaging
   description: ""
   image: ""
+- title: Microsoft Edge
+  slug: microsoft-edge
+  description: ""
+  image: ""
 - title: Microsoft Orleans
   slug: microsoft-orleans
   description:

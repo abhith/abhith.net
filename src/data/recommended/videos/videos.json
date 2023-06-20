@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=06BrbJm7Sho",
+    "title": "C# abstract classes 👻",
+    "tags": ["c-sharp"],
+    "date": "2023-06-20T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=K0SUydv9Eq8",
+    "title": "How to set Touchpad Gestures in Windows 11",
+    "tags": ["windows"],
+    "date": "2023-06-20T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=WY_kONbRZOM",
+    "title": "How to use Microsoft Edge Collections",
+    "tags": ["microsoft-edge"],
+    "date": "2023-06-20T07:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=8xcIy9cV-6g",
     "title": "C# static 🚫",
     "tags": ["c-sharp"],

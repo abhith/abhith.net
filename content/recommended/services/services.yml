@@ -1,4 +1,10 @@
 ---
+- title: "YayText: A text styling tool for Facebook, Twitter, etc."
+  url: https://yaytext.com
+  description: "Generate a variety of cool unicode font styles that you can copy and paste into Facebook, Twitter, etc."
+  date: "2023-06-20T15:30:28.263Z"
+  tags:
+    - content-creation-tools
 - title: SHA-256 Hash Generator - SHA256 Generator
   url: https://passwords-generator.org/sha256-hash-generator
   description: SHA-256 Hash Generator is a free tool to generate a SHA256 hash. The SHA256 generator encodes any string or words into non crackable sha256 hash strings.
