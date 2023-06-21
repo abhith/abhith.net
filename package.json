@@ -34,7 +34,7 @@
     "gatsby-plugin-sharp": "^5.9.0",
     "gatsby-plugin-sitemap": "^6.9.0",
     "gatsby-plugin-theme-ui": "^0.15.7",
-    "gatsby-plugin-twitter": "^5.9.0",
+    "gatsby-plugin-twitter": "^5.11.0",
     "gatsby-plugin-webmention": "^0.2.0",
     "gatsby-remark-autolink-headers": "^6.9.0",
     "gatsby-remark-copy-linked-files": "^6.9.0",
