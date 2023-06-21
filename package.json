@@ -22,7 +22,7 @@
     "gatsby-plugin-feed": "^5.9.0",
     "gatsby-plugin-google-gtag": "^5.9.0",
     "gatsby-plugin-image": "^3.9.0",
-    "gatsby-plugin-manifest": "^5.9.0",
+    "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-mdx": "^5.10.0",
     "gatsby-plugin-nprogress": "^5.9.0",
     "gatsby-plugin-offline": "^6.9.0",
