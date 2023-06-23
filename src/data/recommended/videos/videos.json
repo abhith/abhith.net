@@ -1,5 +1,264 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=ToKbMa3xvMs",
+    "title": "C# method overriding 🙅",
+    "tags": ["c-sharp"],
+    "date": "2023-06-21T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=fnkCukHRBVE",
+    "title": "Is NOW the Time to Switch to Microsoft Edge?",
+    "tags": ["microsoft-edge"],
+    "date": "2023-06-21T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=06BrbJm7Sho",
+    "title": "C# abstract classes 👻",
+    "tags": ["c-sharp"],
+    "date": "2023-06-20T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=K0SUydv9Eq8",
+    "title": "How to set Touchpad Gestures in Windows 11",
+    "tags": ["windows"],
+    "date": "2023-06-20T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=WY_kONbRZOM",
+    "title": "How to use Microsoft Edge Collections",
+    "tags": ["microsoft-edge"],
+    "date": "2023-06-20T07:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8xcIy9cV-6g",
+    "title": "C# static 🚫",
+    "tags": ["c-sharp"],
+    "date": "2023-06-18T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8dWVDDqVteU",
+    "title": "How to Configure Autoscaling on Microsoft Azure Virtual Machine Scale Sets (VMSS)",
+    "tags": ["azure"],
+    "date": "2023-06-18T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vx-Lggf2TXc",
+    "title": "New Laptop Brand Shocked Whole Computer Industry - Framework Laptop - Teardown And Repair Assessment",
+    "tags": ["laptops"],
+    "date": "2023-06-18T07:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=7ZHSkhTcC9U",
+    "title": "Microsoft Windows 11 - Using Multiple Desktops",
+    "tags": ["windows"],
+    "date": "2023-06-14T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=nYCMW3kfTvs",
+    "title": "C# polymorphism 🎭",
+    "tags": ["c-sharp"],
+    "date": "2023-06-14T09:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=bMlkYLX4ZfQ",
+    "title": "Azure Master Class v2 - Module 8 - App Services",
+    "tags": ["azure"],
+    "date": "2023-06-14T08:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=NrAoYfGQAwI",
+    "title": "New developer experiences in Windows | BRK281H",
+    "tags": ["windows"],
+    "date": "2023-06-04T09:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=07EHsPuKXc0",
+    "title": "Disaster Recovery vs. Backup: What's the difference?",
+    "tags": ["good-to-know"],
+    "date": "2023-06-04T08:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=IgX_kSMHHyc",
+    "title": "Windows 11 Build 23471 - New File Explorer, Taskbar Labels, Dev Drive/Home, Windows Backup + MORE",
+    "tags": ["windows"],
+    "date": "2023-06-04T07:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=-82puS-htN0",
+    "title": "Visual Studio 2022 17.7 Preview 1",
+    "tags": ["visual-studio"],
+    "date": "2023-06-01T09:10:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Ku10mIaPhYc",
+    "title": "Microsoft Bookings with Me",
+    "tags": ["microsoft"],
+    "date": "2023-06-01T09:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=yOKjbqbyF4A",
+    "title": "Migrate servers to Azure using Azure Migrate",
+    "tags": ["azure"],
+    "date": "2023-06-01T09:08:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=gIVtrBtR-Yw",
+    "title": "Why I DON'T use MediatR in ASP.NET Core",
+    "tags": ["aspnet-core"],
+    "date": "2023-05-24T09:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=x7Pfdl9wl4Q",
+    "title": "Explore, Test, & Debug API Endpoints in Visual Studio Faster Than Ever!",
+    "tags": ["visual-studio"],
+    "date": "2023-05-05T09:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=aTDUY66tlxk",
+    "title": "NativeAOT for .NET APIs Is Here and It’s INSANE!",
+    "tags": ["dotnet"],
+    "date": "2023-05-05T08:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Egd-BMPCHNc",
+    "title": "Will This New EF Core Feature Be The End Of Dapper?",
+    "tags": ["ef-core"],
+    "date": "2023-05-05T07:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=v0gNo8kv-TI",
+    "title": "8 new features in Microsoft Teams for Spring 2023",
+    "tags": ["microsoft-teams"],
+    "date": "2023-05-02T09:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=DuAyYsWbt5o",
+    "title": "GitHub Issues - planning and tracking for developers | OD119",
+    "tags": ["github", "project-management"],
+    "date": "2023-05-02T09:08:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=YYZo1l74JE0",
+    "title": "When to use - IEnumerable vs IList vs ICollection?",
+    "tags": ["c-sharp", "dotnet"],
+    "date": "2023-05-02T09:07:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=9v6RENPk5iM",
+    "title": "What are record types in C# and how they ACTUALLY work",
+    "tags": ["c-sharp", "dotnet"],
+    "date": "2023-05-01T09:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=D80u__nYYWw",
+    "title": "Learn how to use Project Roadmaps - GitHub Checkout",
+    "tags": ["github", "project-management"],
+    "date": "2023-05-01T08:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=qNhn2u2LmUw",
+    "title": "Migrate from an Automation Run As account to a managed identity",
+    "tags": ["azure"],
+    "date": "2023-05-01T07:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=LsFXI6ZwLpc",
+    "title": "List vs IList in C#",
+    "tags": ["c-sharp", "dotnet"],
+    "date": "2023-04-21T07:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=yfPGFapabAY",
+    "title": "IEnumerable vs IQueryable C# | C# Interview Questions | Csharp Interview Questions and Answers",
+    "tags": ["c-sharp", "dotnet"],
+    "date": "2023-04-21T06:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=DZUXDSEuqek",
+    "title": "What is volatile keyword , c# (Csharp) and .NET interview questions ?",
+    "tags": ["c-sharp", "dotnet"],
+    "date": "2023-04-21T05:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Q4LtKa_HTHU",
+    "title": "Entity Framework Core vs Dapper Performance in 2023",
+    "tags": ["dapper", "ef-core", "dotnet"],
+    "date": "2023-04-04T05:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=U8gSdQN2jWI",
+    "title": "The Best .NET Mapper to Use in 2023",
+    "tags": ["dotnet", "c-sharp"],
+    "date": "2023-03-27T05:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=douKdQRgDEQ",
+    "title": "Slack's Migrating Millions of Websockets from HAProxy to Envoy, lets discuss",
+    "tags": ["envoy"],
+    "date": "2023-03-02T05:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=-9-HZKK2ccI",
+    "title": "Getting started with Apache APISIX Dashboard",
+    "tags": ["apisix"],
+    "date": "2023-02-28T11:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=eaosTGtNLbg",
+    "title": "An Introduction to Virtual Network (VNet) Peering in Azure",
+    "tags": ["azure"],
+    "date": "2023-02-22T11:09:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=-3BGBfvoUJM",
+    "title": "Don't Use AutoMapper in C#! Do THIS Instead!",
+    "tags": ["c-sharp", "aspnet-core"],
+    "date": "2023-02-22T10:19:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=J4S6AxYNDtM",
+    "title": "Complete Overview of Azure Virtual Network Peering",
+    "tags": ["azure"],
+    "date": "2023-02-22T10:09:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=b2TWOdF2kW0",
     "title": "ts-nextjs-tailwind-starter: Auto Create Branch",
     "tags": ["github"],

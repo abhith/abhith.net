@@ -17,7 +17,7 @@ import AskFeedback from "@components/ask-feedback";
 import BreadcrumbActive from "@components/breadcrumb-active";
 import Authors from "@components/authors";
 
-const SnippetPage = ({ pageContext, data, location }) => {
+const SnippetPage = ({ pageContext, data, children }) => {
   const { allWebMentionEntry } = data;
   const {
     snippet,
@@ -98,7 +98,7 @@ const SnippetPage = ({ pageContext, data, location }) => {
                     )}
                   </nav>
                 </div>
-                <MDXRenderer content={snippet.body}>
+                <MDXRenderer content={children}>
                   <TopicsBar topics={snippet.topics} />
                 </MDXRenderer>
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>

@@ -66,14 +66,13 @@ export const pageQuery = graphql`
   query SnippetRollQuery($skip: Int!, $limit: Int!) {
     snippets: allSnippet(
       filter: { draft: { eq: false } }
-      sort: { order: DESC, fields: [date] }
+      sort: { date: DESC }
       skip: $skip
       limit: $limit
     ) {
       edges {
         node {
           id
-          body
           slug
           timeToRead
           date

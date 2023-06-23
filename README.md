@@ -6,7 +6,7 @@
 
 This repo serves the source code for [www.abhith.net](https://www.abhith.net/).
 It follows the [JAMstack architecture](https://jamstack.org).
-Designed using [Bulma](https://bulma.io), and using [Render](https://render.com/) for continuous deployment.
+Designed using [Bulma](https://bulma.io), and using [Vercel](https://vercel.com/) for continuous deployment.
 
 ## Main Sections
 

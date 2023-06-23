@@ -118,10 +118,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    recommendedStories: allStoriesJson(
-      limit: 5
-      sort: { fields: [date], order: DESC }
-    ) {
+    recommendedStories: allStoriesJson(limit: 5, sort: { date: DESC }) {
       totalCount
       edges {
         node {
@@ -134,10 +131,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendedVideos: allVideosJson(
-      limit: 3
-      sort: { fields: [date], order: DESC }
-    ) {
+    recommendedVideos: allVideosJson(limit: 3, sort: { date: DESC }) {
       totalCount
       edges {
         node {
@@ -149,10 +143,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    featured: allRecommendedService(
-      limit: 9
-      sort: { fields: [date], order: [DESC] }
-    ) {
+    featured: allRecommendedService(limit: 9, sort: { date: DESC }) {
       totalCount
       edges {
         node {
@@ -165,13 +156,12 @@ export const pageQuery = graphql`
     }
     snippets: allSnippet(
       filter: { draft: { eq: false } }
-      sort: { order: DESC, fields: [date] }
+      sort: { date: DESC }
       limit: 3
     ) {
       edges {
         node {
           id
-          body
           slug
           timeToRead
           date

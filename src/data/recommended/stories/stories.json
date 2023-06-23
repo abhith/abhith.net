@@ -1,23 +1,142 @@
 [
   {
+    "url": "https://davidwalsh.name/fonts-ready",
+    "title": "Detecting Fonts Ready",
+    "description": "The document.fonts object features a ready property which is a Promise representing if fonts have been loaded.",
+    "date": "2023-06-23T16:59:39Z",
+    "tags": ["javascript"]
+  },
+  {
     "url": "https://www.dqindia.com/how-aws-enabled-making-avatar-way-of-water/",
     "title": "How AWS enabled the making of ‘Avatar: The Way of Water?’",
     "description": "At AWS re:Invent 2022, Jon Landau, the Producer of Avatar stated that they would not have finished Avatar: The Way of Water without AWS",
-    "date": "2022-12-28T14:59:39Z",
+    "date": "2023-06-23T15:59:39Z",
     "tags": ["aws"]
   },
   {
     "url": "https://www.docker.com/blog/reduce-your-image-size-with-the-dive-in-docker-extension/",
     "title": "Reduce Your Image Size with the Dive-In Docker Extension",
     "description": "Use the Dive-In Docker Extension to see how to reduce image size in an easy-to-use UI.",
-    "date": "2022-12-27T14:59:39Z",
+    "date": "2023-06-23T14:59:39Z",
     "tags": ["docker"]
   },
   {
     "url": "https://code-maze.com/csharp-bitarray/",
     "title": "BitArray in C# - Code Maze",
     "description": "BitArray class in c# is a type that manages an array of bits. BitArray implements ICollection and ICloneable interfaces.",
-    "date": "2022-12-27T13:59:39Z",
+    "date": "2023-06-23T13:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "url": "https://itnext.io/linq-deferred-execution-explained-2844838f83ef?gi=a3a1672f21ed",
+    "title": "LINQ deferred execution explained | by Stefan Schranz | ITNEXT",
+    "description": "",
+    "date": "2023-06-20T14:59:39Z",
+    "tags": ["linq", "dotnet"]
+  },
+  {
+    "url": "https://www.stickyminds.com/article/rise-and-fall-protractor-and-why-you-should-stop-using-it",
+    "title": "The Rise and Fall of Protractor, and Why You Should Stop Using It | StickyMinds",
+    "description": "Protractor has been a popular choice for writing end-to-end (E2E) browser tests over the past decade. However, Protractor is being removed from the Angular project as of Angular 15 due to a loss of dedicated developers and the rise of better testing frameworks. Based on this state of affairs, what should developers working with Protractor do, and what tool choices do developers have going forward?",
+    "date": "2023-06-20T13:59:39Z",
+    "tags": ["angular"]
+  },
+  {
+    "url": "https://www.diagrid.io/blog/authoring-dapr-workflows-in-dotnet",
+    "title": "Understanding the Dapr Workflow engine & authoring workflows in .NET | Diagrid",
+    "description": "In this post, you'll learn about the latest Dapr building block API, Dapr Workflow. You’ll learn how the workflow engine works, and how to author a basic workflow using C#.",
+    "date": "2023-06-04T14:59:39Z",
+    "tags": ["dapr"]
+  },
+  {
+    "url": "https://code-maze.com/improve-performance-sealed-classes-dotnet/",
+    "title": "Boosting Performance With Sealed Classes in .NET - Code Maze",
+    "description": "Classes are one of the core concepts of OOP. Let's see how sealed classes help us in boosting performance in C# projects.",
+    "date": "2023-05-24T14:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "url": "https://requestly.io/blog/comparing-the-best-api-clients",
+    "title": "Comparing The Best API Clients: Postman vs Hoppscotch vs Insomnia vs ThunderClient",
+    "description": "As a developer, you're no stranger to the challenges of working with APIs. Thankfully, HTTP REST API clients simplify the process by enabling you to send and receive HTTP requests to test and interact with APIs. At the same time, Postman has long been the go-to client for many developers. Lately, a lot of developers have expressed interest in finding other alternatives. This is because Postman seems a bit complex after the addition of a lot of new features recently.",
+    "date": "2023-05-24T13:59:39Z",
+    "tags": ["developer-tools"]
+  },
+  {
+    "url": "https://javascript.plainenglish.io/differences-between-vue-2-and-vue-3-ee627e2c83a8",
+    "title": "Differences Between Vue 2 And Vue 3 | by Hoang Minh Bach | JavaScript in Plain English",
+    "description": "Vue 2 vs Vue 3",
+    "date": "2023-05-21T14:59:39Z",
+    "tags": ["vue"]
+  },
+  {
+    "url": "https://www.azureblue.io/how-to-start-stop-your-aks-cluster-on-schedule/",
+    "title": "How to start/stop your AKS cluster on schedule",
+    "description": "This article describes how an Azure Automation Account can be used to automatically start and stop an AKS cluster on schedule",
+    "date": "2023-05-05T14:59:39Z",
+    "tags": ["azure"]
+  },
+  {
+    "url": "https://www.c-sharpcorner.com/article/stack-vs-heap-memory-c-sharp/",
+    "title": "Stack Vs Heap Memory - C#",
+    "description": "In this article, you will learn about Stack v/s Heap Memory - C#.",
+    "date": "2023-05-05T13:59:39Z",
+    "tags": ["c-sharp", "dotnet"]
+  },
+  {
+    "url": "https://ericlippert.com/2009/11/12/closing-over-the-loop-variable-considered-harmful-part-one/",
+    "title": "Closing over the loop variable considered harmful, part one | Fabulous adventures in coding",
+    "description": "",
+    "date": "2023-05-05T12:59:39Z",
+    "tags": ["c-sharp", "dotnet"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/dotnet/improvements-auth-identity-aspnetcore-8/",
+    "title": "Improvements to auth and identity in ASP.NET Core 8 - .NET Blog",
+    "description": "",
+    "date": "2023-05-01T14:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/",
+    "title": "C# Heap(ing) Vs Stack(ing) In .NET - Part One",
+    "description": "Even though with the .NET framework we don't have to actively worry about memory management and garbage collection (GC), we still have to keep memory management and GC in mind in order to optimize the performance of our applications.",
+    "date": "2023-05-01T13:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://jesseliberty.com/2022/09/02/a-dozen-utilities-every-net-programmer-needs/?theme_preview=true&iframe=true&frame-nonce=a74495910b",
+    "title": "A Dozen Utilities Every .NET Programmer Needs",
+    "description": "",
+    "date": "2023-05-01T12:59:39Z",
+    "tags": ["dotnet", "developer-tools"]
+  },
+  {
+    "url": "https://dev.to/icebeam7/cloning-azure-vms-1889",
+    "title": "Cloning Azure VMs - DEV Community",
+    "description": "",
+    "date": "2023-02-27T14:59:39Z",
+    "tags": ["azure"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/visualstudio/adding-new-files-just-got-a-lot-faster/",
+    "title": "Adding new files just got a lot faster - Visual Studio Blog",
+    "description": "",
+    "date": "2023-02-22T14:59:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "url": "https://stefansch.medium.com/another-set-of-common-async-task-mistakes-and-how-to-avoid-them-23a6af5b1ce8",
+    "title": "Another set of common async / Task pitfalls, and how to avoid them | by Stefan Schranz | Medium",
+    "description": "",
+    "date": "2023-02-22T13:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "url": "https://code-maze.com/csharp-tasks-vs-threads/",
+    "title": "Tasks vs Threads in C# - Code Maze",
+    "description": "Tasks have mostly replaced threads in our projects. Here we analyze the reasons for choosing tasks over threads, along with comparisons.",
+    "date": "2023-02-22T12:59:39Z",
     "tags": ["c-sharp"]
   },
   {

@@ -97,28 +97,22 @@ function VideosPage({ pageContext, data }) {
 
 export default VideosPage;
 
-export const pageQuery = graphql`
-  query RecommendedVideosIndexPageQuery($skip: Int!, $limit: Int!) {
-    videoImg: file(relativePath: { eq: "recommended-video.png" }) {
-      childImageSharp {
-        gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
-      }
+export const pageQuery = graphql`query RecommendedVideosIndexPageQuery($skip: Int!, $limit: Int!) {
+  videoImg: file(relativePath: {eq: "recommended-video.png"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, width: 505, layout: CONSTRAINED)
     }
-    recommendedVideos: allVideosJson(
-      sort: { fields: [date], order: DESC }
-      skip: $skip
-      limit: $limit
-    ) {
-      totalCount
-      edges {
-        node {
-          tags
-          title
-          url
-          type
-          id
-        }
+  }
+  recommendedVideos: allVideosJson(sort: {date: DESC}, skip: $skip, limit: $limit) {
+    totalCount
+    edges {
+      node {
+        tags
+        title
+        url
+        type
+        id
       }
     }
   }
-`;
+}`;

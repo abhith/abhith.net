@@ -346,6 +346,10 @@
   slug: kubernetes
   description: ""
   image: k8s.svg
+- title: Laptops
+  slug: laptops
+  description: ""
+  image: ""
 - title: Logging
   slug: logging
   description: ""
@@ -372,6 +376,10 @@
   image: ""
 - title: Messaging
   slug: messaging
+  description: ""
+  image: ""
+- title: Microsoft Edge
+  slug: microsoft-edge
   description: ""
   image: ""
 - title: Microsoft Orleans

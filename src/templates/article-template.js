@@ -22,7 +22,7 @@ import ArticleRelatedSnippets from "../sections/article/article-related-snippets
 import GitHubTypo from "@components/github-typo";
 import AskFeedback from "@components/ask-feedback";
 
-const ArticlePage = ({ pageContext, data, location }) => {
+const ArticlePage = ({ pageContext, data, location, children }) => {
   const { allWebMentionEntry } = data;
   const {
     article,
@@ -109,7 +109,7 @@ const ArticlePage = ({ pageContext, data, location }) => {
                     )}
                   </nav>
                 </div>
-                <MDXRenderer content={article.body}>
+                <MDXRenderer content={children}>
                   <TopicsBar topics={article.tags} />
                 </MDXRenderer>
                 <GitHubTypo githubURL={githubURL}></GitHubTypo>

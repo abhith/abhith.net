@@ -7,7 +7,6 @@ module.exports.local = {
           node {
             id
             author
-            body
             slug
             timeToRead
             date
@@ -31,6 +30,7 @@ module.exports.local = {
             }
             commentId
             tableOfContents
+            contentFilePath
           }
         }
       }      
@@ -43,7 +43,6 @@ module.exports.local = {
         node {
           id
           author
-          body
           slug
           timeToRead
           date
@@ -59,6 +58,7 @@ module.exports.local = {
           dateModifiedSeoFormat: lastModificationTime(
             formatString: "YYYY-MM-DD"
           )
+          contentFilePath
         }
       }
     }      
@@ -89,9 +89,7 @@ module.exports.local = {
       }
     }`,
   stories: `{
-    stories: allStoriesJson(
-    sort: { fields: [date], order: DESC }
-  ) {
+  stories: allStoriesJson(sort: {date: DESC}) {
     edges {
       node {
         title
@@ -103,11 +101,9 @@ module.exports.local = {
       }
     }
   }
-  }`,
+}`,
   videos: `{
-    videos:allVideosJson(
-    sort: { fields: [date], order: DESC }
-  ) {
+  videos: allVideosJson(sort: {date: DESC}) {
     edges {
       node {
         id
@@ -118,11 +114,9 @@ module.exports.local = {
       }
     }
   }
-  }`,
+}`,
   tools: `{
-    tools:allRecommendedService(
-    sort: { fields: [date], order: DESC }
-  ) {
+  tools: allRecommendedService(sort: {date: DESC}) {
     edges {
       node {
         title
@@ -134,7 +128,7 @@ module.exports.local = {
       }
     }
   }
-  }`,
+}`,
   topics: `{
     topics: allTopic {
       edges {
