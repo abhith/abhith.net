@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=502ILHjX9EE",
+    "title": "Agile Product Ownership in a Nutshell",
+    "tags": ["project-management"],
+    "date": "2023-07-11T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=WVnsM7Mp3JM",
+    "title": "Why pnpm?",
+    "tags": ["javascript"],
+    "date": "2023-07-11T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=s-4TDppWM1w",
+    "title": "Obsidian - Excel to Markdown Table",
+    "tags": ["obsidian"],
+    "date": "2023-07-11T07:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=ToKbMa3xvMs",
     "title": "C# method overriding 🙅",
     "tags": ["c-sharp"],

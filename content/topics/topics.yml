@@ -437,6 +437,10 @@
   slug: open-source
   description: ""
   image: ""
+- title: Obsidian
+  slug: obsidian
+  description: ""
+  image: ""
 - title: OpenTelemetry
   slug: opentelemetry
   description: ""
