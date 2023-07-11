@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.techwatching.dev/posts/pnpm-who-is-using",
+    "title": "Who is using pnpm?",
+    "description": "",
+    "date": "2023-07-11T16:59:39Z",
+    "tags": ["javascript"]
+  },
+  {
     "url": "https://davidwalsh.name/fonts-ready",
     "title": "Detecting Fonts Ready",
     "description": "The document.fonts object features a ready property which is a Promise representing if fonts have been loaded.",
