@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=gC9KSnNtSnM",
+    "title": "High Availability and SLA for Azure SQL Managed Instance",
+    "tags": ["azure","sql-server"],
+    "date": "2023-08-01T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=zbqlJKiENvQ",
+    "title": "Is Using CCleaner A Bad Idea?",
+    "tags": ["windows", "privacy"],
+    "date": "2023-08-01T07:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=IdTMDpizis8",
+    "title": "Jocko Willink 'GOOD' (Official)",
+    "tags": ["career"],
+    "date": "2023-08-01T06:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=502ILHjX9EE",
     "title": "Agile Product Ownership in a Nutshell",
     "tags": ["project-management"],
