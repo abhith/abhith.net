@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.androidpolice.com/samsung-knox-explainer/",
+    "title": "What is Samsung Knox, and how does it protect your privacy?",
+    "description": "Discover Samsung Knox, a robust security solution for Samsung smartphones. Learn how it protects your data from theft and hacking. Find out more!",
+    "date": "2023-09-05T16:59:39Z",
+    "tags": ["samsung"]
+  },
+  {
+    "url": "https://www.ghacks.net/2023/09/05/onedrive-photos-in-albums-count-twice-against-a-users-storage-quota/",
+    "title": "OneDrive: photos in albums count twice against a user's storage quota",
+    "description": "",
+    "date": "2023-09-05T15:59:39Z",
+    "tags": ["microsoft"]
+  },
+  {
+    "url": "https://www.telerik.com/blogs/definitive-guide-using-web-share-api",
+    "title": "A Definitive Guide to Using the Web Share API",
+    "description": "Learn how the Web Share API works to enhance the experience of users sharing links, text and other data. See some common use cases and how to implement it.",
+    "date": "2023-09-05T14:59:39Z",
+    "tags": ["web"]
+  },
+  {
     "url": "https://www.techwatching.dev/posts/pnpm-who-is-using",
     "title": "Who is using pnpm?",
     "description": "",
