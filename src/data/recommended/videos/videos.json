@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=C69DjrWDmkc",
+    "title": "Using GitHub Wiki for Software Development Documentation",
+    "tags": ["github", "documentation"],
+    "date": "2023-09-18T08:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=gC9KSnNtSnM",
     "title": "High Availability and SLA for Azure SQL Managed Instance",
     "tags": ["azure","sql-server"],
