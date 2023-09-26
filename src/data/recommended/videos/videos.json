@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=rAxD42mAZhw",
+    "title": "Learn how to use Project Views - GitHub Checkout",
+    "tags": ["github", "project-management"],
+    "date": "2023-09-25T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=l83Zr1ckC9s",
+    "title": "Learn how to use Project Fields - GitHub Checkout",
+    "tags": ["github", "project-management"],
+    "date": "2023-09-25T08:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=C69DjrWDmkc",
     "title": "Using GitHub Wiki for Software Development Documentation",
     "tags": ["github", "documentation"],
