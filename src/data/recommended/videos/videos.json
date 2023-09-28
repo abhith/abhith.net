@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=VDcJk1tN4_M",
+    "title": "Azure Application Insights Alerts [GCast 158]",
+    "tags": ["app-insights"],
+    "date": "2023-09-27T09:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=rAxD42mAZhw",
     "title": "Learn how to use Project Views - GitHub Checkout",
     "tags": ["github", "project-management"],
