@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=JinQIyEhfew",
+    "title": "The Coolest New Tools in Microsoft PowerToys",
+    "tags": ["windows"],
+    "date": "2023-10-04T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=N3kuEuauWv4",
+    "title": "Microsoft FINALLY killed it",
+    "tags": ["visual-studio"],
+    "date": "2023-10-04T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=nHxnjcx_G34",
+    "title": "You want Privacy? Ditch Android & Apple and install GrapheneOS (in 8 minutes)",
+    "tags": ["privacy"],
+    "date": "2023-10-04T07:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=VDcJk1tN4_M",
     "title": "Azure Application Insights Alerts [GCast 158]",
     "tags": ["app-insights"],
