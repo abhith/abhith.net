@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=fr745Z8pozo",
+    "title": "7 strategies for end-to-end CI/CD governance",
+    "tags": ["github"],
+    "date": "2023-10-13T09:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=ymJXLCzdzcw",
     "title": "Make the Switch to the New Teams Now Generally Available",
     "tags": ["microsoft-teams"],
