@@ -1,4 +1,10 @@
 ---
+- title: "Remote Desktop Manager"
+  url: https://devolutions.net/remote-desktop-manager/
+  description: "Remote Connections & Passwords. Everywhere!"
+  date: "2023-10-12T15:30:28.263Z"
+  tags:
+    - developer-tools
 - title: "YayText: A text styling tool for Facebook, Twitter, etc."
   url: https://yaytext.com
   description: "Generate a variety of cool unicode font styles that you can copy and paste into Facebook, Twitter, etc."
