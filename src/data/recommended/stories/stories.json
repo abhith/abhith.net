@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://andrewlock.net/exploring-the-dotnet-8-preview-updates-to-docker-images-in-dotnet-8/",
+    "title": "Updates to Docker images in .NET 8",
+    "description": "In this post I describe the changes to .NET 8 docker files in .NET 8 including changes to images, new image types and changes to image tagging",
+    "date": "2023-10-18T09:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://thehackernews.com/2023/10/new-admin-takeover-vulnerability.html",
+    "title": "New Admin Takeover Vulnerability Exposed in Synology's DiskStation Manager",
+    "description": "A vulnerability in Synology's DSM has been revealed, allowing attackers to remotely hijack admin accounts.",
+    "date": "2023-10-18T09:58:39Z",
+    "tags": ["synology"]
+  },
+  {
+    "url": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/general-availability-of-azure-automation-extension-for-visual/ba-p/3953668",
+    "title": "General Availability of Azure Automation extension for Visual Studio Code - Microsoft Community Hub",
+    "description": "",
+    "date": "2023-10-17T09:59:39Z",
+    "tags": ["azure","vscode"]
+  },
+  {
     "url": "https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/",
     "title": "GitHub Actions: Deprecating save-state and set-output commands - The GitHub Blog",
     "description": "GitHub Actions: Deprecating save-state and set-output commands",
