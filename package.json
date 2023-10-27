@@ -21,7 +21,7 @@
     "gatsby-plugin-emotion": "^8.9.0",
     "gatsby-plugin-feed": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.12.0",
-    "gatsby-plugin-image": "^3.9.0",
+    "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-mdx": "^5.10.0",
     "gatsby-plugin-nprogress": "^5.9.0",
