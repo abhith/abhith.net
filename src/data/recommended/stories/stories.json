@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://ghacks.net/2023/10/31/powertoys-0-75-launches-with-environment-variables-editor/",
+    "title": "PowerToys 0.75 launches with environment variables editor - gHacks Tech News",
+    "description": "PowerToys 0.75 for Windows introduces the new Environment Variables Editor and the new Dashboard home for quick tools management.",
+    "date": "2023-10-31T09:59:39Z",
+    "tags": ["windows"]
+  },
+  {
+    "url": "https://jeremydmiller.com/2023/10/30/wolverine-and-serverless/",
+    "title": "Wolverine and Serverless – The Shade Tree Developer",
+    "description": "",
+    "date": "2023-10-31T08:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
     "url": "https://andrewlock.net/exploring-the-dotnet-8-preview-updates-to-docker-images-in-dotnet-8/",
     "title": "Updates to Docker images in .NET 8",
     "description": "In this post I describe the changes to .NET 8 docker files in .NET 8 including changes to images, new image types and changes to image tagging",
