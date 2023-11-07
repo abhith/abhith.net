@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://www.theverge.com/2023/11/2/23943178/microsoft-security-secure-future-initiative-cybersecurity",
+    "title": "Microsoft is overhauling its software security after major Azure cloud attacks - The Verge",
+    "description": "Microsoft is making big changes to its cybersecurity approach. It comes after major cloud attacks in recent years and will mean an overhaul to how software is built inside Microsoft.",
+    "date": "2023-11-03T09:59:39Z",
+    "tags": ["microsoft"]
+  },
+  {
     "url": "https://ghacks.net/2023/10/31/powertoys-0-75-launches-with-environment-variables-editor/",
     "title": "PowerToys 0.75 launches with environment variables editor - gHacks Tech News",
     "description": "PowerToys 0.75 for Windows introduces the new Environment Variables Editor and the new Dashboard home for quick tools management.",
