@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.milanjovanovic.tech/blog/how-to-easily-create-pdf-documents-in-aspnetcore",
+    "title": "How To Easily Create PDF Documents in ASP.NET Core",
+    "description": "Reporting is essential for business applications like e-commerce, shipping, fintech, etc. One of the most popular document formats for reporting purposes is PDF. Today I want to show you a few interesting ways to generate PDF files in .NET.",
+    "date": "2023-12-08T09:59:39Z",
+    "tags": ["aspnet-core"]
+  },
+  {
+    "url": "https://arstechnica.com/security/2023/11/critical-vulnerability-in-atlassian-confluence-server-is-under-mass-exploitation/",
+    "title": "Critical vulnerability in Atlassian Confluence server is under “mass exploitation” | Ars Technica",
+    "description": "Atlassian's senior management is all but begging customers to take immediate action.",
+    "date": "2023-11-10T09:59:39Z",
+    "tags": ["jira"]
+  },
+  {
+    "url": "https://support.microsoft.com/en-us/office/stay-on-top-of-meetings-with-meet-in-microsoft-teams-ec6d712e-82a9-4c01-b106-b95486180b5d",
+    "title": "Stay on top of meetings with Meet in Microsoft Teams - Microsoft Support",
+    "description": "Manage meetings in Microsoft Teams with Meet, an area where you can prepare for meetings, review past meetings, and more.",
+    "date": "2023-11-07T09:59:39Z",
+    "tags": ["microsoft-teams"]
+  },
+  {
     "url": "https://www.theverge.com/2023/11/2/23943178/microsoft-security-secure-future-initiative-cybersecurity",
     "title": "Microsoft is overhauling its software security after major Azure cloud attacks - The Verge",
     "description": "Microsoft is making big changes to its cybersecurity approach. It comes after major cloud attacks in recent years and will mean an overhaul to how software is built inside Microsoft.",
