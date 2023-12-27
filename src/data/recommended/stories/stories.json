@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/visualstudio/ai-powered-rename-suggestions/",
+    "title": "Naming Made Easy: AI-Powered Rename Suggestions - Visual Studio Blog",
+    "description": "Ever struggled to name a variable, method, or class—finding that perfect balance between expressiveness and conciseness? You’re not alone. We’ve tackled this universal challenge in the latest Visual Studio Preview via our GitHub Copilot Chat extension (subscription required). Introducing: AI-powered rename suggestions.",
+    "date": "2023-12-22T09:59:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "url": "https://bartwullems.blogspot.com/2023/12/building-distributed-systemsretry-storms.html",
+    "title": "Building distributed systems–Retry storms",
+    "description": "",
+    "date": "2023-12-22T09:58:39Z",
+    "tags": ["design-patterns","dotnet"]
+  },
+  {
     "url": "https://andrewlock.net/redacting-sensitive-data-with-microsoft-extensions-compliance/",
     "title": "Redacting sensitive data in logs with Microsoft​.Extensions​.Compliance​.Redaction",
     "description": "In this post I show how you can add redaction to your [LogProperties] and [TagProvider] objects using the Microsoft.Extensions.Compliance.Redaction package",
