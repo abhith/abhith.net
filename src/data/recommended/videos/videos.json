@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=tFCZw-wZVtg",
+    "title": "What is VS Code and C# Dev Kit? [Pt 1] | C# and .NET Development in VS Code for Beginners",
+    "tags": ["vscode", "c-sharp"],
+    "date": "2024-01-23T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Ft1JESBVFX8",
+    "title": "Azure Boards: a Brief Introduction - Plan, Track, and Discuss Work in Azure DevOps",
+    "tags": ["azure-devops"],
+    "date": "2024-01-23T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ML7Zc35rIWk",
+    "title": "Creating WordPress sites on Azure App Service | Azure Friday",
+    "tags": ["azure"],
+    "date": "2024-01-23T07:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=zgCFKBwJNe0",
     "title": "Writing Unit Tests with IntelliTest",
     "tags": ["visual-studio"],
