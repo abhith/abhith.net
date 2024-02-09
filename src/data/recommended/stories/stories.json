@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/dotnet/my-top-10-new-visual-studio-features-of-2023-for-dotnet-developers/",
+    "title": "My Top 10 NEW Visual Studio Features of 2023 for .NET Developers - .NET Blog",
+    "description": "There are tons of great new feature for .NET developers to love in Visual Studio 2022, here are my top 10 that were released in 2023 that you can take advantage of right now.",
+    "date": "2024-02-09T09:59:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "url": "https://moderncss.dev/12-modern-css-one-line-upgrades/",
+    "title": "12 Modern CSS One-Line Upgrades | Modern CSS Solutions",
+    "description": "Sometimes, improving your application CSS just takes a one-line upgrade or enhancement! Learn about 12 properties to start incorporating into your projects, and enjoy reducing technical debt, removing JavaScript, and scoring easy wins for user experience.",
+    "date": "2024-02-06T09:59:39Z",
+    "tags": ["css"]
+  },
+  {
+    "url": "https://wizardzines.com/comics/inside-git/",
+    "title": "inside .git",
+    "description": "",
+    "date": "2024-02-06T08:59:39Z",
+    "tags": ["git"]
+  },
+  {
     "url": "https://medium.com/@iamgautamkumar/daily-stand-ups-are-waste-of-time-31c59c6e96e1",
     "title": "Daily Stand-ups are waste of time. | by Gautam Kumar | Medium",
     "description": "",
