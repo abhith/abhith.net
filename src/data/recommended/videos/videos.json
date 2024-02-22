@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=S4Rks1L03LI",
+    "title": "Installing VS Code and C# Dev Kit [Pt 2] | C# and .NET Development in VS Code for Beginners",
+    "tags": ["vscode", "c-sharp"],
+    "date": "2024-02-22T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xsfq8q-xdOo",
+    "title": "The Ultimate WordPress CI/CD Pipeline",
+    "tags": ["ci-cd"],
+    "date": "2024-02-22T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=_XOPdYu0N-Y",
+    "title": "Azure DevOps sprint activities for Product owners/SCRUM Masters",
+    "tags": ["azure-devops"],
+    "date": "2024-02-21T09:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=tFCZw-wZVtg",
     "title": "What is VS Code and C# Dev Kit? [Pt 1] | C# and .NET Development in VS Code for Beginners",
     "tags": ["vscode", "c-sharp"],

@@ -111,6 +111,10 @@
   slug: cache
   description: One area to check for performance.
   image: ""
+- title: CI/CD
+  slug: ci-cd
+  description: ""
+  image: ""
 - title: CloudEvents
   slug: cloudevents
   description: ""
