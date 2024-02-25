@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://josef.codes/customize-the-httpclient-logging-dotnet-core/",
+    "title": "Customize the HttpClient logging - dotnet core",
+    "description": "How to customize the HttpClient logging",
+    "date": "2024-02-25T09:59:39Z",
+    "tags": ["dotnet-core"]
+  },
+  {
+    "url": "https://bartwullems.blogspot.com/2023/12/azure-static-web-apppassword-protect.html",
+    "title": "Azure Static Web App–Password protect your environments",
+    "description": "",
+    "date": "2024-02-25T08:59:39Z",
+    "tags": ["azure"]
+  },
+  {
+    "url": "https://bartwullems.blogspot.com/2023/12/building-distributed-systemsretry-storms.html",
+    "title": "Building distributed systems–Retry storms",
+    "description": "",
+    "date": "2024-02-25T07:59:39Z",
+    "tags": ["design-patterns"]
+  },
+  {
     "url": "https://devblogs.microsoft.com/dotnet/my-top-10-new-visual-studio-features-of-2023-for-dotnet-developers/",
     "title": "My Top 10 NEW Visual Studio Features of 2023 for .NET Developers - .NET Blog",
     "description": "There are tons of great new feature for .NET developers to love in Visual Studio 2022, here are my top 10 that were released in 2023 that you can take advantage of right now.",
