@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=HnP6pkE8Tjs",
+    "title": "C# Project Management in VS Code [Pt 3] | C# and .NET Development in VS Code for Beginners",
+    "tags": ["vscode", "c-sharp"],
+    "date": "2024-02-25T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=RbpmZXJlaAI",
+    "title": "Visual Studio Code Gets A Huge Upgrade",
+    "tags": ["vscode"],
+    "date": "2024-02-25T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=P6FORpg0KVo",
+    "title": "How to Make Learning as Addictive as Social Media | Luis Von Ahn | TED",
+    "tags": ["good-to-know"],
+    "date": "2024-02-25T07:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=S4Rks1L03LI",
     "title": "Installing VS Code and C# Dev Kit [Pt 2] | C# and .NET Development in VS Code for Beginners",
     "tags": ["vscode", "c-sharp"],
