@@ -2318,14 +2318,14 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@emotion/babel-plugin-jsx-pragmatic@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin-jsx-pragmatic/-/babel-plugin-jsx-pragmatic-0.2.0.tgz#6fdd78600417973fa2610704693158181d8505b7"
-  integrity sha512-VPfKAtb/bVyu5y+HzCPj9bb2nHnj9yX5mMAU7N0pIDcrFZo8aqDyHXLYF8BD7tY4pNL09N87dygVLKIkQvshJw==
+"@emotion/babel-plugin-jsx-pragmatic@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin-jsx-pragmatic/-/babel-plugin-jsx-pragmatic-0.2.1.tgz#01d3306fde73b60d683f78f3bd9f6b2c919b63b6"
+  integrity sha512-xy1SlgEJygAAIvIuC2idkGKJYa6v5iwoyILkvNKgk347bV+IImXrUat5Z86EmLGyWhEoTplVT9EHqTnHZG4HFw==
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.17.12"
 
-"@emotion/babel-plugin@^11.10.0", "@emotion/babel-plugin@^11.11.0":
+"@emotion/babel-plugin@^11.11.0":
   version "11.11.0"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.11.0.tgz#c2d872b6a7767a9d176d007f5b31f7d504bb5d6c"
   integrity sha512-m4HEDZleaaCH+XgDDsPF15Ht6wTLsgDTeR3WYj9Q/k76JtWhrJjcP4+/XlG8LGT/Rol9qUfOIztXeA84ATpqPQ==
@@ -2342,15 +2342,15 @@
     source-map "^0.5.7"
     stylis "4.2.0"
 
-"@emotion/babel-preset-css-prop@^11.10.0":
-  version "11.10.0"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-preset-css-prop/-/babel-preset-css-prop-11.10.0.tgz#23922787561d8376782b0e9006323512fe797275"
-  integrity sha512-oN2lCP0NJTEt80IIeFM1RbmapeEVNYzKXYk2pYirAuom9WvV9Oz/aJQN5Hn3RyBMPaY+Of1OZYpTVMle2jUm4g==
+"@emotion/babel-preset-css-prop@^11.11.0":
+  version "11.11.0"
+  resolved "https://registry.yarnpkg.com/@emotion/babel-preset-css-prop/-/babel-preset-css-prop-11.11.0.tgz#6a86d3df74f7804af1ae0b37cd8893a9863ddbb7"
+  integrity sha512-+1Cba68IyBeltWzvbBSXcBWqP2eKQuQcSUpIu3ma4pOUeRol4EvwWrYS2Rv51aIVqg066fLB+Z9O/8NKR7uUlQ==
   dependencies:
     "@babel/plugin-transform-react-jsx" "^7.17.12"
     "@babel/runtime" "^7.18.3"
-    "@emotion/babel-plugin" "^11.10.0"
-    "@emotion/babel-plugin-jsx-pragmatic" "^0.2.0"
+    "@emotion/babel-plugin" "^11.11.0"
+    "@emotion/babel-plugin-jsx-pragmatic" "^0.2.1"
 
 "@emotion/cache@^11.11.0":
   version "11.11.0"
@@ -9227,13 +9227,13 @@ gatsby-plugin-clarity@^1.0.1:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-plugin-emotion@^8.9.0:
-  version "8.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-8.9.0.tgz#71009ec92b1cc26f070ca4e401b947b25e92c515"
-  integrity sha512-cYDxkgDRE/vdXmX6W7z1HgJb5+LSaekNUFFrqigA/Hias/fooJUf0qCP8bPyLtdlGnp1+sCGxUXj5egxzS2iSA==
+gatsby-plugin-emotion@^8.13.1:
+  version "8.13.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-8.13.1.tgz#4052c75d0579e73eb419f8477b1d1bd7cda7a6c8"
+  integrity sha512-CiramBDe3ZR+evnraIOP7jrhD0k7TP0by4J9Li955kmB1m6di3p54G+BAClocrq8ad6GPxOeh5TyISq7ydXRmg==
   dependencies:
     "@babel/runtime" "^7.20.13"
-    "@emotion/babel-preset-css-prop" "^11.10.0"
+    "@emotion/babel-preset-css-prop" "^11.11.0"
 
 gatsby-plugin-feed@^5.11.0:
   version "5.11.0"
