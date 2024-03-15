@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://github.blog/2024-01-25-do-you-know-if-all-your-repositories-have-up-to-date-dependencies/",
+    "title": "Do you know if all your repositories have up-to-date dependencies? - The GitHub Blog",
+    "description": "Consider deploying the GitHub Action: Evergreen so that you know each of your repositories are leveraging active dependency management with Dependabot.",
+    "date": "2024-03-15T09:59:39Z",
+    "tags": ["github"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-spell-checker-preview-now-available/",
+    "title": "Visual Studio Spell Checker Preview Now Available - Visual Studio Blog",
+    "description": "Visual Studio17.5 preview 3 now has a preview for the spell checker for C#, C++ and Markdown. Come check out how it works.",
+    "date": "2024-03-15T09:58:39Z",
+    "tags": ["visual-studio"]
+  },
+  {
+    "url": "https://www.darkreading.com/application-security/millions-of-malicious-repositories-flood-github",
+    "title": "Millions of Malicious Repositories Flood GitHub",
+    "description": "GitHub and cyberattackers are waging a quiet, automated war over malicious repos.",
+    "date": "2024-03-15T09:57:39Z",
+    "tags": ["github"]
+  },
+  {
     "url": "https://josef.codes/customize-the-httpclient-logging-dotnet-core/",
     "title": "Customize the HttpClient logging - dotnet core",
     "description": "How to customize the HttpClient logging",
