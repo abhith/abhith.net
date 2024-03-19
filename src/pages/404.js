@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import { Link } from "gatsby";
-import { GoMarkGithub } from "react-icons/go";
+import { FaGithub } from "react-icons/fa";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 const NotFoundPage = () => (
@@ -27,7 +27,7 @@ const NotFoundPage = () => (
                 target="_blank"
               >
                 <span className="icon">
-                  <GoMarkGithub />
+                  <FaGithub />
                 </span>
                 <span></span>
               </OutboundLink>
