@@ -39,6 +39,29 @@ export default class Timeline extends Component {
               </div>
               <div className="timeline-content">
                 <p className="heading has-text-info has-text-weight-bold">
+                  July 2023
+                </p>
+                <p>National Air Cargo, Inc., Dubai - Software Engineer</p>
+              </div>
+            </div>
+            <header className="timeline-header">
+              <span className="tag is-primary">2023</span>
+            </header>
+            <header className="timeline-header">
+              <span className="tag is-primary">2022</span>
+            </header>
+            <header className="timeline-header">
+              <span className="tag is-primary">2021</span>
+            </header>
+            <header className="timeline-header">
+              <span className="tag is-primary">2020</span>
+            </header>
+            <div className="timeline-item">
+              <div className="timeline-marker is-icon">
+                <FaFlag></FaFlag>
+              </div>
+              <div className="timeline-content">
+                <p className="heading has-text-info has-text-weight-bold">
                   March 2019
                 </p>
                 <p>Emcredit, Dubai - Software Developer</p>

@@ -6,12 +6,10 @@ description: Abhith Rajan is a programmer, technologist, writer and more.
 ---
 
 I'm Abhith Rajan, a [Software Engineer](https://github.com/abhith) from India.
-I work for the Product Team at [Emcredit](https://www.emcredit.com/). At the moment my desk is located in **DIFC Dubai**, the leading financial centre in the Middle East, Africa, and South Asia region.
+I work for the IT Team at [National Air Cargo](https://www.nationalaircargo.com?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about). At the moment my desk is located in **Dubai Airport Freezone**.
 
 My role involves prototyping, and developing backend as well as front end apps with modern workflows, and frameworks.
-Keeping an eye on the patterns and organized code. And deploy them to [Azure](/topics/azure/) using [Azure DevOps](/topics/azure-devops/) pipelines and monitor everything running in there.
-For the backend apps including [Microservices](/topics/microservices/) am a .NET guy.
-For the front-end apps, I have choices (Angular, React, Vue, Razor Pages and more), and my pick varies from project to project.
+Keeping an eye on the patterns and organized code. And deploy them to [Azure](/topics/azure/) using [GitHub](/topics/github/) actions and monitor everything running in there.
 
 I blog about programming, code, technology, and stuff that I'm interested in.
 
@@ -19,4 +17,4 @@ You can find me on [Twitter](https://twitter.com/abhithrajan), [GitHub](https://
 
 ## BACKGROUND
 
-I started my career at [Aabasoft](http://aabasoft.com) where I joined as an intern after my B-Tech education and worked there for over 3 years as a Software Engineer and then moved to [Sysberries](http://sysberries.com) where I spend another almost 3 years, then in [Unibeton Ready Mix](http://www.unibetonrm.com/en-gl/home). In 2019, I joined [Emcredit](https://www.emcredit.com/) where I work now.
+My journey in software engineering began at [Aabasoft](https://www.aabasoft.com/in-en/?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about), where I started as an intern after completing my B-Tech education. I spent over 3 years there before moving on to roles at [Sysberries](http://sysberries.com?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about) and [Unibeton Ready Mix](http://www.unibetonrm.com/en-gl/home?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about), gaining valuable experience along the way. In 2019, I joined [Emcredit](https://www.emcredit.com?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about) before ultimately finding my place at [National Air Cargo](https://www.nationalaircargo.com?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about) in 2023.
