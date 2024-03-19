@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { useState } from "react";
 import { Link } from "gatsby";
-import { FaCoffee, FaTwitter } from "react-icons/fa";
+import { FaCoffee, FaTwitter, FaGithub } from "react-icons/fa";
 import {
   FcContacts,
   FcHome,
@@ -12,7 +12,6 @@ import {
   FcTimeline,
   FcPuzzle,
 } from "react-icons/fc";
-import { GoMarkGithub } from "react-icons/go";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -47,7 +46,7 @@ function Navbar({ logo }) {
           target="_blank"
         >
           <span className="icon">
-            <GoMarkGithub size={24} />
+            <FaGithub size={24} />
           </span>
         </OutboundLink>
         <OutboundLink
@@ -134,7 +133,7 @@ function Navbar({ logo }) {
             target="_blank"
           >
             <span className="icon">
-              <GoMarkGithub size={24} />
+              <FaGithub size={24} />
             </span>
           </OutboundLink>
           <OutboundLink
