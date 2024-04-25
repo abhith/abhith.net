@@ -1,5 +1,12 @@
 [
   {
+    "url": "https://thoughtbot.com/blog/wip-is-waste",
+    "title": "WIP is waste",
+    "description": "A manifesto on work, waste, cost and value.",
+    "date": "2024-04-24T09:59:39Z",
+    "tags": ["software-development"]
+  },
+  {
     "url": "https://github.blog/2024-01-25-do-you-know-if-all-your-repositories-have-up-to-date-dependencies/",
     "title": "Do you know if all your repositories have up-to-date dependencies? - The GitHub Blog",
     "description": "Consider deploying the GitHub Action: Evergreen so that you know each of your repositories are leveraging active dependency management with Dependabot.",
