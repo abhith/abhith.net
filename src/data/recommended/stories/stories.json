@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/dotnet/csharp-primary-constructors-refactoring/",
+    "title": "Refactor your C# code with primary constructors - .NET Blog",
+    "description": "Explore C# 12's primary constructors through incremental refactoring of a Worker service.",
+    "date": "2024-05-14T09:59:39Z",
+    "tags": ["c-sharp"]
+  },
+  {
+    "url": "https://github.blog/2024-04-02-bringing-enterprise-level-security-and-even-more-power-to-github-hosted-runners/",
+    "title": "Bringing enterprise-level security and even more power to GitHub-hosted runners - The GitHub Blog",
+    "description": "GitHub-hosted runners now support Azure private networking. Plus, we've added 2 vCPU Linux, 4 vCPU Windows, macOS L, macOS XL, and GPU hosted runners to our runner fleet.",
+    "date": "2024-05-14T08:59:39Z",
+    "tags": ["github"]
+  },
+  {
+    "url": "https://mattvsts.github.io/2020/04/22/synchronising-github-issues-and-azure-devops-work-items/",
+    "title": "Synchronising GitHub Issues and Azure DevOps Work Items",
+    "description": "Another integration between Azure DevOps and GitHub is in work planning and tracking, or project management if you like.",
+    "date": "2024-05-14T07:59:39Z",
+    "tags": ["github", "azure-devops"]
+  },
+  {
     "url": "https://thoughtbot.com/blog/wip-is-waste",
     "title": "WIP is waste",
     "description": "A manifesto on work, waste, cost and value.",
