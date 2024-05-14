@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=z0CYdcqZxyQ",
+    "title": "Custom repository properties: Organization, policy, and security at scale",
+    "tags": ["github"],
+    "date": "2024-05-14T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=w97VnsfCAEk",
+    "title": "Yubikey - The Ultimate Beginner Guide (How to Setup & Use)",
+    "tags": ["security"],
+    "date": "2024-05-14T08:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://youtu.be/-8aIxUEy1l8?si=sXBVAKYHb8sL0Kd0",
+    "title": "Azure DevOps | Managing a Backlog",
+    "tags": ["azure-devops"],
+    "date": "2024-05-14T07:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=Nm4DCAjePOM",
     "title": "Getting Started with Proton Pass | Tutorial",
     "tags": ["open-source"],
