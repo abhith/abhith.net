@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://github.blog/2024-03-20-found-means-fixed-introducing-code-scanning-autofix-powered-by-github-copilot-and-codeql/",
+    "title": "Found means fixed: Introducing code scanning autofix, powered by GitHub Copilot and CodeQL - The GitHub Blog",
+    "description": "Now in public beta for GitHub Advanced Security customers, code scanning autofix helps developers remediate more than two-thirds of supported alerts with little or no editing.",
+    "date": "2024-05-16T10:59:39Z",
+    "tags": ["github"]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/oldnewthing/20240513-00/?p=109750",
+    "title": "Before you try to change something, make sure you can change nothing",
+    "description": "Nobody touch anything.",
+    "date": "2024-05-14T10:59:39Z",
+    "tags": ["software-development"]
+  },
+  {
+    "url": "https://github.blog/2024-03-25-how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices/",
+    "title": "How to use GitHub Copilot in your IDE: Tips, tricks, and best practices - The GitHub Blog",
+    "description": "GitHub Copilot is a powerful AI assistant. Learn practical strategies to get the most out of GitHub Copilot to generate the most relevant and useful code suggestions in your editor.",
+    "date": "2024-05-14T10:58:39Z",
+    "tags": ["github"]
+  },
+  {
     "url": "https://devblogs.microsoft.com/dotnet/csharp-primary-constructors-refactoring/",
     "title": "Refactor your C# code with primary constructors - .NET Blog",
     "description": "Explore C# 12's primary constructors through incremental refactoring of a Worker service.",
