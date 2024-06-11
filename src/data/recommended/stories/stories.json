@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/dotnet/dotnet-build-2024-announcements/#expanding-the-net-ai-ecosystem",
+    "title": ".NET Announcements and Updates from Microsoft Build 2024 - .NET Blog",
+    "description": "Our latest updates and announcements from Microsoft Build including .NET Aspire, .NET 9 Preview 4, C# 13, Blazor, .NET MAUI, and more!",
+    "date": "2024-06-10T10:59:39Z",
+    "tags": ["dotnet"]
+  },
+  {
+    "url": "https://bartwullems.blogspot.com/2024/06/why-pair-programming-should-be-your.html",
+    "title": "Why pair programming should be your default way of working",
+    "description": "",
+    "date": "2024-06-10T10:58:39Z",
+    "tags": ["software-development"]
+  },
+  {
     "url": "https://github.blog/2024-03-20-found-means-fixed-introducing-code-scanning-autofix-powered-by-github-copilot-and-codeql/",
     "title": "Found means fixed: Introducing code scanning autofix, powered by GitHub Copilot and CodeQL - The GitHub Blog",
     "description": "Now in public beta for GitHub Advanced Security customers, code scanning autofix helps developers remediate more than two-thirds of supported alerts with little or no editing.",
