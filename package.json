@@ -9,7 +9,7 @@
     "@emotion/styled": "^11.11.5",
     "@mdx-js/react": "^2.3.0",
     "@theme-ui/mdx": "^0.15.7",
-    "bulma": "^0.9.4",
+    "bulma": "^1.0.1",
     "bulma-timeline": "^3.0.5",
     "fontsource-lora": "^4.0.0",
     "fontsource-open-sans": "^4.0.0",
