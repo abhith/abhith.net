@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=Ivdj6Gf_K-M",
+    "title": "Power Automate - Create Azure DevOps WorkItem and Attachments",
+    "tags": ["azure-devops"],
+    "date": "2024-07-04T09:12:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=aAiLzsaP_Ec",
+    "title": "Create your Personal Movie Database in Obsidian",
+    "tags": ["obsidian"],
+    "date": "2024-07-04T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=d24yOUa7_YM",
+    "title": "Test and Feedback Plugin for Test Documentation",
+    "tags": ["azure-devops"],
+    "date": "2024-07-04T08:11:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=z0CYdcqZxyQ",
     "title": "Custom repository properties: Organization, policy, and security at scale",
     "tags": ["github"],
