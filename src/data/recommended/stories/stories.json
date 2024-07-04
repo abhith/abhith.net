@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://github.blog/2024-06-13-unlocking-the-power-of-unstructured-data-with-rag/",
+    "title": "Unlocking the power of unstructured data with RAG - The GitHub Blog",
+    "description": "Unstructured data holds valuable information about codebases, organizational best practices, and customer feedback. Here are some ways you can leverage it with RAG, or retrieval-augmented generation.",
+    "date": "2024-07-04T10:59:39Z",
+    "tags": ["ai"]
+  },
+  {
+    "url": "https://blogs.windows.com/windowsexperience/2024/06/07/update-on-the-recall-preview-feature-for-copilot-pcs/",
+    "title": "Update on the Recall preview feature for Copilot+ PCs | Windows Experience Blog",
+    "description": "",
+    "date": "2024-06-11T10:59:39Z",
+    "tags": ["windows"]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/security/malicious-vscode-extensions-with-millions-of-installs-discovered/",
+    "title": "Malicious VSCode extensions with millions of installs discovered",
+    "description": "",
+    "date": "2024-06-11T10:58:39Z",
+    "tags": ["vscode","security"]
+  },
+  {
     "url": "https://devblogs.microsoft.com/dotnet/dotnet-build-2024-announcements/#expanding-the-net-ai-ecosystem",
     "title": ".NET Announcements and Updates from Microsoft Build 2024 - .NET Blog",
     "description": "Our latest updates and announcements from Microsoft Build including .NET Aspire, .NET 9 Preview 4, C# 13, Blazor, .NET MAUI, and more!",
