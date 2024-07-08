@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=1ReJiHxqt_s",
+    "title": "How To Do Sprint Planning And Create Product Backlog Using Azure DevOps Boards |Azure DevOps Sprints",
+    "tags": ["azure-devops"],
+    "date": "2024-07-08T09:12:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=lm9a9R9P6uc",
+    "title": "GitHub Advanced Security: Code scanning autofix",
+    "tags": ["github"],
+    "date": "2024-07-08T09:11:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=CqTVIOzBRno",
+    "title": "Retrospectives: Be Agile and Thrive - YouTube",
+    "tags": ["azure-devops"],
+    "date": "2024-07-08T08:12:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=Ivdj6Gf_K-M",
     "title": "Power Automate - Create Azure DevOps WorkItem and Attachments",
     "tags": ["azure-devops"],
