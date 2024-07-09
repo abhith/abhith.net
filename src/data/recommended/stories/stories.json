@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capture-and-review-net-profiler-traces-on-app-service-windows/ba-p/4185377",
+    "title": "Capture and review .Net Profiler Traces on App Service (Windows) - Microsoft Community Hub",
+    "description": "This blog emphasizes the process of gathering profiler traces for application hosted on App Service that is experiencing slowness. It also provides",
+    "date": "2024-07-09T11:59:39Z",
+    "tags": ["azure"]
+  },
+  {
+    "url": "https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/importing-a-database-into-vs-code/ba-p/4037848",
+    "title": "Importing a Database into VS Code - Microsoft Community Hub",
+    "description": "About This article will talk through how one can import an existing database that lives on a SQL Server either on prem or in Azure onto a local machine.",
+    "date": "2024-07-09T10:59:39Z",
+    "tags": ["vscode","sql-server"]
+  },
+  {
+    "url": "https://steven-giesel.com/blogPost/ea42a518-4d8b-4e08-8f73-e542bdd3b983",
+    "title": "UUID v7 in .NET 9",
+    "description": ".NET natively knows UUID v4 aka Guid.NewGuid(). But with preview 7 we get Version 7 of UUID's natively.",
+    "date": "2024-07-09T10:49:39Z",
+    "tags": ["dotnet"]
+  },
+  {
     "url": "https://minimal.guide/guides/movie-database",
     "title": "Create a movie database - Minimal Documentation",
     "description": "",
