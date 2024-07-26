@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://openai.com/index/searchgpt-prototype/",
+    "title": "SearchGPT Prototype",
+    "description": "We’re testing SearchGPT, a temporary prototype of new AI search features that give you fast and timely answers with clear and relevant sources.",
+    "date": "2024-07-26T11:59:39Z",
+    "tags": ["ai"]
+  },
+  {
+    "url": "https://www.telerik.com/blogs/5-ways-maintain-eye-health-work-front-screens",
+    "title": "5 Ways to Maintain Eye Health Working in Front of Screens",
+    "description": "To help keep your eyes from fatiguing or worse while you’re at work, here are five strategies you can use to keep your eyes healthy.",
+    "date": "2024-07-15T11:59:39Z",
+    "tags": ["good-to-know"]
+  },
+  {
     "url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capture-and-review-net-profiler-traces-on-app-service-windows/ba-p/4185377",
     "title": "Capture and review .Net Profiler Traces on App Service (Windows) - Microsoft Community Hub",
     "description": "This blog emphasizes the process of gathering profiler traces for application hosted on App Service that is experiencing slowness. It also provides",
