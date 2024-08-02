@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://developers.redhat.com/articles/2024/08/01/open-source-ai-coding-assistance-granite-models",
+    "title": "Open source AI coding assistance with the Granite models | Red Hat Developer",
+    "description": "Boost your coding productivity with private and free AI code assistance using Ollama or InstructLab to run large language models locally.",
+    "date": "2024-08-02T11:59:39Z",
+    "tags": ["ai", "developer-tools", "open-source"]
+  },
+  {
+    "url": "https://dev.to/vyan/react-19-a-game-changer-for-modern-web-development-1bih",
+    "title": "React 19: A Game-Changer for Modern Web Development - DEV Community",
+    "description": "",
+    "date": "2024-07-30T11:59:39Z",
+    "tags": ["react"]
+  },
+  {
+    "url": "https://thenewstack.io/tauri-mixing-javascript-with-rust-for-gui-desktop-apps/?nab=1",
+    "title": "Tauri: Mixing JavaScript With Rust for GUI Desktop Apps - The New Stack",
+    "description": "We revisit Tauri, a framework to build desktop applications with any frontend framework and a Rust core. We check out the version 2.0 beta.",
+    "date": "2024-07-29T11:59:39Z",
+    "tags": ["javascript"]
+  },
+  {
     "url": "https://openai.com/index/searchgpt-prototype/",
     "title": "SearchGPT Prototype",
     "description": "We’re testing SearchGPT, a temporary prototype of new AI search features that give you fast and timely answers with clear and relevant sources.",
