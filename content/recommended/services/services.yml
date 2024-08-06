@@ -1,4 +1,10 @@
 ---
+- title: Keyviz
+  url: https://mularahul.github.io/keyviz/
+  description: Keyviz is a free and open-source tool to visualize your keystrokes ⌨️ and 🖱️ mouse actions in real-time.
+  date: "2024-08-06T13:30:28.263Z"
+  tags:
+    - developer-tools
 - title: JSON to YAML Online Converter
   url: https://www.bairesdev.com/tools/json2yaml/
   description: Convert JSON to YAML and slim down your data with the json2yaml online editor
