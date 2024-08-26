@@ -44,7 +44,7 @@
     "gatsby-remark-images-medium-zoom": "^1.7.0",
     "gatsby-remark-mermaid": "^2.1.0",
     "gatsby-remark-numbered-footnotes": "^1.0.1",
-    "gatsby-remark-prismjs": "^7.10.0",
+    "gatsby-remark-prismjs": "^7.13.2",
     "gatsby-remark-responsive-iframe": "^6.13.1",
     "gatsby-remark-smartypants": "^6.9.0",
     "gatsby-source-filesystem": "^5.13.1",
