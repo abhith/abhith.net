@@ -1,5 +1,26 @@
 [
   {
+    "url": "https://tips2fix.com/how-to-install-windows-11-24h2-on-unsupported-pcs/",
+    "title": "How to Install Windows 11 24H2 on Unsupported PCs: A Step-by-Step Guide - Tips 2 Fix",
+    "description": "",
+    "date": "2024-10-12T11:59:39Z",
+    "tags": ["windows"]
+  },
+  {
+    "url": "https://github.blog/engineering/engineering-principles/github-enterprise-cloud-with-data-residency/",
+    "title": "GitHub Enterprise Cloud with data residency: How we built the next evolution of GitHub Enterprise using GitHub - The GitHub Blog",
+    "description": "",
+    "date": "2024-10-12T10:59:39Z",
+    "tags": ["github"]
+  },
+  {
+    "url": "https://www.xda-developers.com/can-your-isp-tell-if-youre-using-a-vpn/",
+    "title": "Can your ISP tell if you're using a VPN?",
+    "description": "",
+    "date": "2024-10-12T10:58:39Z",
+    "tags": ["good-to-know"]
+  },
+  {
     "url": "https://developers.redhat.com/articles/2024/08/01/open-source-ai-coding-assistance-granite-models",
     "title": "Open source AI coding assistance with the Granite models | Red Hat Developer",
     "description": "Boost your coding productivity with private and free AI code assistance using Ollama or InstructLab to run large language models locally.",
@@ -46,7 +67,7 @@
     "title": "Importing a Database into VS Code - Microsoft Community Hub",
     "description": "About This article will talk through how one can import an existing database that lives on a SQL Server either on prem or in Azure onto a local machine.",
     "date": "2024-07-09T10:59:39Z",
-    "tags": ["vscode","sql-server"]
+    "tags": ["vscode", "sql-server"]
   },
   {
     "url": "https://steven-giesel.com/blogPost/ea42a518-4d8b-4e08-8f73-e542bdd3b983",
@@ -88,7 +109,7 @@
     "title": "Malicious VSCode extensions with millions of installs discovered",
     "description": "",
     "date": "2024-06-11T10:58:39Z",
-    "tags": ["vscode","security"]
+    "tags": ["vscode", "security"]
   },
   {
     "url": "https://devblogs.microsoft.com/dotnet/dotnet-build-2024-announcements/#expanding-the-net-ai-ecosystem",
@@ -256,7 +277,7 @@
     "title": "Building distributed systems–Retry storms",
     "description": "",
     "date": "2023-12-22T09:58:39Z",
-    "tags": ["design-patterns","dotnet"]
+    "tags": ["design-patterns", "dotnet"]
   },
   {
     "url": "https://andrewlock.net/redacting-sensitive-data-with-microsoft-extensions-compliance/",
@@ -333,7 +354,7 @@
     "title": "General Availability of Azure Automation extension for Visual Studio Code - Microsoft Community Hub",
     "description": "",
     "date": "2023-10-17T09:59:39Z",
-    "tags": ["azure","vscode"]
+    "tags": ["azure", "vscode"]
   },
   {
     "url": "https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/",
