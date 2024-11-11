@@ -1,4 +1,10 @@
 ---
+- title: Convert HEX to HSL - colordesigner.io
+  url: https://colordesigner.io/convert/hextohsl
+  description: Convert HEX to HSL. This tool is a free online color converter between two color formats HEX and HSL. The tool is fast and very simple to use.
+  date: "2024-11-11T13:30:28.263Z"
+  tags:
+    - developer-tools
 - title: Keyviz
   url: https://mularahul.github.io/keyviz/
   description: Keyviz is a free and open-source tool to visualize your keystrokes ⌨️ and 🖱️ mouse actions in real-time.
