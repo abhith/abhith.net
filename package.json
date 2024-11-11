@@ -15,7 +15,7 @@
     "fontsource-open-sans": "^4.0.0",
     "gatsby": "^5.13.7",
     "gatsby-awesome-pagination": "^0.3.8",
-    "gatsby-plugin-catch-links": "^5.13.1",
+    "gatsby-plugin-catch-links": "^5.14.0",
     "gatsby-plugin-clarity": "^1.0.1",
     "gatsby-plugin-emotion": "^8.9.0",
     "gatsby-plugin-feed": "^5.13.1",
