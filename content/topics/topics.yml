@@ -322,6 +322,10 @@
   slug: javascript
   description: ""
   image: javascript.svg
+- title: JetBrains
+  slug: jetbrains
+  description: ""
+  image: ""
 - title: Jira
   slug: jira
   description: ""
@@ -585,6 +589,10 @@
   image: ""
 - title: Webmention
   slug: webmention
+  description: ""
+  image: ""
+- title: WebStorm
+  slug: webstorm
   description: ""
   image: ""
 - title: windows
