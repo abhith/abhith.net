@@ -1,8 +1,21 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=JvkX2_46gUY",
+    "title": "Angular v19 Developer Event",
+    "tags": [
+      "angular"
+    ],
+    "date": "2024-11-21T09:12:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=5btN76K-tGY",
     "title": "Customizing WebStorm: Best Themes, Plugins, and Settings",
-    "tags": ["ide", "webstorm", "jetbrains"],
+    "tags": [
+      "ide",
+      "webstorm",
+      "jetbrains"
+    ],
     "date": "2024-11-17T09:12:58Z",
     "type": "youtube"
   },
