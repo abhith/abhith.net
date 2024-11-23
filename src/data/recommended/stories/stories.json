@@ -1,10 +1,21 @@
 [
   {
+    "url": "https://github.blog/engineering/engineering-principles/how-github-uses-merge-queue-to-ship-hundreds-of-changes-every-day/",
+    "title": "How GitHub uses merge queue to ship hundreds of changes every day",
+    "description": "Here’s how merge queue transformed the way GitHub deploys changes to production at scale, so you can do the same for your organization.",
+    "date": "2024-11-23T11:59:39Z",
+    "tags": [
+      "github"
+    ]
+  },
+  {
     "url": "https://tips2fix.com/how-to-install-windows-11-24h2-on-unsupported-pcs/",
     "title": "How to Install Windows 11 24H2 on Unsupported PCs: A Step-by-Step Guide - Tips 2 Fix",
     "description": "",
     "date": "2024-10-12T11:59:39Z",
-    "tags": ["windows"]
+    "tags": [
+      "windows"
+    ]
   },
   {
     "url": "https://github.blog/engineering/engineering-principles/github-enterprise-cloud-with-data-residency/",
