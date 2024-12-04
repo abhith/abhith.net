@@ -1,5 +1,14 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/dotnet/dotnet-9-nuget-resolver/",
+    "title": "Dramatically faster package restores with .NET 9's new NuGet resolver - .NET Blog",
+    "description": ".NET 9 introduces a new NuGet dependency graph resolver that dramatically improves package restore performance for large repositories. Learn how this reimagined approach reduces restore times from 30 minutes to just 2 minutes by creating a more efficient dependency graph with fewer nodes.",
+    "date": "2024-12-04T11:59:39Z",
+    "tags": [
+      "dotnet"
+    ]
+  },
+  {
     "url": "https://github.blog/engineering/engineering-principles/how-github-uses-merge-queue-to-ship-hundreds-of-changes-every-day/",
     "title": "How GitHub uses merge queue to ship hundreds of changes every day",
     "description": "Here’s how merge queue transformed the way GitHub deploys changes to production at scale, so you can do the same for your organization.",
