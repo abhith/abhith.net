@@ -19,7 +19,7 @@
     "gatsby-plugin-clarity": "^1.0.1",
     "gatsby-plugin-emotion": "^8.9.0",
     "gatsby-plugin-feed": "^5.13.1",
-    "gatsby-plugin-google-gtag": "^5.13.1",
+    "gatsby-plugin-google-gtag": "^5.14.0",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-mdx": "^5.14.0",
