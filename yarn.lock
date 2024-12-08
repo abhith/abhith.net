@@ -7470,14 +7470,14 @@ gatsby-plugin-nprogress@^5.14.0:
     "@babel/runtime" "^7.20.13"
     accessible-nprogress "^2.1.2"
 
-gatsby-plugin-offline@^6.13.3:
-  version "6.13.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-6.13.3.tgz#4f1d1f89299494cce4c71f9c6f71a6b31024ec17"
-  integrity sha512-muFxKkEtXEfa8UaoLurfR9EgvqNhmuvhB4Ri1LIzFiyjlfSmwyVZRJjkN0M0q5zjZy/u+PBzazX0k5CatLFI7A==
+gatsby-plugin-offline@^6.14.0:
+  version "6.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-6.14.0.tgz#3999e44c6ae2c84ebc19d04626d2e4aaf4bff72b"
+  integrity sha512-uvQhwZ1HhPZoLJDYdZ+OTWsz/QRz3hNqF+QVhihPRZ9jjgXsPAqKGTgrWM0Btaf6DiNImz10PTo1/SRsp0UDgQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
     cheerio "1.0.0-rc.12"
-    gatsby-core-utils "^4.13.1"
+    gatsby-core-utils "^4.14.0"
     glob "^7.2.3"
     idb-keyval "^3.2.0"
     lodash "^4.17.21"
