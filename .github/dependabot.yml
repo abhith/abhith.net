@@ -6,7 +6,7 @@ updates:
       - "dependencies"
     schedule:
       interval: weekly
-    open-pull-requests-limit: 25
+    open-pull-requests-limit: 10
     ignore:
       - dependency-name: polished
         versions:
