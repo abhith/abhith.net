@@ -7191,29 +7191,7 @@ gatsby-cli@^5.13.3:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.13.1:
-  version "4.13.1"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.13.1.tgz#57955316486cc85ab150922f481484bc9287205e"
-  integrity sha512-w7G6SsQr8T2q+AJ1MxvRNGocCt+wjc22MiRLj2Zi3Ijpjszbr818JxwI4+aPt8WOSHlKT5SYCHICnEvcYPm9gg==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.15.0"
-    file-type "^16.5.4"
-    fs-extra "^11.1.1"
-    got "^11.8.6"
-    hash-wasm "^4.9.0"
-    import-from "^4.0.0"
-    lmdb "2.5.3"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
-gatsby-core-utils@^4.14.0:
+gatsby-core-utils@^4.13.1, gatsby-core-utils@^4.14.0:
   version "4.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.14.0.tgz#d044327b9399f0449674f8abf1037d1a3ab4e84e"
   integrity sha512-h0v20gB213PmhKjioCJ93SrUb7Hihnqxd6X6Iur4u1eiWTUDsGeV9g1bkquiuDl2qovUnjj7mOoHdWiu/Ax/9Q==
@@ -7640,15 +7618,15 @@ gatsby-remark-images-medium-zoom@^1.7.0:
     "@fastly/performance-observer-polyfill" "^1.1.1"
     medium-zoom "^1.0.4"
 
-gatsby-remark-images@^7.13.2:
-  version "7.13.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-7.13.2.tgz#7168c6f75bf5ba4dfb49b7b9bc0ef360470b920b"
-  integrity sha512-a2oke2akTElGqTKzsJjU1NK9itgBPrYAIOOQW2ZuLTtb5fulsZNTJa2Q3vhRHiKLodvXrte+Gxv7znjY21/dTA==
+gatsby-remark-images@^7.14.0:
+  version "7.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-7.14.0.tgz#c0e03d5e827b232a948498d44a5772eab6828e6f"
+  integrity sha512-P1FTQ5DEARWLh3AXXdGSjwAlA/mWWF7M5J/9szdTO6EmmF0+AnfvkIXAtNMtqGqXmbeSgriKvoXeIiyvIYeuRA==
   dependencies:
     "@babel/runtime" "^7.20.13"
     chalk "^4.1.2"
     cheerio "1.0.0-rc.12"
-    gatsby-core-utils "^4.13.1"
+    gatsby-core-utils "^4.14.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
@@ -8341,11 +8319,6 @@ hash-wasm@^4.11.0:
   version "4.12.0"
   resolved "https://registry.yarnpkg.com/hash-wasm/-/hash-wasm-4.12.0.tgz#f9f1a9f9121e027a9acbf6db5d59452ace1ef9bb"
   integrity sha512-+/2B2rYLb48I/evdOIhP+K/DD2ca2fgBjp6O+GBEnCDk2e4rpeXIK8GvIyRPjTezgmWn9gmKwkQjjx6BtqDHVQ==
-
-hash-wasm@^4.9.0:
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/hash-wasm/-/hash-wasm-4.11.0.tgz#7d1479b114c82e48498fdb1d2462a687d00386d5"
-  integrity sha512-HVusNXlVqHe0fzIzdQOGolnFN6mX/fqcrSAOcTBXdvzrXVHwTz11vXeKRmkR5gTuwVpvHZEIyKoePDvuAR+XwQ==
 
 hasha@^5.2.2:
   version "5.2.2"
