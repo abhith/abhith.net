@@ -7378,10 +7378,10 @@ gatsby-plugin-clarity@^1.0.1:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-plugin-emotion@^8.9.0:
-  version "8.13.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-8.13.1.tgz#4052c75d0579e73eb419f8477b1d1bd7cda7a6c8"
-  integrity sha512-CiramBDe3ZR+evnraIOP7jrhD0k7TP0by4J9Li955kmB1m6di3p54G+BAClocrq8ad6GPxOeh5TyISq7ydXRmg==
+gatsby-plugin-emotion@^8.14.0:
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-8.14.0.tgz#f6c344a0d94b9859c96d37ab44ec649304d0ff6f"
+  integrity sha512-EFiDC4ZemwC7js52rN6QV5LAcad1RjZ45aww8jSyj9PaVdM8izElH1HgGEm4PA54D0jp24QUXInkMJujEhyudw==
   dependencies:
     "@babel/runtime" "^7.20.13"
     "@emotion/babel-preset-css-prop" "^11.11.0"
