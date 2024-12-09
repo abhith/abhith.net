@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=5gh1TqMsYKE",
+    "title": "Technical writing with JetBrains' Writerside and Grazie",
+    "tags": [
+      "jetbrains"
+    ],
+    "date": "2024-12-09T09:13:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Bxf_HMs7SeQ",
+    "title": "Just store UTC? Handling Time Zones & Daylight Saving",
+    "tags": [
+      "software-architecture"
+    ],
+    "date": "2024-12-09T09:12:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=pHq3EhgJQus",
+    "title": "Time Zones and the DATETIMEOFFSET data type in SQL",
+    "tags": [
+      "sql-server"
+    ],
+    "date": "2024-12-09T09:12:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=dwyMlLYIrPk",
     "title": "Jujutsu | Ep. 5 Bits and Booze",
     "tags": [

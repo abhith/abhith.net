@@ -529,6 +529,10 @@
   slug: storage
   description: ""
   image: ""
+- title: Software Architecture
+  slug: software-architecture
+  description: Software architecture refers to the fundamental structures of a software system and the discipline of creating such structures and systems.
+  image: ""
 - title: Style Guide
   slug: style-guide
   description: ""
