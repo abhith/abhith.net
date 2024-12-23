@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://www.inc.com/marcel-schwantes/heres-how-microsoft-knows-in-less-than-5-minutes-if-someone-is-a-good-leader/91065839",
+    "title": "Here’s How Microsoft Knows in Less Than 5 Minutes If Someone Is a Good Leader",
+    "description": "Satya Nadella, the CEO of Microsoft, believes there’s one critical skill that will propel leaders to great success.",
+    "date": "2024-12-23T13:59:39Z",
+    "tags": [
+      "career"
+    ]
+  },
+  {
+    "url": "https://thenewstack.io/5-javascript-libraries-you-should-say-goodbye-to-in-2025/",
+    "title": "5 JavaScript Libraries You Should Say Goodbye to in 2025 - The New Stack",
+    "description": "We highlight five JavaScript libraries that are likely to become obsolete in 2025 and why it's time to move on. Also: we list alternatives!",
+    "date": "2024-12-23T12:59:39Z",
+    "tags": [
+      "javascript"
+    ]
+  },
+  {
+    "url": "https://dev.to/balrajola/10-hidden-gems-in-github-actions-for-automating-your-workflow-1i6l",
+    "title": "10 Hidden Gems in GitHub Actions for Automating Your Workflow - DEV Community",
+    "description": "",
+    "date": "2024-12-23T11:59:39Z",
+    "tags": [
+      "github"
+    ]
+  },
+  {
     "url": "https://drfrankenstein.co.uk/watchtower-automated-updates-in-container-manager-on-a-synology-nas/",
     "title": "Watchtower — Automated Docker Updates on a Synology NAS",
     "description": "In this guide I will be taking you through the steps to download and setup Watchtower in Container Manager on a Synology NAS.",
