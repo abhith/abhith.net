@@ -12607,10 +12607,10 @@ react-server-dom-webpack@0.0.0-experimental-c8b778b7f-20220825:
     loose-envify "^1.1.0"
     neo-async "^2.6.1"
 
-react-share@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/react-share/-/react-share-5.1.0.tgz#27eff763e5c233c8765cacf595b039093cb9b408"
-  integrity sha512-OvyfMtj/0UzH1wi90OdHhZVJ6WUC/+IeWvBwppeZozwIGyAjQgyR0QXlHOrxVHVECqnGvcpBaFTXVrqouTieaw==
+react-share@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/react-share/-/react-share-5.1.2.tgz#eccce92ab3f01d8d07a39ce6057e3c3e82ab6711"
+  integrity sha512-qwMT72LrGvDsg3E5lKlvUcXH4YWqjLcqlinxIomGaey2SoS/1/DBkTpan3TyzX9gDr0dcp1bl+z5LbdOOE4bmA==
   dependencies:
     classnames "^2.3.2"
     jsonp "^0.2.1"
