@@ -5,7 +5,7 @@
   image: "abp-logo-long.png"
 - title: AI
   slug: ai
-  description: ""
+  description: "Artificial Intelligence (AI) is transforming industries by enabling machines to perform intelligent tasks, including learning, reasoning, and self-correction."
   image: ""
 - title: Azure Kubernetes Service
   slug: aks

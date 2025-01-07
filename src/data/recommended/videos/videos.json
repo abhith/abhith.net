@@ -1,5 +1,33 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=goVmt8CVZUM",
+    "title": "How to Use the NEW Microsoft Teams Calendar—Now Powered by Outlook!",
+    "tags": [
+      "microsoft-teams"
+    ],
+    "date": "2025-01-07T09:15:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=DGOeyJjq80g",
+    "title": "My top 5 most popular front-end tips",
+    "tags": [
+      "css"
+    ],
+    "date": "2025-01-07T09:14:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=upgU0dRDs2Q",
+    "title": "Fearless Rebase Demo",
+    "tags": [
+      "git",
+      "ide"
+    ],
+    "date": "2025-01-07T09:13:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=5gh1TqMsYKE",
     "title": "Technical writing with JetBrains' Writerside and Grazie",
     "tags": [
