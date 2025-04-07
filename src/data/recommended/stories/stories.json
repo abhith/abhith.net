@@ -1,5 +1,23 @@
 [
   {
+    "url": "https://github.blog/security/application-security/next-evolution-github-advanced-security/",
+    "title": "GitHub found 39M secret leaks in 2024. Here's what we're doing to help - The GitHub Blog",
+    "description": "Every minute, GitHub blocks several secrets with push protection—but secret leaks still remain one of the most common causes of security incidents. Learn how GitHub is making it easier to protect yourself from exposed secrets, including today’s launches of standalone Secret Protection, org-wide scanning, and better access for teams of all sizes.",
+    "date": "2025-04-04T14:59:39Z",
+    "tags": [
+      "github"
+    ]
+  },
+  {
+    "url": "https://www.csharp.com/article/reduce-null-storage-in-sql-server-with-sparse-columns/",
+    "title": "Reduce NULL Storage in SQL Server with Sparse Columns",
+    "description": "SQL Server Sparse Columns optimize storage by not allocating space for NULL values, improving efficiency. They support filtered indexes and column sets for dynamic queries but add a 4-byte overhead for non-NULL values, requiring careful use.",
+    "date": "2025-04-02T14:59:39Z",
+    "tags": [
+      "sql-server"
+    ]
+  },
+  {
     "url": "https://blog.jetbrains.com/fleet/2024/12/introducing-fleets-new-islands-ui/",
     "title": "Introducing Fleet's New Islands UI | The Fleet Blog",
     "description": "",
