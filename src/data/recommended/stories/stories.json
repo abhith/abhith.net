@@ -1,5 +1,23 @@
 [
   {
+    "url": "https://github.blog/developer-skills/documentation-done-right-a-developers-guide/",
+    "title": "Documentation done right: A developer’s guide - The GitHub Blog",
+    "description": "Learn why and how you should write docs for your project with the Diátaxis framework.",
+    "date": "2025-05-16T14:59:49Z",
+    "tags": [
+      "documentation"
+    ]
+  },
+  {
+    "url": "https://medium.com/@davidfowl/intent-vs-mechanics-the-power-of-abstraction-in-aspire-d14a33aab6bb",
+    "title": "Intent vs. Mechanics: The Power of Abstraction in Aspire | by David Fowler | May, 2025 | Medium",
+    "description": "One of the most powerful ideas in software is abstraction — hiding implementation details so you can focus on intent. But getting abstraction right is an art. Too low, and you’re buried in…",
+    "date": "2025-05-15T14:59:49Z",
+    "tags": [
+      "aspire", "azure"
+    ]
+  },
+  {
     "url": "https://dev.to/seifzellaban/react-stack-2025-7g2",
     "title": "React Stack 2025 - DEV Community",
     "description": "The Modern React Tech Stack for Building the Future: Building on Vishwas Gopinath’s insightful blog... Tagged with webdev, react, typescript.",

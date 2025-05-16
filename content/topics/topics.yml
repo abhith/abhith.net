@@ -41,6 +41,10 @@
   slug: aspnet
   description: Open-source web framework for .NET
   image: ""
+- title: Aspire
+  slug: aspire
+  description: .NET Aspire provides tools, templates, and packages to help you build observable, production-ready apps.
+  image: ""
 - title: ASP.NET Core
   slug: aspnet-core
   description:
