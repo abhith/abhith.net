@@ -270,6 +270,10 @@
   slug: github-actions
   description: ""
   image: github-1.svg
+- title: GitHub Copilot
+  slug: github-copilot
+  description: ""
+  image: ""
 - title: GitLab
   slug: gitlab
   description: ""

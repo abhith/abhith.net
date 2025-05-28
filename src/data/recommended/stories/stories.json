@@ -1,5 +1,23 @@
 [
   {
+    "url": "https://www.kapilarya.com/enable-and-use-copilot-vision-on-windows-11",
+    "title": "Enable and use Copilot Vision on Windows 11",
+    "description": "In the article below, we’ll tell you about Copilot Vision in Windows 11, how to turn it on, and perhaps most importantly, how to use it.",
+    "date": "2025-05-28T14:59:49Z",
+    "tags": [
+      "windows"
+    ]
+  },
+  {
+    "url": "https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/",
+    "title": "Agent mode 101: All about GitHub Copilot’s powerful mode - The GitHub Blog",
+    "description": "A full look at agent mode in GitHub Copilot, including what it can do, when to use it, and best practices.",
+    "date": "2025-05-26T14:59:49Z",
+    "tags": [
+      "github-copilot", "github"
+    ]
+  },
+  {
     "url": "https://github.blog/developer-skills/documentation-done-right-a-developers-guide/",
     "title": "Documentation done right: A developer’s guide - The GitHub Blog",
     "description": "Learn why and how you should write docs for your project with the Diátaxis framework.",
