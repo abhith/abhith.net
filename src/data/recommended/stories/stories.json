@@ -1,5 +1,23 @@
 [
   {
+    "url": "https://www.atlassian.com/blog/atlassian-engineering/migrating-jira-database-platform-to-aws-aurora",
+    "title": "Migrating the Jira Database Platform to AWS Aurora - Work Life by Atlassian",
+    "description": "Explore how Atlassian successfully migrated four million Jira databases to AWS Aurora, overcoming unique technical and operational challenges at massive scale. Learn how the team balanced reliability, performance, and ambitious cost-saving goals—while minimizing downtime and user impact—by leveraging innovative migration strategies, automation, and close collaboration with AWS.",
+    "date": "2025-07-02T14:59:49Z",
+    "tags": [
+      "aws"
+    ]
+  },
+  {
+    "url": "https://github.blog/ai-and-ml/github-copilot/5-tips-for-using-github-copilot-with-issues-to-boost-your-productivity/",
+    "title": "5 tips for using GitHub Copilot with issues to boost your productivity - The GitHub Blog",
+    "description": "Reduce context-switching, minimize manual work, and accelerate resolution times with these new AI-powered features.",
+    "date": "2025-06-23T14:59:49Z",
+    "tags": [
+      "github-copilot"
+    ]
+  },
+  {
     "url": "https://www.kapilarya.com/enable-and-use-copilot-vision-on-windows-11",
     "title": "Enable and use Copilot Vision on Windows 11",
     "description": "In the article below, we’ll tell you about Copilot Vision in Windows 11, how to turn it on, and perhaps most importantly, how to use it.",
