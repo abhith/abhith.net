@@ -1,5 +1,14 @@
 [
   {
+    "url": "https://evanhahn.com/how-i-build-software-quickly/",
+    "title": "How I build software quickly",
+    "description": "Know how good your code needs to be for the task at hand. Start with a rough draft. Try to soften requirements if you can. Don't get distracted. Make small changes. Practice specific skills.",
+    "date": "2025-07-14T14:59:49Z",
+    "tags": [
+      "software-development"
+    ]
+  },
+  {
     "url": "https://www.atlassian.com/blog/atlassian-engineering/migrating-jira-database-platform-to-aws-aurora",
     "title": "Migrating the Jira Database Platform to AWS Aurora - Work Life by Atlassian",
     "description": "Explore how Atlassian successfully migrated four million Jira databases to AWS Aurora, overcoming unique technical and operational challenges at massive scale. Learn how the team balanced reliability, performance, and ambitious cost-saving goals—while minimizing downtime and user impact—by leveraging innovative migration strategies, automation, and close collaboration with AWS.",
