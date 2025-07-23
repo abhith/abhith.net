@@ -1,5 +1,14 @@
 [
   {
+    "url": "https://blobeater.blog/2025/07/15/azure-sql-managed-instance-boost-performance-with-read-scale-out/",
+    "title": "Azure SQL Managed Instance: Boost Performance with Read-Scale Out | All About Tech",
+    "description": "The Business Critical tier of Azure SQL Managed Instance offers the read-scale out feature enabling you to distribute read-only workloads such as reporting and analytics across built-in replicated secondary replicas within the same region. You can use this by specifying ApplicationIntent=ReadOnly in your connection string, your queries are then automatically routed to these replicas. Key benefits? Optimize…",
+    "date": "2025-07-23T14:59:49Z",
+    "tags": [
+      "sql-server", "azure"
+    ]
+  },
+  {
     "url": "https://evanhahn.com/how-i-build-software-quickly/",
     "title": "How I build software quickly",
     "description": "Know how good your code needs to be for the task at hand. Start with a rough draft. Try to soften requirements if you can. Don't get distracted. Make small changes. Practice specific skills.",
