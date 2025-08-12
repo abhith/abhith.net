@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-to-level-up-your-code-reviews-and-pull-requests/",
+    "title": "How to use GitHub Copilot to level up your code reviews and pull requests - The GitHub Blog",
+    "description": "Discover practical ways GitHub Copilot streamlines code reviews, pull requests, and daily engineering tasks with real prompts, examples, and workflow tips from our engineering team.",
+    "date": "2025-08-12T14:59:49Z",
+    "tags": [
+      "github"
+    ]
+  },
+  {
+    "url": "https://techcommunity.microsoft.com/blog/azuretoolsblog/unlocking-the-best-of-azure-with-azurerm-and-azapi-providers/4283264",
+    "title": "Unlocking the Best of Azure with AzureRM and AzAPI Providers | Microsoft Community Hub",
+    "description": "With the recent release of AzAPI 2.0, Azure offers two powerful Terraform providers to meet your infrastructure needs: AzureRM and AzAPI. The key question...",
+    "date": "2025-08-12T13:59:49Z",
+    "tags": [
+      "terraform", "azure"
+    ]
+  },
+  {
+    "url": "https://dev.to/seifzellaban/react-stack-2025-7g2",
+    "title": "React Stack 2025 - DEV Community",
+    "description": "The Modern React Tech Stack for Building the Future: Building on Vishwas Gopinath’s insightful blog... Tagged with webdev, react, typescript.",
+    "date": "2025-08-12T12:59:49Z",
+    "tags": [
+      "react"
+    ]
+  },
+  {
     "url": "https://blobeater.blog/2025/07/15/azure-sql-managed-instance-boost-performance-with-read-scale-out/",
     "title": "Azure SQL Managed Instance: Boost Performance with Read-Scale Out | All About Tech",
     "description": "The Business Critical tier of Azure SQL Managed Instance offers the read-scale out feature enabling you to distribute read-only workloads such as reporting and analytics across built-in replicated secondary replicas within the same region. You can use this by specifying ApplicationIntent=ReadOnly in your connection string, your queries are then automatically routed to these replicas. Key benefits? Optimize…",
