@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=pGgsFW7kDKI",
+    "title": "Performance tricks I learned from contributing to open source .NET packages - Daniel Marbach",
+    "tags": [
+      "dotnet"
+    ],
+    "date": "2025-08-15T09:17:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=d6kkVqNCB9Q",
+    "title": "Postman vs Insomnia vs VSCode REST vs Bruno",
+    "tags": [
+      "api"
+    ],
+    "date": "2025-08-15T08:17:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=yddjim_LuvQ",
+    "title": "You Completely Misunderstand Span in .NET | Code Cop #025",
+    "tags": [
+      "dotnet"
+    ],
+    "date": "2025-08-15T07:17:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=07mUcfiTpag",
     "title": "AI-powered development: Exploring the latest GitHub Copilot features",
     "tags": [
