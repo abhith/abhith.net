@@ -35,7 +35,7 @@
     "gatsby-plugin-theme-ui": "^0.15.7",
     "gatsby-plugin-twitter": "^5.14.0",
     "gatsby-plugin-webmention": "^0.2.0",
-    "gatsby-remark-autolink-headers": "^6.9.0",
+    "gatsby-remark-autolink-headers": "^6.14.0",
     "gatsby-remark-copy-linked-files": "^6.14.0",
     "gatsby-remark-embed-video": "^3.2.1",
     "gatsby-remark-embedder": "^7.0.0",
