@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=d10qxIXgLbg",
+    "title": "How To Debug React Apps",
+    "tags": [
+      "react"
+    ],
+    "date": "2026-01-02T09:17:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=cRC9DlH45lAs",
+    "title": "Angular: The Documentary | An origin story",
+    "tags": [
+      "angular"
+    ],
+    "date": "2026-01-02T08:17:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=o-sIEPr8_Fo",
+    "title": "How to Debug in WebStorm",
+    "tags": [
+      "jetbrains", "ide"
+    ],
+    "date": "2026-01-02T07:17:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=YTWe7Nf4sfE",
     "title": "What's new in JetBrains Writerside for tech writing?",
     "tags": [
