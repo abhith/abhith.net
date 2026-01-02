@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://www.ece.uvic.ca/~elec399/201409/Akin%27s%20Laws%20of%20Spacecraft%20Design.pdf",
+    "title": "Akin's Laws of Spacecraft Design",
+    "description": "The page is a slide deck listing “Akin’s Laws of Spacecraft Design,” a collection of 40 tongue‑in‑cheek but practical rules about engineering, design, and project management, illustrated with aerospace and general engineering examples.",
+    "date": "2026-01-02T15:59:49Z",
+    "tags": [
+      "project-management"
+    ]
+  },
+  {
+    "url": "https://www.androidauthority.com/samsung-routine-update-play-store-apps-3561947/",
+    "title": "I created a Samsung Routine to fix the Play Store's biggest failure",
+    "description": "I've always found Google Play Store automatic app updates unreliable, but not anymore. Here's how I use a Samsung tool to keep apps fresh.",
+    "date": "2026-01-02T14:59:49Z",
+    "tags": [
+      "samsung"
+    ]
+  },
+  {
+    "url": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power",
+    "title": "How AI Labs Are Solving the Power Crisis: The Onsite Gas Deep Dive",
+    "description": "Bring Your Own Generation, Sayonara Electric Grid, Turbines vs. Recips. vs. Fuel Cells, Why Not Build More CCGTs?, Onsite Power TCO",
+    "date": "2026-01-02T13:59:49Z",
+    "tags": [
+      "ai"
+    ]
+  },
+  {
     "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-insiders-is-here/",
     "title": "Visual Studio 2026 Insiders is here! - Visual Studio Blog",
     "description": "Visual Studio 2026 Insiders is here with AI integration, blazing fast performance, Fluent UI design, and a new Insiders Channel for early features.",
