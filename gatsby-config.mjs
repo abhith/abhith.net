@@ -1,7 +1,8 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import {dirname} from "path";
+import {fileURLToPath} from "url";
 import remarkEmoji from "remark-emoji";
 import remarkGfm from "remark-gfm";
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const siteUrl = `https://www.abhith.net`;
@@ -171,7 +172,6 @@ const config = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
-          `gatsby-remark-mermaid`,
           `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-images`,
