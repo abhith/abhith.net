@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://stephango.com/vault",
+    "title": "How I use Obsidian — Steph Ango",
+    "description": "My personal Obsidian vault template. A bottom-up approach to note-taking and organizing things I am interested in.",
+    "date": "2026-01-12T15:59:49Z",
+    "tags": [
+      "obsidian"
+    ]
+  },
+  {
+    "url": "https://medium.com/medialesson/json-vs-toon-a-new-era-of-structured-input-19cbb7fc552b",
+    "title": "JSON vs TOON — A new era of structured input?",
+    "description": "Why structure matters more than ever",
+    "date": "2026-01-12T14:59:49Z",
+    "tags": [
+      "ai"
+    ]
+  },
+  {
+    "url": "https://dev.to/debs_obrien/letting-playwright-mcp-explore-your-site-and-write-your-tests-mf1",
+    "title": "Letting Playwright MCP Explore your site and Write your Tests - DEV Community",
+    "description": "What if your tests could write themselves — just by using your app like a real user?  In this post,... Tagged with playwright, mcp, ai, testing.",
+    "date": "2026-01-12T13:59:49Z",
+    "tags": [
+      "playwright", "testing"
+    ]
+  },
+  {
     "url": "https://www.ece.uvic.ca/~elec399/201409/Akin%27s%20Laws%20of%20Spacecraft%20Design.pdf",
     "title": "Akin's Laws of Spacecraft Design",
     "description": "The page is a slide deck listing “Akin’s Laws of Spacecraft Design,” a collection of 40 tongue‑in‑cheek but practical rules about engineering, design, and project management, illustrated with aerospace and general engineering examples.",
