@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://www.neowin.net/guides/guide-whats-the-difference-between-visual-studio-community-professional-and-enterprise/",
+    "title": "Guide: What's the difference between Visual Studio Community, Professional, and Enterprise?",
+    "description": "",
+    "date": "2026-01-14T15:59:49Z",
+    "tags": [
+      "visual-studio"
+    ]
+  },
+  {
+    "url": "https://github.blog/open-source/maintainers/this-years-most-influential-open-source-projects/",
+    "title": "This year’s most influential open source projects - The GitHub Blog",
+    "description": "From Appwrite to Zulip, Universe 2025’s Open Source Zone was stacked with standout projects showing just how far open source can go.",
+    "date": "2026-01-14T14:59:49Z",
+    "tags": [
+      "open-source"
+    ]
+  },
+  {
+    "url": "https://dev.to/lovelacecoding/modern-c-development-custom-exceptions-made-simple-1ln8",
+    "title": "Modern C# Development: Custom Exceptions Made Simple - DEV Community",
+    "description": "Hi lovely readers,  Errors happen. Sometimes they are simple, and sometimes they are very specific to... Tagged with csharp, dotnet.",
+    "date": "2026-01-14T13:59:49Z",
+    "tags": [
+      "c-sharp", "dotnet"
+    ]
+  },
+  {
     "url": "https://stephango.com/vault",
     "title": "How I use Obsidian — Steph Ango",
     "description": "My personal Obsidian vault template. A bottom-up approach to note-taking and organizing things I am interested in.",
