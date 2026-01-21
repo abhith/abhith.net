@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://techcommunity.microsoft.com/blog/azurenetworkingblog/azure-front-door-implementing-lessons-learned-following-october-outages/4479416",
+    "title": "Azure Front Door: Implementing lessons learned following October outages",
+    "description": "",
+    "date": "2026-01-21T15:59:49Z",
+    "tags": [
+      "azure"
+    ]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/devops/github-copilot-for-azure-boards/",
+    "title": "Azure Boards integration with GitHub Copilot - Azure DevOps Blog",
+    "description": "Use GitHub Copilot with Azure Boards to turn work items into code changes while maintaining full traceability.",
+    "date": "2026-01-21T14:59:49Z",
+    "tags": [
+      "azure-devops", "github-copilot"
+    ]
+  },
+  {
+    "url": "https://dev.to/therealmrmumba/12-open-source-alternatives-to-popular-software-for-developers-1heg",
+    "title": "12 Open Source Alternatives to Popular Software (For Developers) - DEV Community",
+    "description": "",
+    "date": "2026-01-21T13:59:49Z",
+    "tags": [
+      "developer-tools"
+    ]
+  },
+  {
     "url": "https://www.neowin.net/guides/guide-whats-the-difference-between-visual-studio-community-professional-and-enterprise/",
     "title": "Guide: What's the difference between Visual Studio Community, Professional, and Enterprise?",
     "description": "",
