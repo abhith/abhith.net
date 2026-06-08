@@ -1,5 +1,14 @@
 [
   {
+    "url": "https://vite.dev/blog/cloudflare-supports-vite",
+    "title": "Cloudflare supports Vite's mission | Vite",
+    "description": "",
+    "date": "2026-06-08T15:59:49Z",
+    "tags": [
+      "vite"
+    ]
+  },
+  {
     "url": "https://techcommunity.microsoft.com/blog/azurenetworkingblog/azure-front-door-implementing-lessons-learned-following-october-outages/4479416",
     "title": "Azure Front Door: Implementing lessons learned following October outages",
     "description": "",
