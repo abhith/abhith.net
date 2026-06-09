@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://ollama.com/blog/improved-performance-and-model-support-with-gguf",
+    "title": "Improved performance and model support with GGUF · Ollama Blog",
+    "description": "Ollama 0.30 is now available with improved performance and GGUF model compatibility through llama.cpp. This augments Ollama's MLX engine on Apple silicon, bringing support to more models on a wider range of hardware.",
+    "date": "2026-06-09T16:59:49Z",
+    "tags": [
+      "ai"
+    ]
+  },
+  {
+    "url": "https://www.thomasclaudiushuber.com/2026/06/05/the-new-visual-studio-solution-file-format-goodbye-sln-welcome-slnx/",
+    "title": "The new Visual Studio Solution File Format: Goodbye .SLN, Welcome .SLNX! – Thomas Claudius Huber",
+    "description": "With the launch of Visual Studio .NET in the year 2002, the solution file .sln was introduced. And since then, we were using that custom format to manage the projects that belong together to build an application. But with .NET 10 and Visual Studio 2026, times have changed.",
+    "date": "2026-06-09T15:59:49Z",
+    "tags": [
+      "visual-studio"
+    ]
+  },
+  {
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/",
+    "title": "Gemma 4 with quantization-aware training",
+    "description": "We’re releasing Gemma 4 quantization-aware training checkpoints, reducing memory requirements and improving on-device performance.",
+    "date": "2026-06-09T14:59:49Z",
+    "tags": [
+      "ai"
+    ]
+  },
+  {
     "url": "https://vite.dev/blog/cloudflare-supports-vite",
     "title": "Cloudflare supports Vite's mission | Vite",
     "description": "",
