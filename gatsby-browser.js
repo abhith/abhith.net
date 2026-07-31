@@ -1,6 +1,6 @@
 import "./src/styles/all.scss";
 
-require("prismjs/themes/prism-tomorrow.min.css");
+require("prismjs/themes/prism-night-owl.min.css");
 
 export const onRouteUpdate = async () => {
   const elements = document.querySelectorAll(".language-mermaid");
