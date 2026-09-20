@@ -1,4 +1,11 @@
 ---
+- title: Forminit (formerly Getform.io) - Headless Form Backend API
+  url: https://forminit.com/
+  description: Headless form backend API that handles submissions, validation, file uploads, notifications, and webhooks. You build the frontend, Forminit handles the rest.
+  image: ""
+  date: "2026-09-20T13:30:28.263Z"
+  tags:
+    - developer-tools
 - title: Convert HEX to HSL - colordesigner.io
   url: https://colordesigner.io/convert/hextohsl
   description: Convert HEX to HSL. This tool is a free online color converter between two color formats HEX and HSL. The tool is fast and very simple to use.
@@ -328,13 +335,6 @@
   date: "2020-06-27T14:30:28.263Z"
   tags:
     - kubernetes
-- title: Getform | Easy form endpoints for your forms
-  url: https://getform.io/
-  description: Form backend platform for designers and developers
-  image: ""
-  date: "2020-05-30T13:30:28.263Z"
-  tags:
-    - developer-tools
 - title: Notion – The all-in-one workspace for your notes, tasks, wikis
   url: https://www.notion.so/
   description:
