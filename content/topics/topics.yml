@@ -25,12 +25,20 @@
   slug: angular
   description: ""
   image: angular-icon-1.svg
+- title: Apache APISIX
+  slug: apisix
+  description: ""
+  image: ""
 - title: API
   slug: api
   description: ""
   image: ""
 - title: API Management
   slug: api-management
+  description: ""
+  image: ""
+- title: Apple
+  slug: apple
   description: ""
   image: ""
 - title: Application Insights
@@ -394,6 +402,10 @@
   slug: messaging
   description: ""
   image: ""
+- title: Microsoft
+  slug: microsoft
+  description: ""
+  image: ""
 - title: Microsoft Edge
   slug: microsoft-edge
   description: ""
@@ -611,7 +623,7 @@
   slug: webstorm
   description: ""
   image: ""
-- title: windows
+- title: Windows
   slug: windows
   description: ""
   image: ""
