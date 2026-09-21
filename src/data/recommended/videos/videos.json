@@ -1,5 +1,23 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=NjijF96NtCo",
+    "title": "Apple Watch Series 12 Heart Rate Study: Ranking All Wearables!",
+    "tags": [
+      "apple"
+    ],
+    "date": "2026-09-21T09:17:58Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=aL-SdmGQjas",
+    "title": "Get Rid of Logitech Options+ | OpenLogi | FOSS",
+    "tags": [
+      "developer-tools"
+    ],
+    "date": "2026-09-21T08:17:58Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=xb0nLpdWttA",
     "title": "Do You Talk to Yourself? Here’s How to Harness Your Inner Voice | Ethan Kross | TED",
     "tags": [
@@ -21,7 +39,8 @@
     "url": "https://www.youtube.com/watch?v=cFP5bp3JvaU",
     "title": "What You Should Know About FUTO Keyboard",
     "tags": [
-      "open-source"
+      "open-source",
+      "privacy"
     ],
     "date": "2026-01-21T07:17:58Z",
     "type": "youtube"
