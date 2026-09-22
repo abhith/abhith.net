@@ -1,5 +1,23 @@
 [
   {
+    "url": "https://www.atlassian.com/blog/how-we-build/disrupting-contagious-interview",
+    "title": "From fake interviews to malicious repositories: Disrupting Contagious Interview - Inside Atlassian",
+    "description": "Software developers and IT professionals are increasingly being targeted through fraudulent recruitment processes that exploit their trust in established development platforms. Candidates are invited to complete seemingly legitimate coding assessments hosted in publicly accessible repositories on services such as Bitbucket, GitHub, and GitLab.",
+    "date": "2026-09-21T21:01:29Z",
+    "tags": [
+      "security"
+    ]
+  },
+  {
+    "url": "https://phandroid.com/2026/09/11/iphone-duo-vs-galaxy-z-fold-8-what-each-one-does-better/",
+    "title": "iPhone Duo vs Galaxy Z Fold 8: What Each One Does Better - Phandroid",
+    "description": "Apple just entered a market Samsung has spent seven years building. The iPhone Duo is Apple’s first foldable phone, and its closest match on the Android side is the Samsung Galaxy Z Fold 8. Both fold open into a similar shape, and both are asking buyers for close to $2,000.",
+    "date": "2026-09-11T11:15:31Z",
+    "tags": [
+      "apple", "samsung", "android"
+    ]
+  },
+  {
     "url": "https://ollama.com/blog/improved-performance-and-model-support-with-gguf",
     "title": "Improved performance and model support with GGUF · Ollama Blog",
     "description": "Ollama 0.30 is now available with improved performance and GGUF model compatibility through llama.cpp. This augments Ollama's MLX engine on Apple silicon, bringing support to more models on a wider range of hardware.",
