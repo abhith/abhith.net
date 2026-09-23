@@ -1,9 +1,36 @@
 [
   {
+    "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+    "title": "Introducing GPT-6 Sol and Luna | OpenAI",
+    "description": "OpenAI is expanding the GPT-6 family with GPT-6 Sol and GPT-6 Luna, bringing Astra-generation performance in coding, factuality, and professional work to faster, more affordable models at half the cost of the 5.6 series.",
+    "date": "2026-09-23T21:50:00Z",
+    "tags": [
+      "ai"
+    ]
+  },
+  {
+    "url": "https://www.anthropic.com/claude-opus-5-5",
+    "title": "Claude Opus 5.5 | Anthropic",
+    "description": "Anthropic is introducing Claude Opus 5.5, the first model in the Claude 5.5 family. It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5.",
+    "date": "2026-09-23T21:40:00Z",
+    "tags": [
+      "ai"
+    ]
+  },
+  {
+    "url": "https://x.ai/news/grok-4-7",
+    "title": "Introducing Grok 4.7 | xAI",
+    "description": "Grok 4.7 is xAI's most capable model for coding and knowledge work. It works longer on difficult tasks, checks its own work more carefully, and ships with stronger safeguards at the same price and speed as Grok 4.6.",
+    "date": "2026-09-23T21:30:00Z",
+    "tags": [
+      "ai"
+    ]
+  },
+  {
     "url": "https://www.atlassian.com/blog/how-we-build/disrupting-contagious-interview",
     "title": "From fake interviews to malicious repositories: Disrupting Contagious Interview - Inside Atlassian",
     "description": "Software developers and IT professionals are increasingly being targeted through fraudulent recruitment processes that exploit their trust in established development platforms. Candidates are invited to complete seemingly legitimate coding assessments hosted in publicly accessible repositories on services such as Bitbucket, GitHub, and GitLab.",
-    "date": "2026-09-21T21:01:29Z",
+    "date": "2026-09-22T21:01:29Z",
     "tags": [
       "security"
     ]
@@ -12,7 +39,7 @@
     "url": "https://phandroid.com/2026/09/11/iphone-duo-vs-galaxy-z-fold-8-what-each-one-does-better/",
     "title": "iPhone Duo vs Galaxy Z Fold 8: What Each One Does Better - Phandroid",
     "description": "Apple just entered a market Samsung has spent seven years building. The iPhone Duo is Apple’s first foldable phone, and its closest match on the Android side is the Samsung Galaxy Z Fold 8. Both fold open into a similar shape, and both are asking buyers for close to $2,000.",
-    "date": "2026-09-11T11:15:31Z",
+    "date": "2026-09-22T11:15:31Z",
     "tags": [
       "apple", "samsung", "android"
     ]
