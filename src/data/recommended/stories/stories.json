@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
+    "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
+    "description": "Learn how to view diffs, run terminal commands, and preview web apps side by side in the GitHub Copilot app.",
+    "date": "2026-09-25T22:13:00Z",
+    "tags": [
+      "github-copilot"
+    ]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/visualstudio/managing-git-submodules-without-leaving-the-ide/",
+    "title": "Today I will... manage Git Submodules without leaving the IDE - Visual Studio Blog",
+    "description": "If you've worked with Git submodules for any length of time, you probably have a love-hate relationship with them. They're genuinely useful for pulling a shared library, an SDK, or common build scripts into your project.",
+    "date": "2026-09-25T22:12:00Z",
+    "tags": [
+      "visual-studio", "git"
+    ]
+  },
+  {
+    "url": "https://victorfrye.com/blog/posts/aspire-roadmap-2025",
+    "title": "Aspire Roadmap 2025 | Victor Frye",
+    "description": "A look at the recently published Aspire roadmap for 2025, focusing on its code-first DevOps evolution, polyglot aspirations, and AI orchestration, and more.",
+    "date": "2026-09-25T22:11:00Z",
+    "tags": [
+      "aspire"
+    ]
+  },
+  {
     "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
     "title": "Introducing GPT-6 Sol and Luna | OpenAI",
     "description": "OpenAI is expanding the GPT-6 family with GPT-6 Sol and GPT-6 Luna, bringing Astra-generation performance in coding, factuality, and professional work to faster, more affordable models at half the cost of the 5.6 series.",
