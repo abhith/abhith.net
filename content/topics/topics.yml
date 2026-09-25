@@ -6,7 +6,7 @@
 - title: AI
   slug: ai
   description: "Artificial Intelligence (AI) is transforming industries by enabling machines to perform intelligent tasks, including learning, reasoning, and self-correction."
-  image: ""
+  image: "openai-2.svg"
 - title: Azure Kubernetes Service
   slug: aks
   description: ""
@@ -28,31 +28,31 @@
 - title: Apache APISIX
   slug: apisix
   description: ""
-  image: ""
+  image: "apisix.svg"
 - title: API
   slug: api
   description: ""
-  image: ""
+  image: "swagger.svg"
 - title: API Management
   slug: api-management
   description: ""
-  image: ""
+  image: "swagger.svg"
 - title: Apple
   slug: apple
   description: ""
-  image: ""
+  image: "apple-1.svg"
 - title: Application Insights
   slug: app-insights
   description: ""
-  image: ""
+  image: "azure-1.svg"
 - title: ASP.NET
   slug: aspnet
   description: Open-source web framework for .NET
-  image: ""
+  image: "aspnet-core.png"
 - title: Aspire
   slug: aspire
   description: .NET Aspire provides tools, templates, and packages to help you build observable, production-ready apps.
-  image: ""
+  image: "dotnet.svg"
 - title: ASP.NET Core
   slug: aspnet-core
   description:
@@ -64,7 +64,7 @@
   description:
     ASP.NET Web Forms is a web application framework and one of several
     programming models supported by the Microsoft ASP.NET technology
-  image: ""
+  image: "aspnet-core.png"
 - title: Asynchronous Programming
   slug: asynchronous-programming
   description:
@@ -78,7 +78,7 @@
 - title: Amazon Web Services
   slug: aws
   description: ""
-  image: ""
+  image: "amazon-web-services-2.svg"
 - title: Microsoft Azure
   slug: azure
   description: ""
@@ -86,7 +86,7 @@
 - title: Azure Cognitive Search
   slug: azure-cognitive-search
   description: ""
-  image: ""
+  image: "azure-1.svg"
 - title: Azure DevOps
   slug: azure-devops
   description: ""
@@ -94,19 +94,19 @@
 - title: Azure Logic Apps
   slug: azure-logic-apps
   description: ""
-  image: ""
+  image: "azure-1.svg"
 - title: Azure Pipelines
   slug: azure-pipelines
   description: ""
-  image: ""
+  image: "azure-pipelines.svg"
 - title: Azure Application Gateway
   slug: azure-application-gateway
   description: ""
-  image: ""
+  image: "azure-1.svg"
 - title: Azure Service Bus
   slug: azure-service-bus
   description: ""
-  image: ""
+  image: "azure-1.svg"
 - title: Backstage
   slug: backstage
   description: "An open platform for building developer portals"
@@ -130,7 +130,7 @@
 - title: CloudEvents
   slug: cloudevents
   description: ""
-  image: ""
+  image: "cloudevents.svg"
 - title: Cloudflare
   slug: cloudflare
   description: Offering CDN, DNS, DDoS protection and security.
@@ -138,7 +138,7 @@
 - title: Cloud Native
   slug: cloud-native
   description: ""
-  image: ""
+  image: "cncf.svg"
 - title: CMS
   slug: cms
   description: Best in class listed under this tag
@@ -158,7 +158,7 @@
 - title: Azure Cosmos DB
   slug: cosmos-db
   description: ""
-  image: ""
+  image: "azure-1.svg"
 - title: Courses
   slug: courses
   description: ""
@@ -178,7 +178,7 @@
 - title: Crypto
   slug: crypto
   description: ""
-  image: ""
+  image: "bitcoin.svg"
 - title: Dapper
   slug: dapper
   description: ""
@@ -253,7 +253,7 @@
 - title: F#
   slug: f-sharp
   description: ""
-  image: ""
+  image: "fsharp.svg"
 - title: Finance
   slug: finance
   description: ""
@@ -281,7 +281,7 @@
 - title: GitHub Copilot
   slug: github-copilot
   description: ""
-  image: ""
+  image: "github-copilot.svg"
 - title: GitLab
   slug: gitlab
   description: ""
@@ -301,11 +301,11 @@
 - title: gRPC
   slug: grpc
   description: ""
-  image: ""
+  image: "grpc.svg"
 - title: Helm
   slug: helm
   description: ""
-  image: ""
+  image: "helm.svg"
 - title: Hosting
   slug: hosting
   description: ""
@@ -317,7 +317,7 @@
 - title: IdentityServer
   slug: identityserver
   description: ""
-  image: ""
+  image: "oauth.svg"
 - title: Internet
   slug: internet
   description: ""
@@ -341,15 +341,15 @@
 - title: JetBrains
   slug: jetbrains
   description: ""
-  image: ""
+  image: "jetbrains-1.svg"
 - title: Jira
   slug: jira
   description: ""
-  image: ""
+  image: "jira-1.svg"
 - title: JMeter
   slug: jmeter
   description: ""
-  image: ""
+  image: "apache-jmeter.svg"
 - title: Jobs
   slug: jobs
   description: jobs related
@@ -357,15 +357,15 @@
 - title: jQuery
   slug: jquery
   description: ""
-  image: ""
+  image: "jquery-4.svg"
 - title: JSON
   slug: json
   description: ""
-  image: ""
+  image: "json.svg"
 - title: JAMstack
   slug: jamstack
   description: ""
-  image: ""
+  image: "jamstack.svg"
 - title: Kubernetes
   slug: kubernetes
   description: ""
@@ -389,11 +389,11 @@
 - title: Machine Learning
   slug: machine-learning
   description: ""
-  image: ""
+  image: "tensorflow-2.svg"
 - title: Markdown
   slug: markdown
   description: "Markdown is a lightweight markup language for creating formatted text using a plain-text editor"
-  image: ""
+  image: "markdown.svg"
 - title: MediatR
   slug: mediatr
   description: Simple, unambitious mediator implementation in .NET
@@ -405,11 +405,11 @@
 - title: Microsoft
   slug: microsoft
   description: ""
-  image: ""
+  image: "microsoft-5.svg"
 - title: Microsoft Edge
   slug: microsoft-edge
   description: ""
-  image: ""
+  image: "microsoft-edge-1.svg"
 - title: Microsoft Orleans
   slug: microsoft-orleans
   description:
@@ -436,11 +436,11 @@
 - title: MySQL
   slug: mysql
   description: ""
-  image: ""
+  image: "mysql.svg"
 - title: Next.js
   slug: nextjs
   description: ""
-  image: ""
+  image: "nextjs-2.svg"
 - title: NGINX
   slug: nginx
   description: ""
@@ -460,19 +460,19 @@
 - title: Samsung One UI
   slug: one-ui
   description: ""
-  image: ""
+  image: "samsung-8.svg"
 - title: Open Source
   slug: open-source
   description: ""
-  image: ""
+  image: "opensourceinitiative.svg"
 - title: Obsidian
   slug: obsidian
   description: ""
-  image: ""
+  image: "obsidian.svg"
 - title: OpenTelemetry
   slug: opentelemetry
   description: ""
-  image: ""
+  image: "opentelemetry.svg"
 - title: Oracle Database
   slug: oracle-database
   description: ""
@@ -488,7 +488,7 @@
 - title: ReSharper
   slug: resharper
   description: ""
-  image: ""
+  image: "resharper.svg"
 - title: Personal Finance
   slug: personal-finance
   description: ""
@@ -512,7 +512,7 @@
 - title: Samsung
   slug: samsung
   description: ""
-  image: ""
+  image: "samsung-8.svg"
 - title: Security
   slug: security
   description: ""
@@ -524,7 +524,7 @@
 - title: Serilog
   slug: serilog
   description: ""
-  image: ""
+  image: "serilog.png"
 - title: Shopping Guide
   slug: shopping-guide
   description: ""
@@ -532,7 +532,7 @@
 - title: SignalR
   slug: signalr
   description: ""
-  image: ""
+  image: "microsoft-5.svg"
 - title: Software Development
   slug: software-development
   description: ""
@@ -544,7 +544,7 @@
 - title: SSL Certificates
   slug: ssl-certificates
   description: ""
-  image: ""
+  image: "letsencrypt.svg"
 - title: Storage
   slug: storage
   description: ""
@@ -560,7 +560,7 @@
 - title: Svelte
   slug: svelte
   description: ""
-  image: ""
+  image: "svelte-1.svg"
 - title: Synology
   slug: synology
   description: ""
@@ -580,7 +580,7 @@
 - title: Umbraco
   slug: umbraco
   description: ""
-  image: ""
+  image: "umbraco.svg"
 - title: Visual Studio
   slug: visual-studio
   description:
@@ -594,7 +594,7 @@
 - title: Vite
   slug: vite
   description: ""
-  image: ""
+  image: "vitejs.svg"
 - title: Vue.js
   slug: vue
   description: ""
@@ -622,12 +622,12 @@
 - title: WebStorm
   slug: webstorm
   description: ""
-  image: ""
+  image: "webstorm-icon.svg"
 - title: Windows
   slug: windows
   description: ""
-  image: ""
+  image: "microsoft-windows-22.svg"
 - title: Xamarin Forms
   slug: xamarin-forms
   description: ""
-  image: ""
+  image: "xamarin.svg"
