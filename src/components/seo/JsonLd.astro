@@ -1,0 +1,37 @@
+---
+import { SITE } from "@/lib/site";
+
+/**
+ * schema.org structured data. Always emits the site-wide WebSite + Person graph and appends
+ * any page-specific nodes (e.g. BlogPosting, BreadcrumbList).
+ */
+interface Props {
+  nodes?: Record<string, unknown>[];
+}
+
+const { nodes = [] } = Astro.props;
+const site = Astro.site?.href.replace(/\/$/, "") ?? SITE.url;
+
+const person = {
+  "@type": "Person",
+  "@id": `${site}/#person`,
+  name: SITE.author.name,
+  url: `${site}/about/`,
+  image: `${site}${SITE.author.image}`,
+  sameAs: [SITE.author.url, `https://github.com/${SITE.social.github}`, "https://www.linkedin.com/in/abhith/"],
+};
+
+const website = {
+  "@type": "WebSite",
+  "@id": `${site}/#website`,
+  url: `${site}/`,
+  name: SITE.title,
+  description: SITE.description,
+  publisher: { "@id": `${site}/#person` },
+  inLanguage: "en",
+};
+
+const graph = { "@context": "https://schema.org", "@graph": [website, person, ...nodes] };
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(graph)} />

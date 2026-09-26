@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro";
+import ToolItem from "@/components/content/ToolItem.astro";
+import ListingLayout from "@/layouts/ListingLayout.astro";
+import { getContentGraph, type Tool } from "@/lib/content-graph";
+import { paginatedPaths, type Page } from "@/lib/graph/paginate";
+import { SITE } from "@/lib/site";
+
+export const getStaticPaths = (async () => {
+  const graph = await getContentGraph();
+  return paginatedPaths(graph.tools, "/recommended/services", SITE.pageSize);
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<Tool>;
+}
+
+const { page } = Astro.props;
+const graph = await getContentGraph();
+const topics = graph.topics
+  .filter((topic) => topic.totalServices > 0)
+  .sort((a, b) => b.totalServices - a.totalServices)
+  .map((topic) => ({ slug: topic.slug, title: topic.title, count: topic.totalServices, href: `/topics/${topic.slug}/tools/` }));
+---
+
+<ListingLayout
+  title="Tools & services"
+  description="Developer tools and services I use or recommend."
+  command="brew list --recommended"
+  page={page}
+  basePath="/recommended/services"
+  crumbs={[{ label: "recommended/", href: "/recommended/" }, { label: "services/" }]}
+  section="recommended"
+  topics={topics}
+>
+  <ul class="grid gap-4 sm:grid-cols-2">
+    {page.items.map((tool) => <ToolItem url={tool.url} title={tool.title} description={tool.description} tags={tool.tags} />)}
+  </ul>
+</ListingLayout>

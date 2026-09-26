@@ -1,0 +1,83 @@
+---
+/**
+ * Paginated listing (blog, snippets, stories, videos, services, topic sub-pages):
+ * a terminal-style heading, the main list, an optional topic sidebar and pagination.
+ */
+import type { Crumb } from "@/components/shell/PathBreadcrumb.astro";
+import Pagination from "@/components/content/Pagination.astro";
+import TagToken from "@/components/content/TagToken.astro";
+import type { Page } from "@/lib/graph/paginate";
+import BaseLayout from "./BaseLayout.astro";
+
+interface SidebarTopic {
+  slug: string;
+  title: string;
+  count: number;
+  href?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  /** Shell command shown above the title, e.g. `git log --oneline blog`. */
+  command: string;
+  page: Page<unknown>;
+  basePath: string;
+  crumbs?: Crumb[];
+  section?: string;
+  topics?: SidebarTopic[];
+  topicsTitle?: string;
+  currentTopic?: string;
+}
+
+const { title, description, command, page, basePath, crumbs, section, topics = [], topicsTitle = "topics", currentTopic } = Astro.props;
+const pageTitle = page.pageNumber > 1 ? `${title} - Page ${page.pageNumber}` : title;
+---
+
+<BaseLayout title={pageTitle} description={description} crumbs={crumbs} section={section}>
+  <div class="shell pt-8">
+    <header class="max-w-3xl">
+      <p class="mono-label"><span class="text-accent">$</span> {command}</p>
+      <h1 class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{title}</h1>
+      <p class="mt-3 font-serif text-lg text-muted">{description}</p>
+      <p class="mono-label mt-3">
+        {page.totalItems} entries · page {page.pageNumber}/{page.totalPages}
+      </p>
+    </header>
+
+    <div class:list={["mt-10 grid gap-12", { "lg:grid-cols-[minmax(0,1fr)_16rem]": topics.length > 0 }]}>
+      <div class="min-w-0">
+        <slot />
+        <Pagination page={page} basePath={basePath} />
+      </div>
+      {
+        topics.length > 0 && (
+          <aside aria-label={topicsTitle}>
+            <h2 class="section-title">{topicsTitle}</h2>
+            <ul class="flex flex-wrap gap-1.5">
+              {topics.map((topic) => (
+                <li>
+                  <a href={topic.href ?? `/topics/${topic.slug}/`} aria-current={topic.slug === currentTopic ? "page" : undefined} class:list={["topic-link", { "is-current": topic.slug === currentTopic }]}>
+                    <TagToken slug={topic.slug} label={topic.slug} count={topic.count} link={false} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )
+      }
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .topic-link {
+    text-decoration: none;
+    display: inline-flex;
+    border-radius: 0.3rem;
+  }
+  .topic-link.is-current {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+</style>

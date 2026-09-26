@@ -1,0 +1,77 @@
+---
+import { Content, frontmatter } from "@/content/pages/contact.md";
+import PageLayout from "@/layouts/PageLayout.astro";
+
+/** Same getform endpoint as the Gatsby site; reCAPTCHA is replaced by getform's `_gotcha` honeypot. */
+const FORM_ACTION = "https://getform.io/f/a29691ae-8828-49d6-9b50-242187f6ca83";
+---
+
+<PageLayout title={frontmatter.title} description={frontmatter.description} file="contact.md">
+  <Content />
+
+  <form slot="after" class="commit-form window mt-10" action={FORM_ACTION} method="POST">
+    <div class="window-bar">
+      <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>COMMIT_EDITMSG</span>
+    </div>
+    <div class="grid gap-4 p-5">
+      <p class="mono-label"># Please enter the message for your greeting. Lines starting with '#' are ignored.</p>
+      <label class="field">
+        <span class="field-label">--name</span>
+        <input type="text" name="name" required autocomplete="name" placeholder="Ada Lovelace" />
+      </label>
+      <label class="field">
+        <span class="field-label">--email</span>
+        <input type="email" name="email" required autocomplete="email" placeholder="ada@example.com" />
+      </label>
+      <label class="field">
+        <span class="field-label">message</span>
+        <textarea name="message" rows="6" required placeholder="Hi Abhith 👋"></textarea>
+      </label>
+      <!-- Honeypot: humans never see or fill this field. -->
+      <div class="honeypot" aria-hidden="true">
+        <label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <span class="mono-label">:wq to send</span>
+        <button type="submit" class="btn btn-primary">git push origin greetings</button>
+      </div>
+    </div>
+  </form>
+</PageLayout>
+
+<style>
+  .field {
+    display: grid;
+    gap: 0.35rem;
+  }
+  .field-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+  .field input,
+  .field textarea {
+    font: inherit;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--fg);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 0.375rem;
+    padding: 0.6rem 0.75rem;
+  }
+  .field input:focus,
+  .field textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 20%, transparent);
+  }
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+</style>

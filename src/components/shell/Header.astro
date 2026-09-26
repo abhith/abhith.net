@@ -1,0 +1,167 @@
+---
+/** Top bar styled like an editor tab strip; the active section is the open tab. */
+const tabs = [
+  { href: "/blog/", label: "blog", file: "blog/" },
+  { href: "/snippets/", label: "snippets", file: "snippets/" },
+  { href: "/topics/", label: "topics", file: "topics/" },
+  { href: "/recommended/", label: "recommended", file: "recommended/" },
+  { href: "/graph/", label: "graph", file: "graph.json" },
+  { href: "/about/", label: "about", file: "about.md" },
+];
+
+const section = Astro.url.pathname.split("/").filter(Boolean)[0] ?? "";
+---
+
+<header class="site-header">
+  <div class="shell flex h-12 items-center gap-3">
+    <a href="/" class="brand" aria-label="Abhith Rajan — home">
+      <span class="brand-prompt" aria-hidden="true">~/</span><span class="brand-name">abhith</span><span class="brand-caret" aria-hidden="true"></span>
+    </a>
+
+    <nav aria-label="Primary" class="tabs">
+      <ul class="flex items-stretch">
+        {
+          tabs.map((tab) => {
+            const active = tab.href === `/${section}/`;
+            return (
+              <li>
+                <a href={tab.href} class:list={["tab", { "tab--active": active }]} aria-current={active ? "page" : undefined}>
+                  <span class="tab-file">{tab.file}</span>
+                  <span class="tab-label">{tab.label}</span>
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+
+    <button type="button" class="palette-trigger" data-palette-open aria-label="Open command palette" aria-keyshortcuts="Meta+K Control+K /">
+      <span aria-hidden="true">›_</span>
+      <span class="palette-trigger-text">run a command…</span>
+      <kbd class="kbd">⌘K</kbd>
+    </button>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: color-mix(in oklab, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .brand-prompt {
+    color: var(--accent);
+  }
+
+  .brand-caret {
+    width: 0.55ch;
+    height: 1.05em;
+    margin-left: 0.15ch;
+    background: var(--accent);
+    animation: blink 1.1s steps(1) infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .tabs {
+    align-self: stretch;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex: 1;
+  }
+
+  .tabs ul {
+    height: 100%;
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-decoration: none;
+    border-inline: 1px solid transparent;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .tab:hover {
+    color: var(--fg);
+    background: var(--sunken);
+  }
+
+  .tab--active {
+    color: var(--fg);
+    background: var(--surface);
+    border-color: var(--line);
+  }
+
+  .tab--active::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -1px 0;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .tab-label {
+    display: none;
+  }
+
+  @media (max-width: 40rem) {
+    .tab-file {
+      display: none;
+    }
+    .tab-label {
+      display: inline;
+    }
+  }
+
+  .palette-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.45rem 0.3rem 0.6rem;
+    cursor: pointer;
+  }
+
+  .palette-trigger:hover {
+    border-color: var(--accent);
+    color: var(--fg);
+  }
+
+  @media (max-width: 56rem) {
+    .palette-trigger-text {
+      display: none;
+    }
+  }
+</style>

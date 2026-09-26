@@ -1,0 +1,123 @@
+---
+import type { GetStaticPaths } from "astro";
+import PostRow from "@/components/content/PostRow.astro";
+import StoryItem from "@/components/content/StoryItem.astro";
+import ToolItem from "@/components/content/ToolItem.astro";
+import VideoItem from "@/components/content/VideoItem.astro";
+import TopicLayout from "@/layouts/TopicLayout.astro";
+import { getContentGraph } from "@/lib/content-graph";
+import type { TopicSummary } from "@/lib/graph/types";
+
+/** Every topic gets a hub — including topics that only have stories, videos or tools. */
+export const getStaticPaths = (async () => {
+  const graph = await getContentGraph();
+  return graph.topics.map((topic) => ({ params: { slug: topic.slug }, props: { topic } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  topic: TopicSummary;
+}
+
+const { topic } = Astro.props;
+const graph = await getContentGraph();
+const content = graph.byTopic(topic.slug);
+const base = `/topics/${topic.slug}/`;
+---
+
+<TopicLayout topic={topic} active="overview">
+  <div class="grid gap-14">
+    {
+      content.posts.length > 0 && (
+        <section aria-labelledby="posts-title">
+          <h2 id="posts-title" class="section-title">git log -- {topic.slug}</h2>
+          <ul>
+            {content.posts.map((post) => (
+              <PostRow url={post.url} title={post.title} date={post.date} tags={post.tags} description={post.description} draft={post.draft} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      content.snippets.length > 0 && (
+        <section aria-labelledby="snippets-title">
+          <h2 id="snippets-title" class="section-title">snippets</h2>
+          <ul>
+            {content.snippets.map((snippet) => (
+              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} tags={snippet.tags} prefix={snippet.category} description={snippet.description} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      content.posts.length === 0 && content.snippets.length === 0 && (
+        <p class="window p-5 font-mono text-sm text-muted">
+          <span class="text-accent">$</span> ls posts/ → <span class="text-warm">(empty)</span>. Nothing written on {topic.title} yet — but here's what I've been reading and watching.
+        </p>
+      )
+    }
+
+    {
+      content.stories.length > 0 && (
+        <section aria-labelledby="stories-title">
+          <h2 id="stories-title" class="section-title">recommended stories</h2>
+          <ul class="grid gap-x-8 md:grid-cols-2">
+            {content.stories.slice(0, 6).map((story) => (
+              <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} compact />
+            ))}
+          </ul>
+          {content.stories.length > 6 && (
+            <p class="mt-4 font-mono text-sm">
+              <a href={`${base}stories/`} class="text-accent hover:underline">
+                all {content.stories.length} stories →
+              </a>
+            </p>
+          )}
+        </section>
+      )
+    }
+
+    {
+      content.videos.length > 0 && (
+        <section aria-labelledby="videos-title">
+          <h2 id="videos-title" class="section-title">videos</h2>
+          <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {content.videos.slice(0, 3).map((video) => (
+              <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} compact />
+            ))}
+          </ul>
+          {content.videos.length > 3 && (
+            <p class="mt-4 font-mono text-sm">
+              <a href={`${base}videos/`} class="text-accent hover:underline">
+                all {content.videos.length} videos →
+              </a>
+            </p>
+          )}
+        </section>
+      )
+    }
+
+    {
+      content.tools.length > 0 && (
+        <section aria-labelledby="tools-title">
+          <h2 id="tools-title" class="section-title">tools</h2>
+          <ul class="grid gap-4 sm:grid-cols-2">
+            {content.tools.slice(0, 4).map((tool) => (
+              <ToolItem url={tool.url} title={tool.title} description={tool.description} />
+            ))}
+          </ul>
+          {content.tools.length > 4 && (
+            <p class="mt-4 font-mono text-sm">
+              <a href={`${base}tools/`} class="text-accent hover:underline">
+                all {content.tools.length} tools →
+              </a>
+            </p>
+          )}
+        </section>
+      )
+    }
+  </div>
+</TopicLayout>

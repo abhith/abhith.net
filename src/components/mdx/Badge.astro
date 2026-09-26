@@ -1,0 +1,14 @@
+---
+/**
+ * Coloured label used inside MDX posts: `<Badge fill="#d93f0b" textColorIsWhite>P0</Badge>`.
+ * Replaces the Gatsby `src/components/badge.js`.
+ */
+interface Props {
+  fill: string;
+  textColorIsWhite?: boolean;
+}
+
+const { fill, textColorIsWhite = false } = Astro.props;
+---
+
+<span class="badge" style={{ backgroundColor: fill, color: textColorIsWhite ? "#fff" : "#1f2328" }}><slot /></span>

@@ -1,0 +1,86 @@
+---
+/**
+ * Video card with a static YouTube thumbnail (no iframe until the visitor clicks through),
+ * keeping listing pages free of third-party JS.
+ */
+import { shortDate } from "@/lib/format";
+import TagToken from "./TagToken.astro";
+
+interface Props {
+  url: string;
+  title: string;
+  date: Date;
+  youtubeId?: string;
+  image?: string;
+  tags?: readonly string[];
+  compact?: boolean;
+}
+
+const { url, title, date, youtubeId, image, tags = [], compact = false } = Astro.props;
+const thumbnail = image || (youtubeId ? `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg` : undefined);
+---
+
+<li class="video">
+  <a href={url} class="video-link" target="_blank" rel="noopener">
+    <span class="video-thumb">
+      {thumbnail && <img src={thumbnail} alt="" width="480" height="360" loading="lazy" decoding="async" />}
+      <span class="video-play" aria-hidden="true">▶</span>
+    </span>
+    <span class="video-title">{title}<span class="sr-only"> (video, opens in a new tab)</span></span>
+  </a>
+  <p class="mono-label mt-1"><time datetime={date.toISOString()}>{shortDate(date)}</time></p>
+  {
+    !compact && tags.length > 0 && (
+      <div class="mt-2 flex flex-wrap gap-1.5">
+        {tags.map((tag) => (
+          <TagToken slug={tag} />
+        ))}
+      </div>
+    )
+  }
+</li>
+
+<style>
+  .video-link {
+    display: block;
+    text-decoration: none;
+  }
+  .video-thumb {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 1px solid var(--line);
+    background: var(--sunken);
+  }
+  .video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms ease;
+  }
+  .video-link:hover img {
+    transform: scale(1.03);
+  }
+  .video-play {
+    position: absolute;
+    inset: auto auto 0.6rem 0.6rem;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    background: rgb(0 0 0 / 0.7);
+    color: #fff;
+    font-family: var(--font-mono);
+  }
+  .video-title {
+    display: block;
+    margin-top: 0.55rem;
+    font-weight: 550;
+    line-height: 1.35;
+  }
+  .video-link:hover .video-title {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+</style>

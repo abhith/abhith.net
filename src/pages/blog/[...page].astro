@@ -1,0 +1,38 @@
+---
+import type { GetStaticPaths } from "astro";
+import PostRow from "@/components/content/PostRow.astro";
+import ListingLayout from "@/layouts/ListingLayout.astro";
+import { getContentGraph, type Post } from "@/lib/content-graph";
+import { paginatedPaths, type Page } from "@/lib/graph/paginate";
+import { SITE } from "@/lib/site";
+
+export const getStaticPaths = (async () => {
+  const graph = await getContentGraph();
+  return paginatedPaths(graph.posts, "/blog", SITE.pageSize);
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<Post>;
+}
+
+const { page } = Astro.props;
+const graph = await getContentGraph();
+const topics = graph.topics
+  .filter((topic) => topic.totalPosts > 0)
+  .map((topic) => ({ slug: topic.slug, title: topic.title, count: topic.totalPosts }));
+---
+
+<ListingLayout
+  title="Blog"
+  description="Articles on .NET, Azure, DevOps, the web and everything in between."
+  command="git log --oneline blog"
+  page={page}
+  basePath="/blog"
+  crumbs={[{ label: "blog/" }]}
+  section="blog"
+  topics={topics}
+>
+  <ul>
+    {page.items.map((post) => <PostRow url={post.url} title={post.title} date={post.date} tags={post.tags} description={post.description} draft={post.draft} />)}
+  </ul>
+</ListingLayout>

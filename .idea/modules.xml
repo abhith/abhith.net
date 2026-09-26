@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/abhith.net.iml" filepath="$PROJECT_DIR$/.idea/abhith.net.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/abhith.net-astro.iml" filepath="$PROJECT_DIR$/.idea/abhith.net-astro.iml" />
     </modules>
   </component>
 </project>

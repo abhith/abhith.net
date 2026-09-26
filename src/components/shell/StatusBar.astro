@@ -1,0 +1,124 @@
+---
+import { BUILD } from "@/lib/build-info";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+
+interface Props {
+  /** Section shown in the branch chip, e.g. `blog`. Derived from the URL when omitted. */
+  section?: string;
+  /** e.g. `4 min read` — shown on article pages. */
+  readingTime?: string;
+}
+
+const section = Astro.props.section ?? (Astro.url.pathname.split("/").filter(Boolean)[0] || "home");
+const { readingTime } = Astro.props;
+---
+
+<aside class="status-bar" aria-label="Status bar">
+  <div class="status-left">
+    <span class="chip chip--branch" title="Current section"><span aria-hidden="true">⎇</span> {section}</span>
+    {
+      readingTime && (
+        <>
+          <span class="item" data-reading-progress aria-live="off" title="Reading progress">
+            Ln 0%
+          </span>
+          <span class="item hide-sm">{readingTime}</span>
+        </>
+      )
+    }
+  </div>
+  <div class="status-right">
+    <button type="button" class="item item--button" data-palette-open aria-label="Open command palette">
+      <kbd class="kbd">⌘K</kbd><span class="hide-sm">commands</span>
+    </button>
+    <span class="item"><ThemeSwitcher /></span>
+    <span class="item hide-sm" title={`Built ${BUILD.date} from ${BUILD.hash}`}>build {BUILD.hash} · {BUILD.date}</span>
+    <span class="item hide-sm">UTF-8</span>
+  </div>
+</aside>
+
+<script>
+  let frame = 0;
+  function updateProgress() {
+    frame = 0;
+    const el = document.querySelector<HTMLElement>("[data-reading-progress]");
+    const article = document.querySelector<HTMLElement>("[data-reading]");
+    if (!el || !article) return;
+    const rect = article.getBoundingClientRect();
+    const total = rect.height - window.innerHeight;
+    const pct = total <= 0 ? 100 : Math.min(100, Math.max(0, Math.round((-rect.top / total) * 100)));
+    el.textContent = `Ln ${pct}%`;
+  }
+  const schedule = () => {
+    if (!frame) frame = requestAnimationFrame(updateProgress);
+  };
+  window.addEventListener("scroll", schedule, { passive: true });
+  window.addEventListener("resize", schedule);
+  document.addEventListener("astro:page-load", updateProgress);
+</script>
+
+<style>
+  .status-bar {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 40;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    background: var(--sunken);
+    border-top: 1px solid var(--line);
+  }
+
+  .status-left,
+  .status-right {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  .chip {
+    padding: 0 0.5rem;
+    height: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .chip--branch {
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+
+  .item {
+    padding: 0 0.45rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .item--button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .item--button:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 40rem) {
+    .hide-sm {
+      display: none;
+    }
+  }
+</style>

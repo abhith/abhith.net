@@ -1,0 +1,62 @@
+---
+import { SITE } from "@/lib/site";
+
+const year = new Date().getFullYear();
+const columns = [
+  {
+    title: "read",
+    links: [
+      { href: "/blog/", label: "blog" },
+      { href: "/snippets/", label: "snippets" },
+      { href: "/topics/", label: "topics" },
+      { href: "/recommended/", label: "recommended" },
+    ],
+  },
+  {
+    title: "follow",
+    links: [
+      { href: "/blog/rss.xml", label: "rss" },
+      { href: SITE.author.url, label: "twitter" },
+      { href: `https://github.com/${SITE.social.github}`, label: "github" },
+      { href: "https://www.linkedin.com/in/abhith/", label: "linkedin" },
+    ],
+  },
+  {
+    title: "site",
+    links: [
+      { href: "/about/", label: "about" },
+      { href: "/contact/", label: "contact" },
+      { href: "/donate/", label: "donate" },
+      { href: "/privacy-policy/", label: "privacy" },
+    ],
+  },
+];
+---
+
+<footer class="site-footer mt-24 border-t border-line">
+  <div class="shell grid gap-8 py-10 sm:grid-cols-[1.5fr_repeat(3,1fr)]">
+    <div>
+      <p class="font-mono text-sm"><span class="text-accent">~/</span>abhith</p>
+      <p class="mt-2 max-w-xs text-sm text-muted">{SITE.description}</p>
+      <p class="mono-label mt-4">
+        © {year} {SITE.author.name} · <a href={SITE.repo.url} class="underline">source</a>
+      </p>
+    </div>
+    {
+      columns.map((column) => (
+        <nav aria-label={column.title}>
+          <p class="mono-label mb-2">{`# ${column.title}`}</p>
+          <ul class="space-y-1 font-mono text-sm">
+            {column.links.map((link) => (
+              <li>
+                <a href={link.href} class="hover:text-accent">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))
+    }
+  </div>
+</footer>

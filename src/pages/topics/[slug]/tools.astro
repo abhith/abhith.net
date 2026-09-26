@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from "astro";
+import ToolItem from "@/components/content/ToolItem.astro";
+import TopicLayout from "@/layouts/TopicLayout.astro";
+import { getContentGraph } from "@/lib/content-graph";
+import type { TopicSummary } from "@/lib/graph/types";
+import { topicPathsWith } from "@/lib/topic-paths";
+
+export const getStaticPaths = (() => topicPathsWith("totalServices")) satisfies GetStaticPaths;
+
+interface Props {
+  topic: TopicSummary;
+}
+
+const { topic } = Astro.props;
+const tools = (await getContentGraph()).byTopic(topic.slug).tools;
+---
+
+<TopicLayout topic={topic} active="tools" title={`${topic.title} tools`} description={`Recommended tools and services for ${topic.title}.`}>
+  <ul class="grid gap-4 sm:grid-cols-2">
+    {tools.map((tool) => <ToolItem url={tool.url} title={tool.title} description={tool.description} tags={tool.tags} />)}
+  </ul>
+</TopicLayout>

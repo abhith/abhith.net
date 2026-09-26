@@ -1,0 +1,91 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/jetbrains-mono";
+import "@fontsource-variable/newsreader";
+import "@fontsource-variable/newsreader/wght-italic.css";
+import "@/styles/global.css";
+
+import { ClientRouter } from "astro:transitions";
+import CommandPalette from "@/components/islands/CommandPalette";
+import Analytics from "@/components/seo/Analytics.astro";
+import JsonLd from "@/components/seo/JsonLd.astro";
+import Seo, { type SeoProps } from "@/components/seo/Seo.astro";
+import Footer from "@/components/shell/Footer.astro";
+import Header from "@/components/shell/Header.astro";
+import PathBreadcrumb, { type Crumb } from "@/components/shell/PathBreadcrumb.astro";
+import StatusBar from "@/components/shell/StatusBar.astro";
+import { THEME_STORAGE_KEY } from "@/lib/themes";
+
+interface Props extends SeoProps {
+  /** Breadcrumb override; `false` hides it (home page). */
+  crumbs?: Crumb[] | false;
+  crumbExt?: string;
+  section?: string;
+  readingTime?: string;
+  jsonLd?: Record<string, unknown>[];
+}
+
+const { crumbs, crumbExt, section, readingTime, jsonLd, ...seo } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="paper">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <script is:inline define:vars={{ key: THEME_STORAGE_KEY }}>
+      // Runs before first paint (and after every client-side navigation) to avoid a theme flash.
+      function applyTheme(doc) {
+        let theme = null;
+        try {
+          theme = localStorage.getItem(key);
+        } catch {}
+        if (!["paper", "midnight", "solar"].includes(theme)) {
+          theme = matchMedia("(prefers-color-scheme: dark)").matches ? "midnight" : "paper";
+        }
+        doc.documentElement.dataset.theme = theme;
+      }
+      applyTheme(document);
+      document.addEventListener("astro:before-swap", (event) => applyTheme(event.newDocument));
+    </script>
+    <Seo {...seo} />
+    <JsonLd nodes={jsonLd} />
+    <ClientRouter fallback="swap" />
+    <Analytics />
+    <slot name="head" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <Header />
+    {crumbs !== false && <PathBreadcrumb crumbs={crumbs} ext={crumbExt} />}
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <StatusBar section={section} readingTime={readingTime} />
+    <CommandPalette client:idle transition:persist="command-palette" />
+    <slot name="end" />
+  </body>
+</html>
+
+<style>
+  .skip-link {
+    position: absolute;
+    left: 0.5rem;
+    top: -3rem;
+    z-index: 50;
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: var(--accent);
+    color: var(--accent-fg);
+    border-radius: 0.375rem;
+  }
+  .skip-link:focus {
+    top: 0.5rem;
+  }
+  main:focus {
+    outline: none;
+  }
+</style>

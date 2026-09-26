@@ -1,0 +1,181 @@
+.palette-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: color-mix(in oklab, var(--bg) 55%, transparent);
+  backdrop-filter: blur(3px);
+}
+
+.palette-content {
+  position: fixed;
+  z-index: 61;
+  top: 12vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100% - 2rem, 44rem);
+  outline: none;
+}
+
+.palette {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--fg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  box-shadow: 0 30px 60px -20px color-mix(in oklab, var(--fg) 35%, transparent);
+  overflow: hidden;
+  animation: palette-in 140ms ease-out;
+}
+
+@keyframes palette-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.99);
+  }
+}
+
+.palette-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.9rem;
+  background: var(--sunken);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.palette-bar > span:nth-child(2) {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.palette-dots {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.palette-dots span {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: #ff5f57;
+}
+
+.palette-dots span:nth-child(2) {
+  background: #febc2e;
+}
+
+.palette-dots span:nth-child(3) {
+  background: #28c840;
+}
+
+.palette-prompt {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.palette-ps1 {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.palette-prompt input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--fg);
+  background: transparent;
+  border: 0;
+  outline: none;
+  caret-color: var(--accent);
+}
+
+.palette-prompt input::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.palette-output {
+  padding: 0.5rem 1rem;
+  color: var(--accent);
+  border-bottom: 1px dashed var(--line);
+}
+
+.palette-list {
+  max-height: min(55vh, 26rem);
+  overflow-y: auto;
+  padding: 0.35rem;
+  overscroll-behavior: contain;
+}
+
+.palette-item {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr);
+  grid-template-areas: "kind label" ". hint";
+  column-gap: 0.6rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.45rem;
+  cursor: pointer;
+}
+
+.palette-item[data-selected="true"] {
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+}
+
+.palette-kind {
+  grid-area: kind;
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-align: right;
+  padding-top: 0.1rem;
+}
+
+.palette-kind--post,
+.palette-kind--snippet {
+  color: var(--warm);
+}
+
+.palette-kind--topic,
+.palette-kind--page {
+  color: var(--accent);
+}
+
+.palette-label {
+  grid-area: label;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+
+.palette-hint {
+  grid-area: hint;
+  font-size: 0.72rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.palette-empty {
+  padding: 1rem;
+  color: var(--warm);
+}
+
+.palette-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--line);
+  background: var(--sunken);
+  color: var(--muted);
+  font-size: 0.7rem;
+}

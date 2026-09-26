@@ -1,0 +1,93 @@
+---
+import StoryItem from "@/components/content/StoryItem.astro";
+import ToolItem from "@/components/content/ToolItem.astro";
+import VideoItem from "@/components/content/VideoItem.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getContentGraph } from "@/lib/content-graph";
+
+const graph = await getContentGraph();
+const sections = [
+  { href: "/recommended/stories/", file: "stories/", title: "Stories", count: graph.stories.length, blurb: "Articles and write-ups worth your time." },
+  { href: "/recommended/videos/", file: "videos/", title: "Videos", count: graph.videos.length, blurb: "Talks, tutorials and deep dives." },
+  { href: "/recommended/services/", file: "services/", title: "Tools & services", count: graph.tools.length, blurb: "Things I use or would recommend." },
+];
+---
+
+<BaseLayout title="Recommended" description="Stories, videos and tools I recommend — curated since 2017." crumbs={[{ label: "recommended/" }]} section="recommended">
+  <div class="shell pt-8">
+    <header class="max-w-3xl">
+      <p class="mono-label"><span class="text-accent">$</span> ls -la ~/recommended</p>
+      <h1 class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Recommended</h1>
+      <p class="mt-3 font-serif text-lg text-muted">A running bookmark file: the best things I've read, watched and used, tagged by topic.</p>
+    </header>
+
+    <ul class="mt-10 grid gap-4 sm:grid-cols-3">
+      {
+        sections.map((section) => (
+          <li>
+            <a href={section.href} class="dir-card">
+              <span class="mono-label">drwxr-xr-x {section.file}</span>
+              <span class="dir-title">{section.title}</span>
+              <span class="dir-blurb">{section.blurb}</span>
+              <span class="dir-count">{section.count} entries →</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="mt-16 grid gap-12 lg:grid-cols-[1.2fr_1fr]">
+      <section aria-labelledby="latest-stories">
+        <h2 id="latest-stories" class="section-title">latest stories</h2>
+        <ul>{graph.stories.slice(0, 6).map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} tags={story.tags} />)}</ul>
+      </section>
+      <div class="grid content-start gap-12">
+        <section aria-labelledby="latest-videos">
+          <h2 id="latest-videos" class="section-title">latest videos</h2>
+          <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+            {graph.videos.slice(0, 2).map((video) => <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} compact />)}
+          </ul>
+        </section>
+        <section aria-labelledby="latest-tools">
+          <h2 id="latest-tools" class="section-title">latest tools</h2>
+          <ul class="grid gap-4">{graph.tools.slice(0, 3).map((tool) => <ToolItem url={tool.url} title={tool.title} description={tool.description} />)}</ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .dir-card {
+    display: grid;
+    gap: 0.4rem;
+    height: 100%;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    background: var(--surface);
+    text-decoration: none;
+    transition:
+      border-color 120ms ease,
+      transform 120ms ease;
+  }
+  .dir-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .dir-title {
+    font-size: 1.35rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  .dir-blurb {
+    font-family: var(--font-serif);
+    color: var(--muted);
+  }
+  .dir-count {
+    margin-top: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+</style>

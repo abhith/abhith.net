@@ -1,0 +1,29 @@
+---
+/**
+ * Callout used inside MDX posts: `<Alert kind="info">…</Alert>`.
+ * Replaces the Gatsby `src/components/alert.js` (Emotion + react-icons).
+ */
+type Kind = "info" | "important" | "idea" | "warning" | "positive" | "negative";
+
+interface Props {
+  kind?: Kind;
+  title?: string;
+}
+
+const { kind = "info", title } = Astro.props;
+
+const icons: Record<Kind, string> = {
+  info: "ℹ",
+  important: "!",
+  idea: "✦",
+  warning: "⚠",
+  positive: "✓",
+  negative: "✕",
+};
+const label = title ?? kind.charAt(0).toUpperCase() + kind.slice(1);
+---
+
+<aside class:list={["alert", `alert--${kind}`]} role="note" aria-label={label}>
+  <p class="alert__title"><span class="alert__icon" aria-hidden="true">{icons[kind]}</span>{label}</p>
+  <div class="alert__body"><slot /></div>
+</aside>

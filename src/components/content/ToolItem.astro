@@ -1,0 +1,58 @@
+---
+import { hostOf } from "@/lib/format";
+import TagToken from "./TagToken.astro";
+
+interface Props {
+  url: string;
+  title: string;
+  description?: string;
+  tags?: readonly string[];
+}
+
+const { url, title, description, tags = [] } = Astro.props;
+---
+
+<li class="tool">
+  <a href={url} target="_blank" rel="noopener" class="tool-link">
+    <span class="mono-label">$ open {hostOf(url)}</span>
+    <span class="tool-title">{title}<span class="sr-only"> (opens in a new tab)</span></span>
+    {description && <span class="tool-desc">{description}</span>}
+  </a>
+  {
+    tags.length > 0 && (
+      <div class="mt-2 flex flex-wrap gap-1.5">
+        {tags.map((tag) => (
+          <TagToken slug={tag} />
+        ))}
+      </div>
+    )
+  }
+</li>
+
+<style>
+  .tool {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.6rem;
+    background: var(--surface);
+  }
+  .tool-link {
+    display: grid;
+    gap: 0.3rem;
+    text-decoration: none;
+  }
+  .tool-title {
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .tool-link:hover .tool-title {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .tool-desc {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import type { Post, Snippet, Story, Tool, Video } from "@/lib/content-graph";
+import type { RelatedSet } from "@/lib/graph/types";
+import PostRow from "./PostRow.astro";
+import StoryItem from "./StoryItem.astro";
+import ToolItem from "./ToolItem.astro";
+import VideoItem from "./VideoItem.astro";
+
+interface Props {
+  related: RelatedSet<Post, Snippet, Story, Video, Tool>;
+}
+
+const { related } = Astro.props;
+const hasAny = Object.values(related).some((list) => list.length > 0);
+---
+
+{
+  hasAny && (
+    <section class="related" aria-label="Related content">
+      {related.snippets.length > 0 && (
+        <div>
+          <h2 class="section-title">related snippets</h2>
+          <ul>
+            {related.snippets.map((snippet) => (
+              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} tags={snippet.tags} prefix={snippet.category} description={snippet.description} />
+            ))}
+          </ul>
+        </div>
+      )}
+      {related.articles.length > 0 && (
+        <div>
+          <h2 class="section-title">related articles</h2>
+          <ul>
+            {related.articles.map((post) => (
+              <PostRow url={post.url} title={post.title} date={post.date} tags={post.tags} description={post.description} />
+            ))}
+          </ul>
+        </div>
+      )}
+      {related.videos.length > 0 && (
+        <div>
+          <h2 class="section-title">related videos</h2>
+          <ul class="grid gap-6 sm:grid-cols-3">
+            {related.videos.map((video) => (
+              <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} compact />
+            ))}
+          </ul>
+        </div>
+      )}
+      {related.stories.length > 0 && (
+        <div>
+          <h2 class="section-title">recommended stories</h2>
+          <ul class="grid gap-x-8 sm:grid-cols-2">
+            {related.stories.map((story) => (
+              <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} compact />
+            ))}
+          </ul>
+        </div>
+      )}
+      {related.tools.length > 0 && (
+        <div>
+          <h2 class="section-title">tools</h2>
+          <ul class="grid gap-4 sm:grid-cols-2">
+            {related.tools.map((tool) => (
+              <ToolItem url={tool.url} title={tool.title} description={tool.description} tags={tool.tags} />
+            ))}
+          </ul>
+        </div>
+      )}
+    </section>
+  )
+}
+
+<style>
+  .related {
+    display: grid;
+    gap: 2.5rem;
+  }
+</style>

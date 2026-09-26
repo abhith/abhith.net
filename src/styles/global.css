@@ -1,0 +1,497 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------------------------------
+ * Design tokens. Every colour is a CSS variable switched by `html[data-theme]`, and exposed to
+ * Tailwind utilities through `@theme inline` (e.g. `bg-surface`, `text-muted`, `border-line`).
+ * ---------------------------------------------------------------------------------------- */
+@custom-variant dark (&:where([data-theme="midnight"], [data-theme="midnight"] *));
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-warm: var(--warm);
+  --font-serif: "Newsreader Variable", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+:root,
+[data-theme="paper"] {
+  color-scheme: light;
+  --bg: #f7f5ef;
+  --surface: #fffefa;
+  --sunken: #efece3;
+  --fg: #1d1b16;
+  --muted: #5f5a50;
+  --line: #e1dccf;
+  --accent: #0b6e4f;
+  --accent-fg: #ffffff;
+  --warm: #a2461a;
+  --selection: #cde8dc;
+  --tag-l: 34%;
+  --tag-s: 62%;
+  --syntax-keyword: #7a3fd1;
+  --syntax-string: #0b6e4f;
+  --syntax-comment: #6f6a5f;
+}
+
+[data-theme="midnight"] {
+  color-scheme: dark;
+  --bg: #0e1116;
+  --surface: #141922;
+  --sunken: #0a0d11;
+  --fg: #e7e2d7;
+  --muted: #9ba4b0;
+  --line: #262e3a;
+  --accent: #7ee0b5;
+  --accent-fg: #0b1a14;
+  --warm: #f5a97f;
+  --selection: #1f4a3a;
+  --tag-l: 72%;
+  --tag-s: 70%;
+  --syntax-keyword: #c4a7ff;
+  --syntax-string: #7ee0b5;
+  --syntax-comment: #8b95a3;
+}
+
+[data-theme="solar"] {
+  color-scheme: light;
+  --bg: #fdf6e3;
+  --surface: #fffbef;
+  --sunken: #eee8d5;
+  --fg: #073642;
+  --muted: #586e75;
+  --line: #e4dcc3;
+  --accent: #1a6aa3;
+  --accent-fg: #fdf6e3;
+  --warm: #b0431b;
+  --selection: #e9dfbf;
+  --tag-l: 32%;
+  --tag-s: 70%;
+  --syntax-keyword: #6c3fb8;
+  --syntax-string: #4d6b00;
+  --syntax-comment: #657b83;
+}
+
+/* ------------------------------------------------------------------------------------------
+ * Base
+ * ---------------------------------------------------------------------------------------- */
+@layer base {
+  html {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    min-height: 100dvh;
+    /* room for the sticky status bar */
+    padding-bottom: 2.25rem;
+  }
+
+  ::selection {
+    background: var(--selection);
+  }
+
+  a {
+    color: inherit;
+    text-underline-offset: 0.2em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: var(--font-mono);
+  }
+
+  hr {
+    border-color: var(--line);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------
+ * Components shared across pages
+ * ---------------------------------------------------------------------------------------- */
+@layer components {
+  .shell {
+    width: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+  }
+
+  .measure {
+    width: min(100% - 2rem, 44rem);
+    margin-inline: auto;
+  }
+
+  .mono-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .section-title::before {
+    content: "//";
+    color: var(--accent);
+  }
+
+  .section-title::after {
+    content: "";
+    flex: 1;
+    border-top: 1px dashed var(--line);
+    transform: translateY(-0.25em);
+  }
+
+  /* Syntax-highlighted topic token, colour from a stable hash of the slug (--h). */
+  .tag-token {
+    --tag: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    padding: 0.05rem 0.4rem;
+    border-radius: 0.25rem;
+    color: var(--tag);
+    background: color-mix(in oklab, var(--tag) 10%, transparent);
+    border: 1px solid color-mix(in oklab, var(--tag) 28%, transparent);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 120ms ease;
+  }
+
+  .tag-token::before {
+    content: "#";
+    opacity: 0.6;
+    margin-right: 0.05rem;
+  }
+
+  a.tag-token:hover {
+    background: color-mix(in oklab, var(--tag) 20%, transparent);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--fg);
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      border-color 120ms ease,
+      transform 120ms ease;
+  }
+
+  .btn:hover {
+    border-color: var(--accent);
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-fg);
+    border-color: var(--accent);
+  }
+
+  .kbd {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.05rem 0.35rem;
+    border: 1px solid var(--line);
+    border-bottom-width: 2px;
+    border-radius: 0.25rem;
+    background: var(--surface);
+    color: var(--muted);
+  }
+
+  /* Editor-like window chrome (terminal hero, code frames, OG preview). */
+  .window {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    box-shadow:
+      0 1px 0 color-mix(in oklab, var(--fg) 4%, transparent),
+      0 20px 40px -24px color-mix(in oklab, var(--fg) 25%, transparent);
+    overflow: hidden;
+  }
+
+  .window-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--sunken);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .window-dots {
+    display: inline-flex;
+    gap: 0.4rem;
+  }
+
+  .window-dots span {
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 999px;
+    background: var(--line);
+  }
+
+  .window-dots span:nth-child(1) {
+    background: #ff5f57;
+  }
+
+  .window-dots span:nth-child(2) {
+    background: #febc2e;
+  }
+
+  .window-dots span:nth-child(3) {
+    background: #28c840;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------
+ * Long-form reading typography (posts, snippets, static pages)
+ * ---------------------------------------------------------------------------------------- */
+.prose-ws {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--fg);
+  font-optical-sizing: auto;
+}
+
+.prose-ws > * + * {
+  margin-top: 1.1em;
+}
+
+.prose-ws :where(h2, h3, h4, h5, h6) {
+  font-family: var(--font-sans);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin-top: 2em;
+  scroll-margin-top: 5rem;
+}
+
+.prose-ws h2 {
+  font-size: 1.6rem;
+}
+
+.prose-ws h3 {
+  font-size: 1.3rem;
+}
+
+.prose-ws h4 {
+  font-size: 1.1rem;
+}
+
+.prose-ws :where(h2, h3, h4) .heading-anchor {
+  margin-left: 0.4rem;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+
+.prose-ws :where(h2, h3, h4):hover .heading-anchor {
+  opacity: 1;
+}
+
+.prose-ws a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in oklab, var(--accent) 45%, transparent);
+}
+
+.prose-ws a:hover {
+  text-decoration-color: currentColor;
+}
+
+.prose-ws :where(ul, ol) {
+  padding-left: 1.4em;
+}
+
+.prose-ws ul {
+  list-style: disc;
+}
+
+.prose-ws ol {
+  list-style: decimal;
+}
+
+.prose-ws li + li {
+  margin-top: 0.35em;
+}
+
+.prose-ws li::marker {
+  color: var(--muted);
+}
+
+.prose-ws blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1em;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.prose-ws :not(pre) > code {
+  font-size: 0.82em;
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  background: var(--sunken);
+  border: 1px solid var(--line);
+}
+
+/* Raw <pre> only (e.g. mermaid source); Expressive Code styles its own frames. */
+.prose-ws > pre {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding: 1rem 1.1rem;
+  border-radius: 0.5rem;
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  overflow-x: auto;
+}
+
+.prose-ws img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.prose-ws figure.content-figure {
+  margin-block: 1.8em;
+}
+
+.prose-ws figcaption {
+  margin-top: 0.6em;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.prose-ws table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.prose-ws :where(th, td) {
+  border: 1px solid var(--line);
+  padding: 0.45em 0.7em;
+  text-align: left;
+}
+
+.prose-ws th {
+  background: var(--sunken);
+  font-weight: 600;
+}
+
+.prose-ws hr {
+  margin-block: 2.5em;
+  border-top: 1px dashed var(--line);
+}
+
+.prose-ws .footnotes {
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-top: 1px dashed var(--line);
+  padding-top: 1rem;
+}
+
+/* MDX components */
+.prose-ws .alert {
+  --alert: var(--accent);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  border: 1px solid color-mix(in oklab, var(--alert) 35%, transparent);
+  border-left-width: 4px;
+  border-radius: 0.5rem;
+  background: color-mix(in oklab, var(--alert) 7%, var(--surface));
+  padding: 0.9rem 1.1rem;
+}
+
+.prose-ws .alert--important,
+.prose-ws .alert--warning {
+  --alert: var(--warm);
+}
+
+.prose-ws .alert--negative {
+  --alert: #d1242f;
+}
+
+.prose-ws .alert__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  color: var(--alert);
+  margin-bottom: 0.35rem;
+}
+
+.prose-ws .alert__body > * + * {
+  margin-top: 0.6em;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}

@@ -1,0 +1,244 @@
+---
+/**
+ * Long-form reading layout shared by blog posts and snippets.
+ */
+import type { MarkdownHeading } from "astro";
+import { Image } from "astro:assets";
+import Authors from "@/components/content/Authors.astro";
+import Giscus from "@/components/content/Giscus.astro";
+import LocalGraph from "@/components/content/LocalGraph.astro";
+import RelatedSection from "@/components/content/RelatedSection.astro";
+import Share from "@/components/content/Share.astro";
+import TagToken from "@/components/content/TagToken.astro";
+import Toc from "@/components/content/Toc.astro";
+import Webmentions from "@/components/content/Webmentions.astro";
+import type { Author, Post, Snippet, SiteGraph } from "@/lib/content-graph";
+import { isoDate, longDate } from "@/lib/format";
+import { shortHash } from "@/lib/graph/color";
+import { SITE } from "@/lib/site";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  entry: Post | Snippet;
+  graph: SiteGraph;
+  headings: MarkdownHeading[];
+  readingTime: string;
+}
+
+const { entry, graph, headings, readingTime } = Astro.props;
+const isPost = entry.kind === "post";
+const authors: Author[] = graph.authorsFor(entry);
+const related = graph.relatedFor(entry);
+const { previous, next } = graph.neighbours(entry);
+const category = entry.kind === "snippet" ? graph.topic(entry.category) : undefined;
+const hero = entry.kind === "post" ? entry.hero : undefined;
+const editUrl = `${SITE.repo.url}/blob/${SITE.repo.branch}/${entry.sourcePath}`;
+const section = isPost ? "blog" : "snippets";
+const pageTitle = entry.kind === "snippet" && category ? `${category.title} - ${entry.title}` : entry.title;
+const site = Astro.site?.href.replace(/\/$/, "") ?? SITE.url;
+const ogImage = isPost ? `/og/blog/${entry.id}.png` : `/og/snippets/${entry.id}.png`;
+
+const crumbs = isPost
+  ? [{ label: "blog/", href: "/blog/" }, { label: `${entry.id}.mdx` }]
+  : [
+      { label: "snippets/", href: "/snippets/" },
+      { label: `${(entry as Snippet).category}/`, href: `/snippets/${(entry as Snippet).category}/` },
+      { label: `${(entry as Snippet).slug}.mdx` },
+    ];
+
+const jsonLd = [
+  {
+    "@type": isPost ? "BlogPosting" : "TechArticle",
+    "@id": `${site}${entry.url}#article`,
+    headline: entry.title,
+    description: entry.description,
+    url: `${site}${entry.url}`,
+    datePublished: entry.date.toISOString(),
+    dateModified: entry.lastModified.toISOString(),
+    keywords: entry.tags.join(", "),
+    author: authors.length > 0 ? authors.map((author) => ({ "@type": "Person", name: author.name, url: `${site}/about/` })) : { "@type": "Person", name: entry.author },
+    publisher: { "@id": `${site}/#person` },
+    mainEntityOfPage: `${site}${entry.url}`,
+    image: `${site}${ogImage}`,
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={entry.description}
+  type="article"
+  image={ogImage}
+  imageAlt={entry.title}
+  publishedTime={entry.date}
+  modifiedTime={entry.lastModified}
+  tags={entry.tags}
+  crumbs={crumbs}
+  section={section}
+  readingTime={readingTime}
+  jsonLd={jsonLd}
+>
+  <article class="shell pt-8" data-reading data-pagefind-body>
+    <header class="measure !w-full max-w-3xl">
+      <div class="flex flex-wrap gap-1.5">
+        {entry.tags.map((tag) => <TagToken slug={tag} />)}
+      </div>
+      <h1 class="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl" data-pagefind-meta="title">{entry.title}</h1>
+      <p class="mt-4 font-serif text-xl leading-relaxed text-muted">{entry.description}</p>
+      <p class="commit-line mt-6">
+        <span class="text-accent">commit</span> <span class="text-warm">{shortHash(entry.url)}</span>
+        <span class="sep">·</span> authored <time datetime={entry.date.toISOString()} title={longDate(entry.date)}>{isoDate(entry.date)}</time>
+        {
+          entry.updated && (
+            <>
+              <span class="sep">·</span> amended <time datetime={entry.lastModified.toISOString()} title={longDate(entry.lastModified)}>{isoDate(entry.lastModified)}</time>
+            </>
+          )
+        }
+        <span class="sep">·</span> {readingTime}
+        {entry.draft && <span class="draft-flag">draft</span>}
+      </p>
+      <div class="mt-4 text-sm">
+        <Authors authors={authors} fallback={entry.author} />
+      </div>
+    </header>
+
+    {
+      hero && (
+        <figure class="hero mt-8 max-w-5xl">
+          <Image src={hero} alt={entry.title} widths={[640, 960, 1280, 1920]} sizes="(min-width: 1024px) 64rem, 100vw" loading="eager" fetchpriority="high" data-no-zoom />
+        </figure>
+      )
+    }
+
+    <div class="article-grid mt-10">
+      <div class="prose-ws min-w-0" data-article-body>
+        <slot />
+      </div>
+      <aside class="article-aside" aria-label="On this page">
+        <div class="sticky top-20 space-y-6">
+          <Toc headings={headings} />
+          {
+            category && (
+              <p class="mono-label">
+                category: <TagToken slug={category.slug} label={category.title} />
+              </p>
+            )
+          }
+        </div>
+      </aside>
+    </div>
+
+    <footer class="measure !w-full mt-12 max-w-3xl space-y-6 border-t border-dashed border-line pt-6" data-pagefind-ignore>
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <Share url={entry.url} title={entry.title} />
+        <a href={editUrl} class="font-mono text-xs text-muted hover:text-accent" target="_blank" rel="noopener">
+          ✎ edit {entry.sourcePath.split("/").slice(-2).join("/")} on GitHub
+        </a>
+      </div>
+      <nav class="neighbours" aria-label={isPost ? "More posts" : "More snippets"}>
+        {
+          previous ? (
+            <a href={previous.url} rel="prev" class="neighbour">
+              <span class="mono-label">git checkout HEAD~1</span>
+              <span class="neighbour-title">← {previous.title}</span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next && (
+            <a href={next.url} rel="next" class="neighbour neighbour--next">
+              <span class="mono-label">git checkout HEAD@{"{1}"}</span>
+              <span class="neighbour-title">{next.title} →</span>
+            </a>
+          )
+        }
+      </nav>
+    </footer>
+  </article>
+
+  <div class="shell mt-16 space-y-16" data-pagefind-ignore>
+    <slot name="after" />
+    <LocalGraph entry={entry} graph={graph} />
+    <RelatedSection related={related} />
+    <Webmentions path={entry.url} />
+    <Giscus />
+  </div>
+</BaseLayout>
+
+<script>
+  import "@/scripts/article";
+</script>
+
+<style>
+  .commit-line {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .sep {
+    margin: 0 0.35rem;
+    opacity: 0.6;
+  }
+  .draft-flag {
+    margin-left: 0.6rem;
+    color: var(--warm);
+    border: 1px solid currentColor;
+    border-radius: 0.25rem;
+    padding: 0 0.35rem;
+  }
+  .hero :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    border: 1px solid var(--line);
+  }
+  .article-grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: minmax(0, 46rem);
+  }
+  .article-aside {
+    display: none;
+  }
+  @media (min-width: 72rem) {
+    .article-grid {
+      grid-template-columns: minmax(0, 46rem) 15rem;
+      justify-content: space-between;
+    }
+    .article-aside {
+      display: block;
+    }
+  }
+  .neighbours {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 40rem) {
+    .neighbours {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .neighbour {
+    display: grid;
+    gap: 0.3rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.6rem;
+    background: var(--surface);
+    text-decoration: none;
+  }
+  .neighbour:hover {
+    border-color: var(--accent);
+  }
+  .neighbour--next {
+    text-align: right;
+  }
+  .neighbour-title {
+    font-weight: 600;
+    line-height: 1.35;
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from "astro";
+import PostRow from "@/components/content/PostRow.astro";
+import ListingLayout from "@/layouts/ListingLayout.astro";
+import { getContentGraph, type Snippet } from "@/lib/content-graph";
+import { paginatedPaths, type Page } from "@/lib/graph/paginate";
+import type { TopicSummary } from "@/lib/graph/types";
+import { SITE } from "@/lib/site";
+
+export const getStaticPaths = (async () => {
+  const graph = await getContentGraph();
+  return graph.topics
+    .filter((topic) => topic.totalSnippets > 0)
+    .flatMap((topic) =>
+      paginatedPaths(graph.byTopic(topic.slug).snippets, `/snippets/${topic.slug}`, SITE.pageSize).map(({ params, props }) => ({
+        params: { topic: topic.slug, page: params.page },
+        props: { ...props, topic },
+      })),
+    );
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<Snippet>;
+  topic: TopicSummary;
+}
+
+const { page, topic } = Astro.props;
+const graph = await getContentGraph();
+const topics = graph.topics
+  .filter((item) => item.totalSnippets > 0)
+  .map((item) => ({ slug: item.slug, title: item.title, count: item.totalSnippets, href: `/snippets/${item.slug}/` }));
+---
+
+<ListingLayout
+  title={`${topic.title} snippets`}
+  description={topic.description ?? `Snippets about ${topic.title}.`}
+  command={`ls -t ~/snippets | grep ${topic.slug}`}
+  page={page}
+  basePath={`/snippets/${topic.slug}`}
+  crumbs={[{ label: "snippets/", href: "/snippets/" }, { label: `${topic.slug}/` }]}
+  section="snippets"
+  topics={topics}
+  topicsTitle="categories"
+  currentTopic={topic.slug}
+>
+  <ul>
+    {page.items.map((snippet) => <PostRow url={snippet.url} title={snippet.title} date={snippet.date} tags={snippet.tags} prefix={snippet.category} description={snippet.description} draft={snippet.draft} />)}
+  </ul>
+</ListingLayout>

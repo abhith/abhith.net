@@ -1,0 +1,59 @@
+---
+/**
+ * Giscus comments (same repository/category/mapping as the Gatsby site). The client script is
+ * injected only when the section scrolls near the viewport, and the theme follows the site theme.
+ */
+const config = {
+  "data-repo": "abhith/abhith.net",
+  "data-repo-id": "MDEwOlJlcG9zaXRvcnkxMDE4OTk5NDk=",
+  "data-category": "Comments",
+  "data-category-id": "DIC_kwDOBhLerc4CQjyF",
+  "data-mapping": "pathname",
+  "data-strict": "0",
+  "data-reactions-enabled": "1",
+  "data-emit-metadata": "0",
+  "data-input-position": "bottom",
+  "data-lang": "en",
+  "data-loading": "lazy",
+};
+---
+
+<section class="giscus-wrap" aria-labelledby="comments-title">
+  <h2 id="comments-title" class="section-title">comments</h2>
+  <div class="giscus" data-giscus-config={JSON.stringify(config)}>
+    <p class="mono-label">loading discussion…</p>
+  </div>
+</section>
+
+<script>
+  const giscusTheme = () => (document.documentElement.dataset.theme === "midnight" ? "dark" : "light");
+
+  function mount() {
+    const container = document.querySelector<HTMLElement>("[data-giscus-config]");
+    if (!container || container.dataset.mounted) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        container.dataset.mounted = "true";
+        container.replaceChildren();
+        const script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.async = true;
+        script.crossOrigin = "anonymous";
+        const config = JSON.parse(container.dataset.giscusConfig ?? "{}") as Record<string, string>;
+        for (const [key, value] of Object.entries(config)) script.setAttribute(key, value);
+        script.setAttribute("data-theme", giscusTheme());
+        container.append(script);
+      },
+      { rootMargin: "400px" },
+    );
+    observer.observe(container);
+  }
+
+  document.addEventListener("ws:theme", () => {
+    const frame = document.querySelector<HTMLIFrameElement>("iframe.giscus-frame");
+    frame?.contentWindow?.postMessage({ giscus: { setConfig: { theme: giscusTheme() } } }, "https://giscus.app");
+  });
+  document.addEventListener("astro:page-load", mount);
+</script>

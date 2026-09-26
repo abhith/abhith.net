@@ -1,0 +1,72 @@
+---
+/**
+ * Breadcrumb rendered as a file path: `~/blog/azure-web-app-missing-mime-types.mdx`.
+ * Every segment links to its folder. Defaults are derived from the current URL.
+ */
+export interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  crumbs?: Crumb[];
+  /** Extension appended to the last segment when crumbs are derived (e.g. `.mdx`). */
+  ext?: string;
+}
+
+const { ext = "/" } = Astro.props;
+const segments = Astro.url.pathname.split("/").filter(Boolean);
+const crumbs: Crumb[] =
+  Astro.props.crumbs ??
+  segments.map((segment, index) => {
+    const last = index === segments.length - 1;
+    return {
+      label: last ? `${segment}${ext}` : `${segment}/`,
+      href: last ? undefined : `/${segments.slice(0, index + 1).join("/")}/`,
+    };
+  });
+
+const site = Astro.site?.href.replace(/\/$/, "") ?? "";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [{ label: "Home", href: "/" }, ...crumbs].map((crumb, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: crumb.label.replace(/\/$/, ""),
+    ...(crumb.href ? { item: `${site}${crumb.href}` } : {}),
+  })),
+};
+---
+
+{
+  crumbs.length > 0 && (
+    <nav aria-label="Breadcrumb" class="path-crumbs mono-label shell flex flex-wrap items-center gap-0.5 pt-5">
+      <a href="/" class="crumb" aria-label="Home">~</a>
+      <span aria-hidden="true">/</span>
+      {crumbs.map((crumb) =>
+        crumb.href ? (
+          <a href={crumb.href} class="crumb">{crumb.label}</a>
+        ) : (
+          <span aria-current="page" class="crumb crumb--current">{crumb.label}</span>
+        ),
+      )}
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    </nav>
+  )
+}
+
+<style>
+  .crumb {
+    text-decoration: none;
+    padding: 0.1rem 0.15rem;
+    border-radius: 0.2rem;
+  }
+  a.crumb:hover {
+    color: var(--accent);
+    background: var(--sunken);
+  }
+  .crumb--current {
+    color: var(--fg);
+  }
+</style>

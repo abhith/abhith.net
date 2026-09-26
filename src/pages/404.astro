@@ -1,0 +1,122 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getContentGraph } from "@/lib/content-graph";
+
+const graph = await getContentGraph();
+/** Small index used to suggest the closest pages to the requested path (fuzzy, client-side). */
+const index = [
+  ...graph.posts.map((post) => ({ t: post.title, u: post.url })),
+  ...graph.snippets.map((snippet) => ({ t: snippet.title, u: snippet.url })),
+  ...graph.topics.filter((topic) => topic.totalPosts + topic.totalSnippets > 0).map((topic) => ({ t: `topic: ${topic.title}`, u: `/topics/${topic.slug}/` })),
+];
+const fallback = [
+  { t: "home", u: "/" },
+  { t: "blog", u: "/blog/" },
+  { t: "snippets", u: "/snippets/" },
+  { t: "topics", u: "/topics/" },
+];
+---
+
+<BaseLayout title="404: command not found" description="This page does not exist." crumbs={[{ label: "404" }]} section="404" noindex>
+  <section class="measure py-12">
+    <div class="window">
+      <div class="window-bar">
+        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>bash — 404</span>
+      </div>
+      <div class="term">
+        <p><span class="text-accent">$</span> cd <span data-missing-path>this-page</span></p>
+        <p class="text-warm">bash: cd: <span data-missing-path>this-page</span>: No such file or directory</p>
+        <p class="mt-3"><span class="text-accent">$</span> suggest --closest</p>
+        <ul class="suggestions" data-suggestions>
+          {
+            fallback.map((item) => (
+              <li>
+                <a href={item.u}>{item.u}</a> <span class="text-muted"># {item.t}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="mt-3"><span class="text-accent">$</span> <span class="text-muted">try</span> <kbd class="kbd">⌘K</kbd> <span class="text-muted">and type</span> grep &lt;anything&gt;</p>
+      </div>
+    </div>
+  </section>
+  <script type="application/json" id="not-found-index" set:html={JSON.stringify(index)} />
+</BaseLayout>
+
+<script>
+  interface Entry {
+    t: string;
+    u: string;
+  }
+
+  const safeDecode = (value: string) => {
+    try {
+      return decodeURIComponent(value);
+    } catch {
+      return value;
+    }
+  };
+
+  const tokens = (value: string) =>
+    safeDecode(value)
+      .toLowerCase()
+      .split(/[^a-z0-9#+.]+/)
+      .filter((token) => token.length > 1);
+
+  function score(query: string[], entry: Entry) {
+    const hay = tokens(`${entry.u} ${entry.t}`);
+    let total = 0;
+    for (const q of query) {
+      if (hay.includes(q)) total += 3;
+      else if (hay.some((h) => h.startsWith(q) || q.startsWith(h))) total += 1;
+    }
+    return total;
+  }
+
+  function suggest() {
+    const data = document.getElementById("not-found-index");
+    const list = document.querySelector<HTMLUListElement>("[data-suggestions]");
+    if (!data || !list) return;
+    const path = location.pathname;
+    for (const el of document.querySelectorAll("[data-missing-path]")) el.textContent = path;
+
+    const query = tokens(path);
+    const entries = JSON.parse(data.textContent ?? "[]") as Entry[];
+    const matches = entries
+      .map((entry) => ({ entry, score: score(query, entry) }))
+      .filter((match) => match.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 6);
+    if (matches.length === 0) return;
+
+    list.replaceChildren(
+      ...matches.map(({ entry }) => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = entry.u;
+        a.textContent = entry.u;
+        const note = document.createElement("span");
+        note.className = "text-muted";
+        note.textContent = ` # ${entry.t}`;
+        li.append(a, note);
+        return li;
+      }),
+    );
+  }
+
+  document.addEventListener("astro:page-load", suggest);
+</script>
+
+<style>
+  .term {
+    padding: 1.2rem 1.3rem 1.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+  .suggestions a {
+    color: var(--accent);
+  }
+</style>

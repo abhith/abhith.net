@@ -1,0 +1,90 @@
+---
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const headings = Astro.props.headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
+---
+
+{
+  headings.length > 1 && (
+    <nav class="toc" aria-label="Table of contents" data-toc>
+      <p class="mono-label mb-2">// outline</p>
+      <ol>
+        {headings.map((heading) => (
+          <li class:list={["toc-item", `toc-depth-${heading.depth}`]}>
+            <a href={`#${heading.slug}`} data-toc-link={heading.slug}>
+              {heading.text.replace(/#$/, "")}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )
+}
+
+<script>
+  let observer: IntersectionObserver | undefined;
+
+  function setupScrollSpy() {
+    observer?.disconnect();
+    const links = new Map<string, HTMLAnchorElement>();
+    for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-toc-link]")) links.set(link.dataset.tocLink!, link);
+    if (links.size === 0) return;
+
+    const visible = new Set<string>();
+    observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.add(entry.target.id);
+          else visible.delete(entry.target.id);
+        }
+        const active = [...links.keys()].find((id) => visible.has(id));
+        if (!active) return;
+        for (const [id, link] of links) {
+          link.classList.toggle("is-active", id === active);
+          if (id === active) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        }
+      },
+      { rootMargin: "-80px 0px -65% 0px" },
+    );
+    for (const id of links.keys()) {
+      const heading = document.getElementById(id);
+      if (heading) observer.observe(heading);
+    }
+  }
+
+  document.addEventListener("astro:page-load", setupScrollSpy);
+</script>
+
+<style>
+  .toc {
+    font-size: 0.85rem;
+  }
+  .toc ol {
+    border-left: 1px solid var(--line);
+  }
+  .toc-item a {
+    display: block;
+    padding: 0.25rem 0 0.25rem 0.8rem;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    color: var(--muted);
+    text-decoration: none;
+    line-height: 1.35;
+  }
+  .toc-depth-3 a {
+    padding-left: 1.6rem;
+    font-size: 0.8rem;
+  }
+  .toc-item a:hover {
+    color: var(--fg);
+  }
+  .toc-item a:global(.is-active) {
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+</style>

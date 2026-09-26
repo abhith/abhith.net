@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro";
+import PostRow from "@/components/content/PostRow.astro";
+import ListingLayout from "@/layouts/ListingLayout.astro";
+import { getContentGraph, type Snippet } from "@/lib/content-graph";
+import { paginatedPaths, type Page } from "@/lib/graph/paginate";
+import { SITE } from "@/lib/site";
+
+export const getStaticPaths = (async () => {
+  const graph = await getContentGraph();
+  return paginatedPaths(graph.snippets, "/snippets", SITE.pageSize);
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<Snippet>;
+}
+
+const { page } = Astro.props;
+const graph = await getContentGraph();
+const topics = graph.topics
+  .filter((topic) => topic.totalSnippets > 0)
+  .map((topic) => ({ slug: topic.slug, title: topic.title, count: topic.totalSnippets, href: `/snippets/${topic.slug}/` }));
+---
+
+<ListingLayout
+  title="Snippets"
+  description="Small, copy-pasteable solutions for everyday problems."
+  command="ls -t ~/snippets"
+  page={page}
+  basePath="/snippets"
+  crumbs={[{ label: "snippets/" }]}
+  section="snippets"
+  topics={topics}
+  topicsTitle="categories"
+>
+  <ul>
+    {page.items.map((snippet) => <PostRow url={snippet.url} title={snippet.title} date={snippet.date} tags={snippet.tags} prefix={snippet.category} description={snippet.description} draft={snippet.draft} />)}
+  </ul>
+</ListingLayout>

@@ -1,0 +1,131 @@
+---
+/**
+ * Build-time "local graph" of an entry: the entry in the middle, its topics on an inner ring
+ * and related posts/snippets on an outer ring, linked to the topics they share. Pure SVG, no JS.
+ */
+import type { Post, Snippet, SiteGraph } from "@/lib/content-graph";
+import { topicHue } from "@/lib/graph/color";
+
+interface Props {
+  entry: Post | Snippet;
+  graph: SiteGraph;
+}
+
+const { entry, graph } = Astro.props;
+const related = graph.relatedFor(entry);
+const topics = [...new Set(entry.tags)].slice(0, 6);
+const neighbours = [...related.articles, ...related.snippets].slice(0, 8);
+
+const W = 640;
+const H = 360;
+const cx = W / 2;
+const cy = H / 2;
+const polar = (i: number, n: number, rx: number, ry: number, offset = -Math.PI / 2) => {
+  const angle = offset + (i / Math.max(n, 1)) * Math.PI * 2;
+  return { x: cx + Math.cos(angle) * rx, y: cy + Math.sin(angle) * ry };
+};
+const topicNodes = topics.map((slug, i) => ({ slug, title: graph.topic(slug)?.title ?? slug, ...polar(i, topics.length, 150, 95), hue: topicHue(slug) }));
+const outer = neighbours.map((item, i) => ({ item, ...polar(i, neighbours.length, 285, 160, -Math.PI / 2 + Math.PI / Math.max(neighbours.length, 1)) }));
+const truncate = (text: string, max = 28) => (text.length > max ? `${text.slice(0, max - 1)}…` : text);
+---
+
+{
+  topics.length > 0 && (
+    <section class="local-graph" aria-labelledby="local-graph-title">
+      <h2 id="local-graph-title" class="section-title">
+        local graph · <a href="/graph/" class="text-accent hover:underline">open full graph</a>
+      </h2>
+      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby="local-graph-desc" class="lg-svg">
+        <desc id="local-graph-desc">
+          {`"${entry.title}" is connected to the topics ${topicNodes.map((t) => t.title).join(", ")}${neighbours.length ? ` and related to ${neighbours.length} other entries` : ""}.`}
+        </desc>
+        {outer.map((node) =>
+          topicNodes
+            .filter((topic) => node.item.tags.includes(topic.slug))
+            .map((topic) => <line x1={topic.x} y1={topic.y} x2={node.x} y2={node.y} class="lg-edge lg-edge--outer" />),
+        )}
+        {topicNodes.map((topic) => (
+          <line x1={cx} y1={cy} x2={topic.x} y2={topic.y} class="lg-edge" style={`--h: ${topic.hue}`} />
+        ))}
+        {outer.map((node) => (
+          <a href={node.item.url} class="lg-node lg-node--outer">
+            <title>{node.item.title}</title>
+            <circle cx={node.x} cy={node.y} r="5" />
+            <text x={node.x} y={node.y + 17} text-anchor="middle">
+              {truncate(node.item.title)}
+            </text>
+          </a>
+        ))}
+        {topicNodes.map((topic) => (
+          <a href={`/topics/${topic.slug}/`} class="lg-node lg-node--topic" style={`--h: ${topic.hue}`}>
+            <title>{topic.title}</title>
+            <circle cx={topic.x} cy={topic.y} r="9" />
+            <text x={topic.x} y={topic.y - 14} text-anchor="middle">
+              #{topic.slug}
+            </text>
+          </a>
+        ))}
+        <g class="lg-node lg-node--self">
+          <circle cx={cx} cy={cy} r="13" />
+          <text x={cx} y={cy + 30} text-anchor="middle">
+            {truncate(entry.title, 34)}
+          </text>
+        </g>
+      </svg>
+    </section>
+  )
+}
+
+<style>
+  .lg-svg {
+    width: 100%;
+    height: auto;
+    max-height: 26rem;
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    background: var(--surface);
+    font-family: var(--font-mono);
+  }
+  .lg-edge {
+    stroke: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    stroke-width: 1.5;
+    opacity: 0.7;
+  }
+  .lg-edge--outer {
+    stroke: var(--line);
+    stroke-width: 1;
+    opacity: 1;
+  }
+  .lg-node text {
+    font-size: 10px;
+    fill: var(--muted);
+  }
+  .lg-node--topic circle {
+    fill: hsl(var(--h) var(--tag-s) var(--tag-l));
+  }
+  .lg-node--topic text {
+    fill: hsl(var(--h) var(--tag-s) var(--tag-l));
+    font-weight: 600;
+  }
+  .lg-node--outer circle {
+    fill: var(--bg);
+    stroke: var(--muted);
+    stroke-width: 1.5;
+  }
+  .lg-node--self circle {
+    fill: var(--accent);
+  }
+  .lg-node--self text {
+    fill: var(--fg);
+    font-size: 11px;
+    font-weight: 600;
+  }
+  a.lg-node:hover circle,
+  a.lg-node:focus-visible circle {
+    stroke: var(--accent);
+    stroke-width: 3;
+  }
+  a.lg-node:hover text {
+    fill: var(--fg);
+  }
+</style>

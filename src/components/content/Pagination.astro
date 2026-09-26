@@ -1,0 +1,106 @@
+---
+import type { Page } from "@/lib/graph/paginate";
+import { pageUrl } from "@/lib/graph/paginate";
+
+interface Props {
+  page: Page<unknown>;
+  basePath: string;
+}
+
+const { page, basePath } = Astro.props;
+const { pageNumber, totalPages } = page;
+
+/** Compact window of page numbers: 1 … 4 5 [6] 7 8 … 12 */
+const numbers: Array<number | "gap"> = [];
+for (let n = 1; n <= totalPages; n++) {
+  if (n === 1 || n === totalPages || Math.abs(n - pageNumber) <= 2) numbers.push(n);
+  else if (numbers.at(-1) !== "gap") numbers.push("gap");
+}
+---
+
+{
+  totalPages > 1 && (
+    <nav class="pager" aria-label="Pagination">
+      {page.prevUrl ? (
+        <a href={page.prevUrl} rel="prev" class="pager-step">
+          ← newer
+        </a>
+      ) : (
+        <span class="pager-step is-disabled" aria-hidden="true">
+          ← newer
+        </span>
+      )}
+      <ol class="pager-list">
+        {numbers.map((n) =>
+          n === "gap" ? (
+            <li aria-hidden="true" class="pager-gap">
+              …
+            </li>
+          ) : (
+            <li>
+              <a href={pageUrl(basePath, n)} class:list={["pager-num", { "is-current": n === pageNumber }]} aria-current={n === pageNumber ? "page" : undefined} aria-label={`Page ${n}`}>
+                {n}
+              </a>
+            </li>
+          ),
+        )}
+      </ol>
+      {page.nextUrl ? (
+        <a href={page.nextUrl} rel="next" class="pager-step">
+          older →
+        </a>
+      ) : (
+        <span class="pager-step is-disabled" aria-hidden="true">
+          older →
+        </span>
+      )}
+    </nav>
+  )
+}
+
+<style>
+  .pager {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+  }
+  .pager-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  .pager-num,
+  .pager-step {
+    display: inline-grid;
+    place-items: center;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.6rem;
+    border: 1px solid var(--line);
+    border-radius: 0.375rem;
+    background: var(--surface);
+    text-decoration: none;
+  }
+  .pager-num:hover,
+  .pager-step:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .is-current {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-fg);
+  }
+  .is-disabled {
+    opacity: 0.4;
+  }
+  .pager-gap {
+    padding: 0 0.3rem;
+    color: var(--muted);
+  }
+</style>

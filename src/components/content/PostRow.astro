@@ -1,0 +1,154 @@
+---
+/**
+ * `git log --oneline` style row: short hash · date · title · tag tokens.
+ * The description slides out on hover/focus (always present for screen readers).
+ */
+import { shortHash } from "@/lib/graph/color";
+import { isoDate } from "@/lib/format";
+import TagToken from "./TagToken.astro";
+
+interface Props {
+  url: string;
+  title: string;
+  date: Date;
+  tags?: readonly string[];
+  description?: string;
+  /** e.g. snippet category, shown before the title. */
+  prefix?: string;
+  maxTags?: number;
+  draft?: boolean;
+}
+
+const { url, title, date, tags = [], description, prefix, maxTags = 3, draft = false } = Astro.props;
+---
+
+<li class="log-row">
+  <span class="log-hash" aria-hidden="true">{shortHash(url)}</span>
+  <time class="log-date" datetime={date.toISOString()}>{isoDate(date)}</time>
+  <div class="log-main">
+    <a href={url} class="log-title">
+      {prefix && <span class="log-prefix">{prefix}/</span>}
+      {title}
+      {draft && <span class="log-draft">draft</span>}
+    </a>
+    {description && <p class="log-desc">{description}</p>}
+  </div>
+  <div class="log-tags">
+    {tags.slice(0, maxTags).map((tag) => <TagToken slug={tag} />)}
+  </div>
+</li>
+
+<style>
+  .log-row {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-areas: "hash date main" ". . tags";
+    column-gap: 0.9rem;
+    row-gap: 0.35rem;
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px dashed var(--line);
+    border-radius: 0.375rem;
+    transition: background 120ms ease;
+  }
+
+  @media (min-width: 48rem) {
+    .log-row {
+      grid-template-columns: auto auto 1fr auto;
+      grid-template-areas: "hash date main tags";
+      align-items: baseline;
+    }
+  }
+
+  .log-row:hover,
+  .log-row:focus-within {
+    background: var(--surface);
+  }
+
+  .log-hash {
+    grid-area: hash;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--warm);
+  }
+
+  .log-date {
+    grid-area: date;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .log-main {
+    grid-area: main;
+    min-width: 0;
+  }
+
+  .log-title {
+    font-weight: 550;
+    text-decoration: none;
+    line-height: 1.35;
+  }
+
+  .log-title:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .log-prefix {
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    color: var(--muted);
+  }
+
+  .log-draft {
+    margin-left: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--warm);
+    border: 1px solid currentColor;
+    border-radius: 0.25rem;
+    padding: 0 0.3rem;
+  }
+
+  .log-desc {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--muted);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+      max-height 220ms ease,
+      opacity 220ms ease,
+      margin 220ms ease;
+  }
+
+  .log-row:hover .log-desc,
+  .log-row:focus-within .log-desc {
+    max-height: 6rem;
+    opacity: 1;
+    margin-top: 0.25rem;
+  }
+
+  @media (hover: none) {
+    .log-desc {
+      max-height: none;
+      opacity: 1;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .log-tags {
+    grid-area: tags;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 48rem) {
+    .log-tags {
+      justify-content: flex-end;
+    }
+  }
+</style>

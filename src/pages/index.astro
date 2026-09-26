@@ -1,0 +1,255 @@
+---
+import PostRow from "@/components/content/PostRow.astro";
+import StoryItem from "@/components/content/StoryItem.astro";
+import TagToken from "@/components/content/TagToken.astro";
+import VideoItem from "@/components/content/VideoItem.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getContentGraph } from "@/lib/content-graph";
+import { SITE } from "@/lib/site";
+
+const graph = await getContentGraph();
+const latestPosts = graph.posts.slice(0, 8);
+const snippets = graph.snippets.slice(0, 6);
+const stories = graph.stories.slice(0, 5);
+const videos = graph.videos.slice(0, 3);
+const topTopics = [...graph.topics].sort((a, b) => b.totalPosts + b.totalSnippets - (a.totalPosts + a.totalSnippets)).slice(0, 14);
+const { nodes, links } = graph.graphData();
+
+const intro = "I'm a Software Engineer. I've been coding for almost a decade now. I code 🧑‍💻, write ✍️, learn 📖 and advocate 👍.";
+const dirs = [
+  { href: "/blog/", label: "blog/", count: graph.posts.length },
+  { href: "/snippets/", label: "snippets/", count: graph.snippets.length },
+  { href: "/topics/", label: "topics/", count: graph.topics.length },
+  { href: "/recommended/", label: "recommended/", count: graph.stories.length + graph.videos.length + graph.tools.length },
+  { href: "/graph/", label: "graph.json", count: nodes.length },
+];
+---
+
+<BaseLayout crumbs={false} section="main" description={SITE.description}>
+  <section class="shell grid items-center gap-10 pt-12 pb-16 lg:grid-cols-[1.1fr_1fr]" aria-labelledby="hero-title">
+    <div>
+      <p class="mono-label">Full Stack Developer · Dubai</p>
+      <h1 id="hero-title" class="mt-3 text-5xl font-bold tracking-tight sm:text-6xl">
+        Abhith Rajan<span class="text-accent">.</span>
+      </h1>
+      <p class="mt-5 max-w-xl font-serif text-xl leading-relaxed text-muted">
+        Notes, snippets and curated links from a working software engineer — written in the open since 2017.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="/blog/" class="btn btn-primary">cd ~/blog</a>
+        <button type="button" class="btn" data-palette-open>
+          <span aria-hidden="true">›_</span> press <kbd class="kbd">⌘K</kbd>
+        </button>
+      </div>
+    </div>
+
+    <div class="window terminal" role="group" aria-label="Terminal introduction">
+      <div class="window-bar">
+        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>abhith@workspace: ~</span>
+      </div>
+      <div class="terminal-body">
+        <p class="line"><span class="prompt">$</span> <span class="typed" style="--chars: 6">whoami</span></p>
+        <p class="out out-1">Abhith Rajan — software engineer, writer, technology advocate</p>
+        <p class="line line-2"><span class="prompt">$</span> <span class="typed" style="--chars: 13">cat about.txt</span></p>
+        <p class="out out-2">{intro}</p>
+        <p class="line line-3"><span class="prompt">$</span> <span class="typed" style="--chars: 5">ls ~/</span></p>
+        <ul class="out out-3 ls-grid">
+          {
+            dirs.map((dir) => (
+              <li>
+                <a href={dir.href}>{dir.label}</a>
+                <span class="text-muted"> {dir.count}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="line line-4"><span class="prompt">$</span> <span class="cursor" aria-hidden="true"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell pb-16" aria-labelledby="latest-title">
+    <div class="flex items-baseline justify-between">
+      <h2 id="latest-title" class="section-title flex-1">git log --oneline blog</h2>
+    </div>
+    <ul>
+      {latestPosts.map((post) => <PostRow url={post.url} title={post.title} date={post.date} tags={post.tags} description={post.description} draft={post.draft} />)}
+    </ul>
+    <p class="mt-4 text-right font-mono text-sm"><a href="/blog/" class="text-accent hover:underline">all {graph.posts.length} posts →</a></p>
+  </section>
+
+  <section class="shell pb-16" aria-labelledby="snippets-title">
+    <h2 id="snippets-title" class="section-title">scratchpad · snippets</h2>
+    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        snippets.map((snippet) => (
+          <li class="scratch">
+            <a href={snippet.url} class="scratch-link">
+              <span class="mono-label">{snippet.category}/{snippet.slug}.mdx</span>
+              <span class="scratch-title">{snippet.title}</span>
+              <span class="scratch-desc">{snippet.description}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="mt-4 text-right font-mono text-sm"><a href="/snippets/" class="text-accent hover:underline">open scratchpad →</a></p>
+  </section>
+
+  <section class="shell grid gap-12 pb-16 lg:grid-cols-[1.2fr_1fr]">
+    <div aria-labelledby="stories-title">
+      <h2 id="stories-title" class="section-title">curated · stories</h2>
+      <ul>
+        {stories.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} tags={story.tags} />)}
+      </ul>
+      <p class="mt-4 font-mono text-sm"><a href="/recommended/stories/" class="text-accent hover:underline">more stories →</a></p>
+    </div>
+    <div aria-labelledby="videos-title">
+      <h2 id="videos-title" class="section-title">curated · videos</h2>
+      <ul class="grid gap-6">
+        {videos.map((video) => <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} compact />)}
+      </ul>
+      <p class="mt-4 font-mono text-sm"><a href="/recommended/videos/" class="text-accent hover:underline">more videos →</a></p>
+    </div>
+  </section>
+
+  <section class="shell pb-8" aria-labelledby="graph-title">
+    <div class="window graph-teaser">
+      <div class="window-bar">
+        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>graph.json · {nodes.length} nodes · {links.length} edges</span>
+      </div>
+      <div class="grid gap-6 p-6 md:grid-cols-[1fr_auto] md:items-center">
+        <div>
+          <h2 id="graph-title" class="text-2xl font-semibold tracking-tight">Explore the knowledge graph</h2>
+          <p class="mt-2 max-w-xl font-serif text-lg text-muted">
+            Every post and snippet, wired to the topics it touches. Follow the threads between Azure, Docker, .NET and friends.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            {topTopics.map((topic) => <TagToken slug={topic.slug} label={topic.slug} count={topic.totalPosts + topic.totalSnippets} />)}
+          </div>
+        </div>
+        <a href="/graph/" class="btn btn-primary self-start">open graph →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .terminal-body {
+    padding: 1.1rem 1.2rem 1.3rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    min-height: 19rem;
+  }
+
+  .prompt {
+    color: var(--accent);
+    margin-right: 0.35rem;
+  }
+
+  .out {
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .ls-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.2rem;
+  }
+
+  .ls-grid a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .ls-grid a:hover {
+    text-decoration: underline;
+  }
+
+  .typed {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    width: calc(var(--chars) * 1ch);
+    animation: type 0.6s steps(var(--chars)) both;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 0.6ch;
+    height: 1.1em;
+    vertical-align: text-bottom;
+    background: var(--accent);
+    animation: blink 1.1s steps(1) infinite;
+  }
+
+  /* Reveal the session line by line. */
+  .out-1 { animation: appear 0.01s 0.7s both; }
+  .line-2 { animation: appear 0.01s 1.1s both; }
+  .line-2 .typed { animation-delay: 1.1s; }
+  .out-2 { animation: appear 0.01s 1.9s both; }
+  .line-3 { animation: appear 0.01s 2.3s both; }
+  .line-3 .typed { animation-delay: 2.3s; }
+  .out-3 { animation: appear 0.01s 3s both; }
+  .line-4 { animation: appear 0.01s 3.3s both; }
+
+  @keyframes type {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes appear {
+    from {
+      visibility: hidden;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .scratch-link {
+    display: grid;
+    gap: 0.35rem;
+    height: 100%;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.6rem;
+    background: var(--surface);
+    text-decoration: none;
+    transition:
+      border-color 120ms ease,
+      transform 120ms ease;
+  }
+
+  .scratch-link:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .scratch-title {
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .scratch-desc {
+    font-family: var(--font-serif);
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .graph-teaser {
+    background:
+      radial-gradient(circle at 85% 20%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 45%),
+      var(--surface);
+  }
+</style>

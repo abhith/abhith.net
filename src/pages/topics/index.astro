@@ -1,0 +1,125 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getContentGraph } from "@/lib/content-graph";
+import { topicHue } from "@/lib/graph/color";
+import { totalItems } from "@/lib/graph/topics";
+
+const graph = await getContentGraph();
+const topics = graph.topics.map((topic) => ({ ...topic, total: totalItems(topic) }));
+const max = Math.max(...topics.map((topic) => topic.total));
+/** Font size scales with log(total) so large topics don't dwarf the rest. */
+const scale = (total: number) => (0.8 + (Math.log(total + 1) / Math.log(max + 1)) * 0.9).toFixed(2);
+---
+
+<BaseLayout title="Topics" description="Every topic on the site, with posts, snippets, stories, videos and tools for each." crumbs={[{ label: "topics/" }]} section="topics">
+  <div class="shell pt-8">
+    <header class="max-w-3xl">
+      <p class="mono-label"><span class="text-accent">$</span> tree -L 1 ~/topics | wc -l → {topics.length}</p>
+      <h1 class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Topics</h1>
+      <p class="mt-3 font-serif text-lg text-muted">Every subject I've written about, curated or bookmarked. Size reflects how much lives there.</p>
+    </header>
+
+    <div class="mt-8">
+      <label class="filter">
+        <span class="mono-label">grep -i</span>
+        <input type="search" placeholder="filter topics…" data-topic-filter aria-label="Filter topics" autocomplete="off" />
+        <span class="mono-label" data-topic-count aria-live="polite">{topics.length} topics</span>
+      </label>
+    </div>
+
+    <ul class="cloud mt-8" data-topic-cloud>
+      {
+        topics.map((topic) => (
+          <li data-topic={`${topic.slug} ${topic.title}`.toLowerCase()}>
+            <a href={`/topics/${topic.slug}/`} class="cloud-item" style={`--h: ${topicHue(topic.slug)}; --size: ${scale(topic.total)}rem`}>
+              <span class="cloud-name">{topic.title}</span>
+              <span class="cloud-counts" aria-label={`${topic.totalPosts} posts, ${topic.totalSnippets} snippets, ${topic.totalStories} stories, ${topic.totalVideos} videos, ${topic.totalServices} tools`}>
+                {topic.totalPosts > 0 && <span title="posts">{topic.totalPosts}p</span>}
+                {topic.totalSnippets > 0 && <span title="snippets">{topic.totalSnippets}s</span>}
+                {topic.totalStories > 0 && <span title="stories">{topic.totalStories}r</span>}
+                {topic.totalVideos > 0 && <span title="videos">{topic.totalVideos}v</span>}
+                {topic.totalServices > 0 && <span title="tools">{topic.totalServices}t</span>}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="mono-label mt-6">legend: p posts · s snippets · r stories · v videos · t tools</p>
+  </div>
+</BaseLayout>
+
+<script>
+  function setupFilter() {
+    const input = document.querySelector<HTMLInputElement>("[data-topic-filter]");
+    const items = document.querySelectorAll<HTMLElement>("[data-topic-cloud] [data-topic]");
+    const count = document.querySelector<HTMLElement>("[data-topic-count]");
+    if (!input) return;
+    input.addEventListener("input", () => {
+      const query = input.value.trim().toLowerCase();
+      let shown = 0;
+      for (const item of items) {
+        const match = !query || item.dataset.topic!.includes(query);
+        item.hidden = !match;
+        if (match) shown++;
+      }
+      if (count) count.textContent = `${shown} topics`;
+    });
+  }
+  document.addEventListener("astro:page-load", setupFilter);
+</script>
+
+<style>
+  .filter {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 32rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    background: var(--surface);
+  }
+  .filter:focus-within {
+    border-color: var(--accent);
+  }
+  .filter input {
+    flex: 1;
+    min-width: 0;
+    font: inherit;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: var(--fg);
+  }
+  .cloud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem 1.1rem;
+  }
+  .cloud-item {
+    --tag: hsl(var(--h) var(--tag-s) var(--tag-l));
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-size: var(--size);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--tag);
+    text-decoration: none;
+  }
+  .cloud-item:hover .cloud-name {
+    text-decoration: underline;
+  }
+  .cloud-counts {
+    display: inline-flex;
+    gap: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--muted);
+  }
+</style>

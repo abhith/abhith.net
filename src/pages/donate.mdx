@@ -1,29 +1,15 @@
 ---
+layout: ../layouts/PageLayout.astro
 title: Support Abhith
 description: If you found anything Abhith shared useful, how about a coffee?
+file: donate.mdx
 ---
 
-import PayPal from "../components/paypal";
-
-import PageTemplate from "../templates/page-template.js";
-
-export default function Layout({ children }) {
-  const pageContext = {
-    frontmatter: {
-      title: "Support Abhith",
-      description:
-        "If you found anything Abhith shared useful, how about a coffee?",
-    },
-  };
-  return <PageTemplate pageContext={pageContext}>{children}</PageTemplate>;
-}
+import PayPal from "@/components/mdx/PayPal.astro";
 
 ## How much I donated
 
 By looking at the [Piggy](https://github.com/piggyvault/piggyvault) reports,
-
-<div class="columns">
-<div className="column is-half">
 
 | Year | Amount (INR) |
 | ---- | ------------ |
@@ -34,14 +20,8 @@ By looking at the [Piggy](https://github.com/piggyvault/piggyvault) reports,
 | 2017 | ~38,000      |
 | 2016 | ~35,000      |
 
-</div>
-<div className="column">
-
 - The only reason I found for the shrinkage in the donation budget during 2018-19 is that I got married 💙.
 - The tilde (~) indicates that the amount is almost equal since multiple currencies are involved
-
-</div>
-</div>
 
 ## Make a donation
 

@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro";
+import StoryItem from "@/components/content/StoryItem.astro";
+import ListingLayout from "@/layouts/ListingLayout.astro";
+import { getContentGraph, type Story } from "@/lib/content-graph";
+import { paginatedPaths, type Page } from "@/lib/graph/paginate";
+import { SITE } from "@/lib/site";
+
+export const getStaticPaths = (async () => {
+  const graph = await getContentGraph();
+  return paginatedPaths(graph.stories, "/recommended/stories", SITE.pageSize);
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<Story>;
+}
+
+const { page } = Astro.props;
+const graph = await getContentGraph();
+const topics = graph.topics
+  .filter((topic) => topic.totalStories > 0)
+  .sort((a, b) => b.totalStories - a.totalStories)
+  .map((topic) => ({ slug: topic.slug, title: topic.title, count: topic.totalStories, href: `/topics/${topic.slug}/stories/` }));
+---
+
+<ListingLayout
+  title="Recommended stories"
+  description="Articles and write-ups worth your time, newest first."
+  command="tail -f ~/recommended/stories.json"
+  page={page}
+  basePath="/recommended/stories"
+  crumbs={[{ label: "recommended/", href: "/recommended/" }, { label: "stories/" }]}
+  section="recommended"
+  topics={topics}
+>
+  <ul>
+    {page.items.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} tags={story.tags} />)}
+  </ul>
+</ListingLayout>

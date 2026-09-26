@@ -1,0 +1,64 @@
+---
+import { hostOf, shortDate } from "@/lib/format";
+import TagToken from "./TagToken.astro";
+
+interface Props {
+  url: string;
+  title: string;
+  description?: string;
+  date: Date;
+  tags?: readonly string[];
+  compact?: boolean;
+}
+
+const { url, title, description, date, tags = [], compact = false } = Astro.props;
+---
+
+<li class="story">
+  <p class="mono-label">
+    <span class="text-warm">{hostOf(url)}</span> · <time datetime={date.toISOString()}>{shortDate(date)}</time>
+  </p>
+  <a href={url} class="story-title" target="_blank" rel="noopener">
+    {title}<span class="sr-only"> (opens in a new tab)</span><span aria-hidden="true" class="story-arrow">↗</span>
+  </a>
+  {!compact && description && <p class="story-desc">{description}</p>}
+  {
+    !compact && tags.length > 0 && (
+      <div class="mt-2 flex flex-wrap gap-1.5">
+        {tags.map((tag) => (
+          <TagToken slug={tag} />
+        ))}
+      </div>
+    )
+  }
+</li>
+
+<style>
+  .story {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .story-title {
+    display: inline-block;
+    margin-top: 0.2rem;
+    font-weight: 550;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+  .story-title:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .story-arrow {
+    margin-left: 0.3rem;
+    font-size: 0.8em;
+    color: var(--muted);
+  }
+  .story-desc {
+    margin-top: 0.3rem;
+    font-family: var(--font-serif);
+    color: var(--muted);
+    font-size: 0.975rem;
+    line-height: 1.55;
+  }
+</style>

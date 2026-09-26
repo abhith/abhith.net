@@ -1,9 +1,0 @@
-# This helm values file defines app-based settings
-# Charts use those values, so this file **MUST** be included in all chart releases
-
-app: # app global settings
-  svc:
-    projectone: project-one # service name for project one api
-    projecttwo: project-two # other projects
-  namespace:
-    projectone: myteam

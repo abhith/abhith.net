@@ -1,0 +1,15 @@
+{
+  "name": "Abhith Rajan",
+  "short_name": "Abhith",
+  "description": "Abhith Rajan is a programmer, writer, technology advocate, and more.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "background_color": "#f7f5ef",
+  "theme_color": "#0b6e4f",
+  "icons": [
+    { "src": "/img/android-chrome-144x144.png", "sizes": "144x144", "type": "image/png" },
+    { "src": "/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/img/safari-pinned-tab.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "monochrome" }
+  ]
+}

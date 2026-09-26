@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from "astro";
+import { render } from "astro:content";
+import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import { getContentGraph, type Snippet } from "@/lib/content-graph";
+
+export const getStaticPaths = (async () => {
+  const graph = await getContentGraph();
+  return graph.snippets.map((snippet) => ({
+    params: { category: snippet.category, slug: snippet.slug },
+    props: { snippet },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  snippet: Snippet;
+}
+
+const { snippet } = Astro.props;
+const graph = await getContentGraph();
+const { Content, headings, remarkPluginFrontmatter } = await render(snippet.entry);
+---
+
+<ArticleLayout entry={snippet} graph={graph} headings={headings} readingTime={remarkPluginFrontmatter.readingTime?.text ?? ""}>
+  <Content />
+</ArticleLayout>

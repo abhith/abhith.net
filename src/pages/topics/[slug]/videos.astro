@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from "astro";
+import VideoItem from "@/components/content/VideoItem.astro";
+import TopicLayout from "@/layouts/TopicLayout.astro";
+import { getContentGraph } from "@/lib/content-graph";
+import type { TopicSummary } from "@/lib/graph/types";
+import { topicPathsWith } from "@/lib/topic-paths";
+
+export const getStaticPaths = (() => topicPathsWith("totalVideos")) satisfies GetStaticPaths;
+
+interface Props {
+  topic: TopicSummary;
+}
+
+const { topic } = Astro.props;
+const videos = (await getContentGraph()).byTopic(topic.slug).videos;
+---
+
+<TopicLayout topic={topic} active="videos" title={`${topic.title} videos`} description={`Recommended videos about ${topic.title}.`}>
+  <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {videos.map((video) => <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} tags={video.tags} />)}
+  </ul>
+</TopicLayout>

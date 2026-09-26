@@ -1,0 +1,29 @@
+---
+import { topicHue } from "@/lib/graph/color";
+
+interface Props {
+  slug: string;
+  /** Display label; defaults to the slug. */
+  label?: string;
+  /** Render as a link to the topic hub (default) or as plain text. */
+  link?: boolean;
+  count?: number;
+}
+
+const { slug, label = slug, link = true, count } = Astro.props;
+const style = `--h: ${topicHue(slug)}`;
+---
+
+{
+  link ? (
+    <a class="tag-token" href={`/topics/${slug}/`} style={style}>
+      {label}
+      {count !== undefined && <span class="ml-1 opacity-70">{count}</span>}
+    </a>
+  ) : (
+    <span class="tag-token" style={style}>
+      {label}
+      {count !== undefined && <span class="ml-1 opacity-70">{count}</span>}
+    </span>
+  )
+}

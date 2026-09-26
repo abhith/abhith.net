@@ -1,0 +1,70 @@
+---
+import { SITE } from "@/lib/site";
+
+interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+const absolute = new URL(url, Astro.site ?? SITE.url).href;
+const text = encodeURIComponent(title);
+const link = encodeURIComponent(absolute);
+const targets = [
+  { label: "x", href: `https://x.com/intent/post?text=${text}&url=${link}&via=${SITE.social.twitter.replace("@", "")}` },
+  { label: "linkedin", href: `https://www.linkedin.com/sharing/share-offsite/?url=${link}` },
+  { label: "reddit", href: `https://www.reddit.com/submit?url=${link}&title=${text}` },
+  { label: "hn", href: `https://news.ycombinator.com/submitlink?u=${link}&t=${text}` },
+];
+---
+
+<div class="share" aria-label="Share this page">
+  <span class="mono-label">share:</span>
+  {
+    targets.map((target) => (
+      <a href={target.href} target="_blank" rel="noopener" class="share-link">
+        {target.label}
+      </a>
+    ))
+  }
+  <button type="button" class="share-link" data-copy-link={absolute}>copy link</button>
+</div>
+
+<script>
+  document.addEventListener("click", async (event) => {
+    const button = (event.target as Element | null)?.closest<HTMLButtonElement>("[data-copy-link]");
+    if (!button) return;
+    try {
+      await navigator.clipboard.writeText(button.dataset.copyLink ?? location.href);
+      const original = button.textContent;
+      button.textContent = "copied ✓";
+      setTimeout(() => (button.textContent = original), 1500);
+    } catch {
+      prompt("Copy this link", button.dataset.copyLink ?? location.href);
+    }
+  });
+</script>
+
+<style>
+  .share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .share-link {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--fg);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .share-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+</style>

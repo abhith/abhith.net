@@ -1,7 +1,0 @@
-# This helm values file defines all infrastructure values for prod.
-# It is used on all charts, so ** MUST BE INCLUDED ** on every deployment
-
-inf:
-  appinsights:
-    key: "prod-app-insights-instrumentation-key" # App insights to use
-

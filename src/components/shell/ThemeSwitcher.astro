@@ -1,0 +1,36 @@
+<button type="button" class="theme-switcher" data-theme-switcher aria-label="Switch colour theme" title="Switch theme (paper → midnight → solar)">
+  <span aria-hidden="true">◐</span>
+  <span data-theme-label>theme</span>
+</button>
+
+<script>
+  import { currentTheme, nextTheme, setTheme } from "@/scripts/theme";
+
+  function sync() {
+    for (const label of document.querySelectorAll<HTMLElement>("[data-theme-label]")) label.textContent = currentTheme();
+  }
+
+  document.addEventListener("click", (event) => {
+    if (!(event.target as Element | null)?.closest("[data-theme-switcher]")) return;
+    setTheme(nextTheme());
+  });
+  document.addEventListener("ws:theme", sync);
+  document.addEventListener("astro:page-load", sync);
+</script>
+
+<style>
+  .theme-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0 0.25rem;
+  }
+  .theme-switcher:hover {
+    color: var(--accent);
+  }
+</style>

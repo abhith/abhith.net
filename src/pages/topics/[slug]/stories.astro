@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from "astro";
+import StoryItem from "@/components/content/StoryItem.astro";
+import TopicLayout from "@/layouts/TopicLayout.astro";
+import { getContentGraph } from "@/lib/content-graph";
+import type { TopicSummary } from "@/lib/graph/types";
+import { topicPathsWith } from "@/lib/topic-paths";
+
+export const getStaticPaths = (() => topicPathsWith("totalStories")) satisfies GetStaticPaths;
+
+interface Props {
+  topic: TopicSummary;
+}
+
+const { topic } = Astro.props;
+const stories = (await getContentGraph()).byTopic(topic.slug).stories;
+---
+
+<TopicLayout topic={topic} active="stories" title={`${topic.title} stories`} description={`Recommended articles and stories about ${topic.title}.`}>
+  <ul class="max-w-3xl">
+    {stories.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} tags={story.tags} />)}
+  </ul>
+</TopicLayout>

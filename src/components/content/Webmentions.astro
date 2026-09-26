@@ -1,0 +1,88 @@
+---
+import { plural, shortDate } from "@/lib/format";
+import { webmentionsFor } from "@/lib/webmentions";
+
+interface Props {
+  path: string;
+}
+
+const mentions = await webmentionsFor(Astro.props.path);
+const faces = mentions.filter((mention) => mention.type === "like" || mention.type === "repost");
+const replies = mentions.filter((mention) => mention.type === "reply" || mention.type === "mention");
+---
+
+{
+  mentions.length > 0 && (
+    <section class="webmentions" aria-labelledby="webmentions-title">
+      <h2 id="webmentions-title" class="section-title">
+        webmentions · {plural(mentions.length, "mention")}
+      </h2>
+      {faces.length > 0 && (
+        <ul class="faces">
+          {faces.map((mention) => (
+            <li>
+              <a href={mention.author.url ?? mention.url} title={`${mention.author.name} (${mention.type})`} target="_blank" rel="noopener nofollow">
+                {mention.author.photo ? (
+                  <img src={mention.author.photo} alt={mention.author.name} width="32" height="32" loading="lazy" decoding="async" />
+                ) : (
+                  <span class="face-fallback">{mention.author.name.slice(0, 1)}</span>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+      {replies.length > 0 && (
+        <ul class="replies">
+          {replies.map((mention) => (
+            <li class="reply">
+              <p class="mono-label">
+                <a href={mention.author.url ?? mention.url} target="_blank" rel="noopener nofollow">
+                  {mention.author.name}
+                </a>
+                {mention.published && <> · {shortDate(new Date(mention.published))}</>} ·{" "}
+                <a href={mention.url} target="_blank" rel="noopener nofollow">
+                  {mention.type}
+                </a>
+              </p>
+              {mention.content && <p class="reply-text">{mention.content.slice(0, 400)}</p>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  )
+}
+
+<style>
+  .faces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .faces img,
+  .face-fallback {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    object-fit: cover;
+  }
+  .face-fallback {
+    display: grid;
+    place-items: center;
+    background: var(--sunken);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+  }
+  .replies {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.9rem;
+  }
+  .reply-text {
+    margin-top: 0.25rem;
+    font-family: var(--font-serif);
+    color: var(--fg);
+  }
+</style>

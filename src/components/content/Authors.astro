@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import type { Author } from "@/lib/content-graph";
+
+interface Props {
+  authors: Author[];
+  /** Raw frontmatter value, shown when no author profile matches. */
+  fallback: string;
+}
+
+const { authors, fallback } = Astro.props;
+---
+
+<span class="authors">
+  {
+    authors.length > 0 ? (
+      authors.map((author) => (
+        <a href="/about/" class="author">
+          <Image src={author.avatar} alt="" width={28} height={28} class="avatar" />
+          <span>{author.name}</span>
+        </a>
+      ))
+    ) : (
+      <span>{fallback}</span>
+    )
+  }
+</span>
+
+<style>
+  .authors {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .author {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-decoration: none;
+  }
+  .author:hover {
+    color: var(--accent);
+  }
+  .avatar {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+  }
+</style>

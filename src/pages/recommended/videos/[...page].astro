@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro";
+import VideoItem from "@/components/content/VideoItem.astro";
+import ListingLayout from "@/layouts/ListingLayout.astro";
+import { getContentGraph, type Video } from "@/lib/content-graph";
+import { paginatedPaths, type Page } from "@/lib/graph/paginate";
+import { SITE } from "@/lib/site";
+
+export const getStaticPaths = (async () => {
+  const graph = await getContentGraph();
+  return paginatedPaths(graph.videos, "/recommended/videos", SITE.pageSize);
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<Video>;
+}
+
+const { page } = Astro.props;
+const graph = await getContentGraph();
+const topics = graph.topics
+  .filter((topic) => topic.totalVideos > 0)
+  .sort((a, b) => b.totalVideos - a.totalVideos)
+  .map((topic) => ({ slug: topic.slug, title: topic.title, count: topic.totalVideos, href: `/topics/${topic.slug}/videos/` }));
+---
+
+<ListingLayout
+  title="Recommended videos"
+  description="Talks, tutorials and deep dives, newest first."
+  command="ls ~/recommended/videos | sort -r"
+  page={page}
+  basePath="/recommended/videos"
+  crumbs={[{ label: "recommended/", href: "/recommended/" }, { label: "videos/" }]}
+  section="recommended"
+  topics={topics}
+>
+  <ul class="grid gap-8 sm:grid-cols-2">
+    {page.items.map((video) => <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} tags={video.tags} />)}
+  </ul>
+</ListingLayout>
