@@ -8,6 +8,10 @@ import VideoItem from "@/components/content/VideoItem.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { yearsCoding } from "@/lib/career";
 import { getContentGraph } from "@/lib/content-graph";
+import { hostOf, plural, shortDate } from "@/lib/format";
+import { topicHue } from "@/lib/graph/color";
+import { withRef } from "@/lib/outbound";
+import { elementGroup, elementSymbols, shortToolName } from "@/lib/periodic";
 import { SITE } from "@/lib/site";
 
 const graph = await getContentGraph();
@@ -15,6 +19,50 @@ const latestPosts = graph.posts.slice(0, 8);
 const snippets = graph.snippets.slice(0, 6);
 const stories = graph.stories.slice(0, 5);
 const videos = graph.videos.slice(0, 3);
+
+/**
+ * The periodic table of tools: cells (column, row) of a 12-column periodic-table silhouette. The
+ * gap in rows 1–3 (columns 3–7) holds the key card; below `lg` the cells simply flow.
+ */
+const PERIODIC_CELLS: Array<[number, number]> = [
+  [1, 1],
+  [12, 1],
+  ...[1, 2, 8, 9, 10, 11, 12].map((col): [number, number] => [col, 2]),
+  ...[1, 2, 8, 9, 10, 11, 12].map((col): [number, number] => [col, 3]),
+  ...Array.from({ length: 12 }, (_, i): [number, number] => [i + 1, 4]),
+];
+const hasCellar = graph.tools.length > PERIODIC_CELLS.length;
+// Atomic number = the order a tool was added, so the newest one closes the table like element 118.
+const shownTools = graph.tools.slice(0, hasCellar ? PERIODIC_CELLS.length - 1 : PERIODIC_CELLS.length).reverse();
+const cellarCount = graph.tools.length - shownTools.length;
+const elementNames = shownTools.map((tool) => shortToolName(tool.title));
+const symbols = elementSymbols(elementNames);
+const elements = shownTools.map((tool, index) => {
+  const group = elementGroup(tool.tags);
+  const [col, row] = PERIODIC_CELLS[index + (hasCellar ? 1 : 0)];
+  return {
+    col,
+    row,
+    href: withRef(tool.url, { campaign: "recommended-tools" }),
+    data: {
+      number: String(cellarCount + index + 1),
+      symbol: symbols[index],
+      name: elementNames[index],
+      title: tool.title,
+      description: tool.description,
+      host: hostOf(tool.url),
+      group,
+      hue: String(topicHue(group)),
+      added: shortDate(tool.date),
+      year: String(tool.date.getUTCFullYear()),
+    },
+  };
+});
+const newest = elements.at(-1);
+const elementGroups = [...new Set(elements.map((element) => element.data.group))]
+  .map((slug) => ({ slug, count: elements.filter((element) => element.data.group === slug).length }))
+  .sort((a, b) => b.count - a.count || a.slug.localeCompare(b.slug));
+const firstToolYear = Math.min(...graph.tools.map((tool) => tool.date.getUTCFullYear()));
 const topTopics = [...graph.topics].sort((a, b) => b.totalPosts + b.totalSnippets - (a.totalPosts + a.totalSnippets)).slice(0, 14);
 const { nodes, links } = graph.graphData();
 
@@ -138,6 +186,104 @@ const dirs = [
     </div>
   </section>
 
+  {
+    newest && (
+      <section class="shell pb-16" aria-labelledby="toolbox-title" data-periodic>
+        <h2 id="toolbox-title" class="section-title">toolbox · the periodic table of tools</h2>
+        <div class="periodic">
+          <div class="el-key" style={`--h: ${newest.data.hue}`} data-element-key>
+            <p class="mono-label">key · atomic no. = order added · hover an element</p>
+            <div class="el-key-body">
+              <div class="el-face el-key-tile" aria-hidden="true">
+                <span class="el-num" data-key="number">{newest.data.number}</span>
+                <span class="el-year" data-key="year">{newest.data.year}</span>
+                <span class="el-sym" data-key="symbol">{newest.data.symbol}</span>
+                <span class="el-name" data-key="name">{newest.data.name}</span>
+              </div>
+              <div class="el-key-info">
+                <p class="el-key-title" data-key="title">{newest.data.title}</p>
+                <p class="el-key-desc" data-key="description">{newest.data.description}</p>
+                <p class="el-key-meta">
+                  <span class="el-key-group" data-key="group">{newest.data.group}</span> · added <span data-key="added">{newest.data.added}</span>
+                </p>
+                <a class="el-key-open" href={newest.href} target="_blank" rel="noopener" data-key-link>
+                  open <span data-key="host">{newest.data.host}</span> ↗<span class="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <ol class="el-cells" role="list">
+            {hasCellar && (
+              <li class="el-cell" style="--c: 1; --r: 1">
+                <a
+                  href="/recommended/services/"
+                  class="el-face el el-cellar"
+                  data-el
+                  data-peek={`ls ~/toolbox  # elements 1–${cellarCount}, discovered since ${firstToolYear}`}
+                >
+                  <span class="el-num">1–{cellarCount}</span>
+                  <span class="el-sym">+{cellarCount}</span>
+                  <span class="el-name">earlier tools</span>
+                </a>
+              </li>
+            )}
+            {elements.map((element) => (
+              <li class="el-cell" style={`--c: ${element.col}; --r: ${element.row}`}>
+                <a
+                  href={element.href}
+                  target="_blank"
+                  rel="noopener"
+                  class="el-face el"
+                  style={`--h: ${element.data.hue}`}
+                  data-el
+                  data-element
+                  data-active={element === newest ? "" : undefined}
+                  data-peek={`open ${element.data.host}  # element ${element.data.number} · ${element.data.group} · added ${element.data.added}`}
+                  {...Object.fromEntries(Object.entries(element.data).map(([key, value]) => [`data-${key}`, value]))}
+                >
+                  <span class="el-num" aria-hidden="true">
+                    {element.data.number}
+                  </span>
+                  <span class="el-sym" aria-hidden="true">
+                    {element.data.symbol}
+                  </span>
+                  <span class="el-name">{element.data.name}</span>
+                  <span class="sr-only">
+                    {element.data.description && <>: {element.data.description}</>} (opens in a new tab)
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div class="periodic-foot">
+          <ul class="el-legend" aria-label="Element groups">
+            {elementGroups.map((group) => (
+              <li>
+                <a
+                  href={`/topics/${group.slug}/tools/`}
+                  class="el-group"
+                  style={`--h: ${topicHue(group.slug)}`}
+                  data-group-filter={group.slug}
+                  data-peek={`cd ~/topics/${group.slug}/tools  # ${plural(group.count, "element")} on the table`}
+                >
+                  <span class="el-swatch" aria-hidden="true" />
+                  {group.slug}
+                  <span class="opacity-60">{group.count}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="font-mono text-sm whitespace-nowrap">
+            <a href="/recommended/services/" class="text-accent hover:underline">
+              all {graph.tools.length} elements →
+            </a>
+          </p>
+        </div>
+      </section>
+    )
+  }
+
   <section class="shell pb-8" aria-labelledby="graph-title">
     <div class="window graph-teaser">
       <div class="window-bar">
@@ -159,6 +305,44 @@ const dirs = [
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  /** Periodic table: hovering or focusing an element shows it in the key; legend groups dim the rest. */
+  function setupPeriodicTable() {
+    const table = document.querySelector<HTMLElement>("[data-periodic]");
+    const key = table?.querySelector<HTMLElement>("[data-element-key]");
+    if (!table || !key) return;
+    const link = key.querySelector<HTMLAnchorElement>("[data-key-link]");
+    const fields = [...key.querySelectorAll<HTMLElement>("[data-key]")];
+    const elements = [...table.querySelectorAll<HTMLAnchorElement>("[data-element]")];
+    const cells = [...table.querySelectorAll<HTMLElement>("[data-el]")];
+
+    const select = (element: HTMLAnchorElement) => {
+      if (element.hasAttribute("data-active")) return;
+      for (const other of elements) other.toggleAttribute("data-active", other === element);
+      for (const field of fields) field.textContent = element.dataset[field.dataset.key ?? ""] ?? "";
+      key.style.setProperty("--h", element.dataset.hue ?? "160");
+      if (link) link.href = element.href;
+    };
+    const highlight = (group?: string) => {
+      for (const cell of cells) cell.toggleAttribute("data-dim", group !== undefined && cell.dataset.group !== group);
+    };
+
+    for (const element of elements) {
+      element.addEventListener("pointerenter", () => select(element));
+      element.addEventListener("focus", () => select(element));
+    }
+    for (const filter of table.querySelectorAll<HTMLElement>("[data-group-filter]")) {
+      const group = filter.dataset.groupFilter;
+      filter.addEventListener("pointerenter", () => highlight(group));
+      filter.addEventListener("focus", () => highlight(group));
+      filter.addEventListener("pointerleave", () => highlight());
+      filter.addEventListener("blur", () => highlight());
+    }
+  }
+
+  document.addEventListener("astro:page-load", setupPeriodicTable);
+</script>
 
 <style>
   /* Two overlapping desktop windows: a photo viewer peeking out from behind the terminal. */
@@ -349,6 +533,290 @@ const dirs = [
     color: var(--muted);
     font-size: 0.95rem;
     line-height: 1.5;
+  }
+
+  /* Periodic table of tools: element tiles tinted by topic, with the key card in the classic top gap. */
+  .periodic {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3.9rem, 1fr));
+    gap: 0.4rem;
+  }
+
+  .el-cells {
+    display: contents;
+  }
+
+  .el-key {
+    grid-column: 1 / -1;
+    margin-bottom: 0.4rem;
+  }
+
+  @media (min-width: 1024px) {
+    .periodic {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .el-key {
+      grid-column: 3 / 8;
+      grid-row: 1 / 4;
+      margin: 0 0.75rem 0.75rem;
+    }
+
+    .el-cell {
+      grid-column: var(--c);
+      grid-row: var(--r);
+    }
+  }
+
+  .el-face {
+    --tag: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    aspect-ratio: 1;
+    min-width: 0;
+    padding: 0.3rem 0.35rem 0.35rem;
+    border: 1px solid color-mix(in oklab, var(--tag) 32%, var(--line));
+    border-radius: 0.45rem;
+    background: linear-gradient(
+      155deg,
+      color-mix(in oklab, var(--tag) 16%, var(--surface)),
+      color-mix(in oklab, var(--tag) 5%, var(--surface)) 70%
+    );
+    font-family: var(--font-mono);
+    color: var(--tag);
+    text-decoration: none;
+  }
+
+  .el {
+    transition:
+      translate 160ms ease,
+      box-shadow 160ms ease,
+      border-color 160ms ease,
+      opacity 200ms ease,
+      filter 200ms ease;
+  }
+
+  .el-num {
+    font-size: 0.6rem;
+    line-height: 1;
+    color: var(--muted);
+  }
+
+  .el-sym {
+    align-self: center;
+    justify-self: center;
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .el-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0.55rem;
+    line-height: 1.2;
+    color: var(--fg);
+    opacity: 0.75;
+  }
+
+  .el:hover,
+  .el:focus-visible {
+    translate: 0 -3px;
+    border-color: var(--tag);
+    box-shadow: 0 12px 22px -14px var(--tag);
+  }
+
+  .el[data-active] {
+    border-color: var(--tag);
+    box-shadow: inset 0 0 0 1px var(--tag);
+  }
+
+  .el[data-active]:hover {
+    box-shadow:
+      inset 0 0 0 1px var(--tag),
+      0 12px 22px -14px var(--tag);
+  }
+
+  .el[data-dim] {
+    opacity: 0.2;
+    filter: grayscale(1);
+  }
+
+  /* Placeholder for everything older, like the lanthanide gap in the real table. */
+  .el-cellar {
+    --tag: var(--muted);
+    border-style: dashed;
+    border-color: var(--line);
+    background: transparent;
+  }
+
+  .el-cellar .el-sym {
+    font-size: 1.05rem;
+  }
+
+  .el-cellar:hover {
+    --tag: var(--accent);
+  }
+
+  .el-key {
+    --tag: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    min-width: 0;
+    padding: 0.85rem 1rem 1rem;
+    border: 1px dashed color-mix(in oklab, var(--tag) 40%, var(--line));
+    border-radius: 0.6rem;
+    background:
+      radial-gradient(circle at 0% 0%, color-mix(in oklab, var(--tag) 13%, transparent), transparent 65%),
+      var(--surface);
+    transition: border-color 200ms ease;
+  }
+
+  .el-key-body {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .el-key-tile {
+    padding: 0.45rem 0.5rem 0.5rem;
+    border-color: var(--tag);
+    box-shadow: 0 14px 28px -18px var(--tag);
+  }
+
+  .el-key-tile .el-num {
+    font-size: 0.75rem;
+  }
+
+  .el-key-tile .el-sym {
+    font-size: 2.6rem;
+  }
+
+  .el-key-tile .el-name {
+    font-size: 0.7rem;
+  }
+
+  .el-year {
+    position: absolute;
+    top: 0.45rem;
+    right: 0.5rem;
+    font-size: 0.6rem;
+    line-height: 1;
+    color: var(--muted);
+  }
+
+  .el-key-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .el-key-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-top: 0.3rem;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .el-key-desc:empty {
+    display: none;
+  }
+
+  .el-key-meta {
+    margin-top: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+
+  .el-key-group {
+    color: var(--tag);
+  }
+
+  .el-key-open {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .el-key-open:hover {
+    text-decoration: underline;
+  }
+
+  .periodic-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .el-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .el-group {
+    --tag: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .el-group:hover,
+  .el-group:focus-visible {
+    color: var(--tag);
+  }
+
+  .el-swatch {
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 1px solid var(--tag);
+    border-radius: 0.2rem;
+    background: color-mix(in oklab, var(--tag) 25%, var(--surface));
+  }
+
+  /* Elements settle into place column by column as the table scrolls into view. */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .el-cell {
+        animation: el-in linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover calc(10% + var(--c, 1) * 1.5%);
+      }
+    }
+  }
+
+  @keyframes el-in {
+    from {
+      opacity: 0;
+      translate: 0 0.8rem;
+      scale: 0.85;
+    }
   }
 
   .graph-teaser {
