@@ -36,7 +36,10 @@ const columns: { title: string; links: { href: string; label: string; me?: boole
 <footer class="site-footer mt-24 border-t border-line">
   <div class="shell grid gap-8 py-10 sm:grid-cols-[1.5fr_repeat(3,1fr)]">
     <div>
-      <p class="font-mono text-sm"><span class="text-accent">~/</span>abhith</p>
+      <p class="flex items-center font-mono text-sm">
+        <img src="/img/site/brand/icon.png" alt="" width="20" height="20" class="brand-mark" loading="lazy" decoding="async" />
+        <span class="text-accent">~/</span>abhith
+      </p>
       <p class="mt-2 max-w-xs text-sm text-muted">{SITE.description}</p>
       <p class="mono-label mt-4">
         © {year} {SITE.author.name} ·{" "}
@@ -61,3 +64,14 @@ const columns: { title: string; links: { href: string; label: string; me?: boole
     }
   </div>
 </footer>
+
+<style>
+  /* Same tile as the header and favicon, so the page opens and closes on the same mark. */
+  .brand-mark {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0 1px var(--line);
+  }
+</style>
