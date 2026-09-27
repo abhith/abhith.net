@@ -123,6 +123,10 @@
   slug: cache
   description: One area to check for performance.
   image: ""
+- title: Google Chrome
+  slug: chrome
+  description: "Google's fast, secure web browser — tips, extensions and news around Chrome and its DevTools."
+  image: "chrome.svg"
 - title: CI/CD
   slug: ci-cd
   description: ""
@@ -139,6 +143,10 @@
   slug: cloud-native
   description: ""
   image: "cncf.svg"
+- title: Code Quality
+  slug: code-quality
+  description: "Linters, static analysis and practices that keep a codebase clean, consistent and maintainable."
+  image: ""
 - title: CMS
   slug: cms
   description: Best in class listed under this tag
@@ -206,6 +214,10 @@
   slug: design-patterns
   description: ""
   image: ""
+- title: Design Tools
+  slug: design-tool
+  description: "Online tools for quickly creating graphics, social media images and other visual content without a full design suite."
+  image: ""
 - title: Developer Tools
   slug: developer-tools
   description: ""
@@ -214,6 +226,10 @@
   slug: devops
   description: ""
   image: ""
+- title: DocFX
+  slug: docfx
+  description: "DocFX is a static site generator that builds API reference and conceptual documentation from .NET source code and Markdown files."
+  image: "docfx.svg"
 - title: Documentation
   slug: documentation
   description: ""
@@ -238,6 +254,14 @@
   slug: drawing
   description: ""
   image: ""
+- title: eBooks
+  slug: ebooks
+  description: "Free and noteworthy eBooks for developers and IT professionals."
+  image: ""
+- title: Entity Framework
+  slug: entity-framework
+  description: "Entity Framework is Microsoft's object-relational mapper (ORM) that lets .NET developers work with a database using .NET objects."
+  image: "dotnet.svg"
 - title: Entity Framework Core
   slug: ef-core
   description: ""
@@ -262,6 +286,10 @@
   slug: flutter
   description: ""
   image: flutter.svg
+- title: General
+  slug: general
+  description: "Personal updates, year-in-review posts and everything else that doesn't fit a specific technology."
+  image: ""
 - title: Gatsby
   slug: gatsby
   description: ""
@@ -302,6 +330,10 @@
   slug: grpc
   description: ""
   image: "grpc.svg"
+- title: Guides
+  slug: guides
+  description: "Practical guidelines and how-tos on everyday engineering practices such as code reviews and giving feedback."
+  image: ""
 - title: Helm
   slug: helm
   description: ""
@@ -374,6 +406,14 @@
   slug: laptops
   description: ""
   image: ""
+- title: Learn
+  slug: learn
+  description: "Learning resources, skill challenges and training offers to keep growing as a developer."
+  image: ""
+- title: Localization
+  slug: localization
+  description: "Adapting applications to different languages, cultures and regions — resource labels, right-to-left scripts and more."
+  image: ""
 - title: Logging
   slug: logging
   description: ""
@@ -402,6 +442,10 @@
   slug: messaging
   description: ""
   image: ""
+- title: Meta
+  slug: meta
+  description: "Meta Platforms, the company behind Facebook, Instagram, WhatsApp, Quest VR headsets and Ray-Ban Meta smart glasses."
+  image: "meta.svg"
 - title: Microsoft
   slug: microsoft
   description: ""
@@ -485,13 +529,33 @@
   slug: react
   description: ""
   image: react.svg
+- title: React Native
+  slug: react-native
+  description: "React Native is a framework for building native Android and iOS apps using React and JavaScript."
+  image: "react.svg"
 - title: ReSharper
   slug: resharper
   description: ""
   image: "resharper.svg"
+- title: Rewrite Rules
+  slug: rewrite-rule
+  description: "IIS URL Rewrite rules in web.config for redirects such as HTTP to HTTPS and www to non-www."
+  image: ""
+- title: RxJS
+  slug: rxjs
+  description: "RxJS is a library for reactive programming using Observables, making it easier to compose asynchronous or callback-based code."
+  image: "rxjs.svg"
 - title: Personal Finance
   slug: personal-finance
   description: ""
+  image: ""
+- title: Playwright
+  slug: playwright
+  description: "Playwright is Microsoft's open-source framework for reliable end-to-end testing and automation across Chromium, Firefox and WebKit."
+  image: "playwright.svg"
+- title: Post-mortems
+  slug: post-mortems
+  description: "Incident reports and outage write-ups — what went wrong, why, and the lessons learned."
   image: ""
 - title: PowerShell
   slug: powershell
@@ -525,6 +589,14 @@
   slug: serilog
   description: ""
   image: "serilog.png"
+- title: Serverless
+  slug: serverless
+  description: "Running code on demand without managing servers, using services such as Azure Functions and AWS Lambda."
+  image: "serverless.svg"
+- title: SharePoint
+  slug: sharepoint
+  description: "Microsoft SharePoint is a web-based collaboration, document management and intranet platform."
+  image: "sharepoint.svg"
 - title: Shopping Guide
   slug: shopping-guide
   description: ""
@@ -533,6 +605,10 @@
   slug: signalr
   description: ""
   image: "microsoft-5.svg"
+- title: Sitefinity
+  slug: sitefinity
+  description: "Progress Sitefinity is an ASP.NET based content management system for building and managing websites."
+  image: "progress.svg"
 - title: Software Development
   slug: software-development
   description: ""
@@ -565,6 +641,10 @@
   slug: synology
   description: ""
   image: "synology.svg"
+- title: Terraform
+  slug: terraform
+  description: "Terraform by HashiCorp is an infrastructure as code tool to provision and manage cloud resources declaratively."
+  image: "terraform.svg"
 - title: Testing
   slug: testing
   description: ""
@@ -602,6 +682,10 @@
 - title: WCF
   slug: wcf
   description: ""
+  image: ""
+- title: Web
+  slug: web
+  description: "Web platform features and browser APIs, like the Web Share API."
   image: ""
 - title: Web3
   slug: web3
