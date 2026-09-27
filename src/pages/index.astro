@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import portrait from "@/assets/abhith-dubai-airshow.jpg";
 import PostRow from "@/components/content/PostRow.astro";
 import StoryItem from "@/components/content/StoryItem.astro";
 import TagToken from "@/components/content/TagToken.astro";
@@ -43,28 +45,49 @@ const dirs = [
       </div>
     </div>
 
-    <div class="window terminal" role="group" aria-label="Terminal introduction">
-      <div class="window-bar">
-        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span>abhith@workspace: ~</span>
-      </div>
-      <div class="terminal-body">
-        <p class="line"><span class="prompt">$</span> <span class="typed" style="--chars: 6">whoami</span></p>
-        <p class="out out-1">Abhith Rajan — software engineer, writer, technology advocate</p>
-        <p class="line line-2"><span class="prompt">$</span> <span class="typed" style="--chars: 13">cat about.txt</span></p>
-        <p class="out out-2">{intro}</p>
-        <p class="line line-3"><span class="prompt">$</span> <span class="typed" style="--chars: 5">ls ~/</span></p>
-        <ul class="out out-3 ls-grid">
-          {
-            dirs.map((dir) => (
-              <li>
-                <a href={dir.href}>{dir.label}</a>
-                <span class="text-muted"> {dir.count}</span>
-              </li>
-            ))
-          }
-        </ul>
-        <p class="line line-4"><span class="prompt">$</span> <span class="cursor" aria-hidden="true"></span></p>
+    <div class="hero-desk">
+      <figure class="window photo-window">
+        <div class="window-bar">
+          <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>~/photos/me.jpg</span>
+        </div>
+        <div class="photo-frame">
+          <Image
+            src={portrait}
+            alt="Abhith Rajan in a blue suit, standing in front of an Airbus A400M at the Dubai Airshow"
+            widths={[320, 480, 640, 960]}
+            sizes="(min-width: 1024px) 20rem, (min-width: 640px) 60vw, 70vw"
+            loading="eager"
+            fetchpriority="high"
+            class="photo"
+          />
+          <figcaption class="photo-tag"><span aria-hidden="true">📍</span> Dubai Airshow · 2023</figcaption>
+        </div>
+      </figure>
+
+      <div class="window terminal" role="group" aria-label="Terminal introduction">
+        <div class="window-bar">
+          <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>abhith@workspace: ~</span>
+        </div>
+        <div class="terminal-body">
+          <p class="line"><span class="prompt">$</span> <span class="typed" style="--chars: 6">whoami</span></p>
+          <p class="out out-1">Abhith Rajan — software engineer, writer, technology advocate</p>
+          <p class="line line-2"><span class="prompt">$</span> <span class="typed" style="--chars: 13">cat about.txt</span></p>
+          <p class="out out-2">{intro}</p>
+          <p class="line line-3"><span class="prompt">$</span> <span class="typed" style="--chars: 5">ls ~/</span></p>
+          <ul class="out out-3 ls-grid">
+            {
+              dirs.map((dir) => (
+                <li>
+                  <a href={dir.href}>{dir.label}</a>
+                  <span class="text-muted"> {dir.count}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <p class="line line-4"><span class="prompt">$</span> <span class="cursor" aria-hidden="true"></span></p>
+        </div>
       </div>
     </div>
   </section>
@@ -137,6 +160,86 @@ const dirs = [
 </BaseLayout>
 
 <style>
+  /* Two overlapping desktop windows: a photo viewer peeking out from behind the terminal. */
+  .hero-desk {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-window {
+    position: relative;
+    z-index: 0;
+    align-self: flex-end;
+    width: 70%;
+    margin: 0;
+    rotate: 2.5deg;
+    transform-origin: 50% 100%;
+    transition:
+      rotate 200ms ease,
+      translate 200ms ease;
+    animation: pop-in 0.5s 0.1s cubic-bezier(0.2, 0.9, 0.3, 1.2) backwards;
+  }
+
+  .photo-frame {
+    position: relative;
+  }
+
+  .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .photo-tag {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--surface) 85%, transparent);
+    backdrop-filter: blur(6px);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--fg);
+  }
+
+  .hero-desk .terminal {
+    position: relative;
+    z-index: 1;
+    margin-top: -18%;
+  }
+
+  @media (min-width: 640px) {
+    .photo-window {
+      width: 60%;
+    }
+
+    .hero-desk .terminal {
+      width: 90%;
+      margin-top: -26%;
+    }
+  }
+
+  /* Hovering the photo brings its window to the front, like focusing a desktop window. */
+  @media (hover: hover) {
+    .photo-window:hover {
+      z-index: 2;
+      rotate: 0deg;
+      translate: 0 -0.5rem;
+    }
+  }
+
+  @keyframes pop-in {
+    from {
+      opacity: 0;
+      scale: 0.92;
+      rotate: 6deg;
+    }
+  }
+
   .terminal-body {
     padding: 1.1rem 1.2rem 1.3rem;
     font-family: var(--font-mono);
