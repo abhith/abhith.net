@@ -14,6 +14,7 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypeSlug from "rehype-slug";
 import remarkEmoji from "remark-emoji";
 import { rehypeFigureCaption } from "./src/plugins/rehype-figure-caption.ts";
+import { rehypeOutboundLinks } from "./src/plugins/rehype-outbound-links.ts";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.ts";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.ts";
 
@@ -46,6 +47,7 @@ export default defineConfig({
           rehypeExternalLinks,
           { target: "_blank", rel: ["nofollow", "noopener"] },
         ],
+        rehypeOutboundLinks,
         rehypeFigureCaption,
       ],
     }),

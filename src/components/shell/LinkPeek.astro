@@ -1,0 +1,105 @@
+---
+/**
+ * Status-bar link preview, the terminal take on a browser's link-hover URL: hovering or focusing any
+ * link shows the command it stands for — `cd ../snippets/`, `grep -n "#setup"`, `open github.com/…` ↗.
+ * Visitors see where a link leads (and that it leaves the site) before clicking, with no interim page.
+ * Visual only: the links themselves already say where they go to assistive tech.
+ */
+---
+
+<span class="peek" data-link-peek aria-hidden="true" hidden>
+  <span class="peek-dollar">$</span>
+  <span class="peek-cmd" data-link-peek-cmd></span>
+  <span class="peek-out" data-link-peek-out>↗</span>
+</span>
+
+<script>
+  import { peekCommand } from "@/lib/palette";
+
+  let active: HTMLAnchorElement | null = null;
+
+  const hide = () => {
+    active = null;
+    const peek = document.querySelector<HTMLElement>("[data-link-peek]");
+    if (peek) peek.hidden = true;
+  };
+
+  const show = (link: HTMLAnchorElement) => {
+    const peek = document.querySelector<HTMLElement>("[data-link-peek]");
+    const cmd = peek?.querySelector<HTMLElement>("[data-link-peek-cmd]");
+    const out = peek?.querySelector<HTMLElement>("[data-link-peek-out]");
+    if (!peek || !cmd || !out || peek.contains(link)) return;
+    const result = peekCommand(new URL(window.location.href), new URL(link.href, window.location.href));
+    if (!result) return hide();
+    active = link;
+    cmd.textContent = result.command;
+    out.hidden = !result.external;
+    peek.hidden = false;
+  };
+
+  const linkFrom = (target: EventTarget | null) => (target instanceof Element ? target.closest<HTMLAnchorElement>("a[href]") : null);
+
+  document.addEventListener("pointerover", (event) => {
+    if (event.pointerType !== "mouse") return;
+    const link = linkFrom(event.target);
+    if (link && link !== active) show(link);
+  });
+  document.addEventListener("pointerout", (event) => {
+    if (active && !active.contains(event.relatedTarget as Node | null)) hide();
+  });
+  document.addEventListener("focusin", (event) => {
+    const link = linkFrom(event.target);
+    if (link) show(link);
+  });
+  document.addEventListener("focusout", hide);
+  document.addEventListener("astro:before-preparation", hide);
+</script>
+
+<style>
+  .peek {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5ch;
+    min-width: 0;
+    padding: 0 0.45rem;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--fg);
+    animation: peek-in 120ms ease-out;
+  }
+
+  .peek[hidden] {
+    display: none;
+  }
+
+  .peek-dollar {
+    color: var(--accent);
+  }
+
+  .peek-cmd {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .peek-out {
+    color: var(--warm);
+  }
+
+  @keyframes peek-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @media (hover: none), (max-width: 40rem) {
+    .peek {
+      display: none !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .peek {
+      animation: none;
+    }
+  }
+</style>

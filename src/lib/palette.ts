@@ -112,6 +112,35 @@ export function cdCommand(from: string, to: string): string {
   return `cd ~${dest}`;
 }
 
+export interface Peek {
+  command: string;
+  /** Leaves the site (shown with ↗). */
+  external: boolean;
+}
+
+/**
+ * What the status bar previews for a hovered link, as a shell command relative to the current page:
+ * pages → `cd ../snippets/`, files → `cat ~/blog/rss.xml`, anchors → `grep -n "#setup"`,
+ * mail → `mail abhith@pm.me`, other sites → `open github.com/abhith`. `null` when there's nothing to say.
+ */
+export function peekCommand(current: URL, target: URL, maxLength = 56): Peek | null {
+  if (target.protocol === "mailto:") return { command: `mail ${decodeURIComponent(target.pathname)}`, external: true };
+  if (target.protocol !== "https:" && target.protocol !== "http:") return null;
+
+  if (target.origin !== current.origin) {
+    const where = `${target.hostname.replace(/^www\./, "")}${target.pathname.replace(/\/$/, "")}`;
+    const short = where.length > maxLength ? `${where.slice(0, maxLength - 1)}…` : where;
+    return { command: `open ${short}`, external: true };
+  }
+
+  if (target.pathname === current.pathname) {
+    return target.hash ? { command: `grep -n "${decodeURIComponent(target.hash)}"`, external: false } : null;
+  }
+  if (/\.[a-z0-9]+$/i.test(target.pathname)) return { command: `cat ~${target.pathname}`, external: false };
+  const command = cdCommand(current.pathname, target.pathname);
+  return command === "cd ." ? null : { command, external: false };
+}
+
 export type LsTarget = "posts" | "snippets" | "topics" | "pages";
 export const LS_TARGETS: LsTarget[] = ["posts", "snippets", "topics", "pages"];
 

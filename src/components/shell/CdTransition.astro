@@ -2,7 +2,7 @@
 /**
  * Page-transition HUD: on every client-side navigation a tiny prompt above the status bar
  * "types" the equivalent shell command (`cd ..`, `cd ~/topics/azure/`) while the next page loads.
- * Header tabs preview their command on hover, so clicks on them skip the HUD (touch devices keep it).
+ * Before the click, LinkPeek.astro previews the same command in the status bar.
  * Persisted across swaps so it can finish its animation on the new page.
  */
 ---
@@ -16,18 +16,13 @@
   import { cdCommand } from "@/lib/palette";
 
   const prettyCwd = (path: string) => `~${path.replace(/\/$/, "")}`;
-  /** Where Header.astro already typed the command over the hovered/focused tab. */
-  const tabPreview = window.matchMedia("(hover: hover) and (min-width: 40rem)");
   let hideTimer = 0;
-
-  const previewedByTab = (source: Element | undefined) =>
-    !!source?.closest("[data-cd-tab]") && (tabPreview.matches || source.matches(":focus-visible"));
 
   document.addEventListener("astro:before-preparation", (event) => {
     const hud = document.querySelector<HTMLElement>("[data-cd-hud]");
     const cmd = hud?.querySelector<HTMLElement>("[data-cd-cmd]");
     const cwd = hud?.querySelector<HTMLElement>("[data-cd-cwd]");
-    if (!hud || !cmd || !cwd || previewedByTab(event.sourceElement)) return;
+    if (!hud || !cmd || !cwd) return;
     const command = cdCommand(event.from.pathname, event.to.pathname);
     if (command === "cd .") return;
 

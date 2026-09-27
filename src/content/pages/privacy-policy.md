@@ -25,7 +25,7 @@ Some pages show ads served by Google AdSense. Google and its partners may use co
 
 #### Contact form
 
-Messages sent from the [contact page](/contact/) are delivered through [Getform](https://getform.io). Your name, email and message are used only to reply to you.
+Messages sent from the [contact page](/contact/) are delivered through [Forminit](https://forminit.com/privacy-policy/) (formerly Getform). Your name, email and message are used only to reply to you.
 
 #### Cookies
 

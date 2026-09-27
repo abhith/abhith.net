@@ -8,10 +8,10 @@ import { join } from "node:path";
 import { getCollection } from "astro:content";
 
 const LAYERS: { name: string; slugs: string[] }[] = [
-  { name: "runtime", slugs: ["dotnet", "aspnet-core", "aspire", "sql-server"] },
+  { name: "backend", slugs: ["dotnet", "aspnet-core", "aspire", "sql-server"] },
+  { name: "frontend", slugs: ["typescript", "javascript", "react", "angular", "vue", "nextjs", "css"] },
   { name: "cloud", slugs: ["azure", "aks", "docker", "kubernetes", "helm"] },
   { name: "delivery", slugs: ["github-actions", "azure-devops", "app-insights"] },
-  { name: "frontend", slugs: ["typescript", "angular", "react"] },
   { name: "ai", slugs: ["github-copilot", "ai"] },
 ];
 

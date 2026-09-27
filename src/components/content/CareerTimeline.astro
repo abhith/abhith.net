@@ -4,6 +4,7 @@
  * one is `HEAD -> main`, and a change of country is drawn as a branch line between commits.
  */
 import { CAREER, formatStart, roleHash, tenure, yearsCoding } from "@/lib/career";
+import { withRef } from "@/lib/outbound";
 
 const countryOf = (location: string) => (location === "India" ? "India" : "UAE");
 const countries = new Set(CAREER.map((role) => countryOf(role.location)));
@@ -59,7 +60,7 @@ const commits = CAREER.map((role, index) => {
                 {commit.root && <span class="ref ref--tag">tag: hello-world</span>}
                 <span class="subject">
                   {commit.role.url ? (
-                    <a href={`${commit.role.url}?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about`} rel="noopener" target="_blank">
+                    <a href={withRef(commit.role.url, { campaign: "about", content: "career" })} rel="noopener" target="_blank">
                       {commit.role.company}
                     </a>
                   ) : (

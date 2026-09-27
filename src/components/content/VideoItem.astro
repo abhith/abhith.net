@@ -4,6 +4,7 @@
  * keeping listing pages free of third-party JS.
  */
 import { shortDate } from "@/lib/format";
+import { withRef } from "@/lib/outbound";
 import TagToken from "./TagToken.astro";
 
 interface Props {
@@ -21,7 +22,7 @@ const thumbnail = image || (youtubeId ? `https://i.ytimg.com/vi/${youtubeId}/hqd
 ---
 
 <li class="video">
-  <a href={url} class="video-link" target="_blank" rel="noopener">
+  <a href={withRef(url, { campaign: "recommended-videos" })} class="video-link" target="_blank" rel="noopener">
     <span class="video-thumb">
       {thumbnail && <img src={thumbnail} alt="" width="480" height="360" loading="lazy" decoding="async" />}
       <span class="video-play" aria-hidden="true">▶</span>

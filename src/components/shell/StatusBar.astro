@@ -1,5 +1,6 @@
 ---
 import { BUILD } from "@/lib/build-info";
+import LinkPeek from "./LinkPeek.astro";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
 
 interface Props {
@@ -26,6 +27,7 @@ const { readingTime } = Astro.props;
         </>
       )
     }
+    <LinkPeek />
   </div>
   <div class="status-right">
     <button type="button" class="item item--button" data-palette-open aria-label="Open command palette">

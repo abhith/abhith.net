@@ -1,5 +1,6 @@
 ---
 import { plural, shortDate } from "@/lib/format";
+import { withRef } from "@/lib/outbound";
 import { webmentionsFor } from "@/lib/webmentions";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 const mentions = await webmentionsFor(Astro.props.path);
 const faces = mentions.filter((mention) => mention.type === "like" || mention.type === "repost");
 const replies = mentions.filter((mention) => mention.type === "reply" || mention.type === "mention");
+const ref = (href: string) => withRef(href, { campaign: "webmentions" });
 ---
 
 {
@@ -21,7 +23,7 @@ const replies = mentions.filter((mention) => mention.type === "reply" || mention
         <ul class="faces">
           {faces.map((mention) => (
             <li>
-              <a href={mention.author.url ?? mention.url} title={`${mention.author.name} (${mention.type})`} target="_blank" rel="noopener nofollow">
+              <a href={ref(mention.author.url ?? mention.url)} title={`${mention.author.name} (${mention.type})`} target="_blank" rel="noopener nofollow">
                 {mention.author.photo ? (
                   <img src={mention.author.photo} alt={mention.author.name} width="32" height="32" loading="lazy" decoding="async" />
                 ) : (
@@ -37,11 +39,11 @@ const replies = mentions.filter((mention) => mention.type === "reply" || mention
           {replies.map((mention) => (
             <li class="reply">
               <p class="mono-label">
-                <a href={mention.author.url ?? mention.url} target="_blank" rel="noopener nofollow">
+                <a href={ref(mention.author.url ?? mention.url)} target="_blank" rel="noopener nofollow">
                   {mention.author.name}
                 </a>
                 {mention.published && <> · {shortDate(new Date(mention.published))}</>} ·{" "}
-                <a href={mention.url} target="_blank" rel="noopener nofollow">
+                <a href={ref(mention.url)} target="_blank" rel="noopener nofollow">
                   {mention.type}
                 </a>
               </p>

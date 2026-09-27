@@ -24,7 +24,7 @@ export const CAREER: Role[] = [
     title: "Software Engineer",
     location: "Dubai",
     flag: "🇦🇪",
-    note: "Architecting and shipping cloud-native .NET and web platforms for air-cargo operations — owning the path from design to Azure production: infrastructure, GitHub Actions delivery and observability.",
+    note: "Architecting and shipping cloud-native platforms for air-cargo operations — .NET services and TypeScript front ends, owned from design to Azure production: infrastructure, GitHub Actions delivery and observability.",
   },
   {
     start: "2019-03",
@@ -33,7 +33,7 @@ export const CAREER: Role[] = [
     title: "Software Developer",
     location: "Dubai",
     flag: "🇦🇪",
-    note: "Built and ran .NET services on Azure end to end — AKS and Helm, Azure DevOps CI/CD, Application Gateway, Cognitive Search and workflow automation.",
+    note: "Where I went deep on fintech — payment products where accuracy, security and audit trails are non-negotiable. Built and ran the .NET services and web front ends behind them on Azure: AKS and Helm, Azure DevOps CI/CD, Application Gateway and Cognitive Search.",
   },
   {
     start: "2018-09",

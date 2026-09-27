@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cdCommand, complete, fuzzyScore, lsKind, normalisePath, parentPath, parseInput, rank, type PaletteEntry } from "./palette";
+import { cdCommand, complete, fuzzyScore, lsKind, normalisePath, parentPath, parseInput, peekCommand, rank, type PaletteEntry } from "./palette";
 
 const entries: PaletteEntry[] = [
   { t: "Docker Cookbook", u: "/blog/docker-cookbook/", k: "post", g: ["docker"] },
@@ -71,6 +71,33 @@ describe("paths", () => {
     expect(lsKind("posts")).toBe("post");
     expect(lsKind("topics/")).toBe("topic");
     expect(lsKind("nope")).toBeUndefined();
+  });
+});
+
+describe("peekCommand", () => {
+  const here = new URL("https://www.abhith.net/blog/docker-cookbook/");
+  const peek = (href: string) => peekCommand(here, new URL(href, here));
+
+  it("previews internal pages as cd commands", () => {
+    expect(peek("/snippets/")).toEqual({ command: "cd ~/snippets/", external: false });
+    expect(peek("/blog/")).toEqual({ command: "cd ..", external: false });
+    expect(peek("/blog/other-post/")).toEqual({ command: "cd ../other-post/", external: false });
+  });
+
+  it("previews files, anchors and mail", () => {
+    expect(peek("/blog/rss.xml")?.command).toBe("cat ~/blog/rss.xml");
+    expect(peek("#setup")?.command).toBe('grep -n "#setup"');
+    expect(peek("mailto:abhith@pm.me")).toEqual({ command: "mail abhith@pm.me", external: true });
+  });
+
+  it("previews other sites as open, shortened", () => {
+    expect(peek("https://www.github.com/abhith/?utm_source=abhith.net")).toEqual({ command: "open github.com/abhith", external: true });
+    expect(peekCommand(here, new URL("https://example.com/a/very/long/path/that/keeps/going"), 20)?.command).toBe("open example.com/a/very/…");
+  });
+
+  it("stays quiet for the current page and non-web links", () => {
+    expect(peek("/blog/docker-cookbook/")).toBeNull();
+    expect(peek("tel:+971500000000")).toBeNull();
   });
 });
 

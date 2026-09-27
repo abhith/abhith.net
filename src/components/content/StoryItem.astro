@@ -1,5 +1,6 @@
 ---
 import { hostOf, shortDate } from "@/lib/format";
+import { withRef } from "@/lib/outbound";
 import TagToken from "./TagToken.astro";
 
 interface Props {
@@ -18,7 +19,7 @@ const { url, title, description, date, tags = [], compact = false } = Astro.prop
   <p class="mono-label">
     <span class="text-warm">{hostOf(url)}</span> · <time datetime={date.toISOString()}>{shortDate(date)}</time>
   </p>
-  <a href={url} class="story-title" target="_blank" rel="noopener">
+  <a href={withRef(url, { campaign: "recommended-stories" })} class="story-title" target="_blank" rel="noopener">
     {title}<span class="sr-only"> (opens in a new tab)</span><span aria-hidden="true" class="story-arrow">↗</span>
   </a>
   {!compact && description && <p class="story-desc">{description}</p>}
