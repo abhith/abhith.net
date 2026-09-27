@@ -1,5 +1,15 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/visualstudio/today-i-will-modernize-a-net-application/",
+    "title": "Today I will... Modernize a .NET application - Visual Studio Blog",
+    "description": "Today I will modernize a .NET Framework application to .NET 10 using the GitHub Copilot modernization tooling built-in to Visual Studio. The tooling",
+    "date": "2026-09-27T18:23:36Z",
+    "topics": [
+      "dotnet",
+      "visual-studio"
+    ]
+  },
+  {
     "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
     "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
     "description": "Learn how to view diffs, run terminal commands, and preview web apps side by side in the GitHub Copilot app.",
