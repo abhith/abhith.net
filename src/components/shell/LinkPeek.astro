@@ -3,7 +3,11 @@
  * Status-bar link preview, the terminal take on a browser's link-hover URL: hovering or focusing any
  * link shows the command it stands for — `cd ../snippets/`, `grep -n "#setup"`, `open github.com/…` ↗.
  * Visitors see where a link leads (and that it leaves the site) before clicking, with no interim page.
- * Visual only: the links themselves already say where they go to assistive tech.
+ * Outbound links also show who they credit (`?ref=abhith.net`), my own profiles say `# that's me`.
+ *
+ * Beyond links: any element with `data-peek="…"` previews that command (career commits, stack chips,
+ * share and theme buttons…), and code-block copy buttons preview `pbcopy < snippet.sh  # 3 lines`.
+ * Visual only: the elements themselves already describe what they do to assistive tech.
  */
 ---
 
@@ -11,12 +15,14 @@
   <span class="peek-dollar">$</span>
   <span class="peek-cmd" data-link-peek-cmd></span>
   <span class="peek-out" data-link-peek-out>↗</span>
+  <span class="peek-note" data-link-peek-note></span>
 </span>
 
 <script>
-  import { peekCommand } from "@/lib/palette";
+  import { copyPeek, peekCommand, type Peek } from "@/lib/palette";
 
-  let active: HTMLAnchorElement | null = null;
+  const PEEKABLE = "a[href], [data-peek], button[data-code]";
+  let active: HTMLElement | null = null;
 
   const hide = () => {
     active = null;
@@ -24,20 +30,38 @@
     if (peek) peek.hidden = true;
   };
 
-  const show = (link: HTMLAnchorElement) => {
+  /** The command an element stands for, plus a short trailing note. */
+  const describe = (el: HTMLElement): (Peek & { note?: string }) | null => {
+    if (el instanceof HTMLButtonElement && el.dataset.code !== undefined) {
+      return copyPeek(el.dataset.code, el.closest("figure")?.querySelector("pre")?.dataset.language);
+    }
+    const link = el instanceof HTMLAnchorElement ? el : null;
+    const base = link ? peekCommand(new URL(window.location.href), new URL(link.href, window.location.href)) : null;
+    const custom = el.dataset.peek;
+    if (!base && !custom) return null;
+    const result = { command: custom ?? base!.command, external: base?.external ?? false, ref: base?.ref };
+    if (link?.hasAttribute("download")) return { ...result, command: `curl -O ${link.pathname.split("/").pop()}` };
+    if (link?.relList.contains("me")) return { ...result, note: "# that's me" };
+    return { ...result, note: result.ref ? `?ref=${result.ref}` : undefined };
+  };
+
+  const show = (el: HTMLElement) => {
     const peek = document.querySelector<HTMLElement>("[data-link-peek]");
     const cmd = peek?.querySelector<HTMLElement>("[data-link-peek-cmd]");
     const out = peek?.querySelector<HTMLElement>("[data-link-peek-out]");
-    if (!peek || !cmd || !out || peek.contains(link)) return;
-    const result = peekCommand(new URL(window.location.href), new URL(link.href, window.location.href));
+    const note = peek?.querySelector<HTMLElement>("[data-link-peek-note]");
+    if (!peek || !cmd || !out || !note || peek.contains(el)) return;
+    const result = describe(el);
     if (!result) return hide();
-    active = link;
+    active = el;
     cmd.textContent = result.command;
     out.hidden = !result.external;
+    note.textContent = result.note ?? "";
+    note.hidden = !result.note;
     peek.hidden = false;
   };
 
-  const linkFrom = (target: EventTarget | null) => (target instanceof Element ? target.closest<HTMLAnchorElement>("a[href]") : null);
+  const linkFrom = (target: EventTarget | null) => (target instanceof Element ? target.closest<HTMLElement>(PEEKABLE) : null);
 
   document.addEventListener("pointerover", (event) => {
     if (event.pointerType !== "mouse") return;
@@ -83,6 +107,15 @@
 
   .peek-out {
     color: var(--warm);
+  }
+
+  .peek-note {
+    margin-left: 0.5ch;
+    color: var(--muted);
+  }
+
+  .peek-note[hidden] {
+    display: none;
   }
 
   @keyframes peek-in {

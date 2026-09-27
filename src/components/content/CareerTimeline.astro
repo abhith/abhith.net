@@ -8,10 +8,11 @@ import { withRef } from "@/lib/outbound";
 
 const countryOf = (location: string) => (location === "India" ? "India" : "UAE");
 const countries = new Set(CAREER.map((role) => countryOf(role.location)));
+/** `peek` is what the status bar "runs" on hover — the shell one-liner behind each number. */
 const stats = [
-  { value: `${yearsCoding()}+`, label: "years shipping" },
-  { value: String(CAREER.length), label: "companies" },
-  { value: String(countries.size), label: "countries" },
+  { value: `${yearsCoding()}+`, label: "years shipping", peek: `echo $(( $(date +%Y) - ${CAREER.at(-1)!.start.slice(0, 4)} ))` },
+  { value: String(CAREER.length), label: "companies", peek: "git log --oneline | wc -l" },
+  { value: String(countries.size), label: "countries", peek: "git branch --list | wc -l" },
 ];
 
 const commits = CAREER.map((role, index) => {
@@ -35,7 +36,7 @@ const commits = CAREER.map((role, index) => {
   <dl class="career-stats">
     {
       stats.map((stat) => (
-        <div>
+        <div data-peek={stat.peek}>
           <dt>{stat.label}</dt>
           <dd>{stat.value}</dd>
         </div>
@@ -52,7 +53,7 @@ const commits = CAREER.map((role, index) => {
       {
         commits.map((commit) => (
           <>
-            <li class:list={["commit", { "commit--head": commit.head }]}>
+            <li class:list={["commit", { "commit--head": commit.head }]} data-peek={`git show ${commit.hash} --stat  # ${commit.duration} at ${commit.role.company}`}>
               <span class="node" aria-hidden="true" />
               <p class="commit-line">
                 <span class="hash">{commit.hash}</span>
@@ -82,7 +83,7 @@ const commits = CAREER.map((role, index) => {
               <p class="note">{commit.role.note}</p>
             </li>
             {commit.moved && (
-              <li class="branch" aria-label={`Relocated ${commit.moved}`}>
+              <li class="branch" aria-label={`Relocated ${commit.moved}`} data-peek={`git checkout -b ${countryOf(commit.role.location).toLowerCase()}  # new country, same craft`}>
                 <span aria-hidden="true">|\</span> <span>relocated {commit.moved}</span>
               </li>
             )}

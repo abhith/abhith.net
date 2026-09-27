@@ -30,11 +30,11 @@ const { readingTime } = Astro.props;
     <LinkPeek />
   </div>
   <div class="status-right">
-    <button type="button" class="item item--button" data-palette-open aria-label="Open command palette">
+    <button type="button" class="item item--button" data-palette-open data-peek="help  # ⌘K, Ctrl+K or / opens the palette" aria-label="Open command palette">
       <kbd class="kbd">⌘K</kbd><span class="hide-sm">commands</span>
     </button>
     <span class="item"><ThemeSwitcher /></span>
-    <span class="item hide-sm" title={`Built ${BUILD.date} from ${BUILD.hash}`}>build {BUILD.hash} · {BUILD.date}</span>
+    <span class="item hide-sm" title={`Built ${BUILD.date} from ${BUILD.hash}`} data-peek={`git show ${BUILD.hash} --stat  # built ${BUILD.date}`}>build {BUILD.hash} · {BUILD.date}</span>
     <span class="item hide-sm">UTF-8</span>
   </div>
 </aside>

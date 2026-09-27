@@ -2,7 +2,7 @@
 import { SITE } from "@/lib/site";
 
 const year = new Date().getFullYear();
-const columns = [
+const columns: { title: string; links: { href: string; label: string; me?: boolean; peek?: string }[] }[] = [
   {
     title: "read",
     links: [
@@ -15,10 +15,10 @@ const columns = [
   {
     title: "follow",
     links: [
-      { href: "/blog/rss.xml", label: "rss" },
-      { href: SITE.author.url, label: "x" },
-      { href: `https://github.com/${SITE.social.github}`, label: "github" },
-      { href: "https://www.linkedin.com/in/abhith/", label: "linkedin" },
+      { href: "/blog/rss.xml", label: "rss", peek: "tail -f ~/blog/rss.xml  # follow new posts" },
+      { href: SITE.author.url, label: "x", me: true },
+      { href: `https://github.com/${SITE.social.github}`, label: "github", me: true },
+      { href: "https://www.linkedin.com/in/abhith/", label: "linkedin", me: true },
     ],
   },
   {
@@ -39,7 +39,8 @@ const columns = [
       <p class="font-mono text-sm"><span class="text-accent">~/</span>abhith</p>
       <p class="mt-2 max-w-xs text-sm text-muted">{SITE.description}</p>
       <p class="mono-label mt-4">
-        © {year} {SITE.author.name} · <a href={SITE.repo.url} class="underline">source</a>
+        © {year} {SITE.author.name} ·{" "}
+        <a href={SITE.repo.url} class="underline" data-peek={`git clone ${SITE.repo.url.replace(/^https?:\/\//, "")}`}>source</a>
       </p>
     </div>
     {
@@ -49,7 +50,7 @@ const columns = [
           <ul class="space-y-1 font-mono text-sm">
             {column.links.map((link) => (
               <li>
-                <a href={link.href} class="hover:text-accent">
+                <a href={link.href} class="hover:text-accent" rel={link.me ? "me" : undefined} data-peek={link.peek}>
                   {link.label}
                 </a>
               </li>

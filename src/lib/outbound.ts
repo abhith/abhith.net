@@ -1,7 +1,9 @@
 /**
- * Outbound links: every link that leaves the site gets `utm_source=abhith.net` (plus a medium and
- * campaign), so the sites I link to can see the traffic in their analytics. It's used by the
- * recommended cards and, through src/plugins/rehype-outbound-links.ts, by Markdown content.
+ * Outbound links: every link that leaves the site gets `ref=abhith.net` plus `utm_source=abhith.net`
+ * (with a medium and campaign), so the sites I link to can see the traffic in their analytics.
+ * `ref` is the short form Plausible, Fathom, Ghost, Substack & co. read, and it survives the privacy
+ * browsers/extensions that strip `utm_*`. Used by the recommended cards and, through
+ * src/plugins/rehype-outbound-links.ts, by Markdown content.
  */
 export const REF_SOURCE = "abhith.net";
 
@@ -34,7 +36,7 @@ export function isOutbound(href: string): boolean {
 }
 
 /**
- * Adds the UTM parameters to an outbound link. Leaves the link as-is when it is internal,
+ * Adds `ref` and the UTM parameters to an outbound link. Leaves the link as-is when it is internal,
  * not http(s), already tagged, one of my own profiles, or looks signed.
  */
 export function withRef(href: string, { campaign, content, medium = "referral" }: RefOptions): string {
@@ -44,9 +46,15 @@ export function withRef(href: string, { campaign, content, medium = "referral" }
   if (SELF_PROFILES.some((pattern) => pattern.test(`${url.hostname}${url.pathname}`))) return href;
   if ([...url.searchParams.keys()].some((key) => SIGNED_KEYS.test(key))) return href;
 
+  if (!url.searchParams.has("ref")) url.searchParams.set("ref", REF_SOURCE);
   url.searchParams.set("utm_source", REF_SOURCE);
   url.searchParams.set("utm_medium", medium);
   url.searchParams.set("utm_campaign", campaign);
   if (content) url.searchParams.set("utm_content", content);
   return url.href;
+}
+
+/** Who a link credits as the referrer (`utm_source`, else `ref`), if anyone. */
+export function refSourceOf(url: URL): string | undefined {
+  return url.searchParams.get("utm_source") ?? url.searchParams.get("ref") ?? undefined;
 }

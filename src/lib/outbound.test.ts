@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { refFor } from "../plugins/rehype-outbound-links";
-import { isOutbound, withRef } from "./outbound";
+import { isOutbound, refSourceOf, withRef } from "./outbound";
 
 describe("withRef", () => {
   it("tags outbound links with source, medium and campaign", () => {
     const url = new URL(withRef("https://forminit.com/", { campaign: "recommended-tools" }));
+    expect(url.searchParams.get("ref")).toBe("abhith.net");
     expect(url.searchParams.get("utm_source")).toBe("abhith.net");
     expect(url.searchParams.get("utm_medium")).toBe("referral");
     expect(url.searchParams.get("utm_campaign")).toBe("recommended-tools");
@@ -13,8 +14,20 @@ describe("withRef", () => {
 
   it("keeps existing query strings and hashes", () => {
     expect(withRef("https://example.com/docs?page=2#install", { campaign: "blog", content: "my-post" })).toBe(
-      "https://example.com/docs?page=2&utm_source=abhith.net&utm_medium=referral&utm_campaign=blog&utm_content=my-post#install",
+      "https://example.com/docs?page=2&ref=abhith.net&utm_source=abhith.net&utm_medium=referral&utm_campaign=blog&utm_content=my-post#install",
     );
+  });
+
+  it("never overwrites a ref the link already has", () => {
+    const url = new URL(withRef("https://github.com/dotnet/aspire?ref=main", { campaign: "blog" }));
+    expect(url.searchParams.get("ref")).toBe("main");
+    expect(url.searchParams.get("utm_source")).toBe("abhith.net");
+  });
+
+  it("reads back who a link credits", () => {
+    expect(refSourceOf(new URL(withRef("https://example.com/", { campaign: "blog" })))).toBe("abhith.net");
+    expect(refSourceOf(new URL("https://example.com/?ref=abhith.net"))).toBe("abhith.net");
+    expect(refSourceOf(new URL("https://example.com/"))).toBeUndefined();
   });
 
   it("leaves links alone when tagging would be wrong or pointless", () => {

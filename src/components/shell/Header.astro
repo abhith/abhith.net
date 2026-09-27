@@ -39,7 +39,7 @@ const section = Astro.url.pathname.split("/").filter(Boolean)[0] ?? "";
       </ul>
     </nav>
 
-    <button type="button" class="palette-trigger" data-palette-open aria-label="Open command palette" aria-keyshortcuts="Meta+K Control+K /">
+    <button type="button" class="palette-trigger" data-palette-open data-peek="help  # ⌘K, Ctrl+K or / opens the palette" aria-label="Open command palette" aria-keyshortcuts="Meta+K Control+K /">
       <span aria-hidden="true">›_</span>
       <span class="palette-trigger-text">run a command…</span>
       <kbd class="kbd">⌘K</kbd>

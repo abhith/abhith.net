@@ -22,12 +22,12 @@ const targets = [
   <span class="mono-label">share:</span>
   {
     targets.map((target) => (
-      <a href={target.href} target="_blank" rel="noopener" class="share-link">
+      <a href={target.href} target="_blank" rel="noopener" class="share-link" data-peek={`share --to=${target.label}  # thank you`}>
         {target.label}
       </a>
     ))
   }
-  <button type="button" class="share-link" data-copy-link={absolute}>copy link</button>
+  <button type="button" class="share-link" data-copy-link={absolute} data-peek={`pbcopy <<< "${absolute}"`}>copy link</button>
 </div>
 
 <script>

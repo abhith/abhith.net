@@ -1,7 +1,7 @@
 - name: Abhith Rajan
   slug: abhith
   bio: |
-    Abhith Rajan is a Dubai-based full-stack software engineer who has been shipping production software since 2012. He builds .NET back ends and TypeScript front ends (React, Angular, Vue), runs them on Azure, and writes about what he builds, breaks and fixes along the way.
+    Abhith Rajan is a Dubai-based full-stack software engineer who has been shipping production software since 2012. He builds .NET services and TypeScript web apps in React, Angular and Vue, backs them with SQL Server and Cosmos DB, runs them on Azure, and writes about what he builds, breaks and fixes along the way.
   avatar: ./avatars/abhith.jpg
   twitter: "@AbhithRajan"
   featured: true

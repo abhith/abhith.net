@@ -2,6 +2,7 @@
  * Pure logic for the terminal command palette: command parsing, fuzzy matching and
  * suggestions. No DOM access, so it can be unit-tested and shared by the island.
  */
+import { refSourceOf } from "./outbound";
 
 export type EntryKind = "page" | "post" | "snippet" | "topic";
 
@@ -116,6 +117,8 @@ export interface Peek {
   command: string;
   /** Leaves the site (shown with ↗). */
   external: boolean;
+  /** Who an outbound link credits as referrer (`?ref=abhith.net`), shown next to the command. */
+  ref?: string;
 }
 
 /**
@@ -130,7 +133,8 @@ export function peekCommand(current: URL, target: URL, maxLength = 56): Peek | n
   if (target.origin !== current.origin) {
     const where = `${target.hostname.replace(/^www\./, "")}${target.pathname.replace(/\/$/, "")}`;
     const short = where.length > maxLength ? `${where.slice(0, maxLength - 1)}…` : where;
-    return { command: `open ${short}`, external: true };
+    const ref = refSourceOf(target);
+    return ref ? { command: `open ${short}`, external: true, ref } : { command: `open ${short}`, external: true };
   }
 
   if (target.pathname === current.pathname) {
@@ -139,6 +143,16 @@ export function peekCommand(current: URL, target: URL, maxLength = 56): Peek | n
   if (/\.[a-z0-9]+$/i.test(target.pathname)) return { command: `cat ~${target.pathname}`, external: false };
   const command = cdCommand(current.pathname, target.pathname);
   return command === "cd ." ? null : { command, external: false };
+}
+
+/**
+ * Status-bar preview for an Expressive Code copy button: `pbcopy < snippet.sh  # 3 lines`.
+ * Expressive Code stores the block in `data-code`, with U+007F standing in for line breaks.
+ */
+export function copyPeek(code: string, language?: string): Peek {
+  const lines = code.split(/\u007f|\n/).length;
+  const file = `snippet.${language && /^[a-z0-9+#-]+$/i.test(language) ? language : "txt"}`;
+  return { command: `pbcopy < ${file}  # ${lines} ${lines === 1 ? "line" : "lines"}`, external: false };
 }
 
 export type LsTarget = "posts" | "snippets" | "topics" | "pages";

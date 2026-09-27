@@ -8,7 +8,8 @@ import { join } from "node:path";
 import { getCollection } from "astro:content";
 
 const LAYERS: { name: string; slugs: string[] }[] = [
-  { name: "backend", slugs: ["dotnet", "aspnet-core", "aspire", "sql-server"] },
+  { name: "backend", slugs: ["dotnet", "dotnet-core"] },
+  { name: "database", slugs: ["sql-server", "cosmos-db"] },
   { name: "frontend", slugs: ["typescript", "javascript", "react", "angular", "vue", "nextjs", "css"] },
   { name: "cloud", slugs: ["azure", "aks", "docker", "kubernetes", "helm"] },
   { name: "delivery", slugs: ["github-actions", "azure-devops", "app-insights"] },
@@ -22,7 +23,7 @@ const layers = LAYERS.map((layer) => ({
   name: layer.name,
   items: layer.slugs.flatMap((slug) => {
     const topic = topics.get(slug);
-    return topic ? [{ slug, title: topic.title, logo: logoFor(topic.image) }] : [];
+    return topic ? [{ slug, title: topic.title, logo: logoFor(topic.image), peek: slug === layer.name ? `man ${slug}` : `man ${slug}  # ${layer.name}` }] : [];
   }),
 })).filter((layer) => layer.items.length > 0);
 ---
@@ -40,7 +41,7 @@ const layers = LAYERS.map((layer) => ({
           <ul class="chips">
             {layer.items.map((item) => (
               <li>
-                <a href={`/topics/${item.slug}/`} class="chip">
+                <a href={`/topics/${item.slug}/`} class="chip" data-peek={item.peek}>
                   {item.logo && <img src={item.logo} alt="" width="16" height="16" loading="lazy" decoding="async" />}
                   {item.title}
                 </a>

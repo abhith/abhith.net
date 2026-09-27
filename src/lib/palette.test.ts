@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cdCommand, complete, fuzzyScore, lsKind, normalisePath, parentPath, parseInput, peekCommand, rank, type PaletteEntry } from "./palette";
+import { cdCommand, complete, copyPeek, fuzzyScore, lsKind, normalisePath, parentPath, parseInput, peekCommand, rank, type PaletteEntry } from "./palette";
 
 const entries: PaletteEntry[] = [
   { t: "Docker Cookbook", u: "/blog/docker-cookbook/", k: "post", g: ["docker"] },
@@ -91,8 +91,17 @@ describe("peekCommand", () => {
   });
 
   it("previews other sites as open, shortened", () => {
-    expect(peek("https://www.github.com/abhith/?utm_source=abhith.net")).toEqual({ command: "open github.com/abhith", external: true });
+    expect(peek("https://www.github.com/abhith/")).toEqual({ command: "open github.com/abhith", external: true });
     expect(peekCommand(here, new URL("https://example.com/a/very/long/path/that/keeps/going"), 20)?.command).toBe("open example.com/a/very/…");
+  });
+
+  it("shows who a tagged outbound link credits", () => {
+    expect(peek("https://learn.microsoft.com/azure/?ref=abhith.net&utm_source=abhith.net")).toEqual({ command: "open learn.microsoft.com/azure", external: true, ref: "abhith.net" });
+  });
+
+  it("previews code copy buttons", () => {
+    expect(copyPeek("git tag -d $(git tag -l)", "sh").command).toBe("pbcopy < snippet.sh  # 1 line");
+    expect(copyPeek("a\u007fb\u007fc").command).toBe("pbcopy < snippet.txt  # 3 lines");
   });
 
   it("stays quiet for the current page and non-web links", () => {

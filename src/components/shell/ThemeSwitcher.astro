@@ -1,4 +1,4 @@
-<button type="button" class="theme-switcher" data-theme-switcher aria-label="Switch colour theme" title="Switch theme (paper → midnight → solar)">
+<button type="button" class="theme-switcher" data-theme-switcher data-peek="theme --next" aria-label="Switch colour theme" title="Switch theme (paper → midnight → solar)">
   <span aria-hidden="true">◐</span>
   <span data-theme-label>theme</span>
 </button>
@@ -8,6 +8,8 @@
 
   function sync() {
     for (const label of document.querySelectorAll<HTMLElement>("[data-theme-label]")) label.textContent = currentTheme();
+    // Status-bar peek: what clicking will do.
+    for (const button of document.querySelectorAll<HTMLElement>("[data-theme-switcher]")) button.dataset.peek = `theme ${nextTheme()}  # now: ${currentTheme()}`;
   }
 
   document.addEventListener("click", (event) => {
