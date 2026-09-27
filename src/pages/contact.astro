@@ -7,9 +7,9 @@ import PageLayout from "@/layouts/PageLayout.astro";
  * (`fi-sender-*`, `fi-text-*`); `_gotcha` is its honeypot. The script below does what their 2 KB SDK
  * does — POST the FormData with fetch, plus any UTM tags — without loading a third-party script.
  * Without JavaScript the browser simply posts the form to the same endpoint.
- * Verify FORM_ID in app.forminit.com (Forms → Settings) and keep the form in "Public" mode.
+ * FORM_ID is the Forminit-native form (the legacy Getform one was deleted); keep it in "Public" mode.
  */
-const FORM_ID = "a29691ae-8828-49d6-9b50-242187f6ca83";
+const FORM_ID = "fl8eq9ldb9j";
 const FORM_ACTION = `https://forminit.com/f/${FORM_ID}`;
 ---
 
