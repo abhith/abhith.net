@@ -1,5 +1,33 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=9cFC3k6OxuU",
+    "title": "Googlebooks Might Just Be the Future of AI Laptops",
+    "topics": [
+      "google"
+    ],
+    "date": "2026-09-27T18:19:01Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=DIOtkouGh90",
+    "title": "Apple Design: The Reflection That Ended an Era (iOS 26 design review)",
+    "topics": [
+      "apple"
+    ],
+    "date": "2026-09-27T18:17:39Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=iZJq3G7fvbM",
+    "title": "I didn't know DevTools can do this...",
+    "topics": [
+      "chrome",
+      "developer-tools"
+    ],
+    "date": "2026-09-27T18:15:08Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=c3XMAz--_Us",
     "title": "PiHole VS AdGuard Home: Which is right for you?",
     "topics": [
