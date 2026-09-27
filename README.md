@@ -44,6 +44,19 @@ Any static host works. The build command is `npm run build` and the output direc
 
 URLs always end with a slash (`trailingSlash: "always"`), matching the Gatsby site.
 
+## CI
+
+GitHub Actions workflows live in `.github/workflows/`:
+
+| Workflow | Runs on | What it does |
+| --- | --- | --- |
+| `ci.yml` | PRs and pushes to `main` | `npm run check`, `npm test` and `npm run build`; uploads `dist/` as an artifact |
+| `codeql.yml` | PRs, pushes to `main`, weekly | CodeQL security scan of the JS/TS/Astro code and the workflows |
+| `dependency-review.yml` | PRs touching dependencies | Fails on newly introduced high-severity vulnerabilities |
+| `pr-title.yml` | PRs | Enforces Conventional Commits PR titles (`feat:`, `fix:`, `content(...)`, `chore(deps):` …) |
+
+The optional `WEBMENTIONS_TOKEN` repository secret is passed to the CI build when present.
+
 ## Writing content
 
 | Content | Location | Notes |

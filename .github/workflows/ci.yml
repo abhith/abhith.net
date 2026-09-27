@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  ASTRO_TELEMETRY_DISABLED: 1
+
+jobs:
+  check:
+    name: Type check & unit tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check (astro check)
+        run: npm run check
+
+      - name: Unit tests (vitest)
+        run: npm test
+
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Cache Astro build assets
+        uses: actions/cache@v6
+        with:
+          path: node_modules/.astro
+          key: astro-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            astro-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
+            astro-${{ runner.os }}-
+
+      - name: Build
+        run: npm run build
+        env:
+          # Pull requests are never deployed from here; keep them out of search engines just in case.
+          PUBLIC_SITE_ENV: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
+          # Optional: without it webmentions are skipped with a warning (always empty on fork PRs).
+          WEBMENTIONS_TOKEN: ${{ secrets.WEBMENTIONS_TOKEN }}
+
+      - name: Build summary
+        run: |
+          {
+            echo "### Build output"
+            echo ""
+            echo "| Metric | Value |"
+            echo "| --- | --- |"
+            echo "| HTML pages | $(find dist -name '*.html' | wc -l) |"
+            echo "| Total size | $(du -sh dist | cut -f1) |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+          retention-days: 7
+          if-no-files-found: error

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/abhith/abhith.net/security/advisories/new
+    about: Please report security issues privately instead of opening a public issue.
+  - name: Contact Abhith
+    url: https://www.abhith.net/contact/
+    about: Questions, feedback or just saying hi.

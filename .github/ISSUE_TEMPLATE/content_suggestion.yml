@@ -1,0 +1,32 @@
+name: Topic or content suggestion
+description: Suggest a blog post, snippet, story or recommended tool.
+title: "idea: "
+labels: ["content", "idea"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of content?
+      options:
+        - Blog post
+        - Snippet
+        - Story / video link
+        - Recommended service or tool
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggestion
+      description: What should be covered, and why would it be useful?
+    validations:
+      required: true
+
+  - type: input
+    id: links
+    attributes:
+      label: Related links
+      placeholder: https://...
+    validations:
+      required: false

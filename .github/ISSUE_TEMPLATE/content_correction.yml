@@ -1,0 +1,56 @@
+name: Content correction
+description: Report a typo, outdated information, broken link or technical mistake in a post or snippet.
+title: "content: "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Spotted something wrong in an article? Thank you! Small fixes are also very welcome as a pull request
+        against the `.mdx` file under `src/content/`.
+
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: https://www.abhith.net/blog/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of issue
+      options:
+        - Typo / grammar
+        - Broken link or image
+        - Outdated information
+        - Technical inaccuracy
+        - Code sample does not work
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: What does it currently say?
+      description: Quote the relevant text or code.
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggested
+    attributes:
+      label: What should it say?
+      description: Your suggested correction, with sources if relevant.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Contribution
+      options:
+        - label: I'm happy to open a pull request with the fix.
+          required: false
