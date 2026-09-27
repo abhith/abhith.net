@@ -1,4 +1,5 @@
 ---
+import { CAREER } from "@/lib/career";
 import { SITE } from "@/lib/site";
 
 /**
@@ -12,12 +13,14 @@ interface Props {
 const { nodes = [] } = Astro.props;
 const site = Astro.site?.href.replace(/\/$/, "") ?? SITE.url;
 
+const [current] = CAREER;
 const person = {
   "@type": "Person",
   "@id": `${site}/#person`,
   name: SITE.author.name,
   url: `${site}/about/`,
   image: `${site}${SITE.author.image}`,
+  ...(current ? { jobTitle: current.title, worksFor: { "@type": "Organization", name: current.company, url: current.url } } : {}),
   sameAs: [SITE.author.url, `https://github.com/${SITE.social.github}`, "https://www.linkedin.com/in/abhith/"],
 };
 

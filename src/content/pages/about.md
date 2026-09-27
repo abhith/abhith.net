@@ -5,7 +5,7 @@ title: About
 description: Abhith Rajan is a programmer, technologist, writer and more.
 ---
 
-I'm Abhith Rajan, a [Software Engineer](https://github.com/abhith) from India.
+I'm Abhith Rajan, a [Software Engineer](https://github.com/abhith) from India, shipping code professionally since 2012.
 I work for the IT Team at [National Air Cargo](https://www.nationalaircargo.com?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about). At the moment my desk is located in **Dubai Airport Freezone**.
 
 My role involves prototyping, and developing backend as well as front end apps with modern workflows, and frameworks.
@@ -13,8 +13,8 @@ Keeping an eye on the patterns and organized code. And deploy them to [Azure](/t
 
 I blog about programming, code, technology, and stuff that I'm interested in.
 
-You can find me on [Twitter](https://twitter.com/abhithrajan), [GitHub](https://github.com/Abhith), and [LinkedIn](https://www.linkedin.com/in/abhith/). If you want to email me, go ahead and send an email to [abhith@pm.me](mailto:abhith@pm.me).
+You can find me on [X (Twitter)](https://x.com/abhithrajan), [GitHub](https://github.com/Abhith), and [LinkedIn](https://www.linkedin.com/in/abhith/). If you want to email me, go ahead and send an email to [abhith@pm.me](mailto:abhith@pm.me).
 
-## BACKGROUND
+## Background
 
-My journey in software engineering began at [Aabasoft](https://www.aabasoft.com/in-en/?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about), where I started as an intern after completing my B-Tech education. I spent over 3 years there before moving on to roles at [Sysberries](http://sysberries.com?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about) and [Unibeton Ready Mix](http://www.unibetonrm.com/en-gl/home?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about), gaining valuable experience along the way. In 2019, I joined [Emcredit](https://www.emcredit.com?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about) before ultimately finding my place at [National Air Cargo](https://www.nationalaircargo.com?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about) in 2023.
+My journey began at [Aabasoft](https://www.aabasoft.com/in-en/?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about) in India, where I joined as an intern right after my B-Tech and stayed for over 3 years. In 2015 I moved to the UAE, and I've been building software here ever since — the full `git log` is below.

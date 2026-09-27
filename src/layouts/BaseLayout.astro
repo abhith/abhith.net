@@ -5,12 +5,14 @@ import "@fontsource-variable/newsreader";
 import "@fontsource-variable/newsreader/wght-italic.css";
 import "@/styles/global.css";
 
+import type { TransitionDirectionalAnimations } from "astro";
 import { ClientRouter } from "astro:transitions";
 import CommandPalette from "@/components/islands/CommandPalette";
 import Analytics from "@/components/seo/Analytics.astro";
 import JsonLd from "@/components/seo/JsonLd.astro";
 import Seo, { type SeoProps } from "@/components/seo/Seo.astro";
 import Footer from "@/components/shell/Footer.astro";
+import CdTransition from "@/components/shell/CdTransition.astro";
 import Header from "@/components/shell/Header.astro";
 import PathBreadcrumb, { type Crumb } from "@/components/shell/PathBreadcrumb.astro";
 import StatusBar from "@/components/shell/StatusBar.astro";
@@ -26,6 +28,14 @@ interface Props extends SeoProps {
 }
 
 const { crumbs, crumbExt, section, readingTime, jsonLd, ...seo } = Astro.props;
+
+/** Page content scrolls like terminal output: up when going forward, down when going back. Keyframes live in global.css. */
+const out = { duration: "140ms", easing: "ease-in", fillMode: "both" };
+const into = { duration: "260ms", easing: "cubic-bezier(0.2, 0.8, 0.2, 1)", fillMode: "both" };
+const terminalScroll: TransitionDirectionalAnimations = {
+  forwards: { old: { name: "cd-out-up", ...out }, new: { name: "cd-in-up", ...into } },
+  backwards: { old: { name: "cd-out-down", ...out }, new: { name: "cd-in-down", ...into } },
+};
 ---
 
 <!doctype html>
@@ -58,12 +68,15 @@ const { crumbs, crumbExt, section, readingTime, jsonLd, ...seo } = Astro.props;
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
     <Header />
-    {crumbs !== false && <PathBreadcrumb crumbs={crumbs} ext={crumbExt} />}
-    <main id="main" tabindex="-1">
-      <slot />
-    </main>
+    <div transition:name="page" transition:animate={terminalScroll}>
+      {crumbs !== false && <PathBreadcrumb crumbs={crumbs} ext={crumbExt} />}
+      <main id="main" tabindex="-1">
+        <slot />
+      </main>
+    </div>
     <Footer />
     <StatusBar section={section} readingTime={readingTime} />
+    <CdTransition />
     <CommandPalette client:idle transition:persist="command-palette" />
     <slot name="end" />
   </body>

@@ -1,0 +1,131 @@
+---
+/**
+ * Page-transition HUD: on every client-side navigation a tiny prompt above the status bar
+ * "types" the equivalent shell command (`cd ..`, `cd ~/topics/azure/`) while the next page loads.
+ * Persisted across swaps so it can finish its animation on the new page.
+ */
+---
+
+<div class="cd-hud" data-cd-hud aria-hidden="true" transition:persist="cd-hud">
+  <span class="cd-user">abhith@web</span>:<span class="cd-cwd" data-cd-cwd>~</span><span class="cd-dollar">$</span>
+  <span class="cd-cmd" data-cd-cmd></span><span class="cd-caret"></span>
+</div>
+
+<script>
+  import { cdCommand } from "@/lib/palette";
+
+  const prettyCwd = (path: string) => `~${path.replace(/\/$/, "")}`;
+  let hideTimer = 0;
+
+  document.addEventListener("astro:before-preparation", (event) => {
+    const hud = document.querySelector<HTMLElement>("[data-cd-hud]");
+    const cmd = hud?.querySelector<HTMLElement>("[data-cd-cmd]");
+    const cwd = hud?.querySelector<HTMLElement>("[data-cd-cwd]");
+    if (!hud || !cmd || !cwd) return;
+    const command = cdCommand(event.from.pathname, event.to.pathname);
+    if (command === "cd .") return;
+
+    window.clearTimeout(hideTimer);
+    cwd.textContent = prettyCwd(event.from.pathname);
+    cmd.textContent = command;
+    cmd.style.setProperty("--chars", String(command.length));
+    // Restart the typing animation even when navigations happen back to back.
+    hud.dataset.state = "";
+    void hud.offsetWidth;
+    hud.dataset.state = "typing";
+  });
+
+  document.addEventListener("astro:after-swap", () => {
+    const hud = document.querySelector<HTMLElement>("[data-cd-hud]");
+    if (!hud || hud.dataset.state !== "typing") return;
+    hideTimer = window.setTimeout(() => {
+      hud.dataset.state = "done";
+    }, 650);
+  });
+</script>
+
+<style>
+  .cd-hud {
+    position: fixed;
+    left: 0.75rem;
+    bottom: 2.35rem;
+    z-index: 45;
+    display: flex;
+    align-items: center;
+    max-width: calc(100vw - 1.5rem);
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 0.45rem;
+    background: color-mix(in oklab, var(--surface) 92%, transparent);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 12px 28px -18px color-mix(in oklab, var(--fg) 40%, transparent);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    translate: 0 0.4rem;
+    transition:
+      opacity 180ms ease,
+      translate 180ms ease;
+  }
+
+  .cd-hud[data-state="typing"] {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .cd-user {
+    color: var(--accent);
+  }
+
+  .cd-cwd {
+    color: var(--warm);
+  }
+
+  .cd-dollar {
+    margin: 0 0.45ch 0 0.1ch;
+  }
+
+  .cd-cmd {
+    display: inline-block;
+    overflow: hidden;
+    color: var(--fg);
+    width: calc(var(--chars, 0) * 1ch);
+  }
+
+  .cd-hud[data-state="typing"] .cd-cmd {
+    animation: cd-type 0.32s steps(var(--chars, 1)) both;
+  }
+
+  .cd-caret {
+    width: 0.55ch;
+    height: 1.05em;
+    margin-left: 0.1ch;
+    background: var(--accent);
+    animation: cd-blink 0.9s steps(1) infinite;
+  }
+
+  @keyframes cd-type {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes cd-blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cd-hud,
+    .cd-hud[data-state="typing"] .cd-cmd,
+    .cd-caret {
+      animation: none;
+      transition: none;
+      translate: none;
+    }
+  }
+</style>

@@ -96,6 +96,22 @@ export function parentPath(path: string): string {
   return parts.length <= 1 ? "/" : `/${parts.slice(0, -1).join("/")}/`;
 }
 
+/**
+ * The shell command a visitor "types" when navigating from one URL path to another, shown by the
+ * page-transition HUD: home → `cd ~`, up one level → `cd ..`, into a child → `cd azure/`,
+ * to a sibling → `cd ../docker/`, anywhere else → `cd ~/topics/azure/`.
+ */
+export function cdCommand(from: string, to: string): string {
+  const src = normalisePath(from);
+  const dest = normalisePath(to);
+  if (dest === src) return "cd .";
+  if (dest === "/") return "cd ~";
+  if (dest === parentPath(src)) return "cd ..";
+  if (dest.startsWith(src) && src !== "/") return `cd ${dest.slice(src.length)}`;
+  if (src !== "/" && parentPath(dest) === parentPath(src) && parentPath(src) !== "/") return `cd ../${dest.slice(parentPath(src).length)}`;
+  return `cd ~${dest}`;
+}
+
 export type LsTarget = "posts" | "snippets" | "topics" | "pages";
 export const LS_TARGETS: LsTarget[] = ["posts", "snippets", "topics", "pages"];
 

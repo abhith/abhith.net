@@ -1,8 +1,10 @@
 ---
+import CareerTimeline from "@/components/content/CareerTimeline.astro";
 import { Content, frontmatter } from "@/content/pages/about.md";
 import PageLayout from "@/layouts/PageLayout.astro";
 ---
 
 <PageLayout title={frontmatter.title} description={frontmatter.description} file="about.md">
   <Content />
+  <CareerTimeline slot="after" />
 </PageLayout>

@@ -1,0 +1,238 @@
+---
+/**
+ * Career timeline rendered as `git log --graph --decorate`: every role is a commit, the current
+ * one is `HEAD -> main`, and a change of country is drawn as a branch line between commits.
+ */
+import { CAREER, formatStart, roleHash, tenure, yearsCoding } from "@/lib/career";
+
+const countryOf = (location: string) => (location === "India" ? "India" : "UAE");
+const countries = new Set(CAREER.map((role) => countryOf(role.location)));
+const stats = [
+  { value: `${yearsCoding()}+`, label: "years shipping" },
+  { value: String(CAREER.length), label: "companies" },
+  { value: String(countries.size), label: "countries" },
+];
+
+const commits = CAREER.map((role, index) => {
+  const next = CAREER[index - 1];
+  const previous = CAREER[index + 1];
+  return {
+    role,
+    hash: roleHash(role),
+    head: index === 0,
+    root: index === CAREER.length - 1,
+    range: `${formatStart(role.start)} – ${next ? formatStart(next.start) : "present"}`,
+    duration: tenure(role, next?.start),
+    moved: previous && countryOf(previous.location) !== countryOf(role.location) ? `${previous.flag} ${countryOf(previous.location)} → ${role.flag} ${countryOf(role.location)}` : undefined,
+  };
+});
+---
+
+<section class="career mt-14" aria-labelledby="career-title">
+  <h2 id="career-title" class="section-title">career.log</h2>
+
+  <dl class="career-stats">
+    {
+      stats.map((stat) => (
+        <div>
+          <dt>{stat.label}</dt>
+          <dd>{stat.value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  <div class="window mt-6">
+    <div class="window-bar">
+      <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>~/career — git log --graph --decorate</span>
+    </div>
+    <ol class="log">
+      {
+        commits.map((commit) => (
+          <>
+            <li class:list={["commit", { "commit--head": commit.head }]}>
+              <span class="node" aria-hidden="true" />
+              <p class="commit-line">
+                <span class="hash">{commit.hash}</span>
+                {commit.head && <span class="ref ref--head">HEAD -&gt; main</span>}
+                {commit.root && <span class="ref ref--tag">tag: hello-world</span>}
+                <span class="subject">
+                  {commit.role.url ? (
+                    <a href={`${commit.role.url}?utm_source=www.abhith.net&utm_medium=website&utm_campaign=about`} rel="noopener" target="_blank">
+                      {commit.role.company}
+                    </a>
+                  ) : (
+                    commit.role.company
+                  )}
+                  <span class="text-muted"> · </span>
+                  {commit.role.title}
+                </span>
+              </p>
+              <p class="meta">
+                <time datetime={commit.role.start}>{commit.range}</time>
+                <span aria-hidden="true"> · </span>
+                {commit.duration}
+                <span aria-hidden="true"> · </span>
+                <span>
+                  {commit.role.flag} {commit.role.location}
+                </span>
+              </p>
+              <p class="note">{commit.role.note}</p>
+            </li>
+            {commit.moved && (
+              <li class="branch" aria-label={`Relocated ${commit.moved}`}>
+                <span aria-hidden="true">|\</span> <span>relocated {commit.moved}</span>
+              </li>
+            )}
+          </>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .career-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .career-stats div {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.6rem;
+    background: var(--surface);
+  }
+
+  .career-stats dt {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+
+  .career-stats dd {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+  }
+
+  .log {
+    position: relative;
+    padding: 1.2rem 1.2rem 1.2rem 2.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  /* The graph rail. */
+  .log::before {
+    content: "";
+    position: absolute;
+    top: 1.9rem;
+    bottom: 2rem;
+    left: 1.35rem;
+    border-left: 2px solid var(--line);
+  }
+
+  .commit {
+    position: relative;
+    padding-bottom: 1.1rem;
+  }
+
+  .commit:last-child {
+    padding-bottom: 0;
+  }
+
+  .node {
+    position: absolute;
+    top: 0.35rem;
+    left: -1.6rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 999px;
+    border: 2px solid var(--accent);
+    background: var(--surface);
+  }
+
+  .commit--head .node {
+    background: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 22%, transparent);
+  }
+
+  .commit-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.5rem;
+  }
+
+  .hash {
+    color: var(--warm);
+  }
+
+  .ref {
+    padding: 0 0.35rem;
+    border-radius: 0.25rem;
+    font-size: 0.72rem;
+    border: 1px solid currentColor;
+  }
+
+  .ref--head {
+    color: var(--accent);
+  }
+
+  .ref--tag {
+    color: var(--muted);
+  }
+
+  .subject {
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--fg);
+  }
+
+  .subject a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklab, var(--accent) 45%, transparent);
+    text-underline-offset: 0.2em;
+  }
+
+  .subject a:hover {
+    color: var(--accent);
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
+
+  .note {
+    margin-top: 0.2rem;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--fg);
+  }
+
+  .branch {
+    position: relative;
+    margin: -0.4rem 0 0.8rem -1.55rem;
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
+
+  .branch span:first-child {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  @media (max-width: 30rem) {
+    .career-stats dd {
+      font-size: 1.35rem;
+    }
+  }
+</style>

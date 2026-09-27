@@ -495,3 +495,42 @@
   border-radius: 999px;
   white-space: nowrap;
 }
+
+/* ------------------------------------------------------------------------------------------
+ * Page transitions (BaseLayout `terminalScroll`): content scrolls like terminal output,
+ * paired with the `cd …` prompt from CdTransition.astro.
+ * ---------------------------------------------------------------------------------------- */
+@keyframes cd-out-up {
+  to {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+  }
+}
+
+@keyframes cd-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+}
+
+@keyframes cd-out-down {
+  to {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+
+@keyframes cd-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-1.25rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(page),
+  ::view-transition-new(page) {
+    animation: none !important;
+  }
+}

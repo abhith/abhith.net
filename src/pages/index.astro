@@ -6,6 +6,7 @@ import StoryItem from "@/components/content/StoryItem.astro";
 import TagToken from "@/components/content/TagToken.astro";
 import VideoItem from "@/components/content/VideoItem.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { yearsCoding } from "@/lib/career";
 import { getContentGraph } from "@/lib/content-graph";
 import { SITE } from "@/lib/site";
 
@@ -17,7 +18,7 @@ const videos = graph.videos.slice(0, 3);
 const topTopics = [...graph.topics].sort((a, b) => b.totalPosts + b.totalSnippets - (a.totalPosts + a.totalSnippets)).slice(0, 14);
 const { nodes, links } = graph.graphData();
 
-const intro = "I'm a Software Engineer. I've been coding for almost a decade now. I code 🧑‍💻, write ✍️, learn 📖 and advocate 👍.";
+const intro = `I'm a Software Engineer, shipping code for ${yearsCoding()}+ years — since 2012. I code 🧑‍💻, write ✍️, learn 📖 and advocate 👍.`;
 const dirs = [
   { href: "/blog/", label: "blog/", count: graph.posts.length },
   { href: "/snippets/", label: "snippets/", count: graph.snippets.length },

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { complete, fuzzyScore, lsKind, normalisePath, parentPath, parseInput, rank, type PaletteEntry } from "./palette";
+import { cdCommand, complete, fuzzyScore, lsKind, normalisePath, parentPath, parseInput, rank, type PaletteEntry } from "./palette";
 
 const entries: PaletteEntry[] = [
   { t: "Docker Cookbook", u: "/blog/docker-cookbook/", k: "post", g: ["docker"] },
@@ -54,6 +54,17 @@ describe("paths", () => {
     expect(parentPath("/blog/docker-cookbook/")).toBe("/blog/");
     expect(parentPath("/blog/")).toBe("/");
     expect(parentPath("/")).toBe("/");
+  });
+
+  it("describes a navigation as the cd command a human would type", () => {
+    expect(cdCommand("/", "/blog/")).toBe("cd ~/blog/");
+    expect(cdCommand("/blog/docker-cookbook/", "/")).toBe("cd ~");
+    expect(cdCommand("/blog/docker-cookbook/", "/blog/")).toBe("cd ..");
+    expect(cdCommand("/topics/", "/topics/azure/")).toBe("cd azure/");
+    expect(cdCommand("/topics/azure/", "/topics/docker/")).toBe("cd ../docker/");
+    expect(cdCommand("/blog/", "/about/")).toBe("cd ~/about/");
+    expect(cdCommand("/blog/2/", "/topics/azure/videos/")).toBe("cd ~/topics/azure/videos/");
+    expect(cdCommand("/about", "/about/")).toBe("cd .");
   });
 
   it("maps ls targets to entry kinds", () => {
