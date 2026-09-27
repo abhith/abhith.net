@@ -1,5 +1,7 @@
 ---
 import { BUILD } from "@/lib/build-info";
+import { formatStars, repoStars } from "@/lib/github-stars";
+import { SITE } from "@/lib/site";
 import LinkPeek from "./LinkPeek.astro";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
 
@@ -12,6 +14,8 @@ interface Props {
 
 const section = Astro.props.section ?? (Astro.url.pathname.split("/").filter(Boolean)[0] || "home");
 const { readingTime } = Astro.props;
+const stars = await repoStars();
+const repo = SITE.repo.url.replace(/^https?:\/\//, "");
 ---
 
 <aside class="status-bar" aria-label="Status bar">
@@ -34,6 +38,16 @@ const { readingTime } = Astro.props;
       <kbd class="kbd">⌘K</kbd><span class="hide-sm">commands</span>
     </button>
     <span class="item"><ThemeSwitcher /></span>
+    <a
+      href={SITE.repo.url}
+      class="item item--button"
+      target="_blank"
+      rel="noopener"
+      data-peek={`open ${repo}  # star it if this site helped`}
+      aria-label={stars === null ? "Star this site on GitHub" : `Star this site on GitHub (${stars} stars)`}
+    >
+      <span aria-hidden="true">★</span><span class="hide-sm">star</span>{stars !== null && <span>{formatStars(stars)}</span>}
+    </a>
     <span class="item hide-sm" title={`Built ${BUILD.date} from ${BUILD.hash}`} data-peek={`git show ${BUILD.hash} --stat  # built ${BUILD.date}`}>build {BUILD.hash} · {BUILD.date}</span>
     <span class="item hide-sm">UTF-8</span>
   </div>
@@ -112,6 +126,7 @@ const { readingTime } = Astro.props;
     background: none;
     border: 0;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .item--button:hover {

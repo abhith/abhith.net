@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist", "gatsbyjs-site", "node_modules"],
+  "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]

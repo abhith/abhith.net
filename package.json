@@ -13,8 +13,6 @@
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",
-    "copy-content": "tsx scripts/copy-content.ts",
-    "parity": "tsx scripts/parity-report.ts",
     "astro": "astro"
   },
   "dependencies": {
@@ -67,7 +65,6 @@
     "@types/node": "^26.6.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "vitest": "^5.0.2"
   }

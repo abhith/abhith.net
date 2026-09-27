@@ -22,8 +22,6 @@ npm run preview    # serve dist/ locally (full-text search works here)
 | `npm run build` | Production build to `dist/` (drafts excluded) and Pagefind index |
 | `npm run check` | `astro check` type checking |
 | `npm test` | Vitest unit tests for the content graph, palette and helpers |
-| `npm run parity` | Compares `dist/` with the routes the Gatsby site produced (run after a build) |
-| `npm run copy-content` | Re-imports content from `gatsbyjs-site/abhith.net` (read-only source) |
 
 ## Environment variables
 
@@ -82,14 +80,10 @@ src/
   components/shell/        Header (editor tabs), PathBreadcrumb, StatusBar, ThemeSwitcher
   components/islands/      CommandPalette (⌘K, cmdk + Pagefind), KnowledgeGraph (d3-force canvas)
   pages/og/[...slug].png.ts  Satori/resvg social cards for every post, snippet and topic
-scripts/
-  copy-content.ts          Gatsby → Astro content import
-  parity-report.ts         route/link/feed/sitemap/image parity report
 ```
 
-The related-content rules are ported from `gatsby/node/createPages.js`. `legacyRelated()` reproduces the
-Gatsby selection exactly (it's used by the parity report), and the site uses `rankRelated()`, which orders by the
-number of shared tags and then by date.
+Related content keeps the Gatsby per-type limits. `rankRelated()` orders candidates by the number of shared tags
+and then by date.
 
 ## Command palette
 

@@ -26,6 +26,7 @@ export const COMMANDS = {
   theme: "theme <name>     switch theme: paper | midnight | solar",
   random: "random           open a random post",
   rss: "rss              open the RSS feed",
+  star: "star             star this site's repo on GitHub",
   help: "help             show this help",
 } as const;
 

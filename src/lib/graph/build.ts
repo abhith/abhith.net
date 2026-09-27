@@ -1,5 +1,5 @@
 import { matchAuthors } from "./authors";
-import { legacyRelated, rankRelated, type RelatedSources } from "./related";
+import { rankRelated, type RelatedSources } from "./related";
 import { mergeTopicCounts } from "./topics";
 import type {
   AuthorLike,
@@ -7,7 +7,6 @@ import type {
   GraphItem,
   GraphLink,
   GraphNode,
-  RelatedMode,
   RelatedSet,
   TopicDefinition,
   TopicSummary,
@@ -43,7 +42,7 @@ export interface ContentGraph<P extends EntryItem, S extends EntryItem, St exten
   /** Sorted by title. */
   topics: TopicSummary[];
   topic(slug: string): TopicSummary | undefined;
-  relatedFor(entry: P | S, mode?: RelatedMode): RelatedSet<P, S, St, V, T>;
+  relatedFor(entry: P | S): RelatedSet<P, S, St, V, T>;
   authorsFor(entry: P | S): A[];
   /** `next` is the newer entry and `previous` the older one (same as the Gatsby templates). */
   neighbours(entry: P | S): { previous?: P | S; next?: P | S };
@@ -57,7 +56,7 @@ export const byDateDesc = <I extends { date: Date }>(items: readonly I[]): I[] =
 
 /**
  * Builds the content graph from plain data. Pure and deterministic: the same input always
- * yields the same output, which makes it usable from Astro pages, endpoints, tests and scripts.
+ * yields the same output, which makes it usable from Astro pages, endpoints and tests.
  */
 export function buildContentGraph<P extends EntryItem, S extends EntryItem, St extends GraphItem, V extends GraphItem, T extends GraphItem, A extends AuthorLike>(
   input: GraphInput<P, S, St, V, T, A>,
@@ -97,12 +96,11 @@ export function buildContentGraph<P extends EntryItem, S extends EntryItem, St e
     topics,
     topic: (slug) => topicBySlug.get(slug),
 
-    relatedFor(entry, mode = "ranked") {
-      const key = `${mode}:${entry.url}`;
-      let related = relatedCache.get(key);
+    relatedFor(entry) {
+      let related = relatedCache.get(entry.url);
       if (!related) {
-        related = mode === "legacy" ? legacyRelated(entry, sources) : rankRelated(entry, sources);
-        relatedCache.set(key, related);
+        related = rankRelated(entry, sources);
+        relatedCache.set(entry.url, related);
       }
       return related;
     },

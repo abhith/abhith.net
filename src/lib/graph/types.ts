@@ -1,6 +1,6 @@
 /**
  * Framework-agnostic shapes used by the content graph. Nothing in `src/lib/graph/*` may import
- * `astro:content`, so these helpers can be unit-tested with Vitest and reused by Node scripts.
+ * `astro:content`, so these helpers can be unit-tested with Vitest.
  */
 
 /** Anything that can be related to something else by tags. */
@@ -49,8 +49,6 @@ export interface RelatedSet<P, S, St, V, T> {
   videos: V[];
   tools: T[];
 }
-
-export type RelatedMode = "ranked" | "legacy";
 
 export interface GraphNode {
   id: string;

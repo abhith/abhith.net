@@ -1,6 +1,7 @@
 import { Command } from "cmdk";
 import { navigate } from "astro:transitions/client";
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import { SITE } from "@/lib/site";
 import { THEMES } from "@/lib/themes";
 import {
   COMMANDS,
@@ -253,6 +254,21 @@ export default function CommandPalette() {
         return [
           { id: "rss-blog", label: "blog posts feed", hint: "/blog/rss.xml", kind: "page", run: () => go("/blog/rss.xml", "rss") },
           { id: "rss-stories", label: "recommended stories feed", hint: "/recommended/stories/rss.xml", kind: "page", run: () => go("/recommended/stories/rss.xml", "rss") },
+        ];
+      case "star":
+        return [
+          {
+            id: "star",
+            label: "star abhith.net on GitHub",
+            hint: SITE.repo.url.replace(/^https?:\/\//, ""),
+            kind: "page",
+            run: () => {
+              remember("star");
+              window.open(SITE.repo.url, "_blank", "noopener");
+              setOutput("opened the repo in a new tab — thanks for the ★");
+              setInput("");
+            },
+          },
         ];
       case "help":
         return COMMAND_NAMES.map((name) => ({

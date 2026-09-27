@@ -17,6 +17,7 @@ describe("parseInput", () => {
   it("recognises bare commands", () => {
     expect(parseInput("random")).toMatchObject({ command: "random", arg: "" });
     expect(parseInput("help")).toMatchObject({ command: "help" });
+    expect(parseInput("star")).toMatchObject({ command: "star", arg: "" });
   });
 
   it("treats anything else as free text", () => {

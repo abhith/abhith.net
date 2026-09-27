@@ -47,10 +47,9 @@ describe("buildContentGraph", () => {
     expect(graph.authorsFor(byId("2021-year-in-review")).map((a) => a.slug)).toEqual(["abhith"]);
   });
 
-  it("returns ranked related content by default and legacy on request", () => {
+  it("returns ranked related content and caches it per entry", () => {
     const post = byId("azure-web-app-missing-mime-types");
     expect(graph.relatedFor(post).stories.map((s) => s.id)).toEqual(["story-3", "story-1"]);
-    expect(graph.relatedFor(post, "legacy").stories.map((s) => s.id)).toEqual(["story-1", "story-3"]);
     expect(graph.relatedFor(post)).toBe(graph.relatedFor(post));
   });
 
