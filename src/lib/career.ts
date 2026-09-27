@@ -24,7 +24,7 @@ export const CAREER: Role[] = [
     title: "Software Engineer",
     location: "Dubai",
     flag: "🇦🇪",
-    note: "Prototyping and building backend & frontend apps, deployed to Azure with GitHub Actions.",
+    note: "Architecting and shipping cloud-native .NET and web platforms for air-cargo operations — owning the path from design to Azure production: infrastructure, GitHub Actions delivery and observability.",
   },
   {
     start: "2019-03",
@@ -33,25 +33,24 @@ export const CAREER: Role[] = [
     title: "Software Developer",
     location: "Dubai",
     flag: "🇦🇪",
-    note: "Four-plus years of .NET, Azure and DevOps work in Dubai.",
+    note: "Built and ran .NET services on Azure end to end — AKS and Helm, Azure DevOps CI/CD, Application Gateway, Cognitive Search and workflow automation.",
   },
   {
     start: "2018-09",
     company: "Unibeton Ready Mix",
-    url: "http://www.unibetonrm.com",
     title: "Sr. Software Engineer",
     location: "Dubai",
     flag: "🇦🇪",
-    note: "Stepped up to a senior role building line-of-business software.",
+    note: "Senior engineer on the line-of-business systems behind a UAE ready-mix concrete producer's day-to-day operations.",
   },
   {
     start: "2015-11",
     company: "Sysberries Technology",
-    url: "http://sysberries.com",
+    url: "https://www.sysberries.com",
     title: "Software Engineer",
     location: "Abu Dhabi",
     flag: "🇦🇪",
-    note: "Moved to the UAE — first stop, Abu Dhabi.",
+    note: "Moved to the UAE to deliver ASP.NET products for clients — from requirements to release.",
   },
   {
     start: "2012-07",
@@ -60,7 +59,7 @@ export const CAREER: Role[] = [
     title: "Software Engineer",
     location: "India",
     flag: "🇮🇳",
-    note: "Joined as an intern straight after B-Tech; stayed 3+ years and learned the craft.",
+    note: "Intern to engineer straight out of B-Tech — three-plus years of enterprise .NET that set the foundations.",
   },
 ];
 

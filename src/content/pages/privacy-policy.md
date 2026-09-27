@@ -3,37 +3,42 @@ templateKey: 'privacy-policy-page'
 path: /privacy-policy
 title: Privacy Policy
 description: >-
-    Read about our privacy statement which applies to any information or combination of information that could reasonably be used to identify you.
+    What abhith.net collects, which third-party services it relies on, and how to opt out.
 ---
 
-"abhith.net" takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.
+_Last updated: September 2026._
 
-#### Collection of Routine Information
+abhith.net is a personal website. It has no accounts, no newsletter and no paywall, and I don't sell or share personal data. This page lists what is collected and by whom.
 
-This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes.
+#### Analytics
+
+The site uses [Google Analytics 4](https://policies.google.com/privacy) (with IP anonymisation) and [Microsoft Clarity](https://privacy.microsoft.com/privacystatement) to understand which pages are read and how the site is used — page views, referrers, browser and device details, and anonymised interaction data such as clicks and scrolling. When your browser sends a **Do Not Track** signal, no page views are recorded and Clarity is not loaded.
+
+#### Advertising
+
+Some pages show ads served by Google AdSense. Google and its partners may use cookies to show ads based on your visits to this and other websites. You can [manage or opt out of personalised ads](https://adssettings.google.com/) and read [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites).
+
+#### Comments and mentions
+
+- **Comments** are powered by [Giscus](https://giscus.app), which stores them as GitHub Discussions. Commenting requires signing in with GitHub and is subject to [GitHub's privacy statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement). The widget only loads when you scroll to the comments section.
+- **Webmentions** — public likes, reposts and replies to posts on other sites — are collected through [webmention.io](https://webmention.io) and shown under the post, including the author's public name and avatar.
+
+#### Contact form
+
+Messages sent from the [contact page](/contact/) are delivered through [Getform](https://getform.io). Your name, email and message are used only to reply to you.
 
 #### Cookies
 
-Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content.
+The site itself sets no cookies; it only keeps your theme and recent command-palette commands in your browser's local storage, which never leaves your device. Cookies you see come from the third parties above (analytics and ads). You can block or delete them in your browser settings at any time; the site keeps working without them.
 
-#### Advertisement and Other Third Parties
+#### Links to other websites
 
-Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to [opt out of Google’s cookie usage](http://www.google.com/privacy_ads.html).
+Posts link to many external sites. Their privacy practices are their own, so please check their policies.
 
-#### Links to Third Party Websites
+#### Changes
 
-We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own.
+If this policy changes, the updated version will be posted here with a new date at the top.
 
-#### Security
+#### Contact
 
-The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.
-
-#### Changes To This Privacy Policy
-
-This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
-
-We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.
-
-#### Contact Information
-
-For any questions or concerns regarding the privacy policy, please email at abhith@pm.me.
+Questions about privacy? Email [abhith@pm.me](mailto:abhith@pm.me).

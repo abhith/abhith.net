@@ -1,0 +1,120 @@
+---
+/**
+ * The day-to-day stack on the about page, grouped by layer like a `tree` listing. Every item is a
+ * topic from topics.yml, so it links to the topic page and reuses its logo from public/img/topics.
+ */
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import { getCollection } from "astro:content";
+
+const LAYERS: { name: string; slugs: string[] }[] = [
+  { name: "runtime", slugs: ["dotnet", "aspnet-core", "aspire", "sql-server"] },
+  { name: "cloud", slugs: ["azure", "aks", "docker", "kubernetes", "helm"] },
+  { name: "delivery", slugs: ["github-actions", "azure-devops", "app-insights"] },
+  { name: "frontend", slugs: ["typescript", "angular", "react"] },
+  { name: "ai", slugs: ["github-copilot", "ai"] },
+];
+
+const topics = new Map((await getCollection("topics")).map((entry) => [entry.data.slug, entry.data]));
+const logoFor = (image?: string) => (image && existsSync(join(process.cwd(), "public/img/topics", image)) ? `/img/topics/${image}` : undefined);
+
+const layers = LAYERS.map((layer) => ({
+  name: layer.name,
+  items: layer.slugs.flatMap((slug) => {
+    const topic = topics.get(slug);
+    return topic ? [{ slug, title: topic.title, logo: logoFor(topic.image) }] : [];
+  }),
+})).filter((layer) => layer.items.length > 0);
+---
+
+<section class="stack mt-14" aria-labelledby="stack-title">
+  <h2 id="stack-title" class="section-title">tree ~/stack</h2>
+  <ul class="layers">
+    {
+      layers.map((layer, index) => (
+        <li class="layer">
+          <span class="branch" aria-hidden="true">
+            {index === layers.length - 1 ? "└──" : "├──"}
+          </span>
+          <span class="layer-name">{layer.name}/</span>
+          <ul class="chips">
+            {layer.items.map((item) => (
+              <li>
+                <a href={`/topics/${item.slug}/`} class="chip">
+                  {item.logo && <img src={item.logo} alt="" width="16" height="16" loading="lazy" decoding="async" />}
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .layers {
+    display: grid;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+  }
+
+  .layer {
+    display: grid;
+    grid-template-columns: auto 6.5rem 1fr;
+    align-items: start;
+    gap: 0.5rem;
+  }
+
+  .branch {
+    color: var(--line);
+    line-height: 1.9rem;
+  }
+
+  .layer-name {
+    color: var(--warm);
+    line-height: 1.9rem;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: 1.9rem;
+    padding: 0 0.6rem;
+    border: 1px solid var(--line);
+    border-radius: 0.4rem;
+    background: var(--surface);
+    color: var(--fg);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .chip img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+  }
+
+  @media (max-width: 30rem) {
+    .layer {
+      grid-template-columns: auto 1fr;
+    }
+    .chips {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

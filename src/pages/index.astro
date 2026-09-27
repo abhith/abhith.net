@@ -18,7 +18,7 @@ const videos = graph.videos.slice(0, 3);
 const topTopics = [...graph.topics].sort((a, b) => b.totalPosts + b.totalSnippets - (a.totalPosts + a.totalSnippets)).slice(0, 14);
 const { nodes, links } = graph.graphData();
 
-const intro = `I'm a Software Engineer, shipping code for ${yearsCoding()}+ years — since 2012. I code 🧑‍💻, write ✍️, learn 📖 and advocate 👍.`;
+const intro = `${yearsCoding()}+ years shipping production software — .NET back ends, modern web front ends, Azure infrastructure and the pipelines in between. I build it, run it, and write about it.`;
 const dirs = [
   { href: "/blog/", label: "blog/", count: graph.posts.length },
   { href: "/snippets/", label: "snippets/", count: graph.snippets.length },
@@ -31,7 +31,7 @@ const dirs = [
 <BaseLayout crumbs={false} section="main" description={SITE.description}>
   <section class="shell grid items-center gap-10 pt-12 pb-16 lg:grid-cols-[1.1fr_1fr]" aria-labelledby="hero-title">
     <div>
-      <p class="mono-label">Full Stack Developer · Dubai</p>
+      <p class="mono-label">Software Engineer · .NET &amp; Azure · Dubai</p>
       <h1 id="hero-title" class="mt-3 text-5xl font-bold tracking-tight sm:text-6xl">
         Abhith Rajan<span class="text-accent">.</span>
       </h1>
@@ -73,7 +73,7 @@ const dirs = [
         </div>
         <div class="terminal-body">
           <p class="line"><span class="prompt">$</span> <span class="typed" style="--chars: 6">whoami</span></p>
-          <p class="out out-1">Abhith Rajan — software engineer, writer, technology advocate</p>
+          <p class="out out-1">Abhith Rajan — software engineer · .NET, Azure &amp; the web</p>
           <p class="line line-2"><span class="prompt">$</span> <span class="typed" style="--chars: 13">cat about.txt</span></p>
           <p class="out out-2">{intro}</p>
           <p class="line line-3"><span class="prompt">$</span> <span class="typed" style="--chars: 5">ls ~/</span></p>

@@ -2,11 +2,11 @@ export const SITE = {
   url: "https://www.abhith.net",
   title: "Abhith Rajan",
   shortTitle: "Abhith",
-  description: "Abhith Rajan is a programmer, writer, technology advocate, and more.",
+  description: "Abhith Rajan is a Dubai-based software engineer shipping .NET, Azure and web systems since 2012 — notes, snippets and curated links on building and running software.",
   locale: "en",
   author: {
     name: "Abhith Rajan",
-    url: "https://twitter.com/abhithrajan",
+    url: "https://x.com/abhithrajan",
     image: "/img/abhith.jpg",
   },
   social: {
