@@ -1,0 +1,63 @@
+# Owner-only: the "Add recommendation" workflow turns this issue into a pull request that adds the
+# links to src/content/data/{stories,videos}.json or src/content/recommended/services/services.yml.
+# Field labels are parsed by scripts/add-recommendation.ts; keep them in sync when renaming.
+name: Add recommendation
+description: "(Maintainer) Add stories, videos or tools to /recommended. Metadata is fetched automatically."
+title: "recommend: "
+labels: ["add-recommendation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paste one link per line. Words after a link are **that link's own tags**
+        (`https://example.com/post privacy, open-source`); links without tags use the **Tags** field below.
+        A bot opens a pull request with the fetched titles and descriptions, and comments here with the result.
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      placeholder: |
+        https://www.youtube.com/watch?v=c3XMAz--_Us privacy, open-source
+        https://github.blog/some-post/
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      description: Auto-detect sends YouTube/Vimeo links to videos and everything else to stories.
+      options:
+        - Auto-detect
+        - Story / article
+        - Video (YouTube or Vimeo)
+        - Service / tool
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Topic slugs from `src/content/topics/topics.yml`, comma separated.
+      placeholder: developer-tools, open-source
+    validations:
+      required: false
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Optional. Only used when adding a single link, e.g. when the site blocks metadata fetching.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: options
+    attributes:
+      label: Options
+      options:
+        - label: Allow tags that aren't in topics.yml yet
+          required: false

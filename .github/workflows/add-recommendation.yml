@@ -1,0 +1,158 @@
+name: Add recommendation
+
+# Turns an "Add recommendation" issue (or a manual run) into a pull request that adds the links to
+# the recommended stories/videos/services with fetched metadata (scripts/add-recommendation.ts).
+#
+# Pull requests opened with the default GITHUB_TOKEN don't trigger other workflows, so ci.yml only
+# runs on them when the optional RECOMMENDATIONS_TOKEN secret is set (fine-grained PAT for this repo
+# with Contents, Pull requests and Issues: read & write).
+
+on:
+  issues:
+    # Issue forms apply their label on creation, which fires `labeled`; also listening to `opened`
+    # would start two runs. Re-adding the label retries after editing the issue.
+    types: [labeled]
+  workflow_dispatch:
+    inputs:
+      links:
+        description: "Links, separated by spaces or newlines. Words after a link are that link's tags."
+        required: true
+      tags:
+        description: "Tags for links without their own (comma separated)"
+        required: false
+      kind:
+        description: "Where to add them"
+        type: choice
+        options: [auto, story, video, service]
+        default: auto
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  add:
+    name: Add links
+    # Only the repository owner can turn issues into content; everyone else's issues are ignored.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.label.name == 'add-recommendation' && github.event.sender.login == github.repository_owner)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ secrets.RECOMMENDATIONS_TOKEN || github.token }}
+      BRANCH: recommendations/${{ github.event.issue.number && format('issue-{0}', github.event.issue.number) || format('run-{0}', github.run_id) }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.RECOMMENDATIONS_TOKEN || github.token }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch metadata and add links
+        id: add
+        continue-on-error: true
+        env:
+          # Untrusted text is passed through the environment, never interpolated into the script.
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          LINKS: ${{ inputs.links }}
+          TAGS: ${{ inputs.tags }}
+          KIND: ${{ inputs.kind }}
+        run: |
+          args=(--report "$RUNNER_TEMP/recommendations.md")
+          if [ "$GITHUB_EVENT_NAME" = "issues" ]; then
+            args+=(--issue-body "$ISSUE_BODY")
+          else
+            set -f # URLs contain `?`; don't let the shell glob them while splitting
+            args+=($LINKS)
+            set +f
+            if [ -n "$TAGS" ]; then args+=(--tags "$TAGS"); fi
+            if [ "$KIND" != "auto" ]; then args+=(--kind "$KIND"); fi
+          fi
+          node scripts/add-recommendation.ts "${args[@]}"
+
+      - name: Open or update the pull request
+        id: pr
+        env:
+          BASE_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          if [ -z "$(git status --porcelain -- src/content)" ]; then
+            echo "Nothing new to commit."
+            exit 0
+          fi
+          count=$(grep -c '^- \*\*' "$RUNNER_TEMP/recommendations.md" || true)
+          plural=s
+          if [ "$count" = "1" ]; then plural=; fi
+          title="content(recommended): add ${count} recommendation${plural}"
+
+          message=(-m "$title")
+          if [ -n "$ISSUE_NUMBER" ]; then message+=(-m "Closes #$ISSUE_NUMBER"); fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$BRANCH"
+          git add -- src/content
+          git commit "${message[@]}"
+          git push --force origin "$BRANCH"
+
+          body="$RUNNER_TEMP/pr-body.md"
+          cp "$RUNNER_TEMP/recommendations.md" "$body"
+          if [ -n "$ISSUE_NUMBER" ]; then printf '\nCloses #%s\n' "$ISSUE_NUMBER" >> "$body"; fi
+
+          url=$(gh pr list --head "$BRANCH" --state open --json url --jq '.[0].url // empty')
+          if [ -n "$url" ]; then
+            gh pr edit "$url" --title "$title" --body-file "$body"
+          else
+            url=$(gh pr create --base "$BASE_BRANCH" --head "$BRANCH" --title "$title" --body-file "$body")
+          fi
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+      - name: Job summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/recommendations.md" ]; then
+            cat "$RUNNER_TEMP/recommendations.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Comment on the issue
+        if: always() && github.event_name == 'issues'
+        env:
+          PR_URL: ${{ steps.pr.outputs.url }}
+          ADD_OUTCOME: ${{ steps.add.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          comment="$RUNNER_TEMP/comment.md"
+          if [ -n "$PR_URL" ]; then
+            echo "Opened $PR_URL: review the fetched titles and descriptions, then merge to publish." > "$comment"
+          else
+            echo "No pull request was opened." > "$comment"
+          fi
+          echo >> "$comment"
+          if [ -f "$RUNNER_TEMP/recommendations.md" ]; then
+            cat "$RUNNER_TEMP/recommendations.md" >> "$comment"
+          else
+            echo "The script didn't produce a report; see the [workflow run]($RUN_URL)." >> "$comment"
+          fi
+          if [ "$ADD_OUTCOME" = "failure" ]; then
+            printf '\nTo retry, edit this issue (fix the tags, or add a **Title** for a single link) and re-add the `add-recommendation` label.\n' >> "$comment"
+          fi
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$comment"
+
+      - name: Fail when some links couldn't be added
+        if: steps.add.outcome == 'failure'
+        run: |
+          echo "::error::Some links could not be added; see the job summary."
+          exit 1

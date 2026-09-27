@@ -22,6 +22,7 @@ npm run preview    # serve dist/ locally (full-text search works here)
 | `npm run build` | Production build to `dist/` (drafts excluded) and Pagefind index |
 | `npm run check` | `astro check` type checking |
 | `npm test` | Vitest unit tests for the content graph, palette and helpers |
+| `npm run add -- <url> <tags>` | Add a recommended story, video or service with fetched metadata (see [Adding recommendations](#adding-recommendations)) |
 
 ## Environment variables
 
@@ -52,6 +53,7 @@ GitHub Actions workflows live in `.github/workflows/`:
 | `codeql.yml` | PRs, pushes to `main`, weekly | CodeQL security scan of the JS/TS/Astro code and the workflows |
 | `dependency-review.yml` | PRs touching dependencies | Fails on newly introduced high-severity vulnerabilities |
 | `pr-title.yml` | PRs | Enforces Conventional Commits PR titles (`feat:`, `fix:`, `content(...)`, `chore(deps):` …) |
+| `add-recommendation.yml` | `add-recommendation` issues by the owner, manual runs | Runs `npm run add` and opens a `content(recommended)` PR |
 
 The optional `WEBMENTIONS_TOKEN` repository secret is passed to the CI build when present.
 
@@ -62,12 +64,49 @@ The optional `WEBMENTIONS_TOKEN` repository secret is passed to the CI build whe
 | Blog posts | `src/content/blog/<slug>/index.mdx` | Frontmatter is validated by Zod in `src/content.config.ts`. Set `draft: true` to hide a post in production. |
 | Snippets | `src/content/snippets/<category>/<slug>.mdx` | The first `topics` entry is the category. |
 | Topics | `src/content/topics/topics.yml` | Topics used by content but missing here get a `startCase` title. |
-| Stories / videos | `src/content/data/{stories,videos}.json` | |
-| Services (tools) | `src/content/recommended/services/services.yml` | |
+| Stories / videos | `src/content/data/{stories,videos}.json` | Add with `npm run add` (below). |
+| Services (tools) | `src/content/recommended/services/services.yml` | Add with `npm run add -- <url> <tags> --kind service`. |
 
 MDX supports GitHub-flavoured Markdown, footnotes, emoji shortcodes, Expressive Code frames (`title="file.ts"`,
 `{2-4}` line markers, `ins`/`del` diffs, `collapse={1-5}`), ```` ```mermaid ```` diagrams, bare tweet URLs
 (auto-embedded) and the `<Alert kind="info">` / `<Badge fill="#hex">` components.
+
+## Adding recommendations
+
+Only the URL and tags are needed; everything else is fetched. YouTube/Vimeo titles come from oEmbed, and
+other pages are read from their Open Graph / `<title>` / meta description tags.
+
+```bash
+npm run add -- 'https://www.youtube.com/watch?v=c3XMAz--_Us' privacy,open-source # → videos.json
+npm run add -- https://github.blog/some-post/ github-copilot                      # → stories.json
+npm run add -- https://forminit.com/ developer-tools --kind service               # → services.yml
+npm run add -- https://a.dev/ ai https://b.dev/ git,github --dry-run              # several at once, preview only
+```
+
+Words after a URL are that URL's tags, and `--tags` covers URLs without their own. The script:
+
+- cleans the URL by dropping `utm_*` and similar tracking parameters and normalising YouTube links
+- skips links that already exist in any of the three files
+- rejects tags that aren't in `topics.yml` and suggests the closest match (`--allow-new-tags` overrides this)
+- inserts the entry at the top of the file without reformatting the rest
+
+Quote URLs that contain `?` or `&`, since zsh would otherwise treat them as wildcards. Use `--title` when a site
+blocks metadata fetching, and `--help` to see every option.
+
+**From anywhere (phone, browser):** open an issue with the **Add recommendation** form, one link per line with
+optional tags after each. The `add-recommendation.yml` workflow runs the same script, opens a PR that closes
+the issue, and comments with what was added, skipped or rejected. To retry, edit the issue and re-add the label.
+You can also start it with **Actions → Add recommendation → Run workflow**. One-time setup:
+
+1. Create the `add-recommendation` label. The form applies it, and the workflow only reacts to it when the repo owner opens or labels the issue.
+2. Enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**.
+3. Optionally, add a `RECOMMENDATIONS_TOKEN` secret: a fine-grained PAT for this repo with Contents, Pull requests and Issues set to read & write. PRs opened with the default token don't trigger `ci.yml`.
+
+This bookmarklet pre-fills the form with the current page:
+
+```js
+javascript:location.href='https://github.com/abhith/abhith.net/issues/new?template=add_recommendation.yml&title='+encodeURIComponent('recommend: '+document.title)+'&links='+encodeURIComponent(location.href)
+```
 
 ## Architecture
 
