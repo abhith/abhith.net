@@ -34,6 +34,6 @@ const topics = graph.topics
   topics={topics}
 >
   <ul class="grid gap-4 sm:grid-cols-2">
-    {page.items.map((tool) => <ToolItem url={tool.url} title={tool.title} description={tool.description} tags={tool.tags} />)}
+    {page.items.map((tool) => <ToolItem url={tool.url} title={tool.title} description={tool.description} topics={tool.topics} />)}
   </ul>
 </ListingLayout>

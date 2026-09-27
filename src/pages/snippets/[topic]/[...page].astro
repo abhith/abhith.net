@@ -44,6 +44,6 @@ const topics = graph.topics
   currentTopic={topic.slug}
 >
   <ul>
-    {page.items.map((snippet) => <PostRow url={snippet.url} title={snippet.title} date={snippet.date} tags={snippet.tags} prefix={snippet.category} description={snippet.description} draft={snippet.draft} />)}
+    {page.items.map((snippet) => <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} draft={snippet.draft} />)}
   </ul>
 </ListingLayout>

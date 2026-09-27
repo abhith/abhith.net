@@ -1,6 +1,6 @@
 /**
  * Social card renderer: Satori (HTML/flexbox → SVG) + resvg (SVG → PNG), 1200×630.
- * The card is an editor window with a file tab, title, description, tag tokens and author.
+ * The card is an editor window with a file tab, title, description, topic tokens and author.
  */
 import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -37,7 +37,7 @@ export interface OgCard {
   path: string;
   title: string;
   description?: string;
-  tags?: readonly string[];
+  topics?: readonly string[];
   /** Footer meta, e.g. `2019-12-24 · 6 min read`. */
   meta?: string;
 }
@@ -48,7 +48,7 @@ const h = (type: string, style: Record<string, unknown>, children?: unknown, ext
   props: { style: { display: "flex", ...style }, children, ...extra },
 });
 
-/** resvg can't paint `hsl(… / alpha)`, so tag colours are converted to rgba. */
+/** resvg can't paint `hsl(… / alpha)`, so topic colours are converted to rgba. */
 function hsl(h: number, s: number, l: number, alpha = 1): string {
   const a = (s / 100) * Math.min(l / 100, 1 - l / 100);
   const f = (n: number) => {
@@ -65,7 +65,7 @@ export async function renderOgPng(card: OgCard): Promise<Buffer> {
   const titleSize = title.length > 90 ? 46 : title.length > 55 ? 54 : title.length > 32 ? 60 : 68;
   const description = card.description ? stripEmoji(card.description) : undefined;
 
-  const tags = (card.tags ?? []).slice(0, 4).map((tag) =>
+  const topics = (card.topics ?? []).slice(0, 4).map((topic) =>
     h(
       "div",
       {
@@ -73,11 +73,11 @@ export async function renderOgPng(card: OgCard): Promise<Buffer> {
         fontSize: 22,
         padding: "6px 14px",
         borderRadius: 8,
-        color: hsl(topicHue(tag), 62, 34),
-        background: hsl(topicHue(tag), 62, 34, 0.1),
-        border: `1px solid ${hsl(topicHue(tag), 62, 34, 0.3)}`,
+        color: hsl(topicHue(topic), 62, 34),
+        background: hsl(topicHue(topic), 62, 34, 0.1),
+        border: `1px solid ${hsl(topicHue(topic), 62, 34, 0.3)}`,
       },
-      `#${tag}`,
+      `#${topic}`,
     ),
   );
 
@@ -104,7 +104,7 @@ export async function renderOgPng(card: OgCard): Promise<Buffer> {
         h("div", { flexDirection: "column", flex: 1, padding: "30px 56px 30px", gap: 14 }, [
           h("div", { fontSize: titleSize, fontWeight: 700, color: C.fg, lineHeight: 1.12, letterSpacing: -1.5, flexShrink: 0 }, title),
           description ? h("div", { display: "block", fontSize: 27, color: C.muted, lineHeight: 1.4, lineClamp: 2, flexShrink: 0 }, description) : null,
-          h("div", { gap: 12, marginTop: "auto" }, tags),
+          h("div", { gap: 12, marginTop: "auto" }, topics),
         ]),
         h("div", { alignItems: "center", gap: 16, padding: "18px 56px", borderTop: `2px dashed ${C.line}` }, [
           { type: "img", props: { src: loadAvatar(), width: 48, height: 48, style: { borderRadius: 24 } } },

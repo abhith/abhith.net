@@ -4,18 +4,18 @@ import { mergeTopicCounts, totalItems } from "./topics";
 
 const topics = mergeTopicCounts(
   {
-    posts: fx.posts.map((p) => p.tags),
-    snippets: fx.snippets.map((s) => s.tags),
-    stories: fx.stories.map((s) => s.tags),
-    videos: fx.videos.map((v) => v.tags),
-    services: fx.tools.map((t) => t.tags),
+    posts: fx.posts.map((p) => p.topics),
+    snippets: fx.snippets.map((s) => s.topics),
+    stories: fx.stories.map((s) => s.topics),
+    videos: fx.videos.map((v) => v.topics),
+    services: fx.tools.map((t) => t.topics),
   },
   fx.topicDefinitions,
 );
 const bySlug = (slug: string) => topics.find((topic) => topic.slug === slug);
 
 describe("mergeTopicCounts", () => {
-  it("creates a topic for every tag used by any content type", () => {
+  it("creates a topic for every topic used by any content type", () => {
     expect(topics).toHaveLength(16);
   });
 
@@ -63,7 +63,7 @@ describe("mergeTopicCounts", () => {
     ]);
   });
 
-  it("counts a tag once per item even if repeated", () => {
+  it("counts a topic once per item even if repeated", () => {
     const [topic] = mergeTopicCounts({ posts: [["a", "a"]], snippets: [], stories: [], videos: [], services: [] }, []);
     expect(topic.totalPosts).toBe(1);
   });

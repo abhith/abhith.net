@@ -39,7 +39,7 @@ const sections = [
     <div class="mt-16 grid gap-12 lg:grid-cols-[1.2fr_1fr]">
       <section aria-labelledby="latest-stories">
         <h2 id="latest-stories" class="section-title">latest stories</h2>
-        <ul>{graph.stories.slice(0, 6).map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} tags={story.tags} />)}</ul>
+        <ul>{graph.stories.slice(0, 6).map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} topics={story.topics} />)}</ul>
       </section>
       <div class="grid content-start gap-12">
         <section aria-labelledby="latest-videos">

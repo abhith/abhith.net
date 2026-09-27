@@ -44,7 +44,7 @@ describe("elementSymbols", () => {
 });
 
 describe("elementGroup", () => {
-  it("prefers a specific tag over the generic one", () => {
+  it("prefers a specific topic over the generic one", () => {
     expect(elementGroup(["developer-tools", "windows"])).toBe("windows");
     expect(elementGroup(["chrome", "developer-tools"])).toBe("chrome");
     expect(elementGroup(["developer-tools"])).toBe("developer-tools");

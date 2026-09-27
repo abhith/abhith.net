@@ -12,18 +12,18 @@ interface Props {
 
 const { slug, label = slug, link = true, count } = Astro.props;
 const style = `--h: ${topicHue(slug)}`;
-/** Status-bar peek: a tag is a grep across the notebook. */
+/** Status-bar peek: a topic is a grep across the notebook. */
 const peek = `grep -rl "#${slug}" ~${count !== undefined ? `  # ${count} ${count === 1 ? "hit" : "hits"}` : ""}`;
 ---
 
 {
   link ? (
-    <a class="tag-token" href={`/topics/${slug}/`} style={style} data-peek={peek}>
+    <a class="topic-token" href={`/topics/${slug}/`} style={style} data-peek={peek}>
       {label}
       {count !== undefined && <span class="ml-1 opacity-70">{count}</span>}
     </a>
   ) : (
-    <span class="tag-token" style={style}>
+    <span class="topic-token" style={style}>
       {label}
       {count !== undefined && <span class="ml-1 opacity-70">{count}</span>}
     </span>

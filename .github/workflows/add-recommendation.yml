@@ -15,10 +15,10 @@ on:
   workflow_dispatch:
     inputs:
       links:
-        description: "Links, separated by spaces or newlines. Words after a link are that link's tags."
+        description: "Links, separated by spaces or newlines. Words after a link are that link's topics."
         required: true
-      tags:
-        description: "Tags for links without their own (comma separated)"
+      topics:
+        description: "Topics for links without their own (comma separated)"
         required: false
       kind:
         description: "Where to add them"
@@ -70,7 +70,7 @@ jobs:
           # Untrusted text is passed through the environment, never interpolated into the script.
           ISSUE_BODY: ${{ github.event.issue.body }}
           LINKS: ${{ inputs.links }}
-          TAGS: ${{ inputs.tags }}
+          TOPICS: ${{ inputs.topics }}
           KIND: ${{ inputs.kind }}
         run: |
           args=(--report "$RUNNER_TEMP/recommendations.md")
@@ -80,7 +80,7 @@ jobs:
             set -f # URLs contain `?`; don't let the shell glob them while splitting
             args+=($LINKS)
             set +f
-            if [ -n "$TAGS" ]; then args+=(--tags "$TAGS"); fi
+            if [ -n "$TOPICS" ]; then args+=(--topics "$TOPICS"); fi
             if [ "$KIND" != "auto" ]; then args+=(--kind "$KIND"); fi
           fi
           node scripts/add-recommendation.ts "${args[@]}"
@@ -147,7 +147,7 @@ jobs:
             echo "The script didn't produce a report; see the [workflow run]($RUN_URL)." >> "$comment"
           fi
           if [ "$ADD_OUTCOME" = "failure" ]; then
-            printf '\nTo retry, edit this issue (fix the tags, or add a **Title** for a single link) and re-add the `add-recommendation` label.\n' >> "$comment"
+            printf '\nTo retry, edit this issue (fix the topics, or add a **Title** for a single link) and re-add the `add-recommendation` label.\n' >> "$comment"
           fi
           gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$comment"
 

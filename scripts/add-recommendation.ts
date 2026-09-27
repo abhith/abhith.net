@@ -1,7 +1,7 @@
 /**
- * Adds recommended stories, videos and services from nothing but a URL and tags.
+ * Adds recommended stories, videos and services from nothing but a URL and topics.
  *
- *   npm run add -- <url...> --tags privacy,open-source [--kind story|video|service] [--dry-run]
+ *   npm run add -- <url...> --topics privacy,open-source [--kind story|video|service] [--dry-run]
  *
  * Metadata comes from YouTube/Vimeo oEmbed or the page's Open Graph tags; entries are written
  * at the top of the matching data file. Run `npm run add -- --help` for every option.
@@ -26,9 +26,9 @@ import {
   parseIssueForm,
   parseKind,
   parseLinkLines,
-  parseTags,
+  parseTopics,
   urlKey,
-  validateTags,
+  validateTopics,
   videoType,
 } from "./recommendations/lib.ts";
 
@@ -44,22 +44,22 @@ const USER_AGENT = "Mozilla/5.0 (compatible; abhith.net-recommendations; +https:
 const HELP = `Add recommended stories, videos and services from a URL.
 
 Usage:
-  npm run add -- <url> [<url>...] --tags <tag,tag> [options]
+  npm run add -- <url> [<url>...] --topics <topic,topic> [options]
 
 Options:
-  -t, --tags <list>        Topic slugs from src/content/topics/topics.yml (comma or space separated)
+  -t, --topics <list>      Topic slugs from src/content/topics/topics.yml (comma or space separated)
   -k, --kind <kind>        story | video | service (default: videos for YouTube/Vimeo, else story)
       --title <text>       Override the fetched title (single URL only)
       --description <text> Override the fetched description (single URL only)
       --date <iso>         Use this date instead of now
   -n, --dry-run            Print the entries instead of writing them
-      --allow-new-tags     Accept tags that aren't in topics.yml yet
-      --issue-body <text>  Read links, kind and tags from an "Add recommendation" issue form
+      --allow-new-topics   Accept topics that aren't in topics.yml yet
+      --issue-body <text>  Read links, kind and topics from an "Add recommendation" issue form
       --report <file>      Append a markdown summary to this file (e.g. $GITHUB_STEP_SUMMARY)
   -h, --help               Show this help
 
-Words after a URL are that URL's own tags (npm run add -- <url> ai <url> privacy,git);
---tags applies to URLs without their own.`;
+Words after a URL are that URL's own topics (npm run add -- <url> ai <url> privacy,git);
+--topics applies to URLs without their own. The old --tags / --allow-new-tags names still work.`;
 
 interface Result {
   added: Array<{ kind: Kind; entry: Entry }>;
@@ -126,7 +126,7 @@ function markdownReport({ added, skipped, failed }: Result, dryRun: boolean): st
   if (added.length) {
     lines.push(dryRun ? "#### Would add" : "#### Added", "");
     for (const { kind, entry } of added) {
-      lines.push(`- **${kind}** [${entry.title.replace(/[[\]]/g, "\\$&")}](${entry.url}) — ${entry.tags.map((tag) => `\`${tag}\``).join(", ")}`);
+      lines.push(`- **${kind}** [${entry.title.replace(/[[\]]/g, "\\$&")}](${entry.url}) — ${entry.topics.map((topic) => `\`${topic}\``).join(", ")}`);
     }
     lines.push("");
   }
@@ -143,12 +143,15 @@ async function main(): Promise<number> {
   const { values, positionals } = parseArgs({
     allowPositionals: true,
     options: {
-      tags: { type: "string", short: "t", multiple: true },
+      topics: { type: "string", short: "t", multiple: true },
+      // Deprecated aliases of --topics / --allow-new-topics, kept so older commands keep working.
+      tags: { type: "string", multiple: true },
       kind: { type: "string", short: "k" },
       title: { type: "string" },
       description: { type: "string" },
       date: { type: "string" },
       "dry-run": { type: "boolean", short: "n", default: false },
+      "allow-new-topics": { type: "boolean", default: false },
       "allow-new-tags": { type: "boolean", default: false },
       "issue-body": { type: "string" },
       report: { type: "string" },
@@ -162,18 +165,20 @@ async function main(): Promise<number> {
 
   let kindInput = values.kind;
   let title = values.title;
-  let allowNewTags = values["allow-new-tags"];
+  let allowNewTopics = values["allow-new-topics"] || values["allow-new-tags"];
   let requests: LinkRequest[];
   if (values["issue-body"] !== undefined) {
     // Labels match .github/ISSUE_TEMPLATE/add_recommendation.yml.
     const form = parseIssueForm(values["issue-body"]);
     kindInput ??= form["Kind"];
     title ??= form["Title"] || undefined;
-    allowNewTags ||= /^- \[x\] allow tags/im.test(form["Options"] ?? "");
-    requests = parseLinkLines(form["Links"] ?? "", parseTags(form["Tags"]));
+    allowNewTopics ||= /^- \[x\] allow (topics|tags)/im.test(form["Options"] ?? "");
+    // `Tags` is the label used by issues filed before the rename.
+    requests = parseLinkLines(form["Links"] ?? "", parseTopics(form["Topics"] ?? form["Tags"]));
   } else {
-    // `url1 tag tag url2 tag` → one line per URL, so words after a URL become its own tags.
-    requests = parseLinkLines(positionals.join(" ").replace(/\s+(?=https?:\/\/)/gi, "\n"), parseTags(values.tags));
+    // `url1 topic topic url2 topic` → one line per URL, so words after a URL become its own topics.
+    const defaultTopics = parseTopics([...(values.topics ?? []), ...(values.tags ?? [])]);
+    requests = parseLinkLines(positionals.join(" ").replace(/\s+(?=https?:\/\/)/gi, "\n"), defaultTopics);
   }
 
   if (requests.length === 0) {
@@ -209,9 +214,9 @@ async function main(): Promise<number> {
       result.skipped.push({ url, reason: `already in \`${duplicateOf}\`` });
       continue;
     }
-    const tagErrors = allowNewTags && request.tags.length ? [] : validateTags(request.tags, topics);
-    if (tagErrors.length) {
-      result.failed.push({ url, reason: tagErrors.join(" ") });
+    const topicErrors = allowNewTopics && request.topics.length ? [] : validateTopics(request.topics, topics);
+    if (topicErrors.length) {
+      result.failed.push({ url, reason: topicErrors.join(" ") });
       continue;
     }
 
@@ -230,7 +235,7 @@ async function main(): Promise<number> {
     try {
       // Later links get slightly older timestamps so the order you listed them in is kept.
       const date = isoNow(new Date(baseDate.getTime() - index * 60_000));
-      const entry = buildEntry({ kind, url, tags: request.tags, meta, date, title, description: values.description });
+      const entry = buildEntry({ kind, url, topics: request.topics, meta, date, title, description: values.description });
       result.added.push({ kind, entry });
       seen.set(urlKey(url), relative(ROOT, FILES[kind].path));
     } catch (error) {

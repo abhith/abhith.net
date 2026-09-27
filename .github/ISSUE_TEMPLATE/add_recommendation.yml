@@ -9,8 +9,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Paste one link per line. Words after a link are **that link's own tags**
-        (`https://example.com/post privacy, open-source`); links without tags use the **Tags** field below.
+        Paste one link per line. Words after a link are **that link's own topics**
+        (`https://example.com/post privacy, open-source`); links without topics use the **Topics** field below.
         A bot opens a pull request with the fetched titles and descriptions, and comments here with the result.
 
   - type: textarea
@@ -38,9 +38,9 @@ body:
       required: true
 
   - type: input
-    id: tags
+    id: topics
     attributes:
-      label: Tags
+      label: Topics
       description: Topic slugs from `src/content/topics/topics.yml`, comma separated.
       placeholder: developer-tools, open-source
     validations:
@@ -59,5 +59,5 @@ body:
     attributes:
       label: Options
       options:
-        - label: Allow tags that aren't in topics.yml yet
+        - label: Allow topics that aren't in topics.yml yet
           required: false

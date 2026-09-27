@@ -1,25 +1,25 @@
 ---
 /**
- * `git log --oneline` style row: short hash · date · title · tag tokens.
+ * `git log --oneline` style row: short hash · date · title · topic tokens.
  * The description slides out on hover/focus (always present for screen readers).
  */
 import { shortHash } from "@/lib/graph/color";
 import { isoDate } from "@/lib/format";
-import TagToken from "./TagToken.astro";
+import TopicToken from "./TopicToken.astro";
 
 interface Props {
   url: string;
   title: string;
   date: Date;
-  tags?: readonly string[];
+  topics?: readonly string[];
   description?: string;
   /** e.g. snippet category, shown before the title. */
   prefix?: string;
-  maxTags?: number;
+  maxTopics?: number;
   draft?: boolean;
 }
 
-const { url, title, date, tags = [], description, prefix, maxTags = 3, draft = false } = Astro.props;
+const { url, title, date, topics = [], description, prefix, maxTopics = 3, draft = false } = Astro.props;
 ---
 
 <li class="log-row">
@@ -33,8 +33,8 @@ const { url, title, date, tags = [], description, prefix, maxTags = 3, draft = f
     </a>
     {description && <p class="log-desc">{description}</p>}
   </div>
-  <div class="log-tags">
-    {tags.slice(0, maxTags).map((tag) => <TagToken slug={tag} />)}
+  <div class="log-topics">
+    {topics.slice(0, maxTopics).map((topic) => <TopicToken slug={topic} />)}
   </div>
 </li>
 
@@ -42,7 +42,7 @@ const { url, title, date, tags = [], description, prefix, maxTags = 3, draft = f
   .log-row {
     display: grid;
     grid-template-columns: auto auto 1fr;
-    grid-template-areas: "hash date main" ". . tags";
+    grid-template-areas: "hash date main" ". . topics";
     column-gap: 0.9rem;
     row-gap: 0.35rem;
     padding: 0.7rem 0.5rem;
@@ -54,7 +54,7 @@ const { url, title, date, tags = [], description, prefix, maxTags = 3, draft = f
   @media (min-width: 48rem) {
     .log-row {
       grid-template-columns: auto auto 1fr auto;
-      grid-template-areas: "hash date main tags";
+      grid-template-areas: "hash date main topics";
       align-items: baseline;
     }
   }
@@ -138,8 +138,8 @@ const { url, title, date, tags = [], description, prefix, maxTags = 3, draft = f
     }
   }
 
-  .log-tags {
-    grid-area: tags;
+  .log-topics {
+    grid-area: topics;
     display: flex;
     flex-wrap: wrap;
     gap: 0.35rem;
@@ -147,7 +147,7 @@ const { url, title, date, tags = [], description, prefix, maxTags = 3, draft = f
   }
 
   @media (min-width: 48rem) {
-    .log-tags {
+    .log-topics {
       justify-content: flex-end;
     }
   }

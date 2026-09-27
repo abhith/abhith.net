@@ -70,11 +70,11 @@ export function buildContentGraph<P extends EntryItem, S extends EntryItem, St e
 
   const topics = mergeTopicCounts(
     {
-      posts: posts.map((post) => post.tags),
-      snippets: snippets.map((snippet) => snippet.tags),
-      stories: stories.map((story) => story.tags),
-      videos: videos.map((video) => video.tags),
-      services: tools.map((tool) => tool.tags),
+      posts: posts.map((post) => post.topics),
+      snippets: snippets.map((snippet) => snippet.topics),
+      stories: stories.map((story) => story.topics),
+      videos: videos.map((video) => video.topics),
+      services: tools.map((tool) => tool.topics),
     },
     input.topicDefinitions,
   );
@@ -115,7 +115,7 @@ export function buildContentGraph<P extends EntryItem, S extends EntryItem, St e
     },
 
     byTopic(slug) {
-      const has = (item: GraphItem) => item.tags.includes(slug);
+      const has = (item: GraphItem) => item.topics.includes(slug);
       return {
         posts: posts.filter(has),
         snippets: snippets.filter(has),
@@ -132,10 +132,10 @@ export function buildContentGraph<P extends EntryItem, S extends EntryItem, St e
       const addEntries = (type: "post" | "snippet", entries: readonly EntryItem[]) => {
         for (const entry of entries) {
           const id = `${type}:${entry.id}`;
-          nodes.push({ id, type, label: entry.title, url: entry.url, group: entry.tags[0] ?? "", weight: entry.tags.length });
-          for (const tag of new Set(entry.tags)) {
-            usedTopics.add(tag);
-            links.push({ source: id, target: `topic:${tag}` });
+          nodes.push({ id, type, label: entry.title, url: entry.url, group: entry.topics[0] ?? "", weight: entry.topics.length });
+          for (const topic of new Set(entry.topics)) {
+            usedTopics.add(topic);
+            links.push({ source: id, target: `topic:${topic}` });
           }
         }
       };

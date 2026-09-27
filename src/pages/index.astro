@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import portrait from "@/assets/abhith-dubai-airshow.jpg";
 import PostRow from "@/components/content/PostRow.astro";
 import StoryItem from "@/components/content/StoryItem.astro";
-import TagToken from "@/components/content/TagToken.astro";
+import TopicToken from "@/components/content/TopicToken.astro";
 import VideoItem from "@/components/content/VideoItem.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { yearsCoding } from "@/lib/career";
@@ -38,7 +38,7 @@ const cellarCount = graph.tools.length - shownTools.length;
 const elementNames = shownTools.map((tool) => shortToolName(tool.title));
 const symbols = elementSymbols(elementNames);
 const elements = shownTools.map((tool, index) => {
-  const group = elementGroup(tool.tags);
+  const group = elementGroup(tool.topics);
   const [col, row] = PERIODIC_CELLS[index + (hasCellar ? 1 : 0)];
   return {
     col,
@@ -146,7 +146,7 @@ const dirs = [
       <h2 id="latest-title" class="section-title flex-1">git log --oneline blog</h2>
     </div>
     <ul>
-      {latestPosts.map((post) => <PostRow url={post.url} title={post.title} date={post.date} tags={post.tags} description={post.description} draft={post.draft} />)}
+      {latestPosts.map((post) => <PostRow url={post.url} title={post.title} date={post.date} topics={post.topics} description={post.description} draft={post.draft} />)}
     </ul>
     <p class="mt-4 text-right font-mono text-sm"><a href="/blog/" class="text-accent hover:underline">all {graph.posts.length} posts →</a></p>
   </section>
@@ -173,7 +173,7 @@ const dirs = [
     <div aria-labelledby="stories-title">
       <h2 id="stories-title" class="section-title">curated · stories</h2>
       <ul>
-        {stories.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} tags={story.tags} />)}
+        {stories.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} topics={story.topics} />)}
       </ul>
       <p class="mt-4 font-mono text-sm"><a href="/recommended/stories/" class="text-accent hover:underline">more stories →</a></p>
     </div>
@@ -297,7 +297,7 @@ const dirs = [
             Every post and snippet, wired to the topics it touches. Follow the threads between Azure, Docker, .NET and friends.
           </p>
           <div class="mt-4 flex flex-wrap gap-1.5">
-            {topTopics.map((topic) => <TagToken slug={topic.slug} label={topic.slug} count={topic.totalPosts + topic.totalSnippets} />)}
+            {topTopics.map((topic) => <TopicToken slug={topic.slug} label={topic.slug} count={topic.totalPosts + topic.totalSnippets} />)}
           </div>
         </div>
         <a href="/graph/" class="btn btn-primary self-start">open graph →</a>
@@ -569,22 +569,22 @@ const dirs = [
   }
 
   .el-face {
-    --tag: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    --topic: hsl(var(--h, 160) var(--topic-s) var(--topic-l));
     position: relative;
     display: grid;
     grid-template-rows: auto 1fr auto;
     aspect-ratio: 1;
     min-width: 0;
     padding: 0.3rem 0.35rem 0.35rem;
-    border: 1px solid color-mix(in oklab, var(--tag) 32%, var(--line));
+    border: 1px solid color-mix(in oklab, var(--topic) 32%, var(--line));
     border-radius: 0.45rem;
     background: linear-gradient(
       155deg,
-      color-mix(in oklab, var(--tag) 16%, var(--surface)),
-      color-mix(in oklab, var(--tag) 5%, var(--surface)) 70%
+      color-mix(in oklab, var(--topic) 16%, var(--surface)),
+      color-mix(in oklab, var(--topic) 5%, var(--surface)) 70%
     );
     font-family: var(--font-mono);
-    color: var(--tag);
+    color: var(--topic);
     text-decoration: none;
   }
 
@@ -627,19 +627,19 @@ const dirs = [
   .el:hover,
   .el:focus-visible {
     translate: 0 -3px;
-    border-color: var(--tag);
-    box-shadow: 0 12px 22px -14px var(--tag);
+    border-color: var(--topic);
+    box-shadow: 0 12px 22px -14px var(--topic);
   }
 
   .el[data-active] {
-    border-color: var(--tag);
-    box-shadow: inset 0 0 0 1px var(--tag);
+    border-color: var(--topic);
+    box-shadow: inset 0 0 0 1px var(--topic);
   }
 
   .el[data-active]:hover {
     box-shadow:
-      inset 0 0 0 1px var(--tag),
-      0 12px 22px -14px var(--tag);
+      inset 0 0 0 1px var(--topic),
+      0 12px 22px -14px var(--topic);
   }
 
   .el[data-dim] {
@@ -649,7 +649,7 @@ const dirs = [
 
   /* Placeholder for everything older, like the lanthanide gap in the real table. */
   .el-cellar {
-    --tag: var(--muted);
+    --topic: var(--muted);
     border-style: dashed;
     border-color: var(--line);
     background: transparent;
@@ -660,20 +660,20 @@ const dirs = [
   }
 
   .el-cellar:hover {
-    --tag: var(--accent);
+    --topic: var(--accent);
   }
 
   .el-key {
-    --tag: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    --topic: hsl(var(--h, 160) var(--topic-s) var(--topic-l));
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
     min-width: 0;
     padding: 0.85rem 1rem 1rem;
-    border: 1px dashed color-mix(in oklab, var(--tag) 40%, var(--line));
+    border: 1px dashed color-mix(in oklab, var(--topic) 40%, var(--line));
     border-radius: 0.6rem;
     background:
-      radial-gradient(circle at 0% 0%, color-mix(in oklab, var(--tag) 13%, transparent), transparent 65%),
+      radial-gradient(circle at 0% 0%, color-mix(in oklab, var(--topic) 13%, transparent), transparent 65%),
       var(--surface);
     transition: border-color 200ms ease;
   }
@@ -687,8 +687,8 @@ const dirs = [
 
   .el-key-tile {
     padding: 0.45rem 0.5rem 0.5rem;
-    border-color: var(--tag);
-    box-shadow: 0 14px 28px -18px var(--tag);
+    border-color: var(--topic);
+    box-shadow: 0 14px 28px -18px var(--topic);
   }
 
   .el-key-tile .el-num {
@@ -745,7 +745,7 @@ const dirs = [
   }
 
   .el-key-group {
-    color: var(--tag);
+    color: var(--topic);
   }
 
   .el-key-open {
@@ -779,7 +779,7 @@ const dirs = [
   }
 
   .el-group {
-    --tag: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    --topic: hsl(var(--h, 160) var(--topic-s) var(--topic-l));
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -789,15 +789,15 @@ const dirs = [
 
   .el-group:hover,
   .el-group:focus-visible {
-    color: var(--tag);
+    color: var(--topic);
   }
 
   .el-swatch {
     width: 0.7rem;
     height: 0.7rem;
-    border: 1px solid var(--tag);
+    border: 1px solid var(--topic);
     border-radius: 0.2rem;
-    background: color-mix(in oklab, var(--tag) 25%, var(--surface));
+    background: color-mix(in oklab, var(--topic) 25%, var(--surface));
   }
 
   /* Elements settle into place column by column as the table scrolls into view. */

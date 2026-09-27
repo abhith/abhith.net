@@ -36,7 +36,7 @@ const blog = defineCollection({
         date: dateField,
         lastModificationTime: dateField.optional(),
         image: image().optional(),
-        tags: z.array(z.string().min(1)).min(1),
+        topics: z.array(z.string().min(1)).min(1),
         commentId: z.string().optional(),
         draft: z.boolean().default(false),
         templateKey: z.string().optional(),
@@ -94,7 +94,7 @@ const services = defineCollection({
     description: z.string().default(""),
     image: z.string().nullish().transform((value) => value?.trim() || undefined),
     date: dateField,
-    tags: z.array(z.string().min(1)).min(1),
+    topics: z.array(z.string().min(1)).min(1),
   }),
 });
 
@@ -107,7 +107,7 @@ const stories = defineCollection({
     title: z.string().min(1),
     description: z.string().nullish().transform((value) => value?.trim() || undefined),
     date: dateField,
-    tags: z.array(z.string().min(1)).min(1),
+    topics: z.array(z.string().min(1)).min(1),
   }),
 });
 
@@ -120,7 +120,7 @@ const videos = defineCollection({
     title: z.string().min(1),
     description: z.string().nullish().transform((value) => value?.trim() || undefined),
     image: z.string().nullish().transform((value) => value?.trim() || undefined),
-    tags: z.array(z.string().min(1)).min(1),
+    topics: z.array(z.string().min(1)).min(1),
     date: dateField,
     type: z.enum(["youtube", "vimeo"]).default("youtube"),
   }),

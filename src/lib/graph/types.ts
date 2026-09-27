@@ -3,10 +3,10 @@
  * `astro:content`, so these helpers can be unit-tested with Vitest.
  */
 
-/** Anything that can be related to something else by tags. */
+/** Anything that can be related to something else by topics. */
 export interface GraphItem {
   id: string;
-  tags: readonly string[];
+  topics: readonly string[];
   date: Date;
 }
 
@@ -55,7 +55,7 @@ export interface GraphNode {
   type: "topic" | "post" | "snippet";
   label: string;
   url: string;
-  /** Topic slug used for colouring (topic itself, or the first tag of a post/snippet). */
+  /** Topic slug used for colouring (topic itself, or the first topic of a post/snippet). */
   group: string;
   weight: number;
 }

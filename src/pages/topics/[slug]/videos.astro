@@ -18,6 +18,6 @@ const videos = (await getContentGraph()).byTopic(topic.slug).videos;
 
 <TopicLayout topic={topic} active="videos" title={`${topic.title} videos`} description={`Recommended videos about ${topic.title}.`}>
   <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-    {videos.map((video) => <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} tags={video.tags} />)}
+    {videos.map((video) => <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} topics={video.topics} />)}
   </ul>
 </TopicLayout>

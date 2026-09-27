@@ -22,7 +22,7 @@ const hasAny = Object.values(related).some((list) => list.length > 0);
           <h2 class="section-title">related snippets</h2>
           <ul>
             {related.snippets.map((snippet) => (
-              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} tags={snippet.tags} prefix={snippet.category} description={snippet.description} />
+              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} />
             ))}
           </ul>
         </div>
@@ -32,7 +32,7 @@ const hasAny = Object.values(related).some((list) => list.length > 0);
           <h2 class="section-title">related articles</h2>
           <ul>
             {related.articles.map((post) => (
-              <PostRow url={post.url} title={post.title} date={post.date} tags={post.tags} description={post.description} />
+              <PostRow url={post.url} title={post.title} date={post.date} topics={post.topics} description={post.description} />
             ))}
           </ul>
         </div>
@@ -62,7 +62,7 @@ const hasAny = Object.values(related).some((list) => list.length > 0);
           <h2 class="section-title">tools</h2>
           <ul class="grid gap-4 sm:grid-cols-2">
             {related.tools.map((tool) => (
-              <ToolItem url={tool.url} title={tool.title} description={tool.description} tags={tool.tags} />
+              <ToolItem url={tool.url} title={tool.title} description={tool.description} topics={tool.topics} />
             ))}
           </ul>
         </div>

@@ -1,16 +1,16 @@
 ---
 import { hostOf } from "@/lib/format";
 import { withRef } from "@/lib/outbound";
-import TagToken from "./TagToken.astro";
+import TopicToken from "./TopicToken.astro";
 
 interface Props {
   url: string;
   title: string;
   description?: string;
-  tags?: readonly string[];
+  topics?: readonly string[];
 }
 
-const { url, title, description, tags = [] } = Astro.props;
+const { url, title, description, topics = [] } = Astro.props;
 ---
 
 <li class="tool">
@@ -20,10 +20,10 @@ const { url, title, description, tags = [] } = Astro.props;
     {description && <span class="tool-desc">{description}</span>}
   </a>
   {
-    tags.length > 0 && (
+    topics.length > 0 && (
       <div class="mt-2 flex flex-wrap gap-1.5">
-        {tags.map((tag) => (
-          <TagToken slug={tag} />
+        {topics.map((topic) => (
+          <TopicToken slug={topic} />
         ))}
       </div>
     )

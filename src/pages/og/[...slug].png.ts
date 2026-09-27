@@ -14,15 +14,15 @@ export const getStaticPaths = (async () => {
   const cards: Array<{ params: { slug: string }; props: { card: OgCard } }> = [
     {
       params: { slug: "default" },
-      props: { card: { file: "README.md", path: "~/", title: "Abhith Rajan", description: SITE.description, tags: ["dotnet", "azure", "devops", "web"], meta: "notes · snippets · curated links" } },
+      props: { card: { file: "README.md", path: "~/", title: "Abhith Rajan", description: SITE.description, topics: ["dotnet", "azure", "devops", "web"], meta: "notes · snippets · curated links" } },
     },
     ...graph.posts.map((post) => ({
       params: { slug: `blog/${post.slug}` },
-      props: { card: { file: `${post.slug}.mdx`, path: "~/blog", title: post.title, description: post.description, tags: post.tags, meta: isoDate(post.date) } },
+      props: { card: { file: `${post.slug}.mdx`, path: "~/blog", title: post.title, description: post.description, topics: post.topics, meta: isoDate(post.date) } },
     })),
     ...graph.snippets.map((snippet) => ({
       params: { slug: `snippets/${snippet.id}` },
-      props: { card: { file: `${snippet.slug}.mdx`, path: `~/snippets/${snippet.category}`, title: snippet.title, description: snippet.description, tags: snippet.tags, meta: isoDate(snippet.date) } },
+      props: { card: { file: `${snippet.slug}.mdx`, path: `~/snippets/${snippet.category}`, title: snippet.title, description: snippet.description, topics: snippet.topics, meta: isoDate(snippet.date) } },
     })),
     ...graph.topics.map((topic) => ({
       params: { slug: `topics/${topic.slug}` },
@@ -32,7 +32,7 @@ export const getStaticPaths = (async () => {
           path: "~/topics",
           title: topic.title,
           description: topic.description ?? `Posts, snippets, stories, videos and tools about ${topic.title}.`,
-          tags: [topic.slug],
+          topics: [topic.slug],
           meta: plural(totalItems(topic), "entry", "entries"),
         },
       },

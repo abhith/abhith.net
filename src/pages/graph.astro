@@ -1,6 +1,6 @@
 ---
 import KnowledgeGraph from "@/components/islands/KnowledgeGraph";
-import TagToken from "@/components/content/TagToken.astro";
+import TopicToken from "@/components/content/TopicToken.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getContentGraph } from "@/lib/content-graph";
 
@@ -27,7 +27,7 @@ const topics = graph.topics.filter((topic) => topic.totalPosts + topic.totalSnip
       <section class="mt-8">
         <h2 class="section-title">topics</h2>
         <ul class="flex flex-wrap gap-1.5">
-          {topics.map((topic) => <li><TagToken slug={topic.slug} count={topic.totalPosts + topic.totalSnippets} /></li>)}
+          {topics.map((topic) => <li><TopicToken slug={topic.slug} count={topic.totalPosts + topic.totalSnippets} /></li>)}
         </ul>
       </section>
     </noscript>
@@ -173,6 +173,6 @@ const topics = graph.topics.filter((topic) => topic.totalPosts + topic.totalSnip
     height: 0.6rem;
     border-radius: 999px;
     flex-shrink: 0;
-    background: hsl(var(--h) var(--tag-s) var(--tag-l));
+    background: hsl(var(--h) var(--topic-s) var(--topic-l));
   }
 </style>

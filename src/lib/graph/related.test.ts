@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { byDateDesc } from "./build";
 import * as fx from "./fixtures";
-import { pickRanked, rankRelated, RELATED_LIMITS, sharedTagCount } from "./related";
+import { pickRanked, rankRelated, RELATED_LIMITS, sharedTopicCount } from "./related";
 import type { GraphItem } from "./types";
 
 const sources = {
@@ -16,7 +16,7 @@ const mimeTypes = fx.posts[0];
 
 describe("rankRelated", () => {
   it("applies the Gatsby limits", () => {
-    const many: GraphItem[] = Array.from({ length: 20 }, (_, i) => ({ id: `x${i}`, tags: ["azure"], date: new Date(2020, 0, i + 1) }));
+    const many: GraphItem[] = Array.from({ length: 20 }, (_, i) => ({ id: `x${i}`, topics: ["azure"], date: new Date(2020, 0, i + 1) }));
     const related = rankRelated(mimeTypes, { articles: many, snippets: many, stories: many, videos: many, tools: many });
     expect(related.articles).toHaveLength(RELATED_LIMITS.articles);
     expect(related.snippets).toHaveLength(6);
@@ -31,33 +31,33 @@ describe("rankRelated", () => {
     expect(related.articles).toEqual([]);
   });
 
-  it("returns nothing for an entry whose tags match nothing", () => {
+  it("returns nothing for an entry whose topics match nothing", () => {
     const related = rankRelated(fx.posts[2], sources);
     expect(Object.values(related).every((list) => list.length === 0)).toBe(true);
   });
 
-  it("counts shared tags once per tag", () => {
-    expect(sharedTagCount(["azure", "azure", "iis"], { id: "s", tags: ["azure", "iis"], date: new Date() })).toBe(2);
+  it("counts shared topics once per topic", () => {
+    expect(sharedTopicCount(["azure", "azure", "iis"], { id: "s", topics: ["azure", "iis"], date: new Date() })).toBe(2);
   });
 
-  it("prefers items sharing more tags over newer ones", () => {
+  it("prefers items sharing more topics over newer ones", () => {
     const related = rankRelated(mimeTypes, sources);
     expect(ids(related.stories)).toEqual(["story-3", "story-1"]);
   });
 
   it("breaks score ties by date (newest first), then list order", () => {
     const items: GraphItem[] = [
-      { id: "old", tags: ["a"], date: new Date("2019-01-01") },
-      { id: "new", tags: ["a"], date: new Date("2021-01-01") },
-      { id: "same-date", tags: ["a"], date: new Date("2021-01-01") },
+      { id: "old", topics: ["a"], date: new Date("2019-01-01") },
+      { id: "new", topics: ["a"], date: new Date("2021-01-01") },
+      { id: "same-date", topics: ["a"], date: new Date("2021-01-01") },
     ];
     expect(ids(pickRanked(["a"], items, 10))).toEqual(["new", "same-date", "old"]);
   });
 
-  it("ranks an older item sharing more tags above a newer one", () => {
+  it("ranks an older item sharing more topics above a newer one", () => {
     const items: GraphItem[] = [
-      { id: "x1", tags: ["a"], date: new Date("2022-01-01") },
-      { id: "x2", tags: ["a", "b"], date: new Date("2020-01-01") },
+      { id: "x1", topics: ["a"], date: new Date("2022-01-01") },
+      { id: "x2", topics: ["a", "b"], date: new Date("2020-01-01") },
     ];
     expect(ids(pickRanked(["a", "b"], items, 6))).toEqual(["x2", "x1"]);
   });

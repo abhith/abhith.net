@@ -32,7 +32,7 @@ const base = `/topics/${topic.slug}/`;
           <h2 id="posts-title" class="section-title">git log -- {topic.slug}</h2>
           <ul>
             {content.posts.map((post) => (
-              <PostRow url={post.url} title={post.title} date={post.date} tags={post.tags} description={post.description} draft={post.draft} />
+              <PostRow url={post.url} title={post.title} date={post.date} topics={post.topics} description={post.description} draft={post.draft} />
             ))}
           </ul>
         </section>
@@ -45,7 +45,7 @@ const base = `/topics/${topic.slug}/`;
           <h2 id="snippets-title" class="section-title">snippets</h2>
           <ul>
             {content.snippets.map((snippet) => (
-              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} tags={snippet.tags} prefix={snippet.category} description={snippet.description} />
+              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} />
             ))}
           </ul>
         </section>

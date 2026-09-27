@@ -18,6 +18,6 @@ const stories = (await getContentGraph()).byTopic(topic.slug).stories;
 
 <TopicLayout topic={topic} active="stories" title={`${topic.title} stories`} description={`Recommended articles and stories about ${topic.title}.`}>
   <ul class="max-w-3xl">
-    {stories.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} tags={story.tags} />)}
+    {stories.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} topics={story.topics} />)}
   </ul>
 </TopicLayout>

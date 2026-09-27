@@ -9,7 +9,7 @@ import Giscus from "@/components/content/Giscus.astro";
 import LocalGraph from "@/components/content/LocalGraph.astro";
 import RelatedSection from "@/components/content/RelatedSection.astro";
 import Share from "@/components/content/Share.astro";
-import TagToken from "@/components/content/TagToken.astro";
+import TopicToken from "@/components/content/TopicToken.astro";
 import Toc from "@/components/content/Toc.astro";
 import Webmentions from "@/components/content/Webmentions.astro";
 import type { Author, Post, Snippet, SiteGraph } from "@/lib/content-graph";
@@ -55,7 +55,7 @@ const jsonLd = [
     url: `${site}${entry.url}`,
     datePublished: entry.date.toISOString(),
     dateModified: entry.lastModified.toISOString(),
-    keywords: entry.tags.join(", "),
+    keywords: entry.topics.join(", "),
     author: authors.length > 0 ? authors.map((author) => ({ "@type": "Person", name: author.name, url: `${site}/about/` })) : { "@type": "Person", name: entry.author },
     publisher: { "@id": `${site}/#person` },
     mainEntityOfPage: `${site}${entry.url}`,
@@ -72,7 +72,7 @@ const jsonLd = [
   imageAlt={entry.title}
   publishedTime={entry.date}
   modifiedTime={entry.lastModified}
-  tags={entry.tags}
+  topics={entry.topics}
   crumbs={crumbs}
   section={section}
   readingTime={readingTime}
@@ -81,7 +81,7 @@ const jsonLd = [
   <article class="shell pt-8" data-reading data-pagefind-body>
     <header class="measure !w-full max-w-3xl">
       <div class="flex flex-wrap gap-1.5">
-        {entry.tags.map((tag) => <TagToken slug={tag} />)}
+        {entry.topics.map((topic) => <TopicToken slug={topic} />)}
       </div>
       <h1 class="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl" data-pagefind-meta="title">{entry.title}</h1>
       <p class="mt-4 font-serif text-xl leading-relaxed text-muted">{entry.description}</p>
@@ -121,7 +121,7 @@ const jsonLd = [
           {
             category && (
               <p class="mono-label">
-                category: <TagToken slug={category.slug} label={category.title} />
+                category: <TopicToken slug={category.slug} label={category.title} />
               </p>
             )
           }

@@ -14,7 +14,7 @@ export interface PaletteEntry {
   u: string;
   /** kind */
   k: EntryKind;
-  /** tags (posts/snippets) */
+  /** topics (posts/snippets) */
   g?: string[];
 }
 

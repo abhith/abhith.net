@@ -34,8 +34,8 @@
   --accent-fg: #ffffff;
   --warm: #a2461a;
   --selection: #cde8dc;
-  --tag-l: 34%;
-  --tag-s: 62%;
+  --topic-l: 34%;
+  --topic-s: 62%;
   --syntax-keyword: #7a3fd1;
   --syntax-string: #0b6e4f;
   --syntax-comment: #6f6a5f;
@@ -53,8 +53,8 @@
   --accent-fg: #0b1a14;
   --warm: #f5a97f;
   --selection: #1f4a3a;
-  --tag-l: 72%;
-  --tag-s: 70%;
+  --topic-l: 72%;
+  --topic-s: 70%;
   --syntax-keyword: #c4a7ff;
   --syntax-string: #7ee0b5;
   --syntax-comment: #8b95a3;
@@ -72,8 +72,8 @@
   --accent-fg: #fdf6e3;
   --warm: #b0431b;
   --selection: #e9dfbf;
-  --tag-l: 32%;
-  --tag-s: 70%;
+  --topic-l: 32%;
+  --topic-s: 70%;
   --syntax-keyword: #6c3fb8;
   --syntax-string: #4d6b00;
   --syntax-comment: #657b83;
@@ -181,8 +181,8 @@
   }
 
   /* Syntax-highlighted topic token, colour from a stable hash of the slug (--h). */
-  .tag-token {
-    --tag: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+  .topic-token {
+    --topic: hsl(var(--h, 160) var(--topic-s) var(--topic-l));
     display: inline-flex;
     align-items: center;
     font-family: var(--font-mono);
@@ -190,22 +190,22 @@
     line-height: 1.4;
     padding: 0.05rem 0.4rem;
     border-radius: 0.25rem;
-    color: var(--tag);
-    background: color-mix(in oklab, var(--tag) 10%, transparent);
-    border: 1px solid color-mix(in oklab, var(--tag) 28%, transparent);
+    color: var(--topic);
+    background: color-mix(in oklab, var(--topic) 10%, transparent);
+    border: 1px solid color-mix(in oklab, var(--topic) 28%, transparent);
     text-decoration: none;
     white-space: nowrap;
     transition: background 120ms ease;
   }
 
-  .tag-token::before {
+  .topic-token::before {
     content: "#";
     opacity: 0.6;
     margin-right: 0.05rem;
   }
 
-  a.tag-token:hover {
-    background: color-mix(in oklab, var(--tag) 20%, transparent);
+  a.topic-token:hover {
+    background: color-mix(in oklab, var(--topic) 20%, transparent);
   }
 
   .btn {

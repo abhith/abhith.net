@@ -23,8 +23,8 @@ export const GET: APIRoute = async () => {
   const graph = await getContentGraph();
   const entries: PaletteEntry[] = [
     ...PAGES,
-    ...graph.posts.map((post) => ({ t: post.title, u: post.url, k: "post" as const, g: post.tags.slice(0, 4) })),
-    ...graph.snippets.map((snippet) => ({ t: snippet.title, u: snippet.url, k: "snippet" as const, g: snippet.tags.slice(0, 4) })),
+    ...graph.posts.map((post) => ({ t: post.title, u: post.url, k: "post" as const, g: post.topics.slice(0, 4) })),
+    ...graph.snippets.map((snippet) => ({ t: snippet.title, u: snippet.url, k: "snippet" as const, g: snippet.topics.slice(0, 4) })),
     ...graph.topics.map((topic) => ({ t: topic.title, u: `/topics/${topic.slug}/`, k: "topic" as const })),
     ...graph.topics.filter((topic) => topic.totalSnippets > 0).map((topic) => ({ t: `${topic.title} snippets`, u: `/snippets/${topic.slug}/`, k: "page" as const })),
   ];

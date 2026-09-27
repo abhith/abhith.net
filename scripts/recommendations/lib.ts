@@ -14,14 +14,14 @@ export interface StoryEntry {
   title: string;
   description?: string;
   date: string;
-  tags: string[];
+  topics: string[];
 }
 
 export interface VideoEntry {
   url: string;
   title: string;
   image?: string;
-  tags: string[];
+  topics: string[];
   date: string;
   type: "youtube" | "vimeo";
 }
@@ -31,7 +31,7 @@ export interface ServiceEntry {
   url: string;
   description: string;
   date: string;
-  tags: string[];
+  topics: string[];
 }
 
 export type Entry = StoryEntry | VideoEntry | ServiceEntry;
@@ -97,13 +97,13 @@ export function urlKey(input: string): string {
 }
 
 /** `privacy, open-source` / `privacy open-source` → `["privacy", "open-source"]` (deduplicated). */
-export function parseTags(input: string | readonly string[] | undefined): string[] {
+export function parseTopics(input: string | readonly string[] | undefined): string[] {
   const raw = typeof input === "string" ? [input] : (input ?? []);
-  const tags = raw
+  const topics = raw
     .flatMap((value) => value.split(/[\s,]+/))
-    .map((tag) => tag.trim().toLowerCase().replace(/^#/, ""))
+    .map((topic) => topic.trim().toLowerCase().replace(/^#/, ""))
     .filter(Boolean);
-  return [...new Set(tags)];
+  return [...new Set(topics)];
 }
 
 function levenshtein(a: string, b: string): number {
@@ -121,24 +121,24 @@ function levenshtein(a: string, b: string): number {
 }
 
 /** Closest known topic slugs for a typo, best first. */
-export function suggestTags(tag: string, known: readonly string[], limit = 3): string[] {
+export function suggestTopics(topic: string, known: readonly string[], limit = 3): string[] {
   return known
-    .map((slug) => ({ slug, score: slug.includes(tag) || tag.includes(slug) ? 0 : levenshtein(tag, slug) }))
-    .filter(({ score }) => score <= Math.max(2, Math.floor(tag.length / 3)))
+    .map((slug) => ({ slug, score: slug.includes(topic) || topic.includes(slug) ? 0 : levenshtein(topic, slug) }))
+    .filter(({ score }) => score <= Math.max(2, Math.floor(topic.length / 3)))
     .sort((a, b) => a.score - b.score || a.slug.localeCompare(b.slug))
     .slice(0, limit)
     .map(({ slug }) => slug);
 }
 
-/** Error messages for tags that don't exist in `topics.yml`; empty when all are fine. */
-export function validateTags(tags: readonly string[], known: readonly string[]): string[] {
-  if (tags.length === 0) return ["At least one tag is required."];
+/** Error messages for topics that don't exist in `topics.yml`; empty when all are fine. */
+export function validateTopics(topics: readonly string[], known: readonly string[]): string[] {
+  if (topics.length === 0) return ["At least one topic is required."];
   const knownSet = new Set(known);
-  return tags
-    .filter((tag) => !knownSet.has(tag))
-    .map((tag) => {
-      const suggestions = suggestTags(tag, known);
-      return `Unknown tag \`${tag}\`${suggestions.length ? ` (did you mean ${suggestions.map((s) => `\`${s}\``).join(", ")}?)` : ""}.`;
+  return topics
+    .filter((topic) => !knownSet.has(topic))
+    .map((topic) => {
+      const suggestions = suggestTopics(topic, known);
+      return `Unknown topic \`${topic}\`${suggestions.length ? ` (did you mean ${suggestions.map((s) => `\`${s}\``).join(", ")}?)` : ""}.`;
     });
 }
 
@@ -222,7 +222,7 @@ export function isoNow(now: Date = new Date()): string {
 export interface BuildOptions {
   kind: Kind;
   url: string;
-  tags: string[];
+  topics: string[];
   meta: PageMeta;
   date: string;
   title?: string;
@@ -230,7 +230,7 @@ export interface BuildOptions {
 }
 
 /** Builds the entry in the same key order the data files already use. */
-export function buildEntry({ kind, url, tags, meta, date, title, description }: BuildOptions): Entry {
+export function buildEntry({ kind, url, topics, meta, date, title, description }: BuildOptions): Entry {
   const finalTitle = tidy(title) ?? meta.title;
   if (!finalTitle) throw new Error("Could not find a title for this page; pass one with --title.");
   const finalDescription = tidy(description) ?? meta.description;
@@ -240,17 +240,17 @@ export function buildEntry({ kind, url, tags, meta, date, title, description }: 
     if (!type) throw new Error("Only YouTube and Vimeo links can be added as videos.");
     // YouTube thumbnails are derived from the video id at build time; Vimeo needs the URL stored.
     const image = type === "vimeo" ? meta.image : undefined;
-    return { url, title: finalTitle, ...(image ? { image } : {}), tags, date, type };
+    return { url, title: finalTitle, ...(image ? { image } : {}), topics, date, type };
   }
   if (kind === "service") {
-    return { title: finalTitle, url, description: finalDescription ?? "", date, tags };
+    return { title: finalTitle, url, description: finalDescription ?? "", date, topics };
   }
-  return { url, title: finalTitle, ...(finalDescription ? { description: finalDescription } : {}), date, tags };
+  return { url, title: finalTitle, ...(finalDescription ? { description: finalDescription } : {}), date, topics };
 }
 
 /**
  * Inserts entries at the top of a JSON array file without re-serialising the rest of it, so
- * existing hand formatting (e.g. inline tag arrays) is left untouched.
+ * existing hand formatting (e.g. inline topic arrays) is left untouched.
  */
 export function insertJsonEntries(text: string, entries: readonly Entry[]): string {
   if (entries.length === 0) return text;
@@ -282,22 +282,22 @@ export function insertYamlEntries(text: string, entries: readonly Entry[]): stri
 
 export interface LinkRequest {
   url: string;
-  tags: string[];
+  topics: string[];
 }
 
 /**
- * Parses a list of links, one per line. Each line may carry its own tags after the URL
- * (`https://example.com privacy, open-source`); otherwise `defaultTags` apply. Blank lines,
+ * Parses a list of links, one per line. Each line may carry its own topics after the URL
+ * (`https://example.com privacy, open-source`); otherwise `defaultTopics` apply. Blank lines,
  * markdown bullets and `_No response_` placeholders are ignored.
  */
-export function parseLinkLines(text: string, defaultTags: readonly string[] = []): LinkRequest[] {
+export function parseLinkLines(text: string, defaultTopics: readonly string[] = []): LinkRequest[] {
   const requests: LinkRequest[] = [];
   for (const rawLine of text.split(/\r?\n/)) {
     const line = rawLine.replace(/^\s*(?:[-*+]|\d+[.)])\s+/, "").trim();
     const match = line.match(/<?(https?:\/\/[^\s<>]+?)>?(?:\s+(.*))?$/i);
     if (!match) continue;
-    const ownTags = parseTags(match[2]?.replace(/^[-–—:|]\s*/, ""));
-    requests.push({ url: match[1]!, tags: ownTags.length ? ownTags : [...defaultTags] });
+    const ownTopics = parseTopics(match[2]?.replace(/^[-–—:|]\s*/, ""));
+    requests.push({ url: match[1]!, topics: ownTopics.length ? ownTopics : [...defaultTopics] });
   }
   return requests;
 }

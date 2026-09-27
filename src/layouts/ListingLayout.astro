@@ -5,7 +5,7 @@
  */
 import type { Crumb } from "@/components/shell/PathBreadcrumb.astro";
 import Pagination from "@/components/content/Pagination.astro";
-import TagToken from "@/components/content/TagToken.astro";
+import TopicToken from "@/components/content/TopicToken.astro";
 import type { Page } from "@/lib/graph/paginate";
 import BaseLayout from "./BaseLayout.astro";
 
@@ -58,7 +58,7 @@ const pageTitle = page.pageNumber > 1 ? `${title} - Page ${page.pageNumber}` : t
               {topics.map((topic) => (
                 <li>
                   <a href={topic.href ?? `/topics/${topic.slug}/`} aria-current={topic.slug === currentTopic ? "page" : undefined} class:list={["topic-link", { "is-current": topic.slug === currentTopic }]}>
-                    <TagToken slug={topic.slug} label={topic.slug} count={topic.count} link={false} />
+                    <TopicToken slug={topic.slug} label={topic.slug} count={topic.count} link={false} />
                   </a>
                 </li>
               ))}

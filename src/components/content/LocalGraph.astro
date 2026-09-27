@@ -13,7 +13,7 @@ interface Props {
 
 const { entry, graph } = Astro.props;
 const related = graph.relatedFor(entry);
-const topics = [...new Set(entry.tags)].slice(0, 6);
+const topics = [...new Set(entry.topics)].slice(0, 6);
 const neighbours = [...related.articles, ...related.snippets].slice(0, 8);
 
 const W = 640;
@@ -41,7 +41,7 @@ const truncate = (text: string, max = 28) => (text.length > max ? `${text.slice(
         </desc>
         {outer.map((node) =>
           topicNodes
-            .filter((topic) => node.item.tags.includes(topic.slug))
+            .filter((topic) => node.item.topics.includes(topic.slug))
             .map((topic) => <line x1={topic.x} y1={topic.y} x2={node.x} y2={node.y} class="lg-edge lg-edge--outer" />),
         )}
         {topicNodes.map((topic) => (
@@ -87,7 +87,7 @@ const truncate = (text: string, max = 28) => (text.length > max ? `${text.slice(
     font-family: var(--font-mono);
   }
   .lg-edge {
-    stroke: hsl(var(--h, 160) var(--tag-s) var(--tag-l));
+    stroke: hsl(var(--h, 160) var(--topic-s) var(--topic-l));
     stroke-width: 1.5;
     opacity: 0.7;
   }
@@ -101,10 +101,10 @@ const truncate = (text: string, max = 28) => (text.length > max ? `${text.slice(
     fill: var(--muted);
   }
   .lg-node--topic circle {
-    fill: hsl(var(--h) var(--tag-s) var(--tag-l));
+    fill: hsl(var(--h) var(--topic-s) var(--topic-l));
   }
   .lg-node--topic text {
-    fill: hsl(var(--h) var(--tag-s) var(--tag-l));
+    fill: hsl(var(--h) var(--topic-s) var(--topic-l));
     font-weight: 600;
   }
   .lg-node--outer circle {

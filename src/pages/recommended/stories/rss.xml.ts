@@ -20,8 +20,8 @@ export const GET: APIRoute = async (context) => {
       title: story.title,
       description: story.description,
       pubDate: story.date,
-      link: `/topics/${story.tags[0]}/stories/`,
-      categories: [...story.tags],
+      link: `/topics/${story.topics[0]}/stories/`,
+      categories: [...story.topics],
       customData: `<guid isPermaLink="false">${story.url.replace(/&/g, "&amp;")}</guid><source url="${story.url.replace(/&/g, "&amp;")}">${new URL(story.url).hostname}</source>`,
     })),
   });

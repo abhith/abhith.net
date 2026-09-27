@@ -22,7 +22,7 @@ npm run preview    # serve dist/ locally (full-text search works here)
 | `npm run build` | Production build to `dist/` (drafts excluded) and Pagefind index |
 | `npm run check` | `astro check` type checking |
 | `npm test` | Vitest unit tests for the content graph, palette and helpers |
-| `npm run add -- <url> <tags>` | Add a recommended story, video or service with fetched metadata (see [Adding recommendations](#adding-recommendations)) |
+| `npm run add -- <url> <topics>` | Add a recommended story, video or service with fetched metadata (see [Adding recommendations](#adding-recommendations)) |
 
 ## Environment variables
 
@@ -65,7 +65,7 @@ The optional `WEBMENTIONS_TOKEN` repository secret is passed to the CI build whe
 | Snippets | `src/content/snippets/<category>/<slug>.mdx` | The first `topics` entry is the category. |
 | Topics | `src/content/topics/topics.yml` | Topics used by content but missing here get a `startCase` title. |
 | Stories / videos | `src/content/data/{stories,videos}.json` | Add with `npm run add` (below). |
-| Services (tools) | `src/content/recommended/services/services.yml` | Add with `npm run add -- <url> <tags> --kind service`. |
+| Services (tools) | `src/content/recommended/services/services.yml` | Add with `npm run add -- <url> <topics> --kind service`. |
 
 MDX supports GitHub-flavoured Markdown, footnotes, emoji shortcodes, Expressive Code frames (`title="file.ts"`,
 `{2-4}` line markers, `ins`/`del` diffs, `collapse={1-5}`), ```` ```mermaid ```` diagrams, bare tweet URLs
@@ -73,7 +73,7 @@ MDX supports GitHub-flavoured Markdown, footnotes, emoji shortcodes, Expressive 
 
 ## Adding recommendations
 
-Only the URL and tags are needed; everything else is fetched. YouTube/Vimeo titles come from oEmbed, and
+Only the URL and topics are needed; everything else is fetched. YouTube/Vimeo titles come from oEmbed, and
 other pages are read from their Open Graph / `<title>` / meta description tags.
 
 ```bash
@@ -83,18 +83,18 @@ npm run add -- https://forminit.com/ developer-tools --kind service             
 npm run add -- https://a.dev/ ai https://b.dev/ git,github --dry-run              # several at once, preview only
 ```
 
-Words after a URL are that URL's tags, and `--tags` covers URLs without their own. The script:
+Words after a URL are that URL's topics, and `--topics` covers URLs without their own. The script:
 
 - cleans the URL by dropping `utm_*` and similar tracking parameters and normalising YouTube links
 - skips links that already exist in any of the three files
-- rejects tags that aren't in `topics.yml` and suggests the closest match (`--allow-new-tags` overrides this)
+- rejects topics that aren't in `topics.yml` and suggests the closest match (`--allow-new-topics` overrides this)
 - inserts the entry at the top of the file without reformatting the rest
 
 Quote URLs that contain `?` or `&`, since zsh would otherwise treat them as wildcards. Use `--title` when a site
 blocks metadata fetching, and `--help` to see every option.
 
 **From anywhere (phone, browser):** open an issue with the **Add recommendation** form, one link per line with
-optional tags after each. The `add-recommendation.yml` workflow runs the same script, opens a PR that closes
+optional topics after each. The `add-recommendation.yml` workflow runs the same script, opens a PR that closes
 the issue, and comments with what was added, skipped or rejected. To retry, edit the issue and re-add the label.
 You can also start it with **Actions → Add recommendation → Run workflow**. One-time setup:
 
@@ -121,7 +121,7 @@ src/
   pages/og/[...slug].png.ts  Satori/resvg social cards for every post, snippet and topic
 ```
 
-Related content keeps the Gatsby per-type limits. `rankRelated()` orders candidates by the number of shared tags
+Related content keeps the Gatsby per-type limits. `rankRelated()` orders candidates by the number of shared topics
 and then by date.
 
 ## Command palette

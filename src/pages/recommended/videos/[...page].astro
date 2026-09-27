@@ -34,6 +34,6 @@ const topics = graph.topics
   topics={topics}
 >
   <ul class="grid gap-8 sm:grid-cols-2">
-    {page.items.map((video) => <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} tags={video.tags} />)}
+    {page.items.map((video) => <VideoItem url={video.url} title={video.title} date={video.date} youtubeId={video.youtubeId} image={video.image} topics={video.topics} />)}
   </ul>
 </ListingLayout>

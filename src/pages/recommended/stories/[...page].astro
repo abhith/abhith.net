@@ -34,6 +34,6 @@ const topics = graph.topics
   topics={topics}
 >
   <ul>
-    {page.items.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} tags={story.tags} />)}
+    {page.items.map((story) => <StoryItem url={story.url} title={story.title} date={story.date} description={story.description} topics={story.topics} />)}
   </ul>
 </ListingLayout>

@@ -33,6 +33,6 @@ const topics = graph.topics
   topics={topics}
 >
   <ul>
-    {page.items.map((post) => <PostRow url={post.url} title={post.title} date={post.date} tags={post.tags} description={post.description} draft={post.draft} />)}
+    {page.items.map((post) => <PostRow url={post.url} title={post.title} date={post.date} topics={post.topics} description={post.description} draft={post.draft} />)}
   </ul>
 </ListingLayout>

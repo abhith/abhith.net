@@ -32,7 +32,7 @@ interface View {
 const themeVars = () => {
   const style = getComputedStyle(document.documentElement);
   const get = (name: string) => style.getPropertyValue(name).trim();
-  return { fg: get("--fg"), muted: get("--muted"), line: get("--line"), bg: get("--bg"), accent: get("--accent"), l: get("--tag-l") || "40%", s: get("--tag-s") || "65%" };
+  return { fg: get("--fg"), muted: get("--muted"), line: get("--line"), bg: get("--bg"), accent: get("--accent"), l: get("--topic-l") || "40%", s: get("--topic-s") || "65%" };
 };
 
 export default function KnowledgeGraph({ src = "/graph.json" }: Props) {

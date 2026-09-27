@@ -101,14 +101,14 @@ const scale = (total: number) => (0.8 + (Math.log(total + 1) / Math.log(max + 1)
     gap: 0.6rem 1.1rem;
   }
   .cloud-item {
-    --tag: hsl(var(--h) var(--tag-s) var(--tag-l));
+    --topic: hsl(var(--h) var(--topic-s) var(--topic-l));
     display: inline-flex;
     align-items: baseline;
     gap: 0.4rem;
     font-size: var(--size);
     font-weight: 600;
     letter-spacing: -0.01em;
-    color: var(--tag);
+    color: var(--topic);
     text-decoration: none;
   }
   .cloud-item:hover .cloud-name {

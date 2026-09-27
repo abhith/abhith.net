@@ -5,7 +5,7 @@
 
 const STOP_WORDS = new Set(["a", "an", "and", "by", "for", "of", "on", "the", "to", "with"]);
 
-/** The catch-all tag; a more specific tag wins when a tool has one. */
+/** The catch-all topic; a more specific topic wins when a tool has one. */
 const GENERIC_GROUP = "developer-tools";
 
 /**
@@ -57,7 +57,7 @@ export function elementSymbols(names: readonly string[]): string[] {
   });
 }
 
-/** The topic that colours an element: the first specific tag, else the generic one. */
-export function elementGroup(tags: readonly string[]): string {
-  return tags.find((tag) => tag !== GENERIC_GROUP) ?? tags[0] ?? GENERIC_GROUP;
+/** The topic that colours an element: the first specific topic, else the generic one. */
+export function elementGroup(topics: readonly string[]): string {
+  return topics.find((topic) => topic !== GENERIC_GROUP) ?? topics[0] ?? GENERIC_GROUP;
 }
