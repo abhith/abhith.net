@@ -2,6 +2,8 @@
 /**
  * Top bar styled like an editor tab strip; the active section is the open tab.
  * Where a tab leads is previewed in the status bar (LinkPeek.astro), so the tabs stay calm.
+ * On phones the strip can't fit, so the same tabs open as an explorer panel (a native popover:
+ * light dismiss and Escape come for free).
  */
 const tabs = [
   { href: "/blog/", label: "blog", file: "blog/" },
@@ -43,10 +45,80 @@ const section = Astro.url.pathname.split("/").filter(Boolean)[0] ?? "";
     <button type="button" class="palette-trigger" data-palette-open data-peek="help  # ⌘K, Ctrl+K or / opens the palette" aria-label="Open command palette" aria-keyshortcuts="Meta+K Control+K /">
       <span aria-hidden="true">›_</span>
       <span class="palette-trigger-text">run a command…</span>
-      <kbd class="kbd">⌘K</kbd>
+      <kbd class="kbd palette-trigger-kbd">⌘K</kbd>
+    </button>
+
+    <button type="button" class="menu-trigger" popovertarget="site-menu" aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation" data-menu-trigger>
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="menu-trigger-text">ls</span>
     </button>
   </div>
+
+  <nav id="site-menu" popover aria-label="Primary" class="site-menu window" data-site-menu>
+    <div class="window-bar">
+      <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>explorer · ~/</span>
+    </div>
+    <ul class="menu-list">
+      <li>
+        <a href="/" class:list={["menu-item", { "menu-item--active": section === "" }]} aria-current={section === "" ? "page" : undefined}>
+          <span class="menu-glyph" aria-hidden="true">~</span>
+          <span class="menu-label">home</span>
+          <span class="menu-file">~/</span>
+        </a>
+      </li>
+      {
+        tabs.map((tab) => {
+          const active = tab.href === `/${section}/`;
+          return (
+            <li>
+              <a href={tab.href} class:list={["menu-item", { "menu-item--active": active }]} aria-current={active ? "page" : undefined}>
+                <span class="menu-glyph" aria-hidden="true">
+                  {tab.file.endsWith("/") ? "▸" : "·"}
+                </span>
+                <span class="menu-label">{tab.label}</span>
+                <span class="menu-file">{tab.file}</span>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <button type="button" class="menu-palette" data-palette-open>
+      <span class="text-accent" aria-hidden="true">›_</span> run a command…
+    </button>
+  </nav>
 </header>
+
+<script>
+  const siteMenu = () => document.querySelector<HTMLElement>("[data-site-menu]");
+  const closeSiteMenu = () => {
+    const menu = siteMenu();
+    if (menu?.matches(":popover-open")) menu.hidePopover();
+  };
+
+  /** Keep the menu button's expanded state in sync with the panel (the header is re-rendered per page). */
+  function setupSiteMenu() {
+    const menu = siteMenu();
+    const trigger = document.querySelector<HTMLButtonElement>("[data-menu-trigger]");
+    if (!menu || !trigger) return;
+    menu.addEventListener("toggle", (event) => {
+      const open = (event as ToggleEvent).newState === "open";
+      trigger.setAttribute("aria-expanded", String(open));
+      trigger.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    });
+  }
+
+  // Choosing a link or the palette closes the panel, so it never lingers over the next view.
+  document.addEventListener("click", (event) => {
+    const target = event.target as Element | null;
+    if (target?.closest("[data-site-menu] a, [data-site-menu] [data-palette-open]")) closeSiteMenu();
+  });
+  // Past the phone breakpoint the tabs are back, so drop the panel.
+  matchMedia("(min-width: 48.0625rem)").addEventListener("change", (query) => query.matches && closeSiteMenu());
+  document.addEventListener("astro:before-preparation", closeSiteMenu);
+  document.addEventListener("astro:page-load", setupSiteMenu);
+</script>
 
 <style>
   .site-header {
@@ -144,13 +216,165 @@ const section = Astro.url.pathname.split("/").filter(Boolean)[0] ?? "";
     display: none;
   }
 
-  @media (max-width: 40rem) {
+  @media (max-width: 56rem) {
     .tab-file {
       display: none;
     }
     .tab-label {
       display: inline;
     }
+  }
+
+  /* Phones and small tablets: the tab strip would scroll out of sight, so it collapses into the explorer menu. */
+  .menu-trigger {
+    display: none;
+  }
+
+  @media (max-width: 48rem) {
+    .tabs {
+      display: none;
+    }
+
+    .palette-trigger {
+      margin-left: auto;
+    }
+
+    .menu-trigger {
+      display: inline-flex;
+    }
+  }
+
+  .menu-trigger {
+    align-items: center;
+    gap: 0.45rem;
+    flex-shrink: 0;
+    min-height: 2.25rem;
+    padding: 0 0.7rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--fg);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
+
+  .menu-trigger:hover,
+  .menu-trigger[aria-expanded="true"] {
+    border-color: var(--accent);
+  }
+
+  .menu-icon {
+    display: inline-grid;
+    gap: 3px;
+    width: 0.9rem;
+  }
+
+  .menu-icon span {
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+    transition:
+      translate 160ms ease,
+      rotate 160ms ease,
+      opacity 160ms ease;
+  }
+
+  .menu-trigger[aria-expanded="true"] .menu-icon span:nth-child(1) {
+    translate: 0 5px;
+    rotate: 45deg;
+  }
+
+  .menu-trigger[aria-expanded="true"] .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-trigger[aria-expanded="true"] .menu-icon span:nth-child(3) {
+    translate: 0 -5px;
+    rotate: -45deg;
+  }
+
+  .site-menu {
+    position: fixed;
+    inset: 3.5rem 0.75rem auto auto;
+    width: min(100vw - 1.5rem, 20rem);
+    max-height: calc(100dvh - 6rem);
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    color: var(--fg);
+  }
+
+  .site-menu:popover-open {
+    animation: menu-in 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .site-menu::backdrop {
+    background: color-mix(in oklab, var(--bg) 55%, transparent);
+    backdrop-filter: blur(3px);
+  }
+
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      translate: 0 -0.5rem;
+    }
+  }
+
+  .menu-list {
+    padding: 0.35rem;
+  }
+
+  .menu-item {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0 0.75rem;
+    border-radius: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .menu-item:hover,
+  .menu-item:focus-visible {
+    background: var(--sunken);
+  }
+
+  .menu-item--active {
+    background: color-mix(in oklab, var(--accent) 14%, transparent);
+    box-shadow: inset 2px 0 0 var(--accent);
+  }
+
+  .menu-glyph {
+    color: var(--accent);
+  }
+
+  .menu-file {
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+
+  .menu-palette {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0 1.1rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--sunken);
+    border: 0;
+    border-top: 1px solid var(--line);
+    cursor: pointer;
+  }
+
+  .menu-palette:hover {
+    color: var(--fg);
   }
 
   .palette-trigger {
@@ -176,6 +400,18 @@ const section = Astro.url.pathname.split("/").filter(Boolean)[0] ?? "";
   @media (max-width: 56rem) {
     .palette-trigger-text {
       display: none;
+    }
+  }
+
+  /* A ⌘K hint means nothing on a touch screen; the icon alone is the button there. */
+  @media (hover: none) {
+    .palette-trigger-kbd {
+      display: none;
+    }
+
+    .palette-trigger {
+      min-height: 2.25rem;
+      padding-inline: 0.7rem;
     }
   }
 </style>

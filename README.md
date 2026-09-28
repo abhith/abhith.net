@@ -2,7 +2,8 @@
 
 Abhith Rajan's developer blog, migrated from Gatsby 5 to **Astro 7**. The design is a writer's IDE: calm
 editorial typography with developer touches around the edges — file-path breadcrumbs, a status bar,
-`git log`-style listings, a terminal command palette and a knowledge graph.
+`git log`-style listings, a terminal command palette and a knowledge graph. See [DESIGN.md](DESIGN.md) for the
+design system (themes, tokens, typography, components and conventions).
 
 The site builds to plain static files in `dist/`. There is no server, no adapter and no CI requirement.
 
