@@ -34,7 +34,7 @@ component. Use a token or a `color-mix()` of tokens.
 | `--line` | Borders, dividers, dashed rules | `#e1dccf` | `#262e3a` | `#e4dcc3` |
 | `--accent` | Links, prompts, active states, primary buttons | `#0b6e4f` | `#7ee0b5` | `#1a6aa3` |
 | `--accent-fg` | Text on accent | `#ffffff` | `#0b1a14` | `#fdf6e3` |
-| `--warm` | Secondary highlight: hashes, cwd, HEAD refs, warnings | `#a2461a` | `#f5a97f` | `#b0431b` |
+| `--warm` | Secondary highlight: hashes, cwd, HEAD refs, warnings | `#a2461a` | `#f5a97f` | `#8f6500` |
 | `--selection` | `::selection` | `#cde8dc` | `#1f4a3a` | `#e9dfbf` |
 | `--topic-l` / `--topic-s` | Lightness / saturation for topic hues | `34%` / `62%` | `72%` / `70%` | `32%` / `70%` |
 | `--syntax-*` | Keyword / string / comment in code | | | |

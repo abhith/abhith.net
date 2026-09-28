@@ -538,7 +538,9 @@ const dirs = [
     color: var(--warm);
   }
 
+  /* Lift the hovered cell: siblings are positioned too, so later ones would otherwise paint over its right and bottom edges. */
   .heat-cell[data-peek]:hover {
+    z-index: 1;
     scale: 1.25;
     box-shadow: 0 0 0 1px var(--fg);
   }
