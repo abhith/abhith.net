@@ -26,6 +26,19 @@ describe("writingActivity", () => {
     ]);
   });
 
+  it("counts starred links as a separate layer that never changes levels or the year range", () => {
+    const years = writingActivity([d(2020, 0), d(2020, 0, 2), d(2020, 1)], d(2020, 11), [d(2019, 5), d(2020, 1), d(2020, 1, 9), d(2020, 1, 10), d(2020, 3)]);
+    expect(years.map((year) => year.year)).toEqual([2020]);
+    const [year] = years;
+    expect(year!.months.slice(0, 4).map((month) => [month.count, month.starred, month.level])).toEqual([
+      [2, 0, 4],
+      [1, 3, 2],
+      [0, 0, 0],
+      [0, 1, 0],
+    ]);
+    expect([year!.total, year!.starred]).toEqual([3, 4]);
+  });
+
   it("marks empty months after now as future", () => {
     const [year] = writingActivity([d(2026, 1)], d(2026, 8, 28));
     expect(year!.months.map((month) => month.future)).toEqual([false, false, false, false, false, false, false, false, false, true, true, true]);

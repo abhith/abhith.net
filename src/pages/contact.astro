@@ -1,4 +1,6 @@
 ---
+import hello from "@/assets/abhith-garden.jpg";
+import PhotoWindow from "@/components/content/PhotoWindow.astro";
 import { Content, frontmatter } from "@/content/pages/contact.md";
 import PageLayout from "@/layouts/PageLayout.astro";
 
@@ -14,6 +16,14 @@ const FORM_ACTION = `https://forminit.com/f/${FORM_ID}`;
 ---
 
 <PageLayout title={frontmatter.title} description={frontmatter.description} file="contact.md">
+  <PhotoWindow
+    src={hello}
+    alt="Abhith Rajan in a white textured T-shirt with sunglasses hooked on the collar, taking a selfie in a leafy garden"
+    file="~/photos/hello.jpg"
+    icon="👋"
+    caption="Say hi · 2025"
+    tilt={-2}
+  />
   <Content />
 
   <form slot="after" class="commit-form window mt-10" action={FORM_ACTION} method="POST" data-forminit>

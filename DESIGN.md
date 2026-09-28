@@ -109,6 +109,9 @@ component. Use a token or a `color-mix()` of tokens.
   (`git log --since=2017 --heatmap`). The heatmap is a year × month grid of posts and snippets
   (`src/lib/activity.ts`), in five accent-tint levels. Future months are dashed outlines, each row ends with the
   year's total, and a `HEAD → main` line links the latest post. It balances the taller right column with real data.
+  Links saved to `/recommended` are a second layer: a small `--warm` **starred dot** in the cell's corner (and
+  `★ N` in the heading). They never feed the shading, because shading is about what I wrote. Cell columns are `1fr`, so the grid spans
+  the same width as its heading and footer (column capped at `32rem`). Below `30rem` the label columns and gaps tighten.
 - **Hero, right column ("the desk"):** two overlapping windows. A slightly rotated photo viewer peeks out behind
   a terminal that types `whoami`, `cat about.txt` and `ls ~/` line by line. Hovering the photo brings it forward.
 - **Periodic table of tools:** recommended tools as elements tinted by topic group. Atomic number is the order

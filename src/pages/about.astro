@@ -1,11 +1,20 @@
 ---
+import atWork from "@/assets/abhith-at-work.jpg";
 import CareerTimeline from "@/components/content/CareerTimeline.astro";
+import PhotoWindow from "@/components/content/PhotoWindow.astro";
 import TechStack from "@/components/content/TechStack.astro";
 import { Content, frontmatter } from "@/content/pages/about.md";
 import PageLayout from "@/layouts/PageLayout.astro";
 ---
 
 <PageLayout title={frontmatter.title} description={frontmatter.description} file="about.md">
+  <PhotoWindow
+    src={atWork}
+    alt="Abhith Rajan in a dark polo shirt, taking a selfie at his desk in an open-plan office"
+    file="~/photos/at-work.jpg"
+    icon="💻"
+    caption="At work · 2025"
+  />
   <Content />
   <CareerTimeline slot="after" />
   <TechStack slot="after" />

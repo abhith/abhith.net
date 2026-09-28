@@ -26,7 +26,7 @@ const file = Astro.props.file ?? fm?.file ?? `${Astro.url.pathname.split("/").fi
       <h1 class="mt-2 font-sans text-4xl font-bold tracking-tight sm:text-5xl">{title}</h1>
       {description && <p class="mt-3 text-lg text-muted">{description}</p>}
     </header>
-    <div class="prose-ws">
+    <div class="prose-ws flow-root">
       <slot />
     </div>
     <slot name="after" />

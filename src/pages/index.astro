@@ -67,9 +67,16 @@ const firstToolYear = Math.min(...graph.tools.map((tool) => tool.date.getUTCFull
 const topTopics = [...graph.topics].sort((a, b) => b.totalPosts + b.totalSnippets - (a.totalPosts + a.totalSnippets)).slice(0, 14);
 const { nodes, links } = graph.graphData();
 
-/** Hero heatmap: every post and snippet as a commit, one row per year since the first one. */
+/** Hero heatmap: every post and snippet as a commit, one row per year since the first one; saved links are starred dots. */
 const written = [...graph.posts, ...graph.snippets].filter((entry) => !entry.draft);
-const activity = writingActivity(written.map((entry) => entry.date));
+const starred = [...graph.stories, ...graph.videos, ...graph.tools];
+const activity = writingActivity(
+  written.map((entry) => entry.date),
+  new Date(),
+  starred.map((item) => item.date),
+);
+const starredShown = activity.reduce((sum, year) => sum + year.starred, 0);
+const monthHint = (count: number, stars: number) => [plural(count, "commit"), stars > 0 && `${stars} starred`].filter(Boolean).join(" · ");
 const firstYear = activity.at(-1)?.year;
 const busiestYear = [...activity].sort((a, b) => b.total - a.total)[0];
 const headPost = graph.posts.find((post) => !post.draft);
@@ -111,12 +118,15 @@ const dirs = [
               <span>
                 <span class="prompt">$</span>git log --since={firstYear} --heatmap
               </span>
-              <span class="text-muted">{plural(written.length, "commit")}</span>
+              <span class="text-muted">
+                {plural(written.length, "commit")}
+                {starredShown > 0 && <span class="heat-star-count">· ★ {starredShown}</span>}
+              </span>
             </figcaption>
             <div
               class="heat"
               role="img"
-              aria-label={`Writing activity: ${written.length} posts and snippets since ${firstYear}, busiest year ${busiestYear?.year} with ${busiestYear?.total}.`}
+              aria-label={`Writing activity: ${written.length} posts and snippets since ${firstYear}, busiest year ${busiestYear?.year} with ${busiestYear?.total}.${starredShown > 0 ? ` Dots mark months with links saved to recommended, ${starredShown} in all.` : ""}`}
             >
               <span />
               {MONTH_INITIALS.map((initial) => (
@@ -131,9 +141,10 @@ const dirs = [
                       class="heat-cell"
                       data-level={month.level}
                       data-future={month.future ? "" : undefined}
+                      data-starred={month.starred > 0 ? "" : undefined}
                       style={`--i: ${row * 12 + month.month}`}
-                      title={month.future ? undefined : `${monthName(year.year, month.month)} · ${plural(month.count, "entry", "entries")}`}
-                      data-peek={month.future ? undefined : `git log --since=${monthKey(year.year, month.month)}  # ${monthName(year.year, month.month)} · ${plural(month.count, "commit")}`}
+                      title={month.future ? undefined : `${monthName(year.year, month.month)} · ${monthHint(month.count, month.starred)}`}
+                      data-peek={month.future ? undefined : `git log --since=${monthKey(year.year, month.month)}  # ${monthName(year.year, month.month)} · ${monthHint(month.count, month.starred)}`}
                     />
                   ))}
                   <span class="heat-total">{year.total || "·"}</span>
@@ -153,6 +164,12 @@ const dirs = [
                   <span class="heat-cell" data-level={level} />
                 ))}
                 more
+                {starredShown > 0 && (
+                  <span class="heat-legend-star">
+                    <span class="heat-cell" data-level="0" data-starred />
+                    starred
+                  </span>
+                )}
               </span>
             </div>
           </figure>
@@ -414,7 +431,7 @@ const dirs = [
   /* Hero heatmap: posts and snippets as commits, so the left column carries as much as the desk. */
   .hero-log {
     margin: 2.5rem 0 0;
-    max-width: 34rem;
+    max-width: 32rem;
     font-family: var(--font-mono);
     font-size: 0.75rem;
   }
@@ -431,9 +448,17 @@ const dirs = [
 
   .heat {
     display: grid;
-    grid-template-columns: 2.4rem repeat(12, minmax(0, 1.5rem)) 2rem;
+    /* Cells share whatever the column leaves, so the grid ends where the heading and footer do. */
+    grid-template-columns: 2.4rem repeat(12, minmax(0, 1fr)) 2rem;
     gap: 0.25rem;
     align-items: center;
+  }
+
+  @media (max-width: 30rem) {
+    .heat {
+      grid-template-columns: 2rem repeat(12, minmax(0, 1fr)) 1.6rem;
+      gap: 0.2rem;
+    }
   }
 
   .heat-month,
@@ -454,6 +479,7 @@ const dirs = [
   }
 
   .heat-cell {
+    position: relative;
     display: block;
     aspect-ratio: 1;
     border-radius: 0.2rem;
@@ -492,6 +518,24 @@ const dirs = [
     background: transparent;
     box-shadow: inset 0 0 0 1px var(--line);
     opacity: 0.5;
+  }
+
+  /* Starred: links saved to /recommended that month. A corner dot, so the shading stays about writing. */
+  .heat-cell[data-starred]::after {
+    content: "";
+    position: absolute;
+    top: 14%;
+    right: 14%;
+    width: max(0.25rem, 30%);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--warm);
+    box-shadow: 0 0 0 1.5px var(--surface);
+  }
+
+  .heat-star-count {
+    margin-left: 0.35rem;
+    color: var(--warm);
   }
 
   .heat-cell[data-peek]:hover {
@@ -546,6 +590,7 @@ const dirs = [
 
   .heat-legend {
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.2rem;
     font-size: 0.65rem;
@@ -554,6 +599,17 @@ const dirs = [
 
   .heat-legend .heat-cell {
     width: 0.65rem;
+  }
+
+  .heat-legend-star {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin-left: 0.6rem;
+  }
+
+  .heat-legend-star .heat-cell {
+    width: 0.8rem;
   }
 
   /* Two overlapping desktop windows: a photo viewer peeking out from behind the terminal. */

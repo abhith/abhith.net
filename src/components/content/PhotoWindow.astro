@@ -1,0 +1,104 @@
+---
+/**
+ * A photo in desktop-window chrome, like the photo viewer on the home page: a `~/photos/…` title
+ * bar, a caption pill and a slight tilt that straightens on hover. Place it first in a prose page
+ * (`PageLayout`) and it floats beside the opening paragraphs; on phones it sits above them.
+ */
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  /** Path shown in the window bar, e.g. `~/photos/me.jpg`. */
+  file: string;
+  caption?: string;
+  /** Emoji shown before the caption (decorative). */
+  icon?: string;
+  /** Resting rotation in degrees. */
+  tilt?: number;
+}
+
+const { src, alt, file, caption, icon, tilt = 2 } = Astro.props;
+---
+
+<figure class="window photo-window" style={`--tilt: ${tilt}deg`}>
+  <div class="window-bar">
+    <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span>{file}</span>
+  </div>
+  <div class="photo-frame">
+    <Image src={src} alt={alt} widths={[320, 480, 640]} sizes="(min-width: 40rem) 15rem, 18rem" loading="eager" class="photo" />
+    {
+      caption && (
+        <figcaption class="photo-tag">
+          {icon && <span aria-hidden="true">{icon}</span>} {caption}
+        </figcaption>
+      )
+    }
+  </div>
+</figure>
+
+<style>
+  .photo-window {
+    position: relative;
+    width: min(18rem, 80%);
+    margin: 0.5rem auto 2rem;
+    rotate: var(--tilt);
+    transition:
+      rotate 200ms ease,
+      translate 200ms ease;
+  }
+
+  /* Prose spaces siblings with `* + *`; the paragraph beside the photo should start level with it. */
+  :global(.prose-ws) > .photo-window + :global(*) {
+    margin-top: 0;
+  }
+
+  @media (min-width: 40rem) {
+    .photo-window {
+      float: right;
+      width: 15rem;
+      margin: 0.4rem 0 1.25rem 2rem;
+    }
+  }
+
+  .photo-frame {
+    position: relative;
+  }
+
+  .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .photo-tag {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    margin: 0;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--surface) 85%, transparent);
+    backdrop-filter: blur(6px);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--fg);
+  }
+
+  @media (hover: hover) {
+    .photo-window:hover {
+      z-index: 1;
+      rotate: 0deg;
+      translate: 0 -0.25rem;
+    }
+  }
+</style>
