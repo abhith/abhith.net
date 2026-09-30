@@ -20,7 +20,7 @@ for (let n = 1; n <= totalPages; n++) {
 
 {
   totalPages > 1 && (
-    <nav class="pager" aria-label="Pagination">
+    <nav class="pager" aria-label="Pagination" data-pager>
       {page.prevUrl ? (
         <a href={page.prevUrl} rel="prev" class="pager-step">
           ← newer

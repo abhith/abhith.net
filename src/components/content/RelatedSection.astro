@@ -22,7 +22,7 @@ const hasAny = Object.values(related).some((list) => list.length > 0);
           <h2 class="section-title">related snippets</h2>
           <ul>
             {related.snippets.map((snippet) => (
-              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} />
+              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} language={snippet.language} />
             ))}
           </ul>
         </div>

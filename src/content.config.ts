@@ -56,6 +56,8 @@ const snippets = defineCollection({
     date: dateField,
     lastModificationTime: dateField.optional(),
     topics: z.array(z.string().min(1)).min(1),
+    /** Overrides the language detected from the first code fence (drives the glyph and `?lang=`). */
+    language: z.string().min(1).optional(),
     draft: z.boolean().default(false),
   }),
 });

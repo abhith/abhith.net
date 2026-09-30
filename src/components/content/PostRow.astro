@@ -5,6 +5,8 @@
  */
 import { shortHash } from "@/lib/graph/color";
 import { isoDate } from "@/lib/format";
+import type { Language } from "@/lib/snippet-lang";
+import LangGlyph from "./LangGlyph.astro";
 import TopicToken from "./TopicToken.astro";
 
 interface Props {
@@ -17,16 +19,21 @@ interface Props {
   prefix?: string;
   maxTopics?: number;
   draft?: boolean;
+  /** Snippet language: shows a glyph before the title and sets `data-lang` for the `?lang=` filter. */
+  language?: Language;
+  /** Rendered but hidden until a client-side filter reveals it (e.g. snippets beyond page 1). */
+  hidden?: boolean;
 }
 
-const { url, title, date, topics = [], description, prefix, maxTopics = 3, draft = false } = Astro.props;
+const { url, title, date, topics = [], description, prefix, maxTopics = 3, draft = false, language, hidden = false } = Astro.props;
 ---
 
-<li class="log-row">
+<li class="log-row" data-lang={language?.id} data-row-extra={hidden ? "" : undefined} hidden={hidden}>
   <span class="log-hash" aria-hidden="true">{shortHash(url)}</span>
   <time class="log-date" datetime={date.toISOString()}>{isoDate(date)}</time>
   <div class="log-main">
     <a href={url} class="log-title">
+      {language && <LangGlyph language={language} link={false} />}
       {prefix && <span class="log-prefix">{prefix}/</span>}
       {title}
       {draft && <span class="log-draft">draft</span>}
@@ -57,6 +64,10 @@ const { url, title, date, topics = [], description, prefix, maxTopics = 3, draft
       grid-template-areas: "hash date main topics";
       align-items: baseline;
     }
+  }
+
+  .log-row[hidden] {
+    display: none;
   }
 
   .log-row:hover,
@@ -92,6 +103,10 @@ const { url, title, date, topics = [], description, prefix, maxTopics = 3, draft
   .log-title:hover {
     color: var(--accent);
     text-decoration: underline;
+  }
+
+  .log-title :global(.lang-glyph) {
+    margin-right: 0.4rem;
   }
 
   .log-prefix {

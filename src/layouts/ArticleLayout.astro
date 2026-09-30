@@ -6,6 +6,7 @@ import type { MarkdownHeading } from "astro";
 import { Image } from "astro:assets";
 import Authors from "@/components/content/Authors.astro";
 import Giscus from "@/components/content/Giscus.astro";
+import LangGlyph from "@/components/content/LangGlyph.astro";
 import LocalGraph from "@/components/content/LocalGraph.astro";
 import RelatedSection from "@/components/content/RelatedSection.astro";
 import Share from "@/components/content/Share.astro";
@@ -84,7 +85,8 @@ const jsonLd = [
 >
   <article class="shell pt-8" data-reading data-pagefind-body>
     <header class="measure !w-full max-w-3xl">
-      <div class="flex flex-wrap gap-1.5">
+      <div class="flex flex-wrap items-center gap-1.5">
+        {entry.kind === "snippet" && <LangGlyph language={entry.language} showLabel />}
         {entry.topics.map((topic) => <TopicToken slug={topic} />)}
       </div>
       <h1 class="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl" data-pagefind-meta="title">{entry.title}</h1>

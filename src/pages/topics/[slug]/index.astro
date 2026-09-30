@@ -45,7 +45,7 @@ const base = `/topics/${topic.slug}/`;
           <h2 id="snippets-title" class="section-title">snippets</h2>
           <ul>
             {content.snippets.map((snippet) => (
-              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} />
+              <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} language={snippet.language} />
             ))}
           </ul>
         </section>

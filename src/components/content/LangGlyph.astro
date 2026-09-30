@@ -1,0 +1,72 @@
+---
+/**
+ * Editor-style file-icon badge for a snippet's language (`C#`, `JS`, `sh`, `SQL` …).
+ * Links to `/snippets/?lang=<id>`; colour follows the theme like topic tokens.
+ */
+import type { Language } from "@/lib/snippet-lang";
+
+interface Props {
+  language: Language;
+  /** Render as a link to the filtered snippet list (default) or as plain text. */
+  link?: boolean;
+  /** Show the language name next to the glyph (it is always there for screen readers). */
+  showLabel?: boolean;
+}
+
+const { language, link = true, showLabel = false } = Astro.props;
+const style = `--h: ${language.hue}`;
+const peek = `ls ~/snippets --lang=${language.id}`;
+---
+
+{
+  link ? (
+    <a class="lang-glyph" href={`/snippets/?lang=${language.id}`} style={style} data-peek={peek} title={`${language.label} snippets`}>
+      <span class="lang-glyph-mark" aria-hidden="true">{language.glyph}</span>
+      <span class:list={[{ "sr-only": !showLabel }, "lang-glyph-label"]}>{language.label}</span>
+    </a>
+  ) : (
+    <span class="lang-glyph" style={style} title={language.label}>
+      <span class="lang-glyph-mark" aria-hidden="true">{language.glyph}</span>
+      <span class:list={[{ "sr-only": !showLabel }, "lang-glyph-label"]}>{language.label}</span>
+    </span>
+  )
+}
+
+<style>
+  .lang-glyph {
+    --lang: hsl(var(--h, 160) var(--topic-s) var(--topic-l));
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    vertical-align: 0.1em;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    line-height: 1;
+    color: var(--lang);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .lang-glyph-mark {
+    display: inline-grid;
+    place-items: center;
+    min-width: 1.6rem;
+    height: 1.15rem;
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: color-mix(in oklab, var(--lang) 14%, transparent);
+    border: 1px solid color-mix(in oklab, var(--lang) 35%, transparent);
+    transition: background 120ms ease;
+  }
+
+  .lang-glyph-label:not(.sr-only) {
+    color: var(--muted);
+  }
+
+  a.lang-glyph:hover .lang-glyph-mark,
+  a.lang-glyph:focus-visible .lang-glyph-mark {
+    background: color-mix(in oklab, var(--lang) 26%, transparent);
+  }
+</style>

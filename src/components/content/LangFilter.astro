@@ -1,0 +1,88 @@
+---
+/**
+ * `ls ~/snippets --lang=…` filter bar for `/snippets/`. Chips are plain links to `?lang=<id>`, so the
+ * filtered view is shareable. `applyLangFilter` (`src/lib/lang-filter.ts`) shows only rows in
+ * `[data-lang-list]` whose `data-lang` matches (including rows past page 1, rendered hidden), and
+ * hides the pager while a filter is active. Aliases work too: `?lang=cs` → C#.
+ */
+import type { Language } from "@/lib/snippet-lang";
+import LangGlyph from "./LangGlyph.astro";
+
+interface Props {
+  languages: Array<{ language: Language; count: number }>;
+  total: number;
+  basePath?: string;
+}
+
+const { languages, total, basePath = "/snippets/" } = Astro.props;
+---
+
+<nav class="lang-filter" aria-label="Filter snippets by language" data-lang-filter data-total={total} data-base={basePath}>
+  <p class="mono-label"><span class="text-accent">$</span> ls ~/snippets --lang=<span data-lang-current>*</span></p>
+  <ul class="lang-options">
+    <li>
+      <a href={basePath} class="lang-option" data-lang-option="" aria-current="page">all <span class="lang-count">{total}</span></a>
+    </li>
+    {
+      languages.map(({ language, count }) => (
+        <li>
+          <a href={`${basePath}?lang=${language.id}`} class="lang-option" data-lang-option={language.id} data-peek={`ls ~/snippets --lang=${language.id}  # ${count} ${count === 1 ? "file" : "files"}`}>
+            <LangGlyph language={language} link={false} showLabel />
+            <span class="lang-count">{count}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="lang-status mono-label" aria-live="polite" data-lang-status hidden></p>
+</nav>
+
+<script>
+  import { applyLangFilter } from "@/lib/lang-filter";
+
+  document.addEventListener("astro:page-load", () => applyLangFilter());
+</script>
+
+<style>
+  .lang-filter {
+    margin-bottom: 1.5rem;
+  }
+
+  .lang-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+  }
+
+  .lang-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid var(--line);
+    border-radius: 0.375rem;
+    background: var(--surface);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: border-color 120ms ease;
+  }
+
+  .lang-option:hover {
+    border-color: var(--accent);
+  }
+
+  .lang-option[aria-current="page"] {
+    border-color: var(--accent);
+    outline: 1px solid var(--accent);
+  }
+
+  .lang-count {
+    color: var(--muted);
+  }
+
+  .lang-status {
+    margin-top: 0.75rem;
+  }
+</style>

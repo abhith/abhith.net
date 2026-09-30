@@ -9,6 +9,7 @@ import type { ImageMetadata } from "astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { buildContentGraph, type ContentGraph, type EntryItem, type GraphItem, youtubeId } from "./graph";
 import { IS_PROD } from "./site";
+import { type Language, snippetLanguage } from "./snippet-lang";
 
 export interface Post extends EntryItem {
   kind: "post";
@@ -34,6 +35,8 @@ export interface Snippet extends EntryItem {
   category: string;
   slug: string;
   description: string;
+  /** From `language` frontmatter, the first code fence or the category (see `snippet-lang.ts`). */
+  language: Language;
   lastModified: Date;
   updated: boolean;
   draft: boolean;
@@ -112,6 +115,7 @@ function toSnippet(entry: CollectionEntry<"snippets">): Snippet {
     id: entry.id,
     category,
     slug,
+    language: snippetLanguage({ language: data.language, body: entry.body, category }),
     url: `/snippets/${entry.id}/`,
     title: data.title,
     description: data.description,

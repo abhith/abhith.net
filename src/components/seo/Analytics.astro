@@ -3,6 +3,8 @@
  * Third-party scripts, emitted only in production builds:
  * GA4 (anonymised IP, respects Do-Not-Track), Microsoft Clarity and AdSense page-level ads.
  * With `<ClientRouter />` page views are sent on every `astro:page-load`.
+ * Every Expressive Code "copy" click sends a `copy_code` event: `content_type` (snippet | post),
+ * `item_id` (page path), `code_language` and `code_block` (1-based index on the page).
  */
 const GA_ID = "G-3JV7V7YBHL";
 const CLARITY_ID = "3y06r37z6k";
@@ -26,6 +28,19 @@ const enabled = import.meta.env.PROD;
           window.gtag("config", GA_ID, { anonymize_ip: true, send_page_view: false });
           document.addEventListener("astro:page-load", function () {
             window.gtag("event", "page_view", { page_location: location.href, page_title: document.title });
+          });
+          document.addEventListener("click", function (event) {
+            const button = event.target instanceof Element ? event.target.closest(".expressive-code .copy button") : null;
+            if (!button) return;
+            const block = button.closest(".expressive-code");
+            const pre = block && block.querySelector("pre[data-language]");
+            const path = location.pathname;
+            window.gtag("event", "copy_code", {
+              content_type: path.startsWith("/snippets/") ? "snippet" : "post",
+              item_id: path,
+              code_language: pre ? pre.getAttribute("data-language") : "unknown",
+              code_block: Array.prototype.indexOf.call(document.querySelectorAll(".expressive-code"), block) + 1,
+            });
           });
           (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };

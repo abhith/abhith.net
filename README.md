@@ -63,7 +63,7 @@ The optional `WEBMENTIONS_TOKEN` repository secret is passed to the CI build whe
 | Content | Location | Notes |
 | --- | --- | --- |
 | Blog posts | `src/content/blog/<slug>/index.mdx` | Frontmatter is validated by Zod in `src/content.config.ts`. Set `draft: true` to hide a post in production. |
-| Snippets | `src/content/snippets/<category>/<slug>.mdx` | The first `topics` entry is the category. |
+| Snippets | `src/content/snippets/<category>/<slug>.mdx` | The first `topics` entry is the category. The language glyph and `/snippets/?lang=` filter come from the first code fence; override with `language: bash`. |
 | Topics | `src/content/topics/topics.yml` | Topics used by content but missing here get a `startCase` title. |
 | Stories / videos | `src/content/data/{stories,videos}.json` | Add with `npm run add` (below). |
 | Services (tools) | `src/content/recommended/services/services.yml` | Add with `npm run add -- <url> <topics> --kind service`. |

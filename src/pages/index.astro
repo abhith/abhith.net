@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import portrait from "@/assets/abhith-dubai-airshow.jpg";
+import LangGlyph from "@/components/content/LangGlyph.astro";
 import PostRow from "@/components/content/PostRow.astro";
 import StoryItem from "@/components/content/StoryItem.astro";
 import TopicToken from "@/components/content/TopicToken.astro";
@@ -251,7 +252,10 @@ const dirs = [
         snippets.map((snippet) => (
           <li class="scratch">
             <a href={snippet.url} class="scratch-link">
-              <span class="mono-label">{snippet.category}/{snippet.slug}.mdx</span>
+              <span class="mono-label scratch-path">
+                <LangGlyph language={snippet.language} link={false} />
+                {snippet.category}/{snippet.slug}.mdx
+              </span>
               <span class="scratch-title">{snippet.title}</span>
               <span class="scratch-desc">{snippet.description}</span>
             </a>
@@ -836,6 +840,12 @@ const dirs = [
   .scratch-link:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
+  }
+
+  .scratch-path {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
   }
 
   .scratch-title {

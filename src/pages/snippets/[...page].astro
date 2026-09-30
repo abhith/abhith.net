@@ -1,10 +1,12 @@
 ---
 import type { GetStaticPaths } from "astro";
+import LangFilter from "@/components/content/LangFilter.astro";
 import PostRow from "@/components/content/PostRow.astro";
 import ListingLayout from "@/layouts/ListingLayout.astro";
 import { getContentGraph, type Snippet } from "@/lib/content-graph";
 import { paginatedPaths, type Page } from "@/lib/graph/paginate";
 import { SITE } from "@/lib/site";
+import { languageCounts } from "@/lib/snippet-lang";
 
 export const getStaticPaths = (async () => {
   const graph = await getContentGraph();
@@ -20,6 +22,10 @@ const graph = await getContentGraph();
 const topics = graph.topics
   .filter((topic) => topic.totalSnippets > 0)
   .map((topic) => ({ slug: topic.slug, title: topic.title, count: topic.totalSnippets, href: `/snippets/${topic.slug}/` }));
+const isFirstPage = page.pageNumber === 1;
+/** `?lang=` filters on page 1, so it also carries the older snippets, hidden until a filter matches them. */
+const onPage = new Set(page.items.map((snippet) => snippet.id));
+const extra = isFirstPage ? graph.snippets.filter((snippet) => !onPage.has(snippet.id)) : [];
 ---
 
 <ListingLayout
@@ -33,7 +39,9 @@ const topics = graph.topics
   topics={topics}
   topicsTitle="categories"
 >
-  <ul>
-    {page.items.map((snippet) => <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} draft={snippet.draft} />)}
+  <LangFilter languages={languageCounts(graph.snippets)} total={graph.snippets.length} />
+  <ul data-lang-list>
+    {page.items.map((snippet) => <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} draft={snippet.draft} language={snippet.language} />)}
+    {extra.map((snippet) => <PostRow url={snippet.url} title={snippet.title} date={snippet.date} topics={snippet.topics} prefix={snippet.category} description={snippet.description} draft={snippet.draft} language={snippet.language} hidden />)}
   </ul>
 </ListingLayout>
