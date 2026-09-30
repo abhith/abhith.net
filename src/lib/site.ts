@@ -13,9 +13,15 @@ export const SITE = {
     twitter: "@AbhithRajan",
     github: "Abhith",
   },
+  /**
+   * Every profile that is "me": rendered as `<link rel="me">` and JSON-LD `Person.sameAs`.
+   * Add YouTube, Bluesky, Mastodon… here as they go live.
+   */
+  profiles: ["https://x.com/abhithrajan", "https://github.com/Abhith", "https://www.linkedin.com/in/abhith/"],
   repo: {
     url: "https://github.com/abhith/abhith.net",
-    branch: "master",
+    /** The Astro site lives on `main` (`master` is still the Gatsby site), so edit links must point here. */
+    branch: "main",
   },
   /** Items per page for every paginated listing (matches gatsby-awesome-pagination config). */
   pageSize: 10,

@@ -22,7 +22,7 @@ const person = {
   image: `${site}${SITE.author.image}`,
   ...(current ? { jobTitle: current.title, worksFor: { "@type": "Organization", name: current.company, url: current.url } } : {}),
   knowsAbout: [".NET", ".NET Core", "C#", "SQL Server", "Azure Cosmos DB", "Microsoft Azure", "TypeScript", "JavaScript", "React", "Angular", "Vue.js", "Kubernetes", "DevOps", "Fintech"],
-  sameAs: [SITE.author.url, `https://github.com/${SITE.social.github}`, "https://www.linkedin.com/in/abhith/"],
+  sameAs: [...SITE.profiles],
 };
 
 const website = {

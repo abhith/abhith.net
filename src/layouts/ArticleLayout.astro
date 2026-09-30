@@ -12,10 +12,12 @@ import Share from "@/components/content/Share.astro";
 import TopicToken from "@/components/content/TopicToken.astro";
 import Toc from "@/components/content/Toc.astro";
 import Webmentions from "@/components/content/Webmentions.astro";
+import Alert from "@/components/mdx/Alert.astro";
 import type { Author, Post, Snippet, SiteGraph } from "@/lib/content-graph";
 import { isoDate, longDate } from "@/lib/format";
 import { shortHash } from "@/lib/graph/color";
 import { SITE } from "@/lib/site";
+import { staleYears } from "@/lib/staleness";
 import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
@@ -37,6 +39,8 @@ const section = isPost ? "blog" : "snippets";
 const pageTitle = entry.kind === "snippet" && category ? `${category.title} - ${entry.title}` : entry.title;
 const site = Astro.site?.href.replace(/\/$/, "") ?? SITE.url;
 const ogImage = isPost ? `/og/blog/${entry.id}.png` : `/og/snippets/${entry.id}.png`;
+/** Evaluated at build time; every deploy re-checks it. Snippets are small and evergreen, so posts only. */
+const stale = isPost ? staleYears(entry, new Date()) : undefined;
 
 const crumbs = isPost
   ? [{ label: "blog/", href: "/blog/" }, { label: `${entry.id}.mdx` }]
@@ -113,6 +117,19 @@ const jsonLd = [
 
     <div class="article-grid mt-10">
       <div class="prose-ws min-w-0" data-article-body>
+        {
+          stale && (
+            <div data-pagefind-ignore>
+              <Alert kind="warning" title={`Last updated ${stale} years ago`}>
+                <p>
+                  Written in {entry.date.getUTCFullYear()}{entry.updated && `, last amended ${isoDate(entry.lastModified)}`}. Tools and APIs move fast, so check
+                  versions against the current docs. Spotted something outdated?{" "}
+                  <a href={editUrl} target="_blank" rel="noopener">Suggest an edit on GitHub</a>.
+                </p>
+              </Alert>
+            </div>
+          )
+        }
         <slot />
       </div>
       <aside class="article-aside" aria-label="On this page">

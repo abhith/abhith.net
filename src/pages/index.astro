@@ -9,9 +9,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { MONTH_INITIALS, writingActivity } from "@/lib/activity";
 import { yearsCoding } from "@/lib/career";
 import { getContentGraph } from "@/lib/content-graph";
-import { hostOf, plural, shortDate } from "@/lib/format";
+import { hostOf, isoDate, plural, shortDate } from "@/lib/format";
 import { topicHue } from "@/lib/graph/color";
 import { withRef } from "@/lib/outbound";
+import { NOW } from "@/lib/now";
 import { elementGroup, elementSymbols, shortToolName } from "@/lib/periodic";
 import { SITE } from "@/lib/site";
 
@@ -76,6 +77,8 @@ const activity = writingActivity(
   starred.map((item) => item.date),
 );
 const starredShown = activity.reduce((sum, year) => sum + year.starred, 0);
+/** Proof of life next to the "now" line: the newest link saved to /recommended. */
+const lastSaved = starred.reduce<Date | undefined>((latest, item) => (!latest || item.date > latest ? item.date : latest), undefined);
 const monthHint = (count: number, stars: number) => [plural(count, "commit"), stars > 0 && `${stars} starred`].filter(Boolean).join(" · ");
 const firstYear = activity.at(-1)?.year;
 const busiestYear = [...activity].sort((a, b) => b.total - a.total)[0];
@@ -103,6 +106,13 @@ const dirs = [
       </h1>
       <p class="mt-5 max-w-xl font-serif text-xl leading-relaxed text-muted">
         Notes, snippets and curated links from a working software engineer — written in the open since 2017.
+      </p>
+      <p class="now-line">
+        <span class="now-dot" aria-hidden="true"></span>
+        <span><span class="text-accent">now:</span> {NOW.doing}</span>
+        <span class="now-meta">
+          updated {NOW.updated}{lastSaved && <> · <a href="/recommended/" data-peek={`cd ~/recommended  # newest link saved ${isoDate(lastSaved)}`}>last link saved {isoDate(lastSaved)}</a></>}
+        </span>
       </p>
       <div class="mt-7 flex flex-wrap gap-3">
         <a href="/blog/" class="btn btn-primary">cd ~/blog</a>
@@ -428,6 +438,42 @@ const dirs = [
 </script>
 
 <style>
+  /* "now" line: one honest, dated sentence so first-time visitors see the site is alive. */
+  .now-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.2rem 0.6rem;
+    max-width: 36rem;
+    margin-top: 1.1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  .now-dot {
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 22%, transparent);
+  }
+
+  .now-meta {
+    color: var(--muted);
+  }
+
+  .now-meta a {
+    color: inherit;
+    text-decoration: underline dotted;
+    text-underline-offset: 0.2em;
+  }
+
+  .now-meta a:hover {
+    color: var(--accent);
+  }
+
   /* Hero heatmap: posts and snippets as commits, so the left column carries as much as the desk. */
   .hero-log {
     margin: 2.5rem 0 0;

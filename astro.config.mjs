@@ -17,6 +17,10 @@ import { rehypeFigureCaption } from "./src/plugins/rehype-figure-caption.ts";
 import { rehypeOutboundLinks } from "./src/plugins/rehype-outbound-links.ts";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.ts";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.ts";
+import { lastmodByUrl, loadLastmodEntries } from "./src/lib/sitemap-lastmod.ts";
+
+/** `<lastmod>` per page, from post/snippet frontmatter (Google uses it to schedule re-crawls). */
+const lastmod = lastmodByUrl(loadLastmodEntries(fileURLToPath(new URL(".", import.meta.url))));
 
 // https://docs.astro.build/en/reference/configuration-reference/
 export default defineConfig({
@@ -59,7 +63,13 @@ export default defineConfig({
     mdx(),
     react(),
     // Drafts are never built in production, so only published pages end up here.
-    sitemap({ filter: (page) => !/\/(404|og)\//.test(new URL(page).pathname) }),
+    sitemap({
+      filter: (page) => !/\/(404|og)\//.test(new URL(page).pathname),
+      serialize(item) {
+        const date = lastmod.get(new URL(item.url).pathname);
+        return date ? { ...item, lastmod: date.toISOString() } : item;
+      },
+    }),
     pagefind(),
   ],
   vite: {

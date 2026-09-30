@@ -76,7 +76,8 @@ const imageUrl = new URL(image, Astro.site ?? SITE.url).href;
 <meta name="theme-color" content={THEME_COLORS.paper} media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content={THEME_COLORS.midnight} media="(prefers-color-scheme: dark)" />
 
-<link rel="me" href={SITE.author.url} />
-<link rel="me" href={`https://github.com/${SITE.social.github}`} />
+{SITE.profiles.map((profile) => <link rel="me" href={profile} />)}
+<link rel="alternate" type="application/rss+xml" title="Abhith Rajan — everything (posts and snippets)" href="/rss.xml" />
 <link rel="alternate" type="application/rss+xml" title="Blog posts RSS Feed" href="/blog/rss.xml" />
+<link rel="alternate" type="application/rss+xml" title="Snippets RSS Feed" href="/snippets/rss.xml" />
 <link rel="alternate" type="application/rss+xml" title="Recommended stories RSS Feed" href="/recommended/stories/rss.xml" />
