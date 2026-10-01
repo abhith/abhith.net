@@ -1,5 +1,33 @@
 [
   {
+    "url": "https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/",
+    "title": "Automate repository tasks with GitHub Agentic Workflows",
+    "description": "Build automations using coding agents in GitHub Actions to handle triage, documentation, code quality, and more.",
+    "date": "2026-10-01T18:16:34Z",
+    "topics": [
+      "github"
+    ]
+  },
+  {
+    "url": "https://www.c-sharpcorner.com/article/difference-between-var-dynamic-and-object-in-c-sharp/",
+    "title": "Difference Between var, dynamic, and object in C#",
+    "description": "If you're new to C# or coming across different types like var, dynamic, and object. It's easy to feel confused. They all seem to allow you to define variables flexibly—but how they work under the hood is very different.",
+    "date": "2026-10-01T18:15:34Z",
+    "topics": [
+      "c-sharp"
+    ]
+  },
+  {
+    "url": "https://devblogs.microsoft.com/visualstudio/built-in-agent-skills-in-visual-studio/?ocid=aid3055399&ocid=",
+    "title": "Built-in Agent Skills Bring .NET and Azure Expertise into Visual Studio - Visual Studio Blog",
+    "description": "Visual Studio now includes built-in Agent Skills, created by experts from the .NET and Azure teams, to help you better customize your agentic workflow and",
+    "date": "2026-10-01T18:15:47Z",
+    "topics": [
+      "visual-studio",
+      "ai"
+    ]
+  },
+  {
     "url": "https://devblogs.microsoft.com/visualstudio/today-i-will-modernize-a-net-application/",
     "title": "Today I will... Modernize a .NET application - Visual Studio Blog",
     "description": "Today I will modernize a .NET Framework application to .NET 10 using the GitHub Copilot modernization tooling built-in to Visual Studio. The tooling",
