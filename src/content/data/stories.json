@@ -1,5 +1,33 @@
 [
   {
+    "url": "https://blog.eterm.uk/2025/08/09/PerformancePitfalls",
+    "title": "Performance Pitfalls in C# / .NET - List Contains",
+    "description": "Looking at the performance of a C# helper method for Contains",
+    "date": "2026-10-13T17:44:06Z",
+    "topics": [
+      "dotnet",
+      "c-sharp"
+    ]
+  },
+  {
+    "url": "https://github.blog/developer-skills/github/i-automated-my-job-and-it-made-me-a-better-leader/",
+    "title": "I automated my job (and it made me a better leader)",
+    "description": "Explore how my day as a senior leader looks now that I use 40 automations to help, and learn more about some of my favorites.",
+    "date": "2026-10-13T17:40:57Z",
+    "topics": [
+      "github-copilot"
+    ]
+  },
+  {
+    "url": "https://blog.jetbrains.com/ai/2026/07/introducing-jetbrains-context-repository-intelligence-for-coding-agents/",
+    "title": "Introducing JetBrains Context: Repository Intelligence for Coding Agents - The JetBrains Blog",
+    "description": "Today, we’re launching JetBrains Context, a new repository intelligence layer that helps coding agents work more efficiently and produce higher-quality results on complex codebases. As part of the Jet",
+    "date": "2026-10-13T17:39:37Z",
+    "topics": [
+      "jetbrains"
+    ]
+  },
+  {
     "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/",
     "title": "The harness is all you need (mostly)",
     "description": "A practical GitHub Copilot workflow for prototyping, planning, implementing, and reviewing software without chasing every new AI tool.",
