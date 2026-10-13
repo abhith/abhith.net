@@ -1,5 +1,32 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=QIHnmqYU614",
+    "title": "Intelligent local model routing is coming to GitHub Copilot",
+    "topics": [
+      "github-copilot"
+    ],
+    "date": "2026-10-13T17:38:23Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=FNcBtd4lGlM",
+    "title": "This .NET Monitoring Setup Changes Everything: Grafana + OpenTelemetry",
+    "topics": [
+      "dotnet"
+    ],
+    "date": "2026-10-13T17:37:40Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=fkka4Ih5GSM",
+    "title": "Stacked Branches Demo",
+    "topics": [
+      "git"
+    ],
+    "date": "2026-10-13T17:36:48Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=Ws19tnTvONk",
     "title": "📦 Git Bundle Command: Transfer Repositories Offline Like a Pro! 🚀",
     "topics": [
