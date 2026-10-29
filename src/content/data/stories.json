@@ -1,5 +1,14 @@
 [
   {
+    "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/",
+    "title": "Route and orchestrate models with GitHub Copilot Fusion - GitHub Changelog",
+    "description": "GitHub Copilot Fusion is generally available. Instead of picking a model for each task, choose Copilot Fusion and let Copilot intelligently route and orchestrate which models it uses for you.…",
+    "date": "2026-10-29T12:01:29Z",
+    "topics": [
+      "github-copilot"
+    ]
+  },
+  {
     "url": "https://blog.eterm.uk/2025/08/09/PerformancePitfalls",
     "title": "Performance Pitfalls in C# / .NET - List Contains",
     "description": "Looking at the performance of a C# helper method for Contains",
