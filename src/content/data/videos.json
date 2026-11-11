@@ -1,5 +1,24 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=xbeg33a1n68",
+    "title": ".NET Conf 2026 - .NET Has Never Been in a Better Place",
+    "topics": [
+      "dotnet"
+    ],
+    "date": "2026-11-11T17:41:20Z",
+    "type": "youtube"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=6I2L4U7Xq6g",
+    "title": "How to Use Docker MCP Catalog and Toolkit (Docker Tutorial)",
+    "topics": [
+      "ai",
+      "docker"
+    ],
+    "date": "2026-11-11T17:39:53Z",
+    "type": "youtube"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=eJLx1TRdwNU",
     "title": "UniFi Firewall Mistakes to Avoid – 5 Best Practices",
     "topics": [
