@@ -661,6 +661,10 @@
   slug: umbraco
   description: ""
   image: "umbraco.svg"
+- title: UniFi
+  slug: unifi
+  description: "UniFi by Ubiquiti is a networking platform of gateways, switches, and access points managed from a single controller."
+  image: ""
 - title: Visual Studio
   slug: visual-studio
   description:
